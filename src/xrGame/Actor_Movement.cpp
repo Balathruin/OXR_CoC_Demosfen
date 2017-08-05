@@ -419,21 +419,19 @@ void CActor::g_cl_CheckControls(u32 mstate_wf, Fvector& vControlAccel, float& Ju
 
 void CActor::g_Orientate(u32 mstate_rl, float dt)
 {
-    static float fwd_l_strafe_yaw = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "fwd_l_strafe_yaw"));
+    static float fwd_l_strafe_yaw  = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "fwd_l_strafe_yaw"));
     static float back_l_strafe_yaw = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "back_l_strafe_yaw"));
-    static float fwd_r_strafe_yaw = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "fwd_r_strafe_yaw"));
+    static float fwd_r_strafe_yaw  = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "fwd_r_strafe_yaw"));
     static float back_r_strafe_yaw = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "back_r_strafe_yaw"));
-    static float l_strafe_yaw = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "l_strafe_yaw"));
-    static float r_strafe_yaw = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "r_strafe_yaw"));
+    static float l_strafe_yaw      = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "l_strafe_yaw"));
+    static float r_strafe_yaw      = deg2rad(pSettings->r_float(ACTOR_ANIM_SECT, "r_strafe_yaw"));
 
-    if (!g_Alive())
-        return;
+    if (!g_Alive())return;
     // visual effect of "fwd+strafe" like motion
     float calc_yaw = 0;
     if (mstate_real & mcClimb)
     {
-        if (g_LadderOrient())
-            return;
+        if (g_LadderOrient()) return;
     }
     switch (mstate_rl & mcAnyMove)
     {
@@ -462,9 +460,9 @@ void CActor::g_Orientate(u32 mstate_rl, float dt)
 
     // build matrix
     Fmatrix mXFORM;
-    mXFORM.rotateY(-(r_model_yaw + r_model_yaw_delta));
-    mXFORM.c.set(Position());
-    XFORM().set(mXFORM);
+    mXFORM.rotateY (-(r_model_yaw + r_model_yaw_delta));
+    mXFORM.c.set   (Position());
+    XFORM().set    (mXFORM);
     VERIFY(_valid(XFORM()));
 
     //-------------------------------------------------
@@ -479,8 +477,8 @@ void CActor::g_Orientate(u32 mstate_rl, float dt)
     }
     if (!fsimilar(tgt_roll, r_torso_tgt_roll, EPS))
     {
-        angle_lerp(r_torso_tgt_roll, tgt_roll, PI_MUL_2, dt);
-        r_torso_tgt_roll = angle_normalize_signed(r_torso_tgt_roll);
+		r_torso_tgt_roll = angle_inertion_var(r_torso_tgt_roll, tgt_roll, 0.f, CurrentHeight * PI_MUL_2, PI_DIV_2, dt);
+		r_torso_tgt_roll = angle_normalize_signed(r_torso_tgt_roll);
     }
 }
 bool CActor::g_LadderOrient()
