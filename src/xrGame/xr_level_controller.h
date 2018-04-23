@@ -114,7 +114,7 @@ enum EGameActions
     kPDA_TAB6,
 
 #ifdef COC_KICK
-    kKICK, // alpet: kick dynamic objects
+    kKICK, // alpet: пинок видимого объекта
 #endif
 
     kLASTACTION,

@@ -184,7 +184,7 @@ void CCar::OnKeyboardRelease(int cmd)
     case kL_STRAFE: ReleaseLeft();  if (OwnerActor())OwnerActor()->steer_Vehicle(0); break;
     case kR_STRAFE: ReleaseRight(); if (OwnerActor())OwnerActor()->steer_Vehicle(0); break;
     case kJUMP: ReleaseBreaks(); break;
-	case kWPN_FIRE: if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 0); 
+	case kSHOT_CWEAP1: if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 0); 
 			break; // прекращаем стрельбу если отпустили клавишу
 
 	//case kNIGHT_VISION: snd_horn.stop();break;
