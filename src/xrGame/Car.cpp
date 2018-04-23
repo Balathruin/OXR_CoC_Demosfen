@@ -10,7 +10,7 @@
 #endif // DEBUG
 
 #include "PHDestroyable.h"
-
+#include "hudmanager.h"
 #include "cameralook.h"
 #include "camerafirsteye.h"
 #include "Actor.h"
