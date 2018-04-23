@@ -147,23 +147,21 @@ void CCar::OnKeyboardPress(int cmd)
     {
     case kCAM_1: OnCameraChange(ectFirst); break;
     case kCAM_2: OnCameraChange(ectChase); break;
-    case kCAM_3: OnCameraChange(ectFree); break;
-    case kACCEL: TransmissionUp(); break;
-	case kSHOT_CWEAP2:	if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 1);
-				break;// стрельба со второй туррели
-	case kSHOT_CWEAP1: if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 1); 
-		break; // стрельба с первой туррели
-    case kCROUCH: TransmissionDown(); break;
-    case kFWD: PressForward(); break;
-    case kBACK: PressBack(); break;
-    case kR_STRAFE: PressRight(); if (OwnerActor()) OwnerActor()->steer_Vehicle(1); break;
-    case kL_STRAFE: PressLeft();  if (OwnerActor()) OwnerActor()->steer_Vehicle(-1); break;
-    case kJUMP: PressBreaks(); break;
+    case kCAM_3: OnCameraChange(ectFree);  break;
+    case kACCEL: TransmissionUp();         break;
+	case kSHOT_CWEAP2:	if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 1); break; // стрельба со второй туррели
+	case kSHOT_CWEAP1:  if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 1);   break; // стрельба с первой туррели
+	case kCROUCH:	TransmissionDown();			break;
+	case kFWD:		PressForward();				break;
+	case kBACK:		PressBack();				break;
+	case kR_STRAFE:	PressRight();				if (OwnerActor()) OwnerActor()->steer_Vehicle(1);  break;
+	case kL_STRAFE:	PressLeft();				if (OwnerActor()) OwnerActor()->steer_Vehicle(-1); break;
+	case kJUMP:		PressBreaks();				break;
 	case kTURN_ENGINE: SwitchEngine();
 				if (HasWeapon())m_car_weapon->Action(CCarWeapon::eWpnActivate, b_engine_on);
 				if (HasWeapon())m_car_weapon2->Action(CCarWeapon2::eWpnActivate, b_engine_on);
 		break; // получаем управление турелями если завели двигатель или попытались
-     case kTORCH: m_lights.SwitchHeadLights(); break;
+    case kTORCH: m_lights.SwitchHeadLights(); break;
     case kUSE: break;
     case kWPN_FUNC: m_repairing = true; break;
 
