@@ -684,9 +684,9 @@ public:
     virtual void OnPrevWeaponSlot();
     void SwitchNightVision();
     void SwitchTorch();
-#if defined(DEBUG) || defined(COC_DEBUG)
+
     void NoClipFly(int cmd);
-#endif // DEBUG
+
 
 public:
     virtual void on_weapon_shot_start(CWeapon* weapon);

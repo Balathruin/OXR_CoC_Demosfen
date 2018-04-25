@@ -150,6 +150,16 @@ void CStats::Show()
         font.OutNext("QPC: %u", CPU::qpc_counter);
         CPU::qpc_counter = 0;
     }
+
+    if(psDeviceFlags.test(rsDrawFPS))
+    {
+        float refHeight = font.GetHeight();
+        font.SetHeightI(0.02f);
+        font.SetColor(0xFFFFA917);
+        font.Out(10, 10, "FPS: %0.0f", 1.0f / Device.fTimeDelta);
+        font.SetHeight(refHeight);
+    };
+
     if (psDeviceFlags.test(rsCameraPos))
     {
         float refHeight = font.GetHeight();

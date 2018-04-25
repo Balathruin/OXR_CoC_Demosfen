@@ -90,13 +90,12 @@ void CActor::IR_OnKeyboardPress(int cmd)
     else if (inventory().Action((u16)cmd, CMD_START))
         return;
 
-#if defined(DEBUG) || defined(COC_DEBUG)
     if (psActorFlags.test(AF_NO_CLIP))
     {
         NoClipFly(cmd);
         return;
     }
-#endif // DEBUG
+
     switch (cmd)
     {
     case kJUMP: { mstate_wishful |= mcJump;
@@ -294,14 +293,13 @@ void CActor::IR_OnKeyboardHold(int cmd)
         return;
     }
 
-#if defined(DEBUG) || defined(COC_DEBUG)
     if (psActorFlags.test(AF_NO_CLIP) &&
         (cmd == kFWD || cmd == kBACK || cmd == kL_STRAFE || cmd == kR_STRAFE || cmd == kJUMP || cmd == kCROUCH))
     {
         NoClipFly(cmd);
         return;
     }
-#endif // DEBUG
+
     float LookFactor = GetLookFactor();
     switch (cmd)
     {
@@ -705,7 +703,6 @@ void CActor::actorKick()
 }
 #endif
 
-#if defined(DEBUG) || defined(COC_DEBUG)
 void CActor::NoClipFly(int cmd)
 {
     Fvector cur_pos; // = Position();
@@ -713,8 +710,12 @@ void CActor::NoClipFly(int cmd)
     float scale = 1.0f;
     if (pInput->iGetAsyncKeyState(DIK_LSHIFT))
         scale = 0.25f;
+	else if (pInput->iGetAsyncKeyState(DIK_X))
+		scale = 8.0f;
     else if (pInput->iGetAsyncKeyState(DIK_LMENU))
-        scale = 4.0f;
+        scale = 12.0f;//LALT
+	else if (pInput->iGetAsyncKeyState(DIK_TAB))
+		scale = 20.0f;
 
     switch (cmd)
     {
@@ -750,4 +751,3 @@ void CActor::NoClipFly(int cmd)
     Position().add(cur_pos);
     character_physics_support()->movement()->SetPosition(Position());
 }
-#endif // DEBUG

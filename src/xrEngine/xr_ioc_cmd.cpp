@@ -671,13 +671,13 @@ void CCC_Register()
     CMD3(CCC_Mask, "rs_clear_bb", &psDeviceFlags, rsClearBB);
     CMD3(CCC_Mask, "rs_occlusion", &psDeviceFlags, rsOcclusion);
 
-    CMD3(CCC_Mask, "rs_detail", &psDeviceFlags, rsDetails);
     // CMD4(CCC_Float, "r__dtex_range", &r__dtex_range, 5, 175 );
 
     // CMD3(CCC_Mask, "rs_constant_fps", &psDeviceFlags, rsConstantFPS );
     CMD3(CCC_Mask, "rs_render_statics", &psDeviceFlags, rsDrawStatic);
     CMD3(CCC_Mask, "rs_render_dynamics", &psDeviceFlags, rsDrawDynamic);
 #endif
+    CMD3(CCC_Mask, "rs_detail", &psDeviceFlags, rsDetails);
 	CMD3(CCC_Mask, "mt_particles", &psDeviceFlags, mtParticles);
 	CMD3(CCC_Mask, "mt_sound", &psDeviceFlags, mtSound);
 	CMD3(CCC_Mask, "mt_physics", &psDeviceFlags, mtPhysics);
@@ -694,6 +694,7 @@ void CCC_Register()
     CMD3(CCC_Mask, "rs_stats", &psDeviceFlags, rsStatistic);
     CMD4(CCC_Float, "rs_vis_distance", &psVisDistance, 0.4f, 1.5f);
 
+    CMD3(CCC_Mask, "rs_draw_fps", &psDeviceFlags, rsDrawFPS);
     CMD3(CCC_Mask, "rs_cam_pos", &psDeviceFlags, rsCameraPos);
 #ifdef DEBUG
     CMD3(CCC_Mask, "rs_occ_draw", &psDeviceFlags, rsOcclusionDraw);

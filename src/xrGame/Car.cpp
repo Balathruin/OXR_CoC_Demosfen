@@ -421,7 +421,7 @@ void CCar::UpdateEx(float fov)
     {
         cam_Update(Device.fTimeDelta, fov);
         OwnerActor()->Cameras().UpdateFromCamera(Camera());
-        if (eacFirstEye == active_camera->tag && !Level().Cameras().GetCamEffector(cefDemo))
+        if (!Level().Cameras().GetCamEffector(cefDemo))
             OwnerActor()->Cameras().ApplyDevice(VIEWPORT_NEAR);
     }
 }

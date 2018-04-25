@@ -113,8 +113,6 @@ CActor::CActor() : CEntityAlive(), current_ik_cam_shift(0)
     cameras[eacLookAt]->Load("actor_look_cam_psp");
     cameras[eacFreeLook] = new CCameraLook(this);
     cameras[eacFreeLook]->Load("actor_free_cam");
-    cameras[eacFixedLookAt] = new CCameraFixedLook(this);
-    cameras[eacFixedLookAt]->Load("actor_look_cam");
 
     cam_active = eacFirstEye;
     fPrevCamPos = 0.0f;
@@ -865,12 +863,12 @@ void CActor::g_Physics(Fvector& _accel, float jump, float dt)
         {
             SwitchOutBorder(new_border_state);
         }
-#if defined(DEBUG) || defined(COC_DEBUG)
+
         if (!psActorFlags.test(AF_NO_CLIP))
             character_physics_support()->movement()->GetPosition(Position());
-#else // DEBUG
+        else
         character_physics_support()->movement()->GetPosition(Position());
-#endif // DEBUG
+
         character_physics_support()->movement()->bSleep = false;
     }
 
@@ -1089,7 +1087,12 @@ void CActor::UpdateCL()
             Device.m_SecondViewport.SetSVPActive(false); //--#SM+#-- +SecondVP+
         }
     }
-
+	float	cs_min		= pSettings->r_float	(cNameSect(),"ph_crash_speed_min"	);
+	float	cs_max		= pSettings->r_float	(cNameSect(),"ph_crash_speed_max"	);
+	if(psActorFlags.test(AF_GODMODE_RT || AF_GODMODE || AF_NO_CLIP))
+	character_physics_support()->movement()->SetCrashSpeeds	(8000,9000);
+	else
+	character_physics_support()->movement()->SetCrashSpeeds	(cs_min,cs_max);
     UpdateDefferedMessages();
 
     if (g_Alive())
