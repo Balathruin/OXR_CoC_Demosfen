@@ -26,6 +26,10 @@
 #include "UICellItem.h"
 #include "xrGame/game_type.h"
 
+
+#include "UIScriptWnd.h"
+#include "../script_game_object.h"
+
 extern const LPCSTR g_inventory_upgrade_xml;
 
 #define INV_GRID_WIDTH2 40.0f
@@ -51,6 +55,8 @@ CUIItemInfo::CUIItemInfo()
     m_pInvItem = NULL;
     m_b_FitToHeight = false;
     m_complex_desc = false;
+
+	pUIScriptWnd				= NULL;
 }
 
 CUIItemInfo::~CUIItemInfo()
@@ -61,6 +67,8 @@ CUIItemInfo::~CUIItemInfo()
     xr_delete(UIProperties);
     xr_delete(UIOutfitInfo);
     xr_delete(UIBoosterInfo);
+
+	xr_delete(pUIScriptWnd);
 }
 
 void CUIItemInfo::InitItemInfo(LPCSTR xml_name)
@@ -346,13 +354,13 @@ void CUIItemInfo::InitItem(CUICellItem* pCellItem, CInventoryItem* pCompareItem,
 
 void CUIItemInfo::TryAddConditionInfo(CInventoryItem& pInvItem, CInventoryItem* pCompareItem)
 {
-    CWeapon* weapon = smart_cast<CWeapon*>(&pInvItem);
-    CCustomOutfit* outfit = smart_cast<CCustomOutfit*>(&pInvItem);
-    if (weapon || outfit)
-    {
-        //		UIConditionWnd->SetInfo( pCompareItem, pInvItem );
-        //		UIDesc->AddWindow( UIConditionWnd, false );
-    }
+	luabind::functor<CUIWindow*> funct;
+    if (GEnv.ScriptEngine->functor("actor_menu.inventory_hint_init_item", funct))
+	{
+		CUIWindow* ret = funct(pInvItem.cast_game_object()->lua_game_object(), pCompareItem ? pCompareItem->cast_game_object()->lua_game_object() : (0));
+		if (ret)
+			UIDesc->AddWindow(ret, false);
+	}
 }
 
 void CUIItemInfo::TryAddWpnInfo(CInventoryItem& pInvItem, CInventoryItem* pCompareItem)
