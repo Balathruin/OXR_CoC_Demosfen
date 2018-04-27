@@ -159,8 +159,8 @@ void CEnvironment::Invalidate()
         eff_Rain->StopAmbient();
         eff_Rain->SetInvalidateState();
     }
-    if (eff_LensFlare)
-        eff_LensFlare->Invalidate();
+	if (eff_Rain)eff_Rain->InvalidateState();
+    if (eff_LensFlare) eff_LensFlare->Invalidate();
 }
 
 float CEnvironment::TimeDiff(float prev, float cur)

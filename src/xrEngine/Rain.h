@@ -93,6 +93,7 @@ public:
 
     void StopAmbient();
     void SetInvalidateState();
+	void InvalidateState()		{ state = stIdle; }
 };
 
 #endif // RainH
