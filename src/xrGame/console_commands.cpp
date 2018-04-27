@@ -769,7 +769,32 @@ public:
         Msg("* Log file has been saved successfully!");
     }
 };
+class CCC_Spawn : public IConsole_Command {
+public:
+	CCC_Spawn(LPCSTR N) : IConsole_Command(N)  { };
+	virtual void Execute(LPCSTR args) {
+		if (!g_pGameLevel) return;
 
+
+
+		if (!pSettings->section_exist(args))
+		{
+			Msg("! Section [%s] isn`t exist...", args);
+			return;
+		}
+
+		char	Name[128];	Name[0]=0;
+		sscanf	(args,"%s", Name);
+		Fvector pos = Actor()->Position();
+		pos.y		+= 0.3f;
+		pos.x		+= 2.0f;
+		Level().g_cl_Spawn	(Name,0xff,M_SPAWN_OBJECT_LOCAL, pos);
+	}
+	virtual void	Info	(TInfo& I)	
+	{
+		xr_strcpy(I,"name,team,squad,group"); 
+	}
+};
 class CCC_ClearLog : public IConsole_Command
 {
 public:
@@ -1906,6 +1931,7 @@ void CCC_RegisterCommands()
     CMD1(CCC_Script, "run_script");
     CMD1(CCC_ScriptCommand, "run_string");
 #endif // DEBUG
+	CMD1(CCC_Spawn, "g_spawn");
     CMD1(CCC_JumpToLevel, "jump_to_level");
     CMD3(CCC_Mask, "g_no_clip", &psActorFlags, AF_NO_CLIP);
     CMD3(CCC_Mask, "g_god", &psActorFlags, AF_GODMODE);
