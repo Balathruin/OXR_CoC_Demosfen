@@ -51,10 +51,10 @@ void SCarLight::ParseDefinitions(LPCSTR section)
     light_render->set_cone(deg2rad(ini->r_float(section, "cone_angle")));
     light_render->set_texture(ini->r_string(section, "spot_texture"));
 
-	light_render->set_volumetric(ini->r_bool(section, "volumetric_enable"));
-    light_render->set_volumetric_distance(ini->r_float(section, "volumetric_distance"));
-    light_render->set_volumetric_intensity(ini->r_float(section, "volumetric_intensity"));
-    light_render->set_volumetric_quality(ini->r_float(section, "volumetric_quality"));
+	//light_render->set_volumetric(ini->r_bool(section, "volumetric_enable"));
+    //light_render->set_volumetric_distance(ini->r_float(section, "volumetric_distance"));
+    //light_render->set_volumetric_intensity(ini->r_float(section, "volumetric_intensity"));
+    //light_render->set_volumetric_quality(ini->r_float(section, "volumetric_quality"));
 
     glow_render->set_texture(ini->r_string(section, "glow_texture"));
     glow_render->set_color(clr);
