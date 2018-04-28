@@ -109,9 +109,9 @@ CActor::CActor() : CEntityAlive(), current_ik_cam_shift(0)
     cameras[eacFirstEye] = new CCameraFirstEye(this, CCameraBase::flKeepPitch);
     cameras[eacFirstEye]->Load("actor_firsteye_cam");
 
-    cameras[eacLookAt] = new CCameraLook2(this);
+    cameras[eacLookAt] = new CCameraLook2(this, CCameraBase::flKeepPitch);
     cameras[eacLookAt]->Load("actor_look_cam_psp");
-    cameras[eacFreeLook] = new CCameraLook(this);
+    cameras[eacFreeLook] = new CCameraLook(this, CCameraBase::flKeepPitch);
     cameras[eacFreeLook]->Load("actor_free_cam");
 
     cam_active = eacFirstEye;
@@ -919,8 +919,7 @@ float CActor::currentFOV()
     if (!psHUD_Flags.is(HUD_WEAPON | HUD_WEAPON_RT | HUD_WEAPON_RT2))
         return g_fov;
 
-    if (eacFirstEye == cam_active)
-    {
+
         CWeapon* pWeapon = smart_cast<CWeapon*>(inventory().ActiveItem());
         if (pWeapon && pWeapon->IsZoomed())
         {
@@ -930,7 +929,7 @@ float CActor::currentFOV()
             if (!pWeapon->IsRotatingToZoom())
                 return atan(tan(g_scope_fov * (0.5 * PI / 180)) / pWeapon->GetZoomFactor()) / (0.5 * PI / 180); //Alun: This assumes scope has a fake 75 FOV so that no matter camera FOV the scope FOV is exactly the same
         }
-    }
+
     return g_fov;
 }
 
