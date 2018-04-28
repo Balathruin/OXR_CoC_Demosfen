@@ -14,7 +14,7 @@ void CCameraLook::Load(LPCSTR section)
     lim_zoom = pSettings->r_fvector2(section, "lim_zoom");
     dist = (lim_zoom[0] + lim_zoom[1]) * 0.5f;
     prev_d = 0;
-    m_look_cam_fp_zoom = pSettings->r_bool(section, "first_person_zoom");
+    m_look_cam_fp_zoom = 1;
 }
 
 CCameraLook::~CCameraLook() {}
@@ -191,6 +191,7 @@ void CCameraLook2::Load(LPCSTR section)
 	dist = 1.4f;
     m_autoaim_inertion_yaw = pSettings->r_fvector2(section, "autoaim_speed_y");
     m_autoaim_inertion_pitch = pSettings->r_fvector2(section, "autoaim_speed_x");
+	m_look_cam_fp_zoom  = 1;
 }
 
 void CCameraFixedLook::Load(LPCSTR section)

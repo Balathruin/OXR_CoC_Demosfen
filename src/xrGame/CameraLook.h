@@ -28,11 +28,11 @@ protected:
 class CCameraLook2 : public CCameraLook
 {
 	Fvector2		lim_zoom;
+	float			dist, prev_d;
 public:
     static Fvector m_cam_offset;
 
 protected:
-	float			dist, prev_d;
     IGameObject* m_locked_enemy;
     Fvector2 m_autoaim_inertion_yaw;
     Fvector2 m_autoaim_inertion_pitch;

@@ -26,6 +26,7 @@ void CCameraFirstEye::UpdateLookat()
     Fvector _dest_dir;
     _dest_dir.sub(lookat_point, vPosition);
 
+	Fvector _off = Fvector().set(0.314f,0.2f,0.0f);
     Fmatrix _m;
     _m.identity();
     _m.k.normalize_safe(_dest_dir);
