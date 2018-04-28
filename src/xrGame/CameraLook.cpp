@@ -44,7 +44,7 @@ void CCameraLook::UpdateDistance(Fvector& point)
     vDir.invert(vDirection);
     g_pGameLevel->ObjectSpace.RayPick(point, vDir, dist + covariance, collide::rqtBoth, R, parent);
 
-    float d = psCamSlideInert * prev_d + (1.f - psCamSlideInert) * (R.range - covariance);
+	float d = 0*prev_d+(1.f-0)*(R.range-covariance);
     prev_d = d;
 
     vPosition.mul(vDirection, -d - VIEWPORT_NEAR);
@@ -154,7 +154,7 @@ void CCameraLook2::Update(Fvector& point, Fvector&)
 	vDir.invert			(vDirection);
 	g_pGameLevel->ObjectSpace.RayPick( _off, vDir, dist+covariance, collide::rqtBoth, R, parent);
 
-	float d				= psCamSlideInert*prev_d+(1.f-psCamSlideInert)*(R.range-covariance);
+	float d = 0*prev_d+(1.f-0)*(R.range-covariance);
 	prev_d = d;
 
 	vPosition.mul		(vDirection,-d-VIEWPORT_NEAR);

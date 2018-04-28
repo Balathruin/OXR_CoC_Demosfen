@@ -752,7 +752,7 @@ if(strstr(Core.Params,"-snd_speed_ctrl") )// TODO: ключ запуска пр�
 
     // Camera
     CMD2(CCC_Float, "cam_inert", &psCamInert);
-    CMD2(CCC_Float, "cam_slide_inert", &psCamSlideInert);
+    //CMD2(CCC_Float, "cam_slide_inert", &psCamSlideInert);
 
     CMD4(CCC_Integer, "always_active", &ps_always_active, 0, 1);
 

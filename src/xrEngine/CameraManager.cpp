@@ -17,7 +17,7 @@
 #include "Render.h"
 
 float psCamInert = 0.f;
-float psCamSlideInert = 0.25f;
+//float psCamSlideInert = 0.0f;
 
 SPPInfo pp_identity;
 SPPInfo pp_zero;
