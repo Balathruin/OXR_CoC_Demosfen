@@ -180,13 +180,19 @@ void CSoundRender_TargetA::fill_parameters()
 
     if (strstr(Core.Params,"-snd_speed_ctrl"))
 	{
-        A_CHK(alSourcef(pSource, AL_PITCH, psSpeedOfSound));
+        float _pitch = m_pEmitter->p_source.freq / psSpeedOfSound;			
+		clamp(_pitch, EPS_L, 2.f);
+        if (!fsimilar(_pitch, cache_pitch))
+        {
+            cache_pitch = _pitch;
+            A_CHK(alSourcef(pSource, AL_PITCH, _pitch));
+        }
 	}
 	else 
 	{
         float _pitch = m_pEmitter->p_source.freq;
         clamp(_pitch, EPS_L, 2.f);
-    if (!fsimilar(_pitch, cache_pitch))
+        if (!fsimilar(_pitch, cache_pitch))
         {
             cache_pitch = _pitch;
             A_CHK(alSourcef(pSource, AL_PITCH, _pitch));
