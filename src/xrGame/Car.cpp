@@ -728,11 +728,12 @@ bool CCar::Enter(const Fvector& pos, const Fvector& dir, const Fvector& foot_pos
     }
     return false;
 }
-
+	float const base_fov	=	g_fov;
+	float const dest_fov	=	g_fov - (g_fov-30.f);
 bool CCar::Exit(const Fvector& pos, const Fvector& dir)
 {
     xr_map<u16, SDoor>::iterator i, e;
-
+	psCamInert=0.3;
     i = m_doors.begin();
     e = m_doors.end();
     for (; i != e; ++i)
@@ -740,6 +741,7 @@ bool CCar::Exit(const Fvector& pos, const Fvector& dir)
         if (i->second.CanExit(pos, dir))
         {
             i->second.GetExitPosition(m_exit_position);
+			(g_fov = base_fov);
             return true;
         }
     }

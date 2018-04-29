@@ -137,8 +137,8 @@ void CCar::vfProcessInputKey(int iCommand, bool bPressed)
     else
         OnKeyboardRelease(iCommand);
 }
-
-
+	float const base_fov	=	g_fov;
+	float const dest_fov	=	g_fov - (g_fov-30.f);
 void CCar::OnKeyboardPress(int cmd)
 {
     if (Remote()) return;
@@ -162,7 +162,8 @@ void CCar::OnKeyboardPress(int cmd)
 				if (HasWeapon())m_car_weapon2->Action(CCarWeapon2::eWpnActivate, b_engine_on);
 		break; // получаем управление турелями если завели двигатель или попытались
     case kTORCH: m_lights.SwitchHeadLights(); break;
-    case kUSE: break;
+	case kUSE:	(g_fov = base_fov); break;
+	case kWPN_ZOOM: (g_fov = dest_fov);break;
     case kWPN_FUNC: m_repairing = true; break;
 
 	case kSWITCH_HORN: SwitchHorn(); break; // гудок
@@ -184,7 +185,7 @@ void CCar::OnKeyboardRelease(int cmd)
     case kJUMP: ReleaseBreaks(); break;
 	case kSHOT_CWEAP1: if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 0); 
 			break; // прекращаем стрельбу если отпустили клавишу
-
+	case kWPN_ZOOM: (g_fov = base_fov);break;
 	//case kNIGHT_VISION: snd_horn.stop();break;
 	case kSWITCH_HORN: snd_horn.destroy();break;
     };
