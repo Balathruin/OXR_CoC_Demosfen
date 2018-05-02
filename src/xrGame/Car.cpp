@@ -1778,6 +1778,8 @@ void CCar::CarExplode()
     if (m_car_weapon)m_car_weapon->Action(CCarWeapon::eWpnActivate, 0);
 	if (m_car_weapon2)m_car_weapon2->Action(CCarWeapon2::eWpnActivate,0);
     m_lights.TurnOffHeadLights();
+	m_damage_particles.Stop1(this);
+	m_damage_particles.Stop2(this);
     b_exploded = true;
     CExplosive::GenExplodeEvent(Position(), Fvector().set(0.f, 1.f, 0.f));
 
@@ -2013,7 +2015,7 @@ void CCar::SetfFuel(float fuel)
     m_fuel = fuel;
 }
 
-// получить и задать размер топливного бака 
+// получить и задать размер топливного бака
 float CCar::GetfFuelTank()
 {
     return m_fuel_tank;
