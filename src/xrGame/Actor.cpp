@@ -120,6 +120,7 @@ CActor::CActor() : CEntityAlive(), current_ik_cam_shift(0)
     fCurAVelocity = 0.0f;
     // эффекторы
     pCamBobbing = 0;
+	psSoundFlags.set(ss_off_speed, FALSE);
 
     r_torso.yaw = 0;
     r_torso.pitch = 0;
@@ -911,7 +912,7 @@ void CActor::g_Physics(Fvector& _accel, float jump, float dt)
     }
 }
 
-float g_fov = 55.0f;
+float g_fov = 65.0f;
 float g_scope_fov = 75.0f;
 
 float CActor::currentFOV()
@@ -930,7 +931,17 @@ float CActor::currentFOV()
                 return atan(tan(g_scope_fov * (0.5 * PI / 180)) / pWeapon->GetZoomFactor()) / (0.5 * PI / 180); //Alun: This assumes scope has a fake 75 FOV so that no matter camera FOV the scope FOV is exactly the same
         }
 
-    return g_fov;
+    {
+        if (pWeapon && pWeapon->IsZoomed() && (!pWeapon->ZoomTexture() || (!pWeapon->IsRotatingToZoom() && pWeapon->ZoomTexture())))
+        {
+            return pWeapon->GetZoomFactor() * (0.75f);
+        }
+        else
+        {
+            return g_fov;
+        }
+    }
+
 }
 
 static bool bLook_cam_fp_zoom = false;
@@ -1361,7 +1372,7 @@ void CActor::shedule_Update(u32 DT)
     //что актер видит перед собой
     collide::rq_result& RQ = HUD().GetCurrentRayQuery();
 
-    float fAcquistionRange = cam_active == eacFirstEye ? 2.0f : 3.0f;
+    float fAcquistionRange = cam_active == eacFirstEye ? 2.0f : 3.5f;
     if (!input_external_handler_installed() && RQ.O && RQ.O->getVisible() && RQ.range < fAcquistionRange)
     {
         CGameObject* game_object = smart_cast<CGameObject*>(RQ.O);

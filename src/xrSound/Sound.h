@@ -44,6 +44,7 @@ enum
 {
     ss_Hardware = 1ul << 1ul, //!< Use hardware mixing only
     ss_EAX = 1ul << 2ul, //!< Use eax
+    ss_off_speed = (1ul<<3ul), //!< Use eax
     ss_forcedword = u32(-1)
 };
 
