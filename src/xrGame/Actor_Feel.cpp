@@ -279,11 +279,36 @@ void CActor::Check_for_AutoPickUp()
     }
 }
 
+#include "ai/stalker/ai_stalker.h"
+#include "eatable_item.h"
+#include "EliteDetector.h"
+#include "AdvancedDetector.h"
+#include "SimpleDetector.h"
+#include "grenadelauncher.h"
+#include "Scope.h"
+#include "Silencer.h"
+#include "CustomOutfit.h"
+#include "ActorHelmet.h"
+#include "pda.h"
 void CActor::PickupInfoDraw(IGameObject* object)
 {
     LPCSTR draw_str = NULL;
 
+	CArtefact* artefact = smart_cast<CArtefact*>(object);
+	CEatableItem* boost = smart_cast<CEatableItem*>(object);
+	CWeaponAmmo* ammo = smart_cast<CWeaponAmmo*>(object);
+	CWeapon* weapon = smart_cast<CWeapon*>(object);
     CInventoryItem* item = smart_cast<CInventoryItem*>(object);
+	CEliteDetector* edetect = smart_cast<CEliteDetector*>(object);
+	CAdvancedDetector* adetect = smart_cast<CAdvancedDetector*>(object);
+	CSimpleDetector* sdetect = smart_cast<CSimpleDetector*>(object);
+	CGrenade* grenade = smart_cast<CGrenade*>(object);
+	CGrenadeLauncher* grenadela = smart_cast<CGrenadeLauncher*>(object);
+	CScope* scope = smart_cast<CScope*>(object);
+	CSilencer* sil = smart_cast<CSilencer*>(object);
+	CCustomOutfit* outf = smart_cast<CCustomOutfit*>(object);
+	CHelmet* helm = smart_cast<CHelmet*>(object);
+	CPda* doc = smart_cast<CPda*>(object);
     if (!item)
         return;
 
@@ -307,7 +332,35 @@ void CActor::PickupInfoDraw(IGameObject* object)
 
     UI().Font().pFontLetterica16Russian->SetAligment(CGameFont::alCenter);
     UI().Font().pFontLetterica16Russian->SetColor(PICKUP_INFO_COLOR);
-    UI().Font().pFontLetterica16Russian->Out(x, y, draw_str);
+	if(doc)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFD7A096);
+	if(ammo)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFFFA121);
+	if(weapon)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFFF6B42);
+	if(boost)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFFF8330);
+	if(artefact)
+	UI().Font().pFontLetterica16Russian->SetColor		(0xFF736FD5);
+	if(edetect)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFEBDD0B);
+	if(adetect)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFEBFFA1);
+	if(sdetect)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFEBFFC8);
+	if(grenade)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFFF6432);
+	if(grenadela)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFEB6E0A);		
+	if(scope && !grenadela)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFEB8C0A);
+	if(sil && !scope && !grenadela)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFEB8C64);
+	if(outf)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFFF6464);
+	if(helm && !outf)
+	UI().Font().pFontLetterica18Russian->SetColor		(0xFFFF9178);
+	UI().Font().pFontLetterica18Russian->Out			(x,y,draw_str);
 }
 
 void CActor::feel_sound_new(
