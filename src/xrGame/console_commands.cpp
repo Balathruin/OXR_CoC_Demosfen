@@ -1328,8 +1328,7 @@ public:
         float time_factor = (float)atof(args);
         clamp(time_factor, EPS, 1000.f);
         Device.time_factor(time_factor);
-		if(strstr(&Core.Params[0],"-snd_speed_ctrl") )
-		    psSpeedOfSound	= time_factor;
+		psSpeedOfSound	= time_factor;
     }
     virtual void Status(TStatus& S) { xr_sprintf(S, sizeof(S), "%f", Device.time_factor()); }
     virtual void Info(TInfo& I) { xr_strcpy(I, "[0.001 - 1000.0]"); }

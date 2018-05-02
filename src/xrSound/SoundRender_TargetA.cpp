@@ -29,14 +29,8 @@ bool CSoundRender_TargetA::_initialize()
         A_CHK(alSourcef(pSource, AL_MIN_GAIN, 0.f));
         A_CHK(alSourcef(pSource, AL_MAX_GAIN, 1.f));
         A_CHK(alSourcef(pSource, AL_GAIN, cache_gain));
-		if (strstr(Core.Params,"-snd_speed_ctrl"))
-		{
-            A_CHK(alSourcef(pSource, AL_PITCH, psSpeedOfSound));
-		}
-		else
-		{
-            A_CHK(alSourcef(pSource, AL_PITCH, cache_pitch));
-		}
+        A_CHK(alSourcef(pSource, AL_PITCH, psSpeedOfSound));
+
         return true;
     }
     else
@@ -178,9 +172,9 @@ void CSoundRender_TargetA::fill_parameters()
         A_CHK(alSourcef(pSource, AL_GAIN, _gain));
     }
 
-    if (strstr(Core.Params,"-snd_speed_ctrl"))
+    if (psSoundFlags.test(ss_off_speed))
 	{
-        float _pitch = m_pEmitter->p_source.freq / psSpeedOfSound;			
+        float _pitch = m_pEmitter->p_source.freq;			
 		clamp(_pitch, EPS_L, 2.f);
         if (!fsimilar(_pitch, cache_pitch))
         {
@@ -190,7 +184,7 @@ void CSoundRender_TargetA::fill_parameters()
 	}
 	else 
 	{
-        float _pitch = m_pEmitter->p_source.freq;
+        float _pitch = psSpeedOfSound;
         clamp(_pitch, EPS_L, 2.f);
         if (!fsimilar(_pitch, cache_pitch))
         {
