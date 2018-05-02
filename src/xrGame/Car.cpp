@@ -654,7 +654,7 @@ bool CCar::attach_Actor(CGameObject* actor)
     if (Owner() || CPHDestroyable::Destroyed()) return false;
     CHolderCustom::attach_Actor(actor);
 
-	psCamInert=0.9;
+	psCamInert=0.7;
     IKinematics* K = smart_cast<IKinematics*>(Visual());
     CInifile* ini = K->LL_UserData();
     int id;
