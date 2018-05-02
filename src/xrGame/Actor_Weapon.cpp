@@ -67,9 +67,15 @@ void CActor::g_fireParams(const CHudItem* pHudItem, Fvector& fire_pos, Fvector& 
 	if(weapon)
 	{
         if (eacFirstEye == cam_active)
+		{
             fire_pos = Cameras().Position();
-	else
+		}
+		if(eacLookAt == cam_active)
+		{
             fire_pos = weapon->get_LastFP();
+			fire_dir = Cameras().Direction();
+			fire_dir.y = 15;
+		}
 	}
 	else
     {
