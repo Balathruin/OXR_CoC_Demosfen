@@ -1,5 +1,4 @@
-#ifndef CAR_LIGHTS_H
-#define CAR_LIGHTS_H
+
 #pragma once
 
 #include "xrEngine/Render.h"
@@ -10,6 +9,7 @@ class CCar;
 struct SCarLight
 {
     ref_light light_render;
+	ref_light light_omni;
     ref_glow glow_render;
     u16 bone_id;
     CCarLights* m_holder;
@@ -50,15 +50,6 @@ protected:
     };
     LIGHTS_STORAGE m_lights;
     CCar* m_pcar;
-    /*
-        Ivector2		m_head_near_lights						;
-        Ivector2		m_head_far_lights						;
-        Ivector2		m_left_turns							;
-        Ivector2		m_stops									;
-        Ivector2		m_gabarites								;
-        Ivector2		m_door_gabarites						;
-    */
+
 private:
 };
-
-#endif

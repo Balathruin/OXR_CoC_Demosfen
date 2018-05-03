@@ -79,3 +79,7 @@ bool CDelayedActionFuse::Update(float current_condition)
     }
     return ret;
 }
+void CDelayedActionFuse::Reset()
+{
+	m_dafflags.set(flActive,FALSE);
+}

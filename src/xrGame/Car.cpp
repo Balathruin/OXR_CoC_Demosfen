@@ -28,6 +28,9 @@
 #include "xrEngine/GameMtlLib.h"
 #include "hudmanager.h"
 
+#include "CarLights.h"
+#include "CarStopLights.h"
+#include "CarSignalLights.h"
 #include "CharacterPhysicsSupport.h"
 #include "car_memory.h"
 #include "xrPhysics/IPHWorld.h"
@@ -127,6 +130,33 @@ void CCar::reload(LPCSTR section)
     CEntity::reload(section);
     if (m_memory)
         m_memory->reload(section);
+}
+
+void CCar::Rotate			(CBoneInstance* B)
+{
+
+	//VERIFY2(fsimilar(DET(B->mTransform),1.f,DET_CHECK_EPS),"Bones receive returns 0 matrix");
+
+	CCar*	C			= static_cast<CCar*>(B->callback_param());
+	Fmatrix m;
+ 
+
+	u32 cur_time = Device.dwTimeGlobal;
+ 	if(C->b_engine_on!=true)
+	m.rotateZ(C->m_steer_angle);
+ 	else
+	m.rotateZ(cur_time/100.0f*0.5f);
+
+
+
+	B->mTransform.mulB_43	(m);
+#ifdef DEBUG
+	if( !fsimilar(DET(B->mTransform),1.f,DET_CHECK_EPS) ){
+	
+		Log("RotatingZ angle=",cur_time/100.0f*0.5f);	
+		VERIFY2(0,"Bones callback returns BAD!!! matrix");
+	}
+#endif
 }
 
 void CCar::cb_Steer(CBoneInstance* B)
@@ -460,9 +490,8 @@ void CCar::UpdateCL()
 		}
 	}
     ASCUpdate();
-    if (Owner())
-        return;
-    //	UpdateEx			(g_fov);
+    if (Owner()) return;
+    UpdateEx(g_fov);
     VisualUpdate(90);
     if (GetScriptControl())
         ProcessScripts();
@@ -504,6 +533,8 @@ void CCar::VisualUpdate(float fov)
 
     UpdateExhausts();
     m_lights.Update();
+	m_stop_lights.Update	();
+	m_signal_lights.Update	();
 }
 
 void CCar::renderable_Render()
@@ -609,21 +640,41 @@ void CCar::PHHit(SHit& H)
 
 void CCar::ApplyDamage(u16 level)
 {
-    CDamagableItem::ApplyDamage(level);
-    switch (level)
-    {
-    case 1: m_damage_particles.Play1(this); break;
-    case 2:
-    {
-        if (!CDelayedActionFuse::isActive())
-        {
-            CDelayedActionFuse::CheckCondition(GetfHealth());
-        }
-        m_damage_particles.Play2(this);
-    }
-    break;
-    case 3: m_fuel = 0.f;
-    }
+	if (level == m_level_applied) return;
+
+	if (level > m_level_applied)
+	{
+		switch(level)
+		{
+			case 1: m_damage_particles.Play1(this);break;
+			case 2: 
+				{
+					if(!CDelayedActionFuse::isActive())
+					{
+						CDelayedActionFuse::CheckCondition(GetfHealth());
+					}
+					m_damage_particles.Play2(this);
+				}
+												   break;
+			case 3: m_fuel=0.f;
+				
+		}
+	}
+	else
+	{
+		switch(level)
+		{
+			case 0: 
+				m_damage_particles.Stop1(this);
+				break;
+			case 1: 
+				m_damage_particles.Stop2(this);
+				CDelayedActionFuse::Reset();
+				break;		
+		}
+	}
+
+	CDamagableItem::ApplyDamage(level);
 }
 void CCar::detach_Actor()
 {
@@ -833,6 +884,10 @@ void CCar::ParseDefinitions()
     ///////////////////////////////lights///////////////////////////////////////////////////
     m_lights.Init(this);
     m_lights.ParseDefinitions();
+	m_stop_lights.Init(this);
+	m_stop_lights.ParseDefinitions();
+	m_signal_lights.Init(this);
+	m_signal_lights.ParseDefinitions();
 
     if (ini->section_exist("animations"))
     {
@@ -893,6 +948,12 @@ void CCar::Init()
         VERIFY2(fsimilar(DET(pKinematics->LL_GetTransform(m_bone_steer)), 1.f, EPS_L), "BBADD MTX");
         pKinematics->LL_GetBoneInstance(m_bone_steer).set_callback(bctPhysics, cb_Steer, this);
     }
+	if(ini->line_exist("car_definition","rotate_z"))
+	{
+		m_bone_steer=pKinematics->LL_BoneID(READ_IF_EXISTS(ini,r_string,"car_definition","rotate_z",NULL));
+		//VERIFY2(fsimilar(DET(pKinematics->LL_GetTransform(m_bone_steer)),1.f,EPS_L),"BBADD MTX");
+		pKinematics->LL_GetBoneInstance(m_bone_steer).set_callback(bctPhysics,Rotate,this);
+	}
     m_steer_angle = 0.f;
     // ref_wheel.Init();
     m_ref_radius = ini->r_float("car_definition", "reference_radius"); // ref_wheel.radius;
@@ -997,6 +1058,7 @@ void CCar::Init()
 void CCar::Revert() { m_pPhysicsShell->applyForce(0, 1.5f * EffectiveGravity() * m_pPhysicsShell->getMass(), 0); }
 void CCar::NeutralDrive()
 {
+	m_stop_lights.TurnOnStopLights();
     xr_vector<SWheelDrive>::iterator i, e;
     i = m_driving_wheels.begin();
     e = m_driving_wheels.end();
@@ -1030,6 +1092,9 @@ void CCar::Drive()
 
 void CCar::StartEngine()
 {
+	m_signal_lights.TurnOnSignalLights();
+	m_lights.TurnOnHeadLights();
+	m_stop_lights.TurnOnStopLights();
     if (m_fuel < EPS || b_engine_on) return;
     PlayExhausts();
     m_car_sound->Start();
@@ -1039,10 +1104,9 @@ void CCar::StartEngine()
 }
 void CCar::StopEngine()
 {
-    if (!b_engine_on)
-        return;
-    // m_car_sound->Stop();
-    // StopExhausts();
+    if (!b_engine_on) return;
+    m_car_sound->Stop();
+    StopExhausts();
     AscCall(ascSndStall);
     AscCall(ascExhoustStop);
     NeutralDrive(); // set zero speed
@@ -1098,7 +1162,7 @@ void CCar::UpdatePower()
 {
     m_current_rpm = EngineDriveSpeed();
     m_current_engine_power = EnginePower();
-    if (b_auto_switch_transmission && !b_transmission_switching)
+    if (b_auto_switch_transmission && !b_transmission_switching&&b_engine_on)
     {
         VERIFY2(CurrentTransmission() < m_gear_ratious.size(), "wrong transmission");
         if (m_current_rpm < m_gear_ratious[CurrentTransmission()][1])
@@ -1243,24 +1307,26 @@ void CCar::PressBreaks()
 {
     HandBreak();
     brp = true;
+	if(b_engine_on)
+	m_stop_lights.TurnOnStopLights();
 }
 
 void CCar::DriveBack()
 {
     Clutch();
     Transmission(0);
-    if (1 == CurrentTransmission() || 0 == CurrentTransmission())
-        Starter();
+    if (1 == CurrentTransmission() || 0 == CurrentTransmission())Starter();
     Drive();
+	if(b_engine_on)
+	m_stop_lights.TurnOnStopLights();
 }
 void CCar::DriveForward()
 {
     Clutch();
-    if (0 == CurrentTransmission())
-        Transmission(1);
-    if (1 == CurrentTransmission() || 0 == CurrentTransmission())
-        Starter();
+    if (0 == CurrentTransmission()) Transmission(1);
+    if (1 == CurrentTransmission() || 0 == CurrentTransmission())Starter();
     Drive();
+	m_stop_lights.TurnOffStopLights();
 }
 void CCar::ReleaseRight()
 {
@@ -1323,6 +1389,7 @@ void CCar::ReleaseBreaks()
 {
     ReleaseHandBreak();
     brp = false;
+	m_stop_lights.TurnOffStopLights();
 }
 
 void CCar::Transmission(size_t num)
@@ -1778,6 +1845,9 @@ void CCar::CarExplode()
     if (m_car_weapon)m_car_weapon->Action(CCarWeapon::eWpnActivate, 0);
 	if (m_car_weapon2)m_car_weapon2->Action(CCarWeapon2::eWpnActivate,0);
     m_lights.TurnOffHeadLights();
+	AscCall(ascExhoustStop);
+	m_stop_lights.TurnOffStopLights();
+	m_signal_lights.TurnOffSignalLights();
 	m_damage_particles.Stop1(this);
 	m_damage_particles.Stop2(this);
     b_exploded = true;
@@ -1789,6 +1859,7 @@ void CCar::CarExplode()
 		A->use_HolderEx(nullptr, false);
         if (A->g_Alive() <= 0.f)A->character_physics_support()->movement()->DestroyCharacter();
     }
+	(g_fov = base_fov);
 
     if (CPHDestroyable::CanDestroy())
         CPHDestroyable::Destroy(ID(), "physic_destroyable_object");

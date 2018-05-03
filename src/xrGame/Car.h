@@ -8,6 +8,8 @@
 #include "xrPhysics/phupdateobject.h"
 #include "script_entity.h"
 #include "CarLights.h"
+#include "CarStopLights.h"
+#include "CarSignalLights.h"
 
 #include "holder_custom.h"
 #include "PHSkeleton.h"
@@ -437,6 +439,8 @@ private:
     size_t m_current_transmission_num;
     ///////////////////////////////////////////////////
     CCarLights m_lights;
+	CCarStopLights m_stop_lights;
+	CCarSignalLights m_signal_lights;
     ////////////////////////////////////////////////////
     /////////////////////////////////////////////////
 
@@ -549,6 +553,8 @@ private:
     void OnCameraChange(int type);
 
     bool HUDview() { return IsFocused(); }
+
+	static void	_BCL		Rotate					(CBoneInstance* B);
     static void cb_Steer(CBoneInstance* B);
     virtual void Hit(SHit* pHDS);
     virtual void Die(IGameObject* who);

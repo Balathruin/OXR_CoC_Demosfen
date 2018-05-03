@@ -2249,7 +2249,7 @@ bool CActor::use_HolderEx(CHolderCustom* object, bool bForce)
 		if (object && (!object->EnterLocked() || bForce))
 		{
 			Fvector center;	Center(center);
-			if ((bForce || object->Use(Device.vCameraPosition, Device.vCameraDirection, center)) && object->attach_Actor(this))
+            if ((bForce || object->Use(Level().CurrentControlEntity()->Position(), Device.vCameraDirection, center)) && object->attach_Actor(this))
 			{
 				inventory().SetActiveSlot(NO_ACTIVE_SLOT);
 				SetWeaponHideState(INV_STATE_BLOCK_ALL, true);

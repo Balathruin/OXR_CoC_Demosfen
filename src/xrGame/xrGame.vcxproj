@@ -809,6 +809,8 @@
     <ClInclude Include="Car.h" />
     <ClInclude Include="CarDamageParticles.h" />
     <ClInclude Include="CarLights.h" />
+    <ClInclude Include="CarStopLights.h" />
+    <ClInclude Include="CarSignalLights.h" />
     <ClInclude Include="CarWeapon.h" />
     <ClInclude Include="CarWeapon2.h" />
     <ClInclude Include="car_memory.h" />
@@ -2326,6 +2328,8 @@
     <ClCompile Include="CarExhaust.cpp" />
     <ClCompile Include="CarInput.cpp" />
     <ClCompile Include="CarLights.cpp" />
+    <ClCompile Include="CarStopLights.cpp" />
+    <ClCompile Include="CarSignalLights.cpp" />
     <ClCompile Include="CarScript.cpp">
       <PrecompiledHeaderFile>pch_script.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName)_script.pch</PrecompiledHeaderOutputFile>

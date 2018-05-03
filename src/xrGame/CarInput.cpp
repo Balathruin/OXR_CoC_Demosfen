@@ -7,6 +7,9 @@
 #include "alife_space.h"
 #include "hit.h"
 #include "phdestroyable.h"
+#include "CarLights.h"
+#include "CarStopLights.h"
+#include "CarSignalLights.h"
 #include "car.h"
 #include "actor.h"
 #include "cameralook.h"
@@ -161,7 +164,7 @@ void CCar::OnKeyboardPress(int cmd)
 				if (HasWeapon())m_car_weapon->Action(CCarWeapon::eWpnActivate, b_engine_on);
 				if (HasWeapon())m_car_weapon2->Action(CCarWeapon2::eWpnActivate, b_engine_on);
 		break; // получаем управление турелями если завели двигатель или попытались
-    case kTORCH: m_lights.SwitchHeadLights(); break;
+    case kTORCH: m_lights.SwitchHeadLights();m_stop_lights.SwitchStopLights(); m_signal_lights.SwitchSignalLights();break;
 	case kUSE:	(g_fov = base_fov); break;
 	case kWPN_ZOOM: if (HasWeapon()) (g_fov = dest_fov);break;
     case kWPN_FUNC: m_repairing = true; break;

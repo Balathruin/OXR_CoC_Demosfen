@@ -15,7 +15,7 @@ breaking_wheels   		= back_left_wheel,back_right_wheel 	; тормозящие �
 doors             		= left_door,right_door,front_left_door,front_right_door 	; двери
 steer             		= stearing_wheel 					; руль
 driver_place      		= seat_left 						; место водителя
-exhausts          		= exhausts 							; выхлопная труба
+exhausts          		= exhausts,exhausts1							; выхлопная труба
 exhaust_particles 		= vehiclefx\exhaust_1
 damage              	= damage_bones
 
@@ -69,7 +69,29 @@ N4                 	= 1.25, 4000,6000;2200, 3000
 
 [lights]
 headlights         = f1,f2
+stoplights	   = s1,s2
 
+[s1]
+bone               = back_left_stoplight
+color              = 0.4,0.0,0.0,1.0
+range_omni         = 0.4
+light_color_animmator = warning_01
+range              = 2.6
+cone_angle         = 90
+spot_texture       = lights\lights_torch_01
+glow_texture       = glow\glow_Yellow
+glow_radius        = 0.8
+
+[s2]
+bone               = back_right_stoplight
+color              = 0.4,0.0,0.0,1.0
+range_omni         = 0.4
+light_color_animmator = warning_01
+range              = 3.6
+cone_angle         = 90
+spot_texture       = lights\lights_torch_01
+glow_texture       = glow\glow_Yellow
+glow_radius        = 0.8
 
 
 [f1]
@@ -98,7 +120,7 @@ glow_radius        = 0.5
 
 [car_sound]
 snd_volume         		= 1.0
-snd_name           = car\apc_run
+snd_name           = car\veh_zil\engine_run
 snd_horn_name	   = car\apc_horn
 snd_start_name	   = car\apc_start
 snd_stop_name      = car\apc_stop

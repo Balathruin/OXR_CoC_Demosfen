@@ -5433,6 +5433,12 @@
     <ClInclude Include="CarLights.h">
       <Filter>Core\Client\Objects\vehicles\Car</Filter>
     </ClInclude>
+    <ClInclude Include="CarStopLights.h">
+      <Filter>Core\Client\Objects\vehicles\Car</Filter>
+    </ClInclude>
+    <ClInclude Include="CarSignalLights.h">
+      <Filter>Core\Client\Objects\vehicles\Car</Filter>
+    </ClInclude>
     <ClInclude Include="CarWeapon.h">
       <Filter>Core\Client\Objects\vehicles\Car\CarWeapon</Filter>
     </ClInclude>
@@ -8802,6 +8808,12 @@
       <Filter>Core\Client\Objects\vehicles\Car</Filter>
     </ClCompile>
     <ClCompile Include="CarLights.cpp">
+      <Filter>Core\Client\Objects\vehicles\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="CarStopLights.cpp">
+      <Filter>Core\Client\Objects\vehicles\Car</Filter>
+    </ClCompile>
+    <ClCompile Include="CarSignalLights.cpp">
       <Filter>Core\Client\Objects\vehicles\Car</Filter>
     </ClCompile>
     <ClCompile Include="CarScript.cpp">
