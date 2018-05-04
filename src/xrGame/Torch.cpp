@@ -34,7 +34,7 @@ CTorch::CTorch(void)
     light_render->set_shadow(true);
     light_omni = GEnv.Render->light_create();
     light_omni->set_type(IRender_Light::POINT);
-    light_omni->set_shadow(false);
+    light_omni->set_shadow(true);
 
     m_switched_on = false;
     glow_render = GEnv.Render->glow_create();
@@ -140,9 +140,6 @@ void CTorch::Switch(bool light_on)
     if (can_use_dynamic_lights())
     {
         light_render->set_active(light_on);
-
-        // CActor *pA = smart_cast<CActor *>(H_Parent());
-        // if(!pA)
         light_omni->set_active(light_on);
     }
     glow_render->set_active(light_on);
@@ -172,6 +169,8 @@ BOOL CTorch::net_Spawn(CSE_Abstract* DC)
     if (!inherited::net_Spawn(DC))
         return (FALSE);
 
+	torch_mode = 1;
+
     bool b_r2 = !!psDeviceFlags.test(rsR2);
     b_r2 |= !!psDeviceFlags.test(rsR3);
     b_r2 |= !!psDeviceFlags.test(rsR4);
@@ -182,36 +181,42 @@ BOOL CTorch::net_Spawn(CSE_Abstract* DC)
 
     R_ASSERT2(pUserData->section_exist(m_light_section), "Section not found in torch user data! Check 'light_section' field in config");
 
-    lanim = LALib.FindItem(pUserData->r_string(m_light_section, "color_animator"));
-    guid_bone = K->LL_BoneID(pUserData->r_string(m_light_section, "guide_bone"));	VERIFY(guid_bone != BI_NONE);
+	lanim					= LALib.FindItem(pUserData->r_string("torch_definition","color_animator"));
+	guid_bone				= K->LL_BoneID	(pUserData->r_string("torch_definition","guide_bone"));	VERIFY(guid_bone!=BI_NONE);
 
-    Fcolor clr = pUserData->r_fcolor(m_light_section, (b_r2) ? "color_r2" : "color");
-    fBrightness = clr.intensity();
-    float range = pUserData->r_float(m_light_section, (b_r2) ? "range_r2" : "range");
-    light_render->set_color(clr);
-    light_render->set_range(range);
+	Fcolor clr				= pUserData->r_fcolor				("torch_definition",(b_r2)?"color_r2":"color");
+	range				    = pUserData->r_float				("torch_definition",(b_r2)?"range_r2":"range");
+	range2				    = pUserData->r_float				("torch_definition",(b_r2)?"range_r2_2":"range_2");
 
-    Fcolor clr_o = pUserData->r_fcolor(m_light_section, (b_r2) ? "omni_color_r2" : "omni_color");
-    float range_o = pUserData->r_float(m_light_section, (b_r2) ? "omni_range_r2" : "omni_range");
-    light_omni->set_color(clr_o);
-    light_omni->set_range(range_o);
+	Fcolor clr_o			= pUserData->r_fcolor				("torch_definition",(b_r2)?"omni_color_r2":"omni_color");
+	range_o			        = pUserData->r_float				("torch_definition",(b_r2)?"omni_range_r2":"omni_range");
+	range_o2			    = pUserData->r_float			    ("torch_definition",(b_r2)?"omni_range_r2_2":"omni_range_2");
+	
+	glow_radius			    = pUserData->r_float			    ("torch_definition","glow_radius");
+	glow_radius2			= pUserData->r_float			    ("torch_definition","glow_radius_2");
+	
+	fBrightness				= clr.intensity();
+	light_render->set_color	(clr);
+	light_omni->set_color(clr_o);
+	light_render->set_range(range);
+	light_omni->set_range(range_o );
 
     light_render->set_cone(deg2rad(pUserData->r_float(m_light_section, "spot_angle")));
-    light_render->set_texture(READ_IF_EXISTS(pUserData, r_string, m_light_section, "spot_texture", (0)));
-
-    glow_render->set_texture(pUserData->r_string(m_light_section, "glow_texture"));
-    glow_render->set_color(clr);
-    glow_render->set_radius(pUserData->r_float(m_light_section, "glow_radius"));
-
+    light_render    ->set_texture                 (READ_IF_EXISTS(pUserData, r_string, m_light_section, "spot_texture", (0)));
+	//--[[ Volumetric light
 	if (e->ID_Parent == g_actor->ID())
-        light_render->set_volumetric(!!READ_IF_EXISTS(pUserData, r_bool, m_light_section, "volumetric_for_actor", 0));
+        light_render->set_volumetric            (!!READ_IF_EXISTS(pUserData, r_bool,  m_light_section, "volumetric_for_actor", 0));
     else
-        light_render->set_volumetric(!!READ_IF_EXISTS(pUserData, r_bool, m_light_section, "volumetric", 0));
-    light_render->set_volumetric_quality(READ_IF_EXISTS(pUserData, r_float, m_light_section, "volumetric_quality", 1.f));
-    light_render->set_volumetric_intensity(READ_IF_EXISTS(pUserData, r_float, m_light_section, "volumetric_intensity", 1.f));
-    light_render->set_volumetric_distance(READ_IF_EXISTS(pUserData, r_float, m_light_section, "volumetric_distance", 1.f));
-    light_render->set_type((IRender_Light::LT)(READ_IF_EXISTS(pUserData, r_u8, m_light_section, "type", 2)));
-    light_omni->set_type((IRender_Light::LT)(READ_IF_EXISTS(pUserData, r_u8, m_light_section, "omni_type", 1)));
+        light_render->set_volumetric            (!!READ_IF_EXISTS(pUserData, r_bool,  m_light_section, "volumetric", 0));
+    light_render    ->set_volumetric_quality      (READ_IF_EXISTS(pUserData, r_float, m_light_section, "volumetric_quality", 1.f));
+    light_render    ->set_volumetric_intensity    (READ_IF_EXISTS(pUserData, r_float, m_light_section, "volumetric_intensity", 1.f));
+    light_render    ->set_volumetric_distance     (READ_IF_EXISTS(pUserData, r_float, m_light_section, "volumetric_distance", 1.f));
+    light_render    ->set_type((IRender_Light::LT)(READ_IF_EXISTS(pUserData, r_u8,    m_light_section, "type", 2)));
+    light_omni      ->set_type((IRender_Light::LT)(READ_IF_EXISTS(pUserData, r_u8,    m_light_section, "omni_type", 1)));
+	//--]]
+    glow_render     ->set_texture(pUserData->r_string(m_light_section, "glow_texture"));
+    glow_render     ->set_color(clr);
+    glow_render     ->set_radius (pUserData->r_float (m_light_section, "glow_radius"));
 
     //включить/выключить фонарик
     Switch(torch->m_active);
@@ -220,6 +225,27 @@ BOOL CTorch::net_Spawn(CSE_Abstract* DC)
 	m_delta_h = PI_DIV_2 - atan((range * 0.5f) / _abs(m_torch_offset.x));
 
     return (TRUE);
+}
+
+void CTorch::SwitchTorchMode()
+{
+	if (!m_switched_on)
+		return;
+	
+	if (torch_mode == 1)
+	{
+		torch_mode = 2;
+		light_render->set_range(range);
+	    light_omni->set_range(range_o);
+		glow_render->set_radius(glow_radius);
+	}
+	else
+	{
+		torch_mode = 1;
+		light_render->set_range(range2);
+	    light_omni->set_range(range_o2);
+		glow_render->set_radius(glow_radius2);
+	}
 }
 
 void CTorch::net_Destroy()
@@ -244,19 +270,14 @@ void CTorch::OnH_B_Independent(bool just_before_destroy)
 void CTorch::UpdateCL()
 {
     inherited::UpdateCL();
-
     if (!m_switched_on)
         return;
-
     CBoneInstance& BI = smart_cast<IKinematics*>(Visual())->LL_GetBoneInstance(guid_bone);
     Fmatrix M;
-
     if (H_Parent())
     {
         CActor* actor = smart_cast<CActor*>(H_Parent());
-        if (actor)
-            smart_cast<IKinematics*>(H_Parent()->Visual())->CalculateBones_Invalidate();
-
+        if (actor) smart_cast<IKinematics*>(H_Parent()->Visual())->CalculateBones_Invalidate();
         if (H_Parent()->XFORM().c.distance_to_sqr(Device.vCameraPosition) < _sqr(OPTIMIZATION_DISTANCE) ||
             GameID() != eGameIDSingle)
         {
@@ -296,13 +317,21 @@ void CTorch::UpdateCL()
                 offset.mad(M.j, m_torch_offset.y);
                 offset.mad(M.k, m_torch_offset.z);
                 light_render->set_position(offset);
+				light_render->set_volumetric(false);
 
-			offset = M.c; 
-			offset.mad(M.i,m_omni_offset.x);
-			offset.mad(M.j,m_omni_offset.y);
-			offset.mad(M.k,m_omni_offset.z);
-			light_omni->set_position(offset);
-
+				if(true /*false*/)
+				{
+					offset = M.c; 
+					offset.mad(M.i,m_omni_offset.x);
+					offset.mad(M.j,m_omni_offset.y);
+					offset.mad(M.k,m_omni_offset.z);
+					light_omni->set_position(offset);
+				}
+				//v2v3v4
+				if(actor->cam_FirstEye())
+					light_omni->set_shadow(false);
+				//v2v3v4
+			}//if (true)
 			glow_render->set_position(M.c);
 
 			light_render->set_rotation(dir, right);
@@ -361,8 +390,7 @@ void CTorch::UpdateCL()
         light_render->set_color(fclr);
         light_omni->set_color(fclr);
     }
-    glow_render->set_color(fclr);
-    }
+        glow_render->set_color(fclr);
 }
 
 void CTorch::create_physic_shell() { CPhysicsShellHolder::create_physic_shell(); }

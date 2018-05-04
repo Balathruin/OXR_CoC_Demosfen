@@ -20,6 +20,17 @@ protected:
     float m_delta_h;
     Fvector2 m_prev_hp;
     bool m_switched_on;
+	float           torch_mode;
+	float           range;
+	float           range_o;
+	float           range2;
+	float           range_o2;
+	float           glow_radius;
+	float           glow_radius2;
+	ref_light		light_render;
+	ref_light		light_omni;
+	ref_glow		glow_render;
+	Fvector			m_focus;
     ref_light light_render;
     ref_light light_omni;
     ref_glow glow_render;
@@ -49,6 +60,7 @@ public:
     virtual void OnMoveToRuck(const SInvItemPlace& prev);
     virtual void UpdateCL();
 
+	void SwitchTorchMode();
     void Switch();
     void Switch(bool light_on);
     bool torch_active() const;
@@ -75,4 +87,5 @@ public:
 
     virtual void afterDetach();
     virtual void renderable_Render();
+	ref_sound 		m_switch_sound;
 };
