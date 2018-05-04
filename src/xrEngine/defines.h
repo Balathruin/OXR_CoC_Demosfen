@@ -35,13 +35,14 @@ enum
 
     rsCameraPos = (1ul << 18ul),
     rsDrawFPS = (1ul << 19ul),
+	rsDrawMemory = (1ul << 20ul),	//Romann
 
-    rsR1 = (1ul << 20ul),
-    rsR2 = (1ul << 21ul),
-    rsR3 = (1ul << 22ul),
-    rsR4 = (1ul << 23ul), // 22 was reserved for editor
-    rsRGL = (1ul << 24ul), // 23 was reserved for editor
-    // 24-32 bit - reserved to Editor
+    rsR1 = (1ul << 21ul),
+    rsR2 = (1ul << 22ul),
+    rsR3 = (1ul << 23ul),
+    rsR4 = (1ul << 24ul), // 22 was reserved for editor
+    rsRGL = (1ul << 25ul), // 23 was reserved for editor
+    // 25-32 bit - reserved to Editor
 };
 
 //. ENGINE_API extern u32 psCurrentMode ;

@@ -154,7 +154,7 @@ void CStats::Show()
     if(psDeviceFlags.test(rsDrawFPS) && !Device.Paused())
     {
         float refHeight = font.GetHeight();
-        font.SetHeightI(0.03f);
+        font.SetHeightI(0.025f);
 		float fps = 1.f / Device.fTimeDelta;
 		if ((Device.dwFrame % 25) == 0)
 		fFPS = 0.7f * fFPS + 0.3f * fps;
@@ -175,13 +175,24 @@ void CStats::Show()
 			font.Out(250, 10, "FPS: %2.0f", fFPS);
         font.SetHeight(refHeight);
     };
-
+    // Romann
+    if (psDeviceFlags.test(rsDrawMemory))
+    {
+        float refHeight = font.GetHeight();
+        font.SetHeightI(0.02f);
+        font.SetColor(0xff00ff00);
+//        font.OutNext(250, 30, "Memory: %2.2f", fMem_calls);
+        font.Out(250, 30, "Memory: %2.2f", fMem_calls);
+        font.SetHeight(refHeight);
+        font.OnRender();
+    }
+    // Romann
     if (psDeviceFlags.test(rsCameraPos))
     {
         float refHeight = font.GetHeight();
         font.SetHeightI(0.02f);
-        font.SetColor(0xffffffff);
-        font.Out(10, 600, "CAMERA POSITION:  [%3.2f,%3.2f,%3.2f]", VPUSH(Device.vCameraPosition));
+        font.SetColor(0xffffff00);
+        font.Out(10, 230, "CAMERA POSITION:  [%3.2f,%3.2f,%3.2f]", VPUSH(Device.vCameraPosition));
         font.SetHeight(refHeight);
     }
 #ifdef DEBUG
