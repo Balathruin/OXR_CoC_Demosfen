@@ -29,6 +29,9 @@ class CInventory;
 class CSE_PHSkeleton;
 class CCarWeapon;
 class CCarWeapon2;
+class CCarWeapon3;
+class CCarWeapon4;
+class CCarWeapon5;
 struct dxGeomUserData;
 struct dSurfaceParameters;
 // defs
@@ -384,6 +387,9 @@ private:
 private:
     CCarWeapon* m_car_weapon;
 	CCarWeapon2* m_car_weapon2;
+	CCarWeapon3* m_car_weapon3;
+	CCarWeapon4* m_car_weapon4;
+	CCarWeapon5* m_car_weapon5;
     float m_steer_angle;
     bool m_repairing;
     u16 m_bone_steer;

@@ -813,6 +813,9 @@
     <ClInclude Include="CarSignalLights.h" />
     <ClInclude Include="CarWeapon.h" />
     <ClInclude Include="CarWeapon2.h" />
+    <ClInclude Include="CarWeapon3.h" />
+    <ClInclude Include="CarWeapon4.h" />
+    <ClInclude Include="CarWeapon5.h" />
     <ClInclude Include="car_memory.h" />
     <ClInclude Include="CdkeyDecode\base32.h" />
     <ClInclude Include="CdkeyDecode\cdkeydecode.h" />
@@ -2337,6 +2340,9 @@
     <ClCompile Include="CarSound.cpp" />
     <ClCompile Include="CarWeapon.cpp" />
     <ClCompile Include="CarWeapon2.cpp" />
+    <ClCompile Include="CarWeapon3.cpp" />
+    <ClCompile Include="CarWeapon4.cpp" />
+    <ClCompile Include="CarWeapon5.cpp" />
     <ClCompile Include="CarWheels.cpp" />
     <ClCompile Include="car_memory.cpp" />
     <ClCompile Include="CdkeyDecode\base32.c">

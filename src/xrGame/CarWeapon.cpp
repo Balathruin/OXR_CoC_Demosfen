@@ -232,37 +232,39 @@ void CCarWeapon::Action(u16 id, u32 flags)
 {
     switch (id)
     {
-    case eWpnFire:
-    {
-        if (flags == 1)
-            FireStart();
-        else
-            FireEnd();
-    }
-    break;
-    case eWpnActivate:
-    {
-        if (flags == 1)
-            m_bActive = true;
-        else
+        case eWpnFire:
         {
-            m_bActive = false;
-            FireEnd();
+            if (flags == 1)
+                FireStart();
+            else
+                FireEnd();
         }
-    }
-    break;
+            break;
+            case eWpnActivate:
+        {
+            if (flags == 1)
+                m_bActive = true;
+            else
+            {
+                m_bActive = false;
+                FireEnd();
+            }
+        }
+        break;
 
-    case eWpnAutoFire:
-    {
-        if (flags == 1)
-            m_bAutoFire = true;
-        else
-            m_bAutoFire = false;
-    }
-    break;
-    case eWpnToDefaultDir: { SetParam(eWpnDesiredDir, Fvector2().set(m_bind_y_rot, m_bind_x_rot));
-    }
-    break;
+        case eWpnAutoFire:
+        {
+            if (flags == 1)
+                m_bAutoFire = true;
+            else
+                m_bAutoFire = false;
+        }
+        break;
+        case eWpnToDefaultDir:
+        {
+            SetParam(eWpnDesiredDir, Fvector2().set(m_bind_y_rot, m_bind_x_rot));
+        }
+        break;
     }
 }
 

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "CarWeapon2.h"
+#include "CarWeapon3.h"
 #include "xrPhysics/PhysicsShell.h"
 #include "PhysicsShellHolder.h"
 
@@ -11,23 +11,21 @@
 #include "game_object_space.h"
 #include "holder_custom.h"
 
-void CCarWeapon2::BoneCallbackX(CBoneInstance *B)
+void CCarWeapon3::BoneCallbackX		(CBoneInstance *B)
 {
-	CCarWeapon2* P = static_cast<CCarWeapon2*>(B->callback_param());
-	Fmatrix rX;
-    rX.rotateX(P->m_cur_x_rot);
-	B->mTransform.mulB_43(rX);
+	CCarWeapon3	*P = static_cast<CCarWeapon3*>(B->callback_param());
+	Fmatrix rX;		rX.rotateX		(P->m_cur_x_rot);
+	B->mTransform.mulB_43			(rX);
 }
 
-void CCarWeapon2::BoneCallbackY(CBoneInstance *B)
+void CCarWeapon3::BoneCallbackY		(CBoneInstance *B)
 {
-	CCarWeapon2* P = static_cast<CCarWeapon2*>(B->callback_param());
-	Fmatrix rY;
-    rY.rotateY(P->m_cur_y_rot);
-	B->mTransform.mulB_43(rY);
+	CCarWeapon3	*P = static_cast<CCarWeapon3*>(B->callback_param());
+	Fmatrix rY;		rY.rotateY		(P->m_cur_y_rot);
+	B->mTransform.mulB_43			(rY);
 }
 
-CCarWeapon2::CCarWeapon2(CPhysicsShellHolder* obj)
+CCarWeapon3::CCarWeapon3(CPhysicsShellHolder* obj)
 {
 	m_bActive	= false;
 	m_bAutoFire	= false;
@@ -37,11 +35,11 @@ CCarWeapon2::CCarWeapon2(CPhysicsShellHolder* obj)
 	IKinematics* K			= smart_cast<IKinematics*>(m_object->Visual());
 	CInifile* pUserData		= K->LL_UserData(); 
 
-	m_rotate_x_bone			= K->LL_BoneID	(pUserData->r_string("mounted_weapon_definition2","rotate_x_bone2"));
-	m_rotate_y_bone			= K->LL_BoneID	(pUserData->r_string("mounted_weapon_definition2","rotate_y_bone2"));
-	m_fire_bone				= K->LL_BoneID	(pUserData->r_string("mounted_weapon_definition2","fire_bone2"));
-	m_min_gun_speed			= pUserData->r_float("mounted_weapon_definition2","min_gun_speed2");
-	m_max_gun_speed			= pUserData->r_float("mounted_weapon_definition2","max_gun_speed2");
+	m_rotate_x_bone			= K->LL_BoneID	(pUserData->r_string("mounted_weapon_definition3","rotate_x_bone3"));
+	m_rotate_y_bone			= K->LL_BoneID	(pUserData->r_string("mounted_weapon_definition3","rotate_y_bone3"));
+	m_fire_bone				= K->LL_BoneID	(pUserData->r_string("mounted_weapon_definition3","fire_bone3"));
+	m_min_gun_speed			= pUserData->r_float("mounted_weapon_definition3","min_gun_speed3");
+	m_max_gun_speed			= pUserData->r_float("mounted_weapon_definition3","max_gun_speed3");
 	CBoneData& bdX			= K->LL_GetData(m_rotate_x_bone); //VERIFY(bdX.IK_data.type==jtJoint);
 	m_lim_x_rot.set			(bdX.IK_data.limits[0].limit.x,bdX.IK_data.limits[0].limit.y);
 	CBoneData& bdY			= K->LL_GetData(m_rotate_y_bone); //VERIFY(bdY.IK_data.type==jtJoint);
@@ -62,7 +60,7 @@ CCarWeapon2::CCarWeapon2(CPhysicsShellHolder* obj)
 	m_object->XFORM().transform_dir		(m_destEnemyDir);
 
 	inheritedShooting::Light_Create		();
-	Load								(pUserData->r_string("mounted_weapon_definition2","wpn_section2"));
+	Load								(pUserData->r_string("mounted_weapon_definition3","wpn_section3"));
 	SetBoneCallbacks					();
 	m_object->processing_activate		();
 
@@ -72,21 +70,21 @@ CCarWeapon2::CCarWeapon2(CPhysicsShellHolder* obj)
 	m_fire_pos.set						(0,0,0);
 }
 
-CCarWeapon2::~CCarWeapon2()
+CCarWeapon3::~CCarWeapon3()
 {
 	delete_data(m_Ammo);
 //.	m_object->processing_deactivate		();
 }
 
-void CCarWeapon2::Load(LPCSTR section)
+void CCarWeapon3::Load(LPCSTR section)
 {
 	inheritedShooting::Load(section);
-	HUD_SOUND_ITEM::LoadSound(section,"snd_shoot2", m_sndShot, SOUND_TYPE_WEAPON_SHOOTING);
-	HUD_SOUND_ITEM::LoadSound(section,"snd_shoot_high_2", m_sndShot_2, SOUND_TYPE_WEAPON_SHOOTING);
-	m_Ammo->Load(pSettings->r_string(section, "ammo_class2"), 0);
+	HUD_SOUND_ITEM::LoadSound(section,"snd_shoot3", m_sndShot, SOUND_TYPE_WEAPON_SHOOTING);
+	HUD_SOUND_ITEM::LoadSound(section,"snd_shoot_high_3", m_sndShot_3, SOUND_TYPE_WEAPON_SHOOTING);
+	m_Ammo->Load(pSettings->r_string(section, "ammo_class3"), 0);
 }
 
-void CCarWeapon2::UpdateCL()
+void CCarWeapon3::UpdateCL()
 {
 	if(!m_bActive) return;
 	UpdateBarrelDir				();
@@ -96,7 +94,7 @@ void CCarWeapon2::UpdateCL()
 	UpdateFire					();
 }
 
-void CCarWeapon2::UpdateFire()
+void CCarWeapon3::UpdateFire()
 {
 	fShotTimeCounter -= Device.fTimeDelta;
 
@@ -113,31 +111,32 @@ void CCarWeapon2::UpdateFire()
 			FireEnd();
 	};
 
-	if (!IsWorking())
+	if(!IsWorking())
 	{
 		clamp(fShotTimeCounter, 0.0f, flt_max);
 		return;
 	}
 
-	if (fShotTimeCounter <= 0)
+	if(fShotTimeCounter<=0)
 	{
 		OnShot();
 		fShotTimeCounter += fOneShotTime;
 	}
 }
 
-void CCarWeapon2::Render_internal() { RenderLight(); }
-void CCarWeapon2::SetBoneCallbacks()
+void CCarWeapon3::Render_internal() { RenderLight(); }
+
+void CCarWeapon3::SetBoneCallbacks()
 {
 //	m_object->PPhysicsShell()->EnabledCallbacks(FALSE);
 	
 	CBoneInstance& biX		= smart_cast<IKinematics*>(m_object->Visual())->LL_GetBoneInstance(m_rotate_x_bone);	
-	biX.set_callback		(bctCustom, BoneCallbackX, this);
+	biX.set_callback		(bctCustom,BoneCallbackX,this);
 	CBoneInstance& biY		= smart_cast<IKinematics*>(m_object->Visual())->LL_GetBoneInstance(m_rotate_y_bone);	
-	biY.set_callback		(bctCustom, BoneCallbackY, this);
+	biY.set_callback		(bctCustom,BoneCallbackY,this);
 }
 
-void CCarWeapon2::ResetBoneCallbacks()
+void CCarWeapon3::ResetBoneCallbacks()
 {
 	CBoneInstance& biX		= smart_cast<IKinematics*>(m_object->Visual())->LL_GetBoneInstance(m_rotate_x_bone);	
 	biX.reset_callback		();
@@ -147,7 +146,7 @@ void CCarWeapon2::ResetBoneCallbacks()
 //	m_object->PPhysicsShell()->EnabledCallbacks(TRUE);
 }
 
-void CCarWeapon2::UpdateBarrelDir()
+void CCarWeapon3::UpdateBarrelDir()
 {
 	IKinematics* K		= smart_cast<IKinematics*>(m_object->Visual());
 	m_fire_bone_xform	= K->LL_GetTransform(m_fire_bone);
@@ -190,8 +189,9 @@ void CCarWeapon2::UpdateBarrelDir()
 	}
 #endif
 }
-bool CCarWeapon2::AllowFire() { return m_allow_fire; }
-float CCarWeapon2::FireDirDiff()
+bool CCarWeapon3::AllowFire() { return m_allow_fire; }
+
+float CCarWeapon3::FireDirDiff()
 {
 	Fvector d1,d2;
 	d1.set(m_cur_x_rot, m_cur_y_rot, 0).normalize_safe();
@@ -199,35 +199,36 @@ float CCarWeapon2::FireDirDiff()
 	return rad2deg(acos(d1.dotproduct(d2)));
 }
 
-const Fvector&	CCarWeapon2::get_CurrentFirePoint() { return m_fire_pos; }
-const Fmatrix&	CCarWeapon2::get_ParticlesXFORM	() { return m_fire_bone_xform; }
-void CCarWeapon2::FireStart() { inheritedShooting::FireStart(); }
-void CCarWeapon2::FireEnd()
+const Fvector&	CCarWeapon3::get_CurrentFirePoint() { return m_fire_pos; }
+const Fmatrix&	CCarWeapon3::get_ParticlesXFORM() { return m_fire_bone_xform; }
+void CCarWeapon3::FireStart() { inheritedShooting::FireStart(); }
+
+void CCarWeapon3::FireEnd()	
 {
 	inheritedShooting::FireEnd();
-	StopFlameParticles();
+	StopFlameParticles	();
 }
 
-void CCarWeapon2::OnShot()
+void CCarWeapon3::OnShot()
 {
     CHolderCustom* holder = smart_cast<CHolderCustom*>(m_object);
     FireBullet(m_fire_pos, m_fire_dir, fireDispersionBase, *m_Ammo, holder->Engaged() ? 0 : m_object->ID(), m_object->ID(),
         SendHitAllowed(m_object), ::Random.randI(0, 30));
 
-	StartShotParticles();
+	StartShotParticles		();
 
-	if (m_bLightShotEnabled)
-		Light_Start();
+	if(m_bLightShotEnabled) 
+		Light_Start			();
 
-	StartFlameParticles();
-	StartSmokeParticles(m_fire_pos, zero_vel);
-	//  OnShellDrop				(m_fire_pos, zero_vel);
+	StartFlameParticles		();
+	StartSmokeParticles		(m_fire_pos, zero_vel);
+	//OnShellDrop				(m_fire_pos, zero_vel);
 
-	HUD_SOUND_ITEM::PlaySound(m_sndShot, m_fire_pos, m_object, false);
-	HUD_SOUND_ITEM::PlaySound(m_sndShot_2, m_fire_pos, m_object, true);
+	HUD_SOUND_ITEM::PlaySound	(m_sndShot, m_fire_pos, m_object, false);
+	HUD_SOUND_ITEM::PlaySound	(m_sndShot_3, m_fire_pos, m_object, true);
 }
 
-void CCarWeapon2::Action				(u16 id, u32 flags)
+void CCarWeapon3::Action				(u16 id, u32 flags)
 {
 	switch (id)
     {
@@ -267,21 +268,21 @@ void CCarWeapon2::Action				(u16 id, u32 flags)
     }
 }
 
-void CCarWeapon2::SetParam(int id, Fvector2 val)
+void CCarWeapon3::SetParam(int id, Fvector2 val)
 {
     switch (id)
     {
-        case eWpnDesiredDir: m_destEnemyDir.setHP(val.x, val.y); break;
+        case eWpnDesiredDir: m_destEnemyDir.setHP(val.x,val.y); break;
     }
 }
 
-void CCarWeapon2::SetParam(int id, Fvector val)
+void CCarWeapon3::SetParam(int id, Fvector val)
 {
     switch (id)
     {
-        case eWpnDesiredPos: m_destEnemyDir.sub(val, m_fire_pos).normalize_safe(); break;
+        case eWpnDesiredPos: m_destEnemyDir.sub(val,m_fire_pos).normalize_safe(); break;
     }
 }
-    const Fvector& CCarWeapon2::ViewCameraPos() { return m_fire_pos; }
-    const Fvector& CCarWeapon2::ViewCameraDir() { return m_fire_dir; }
-    const Fvector& CCarWeapon2::ViewCameraNorm() { return m_fire_norm; }
+const Fvector&	CCarWeapon3::ViewCameraPos() { return m_fire_pos; }
+const Fvector&	CCarWeapon3::ViewCameraDir() { return m_fire_dir; }
+const Fvector&	CCarWeapon3::ViewCameraNorm() { return m_fire_norm; }

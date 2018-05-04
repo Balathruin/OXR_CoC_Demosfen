@@ -24,6 +24,9 @@
 #include "ui/UIMainIngameWnd.h"
 #include "CarWeapon.h"
 #include "CarWeapon2.h"
+#include "CarWeapon3.h"
+#include "CarWeapon4.h"
+#include "CarWeapon5.h"
 #include "game_object_space.h"
 #include "xrEngine/GameMtlLib.h"
 #include "hudmanager.h"
@@ -96,6 +99,9 @@ CCar::CCar()
     b_exploded = false;
     m_car_weapon = NULL;
 	m_car_weapon2=NULL;
+	m_car_weapon3=NULL;
+	m_car_weapon4=NULL;
+	m_car_weapon5=NULL;
     m_power_neutral_factor = 0.25f;
     m_steer_angle = 0.f;
 #ifdef DEBUG
@@ -113,6 +119,9 @@ CCar::~CCar(void)
     xr_delete(inventory);
     xr_delete(m_car_weapon);
 	xr_delete(m_car_weapon2);
+	xr_delete(m_car_weapon3);
+	xr_delete(m_car_weapon4);
+	xr_delete(m_car_weapon5);
     xr_delete(m_memory);
  //	xr_delete(l_tpEntityAction);
 }
@@ -230,6 +239,12 @@ BOOL CCar::net_Spawn(CSE_Abstract* DC)
         m_car_weapon = new CCarWeapon(this);
 	if(pUserData->section_exist("mounted_weapon_definition2"))
 		m_car_weapon2 = new CCarWeapon2(this);
+	if(pUserData->section_exist("mounted_weapon_definition3"))
+		m_car_weapon3 = new CCarWeapon3(this);
+	if(pUserData->section_exist("mounted_weapon_definition4"))
+		m_car_weapon4 = new CCarWeapon4(this);
+	if(pUserData->section_exist("mounted_weapon_definition5"))
+		m_car_weapon5 = new CCarWeapon5(this);
 
     if (pUserData->section_exist("visual_memory_definition"))
     {
@@ -456,7 +471,7 @@ void CCar::UpdateEx(float fov)
     }
 }
 
-BOOL CCar::AlwaysTheCrow() { return ((m_car_weapon && m_car_weapon->IsActive()) && (m_car_weapon2 && m_car_weapon2->IsActive())); }
+BOOL CCar::AlwaysTheCrow() { return ((m_car_weapon && m_car_weapon->IsActive()) && (m_car_weapon2 && m_car_weapon2->IsActive()) && (m_car_weapon3 && m_car_weapon3->IsActive()) && (m_car_weapon4 && m_car_weapon4->IsActive()) && (m_car_weapon5 && m_car_weapon5->IsActive())); }
 void CCar::UpdateCL()
 {
     inherited::UpdateCL();
@@ -489,6 +504,48 @@ void CCar::UpdateCL()
 			m_car_weapon2->SetParam(CCarWeapon2::eWpnDesiredPos, C->vPosition.add(C->vDirection.mul(rq.range)));
 		}
 	}
+	if(m_car_weapon3)
+	{
+		m_car_weapon3->UpdateCL();
+		if(m_memory)
+			m_memory->set_camera(m_car_weapon3->ViewCameraPos(), m_car_weapon3->ViewCameraDir(), m_car_weapon3->ViewCameraNorm());
+
+		if (OwnerActor() && HasWeapon() && m_car_weapon3->IsActive())
+		{
+
+			collide::rq_result& rq = HUD().GetCurrentRayQuery();
+			CCameraBase* C	= active_camera;
+			m_car_weapon3->SetParam(CCarWeapon3::eWpnDesiredPos, C->vPosition.add(C->vDirection.mul(rq.range)));
+		}
+	}
+	if(m_car_weapon4)
+	{
+		m_car_weapon4->UpdateCL();
+		if(m_memory)
+			m_memory->set_camera(m_car_weapon4->ViewCameraPos(), m_car_weapon4->ViewCameraDir(), m_car_weapon4->ViewCameraNorm());
+
+		if (OwnerActor() && HasWeapon() && m_car_weapon4->IsActive())
+		{
+
+			collide::rq_result& rq = HUD().GetCurrentRayQuery();
+			CCameraBase* C	= active_camera;
+			m_car_weapon4->SetParam(CCarWeapon4::eWpnDesiredPos, C->vPosition.add(C->vDirection.mul(rq.range)));
+		}
+	}
+	if(m_car_weapon5)
+	{
+		m_car_weapon5->UpdateCL();
+		if(m_memory)
+			m_memory->set_camera(m_car_weapon5->ViewCameraPos(), m_car_weapon5->ViewCameraDir(), m_car_weapon5->ViewCameraNorm());
+
+		if (OwnerActor() && HasWeapon() && m_car_weapon5->IsActive())
+		{
+
+			collide::rq_result& rq = HUD().GetCurrentRayQuery();
+			CCameraBase* C	= active_camera;
+			m_car_weapon5->SetParam(CCarWeapon5::eWpnDesiredPos, C->vPosition.add(C->vDirection.mul(rq.range)));
+		}
+	}
     ASCUpdate();
     if (Owner()) return;
     UpdateEx(g_fov);
@@ -499,6 +556,7 @@ void CCar::UpdateCL()
 
 void CCar::VisualUpdate(float fov)
 {
+
     if (m_pPhysicsShell)
     {
         m_pPhysicsShell->InterpolateGlobalTransform(&XFORM());
@@ -544,6 +602,12 @@ void CCar::renderable_Render()
         m_car_weapon->Render_internal();
 	if(m_car_weapon2)
 		m_car_weapon2->Render_internal();
+    if (m_car_weapon3)
+        m_car_weapon3->Render_internal();
+    if (m_car_weapon4)
+        m_car_weapon4->Render_internal();
+    if (m_car_weapon5)
+        m_car_weapon5->Render_internal();
 }
 
 void CCar::net_Export(NET_Packet& P)
@@ -693,8 +757,15 @@ void CCar::detach_Actor()
     HandBreak();
 	if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 0);
 	if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 0);
+	if (HasWeapon()) m_car_weapon3->Action(CCarWeapon3::eWpnFire, 0);
+	if (HasWeapon()) m_car_weapon4->Action(CCarWeapon4::eWpnFire, 0);
+	if (HasWeapon()) m_car_weapon5->Action(CCarWeapon5::eWpnFire, 0);
     processing_deactivate();
 	if (m_car_weapon) { Action(CCarWeapon::eWpnActivate, 0); };
+	if (m_car_weapon2) { Action(CCarWeapon2::eWpnActivate, 0); };
+	if (m_car_weapon3) { Action(CCarWeapon3::eWpnActivate, 0); };
+	if (m_car_weapon4) { Action(CCarWeapon4::eWpnActivate, 0); };
+	if (m_car_weapon5) { Action(CCarWeapon5::eWpnActivate, 0); };
 #ifdef DEBUG
     DBgClearPlots();
 #endif
@@ -1844,6 +1915,9 @@ void CCar::CarExplode()
     CPHSkeleton::SetNotNeedSave();
     if (m_car_weapon)m_car_weapon->Action(CCarWeapon::eWpnActivate, 0);
 	if (m_car_weapon2)m_car_weapon2->Action(CCarWeapon2::eWpnActivate,0);
+	if (m_car_weapon3)m_car_weapon3->Action(CCarWeapon3::eWpnActivate,0);
+	if (m_car_weapon4)m_car_weapon4->Action(CCarWeapon4::eWpnActivate,0);
+	if (m_car_weapon5)m_car_weapon5->Action(CCarWeapon5::eWpnActivate,0);
     m_lights.TurnOffHeadLights();
 	AscCall(ascExhoustStop);
 	m_stop_lights.TurnOffStopLights();

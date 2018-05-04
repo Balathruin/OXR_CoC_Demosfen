@@ -20,6 +20,9 @@
 #include "Level.h"
 #include "CarWeapon.h"
 #include "CarWeapon2.h"
+#include "CarWeapon3.h"
+#include "CarWeapon4.h"
+#include "CarWeapon5.h"
 #include "HUDManager.h"
 void CCar::OnMouseMove(int dx, int dy)
 {
@@ -152,7 +155,11 @@ void CCar::OnKeyboardPress(int cmd)
     case kCAM_2: OnCameraChange(ectChase); break;
     case kCAM_3: OnCameraChange(ectFree);  break;
     case kACCEL: TransmissionUp();         break;
-	case kSHOT_CWEAP2:	if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 1); break; // стрельба со второй туррели
+	case kSHOT_CWEAP2:  if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 1);
+						if (HasWeapon()) m_car_weapon3->Action(CCarWeapon3::eWpnFire, 1);
+						if (HasWeapon()) m_car_weapon4->Action(CCarWeapon4::eWpnFire, 1);
+						if (HasWeapon()) m_car_weapon5->Action(CCarWeapon5::eWpnFire, 1);
+				        break;// стрельба со второй туррели, теперь 4 фаерпоинта
 	case kSHOT_CWEAP1:  if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 1);   break; // стрельба с первой туррели
 	case kCROUCH:	TransmissionDown();			break;
 	case kFWD:		PressForward();				break;
@@ -163,13 +170,16 @@ void CCar::OnKeyboardPress(int cmd)
 	case kTURN_ENGINE: SwitchEngine();
 				if (HasWeapon())m_car_weapon->Action(CCarWeapon::eWpnActivate, b_engine_on);
 				if (HasWeapon())m_car_weapon2->Action(CCarWeapon2::eWpnActivate, b_engine_on);
+				if (HasWeapon())m_car_weapon3->Action(CCarWeapon3::eWpnActivate, b_engine_on);
+				if (HasWeapon())m_car_weapon4->Action(CCarWeapon4::eWpnActivate, b_engine_on);
+				if (HasWeapon())m_car_weapon5->Action(CCarWeapon5::eWpnActivate, b_engine_on);
 		break; // получаем управление турелями если завели двигатель или попытались
     case kTORCH: m_lights.SwitchHeadLights();m_stop_lights.SwitchStopLights(); m_signal_lights.SwitchSignalLights();break;
 	case kUSE:	(g_fov = base_fov); break;
 	case kWPN_ZOOM: if (HasWeapon()) (g_fov = dest_fov);break;
     case kWPN_FUNC: m_repairing = true; break;
 
-	case kSWITCH_HORN: SwitchHorn(); break; // гудок
+	case kSWITCH_HORN: SwitchHorn(); break; // гудок  v2v3v4
     };
 }
 
@@ -180,6 +190,9 @@ void CCar::OnKeyboardRelease(int cmd)
     {
     case kSHOT_CWEAP2:
 					if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 0);
+					if (HasWeapon()) m_car_weapon3->Action(CCarWeapon3::eWpnFire, 0);
+					if (HasWeapon()) m_car_weapon4->Action(CCarWeapon4::eWpnFire, 0);
+					if (HasWeapon()) m_car_weapon5->Action(CCarWeapon5::eWpnFire, 0);
 				break;// прекращаем стрельбу если отпустили клавишу
     case kFWD: ReleaseForward(); break;
     case kBACK: ReleaseBack(); break;
@@ -190,7 +203,7 @@ void CCar::OnKeyboardRelease(int cmd)
 			break; // прекращаем стрельбу если отпустили клавишу
 	case kWPN_ZOOM: if (HasWeapon()) (g_fov = base_fov);break;
 	//case kNIGHT_VISION: snd_horn.stop();break;
-	case kSWITCH_HORN: snd_horn.destroy();break;
+	case kSWITCH_HORN: snd_horn.destroy();break; // гудок  v2v3v4
     };
 }
 
