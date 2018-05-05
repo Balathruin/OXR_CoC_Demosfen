@@ -1835,8 +1835,10 @@ bool CScriptGameObject::InstallUpgrade(pcstr upgrade)
 
     if (!pSettings->section_exist(upgrade))
         return false;
+	item->pre_install_upgrade();
 
-    return ai().alife().inventory_upgrade_manager().upgrade_install(*item, upgrade, false);
+	shared_str upgrade_id(upgrade);
+	return ai().alife().inventory_upgrade_manager().upgrade_install(*item, upgrade_id, true);
 }
 
 bool CScriptGameObject::HasUpgrade(pcstr upgrade) const
