@@ -692,11 +692,10 @@ void player_hud::update_inertion(Fmatrix& trans)
 
 		// tend to forward
 		float _tendto_speed, _origin_offset;
-		if (pMainHud != NULL && pMainHud->m_parent_hud_item->GetCurrentHudOffsetIdx() > 0)
+		if (pMainHud && pMainHud->m_parent_hud_item->GetCurrentHudOffsetIdx() > 0)
 		{ // inertia while "aiming"
-			_tendto_speed = m_tendto_speed_aim - (m_tendto_speed_aim - m_tendto_speed) * 1;
-			_origin_offset =
-				m_origin_offset_aim - (m_origin_offset_aim - m_origin_offset) * 1;
+			_tendto_speed = m_tendto_speed_aim;
+			_origin_offset = m_origin_offset_aim;
 		}
 		else
 		{ // inertia while "crouching"
@@ -704,21 +703,11 @@ void player_hud::update_inertion(Fmatrix& trans)
 			_origin_offset = m_origin_offset;
 		}
 
-		// Inertia factor
-		if (pMainHud != NULL)
-		{
-			_tendto_speed *= 1;
-			_origin_offset *= 1;
-		}
-
 		st_last_dir.mad(diff_dir, _tendto_speed * Device.fTimeDelta);
 		origin.mad(diff_dir, _origin_offset);
 
 		// pitch compensation
 		float pitch = angle_normalize_signed(xform.k.getP());
-
-		if (pMainHud != NULL)
-			pitch *= 1;
 
 		// movement in/out
 		origin.mad(xform.k, -pitch * m_pitch_offset_d);
