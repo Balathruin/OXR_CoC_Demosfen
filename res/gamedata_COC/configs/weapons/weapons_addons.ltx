@@ -341,8 +341,8 @@ grenade_class							 = ammo_m209
 ;Advanced scope settings
 
 [scope_detector]
-vis_frame_speed                          = 4	                                       ; СЃРєРѕСЂРѕСЃС‚СЊ, СЃ РєРѕС‚РѕСЂРѕР№ РЅР°РІРѕРґРёС‚СЃСЏ СЂР°РјРєР° РЅР° С†РµР»СЊ
-vis_frame_color                          = 0.7,0.7,0.7,1.0	                                       ; С†РІРµС‚ СЂР°РјРєРё RGBA (A) РќРµ СѓС‡РёС‚С‹РІР°РµС‚СЃСЏ
+vis_frame_speed                          = 4	                                       ; скорость, с которой наводится рамка на цель
+vis_frame_color                          = 0.7,0.7,0.7,1.0	                                       ; цвет рамки RGBA (A) Не учитывается
 found_snd                                = detectors\DA-2_beep1
 catch_snd                                = detectors\DA-2_beep1
 
@@ -360,72 +360,3 @@ pp_eff_overlap                           = false
 pp_eff_name                              = contrast.ppe
 pp_eff_cyclic                            = 1
 pp_eff_overlap                           = false
-
-;=======================================================================
-[ekp]:identity_immunities
-GroupControlSection		= spawn_group
-discovery_dependency		=
-cform				= skeleton
-class				= WP_SCOPE
-$spawn 				= "mod\ekp"
-visual				= dynamics\weapons\wpn_upgrade\wpn_scope_ekp.ogf
-cost                		= 14500
-inv_name        		= st_addon_scope_kobra-ekp-8-02
-inv_name_short  		= st_addon_scope_kobra-ekp-8-02
-description    			= st_addon_scope_kobra_descr
-inv_weight        		= 0.440
-inv_grid_width     		= 1
-inv_grid_height    		= 1
-inv_grid_x         		= 6
-inv_grid_y         		= 40
-[ekp_pos]
-inv_grid_width     		= 1
-inv_grid_height    		= 1
-inv_grid_x         		= 6
-inv_grid_y         		= 40
-;=======================================================================
-[kobra]:identity_immunities
-GroupControlSection		= spawn_group
-discovery_dependency		=
-cform				= skeleton
-class				= WP_SCOPE
-$spawn 				= "mod\kobra"
-visual				= dynamics\weapons\wpn_upgrade\wpn_scope_kobra.ogf
-cost                		= 12500
-inv_name        		= st_addon_scope_kobra-ekp-1s-03
-inv_name_short  		= st_addon_scope_kobra-ekp-1s-03
-description    			= st_addon_scope_kobra_descr
-inv_weight        		= 0.410
-inv_grid_width     		= 1
-inv_grid_height    		= 1
-inv_grid_x         		= 7
-inv_grid_y         		= 40
-[kobra_pos]
-inv_grid_width     		= 1
-inv_grid_height    		= 1
-inv_grid_x         		= 7
-inv_grid_y         		= 40
-;=======================================================================
-;=======================================================================
-[pso]:identity_immunities
-GroupControlSection		= spawn_group
-discovery_dependency		=
-cform				= skeleton
-class				= WP_SCOPE
-$spawn 				= "weapons\addons\pso"
-visual          		= dynamics\weapons\wpn_upgrade\wpn_scope_pso.ogf
-cost				= 12000
-inv_name			= st_addon_scope
-inv_name_short			= st_addon_scope
-description			= st_addon_scope_descr
-inv_weight			= 0.600
-inv_grid_width     		= 2
-inv_grid_height    		= 1
-inv_grid_x         		= 18
-inv_grid_y         		= 2
-[pso_pos]
-inv_grid_width     		= 2
-inv_grid_height    		= 1
-inv_grid_x         		= 18
-inv_grid_y         		= 2
-;=======================================================================
