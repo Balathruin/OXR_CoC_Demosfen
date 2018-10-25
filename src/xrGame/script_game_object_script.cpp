@@ -96,6 +96,7 @@ SCRIPT_EXPORT(CScriptGameObject, (), {
                 value("item_to_belt", int(GameObject::eItemToBelt)),
                 value("item_to_slot", int(GameObject::eItemToSlot)),
                 value("item_to_ruck", int(GameObject::eItemToRuck)),
+				value("on_foot_step", int(GameObject::eOnFootStep)),
                 // Actor
                 value("actor_before_death", int(GameObject::eActorBeforeDeath)),
                 //-AVO

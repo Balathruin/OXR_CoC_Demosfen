@@ -24,6 +24,7 @@ IC CSGraphVertex::CVertex(const _data_type& data, const _vertex_id_type& vertex_
     m_vertex_id = vertex_id;
     VERIFY(edge_count);
     m_edge_count = edge_count;
+    m_edges.clear();
 }
 
 TEMPLATE_SPECIALIZATION

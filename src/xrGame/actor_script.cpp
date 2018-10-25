@@ -21,6 +21,27 @@ IC static void CActor_Export(lua_State* luaState)
     module(luaState)
     [class_<CActor, bases<CEntityAlive, CInventoryOwner>>("CActor")
             .def(constructor<>())
+		.enum_("EMoveCommand")[
+			value("mcFwd", int(EMoveCommand::mcFwd)),
+				value("mcBack", int(EMoveCommand::mcBack)),
+				value("mcLStrafe", int(EMoveCommand::mcLStrafe)),
+				value("mcRStrafe", int(EMoveCommand::mcRStrafe)),
+				value("mcCrouch", int(EMoveCommand::mcCrouch)),
+				value("mcAccel", int(EMoveCommand::mcAccel)),
+				value("mcTurn", int(EMoveCommand::mcTurn)),
+				value("mcJump", int(EMoveCommand::mcJump)),
+				value("mcFall", int(EMoveCommand::mcFall)),
+				value("mcLanding", int(EMoveCommand::mcLanding)),
+				value("mcLanding2", int(EMoveCommand::mcLanding2)),
+				value("mcClimb", int(EMoveCommand::mcClimb)),
+				value("mcSprint", int(EMoveCommand::mcSprint)),
+				value("mcLLookout", int(EMoveCommand::mcLLookout)),
+				value("mcRLookout", int(EMoveCommand::mcRLookout)),
+				value("mcAnyMove", int(EMoveCommand::mcAnyMove)),
+				value("mcAnyAction", int(EMoveCommand::mcAnyAction)),
+				value("mcAnyState", int(EMoveCommand::mcAnyState)),
+				value("mcLookout", int(EMoveCommand::mcLookout))
+		]
             .def("conditions", &CActor::conditions)
             .def("ObjectWeLookingAt", &CActor::ObjectWeLookingAt_script)
             .def("GetDefaultActionForObject", &CActor::GetDefaultActionForObject)
@@ -55,6 +76,8 @@ IC static void CActor_Export(lua_State* luaState)
             .def("CanRun", &CActor::CanRun)
             .def("is_jump", &CActor::is_jump)
             .def("CameraHeight", &CActor::CameraHeight)
+				.def("CanUseWeapon", (bool (CActor::*)())(&CActor::CanUseWeapon))
+				.def("CanUseWeapon", (void (CActor::*)(bool))(&CActor::CanUseWeapon))
 
 
 #ifndef BENCHMARK_BUILD

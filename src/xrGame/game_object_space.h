@@ -75,7 +75,7 @@ enum ECallbackType
     eAttachVehicle,
     eDetachVehicle,
     eUseVehicle,
-
+	eOnFootStep,
     // weapon
     eOnWeaponZoomIn,
     eOnWeaponZoomOut,

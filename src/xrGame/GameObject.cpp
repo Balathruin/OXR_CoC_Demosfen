@@ -1527,3 +1527,9 @@ void CGameObject::set_tip_text(LPCSTR new_text) { m_sTipText = new_text; }
 void CGameObject::set_tip_text_default() { m_sTipText = NULL; }
 bool CGameObject::nonscript_usable() { return m_bNonscriptUsable; }
 void CGameObject::set_nonscript_usable(bool usable) { m_bNonscriptUsable = usable; }
+
+//because don't want to use pch_script.h in step_manager.cpp
+void CGameObject::FootStepCallback(float power, bool b_play, bool b_on_ground, bool b_hud_view)
+{
+	this->callback(GameObject::eOnFootStep)(this->lua_game_object(), power, b_play, b_on_ground, b_hud_view);
+}

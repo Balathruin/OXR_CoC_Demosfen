@@ -85,6 +85,8 @@ protected:
         FIsQuestItem = (1 << 11),
         FIsHelperItem = (1 << 12),
         FCanStack = (1 << 13),
+		FWeaponDisabled = (1 << 14),
+
     };
 
     Flags16 m_flags;

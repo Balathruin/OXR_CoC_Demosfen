@@ -770,10 +770,17 @@ public:
     bool GetNightVisionStatus() { return m_bNightVisionOn; }
     void SetNightVisionAllowed(bool bAllow) { m_bNightVisionAllow = bAllow; }
     CNightVisionEffector* GetNightVision() { return m_night_vision; }
+
+	bool	CanUseWeapon() { return m_bCanUseWeapon; }
+	void	CanUseWeapon(bool val) { m_bCanUseWeapon = val; }
+
 protected:
-    bool m_bNightVisionOn;
-    bool m_bNightVisionAllow;
-    CNightVisionEffector* m_night_vision;
+	bool					m_bCanUseWeapon;
+
+	bool					m_bNightVisionOn;
+	bool					m_bNightVisionAllow;
+
+	CNightVisionEffector*	m_night_vision;
 };
 
 extern bool isActorAccelerated(u32 mstate, bool ZoomMode);

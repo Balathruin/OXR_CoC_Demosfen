@@ -365,6 +365,7 @@ public:
     virtual void set_nonscript_usable(bool usable) override;
     virtual CScriptBinderObject* GetScriptBinderObject() override { return scriptBinder.object(); }
     virtual void SetScriptBinderObject(CScriptBinderObject* object) override { scriptBinder.set_object(object); }
+    void FootStepCallback(float power, bool b_play, bool b_on_ground, bool b_hud_view);
 
 protected:
     virtual void spawn_supplies();
@@ -376,6 +377,9 @@ private: // XXX: move to GameObjectBase
     u32 new_level_vertex_id() const;
     void update_ai_locations(bool decrement_reference);
     void SetKinematicsCallback(bool set);
+
+	
+
 };
 #pragma pack(pop)
 
