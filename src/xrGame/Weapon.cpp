@@ -597,8 +597,8 @@ bool CWeapon::InstallScope(LPCSTR section)
     {
         cNameVisual_set(vis);
     }
-    m_sounds.m_sound_items.clear(); //костыль от вылета в ассерте в CHudItem::Load @Debrovski
-    CHudItem::Load(section);
+
+    CHudItem::Load(section, false);
     if (pSettings->line_exist(section, "scope_status"))
     {
         m_eScopeStatus = (ALife::EWeaponAddonStatus)pSettings->r_s32(section, "scope_status");
