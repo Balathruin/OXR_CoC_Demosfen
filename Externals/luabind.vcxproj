@@ -81,6 +81,9 @@
       <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</GenerateDebugInformation>
       <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">LuaJIT.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Link>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Mixed_COC|x64'">..\Release_COC\LuaJIT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="luabind\src\class.cpp" />
