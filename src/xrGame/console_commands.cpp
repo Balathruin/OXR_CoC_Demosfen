@@ -176,7 +176,7 @@ static void full_memory_stats()
         memCounters.PagefileUsage / (1024 * 1024), memCounters.PeakPagefileUsage / (1024 * 1024));
 
     Log("--------------------------------------------------------------------------------");
-	Log("# Build engine for <OXR_CoC 1.5b r7>");
+	Log("# <<OXR CoC 1.5 R7 Engine x64>> from MNP_TEAM, for assembly Demosfen");
     Log("--------------------------------------------------------------------------------");
 }
 
