@@ -315,19 +315,24 @@ bool CFlashlight::IsWorking()
 void CFlashlight::UpdateVisibility()
 {
 	//check visibility
-	attachable_hud_item* i0 = g_player_hud->attached_item(1);
-	if (i0 && HudItemData())
+	
+    if (HudItemData())
+    {
+        if (light_trace_bone.size())
+        {
+            u16 bone_id = HudItemData()->m_model->LL_BoneID(light_trace_bone);
+            if (bone_id != BI_NONE)
+            {
+                bool visi = HudItemData()->m_model->LL_GetBoneVisible(bone_id);
+                if (visi != m_switched_on)
+                    HudItemData()->m_model->LL_SetBoneVisible(bone_id, m_switched_on, false);
+            }
+        }
+    }
+    attachable_hud_item* i0 = g_player_hud->attached_item(0);
+    if (i0 && HudItemData())
 	{
-		if (light_trace_bone.size())
-		{
-			u16 bone_id = HudItemData()->m_model->LL_BoneID(light_trace_bone);
-			if (bone_id != BI_NONE)
-			{
-				bool visi = HudItemData()->m_model->LL_GetBoneVisible(bone_id);
-				if (visi != m_switched_on)
-					HudItemData()->m_model->LL_SetBoneVisible(bone_id, m_switched_on, TRUE);
-			}
-		}
+
 
 		bool bClimb = ((Actor()->MovingState()&mcClimb) != 0);
 		if (bClimb)
@@ -361,7 +366,7 @@ void CFlashlight::UpdateVisibility()
 	else
 		if (m_bNeedActivation)
 		{
-			attachable_hud_item* i0 = g_player_hud->attached_item(1);
+			attachable_hud_item* i0 = g_player_hud->attached_item(0);
 			bool bClimb = ((Actor()->MovingState()&mcClimb) != 0);
 			if (!bClimb)
 			{
