@@ -678,7 +678,7 @@ void CActor::actorKick()
     if (RQ.O == O && RQ.element != 0xffff)
         bone_id = (u16)RQ.element;
 
-    clamp<float>(mass_f, 1.0f, 100.f); // îãðàíè÷èòü ïàðàìåòðû õèòà
+    clamp<float>(mass_f, 1.0f, 100.f); // ограничить параметры хита
 
                                        // The smaller the mass, the more damage given capped at 60 mass. 60+ mass take 0 damage
     float hit_power = 100.f * ((mass_f / 100.f) - 0.6f) / (0.f - 0.6f);
