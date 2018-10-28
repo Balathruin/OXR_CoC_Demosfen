@@ -894,10 +894,10 @@ bool CWeaponMagazined::CanAttach(PIItem pIItem)
     CScope* pScope = smart_cast<CScope*>(pIItem);
     CSilencer* pSilencer = smart_cast<CSilencer*>(pIItem);
     CGrenadeLauncher* pGrenadeLauncher = smart_cast<CGrenadeLauncher*>(pIItem);
-
+    shared_str const& ammo_name = pIItem->object().cNameSect();
     if (pScope && m_eScopeStatus == ALife::eAddonAttachable &&
         (m_flagsAddOnState & CSE_ALifeItemWeapon::eWeaponAddonScope) == 0 /*&&
-		(m_scopes[cur_scope]->m_sScopeName == pIItem->object().cNameSect())*/)
+		(m_scopes[cur_scope]->m_sScopeName == pIItem->object().cNameSect())*/ )
     {
         auto it = m_scopes.begin();
         for (; it != m_scopes.end(); it++)
@@ -906,6 +906,16 @@ bool CWeaponMagazined::CanAttach(PIItem pIItem)
                 return true;
         }
         return false;
+	}
+    else if (pScope && !m_scopesTypes.empty() && m_section_id.c_str() == m_parentSection.c_str() && GetCurrentScope() == "none")
+         {
+             xr_vector<shared_str>::iterator it = m_scopesTypes.begin();
+             for (; it != m_scopesTypes.end(); it++)
+             {
+                 if (ammo_name._get() == (*it)._get())
+                     return true;
+             }
+             return false;
     }
     else if (pSilencer && m_eSilencerStatus == ALife::eAddonAttachable &&
         (m_flagsAddOnState&CSE_ALifeItemWeapon::eWeaponAddonSilencer) == 0 /*&&
@@ -948,8 +958,11 @@ bool CWeaponMagazined::CanDetach(const char* item_section_name)
                 return true;
         }
         return false;
+	}
+    else if (GetCurrentScope() == item_section_name)
+    {
+        return true;
     }
-    //	   return true;
     else if (m_eSilencerStatus == ALife::eAddonAttachable &&
         0 != (m_flagsAddOnState & CSE_ALifeItemWeapon::eWeaponAddonSilencer)) /* &&
         (m_sSilencerName == item_section_name))*/
@@ -985,10 +998,10 @@ bool CWeaponMagazined::Attach(PIItem pIItem, bool b_send_event)
     CScope* pScope = smart_cast<CScope*>(pIItem);
     CSilencer* pSilencer = smart_cast<CSilencer*>(pIItem);
     CGrenadeLauncher* pGrenadeLauncher = smart_cast<CGrenadeLauncher*>(pIItem);
-
-    if (pScope && m_eScopeStatus == ALife::eAddonAttachable &&
-        (m_flagsAddOnState & CSE_ALifeItemWeapon::eWeaponAddonScope) == 0 /*&&
-        (m_scopes[cur_scope]->m_sScopeName == pIItem->object().cNameSect())*/)
+    shared_str const& ammo_name = pIItem->object().cNameSect();
+    if(pScope && m_eScopeStatus == ALife::eAddonAttachable &&
+	   (m_flagsAddOnState&CSE_ALifeItemWeapon::eWeaponAddonScope) == 0 /*&&
+	   (m_scopes[cur_scope]->m_sScopeName == pIItem->object().cNameSect())*/)
     {
         auto it = m_scopes.begin();
         for (; it != m_scopes.end(); it++)
@@ -999,6 +1012,15 @@ bool CWeaponMagazined::Attach(PIItem pIItem, bool b_send_event)
 				m_flagsAddOnState |= CSE_ALifeItemWeapon::eWeaponAddonScope;
 				result = true;
 			}
+        }
+	}
+    else if (pScope && !m_scopesTypes.empty() && GetCurrentScope() == "none")
+    {
+        xr_vector<shared_str>::iterator it = m_scopesTypes.begin();
+        for (; it != m_scopesTypes.end(); it++)
+        {
+            if (ammo_name._get() == (*it)._get())
+                result = true;
         }
     }
     else if (pSilencer && m_eSilencerStatus == ALife::eAddonAttachable &&
@@ -1038,10 +1060,19 @@ bool CWeaponMagazined::Attach(PIItem pIItem, bool b_send_event)
         SyncronizeWeaponToServer();
         if (b_send_event && OnServer())
         {
-            //уничтожить подсоединенную вещь из инвентаря
-            //.			pIItem->Drop					();
             pIItem->object().DestroyObject();
-        };
+            if (pScope)
+            {
+                u32 num = m_parentSection.size();
+                xr_string strim = pIItem->object().cNameSect().c_str();
+                xr_string st = m_section_id.c_str();
+                st.erase(0, num + 1);
+                string64 str;
+                xr_sprintf(str, "%s_%s", m_parentSection.c_str(), strim.c_str());
+                SetCurrentScope(pIItem->object().cNameSect().c_str());
+                InstallScope(str);
+            }
+        }
 
         UpdateAddonsVisibility();
         InitAddons();
@@ -1064,6 +1095,10 @@ bool CWeaponMagazined::DetachScope(const char* item_section_name, bool b_spawn_i
             m_cur_addon.scope = 0;
             detached = true;
         }
+	}
+    if (GetCurrentScope() == item_section_name)
+    {
+        detached = true;
     }
     return detached;
 }
@@ -1108,6 +1143,17 @@ bool CWeaponMagazined::Detach(const char* item_section_name, bool b_spawn_item)
         }
         m_flagsAddOnState &= ~CSE_ALifeItemWeapon::eWeaponAddonScope;
 
+        UpdateAddonsVisibility();
+        InitAddons();
+        SyncronizeWeaponToServer();
+
+        return CInventoryItemObject::Detach(item_section_name, b_spawn_item);
+    }
+        
+    else if (DetachScope(item_section_name, b_spawn_item))
+    {
+        SetCurrentScope("none");
+        InstallScope(m_section_id.c_str());
         UpdateAddonsVisibility();
         InitAddons();
         SyncronizeWeaponToServer();

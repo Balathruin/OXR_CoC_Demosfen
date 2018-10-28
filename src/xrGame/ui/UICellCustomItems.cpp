@@ -325,7 +325,13 @@ CUIWeaponCellItem::CUIWeaponCellItem(CWeapon* itm) : inherited(itm)
         m_addon_offset[eSilencer].set(object()->GetSilencerX(), object()->GetSilencerY());
 
     if (itm->ScopeAttachable())
+    {
         m_addon_offset[eScope].set(object()->GetScopeX(), object()->GetScopeY());
+    }
+    else if (itm->GetCurrentScope() != "none")
+    {
+        m_addon_offset[eScope].set(object()->GetScope_X(), object()->GetScope_Y());
+    }
 
     if (itm->GrenadeLauncherAttachable())
         m_addon_offset[eLauncher].set(object()->GetGrenadeLauncherX(), object()->GetGrenadeLauncherY());
@@ -366,7 +372,13 @@ void CUIWeaponCellItem::RefreshOffset()
         m_addon_offset[eSilencer].set(object()->GetSilencerX(), object()->GetSilencerY());
 
     if (object()->ScopeAttachable())
+    {
         m_addon_offset[eScope].set(object()->GetScopeX(), object()->GetScopeY());
+    }
+    else if (object()->GetCurrentScope() != "none")
+    {
+        m_addon_offset[eScope].set(object()->GetScope_X(), object()->GetScope_Y());
+    }
 
     if (object()->GrenadeLauncherAttachable())
         m_addon_offset[eLauncher].set(object()->GetGrenadeLauncherX(), object()->GetGrenadeLauncherY());
@@ -421,7 +433,24 @@ void CUIWeaponCellItem::Update()
             if (m_addons[eScope])
                 DestroyIcon(eScope);
         }
+	}
+    else if(object()->GetCurrentScope() != "none")
+    {
+        if (!GetIcon(eScope) || bForceReInitAddons)
+        {
+            CreateIcon(eScope);
+            RefreshOffset();
+            string64 str;
+            xr_sprintf(str, "%s_pos", object()->GetCurrentScope().c_str());
+            InitAddon(GetIcon(eScope), str, m_addon_offset[eScope], Heading());
+        }
     }
+    else
+    {
+        if (m_addons[eScope])
+            DestroyIcon(eScope);
+    }
+
 
     if (object()->GrenadeLauncherAttachable())
     {
@@ -467,8 +496,15 @@ void CUIWeaponCellItem::OnAfterChild(CUIDragDropListEx* parent_list)
             parent_list->GetVerticalPlacement());
 
     if (is_scope() && GetIcon(eScope))
-        InitAddon(
-            GetIcon(eScope), *object()->GetScopeName(), m_addon_offset[eScope], parent_list->GetVerticalPlacement());
+    {
+        InitAddon(GetIcon(eScope), *object()->GetScopeName(), m_addon_offset[eScope], parent_list->GetVerticalPlacement());
+    }
+    else if (object()->GetCurrentScope() != "none" && GetIcon(eScope))
+    {
+        string64 str;
+        xr_sprintf(str, "%s_pos", object()->GetCurrentScope().c_str());
+        InitAddon(GetIcon(eScope), str, m_addon_offset[eScope], parent_list->GetVerticalPlacement());
+    }
 
     if (is_launcher() && GetIcon(eLauncher))
         InitAddon(GetIcon(eLauncher), *object()->GetGrenadeLauncherName(), m_addon_offset[eLauncher],
@@ -535,7 +571,7 @@ CUIDragItem* CUIWeaponCellItem::CreateDragItem()
 {
     CUIDragItem* i = inherited::CreateDragItem();
     CUIStatic* s = NULL;
-
+    RefreshOffset();
     if (GetIcon(eSilencer))
     {
         s = new CUIStatic();
@@ -551,7 +587,16 @@ CUIDragItem* CUIWeaponCellItem::CreateDragItem()
         s = new CUIStatic();
         s->SetAutoDelete(true);
         s->SetShader(InventoryUtilities::GetEquipmentIconsShader());
-        InitAddon(s, *object()->GetScopeName(), m_addon_offset[eScope], false);
+        if (object()->GetCurrentScope() != "none")
+        {
+            string64 str;
+            xr_sprintf(str, "%s_pos", object()->GetCurrentScope().c_str());
+            InitAddon(s, str, m_addon_offset[eScope], false);
+        }
+        else
+        {
+            InitAddon(s, *object()->GetScopeName(), m_addon_offset[eScope], false);
+        }
         s->SetTextureColor(i->wnd()->GetTextureColor());
         i->wnd()->AttachChild(s);
     }
@@ -588,6 +633,10 @@ bool CUIWeaponCellItem::EqualTo(CUICellItem* itm)
         {
             return false;
         }
+    }
+    else if (object()->GetCurrentScope() != ci->object()->GetCurrentScope())
+    {
+        return false;
     }
     //	bool b_place					= ( (object()->m_eItemCurrPlace == ci->object()->m_eItemCurrPlace) );
 

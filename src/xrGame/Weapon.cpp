@@ -71,6 +71,7 @@ CWeapon::CWeapon()
 
     m_pFlameParticles2 = nullptr;
     m_sFlameParticles2 = nullptr;
+    CurrentScope = "none";
 
     m_fCurrentCartirdgeDisp = 1.f;
 
@@ -95,6 +96,7 @@ CWeapon::~CWeapon()
         xr_delete(m_zoom_params.m_pVision);
     xr_delete(m_UIScope);
     delete_data(m_scopes);
+    delete_data(m_scopesTypes);
 }
 
 void CWeapon::Hit(SHit* pHDS) { inherited::Hit(pHDS); }
@@ -167,6 +169,16 @@ void CWeapon::UpdateXForm()
     }
 
     UpdatePosition(mRes);
+    /*if (CurrentScope != "none")
+    {
+        shared_str vis = pSettings->r_string(m_section_id.c_str(), "visual");
+        if (vis != cNameVisual().c_str())
+        {
+            string64 str;
+            xr_sprintf(str, "%s_%s", m_section_id.c_str(), GetCurrentScope().c_str());
+            InstallScope(str);
+        }
+    }*/
 }
 
 void CWeapon::UpdateFireDependencies_internal()
@@ -232,6 +244,26 @@ void CWeapon::Load(LPCSTR section)
     if (pSettings->line_exist(section, "flame_particles_2"))
         m_sFlameParticles2 = pSettings->r_string(section, "flame_particles_2");
 
+    // Mortan: чтение из конфига для альтеранативной схемы
+    if (pSettings->line_exist(section, "scopes"))
+    {
+        m_scopesTypes.clear();
+        LPCSTR M = pSettings->r_string(section, "scopes");
+        if (M && M[0])
+        {
+            string128 _scopeItem;
+            int count = _GetItemCount(M);
+            for (int it = 0; it < count; ++it)
+            {
+                _GetItem(M, it, _scopeItem);
+                m_scopesTypes.push_back(_scopeItem);
+            }
+        }
+    }
+    if (pSettings->line_exist(section, "parent_section"))
+    {
+        m_parentSection = pSettings->r_string(section, "parent_section");
+    }
     // load ammo classes
     m_ammoTypes.clear();
     LPCSTR S = pSettings->r_string(section, "ammo_class");
@@ -544,6 +576,70 @@ void CWeapon::LoadFireParams(LPCSTR section)
     CShootingObject::LoadFireParams(section);
 };
 
+// Mortan: собсна сама замена визуала и процесс установки прицела. Требуется доработка
+bool CWeapon::InstallScope(LPCSTR section)
+{
+    if (!pSettings->section_exist(section))
+        return false;
+    if (pSettings->line_exist(section, "scope_x"))
+    {
+        m_iScopeX = pSettings->r_s32(section, "scope_x");
+        m_iScopeY = pSettings->r_s32(section, "scope_y");
+    }
+    else
+    {
+        m_iScopeX = 0;
+        m_iScopeY = 0;
+    }
+
+    shared_str vis = pSettings->r_string(section, "visual");
+    if (vis != cNameVisual())
+    {
+        cNameVisual_set(vis);
+    }
+    //CHudItem::Load(section);
+    if (pSettings->line_exist(section, "scope_status"))
+    {
+        m_eScopeStatus = (ALife::EWeaponAddonStatus)pSettings->r_s32(section, "scope_status");
+        if (m_eScopeStatus == ALife::eAddonPermanent)
+        {
+            AddScopePerm(section);
+            UpdateAddonsVisibility();
+            InitAddons();
+        }
+    }
+    else
+    {
+        m_zoom_params.m_fScopeZoomFactor = pSettings->r_float(section, "scope_zoom_factor");
+    }
+    return true;
+}
+
+void CWeapon::SetCurrentScope(shared_str value)
+{
+    if (value == "none")
+    {
+        CurrentScope = "none";
+    }
+    if (!m_scopesTypes.empty())
+    {
+        xr_vector<shared_str>::iterator it = m_scopesTypes.begin();
+        for (; it != m_scopesTypes.end(); it++)
+        {
+            if (value._get() == (*it)._get())
+            {
+                CurrentScope = value;
+                return;
+            }
+        }
+        CurrentScope = "none";
+    }
+    else
+    {
+        CurrentScope = "none";
+    }
+}
+
 BOOL CWeapon::net_Spawn(CSE_Abstract* DC)
 {
     CSE_Abstract* e = (CSE_Abstract*)(DC);
@@ -555,6 +651,9 @@ BOOL CWeapon::net_Spawn(CSE_Abstract* DC)
         m_cur_addon.silencer = 0;
     if (m_cur_addon.launcher >= (u16)m_launchers.size())
         m_cur_addon.launcher = 0;
+
+
+	SetCurrentScope(E->m_cur_scope.c_str());
 
     BOOL bResult = inherited::net_Spawn(DC);
 
@@ -592,6 +691,13 @@ BOOL CWeapon::net_Spawn(CSE_Abstract* DC)
 
     UpdateAddonsVisibility();
     InitAddons();
+
+    if (GetCurrentScope() != "none")
+    {
+        string64 str;
+        xr_sprintf(str, "%s_%s", m_section_id.c_str(), GetCurrentScope().c_str());
+        InstallScope(str);
+    }
 
     m_dwWeaponIndependencyTime = 0;
 
@@ -633,6 +739,7 @@ void CWeapon::net_Export(NET_Packet& P)
     P.w_u8(m_ammoType.data);
     P.w_u8((u8)GetState());
     P.w_u8((u8)IsZoomed());
+    P.w_stringZ(CurrentScope);
     if (g_actor && this->parent_id() == g_actor->ID())
         SyncronizeWeaponToServer();
 }
@@ -654,7 +761,6 @@ void CWeapon::net_Import(NET_Packet& P)
     P.r_u8(NewAddonState);
 
     m_flagsAddOnState = NewAddonState;
-    UpdateAddonsVisibility();
 
     u8 wstate;
     P.r_u8(m_ammoType.data);
@@ -662,6 +768,11 @@ void CWeapon::net_Import(NET_Packet& P)
 
     u8 Zoom;
     P.r_u8(Zoom);
+
+    shared_str item;
+    P.r_stringZ(item);
+    SetCurrentScope(item);
+    UpdateAddonsVisibility();
 
     if (H_Parent() && H_Parent()->Remote())
     {
@@ -700,6 +811,7 @@ void CWeapon::save(NET_Packet& output_packet)
     save_data(m_ammoType.data, output_packet);
     save_data(m_zoom_params.m_bIsZoomModeNow, output_packet);
     save_data((bool)0, output_packet);
+    save_data(CurrentScope, output_packet);
 }
 
 void CWeapon::load(IReader& input_packet)
@@ -719,6 +831,21 @@ void CWeapon::load(IReader& input_packet)
         OnZoomOut();
     bool dummy;
     load_data(dummy, input_packet);
+    load_data(CurrentScope, input_packet);
+}
+
+void CWeapon::AddScopePerm(shared_str section)
+{
+    shared_str scope_tex_name = pSettings->r_string(section, "scope_texture");
+    m_zoom_params.m_fScopeZoomFactor = pSettings->r_float(section, "scope_zoom_factor");
+    m_zoom_params.m_fZoomRotateTime = pSettings->r_float(section, "zoom_rotate_time");
+    m_UIScope = new CUIWindow();
+    if (!pWpnScopeXml)
+    {
+        pWpnScopeXml = new CUIXml();
+        pWpnScopeXml->Load(CONFIG_PATH, UI_PATH, "scopes.xml");
+    }
+    CUIXmlInit::InitWindow(*pWpnScopeXml, scope_tex_name.c_str(), 0, m_UIScope);
 }
 
 void CWeapon::OnEvent(NET_Packet& P, u16 type)
@@ -1356,7 +1483,7 @@ void CWeapon::UpdateAddonsVisibility()
 
     u16 bone_id;
     UpdateHUDAddonsVisibility();
-
+    
     pWeaponVisual->CalculateBones_Invalidate();
 
     bone_id = pWeaponVisual->LL_BoneID(wpn_scope);
@@ -1459,8 +1586,13 @@ void CWeapon::OnZoomOut()
     m_zoom_params.m_bIsZoomModeNow = false;
     m_fRTZoomFactor = GetZoomFactor();//store current
     m_zoom_params.m_fCurrentZoomFactor = 1.0;
-   
-	EnableHudInertion(TRUE);
+
+    if (GetCurrentScope().c_str())
+    {
+        EnableHudInertion(FALSE);
+    }
+    else
+    EnableHudInertion(TRUE);
 
     GamePersistent().RestoreEffectorDOF();
 
@@ -1861,6 +1993,10 @@ float CWeapon::Weight() const
     {
         res += pSettings->r_float(GetScopeName(), "inv_weight");
     }
+    else if (CurrentScope != "none")
+    {
+        res += pSettings->r_float(CurrentScope, "inv_weight");
+    }
     if (IsSilencerAttached() && m_silencers.size())
     {
         res += pSettings->r_float(GetSilencerName(), "inv_weight");
@@ -1998,7 +2134,12 @@ u32 CWeapon::Cost() const
     if (IsScopeAttached() && m_scopes.size())
     {
         res += pSettings->r_u32(GetScopeName(), "cost");
+	}
+    else if (CurrentScope != "none")
+    {
+        res += pSettings->r_u32(CurrentScope, "cost");	
     }
+
     if (IsSilencerAttached() && m_silencers.size())
     {
         res += pSettings->r_u32(GetSilencerName(), "cost");
