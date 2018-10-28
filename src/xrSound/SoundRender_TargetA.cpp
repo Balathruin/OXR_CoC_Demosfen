@@ -29,11 +29,21 @@ bool CSoundRender_TargetA::_initialize()
         A_CHK(alSourcef(pSource, AL_MIN_GAIN, 0.f));
         A_CHK(alSourcef(pSource, AL_MAX_GAIN, 1.f));
         A_CHK(alSourcef(pSource, AL_GAIN, cache_gain));
-        A_CHK(alSourcef(pSource, AL_PITCH, cache_pitch));
+		if (strstr(Core.Params,"-snd_speed_ctrl"))
+		{
+            A_CHK(alSourcef(pSource, AL_PITCH, psSpeedOfSound));
+		}
+		else
+		{
+            A_CHK(alSourcef(pSource, AL_PITCH, cache_pitch));
+		}
         return true;
     }
-    Msg("! sound: OpenAL: Can't create source. Error: %s.", static_cast<pcstr>(alGetString(error)));
-    return false;
+    else
+    {
+        Msg("! sound: OpenAL: Can't create source. Error: %s.", static_cast<pcstr>(alGetString(error)));
+        return false;
+    }
 }
 
 void CSoundRender_TargetA::_destroy()
@@ -168,13 +178,19 @@ void CSoundRender_TargetA::fill_parameters()
         A_CHK(alSourcef(pSource, AL_GAIN, _gain));
     }
 
-    VERIFY2(m_pEmitter, SE->source()->file_name());
-    float _pitch = m_pEmitter->p_source.freq;
-    clamp(_pitch, EPS_L, 2.f);
+    if (strstr(Core.Params,"-snd_speed_ctrl"))
+	{
+        A_CHK(alSourcef(pSource, AL_PITCH, psSpeedOfSound));
+	}
+	else 
+	{
+        float _pitch = m_pEmitter->p_source.freq;
+        clamp(_pitch, EPS_L, 2.f);
     if (!fsimilar(_pitch, cache_pitch))
-    {
-        cache_pitch = _pitch;
-        A_CHK(alSourcef(pSource, AL_PITCH, _pitch));
+        {
+            cache_pitch = _pitch;
+            A_CHK(alSourcef(pSource, AL_PITCH, _pitch));
+        }
     }
     VERIFY2(m_pEmitter, SE->source()->file_name());
 }

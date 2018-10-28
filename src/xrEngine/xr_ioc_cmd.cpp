@@ -723,6 +723,10 @@ void CCC_Register()
     // Sound
     CMD2(CCC_Float, "snd_volume_eff", &psSoundVEffects);
     CMD2(CCC_Float, "snd_volume_music", &psSoundVMusic);
+if(strstr(Core.Params,"-snd_speed_ctrl") )// TODO: ключ запуска при котором будет доступна команда "snd_speed_of_sound"
+	{
+	CMD4(CCC_Float,		"snd_speed_of_sound",	&psSpeedOfSound,0.2f,2.0f	);
+	}
     CMD1(CCC_SND_Restart, "snd_restart");
     CMD3(CCC_Mask, "snd_acceleration", &psSoundFlags, ss_Hardware);
     CMD3(CCC_Mask, "snd_efx", &psSoundFlags, ss_EAX);

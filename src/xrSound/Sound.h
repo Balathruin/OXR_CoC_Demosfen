@@ -26,17 +26,18 @@ template <class T>
 struct _vector2;
 using Fvector2 = _vector2<float>;
 
-XRSOUND_API extern u32 psSoundModel;
-XRSOUND_API extern float psSoundVEffects;
-XRSOUND_API extern float psSoundVFactor;
-XRSOUND_API extern float psSoundVMusic;
-XRSOUND_API extern float psSoundRolloff;
-XRSOUND_API extern float psSoundOcclusionScale;
-XRSOUND_API extern Flags32 psSoundFlags;
-XRSOUND_API extern int psSoundTargets;
-XRSOUND_API extern int psSoundCacheSizeMB;
-XRSOUND_API extern xr_token* snd_devices_token;
-XRSOUND_API extern u32 snd_device_id;
+XRSOUND_API extern u32       psSoundModel           ;
+XRSOUND_API extern float     psSoundVEffects        ;
+XRSOUND_API extern float     psSoundVFactor         ;
+XRSOUND_API extern float     psSoundVMusic          ;
+XRSOUND_API extern float     psSoundRolloff         ;
+XRSOUND_API extern float     psSpeedOfSound         ;
+XRSOUND_API extern float     psSoundOcclusionScale  ;
+XRSOUND_API extern Flags32   psSoundFlags           ;
+XRSOUND_API extern int       psSoundTargets         ;
+XRSOUND_API extern int       psSoundCacheSizeMB     ;
+XRSOUND_API extern xr_token* snd_devices_token      ;
+XRSOUND_API extern u32       snd_device_id          ;
 
 // Flags
 enum

@@ -10,17 +10,19 @@
 #include <eax/eax.h>
 #pragma warning(pop)
 
-int psSoundTargets = 32;
-Flags32 psSoundFlags = {ss_Hardware | ss_EAX};
-float psSoundOcclusionScale = 0.5f;
-float psSoundCull = 0.01f;
-float psSoundRolloff = 0.75f;
-u32 psSoundModel = 0;
-float psSoundVEffects = 1.0f;
-float psSoundVFactor = 1.0f;
+int     psSoundTargets          = 32;
+Flags32 psSoundFlags            = {ss_Hardware | ss_EAX};
+float   psSoundOcclusionScale   = 0.5f;
+float   psSoundCull             = 0.01f;
+float   psSoundRolloff          = 0.75f;
+float   psSpeedOfSound          = 1.0f;
+u32     psSoundModel            = 0;
+float   psSoundVEffects         = 1.0f;
+float   psSoundVFactor          = 1.0f;
 
-float psSoundVMusic = 1.f;
-int psSoundCacheSizeMB = 32;
+float   psSoundVMusic           = 1.f;
+int     psSoundCacheSizeMB      = 32;
+
 CSoundRender_Core* SoundRender = nullptr;
 
 CSoundRender_Core::CSoundRender_Core()
@@ -388,8 +390,7 @@ void CSoundRender_Core::_create_data(ref_sound_data& S, pcstr fName, esound_type
 {
     string_path fn;
     xr_strcpy(fn, fName);
-    if (strext(fn))
-        *strext(fn) = 0;
+    if (strext(fn)) *strext(fn) = 0;
     S.handle = (CSound_source*)SoundRender->i_create_source(fn);
     S.g_type = game_type == sg_SourceType ? S.handle->game_type() : game_type;
     S.s_type = sound_type;
@@ -397,7 +398,10 @@ void CSoundRender_Core::_create_data(ref_sound_data& S, pcstr fName, esound_type
     S.g_object = nullptr;
     S.g_userdata = nullptr;
     S.dwBytesTotal = S.handle->bytes_total();
-    S.fTimeTotal = S.handle->length_sec();
+	if (strstr(Core.Params,"-snd_speed_ctrl"))
+		S.fTimeTotal		= S.handle->length_sec()/psSpeedOfSound*3.2f;
+	else 
+		S.fTimeTotal		= S.handle->length_sec();
 }
 
 void CSoundRender_Core::_destroy_data(ref_sound_data& S)
