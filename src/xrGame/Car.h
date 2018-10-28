@@ -26,6 +26,7 @@ class CActor;
 class CInventory;
 class CSE_PHSkeleton;
 class CCarWeapon;
+class CCarWeapon2;
 struct dxGeomUserData;
 struct dSurfaceParameters;
 // defs
@@ -380,6 +381,7 @@ private:
 
 private:
     CCarWeapon* m_car_weapon;
+	CCarWeapon2* m_car_weapon2;
     float m_steer_angle;
     bool m_repairing;
     u16 m_bone_steer;
@@ -447,6 +449,10 @@ private:
     void Starter();
     void StartEngine();
     void StopEngine();
+	///**Horn**///v2v3v4
+	void				 SwitchHorn							()	;
+	ref_sound 			 snd_horn								;
+	///**Horn**///v2v3v4
     void Stall();
     void Clutch();
     void Unclutch();

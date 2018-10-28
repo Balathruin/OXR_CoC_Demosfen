@@ -1672,6 +1672,9 @@
     <Filter Include="Core\Client\Objects\vehicles\Car\CarWeapon">
       <UniqueIdentifier>{a0412681-8d6b-4788-ae2c-62a0bf28cf2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Client\Objects\vehicles\Car\CarWeapon2">
+      <UniqueIdentifier>{a0412681-8d6b-4788-ae2c-62a0bf28cf2a}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Core\Client\Objects\vehicles\Car\car_memory">
       <UniqueIdentifier>{865ba5b9-6e63-4fcc-97a9-9dd00d304f69}</UniqueIdentifier>
     </Filter>
@@ -5433,6 +5436,9 @@
     <ClInclude Include="CarWeapon.h">
       <Filter>Core\Client\Objects\vehicles\Car\CarWeapon</Filter>
     </ClInclude>
+    <ClInclude Include="CarWeapon2.h">
+      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon2</Filter>
+    </ClInclude>
     <ClInclude Include="car_memory.h">
       <Filter>Core\Client\Objects\vehicles\Car\car_memory</Filter>
     </ClInclude>
@@ -8812,6 +8818,9 @@
     </ClCompile>
     <ClCompile Include="CarWeapon.cpp">
       <Filter>Core\Client\Objects\vehicles\Car\CarWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="CarWeapon2.cpp">
+      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon2</Filter>
     </ClCompile>
     <ClCompile Include="car_memory.cpp">
       <Filter>Core\Client\Objects\vehicles\Car\car_memory</Filter>

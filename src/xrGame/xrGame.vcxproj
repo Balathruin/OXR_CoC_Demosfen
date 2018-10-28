@@ -197,6 +197,9 @@
       <DisableSpecificWarnings>4237;4250;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <AdditionalOptions>/Zm200 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\Release_COC\LuaJIT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -806,6 +809,7 @@
     <ClInclude Include="CarDamageParticles.h" />
     <ClInclude Include="CarLights.h" />
     <ClInclude Include="CarWeapon.h" />
+    <ClInclude Include="CarWeapon2.h" />
     <ClInclude Include="car_memory.h" />
     <ClInclude Include="CdkeyDecode\base32.h" />
     <ClInclude Include="CdkeyDecode\cdkeydecode.h" />
@@ -2327,6 +2331,7 @@
     </ClCompile>
     <ClCompile Include="CarSound.cpp" />
     <ClCompile Include="CarWeapon.cpp" />
+    <ClCompile Include="CarWeapon2.cpp" />
     <ClCompile Include="CarWheels.cpp" />
     <ClCompile Include="car_memory.cpp" />
     <ClCompile Include="CdkeyDecode\base32.c">

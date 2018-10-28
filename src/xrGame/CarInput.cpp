@@ -16,6 +16,7 @@
 #include "Include/xrRender/Kinematics.h"
 #include "Level.h"
 #include "CarWeapon.h"
+#include "CarWeapon2.h"
 #include "HUDManager.h"
 void CCar::OnMouseMove(int dx, int dy)
 {
@@ -137,10 +138,10 @@ void CCar::vfProcessInputKey(int iCommand, bool bPressed)
         OnKeyboardRelease(iCommand);
 }
 
+
 void CCar::OnKeyboardPress(int cmd)
 {
-    if (Remote())
-        return;
+    if (Remote()) return;
 
     switch (cmd)
     {
@@ -148,49 +149,46 @@ void CCar::OnKeyboardPress(int cmd)
     case kCAM_2: OnCameraChange(ectChase); break;
     case kCAM_3: OnCameraChange(ectFree); break;
     case kACCEL: TransmissionUp(); break;
+	case kSHOT_CWEAP2:	if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 1);
+				break;// стрельба со второй туррели
+	case kSHOT_CWEAP1: if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 1); 
+		break; // стрельба с первой туррели
     case kCROUCH: TransmissionDown(); break;
     case kFWD: PressForward(); break;
     case kBACK: PressBack(); break;
-    case kR_STRAFE:
-        PressRight();
-        if (OwnerActor())
-            OwnerActor()->steer_Vehicle(1);
-        break;
-    case kL_STRAFE:
-        PressLeft();
-        if (OwnerActor())
-            OwnerActor()->steer_Vehicle(-1);
-        break;
+    case kR_STRAFE: PressRight(); if (OwnerActor()) OwnerActor()->steer_Vehicle(1); break;
+    case kL_STRAFE: PressLeft();  if (OwnerActor()) OwnerActor()->steer_Vehicle(-1); break;
     case kJUMP: PressBreaks(); break;
-    case kDETECTOR: SwitchEngine(); break;
-    case kTORCH: m_lights.SwitchHeadLights(); break;
+	case kTURN_ENGINE: SwitchEngine();
+				if (HasWeapon())m_car_weapon->Action(CCarWeapon::eWpnActivate, b_engine_on);
+				if (HasWeapon())m_car_weapon2->Action(CCarWeapon2::eWpnActivate, b_engine_on);
+		break; // получаем управление турелями если завели двигатель или попытались
+     case kTORCH: m_lights.SwitchHeadLights(); break;
     case kUSE: break;
     case kWPN_FUNC: m_repairing = true; break;
+
+	case kSWITCH_HORN: SwitchHorn(); break; // гудок
     };
 }
 
 void CCar::OnKeyboardRelease(int cmd)
 {
-    if (Remote())
-        return;
+    if (Remote()) return;
     switch (cmd)
     {
-    case kACCEL: break;
+    case kSHOT_CWEAP2:
+					if (HasWeapon()) m_car_weapon2->Action(CCarWeapon2::eWpnFire, 0);
+				break;// прекращаем стрельбу если отпустили клавишу
     case kFWD: ReleaseForward(); break;
     case kBACK: ReleaseBack(); break;
-    case kL_STRAFE:
-        ReleaseLeft();
-        if (OwnerActor())
-            OwnerActor()->steer_Vehicle(0);
-        break;
-    case kR_STRAFE:
-        ReleaseRight();
-        if (OwnerActor())
-            OwnerActor()->steer_Vehicle(0);
-        break;
+    case kL_STRAFE: ReleaseLeft();  if (OwnerActor())OwnerActor()->steer_Vehicle(0); break;
+    case kR_STRAFE: ReleaseRight(); if (OwnerActor())OwnerActor()->steer_Vehicle(0); break;
     case kJUMP: ReleaseBreaks(); break;
-	case kWPN_FIRE:	if (OwnerActor()) Action(CCarWeapon::eWpnFire, 0); break; // stop shooting on lmb release
-	case kWPN_FUNC: m_repairing = false; break;
+	case kWPN_FIRE: if (HasWeapon()) m_car_weapon->Action(CCarWeapon::eWpnFire, 0); 
+			break; // прекращаем стрельбу если отпустили клавишу
+
+	//case kNIGHT_VISION: snd_horn.stop();break;
+	case kSWITCH_HORN: snd_horn.destroy();break;
     };
 }
 
