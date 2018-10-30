@@ -154,21 +154,25 @@ void CStats::Show()
     if(psDeviceFlags.test(rsDrawFPS) && !Device.Paused())
     {
         float refHeight = font.GetHeight();
-        font.SetHeightI(0.02f);
+        font.SetHeightI(0.03f);
 		float fps = 1.f / Device.fTimeDelta;
 		if ((Device.dwFrame % 25) == 0)
 		fFPS = 0.7f * fFPS + 0.3f * fps;
 
-		if(fFPS < 30)
-			font.SetColor(D3DCOLOR_RGBA(255, 0, 0, 255));
-		else if (fFPS > 30 && fFPS < 50)
-			font.SetColor(D3DCOLOR_RGBA(255, 255, 0, 255));
-		else if (fFPS > 50)
-			font.SetColor(D3DCOLOR_RGBA(0, 255, 0, 255));
+		if(fFPS < 15)
+            font.SetColor(0xffff0000);   //Красный
+		else if (fFPS > 15 && fFPS < 25)
+            font.SetColor(0xffff7300);   //Оранжевый(0xFFFF7800)(0xffff6e1e)
+        else if (fFPS > 25 && fFPS < 40) 
+            font.SetColor(0xffffff00);   //Жёлтый
+        else if (fFPS > 40 && fFPS < 55)
+            font.SetColor(0xff9bff1e);   //Салатавый (0xff9bff00)
+		else if (fFPS > 55)
+            font.SetColor(0xff00ff00);   //Зелёный
 		else
-			font.SetColor(D3DCOLOR_RGBA(255, 255, 255, 255));
+            font.SetColor(0xffffffff);   //Белый
 
-			font.Out(10, 10, "FPS: %3.0f", fFPS);
+			font.Out(250, 10, "FPS: %2.0f", fFPS);
         font.SetHeight(refHeight);
     };
 
