@@ -33,7 +33,7 @@ SCarLight::~SCarLight()
 void SCarLight::Init(CCarLights* holder) { m_holder = holder; }
 void SCarLight::ParseDefinitions(LPCSTR section)
 {
-	light_omni = ::Render->light_create();
+    light_omni = ::GEnv.Render->light_create();
 	light_omni->set_type(IRender_Light::POINT);
 	light_omni->set_shadow(true);
     light_render = GEnv.Render->light_create();

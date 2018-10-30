@@ -554,7 +554,7 @@ private:
 
     bool HUDview() { return IsFocused(); }
 
-	static void	_BCL		Rotate					(CBoneInstance* B);
+	static void Rotate(CBoneInstance* B);
     static void cb_Steer(CBoneInstance* B);
     virtual void Hit(SHit* pHDS);
     virtual void Die(IGameObject* who);

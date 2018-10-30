@@ -10,12 +10,12 @@ class CLAItem;
 struct SCarSignalLight
 {
 public:
-	ref_light				light_render;
-	ref_light		light_omni;
-	CLAItem*						m_lanim;
-	ref_glow				glow_render;
-	u16						bone_id;
-	CCarSignalLights*				m_holder;				
+	ref_light light_render;
+	ref_light light_omni;
+	CLAItem*  m_lanim;
+	ref_glow  glow_render;
+	u16       bone_id;
+	CCarSignalLights* m_holder;				
 			SCarSignalLight		();
 			~SCarSignalLight		();
 	void	Switch			();
@@ -58,8 +58,8 @@ protected:
 			return light->bone_id==m_light->bone_id;
 		}
 	};
-	LIGHTS_STORAGE_2	m_signal_lights								;
-	CCar*			m_pcar									;
+	LIGHTS_STORAGE_2 m_signal_lights;
+	CCar*            m_pcar;
 
 private:
 };

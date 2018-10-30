@@ -16,12 +16,12 @@
 
 SCarSignalLight::SCarSignalLight()
 {
-	m_lanim			= NULL;
-	light_omni		=NULL;
-	light_render	=NULL;
-	glow_render		=NULL;
+    m_lanim = nullptr;
+    light_omni = nullptr;
+    light_render = nullptr;
+    glow_render = nullptr;
 	bone_id			=BI_NONE;
-	m_holder		=NULL;
+    m_holder = nullptr;
 }
 
 SCarSignalLight::~SCarSignalLight()
@@ -39,13 +39,13 @@ void SCarSignalLight::Init(CCarSignalLights* holder)
 
 void SCarSignalLight::ParseDefinitions(LPCSTR section)
 {
-	light_omni					= ::Render->light_create();
+    light_omni = ::GEnv.Render->light_create();
 	light_omni->set_type		(IRender_Light::POINT);
 	light_omni->set_shadow		(false);
-	light_render			= ::Render->light_create();
+    light_render = ::GEnv.Render->light_create();
 	light_render->set_type	(IRender_Light::SPOT);
 	light_render->set_shadow(true);
-	glow_render				= ::Render->glow_create();
+    glow_render = ::GEnv.Render->glow_create();
 	m_lanim					= 0;
 	//	time2hide				= 0;
 
@@ -176,7 +176,7 @@ void CCarSignalLights::ParseDefinitions()
 	for (int i=0 ;i<count; ++i) 
 	{
 		_GetItem					(S,i,S1);
-		m_signal_lights.push_back(xr_new<SCarSignalLight>());
+		m_signal_lights.push_back(new SCarSignalLight());
 		m_signal_lights.back()->Init(this);
 		m_signal_lights.back()->ParseDefinitions(S1);
 	}

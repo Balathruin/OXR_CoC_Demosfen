@@ -132,7 +132,7 @@ void CCar::reload(LPCSTR section)
         m_memory->reload(section);
 }
 
-void CCar::Rotate			(CBoneInstance* B)
+void CCar::Rotate(CBoneInstance* B)
 {
 
 	//VERIFY2(fsimilar(DET(B->mTransform),1.f,DET_CHECK_EPS),"Bones receive returns 0 matrix");
