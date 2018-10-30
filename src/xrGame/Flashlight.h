@@ -3,10 +3,11 @@
 
 class CLAItem;
 
-class CFlashlight : public CHudItemObject {
+class CFlashlight final : public CHudItemObject {
 private:
 	typedef	CHudItemObject	inherited;
 	inline	bool	can_use_dynamic_lights();
+    bool            m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn=false;
 
 protected:
 	bool			m_bFastAnimMode;
@@ -45,7 +46,8 @@ public:
 
 	virtual void 	shedule_Update(u32 dt);
 	virtual void 	UpdateCL();
-
+    virtual void    save(NET_Packet& output_packet) override;
+    virtual void    load(IReader& input_packet) override;
 	bool 			IsWorking();
 
 	virtual void 	OnMoveToSlot(const SInvItemPlace& prev);
