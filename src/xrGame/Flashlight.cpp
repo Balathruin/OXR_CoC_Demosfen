@@ -11,6 +11,8 @@
 
 //ENGINE_API int g_current_renderer;
 
+
+
 CFlashlight::CFlashlight()
 {
 	m_bFastAnimMode = false;
@@ -124,12 +126,23 @@ void CFlashlight::ToggleDevice(bool bFastMode)
 			else
 			{
 				SwitchState(eShowing);
+
 			}
 		}
 	}
 	else
-		if (GetState() == eIdle)
-			SwitchState(eSwitchOff);
+        if (GetState() == eIdle)
+        {
+        if (m_switched_on && !m_bFastAnimMode)
+            {
+                SwitchState(eSwitchOff);
+            }
+            else
+            {
+                SwitchState(eHiding);
+            }
+        }
+			
 
 }
 
@@ -152,6 +165,7 @@ void CFlashlight::OnStateSwitch(u32 S, u32 oldState)
 			{
 				m_sounds.PlaySound("sndHide", Fvector().set(0, 0, 0), this, true, false);
 				PlayHUDMotion(m_bFastAnimMode ? "anm_hide_fast" : "anm_hide", FALSE/*TRUE*/, this, GetState());
+               
 				SetPending(TRUE);
 			}
 		}break;
@@ -179,6 +193,7 @@ void CFlashlight::OnStateSwitch(u32 S, u32 oldState)
 			if (pActor)
 				m_sounds.PlaySound("SndTurnOn", pActor->Position(), NULL, !!pActor->HUDview());
 			PlayHUDMotion("anm_toggle", TRUE, this, GetState());
+
 			SetPending(TRUE);
 		}break;
 		case eSwitchOff:
@@ -204,22 +219,34 @@ void CFlashlight::OnAnimationEnd(u32 state)
 	{
 		case eShowing:
 		{
-			SwitchState(eSwitchOn);
+            //
+			if(m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn && !m_bFastAnimMode) //m_bFastAnimMode-> убран включенным, значит нету смысла нажимать на кнопку
+            { 
+                SwitchState(eSwitchOn);
+            }
+            else
+            {
+                SwitchState(eIdle);
+            }
 		} break;
 		case eHiding:
 		{
 			SwitchState(eHidden);
+            Switch(false, false);
 			g_player_hud->detach_item(this);
 		} break;
 		case eToggle:
 		{
 			Switch(!m_switched_on,false);
 			SwitchState(eIdle);
+            //это прямое желание игрока оставить фонарик вкл\выкл, поэтому сохраняем его
+            m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn = m_switched_on; 
 		} break;
 		case eSwitchOn:
 		{
 			Switch(true,false);
 			SwitchState(eIdle);
+
 		} break;
 		case eSwitchOff:
 		{
@@ -227,6 +254,7 @@ void CFlashlight::OnAnimationEnd(u32 state)
 			SwitchState(eHiding);
 		} break;
 	}
+        m_bFastAnimMode = false;
 }
 
 void CFlashlight::UpdateXForm()
@@ -246,7 +274,6 @@ void CFlashlight::OnHiddenItem()
 BOOL CFlashlight::net_Spawn(CSE_Abstract* DC)
 {
 	Switch(false, false);
-
 	if (!inherited::net_Spawn(DC))
 		return FALSE;
 
@@ -373,8 +400,18 @@ void CFlashlight::UpdateVisibility()
 				CHudItem* huditem = (i0) ? i0->m_parent_hud_item : NULL;
 				bool bChecked = !huditem || CheckCompatibilityInt(huditem, 0);
 
-				if (bChecked)
-					ShowDevice(true);
+                if (bChecked)
+                {
+                    ShowDevice(true);
+                    //Такая комбинация означает, что фонарик был убран включенным. Соотвественно, когда достаем его
+                    //вновь, лампочка должна гореть!
+                    //А лампочку мы ранее вне глаз игрока отключили, так как происходит баг с зависшим светом @Debrovski
+                    if (m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn && m_bFastAnimMode)
+                    {
+                        Switch(true, false);
+                    }
+                }
+					
 			}
 		}
 }
@@ -397,7 +434,6 @@ void CFlashlight::UpdateCL()
 
 	if (!HudItemData())
 	{
-		Switch(false, false);
 		return;
 	}
 
@@ -431,6 +467,18 @@ void CFlashlight::UpdateCL()
 	glow_render->set_color(fclr);
 }
 
+void CFlashlight::save(NET_Packet& output_packet)
+{ 
+    inherited::save(output_packet);
+    output_packet.w_u8(m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn);
+}
+
+void CFlashlight::load(IReader& input_packet) 
+{ 
+    inherited::load(input_packet);
+    m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn = !!input_packet.r_u8();
+}
+
 void CFlashlight::OnH_A_Chield()
 {
 	inherited::OnH_A_Chield();
@@ -459,7 +507,7 @@ void CFlashlight::activate_physic_shell()
 }
 
 void CFlashlight::setup_physic_shell()
-{
+{ 
 	CPhysicsShellHolder::setup_physic_shell();
 }
 
@@ -515,6 +563,7 @@ void CFlashlight::Switch(bool light_on, bool b_play_sound)
 	}
 
 	m_switched_on = light_on;
+
 	if (can_use_dynamic_lights())
 	{
 		light_render->set_active(light_on);
@@ -534,6 +583,7 @@ void CFlashlight::ToggleSwitch()
 		u32 state = GetState();
 		if (state == eIdle || state == eIdleZoom)
 		{
+
 			SwitchState(eToggle);
 		}
 	}

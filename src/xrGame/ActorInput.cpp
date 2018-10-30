@@ -144,7 +144,7 @@ void CActor::IR_OnKeyboardPress(int cmd)
 			{
 				CFlashlight* flashlight = smart_cast<CFlashlight*>(det_active);
 				if (flashlight)
-					flashlight->ToggleDevice(g_player_hud->attached_item(0) != NULL);
+					flashlight->ToggleDevice(false);
 			}
             return;
         }
