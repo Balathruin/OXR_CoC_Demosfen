@@ -16,7 +16,7 @@
 
 int g_ErrorLineCount = 15;
 Flags32 g_stats_flags = {0};
-
+float fFPS = 30.f;
 class optimizer
 {
     float average_;
@@ -151,12 +151,24 @@ void CStats::Show()
         CPU::qpc_counter = 0;
     }
 
-    if(psDeviceFlags.test(rsDrawFPS))
+    if(psDeviceFlags.test(rsDrawFPS) && !Device.Paused())
     {
         float refHeight = font.GetHeight();
         font.SetHeightI(0.02f);
-        font.SetColor(0xFFFFA917);
-        font.Out(10, 10, "FPS: %0.0f", 1.0f / Device.fTimeDelta);
+		float fps = 1.f / Device.fTimeDelta;
+		if ((Device.dwFrame % 25) == 0)
+		fFPS = 0.7f * fFPS + 0.3f * fps;
+
+		if(fFPS < 30)
+			font.SetColor(D3DCOLOR_RGBA(255, 0, 0, 255));
+		else if (fFPS > 30 && fFPS < 50)
+			font.SetColor(D3DCOLOR_RGBA(255, 255, 0, 255));
+		else if (fFPS > 50)
+			font.SetColor(D3DCOLOR_RGBA(0, 255, 0, 255));
+		else
+			font.SetColor(D3DCOLOR_RGBA(255, 255, 255, 255));
+
+			font.Out(10, 10, "FPS: %3.0f", fFPS);
         font.SetHeight(refHeight);
     };
 
