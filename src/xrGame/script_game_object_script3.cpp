@@ -446,7 +446,7 @@ class_<CScriptGameObject>& script_register_game_object2(class_<CScriptGameObject
         .def("cast_Actor", &objectCast<CActor>)
         .def("cast_Weapon", &objectCast<CWeapon>)
         //.def("cast_Medkit", &objectCast<CMedkit>)
-        //.def("cast_EatableItem", &objectCast<CEatableItem>)
+        .def("cast_EatableItem", &objectCast<CEatableItem>)
         //.def("cast_Antirad", &objectCast<CAntirad>)
         .def("cast_CustomOutfit", &objectCast<CCustomOutfit>)
         .def("cast_Scope", &objectCast<CScope>)
