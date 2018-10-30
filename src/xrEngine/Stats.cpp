@@ -151,7 +151,7 @@ void CStats::Show()
         CPU::qpc_counter = 0;
     }
 
-    if(psDeviceFlags.test(rsDrawFPS))
+    if(psDeviceFlags.test(rsDrawFPS) && !Device.Paused())
     {
         float refHeight = font.GetHeight();
         font.SetHeightI(0.02f);
