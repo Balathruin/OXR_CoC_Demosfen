@@ -1,4 +1,4 @@
-#include "stdafx.h"
+п»ї#include "stdafx.h"
 #include "Flashlight.h"
 #include "inventory.h"
 #include "player_hud.h"
@@ -220,7 +220,7 @@ void CFlashlight::OnAnimationEnd(u32 state)
 		case eShowing:
 		{
             //
-			if(m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn && !m_bFastAnimMode) //m_bFastAnimMode-> убран включенным, значит нету смысла нажимать на кнопку
+			if(m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn && !m_bFastAnimMode) //m_bFastAnimMode-> СѓР±СЂР°РЅ РІРєР»СЋС‡РµРЅРЅС‹Рј, Р·РЅР°С‡РёС‚ РЅРµС‚Сѓ СЃРјС‹СЃР»Р° РЅР°Р¶РёРјР°С‚СЊ РЅР° РєРЅРѕРїРєСѓ
             { 
                 SwitchState(eSwitchOn);
             }
@@ -239,7 +239,7 @@ void CFlashlight::OnAnimationEnd(u32 state)
 		{
 			Switch(!m_switched_on,false);
 			SwitchState(eIdle);
-            //это прямое желание игрока оставить фонарик вкл\выкл, поэтому сохраняем его
+            //СЌС‚Рѕ РїСЂСЏРјРѕРµ Р¶РµР»Р°РЅРёРµ РёРіСЂРѕРєР° РѕСЃС‚Р°РІРёС‚СЊ С„РѕРЅР°СЂРёРє РІРєР»\РІС‹РєР», РїРѕСЌС‚РѕРјСѓ СЃРѕС…СЂР°РЅСЏРµРј РµРіРѕ
             m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn = m_switched_on; 
 		} break;
 		case eSwitchOn:
@@ -403,9 +403,9 @@ void CFlashlight::UpdateVisibility()
                 if (bChecked)
                 {
                     ShowDevice(true);
-                    //Такая комбинация означает, что фонарик был убран включенным. Соотвественно, когда достаем его
-                    //вновь, лампочка должна гореть!
-                    //А лампочку мы ранее вне глаз игрока отключили, так как происходит баг с зависшим светом @Debrovski
+                    //РўР°РєР°СЏ РєРѕРјР±РёРЅР°С†РёСЏ РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ С„РѕРЅР°СЂРёРє Р±С‹Р» СѓР±СЂР°РЅ РІРєР»СЋС‡РµРЅРЅС‹Рј. РЎРѕРѕС‚РІРµСЃС‚РІРµРЅРЅРѕ, РєРѕРіРґР° РґРѕСЃС‚Р°РµРј РµРіРѕ
+                    //РІРЅРѕРІСЊ, Р»Р°РјРїРѕС‡РєР° РґРѕР»Р¶РЅР° РіРѕСЂРµС‚СЊ!
+                    //Рђ Р»Р°РјРїРѕС‡РєСѓ РјС‹ СЂР°РЅРµРµ РІРЅРµ РіР»Р°Р· РёРіСЂРѕРєР° РѕС‚РєР»СЋС‡РёР»Рё, С‚Р°Рє РєР°Рє РїСЂРѕРёСЃС…РѕРґРёС‚ Р±Р°Рі СЃ Р·Р°РІРёСЃС€РёРј СЃРІРµС‚РѕРј @Debrovski
                     if (m_isLastTimeWhenFlashlightWasInHandsItWasTurnedOn && m_bFastAnimMode)
                     {
                         Switch(true, false);
