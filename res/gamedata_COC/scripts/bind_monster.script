@@ -310,6 +310,12 @@ function generic_object_binder:hit_callback(obj, amount, local_direction, who, b
 	if self.st.hit then
 		xr_logic.issue_event(obj, self.st.hit, "hit_callback", obj, amount, local_direction, who, bone_index)
 	end
+	-- Romann
+	if (amount > 0) or (db.gwr~=nil) and (db.gwr["meatgrinder_monsters"]==true) then
+		printf("HIT_CALLBACK: %s amount=%s bone=%s who:id() = [%s] actor:id() = [%s]", obj:name(), amount, tostring(bone_index), who:id(), db.actor:id())
+			gwr_meatgrinder.main("monster", amount, local_direction, who, 1, obj) 
+	end
+	-- Romann
 
 	-- Alundaio
 	SendScriptCallback("monster_on_hit_callback",obj,amount,local_direction,who,bone_index)

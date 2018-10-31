@@ -269,7 +269,13 @@ function actor_binder:update(delta)
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:update(delta)
 	end
-	
+
+	--------------------------GWR Mod Updates-------------------------------------------------------------------------
+	if db.gwr == nil then
+		gwr_maindb.creategwr()
+	end
+	--------------------------GWR Mod Updates-------------------------------------------------------------------------
+
 	--alun_utils.debug_write("actor update END 2")
 end
 ----------------------------------------------------------------------------------------------------------------------
