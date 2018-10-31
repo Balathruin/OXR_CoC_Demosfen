@@ -27,9 +27,6 @@ protected:
 	float           range_o2;
 	float           glow_radius;
 	float           glow_radius2;
-	ref_light		light_render;
-	ref_light		light_omni;
-	ref_glow		glow_render;
 	Fvector			m_focus;
     ref_light light_render;
     ref_light light_omni;
