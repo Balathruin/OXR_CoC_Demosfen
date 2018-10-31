@@ -181,19 +181,19 @@ BOOL CTorch::net_Spawn(CSE_Abstract* DC)
 
     R_ASSERT2(pUserData->section_exist(m_light_section), "Section not found in torch user data! Check 'light_section' field in config");
 
-	lanim					= LALib.FindItem(pUserData->r_string("torch_definition","color_animator"));
-	guid_bone				= K->LL_BoneID	(pUserData->r_string("torch_definition","guide_bone"));	VERIFY(guid_bone!=BI_NONE);
+	lanim					= LALib.FindItem(pUserData->r_string(m_light_section,"color_animator"));
+	guid_bone				= K->LL_BoneID	(pUserData->r_string(m_light_section,"guide_bone"));	VERIFY(guid_bone!=BI_NONE);
 
-	Fcolor clr				= pUserData->r_fcolor				("torch_definition",(b_r2)?"color_r2":"color");
-	range				    = pUserData->r_float				("torch_definition",(b_r2)?"range_r2":"range");
-	range2				    = pUserData->r_float				("torch_definition",(b_r2)?"range_r2_2":"range_2");
+	Fcolor clr				= pUserData->r_fcolor				(m_light_section,(b_r2)?"color_r2":"color");
+	range				    = pUserData->r_float				(m_light_section,(b_r2)?"range_r2":"range");
+	range2				    = pUserData->r_float				(m_light_section,(b_r2)?"range_r2_2":"range_2");
 
-	Fcolor clr_o			= pUserData->r_fcolor				("torch_definition",(b_r2)?"omni_color_r2":"omni_color");
-	range_o			        = pUserData->r_float				("torch_definition",(b_r2)?"omni_range_r2":"omni_range");
-	range_o2			    = pUserData->r_float			    ("torch_definition",(b_r2)?"omni_range_r2_2":"omni_range_2");
+	Fcolor clr_o			= pUserData->r_fcolor				(m_light_section,(b_r2)?"omni_color_r2":"omni_color");
+	range_o			        = pUserData->r_float				(m_light_section,(b_r2)?"omni_range_r2":"omni_range");
+	range_o2			    = pUserData->r_float			    (m_light_section,(b_r2)?"omni_range_r2_2":"omni_range_2");
 	
-	glow_radius			    = pUserData->r_float			    ("torch_definition","glow_radius");
-	glow_radius2			= pUserData->r_float			    ("torch_definition","glow_radius_2");
+	glow_radius			    = pUserData->r_float			    (m_light_section,"glow_radius");
+	glow_radius2			= pUserData->r_float			    (m_light_section,"glow_radius_2");
 	
 	fBrightness				= clr.intensity();
 	light_render->set_color	(clr);
