@@ -48,6 +48,12 @@
 		<command id="kb_quick_use_4"					exe="quick_use_4"/>
 		<command id="kb_drop"						  	exe="drop"/>		
 	</group>
+	<group name="kb_grp_vehicle">
+		<command id="kb_turn_engine"					exe="turn_engine"/>
+		<command id="kb_switch_horn"					exe="switch_horn"/>
+		<command id="kb_shot_cweapon1"					exe="shot_cweapon1"/>
+		<command id="kb_shot_cweapon2"					exe="shot_cweapon2"/>		
+	</group>
 	<group name="kb_grp_common">
 		<command id="kb_kick"							exe="kick"/>
 		<command id="kb_cam_autoaim"					exe="cam_autoaim"/>
