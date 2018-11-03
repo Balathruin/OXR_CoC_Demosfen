@@ -309,7 +309,7 @@ bool CInventoryItem::Detach(const char* item_section_name, bool b_spawn_item)
 BOOL CInventoryItem::net_Spawn(CSE_Abstract* DC)
 {
     VERIFY(!m_pInventory);
-
+    m_flags.set(FWeaponDisabled, false);
     m_flags.set(FInInterpolation, FALSE);
     m_flags.set(FInInterpolate, FALSE);
     //	m_bInInterpolation				= false;
