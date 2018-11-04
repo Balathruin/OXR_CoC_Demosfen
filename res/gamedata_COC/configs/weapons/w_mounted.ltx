@@ -40,16 +40,22 @@ light_var_range  = 0.5
 light_time 		 = 0.3
 
 
-flame_particles		    = weapons\generic_weapon08
-smoke_particles		    = weapons\generic_shoot_00
+flame_particles                          = weapons\generic_weapon05
+smoke_particles                          = weapons\generic_shoot_00
 
-shell_point		 = 0.00, 0.0,0
-shell_particles	 = weapons\generic_shells00
+shell_point                              = 0.00, 0.0,0
+shell_particles                          = weapons\generic_shells
 
-snd_shoot			= weapons\pkm_shot
+snd_shoot                                = weapons\pkm_shot
 
-ammo_class		 = ammo_7.62x54_7h1
+ammo_class                               = ammo_7.62x54_7h1
+rocket_class                             = wpn_rpg7_missile
 
+condition_queue_shot_dec                 = 0.00002
+misfire_end_condition                    = 0.1
+misfire_end_prob                         = 0.02
+misfire_start_condition                  = 0.6
+misfire_start_prob                       = 0.001
 
 [stationary_mgun]:identity_immunities,weapon_probability,default_weapon_params
 GroupControlSection			= spawn_group
@@ -60,13 +66,16 @@ visual  	                = dynamics\weapons\wpn_mounted\wpn_mounted_pkm_trenoga.
 
 cam_relax_speed         	= 3.0		;скорость возврата в исходное положение
 cam_max_angle				= 8	    	;максимальный угол отдачи
-snd_shoot					= weapons\apc_fire
-snd_shoot2					= weapons\apc_fire
-snd_shoot_high_1				= weapons\apc_fire
+snd_shoot					= weapons\pkm_shot
+snd_shoot2					= weapons\pkm_shot
+snd_shoot_high_1				= weapons\pkm_shot
 use_aim_bullet				= false
 
-ammo_class					= ammo_12x76_zhekan_heli2
-ammo_class2					= ammo_12x76_zhekan_heli2
+ammo_class					= ammo_12x76_zhekan_heli
+ammo_class2					= ammo_12x76_zhekan_heli
+ammo_class3					= ammo_12x76_zhekan_heli
+ammo_class4					= ammo_12x76_zhekan_heli
+ammo_class5					= ammo_12x76_zhekan_heli
 fire_dispersion_base		= 1.5 ;1 		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
 fire_dispersion_null		= 1.5
 rpm            		        = 220
@@ -81,6 +90,10 @@ light_var_color				= 0.05
 light_var_range				= 0.5
 light_time 					= 0.3
 
+
+launch_speed                                       = 5
+rocket_class                             = wpn_rpg7_missile
+
 flame_particles				= weapons\generic_weapon05
 smoke_particles				= weapons\generic_shoot_00
 shell_point					= 0.0, 0.0, 0.0
@@ -93,7 +106,18 @@ tracer_width		 = 0.07
 inv_name	        	= Mounted Weapon								; name in inventory
 inv_name_short			= Mounted Weapon
 
+cam_dispersion                           = 0.2
+cam_max_angle_horz                       = 9.0
+cam_step_angle_horz                      = 1.8
 
+
+overheat_enabled                         = true
+overheat_time_quant                      = 0.90
+overheat_decr_quant                      = 0.20
+overheat_threshold                       = 200.00
+overheat_particles                       = industrial_particles\exhaust_workshop_1_small
+
+[deployable_mgun]:stationary_mgun
 
 [wpn_kpvt]:stationary_mgun
 GroupControlSection			= spawn_group
@@ -109,6 +133,9 @@ use_aim_bullet				= false
 
 ammo_class					= ammo_7.62x54_7h1
 ammo_class2					= ammo_7.62x54_7h1
+ammo_class3					= ammo_7.62x54_7h1
+ammo_class4					= ammo_7.62x54_7h1
+ammo_class5					= ammo_7.62x54_7h1
 snd_shoot_high_2				= weapons\pkm_shot
 fire_dispersion_base		= 1.8 ;1 		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
 fire_dispersion_null		= 1.8
@@ -150,6 +177,9 @@ use_aim_bullet				= false
 
 ammo_class					= ammo_7.62x54_7h1
 ammo_class2					= ammo_7.62x54_7h1
+ammo_class3					= ammo_7.62x54_7h1
+ammo_class4					= ammo_7.62x54_7h1
+ammo_class5					= ammo_7.62x54_7h1
 snd_shoot_high_2				= weapons\pkm_shot
 fire_dispersion_base		= 1.8 ;1 		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
 fire_dispersion_null		= 1.8
