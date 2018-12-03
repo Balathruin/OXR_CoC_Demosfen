@@ -7,7 +7,27 @@
 	<info_portion id="">red_forester_who_are_you</info_portion>
 	<info_portion id="">bar_deactivate_radar_done</info_portion>
 	<info_portion id="">yantar_attack_start</info_portion>
-	
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX Storyline Switch Infoportions
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------  -->
+
+	<!-- --------------------------------------- -->
+	<!-- BRAIN SCORCHER -->
+
+	<!-- Brain Scorcher switch in off position -->
+	<info_portion id="">drx_sl_brain_scorcher_switch_off</info_portion>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 	<!-- Lab X16 scene -->
 	<info_portion id="">yan_find_laboratory_end</info_portion>
 	<info_portion id="">labx16_find</info_portion>

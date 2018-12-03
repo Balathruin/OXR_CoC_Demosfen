@@ -6,11 +6,11 @@ respawn_idle = 86400
 respawn_radius = 300
 
 [respawn@sar_monolith_sklad]
-spawn_rats
+spawn_controller
 
-[spawn_rats]
-spawn_squads = simulation_rat, simulation_tushkano
-spawn_num = {+sar_secret_door_find} 5, 0
+[spawn_controller]
+spawn_squads = simulation_controller
+spawn_num = 2
 
 [exclusive]
 sar_monolith_sklad_patrol1 = sarcofag\sar_monolith_sklad_logic.ltx

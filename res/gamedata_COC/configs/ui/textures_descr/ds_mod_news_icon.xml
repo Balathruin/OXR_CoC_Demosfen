@@ -1,0 +1,14 @@
+<w>
+<file name="ui\icon_vs_news">
+<texture id="ui_icon_vs_news_deth" x="0" y="94" width="83" height="47" />
+<texture id="ui_icon_vs_news_all" x="0" y="141" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_dolg" x="0" y="47" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_svoboda" x="0" y="0" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_naim" x="0" y="188" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_bandos" x="0" y="282" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_voen_stalk" x="0" y="235" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_csky" x="0" y="329" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_ecolog" x="0" y="376" width="83" height="47" />
+<texture id="ui_icon_vs_news_news_monolith" x="0" y="423" width="83" height="47" />
+</file>
+</w>

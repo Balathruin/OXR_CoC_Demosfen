@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_upgr_enough_materials">
+		<text>insufficient materials</text>
+	</string>
+	<string id="st_upgr_required_materials">
+		<text>Necessary materials</text>
+	</string>
+
+
+	<!-- RPM rate of fire -->
+
+	<string id="st_up_assault_rifle_mlr_RPM_name">
+		<text>Rate of fire increase</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RPM_descr">
+		<text>Stalkers have learned to solder fragments of the Night Star artifact in the bolt mechanism, which allows to increase the rate of fire of weapons.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RPM_2_descr">
+		<text>This alloy made of the artifacts Jellyfish and Slug was not chosen by chance. Should increase the fire rate using the gravity of artifacts and not to overdo it with the emitted field. Through trial and error by stalkers, this recipe of influence on the firing mechanism was built, which only slightly increases its wear.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RPM_3_descr">
+		<text>Elements of the Medusa artifact allow to slightly increase the speed of the mobile mechanism, and a Fireball, more precisely its core - reduce the associated overheating.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RPM_4_descr">
+		<text>Elements of the Night Star artifact allow to slightly increase the speed of the mobile mechanism, and a Flame, more precisely its core - reduce the associated overheating.</text>
+	</string>
+
+
+	<!-- RECOIL отдача -->
+
+	<string id="st_up_assault_rifle_mlr_RECOIL_name">
+		<text>Recoil reduction</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RECOIL_descr">
+		<text>A Wrenched together with a Jellyfish emit a weak gravitational field, which allows, when properly applied, to stabilize the recoil of the weapon.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RECOIL_2_descr">
+		<text>Due to its gravitational nature and properties, the Jellyfish artifact is used to stabilize the weapon and reduce its recoil.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RECOIL_3_descr">
+		<text>It is difficult to stabilize and reduce the kickback of a shotgun, so local craftsmen came up with the idea of using small pieces of the Night Star artifact to solve this problem.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RECOIL_4_descr">
+		<text>To stabilize the machine guns, stalkers usually use the properties of the artifacts Night Star together with a Gravi.</text>
+	</string>
+
+
+	<!-- BULLET_SPEED настильность -->
+
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_name">
+		<text>Bullet's flight speed increase</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_descr">
+		<text>The Night Star artifact has a gravitational field that repels various objects from itself. If you rub the bottom of the barrel with one, then its particles will slightly speed up the speed of the bullet's flight.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_2_descr">
+		<text>Stalkers have learned to solder this alloy to a moving mechanism. A Gravi reduces the mass of the bullet during the start, and Night Star accelerates it; as a result, the speed of the bullet increases significantly.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_3_descr">
+		<text>Elements of the "Night Star" artifact are soldered to the mobile mechanism, which allows increasing the initial speed of the bullet's flight.</text>
+	</string>
+
+
+	<!-- RELIABILITY прочность -->
+
+	<string id="st_up_assault_rifle_mlr_RELIABILITY_name">
+		<text>Reliability increase</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_RELIABILITY_descr">
+		<text>As it turned out, the gaseous substances released by artifacts positively affect the characteristics of the metal, increasing its strength.</text>
+	</string>
+
+
+	<!-- DISPERSION точность -->
+
+	<string id="st_up_assault_rifle_mlr_DISPERSION_name">
+		<text>Dispersion reduction</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_DISPERSION_descr">
+		<text>It is installed in the rifle's butt; the gravitational field of the Night Star is very powerful, and when combined with a Flash has a repulsive effect and creates a significant counterweight, reducing the recoil.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_DISPERSION_2_descr">
+		<text>You can achieve a higher gun accuracy, if you use the force of gravitational artifacts.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_DISPERSION_3_descr">
+		<text>Sealing the gun's barrel with welded particles of a Jellyfish artifact helps to improve to some extent the accuracy of the bullet's flight.</text>
+	</string>
+
+
+	<!-- INERTION удобность -->
+
+	<string id="st_up_assault_rifle_mlr_INERTION_name">
+		<text>Stability increase</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_INERTION_descr">
+		<text>Artifacts are not chosen by chance, they balance each other's characteristics and are installed in the weapon for even better stabilization.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_INERTION_2_descr">
+		<text>an alloy made with the artifacts Jellyfish and Wrenched due to their properties will help stabilize the weapon.</text>
+	</string>
+
+
+	<!-- WEIGHT вес -->
+
+	<string id="st_up_assault_rifle_mlr_WEIGHT_name">
+		<text>Weight reduction</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_WEIGHT_descr">
+		<text>Due to the properties of artifacts, it's possible to lighten the weapon's weight.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a2_name">
+		<text>Installation of the artifact particle of a Stone Blood</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a2_descr">
+		<text>Few people know, but the dry mass allocated by an artifact which absorbs temporary chemical effects has the property of corroding any dirt that somehow finds itself in the receiver, which relieves the wearer of exhausting procedures for cleaning weapons, needing only to shake it out sometimes.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a5_name">
+		<text>Coating of the recoil mechanism</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a5_descr">
+		<text>Crushed particles of the Spring artifact allow you to synchronize the trajectory of the bullet with the aiming line.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a6_name">
+		<text>Alloy with artifacts Jellyfish and Battery</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a6_descr">
+		<text>Stalkers realized that when the Jellyfish and Battery artifacts come in contact, the latter changes the properties of the gravitational field of the first. Thus, installing particles of these artifacts close to each other makes it possible to stabilize the weapon during fire.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a7_name">
+		<text>Symbiosis of the artifacts Night Star and Flash</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a7_descr">
+		<text>As in the case of the Battery, stalkers noticed the influence of the Flash artifact on the Night Star, by "spurring" its properties with small discharges. Correct placement of such fragments allows to significantly stabilize the weapon, making it more convenient to operate.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a10_name">
+		<text>Gas chamber coating</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a10_descr">
+		<text>Coating the gas chamber of the weapon with particles of the Night Star artifact significantly increases the bullet's initial velocity.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a11_name">
+		<text>Reinforcement of the gas piston</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a11_descr">
+		<text>Small particles of the artifact Bubble create a counter-mass to the gate mechanism during gas release and thereby compensates for the movement of the latter - this positively affects the accuracy of the weapons during battle.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a13_name">
+		<text>Installation of a particle of the Gravi artifact</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a13_descr">
+		<text>Due to the artifact's properties, it reduces the mass of the weapon itself.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a14_name">
+		<text>Alloy composed by the artifacts Soul and Crystal</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a14_descr">
+		<text>Crystal very unexpectedly affects the artifact Soul, absorbing some of its energy and modifying it, which allows to significantly stabilize the weapon.</text>
+	</string>
+</string_table>

@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = {+boss_controller_pole_dead} sr_idle@end %+can_talk_to_fat_stalker%
+
+[sr_idle@end]
+on_info = {+rookie_pole_task_2_dlg_2 -rookie_pole_task_2_dlg_docum_on_actor} nil %=set_squad_goodwill(fat_rookie_in_the_house_pole_squad:5000)%

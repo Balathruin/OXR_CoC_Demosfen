@@ -1,53 +1,113 @@
 [upgrades_properties]
-prop_3xfire                 ;; Режим автоматической стрельбы по три выстрела
-prop_ammo_size              ;; Патроны
-prop_armor					;;Броня
-prop_artefact				;;Слот для артефактов
-prop_autofire               ;; Режим полностью автоматического огня
-prop_autolock               ;;Автозахват цели
-prop_autolockscope          ;; Автозахват цели в оптике
-prop_bullet_speed           ;; Настильность
-prop_calibre                ;; калибр (9x18, 5x45)
-prop_chem					;;Хим защита
-prop_contrast               ;; Повышение контрастности прицела
-prop_damage					;;Повреждение
-prop_dispersion             ;; Точность
-prop_durability				;;Износостойкость (прочность)
-prop_electro				;;Электро защита
-prop_explo
-prop_grenade_launcher       ;; Подствольник
-prop_inertion               ;; Удобство
-prop_night_vision			;;ПНВ 1-го поколения
-prop_nightvision			;; Установка ПНВ
-prop_no_buck				;; Не стреляет дробью
-prop_power 					;;Вост. стамины
-prop_psy					;;Пси защита
-prop_radio					;;Радио защита
-prop_recoil                 ;; Отдача
+prop_weight                 ;; Вес
+prop_silencer               ;; Глушитель
+prop_underbarrel_slot       ;; Крепление подствольника
 prop_reliability            ;; Надежность
-prop_restore_bleeding		;;Уменьшение кровотечения
-prop_restore_health			;;Восстанавление здоровья
-prop_rpm                    ;; Скорострельность
-prop_scanner                ;;Инфракрасный сканер
-prop_scope                  ;; Регулируемый дальномерный прицел
-prop_scope_1.5x	            ;; Коллиматорный прицел 1.5x
-prop_scope_1.6x             ;; Прицел 1.6
+prop_bullet_speed           ;; Настильность
+prop_recoil                 ;; Отдача
+prop_ammo_size              ;; Патроны
+prop_grenade_launcher       ;; Подствольник
 prop_scope_4x               ;; Прицел 4
+prop_scope_1.6x             ;; Прицел 1.6
+prop_rpm                    ;; Скорострельность
+prop_calibre                ;; калибр (9x18, 5x45)
+prop_dispersion             ;; Точность
+prop_inertion               ;; Удобство
+prop_autolockscope          ;; Автозахват цели в оптике
+prop_scope_1.5x	            ;; Коллиматорный прицел 1.5x
 prop_scope_5x               ;; Прицел 5х
 prop_scope_6x               ;; Прицел 6х
 prop_scope_attach           ;; Крепление для оптики
-prop_silencer               ;; Глушитель
-prop_sprint                 ;;Бег в экзоскелете
-prop_strike
-prop_thermo					;;Термо защита
-prop_tonnage 				;;Переноимый вес
-prop_underbarrel_slot       ;; Крепление подствольника
-prop_weight                 ;; Вес
-prop_weightoutfit           ;;Вес бронижилета
+prop_scope                  ;; Регулируемый дальномерный прицел
+prop_contrast               ;; Повышение контрастности прицела
+prop_autofire               ;; Режим полностью автоматического огня
+prop_3xfire                 ;; Режим автоматической стрельбы по три выстрела
+prop_nightvision			;; Установка ПНВ
+prop_no_buck				;; Не стреляет дробью
+
 prop_wound
+prop_strike
+prop_explo
+
+prop_chem					;;Хим защита
+prop_radio					;;Радио защита
+prop_thermo					;;Термо защита
+prop_electro				;;Электро защита
+prop_psy					;;Пси защита
+prop_armor					;;Броня
+prop_damage					;;Повреждение
+
+prop_durability				;;Износостойкость (прочность)
+prop_restore_bleeding		;;Уменьшение кровотечения
+prop_restore_health			;;Восстанавление здоровья
+prop_night_vision			;;ПНВ 1-го поколения
+prop_power 					;;Вост. стамины
+prop_tonnage 				;;Переноимый вес
+prop_artefact				;;Слот для артефактов
+prop_weightoutfit           ;;Вес бронижилета
+prop_autolock               ;;Автозахват цели
+prop_sprint                 ;;Бег в экзоскелете
+prop_scanner                ;;Инфракрасный сканер
+
+prop_binoc_weight
+prop_binoc_zoom
+prop_binoc_autolock
+prop_binoc_nightvision
+
+prop_trx_carry
+prop_trx_carrys
+prop_trx_power
 
 
 
+;;***********************************************************************************************************
+
+[prop_binoc_weight]
+name     = st_up_binoc_1_name
+icon     = ui_inGame2_upgrade_Binoc_1
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+
+[prop_binoc_zoom]
+name     = st_up_binoc_3_name
+icon     = ui_inGame2_upgrade_Binoc_2
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+
+[prop_binoc_autolock]
+name     = st_up_resp_b2_name
+icon     = ui_inGame2_upgrade_Binoc_5
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+
+[prop_binoc_nightvision]
+name     = st_up_binoc_2_name
+icon     = ui_inGame2_upgrade_Binoc_8
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+*****************************************************************************8
+
+[prop_trx_carry]
+name     = st_up_bp_a1_name
+icon     = ui_inGame2_upgrade_bp_1_1
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+
+[prop_trx_carrys]
+name     = st_up_bp_a2_name
+icon     = ui_inGame2_upgrade_bp_1_2
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+
+[prop_trx_power]
+name     = st_up_bp_a3_name
+icon     = ui_inGame2_upgrade_bp_1_3
+functor  = inventory_upgrades.property_functor_a
+params   = cost
+
+
+
+;;***********************************************************************************************************
 [prop_weight]
 name     = st_prop_weight
 icon     = ui_wp_prop_weight
@@ -266,7 +326,7 @@ params   = fire_wound_immunity, cost
 name     = ui_inv_outfit_shock_protection
 icon     = ui_am_prop_electro
 functor  = inventory_upgrades.property_functor_a
-params   = fire_wound_immunity, cost
+params   = fire_wound_immunity, cos
 
 [prop_thermo]
 name     = ui_inv_outfit_burn_protection

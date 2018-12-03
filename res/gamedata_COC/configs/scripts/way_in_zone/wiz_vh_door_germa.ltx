@@ -1,0 +1,8 @@
+[animated_object]
+tip = {-wiz_code_door_unlocked} tip_gate_locked, none
+on_start = true %=turn_off(wiz_lamp_germa_red:wiz_lamp_germa_red_1) =turn_on(wiz_lamp_germa_flash:wiz_lamp_germa_flash_1)%
+on_stop = true %+wiz_door_germa_opened =turn_off(wiz_lamp_germa_flash:wiz_lamp_germa_flash_1) =turn_on(wiz_lamp_germa_green:wiz_lamp_germa_green_1)%
+idle_snd  = device\airtight_gates_idle
+start_snd = device\airtight_gates_start
+stop_snd  = device\airtight_gates_stop
+idle_delay = 6500

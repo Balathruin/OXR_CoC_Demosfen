@@ -335,6 +335,15 @@ stand_run_dmg_0			=		1,		0.2,      1,	  	0.25,    1,		 0.7,	 1,			0.75,		1
 stand_drag_0			=		1,		0.2,      1,	  	0.25,    1,		 0.7,	 1,			0.75,		1
 
 
+
+;*********************************************************************************
+; PROTECTIONS
+;*********************************************************************************
+[pseudodog_protections]
+
+hit_fraction_monster	= 0.4
+
+
 ;===========================================================================
 ; IMMUNITIES
 ;===========================================================================
@@ -516,6 +525,20 @@ Velocity_RunFwdDamaged	= 4.3,  	5.0,			5.0,		0.5,	1.0
 Velocity_WalkFwdNormal	= 5.0,		5.0,			5.0,		0.1,	1.0
 Velocity_WalkFwdDamaged	= 2.2,		6.0,			6.0,		0.1,	2.2
 
+;mlr
+[zat_b18_dog_little_m]:zat_b18_dog
+$spawn				= "monsters\psy_dog\zat_b18_dog_little"
+visual				= monsters\pseudodog\pseudodog_small
+corpse_visual		 = monsters\pseudodog\pseudodog_small_dead
+MaxHealthValue		     = 0.75			; range [0..200]
+
+[zat_b18_dog_little_two_m]:zat_b18_dog
+$spawn				= "monsters\psy_dog\zat_b18_dog_little_two"
+visual				= monsters\pseudodog\pseudodog_small
+corpse_visual		 = monsters\pseudodog\pseudodog_small_dead
+MaxHealthValue		     = 0.75			; range [0..200]
+
+;mlr
 
 ;*********************************************************************************
 ; FEARLESS PROFILES FOR GARBAGE

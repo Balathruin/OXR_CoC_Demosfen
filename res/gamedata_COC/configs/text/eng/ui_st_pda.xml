@@ -60,6 +60,9 @@
 	<string id="pda_btn_quests">
 		<text>Map</text>
 	</string>
+	<string id="pda_btn_chat">
+		<text>Chat</text>
+	</string>
 	<string id="pda_btn_quests_hint">
 		<text>Show the map and task list</text>
 	</string>

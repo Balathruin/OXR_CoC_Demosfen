@@ -74,26 +74,26 @@ cl_run_fwd_0				=	1,	  0.2,	    1,       0.4,     1
 
 
 [stalker_vision_free]
-min_view_distance   		= 0.1				; min range of cone based on eye_range
-max_view_distance	 		= 0.6				; max range of cone based on eye_range
-visibility_threshold	 	= 60				;Threshold in which object becomes visible based on factors
+min_view_distance   		= 0.4				; min range of cone based on eye_range
+max_view_distance	 		= 0.8				; max range of cone based on eye_range
+visibility_threshold	 	= 30				;Threshold in which object becomes visible based on factors
 always_visible_distance 	= 0					;Distance object is always considered visible (float)
 time_quant					= 0.005				;step increment to for sight calculations
 decrease_value				= 0.1 				;Decrease over time to overall threshold
-velocity_factor		     	= 1.1				;Higher value = greater bonus to detection speed when target is moving (depended on movement speed)
-luminocity_factor			= 0.75				;Low value = easier to see at night
+velocity_factor		     	= 0.4				;Higher value = greater bonus to detection speed when target is moving (depended on movement speed)
+luminocity_factor			= 0.70				;Low value = easier to see at night
 transparency_threshold	 	= 0.6 			    ;Low value = easier to see through objects
 still_visible_time          = 0 				;The time (milliseconds) that the object is still considered visible , even if it is not in the frustum (u32)
 
 [stalker_vision_danger]
 min_view_distance   		= 0.3				; min range of cone based on eye_range
 max_view_distance	 		= 1.0				; max range of cone based on eye_range
-visibility_threshold	 	= 60				;Threshold in which object becomes visible based on factors
+visibility_threshold	 	= 30				;Threshold in which object becomes visible based on factors
 always_visible_distance 	= 0					;Distance object is always considered visible (float)
 time_quant					= 0.0052			;step increment to for sight calculations
 decrease_value				= 0.1				;Decrease over time to overall threshold
-velocity_factor		     	= 1.2				;Higher value = greater bonus to detection speed when target is moving (depended on movement speed)
-luminocity_factor			= 0.75				;Low value = easier to see at night
+velocity_factor		     	= 0.5				;Higher value = greater bonus to detection speed when target is moving (depended on movement speed)
+luminocity_factor			= 0.70				;Low value = easier to see at night
 transparency_threshold	 	= 0.6				;Low value = easier to see through objects (if greater then 1 then enemies are blind)
 still_visible_time          = 0					;The time (milliseconds) that the object is still considered visible , even if it is not in the frustum (u32)
 
@@ -357,7 +357,8 @@ script_binding			= bind_stalker.init
 ;---GROUP SECTIONS----------------------------------------------------
 GroupControlSection		= spawn_group
 SpaceRestrictionSection	= space_restrictor,zone_mine_field
-attachable_items		= device_torch,attachable_item,hand_radio,hand_radio_r,bread,bread_old, vodka, energy_drink, kolbasa, guitar_a, guitar_a2, harmonica_a, detector_simple, pri_a15_wpn_svu, pri_a15_wpn_wincheaster1300, pri_a15_wpn_ak74u, pri_a15_wpn_ak74, pri_a15_documents, af_quest_b14_twisted, detector_advanced, detector_elite, device_pda, anomaly_scaner, medkit_script, anim_knife, anim_binoc, stick_bred,stick_kolbasa,stick_kolbasa_bred
+;mlr
+attachable_items		= dev_torch_light_better_1,dev_torch_light_better,device_torch_normal,device_torch_low,sigaret_for_nps,pda_for_nps,device_torch,attachable_item,hand_radio,hand_radio_r,bread,bread_old, vodka, energy_drink, kolbasa, guitar_a, guitar_a2, harmonica_a, detector_simple, pri_a15_wpn_svu, pri_a15_wpn_wincheaster1300, pri_a15_wpn_ak74u, pri_a15_wpn_ak74, pri_a15_documents, af_quest_b14_twisted, detector_advanced, detector_elite, device_pda, anomaly_scaner, medkit_script, anim_knife, anim_binoc, stick_bred,stick_kolbasa,stick_kolbasa_bred
 
 ;---SECTIONS----------------------------------------------------------
 damage				= stalker_damage
@@ -399,7 +400,7 @@ vision_free_section				= stalker_vision_free
 eye_fov							= 140
 eye_range						= 250
 far_plane_factor				= 1.0		; фактор дальности тумана
-fog_density_factor				= 0.05		; фактор плотности тумана
+fog_density_factor				= 1.5		; фактор плотности тумана
 
 
 ;---MEMORY------------------------------------------------------------
@@ -409,8 +410,8 @@ DynamicHitCount				= 32
 
 ;---ENEMY------------------------------------------------------------
 ignore_monster_threshold		= 0
-max_ignore_distance				= 90
-panic_threshold					= 0
+max_ignore_distance				= 50
+panic_threshold					= 0.2
 
 ;---SOUND PLAYER------------------------------------------------------
 sound_death				= fight\death\death_
@@ -421,8 +422,8 @@ sound_alarm				= fight\enemy\enemy_
 sound_backup				= fight\backup\backup_,fight\threat\threat_close_
 sound_detour				= fight\detour\detour_,fight\fire\fire_,fight\threat\threat_close_
 sound_friendly_fire			= fight\friendly_fire\friendly_fire_
-sound_panic_human			= ;states\panic_human\panic_human_
-sound_panic_monster			= ;states\panic_monster\panic_monster_
+sound_panic_human			= states\panic_human\panic_human_
+sound_panic_monster			= states\panic_monster\panic_monster_
 sound_tolls				= fight\tolls\tolls_
 sound_wounded				= fight\friend_hitted\hit_friend_
 sound_grenade_alarm			= fight\grenade\grenade_
@@ -531,24 +532,15 @@ ph_character_have_wounded_state = false; имеет ли персонаж состо€ние раненый
 ;front/back/left/right
 ;kill_enertion           = ragdoll_inertion_front_0/ragdoll_inertion_front_3/ragdoll_inertion_front_2/ragdoll_inertion_front_1
 
-
-
-
 ;kill_burst				= ragdoll_burst_front_0,ragdoll_burst_front_1/ragdoll_burst_back_0/ragdoll_burst_left_0/ragdoll_burst_right_0
-
-
 
 ;kill_shortgun	        = ragdoll_shortgun_front_0,ragdoll_shortgun_front_1,ragdoll_shortgun_front_2,ragdoll_shortgun_front_3,ragdoll_shortgun_front_4,ragdoll_shortgun_front_5,ragdoll_shortgun_front_6,ragdoll_shortgun_front_7,ragdoll_shortgun_front_8/ragdoll_shortgun_back_0,ragdoll_shortgun_back_1,ragdoll_shortgun_back_2,ragdoll_shortgun_back_3,ragdoll_shortgun_back_4,ragdoll_shortgun_back_5,ragdoll_shortgun_back_6/ragdoll_shortgun_left_0,ragdoll_shortgun_left_1,ragdoll_shortgun_left_2/ragdoll_shortgun_right_0,ragdoll_shortgun_right_1
 
-
-;kill_headshot		= ragdoll_headshot_front_0,ragdoll_headshot_front_1,ragdoll_headshot_front_2,ragdoll_headshot_front_3,ragdoll_headshot_front_4,ragdoll_headshot_front_5,ragdoll_headshot_front_6,ragdoll_headshot_front_7,ragdoll_headshot_front_8,ragdoll_headshot_front_9,ragdoll_headshot_front_10/ragdoll_headshot_back_0,ragdoll_headshot_back_1,ragdoll_headshot_back_2,ragdoll_headshot_back_3,ragdoll_headshot_back_4,ragdoll_headshot_back_5/ragdoll_headshot_left_0,ragdoll_headshot_left_1,ragdoll_headshot_left_2,ragdoll_headshot_left_3,ragdoll_headshot_left_4,ragdoll_headshot_left_5,ragdoll_headshot_left_6,ragdoll_headshot_left_7/ragdoll_headshot_right_0,ragdoll_headshot_right_1,ragdoll_headshot_right_2,ragdoll_headshot_right_3,ragdoll_headshot_right_4,ragdoll_headshot_right_5,ragdoll_headshot_right_6
-
+;kill_headshot	    	= ragdoll_headshot_front_0,ragdoll_headshot_front_1,ragdoll_headshot_front_2,ragdoll_headshot_front_3,ragdoll_headshot_front_4,ragdoll_headshot_front_5,ragdoll_headshot_front_6,ragdoll_headshot_front_7,ragdoll_headshot_front_8,ragdoll_headshot_front_9,ragdoll_headshot_front_10/ragdoll_headshot_back_0,ragdoll_headshot_back_1,ragdoll_headshot_back_2,ragdoll_headshot_back_3,ragdoll_headshot_back_4,ragdoll_headshot_back_5/ragdoll_headshot_left_0,ragdoll_headshot_left_1,ragdoll_headshot_left_2,ragdoll_headshot_left_3,ragdoll_headshot_left_4,ragdoll_headshot_left_5,ragdoll_headshot_left_6,ragdoll_headshot_left_7/ragdoll_headshot_right_0,ragdoll_headshot_right_1,ragdoll_headshot_right_2,ragdoll_headshot_right_3,ragdoll_headshot_right_4,ragdoll_headshot_right_5,ragdoll_headshot_right_6
 
 ;kill_sniper_headshot	= ragdoll_sniper_headshot_front_0,ragdoll_sniper_headshot_front_1,ragdoll_sniper_headshot_front_2/ragdoll_sniper_headshot_back_0/ragdoll_sniper_headshot_left_0/ragdoll_sniper_headshot_right_0
 
-
-;kill_sniper_body	= ragdoll_sniper_body_front_0,ragdoll_sniper_body_front_1,ragdoll_sniper_body_front_2/ragdoll_sniper_body_back_0,ragdoll_sniper_body_back_1,ragdoll_sniper_body_back_2,ragdoll_sniper_body_back_3/ragdoll_sniper_body_left_0/ragdoll_sniper_body_right_0
-
+;kill_sniper_body    	= ragdoll_sniper_body_front_0,ragdoll_sniper_body_front_1,ragdoll_sniper_body_front_2/ragdoll_sniper_body_back_0,ragdoll_sniper_body_back_1,ragdoll_sniper_body_back_2,ragdoll_sniper_body_back_3/ragdoll_sniper_body_left_0/ragdoll_sniper_body_right_0
 
 ;kill_grenade            = ragdoll_grenade_front_0/ragdoll_grenade_back_0/ragdoll_grenade_left_0/ragdoll_grenade_right_0
 
@@ -628,6 +620,49 @@ $spawn					= "stalkers\stalker_die_hard"
 immunities_sect				= stalker_immunities_die_hard
 
 [stalker_immunities_die_hard]
+burn_immunity 				= 0.0
+strike_immunity 			= 0.0
+shock_immunity 				= 0.0
+wound_immunity				= 0.0
+radiation_immunity 			= 0.0
+telepatic_immunity 			= 0.0
+chemical_burn_immunity 			= 0.0
+explosion_immunity 			= 0.0
+fire_wound_immunity  			= 0.0
+wound_2_immunity  			= 0.0
+
+[stalker_devushka]:stalker
+$spawn					= "stalkers\stalker_devushka"
+immunities_sect				= stalker_immunities_devushka
+condition_sect = my_stalker_condition
+
+health = 1
+power = 1
+radiation = -1
+bleeding = 1
+
+sleep_health = 1.0
+sleep_power = 1.0
+sleep_satiety = 1.0
+sleep_radiation = 1.0
+sleep_psy_health = 1.0
+
+[my_stalker_condition]
+satiety_v = 0.0 ;скорость уменьшения сытости со временем
+radiation_v = 1.0 ;скорость уменьшения радиации
+satiety_power_v = 1.0 ;увеличение силы при уменьшении сытости
+satiety_health_v = 1.0 ;увеличение здоровья при уменьшении сытости
+satiety_critical = 0.0 ;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+radiation_health_v = 0.0 ;уменьшение здоровья при воздействии радиации
+morale_v = 0.0 ;скорость восстановления морали
+health_hit_part = 0.003 ;процент хита, уходящий на отнимание здоровья
+power_hit_part = 0.1 ;процент хита, уходящий на отнимание силы
+psy_health_v = 0.1 ;скорость восстановления psy-здоровья
+bleeding_v = 0.4
+wound_incarnation_v = 0.3
+min_wound_size = 0.1
+
+[stalker_immunities_devushka]
 burn_immunity 				= 0.0
 strike_immunity 			= 0.0
 shock_immunity 				= 0.0
@@ -827,3 +862,21 @@ mchg_min_queue_interval_close	= 120
 mchg_max_queue_interval_close	= 200
 
 ;-------------------------------
+;mlr
+[stalker_arena_mlr]:stalker
+$spawn						= "stalkers\stalker_arena_mlr"
+immunities_sect				= stalker_immunities_arena_mlr
+eye_fov							= 120
+eye_range						= 180
+
+[stalker_immunities_arena_mlr]
+burn_immunity 				= 0.55
+strike_immunity 			= 0.55
+shock_immunity 				= 0.55
+wound_immunity				= 0.80
+radiation_immunity 			= 0.25
+telepatic_immunity 			= 0.55
+chemical_burn_immunity 		= 0.25
+explosion_immunity 			= 0.55
+fire_wound_immunity  		= 0.8
+wound_2_immunity  			= 0.8

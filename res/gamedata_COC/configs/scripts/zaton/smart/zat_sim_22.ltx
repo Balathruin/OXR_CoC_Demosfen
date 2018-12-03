@@ -1,12 +1,17 @@
 [smart_terrain];zat_sim_22
 squad_id = 13
-max_population = 1
+max_population = 2
 respawn_params = respawn@zat_sim_22   
-respawn_idle = 86400
+respawn_idle = 55000
 
 
 [respawn@zat_sim_22]
+spawn_medwed
 spawn_mix_dogs
+
+[spawn_medwed]
+spawn_squads = simulation_medwed
+spawn_num = 1
 
 [spawn_mix_dogs]
 spawn_squads = simulation_dog, simulation_dog, simulation_cat, simulation_tushkano

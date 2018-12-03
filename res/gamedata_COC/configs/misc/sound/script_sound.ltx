@@ -13,6 +13,7 @@
 #include "script_sound_x16.ltx"
 #include "script_sound_x18.ltx"
 #include "script_sound_warlab.ltx"
+#include "script_sound_mlr.ltx"
 
 ; A new feature has been added to help alleviate an issue with all sounds being loaded, even unused ones. Restricting sounds by level and story id is this solution.
 ; 'levels' is a new optional field. It's what levels to load the sound on, otherwise sound is not loaded. The absense of a levels field means the sound is loaded on all levels.
@@ -248,8 +249,8 @@ type = npc|actor|3d
 actor_stereo = true|false
 npc_prefix = true|false
 path = states\idle\idle_
-shuffle = rnd
-idle = 3,5,100
+shuffle = rnd|seq|loop
+idle = 3,5,100 ;min,max,rnd
 
 ;************************************************************
 ;Универсальная озвучка встречи
@@ -340,6 +341,27 @@ idle = 1,1,100
 
 ;***************************************************************
 ; Звуки дверей
+;***************************************************************
+
+[col_door_open_start]
+type = 3d
+path = device\airtight_gates_start
+shuffle = rnd
+idle = 1,1,100
+
+[col_door_close_start]
+type = 3d
+path = device\airtight_gates_start
+shuffle = rnd
+idle = 1,1,100
+
+[col_door_close_stop]
+type = 3d
+path = device\airtight_gates_stop
+shuffle = rnd
+idle = 1,1,100
+
+
 ;***************************************************************
 [trader_door_open_start]
 type = 3d
@@ -644,4 +666,11 @@ path = anomaly\steam_blowout
 shuffle = rnd
 idle = 0,0,100
 
+
+[inv_matches]
+type = actor
+npc_prefix = false
+path = interface\inv_matches
+shuffle = rnd
+idle = 1,1,100
 

@@ -19,7 +19,7 @@
 		<text>4x optical scope</text>
 	</string>
 	<string id="st_prop_silencer">
-		<text>Suppressor</text>
+		<text>Silencer</text>
 	</string>
 	<string id="st_prop_underbarrel_slot">
 		<text>under-barrel mount</text>
@@ -28,7 +28,7 @@
 		<text>Weight</text>
 	</string>
 	<string id="st_up_add_a1_descr">
-		<text>External threading allows a suppressor to be installed.</text>
+		<text>External threading allows a silencer to be installed.</text>
 	</string>
 	<string id="st_up_add_a1_name">
 		<text>External threading of the barrel</text>
@@ -1432,10 +1432,10 @@
 		<text>Longitudinal fullers of the barrel section </text>
 	</string>
 	<string id="st_up_stvs_c1_descr">
-		<text>Integrated suppressor and flash suppressor, essential for stealth fire.</text>
+		<text>Integrated silencer and flash suppressor, essential for stealth fire.</text>
 	</string>
 	<string id="st_up_stvs_c1_name">
-		<text>Installation of an integrated suppressor</text>
+		<text>Installation of an integrated silencer</text>
 	</string>
 	<string id="st_up_stvs_c2_descr">
 		<text>Sinusoidal rifling of the barrel chamber is usually performed on assault weapons to increase their rate of fire.</text>
@@ -1957,7 +1957,7 @@
 		<text>Optical scope mount</text>
 	</string>
 	<string id="st_int_silencer">
-		<text>Integrated suppressor</text>
+		<text>Integrated silencer</text>
 	</string>
 	<string id="st_prop_grenade_launcher">
 		<text>Under-barrel grenade launcher</text>
@@ -2035,6 +2035,33 @@
 		<text>Extra carbon fibre coating</text>
 	</string>
 	<string id="st_up_kom_a5_name">
-		<text>Rubberised cloth under-layer</text>
+		<text>Подстёжка из прорезиненной ткани</text>
+	</string>
+	<string id="st_prop_binoc_zoom">
+		<text>Увеличенная кратность</text>
+	</string>
+	<string id="st_prop_binoc_nightvision">
+		<text>Высокая контрастность</text>
+	</string>
+	<string id="st_prop_binoc_weight">
+		<text>Масса бинокля</text>
+	</string>
+	<string id="st_up_binoc_1_name">
+		<text>Углепластиковые компоненты</text>
+	</string>
+	<string id="st_up_binoc_1_descr">
+		<text>Замена металла углепластиками позволяет снизить массу бинокля без утраты функционала.</text>
+	</string>
+	<string id="st_up_binoc_2_name">
+		<text>Высококонтрастная оптика</text>
+	</string>
+	<string id="st_up_binoc_2_descr">
+		<text>Модификация отптики, которая заключается в повышении контрастности. Помогает вести наблюдение при недостаточном освещёни.</text>
+	</string>
+	<string id="st_up_binoc_3_name">
+		<text>Увеличение кратности</text>
+	</string>
+	<string id="st_up_binoc_3_descr">
+		<text>Установка более сильных линз позволяет вести наблюдение на несколько больших дистанциях.</text>
 	</string>
 </string_table>

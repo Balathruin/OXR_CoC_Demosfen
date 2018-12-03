@@ -1,0 +1,203 @@
+; 7,62-мм самозарядный карабин Симонова
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 				7.62x54 мм
+; длина ствола 				520
+; магазин				10
+; вес с пустым магазином		3.75 кг
+; максимальная дальность стрельбы	3600 м
+; эффективная дальность стрельбы	400 м
+; прицельная дальность			1000 м
+; дульная скорость пули			735 м/с
+; темп стрельбы				-- в/м
+;---------------------------------------------------
+[wpn_sks]:identity_immunities,weapon_probability,default_weapon_params
+$npc                                     = on
+$prefetch                                = 8
+$spawn                                   = "weapons\svd"
+ammo_class                               = ammo_7.62x39_fmj, ammo_7.62x39_ap
+ammo_elapsed                             = 10
+ammo_mag_size                            = 10
+animation_slot                           = 8
+bullet_speed                             = 735
+cam_return                               = 1
+cam_relax_speed                          = 4.5
+cam_relax_speed_ai                       = 360
+cam_dispersion                           = 2.5
+cam_dispersion_inc                       = 2.5
+cam_dispersion_frac                      = 1.0
+cam_max_angle                            = 15.0
+cam_max_angle_horz                       = 3.0
+cam_step_angle_horz                      = 0.25
+cform                                    = skeleton
+class                                    = WP_ASHTG
+condition_queue_shot_dec	= 0.002
+condition_shot_dec      	= 0.002
+control_inertion_factor                  = 2.05f
+cost                                     = 20000
+crosshair_inertion                       = 9
+default_to_ruck                          = false
+description                              = st_wpn_sks_descr
+ef_main_weapon_type                      = 2
+ef_weapon_type                           = 6
+fire_dispersion_base                     = 0.2
+fire_dispersion_condition_factor         = 1
+fire_distance = 1000;                            = 400
+fire_modes                               = 1
+fire_point                               = 0, 0.168, 0.755
+fire_point2                              = 0, 0.168, 0.755
+flame_particles                          = weapons\generic_weapon06
+grenade_class                            = ammo_vog-25
+grenade_flame_particles                  = weapons\generic_weapon01
+grenade_launcher_status                  = 0
+GroupControlSection                      = spawn_group
+hand_dependence                          = 1
+hit_impulse                              = 100
+hit_power                                = 0.63
+hit_probability_gd_novice                = 0.55
+hit_probability_gd_stalker               = 0.65
+hit_probability_gd_veteran               = 0.75
+hit_probability_gd_master                = 0.85
+hit_type                                 = fire_wound
+holder_fov_modifier                      = 0.75
+holder_range_modifier                    = 1.0
+hud                                      = wpn_sks_hud
+installed_upgrades                       =
+inv_grid_height                          = 2
+inv_grid_width                           = 5
+inv_grid_x                               = 43
+inv_grid_y                               = 63
+inv_name                                 = st_wpn_sks
+inv_name_short                           = st_wpn_sks
+inv_weight                               = 3.85
+kill_msg_height                          = 30
+kill_msg_width                           = 69
+kill_msg_x                               = 0
+kill_msg_y                               = 123
+launch_speed                             = 0
+light_disabled                           = false
+light_color                              = 0.6, 0.5, 0.3
+light_range                              = 4.0
+light_var_color                          = 0.05
+light_var_range                          = 0.5
+light_time                               = 0.2
+min_radius                               = 50
+max_radius                               = 90
+misfire_probability                      = 0.005
+misfire_start_condition                  = 0.6
+misfire_end_condition                    = 0.1
+misfire_start_prob                       = 0.0055
+misfire_end_prob                         = 0.055
+orientation                              = 0, 30, 0
+parent_section                           = wpn_sks
+PDM_disp_base                            = 1.3
+PDM_disp_vel_factor                      = 1.5
+PDM_disp_accel_factor                    = 1.5
+PDM_disp_crouch                          = 1.0
+PDM_disp_crouch_no_acc                   = 1.0
+ph_mass                                  = 5
+position                                 = -0.023, -0.14, 0
+reload_dof                               = 0.0, 0.5, 5, 2
+rpm                                      = 80
+rpm_empty_click                          = 200
+scheduled                                = off
+scope_status                             = 0
+scope_zoom_factor                        = 1.2
+scopes                                   = pu
+shell_particles                          = weapons\762x39
+shell_point                              = 0.00, 0.262, 0.189
+silencer_light_color                     = 0.6,0.5,0.3
+silencer_light_range                     = 0.01
+silencer_light_time                      = 0.2
+silencer_light_var_color                 = 0.05
+silencer_light_var_range                 = 0.5
+silencer_name                            = wpn_addon_silencer762
+silencer_smoke_particles                 = weapons\generic_shoot_00
+silencer_status                          = 0
+silencer_x                               = -40
+silencer_y                               = 3
+single_handed                            = 0
+slot                                     = 2
+smoke_particles                          = weapons\generic_shoot_00
+snd_bore                                 = weapons\no_sound
+snd_draw                                 = weapons\sks\sks_draw
+snd_empty                                = weapons\gen_empty, 0.5
+snd_holster                              = weapons\generic_holster
+snd_reload                               = weapons\sks\sks_reload
+snd_shoot                                = wpn_sks_snd_shoot
+snd_silncer_shot                         = wpn_sks_snd_silncer_shot
+sprint_allowed                           = true
+startup_ammo                             = 90
+strap_position                           = -0.15, -0.15, 0.45
+strap_orientation                        = -25, -189, 65
+strap_bone0                              = bip01_spine2
+strap_bone1                              = bip01_spine1
+time_to_aim                              = 1.0
+upgr_icon_height = 200;                         = 100
+upgr_icon_width = 300;                          = 300
+upgr_icon_x = 0;                              = 0
+upgr_icon_y = 0;                              = 1300
+upgrade_scheme                           = upgrade_scheme_svd
+upgrades				= up_gr_firstab_svd, up_gr_seconab_svd, up_gr_thirdab_svd, up_gr_fourtab_svd, up_gr_fourtcd_svd, up_gr_fourtef_svd
+use_aim_bullet                           = true
+visual                                   = dynamics\weapons\wpn_sks\wpn_sks.ogf
+weapon_class                             = sniper_rifle
+zoom_cam_relax_speed                     = 0.75
+zoom_cam_relax_speed_ai                  = 120.75
+zoom_cam_dispersion                      = 0.8
+zoom_cam_dispersion_inc                  = 0.8
+zoom_cam_dispersion_frac                 = 1.0
+zoom_cam_max_angle                       = 10.0
+zoom_cam_max_angle_horz                  = 5.0
+zoom_cam_step_angle_horz                 = 0.25
+zoom_enabled                             = true
+zoom_rotate_time                         = 0.25
+zoom_dof                                 = 0.5, 1.0, 350
+
+[wpn_sks_hud]:hud_base
+aim_hud_offset_pos                       = -0.13225,0.0845,-0.1
+aim_hud_offset_rot                       = 0.0375,0.036,0
+
+aim_hud_offset_pos_16x9                  = -0.13225,0.0845,-0.1
+aim_hud_offset_rot_16x9                  = 0.0375,0.036,0
+anm_show				= sks_draw
+anm_hide                		= sks_holster
+anm_idle               		 	= sks_idle
+anm_idle_sprint         		= sks_sprint
+anm_idle_moving         		= sks_move
+anm_shots               		= sks_shoot, shoot
+anm_reload             		 	= sks_reload, reload
+anm_idle_aim            		= sks_aim
+anm_bore                		= sks_bore
+attach_place_idx                         = 0
+fire_bone                                = muzzle
+fire_bone2                               = wpn_body
+fire_point                               = 0,0,0
+fire_point2                              = 0,0,0
+gl_hud_offset_pos                        = 0,0,0
+gl_hud_offset_pos_16x9                   = 0,0,0
+gl_hud_offset_rot                        = 0,0,0
+gl_hud_offset_rot_16x9                   = 0,0,0
+hands_position                           = 0.05,-0.14,0.1
+hands_orientation                        = 2,2,0
+
+hands_position_16x9                      = 0.05,-0.14,0.1
+hands_orientation_16x9                   = 2,2,0
+item_orientation                         = 0,0,0
+item_position                            = 0,0,0
+item_visual                              = dynamics\weapons\wpn_sks\wpn_sks_hud.ogf
+lean_hud_offset_pos                      = 0,0,0
+lean_hud_offset_rot                      = 0,0,0
+shell_bone                               = gilza
+shell_dir                                = 0,0,0
+shell_point                              = 0,0,0
+zoom_hide_crosshair                      = true
+
+[wpn_sks_pu]:wpn_sks
+1icon_layer                              = pu
+1icon_layer_x                            = 76
+1icon_layer_y                            = -2
+inv_weight                               = 3.93
+scope_status                             = 1
+scope_texture                            = wpn_crosshair_4x34
+scope_zoom_factor                        = 25
+cost = 50000

@@ -1,3 +1,20 @@
+[jup_a6_stalker_ashot_greeting]
+type                                     = npc
+;npc_prefix = false
+path                                     = scenario\jupiter\jup_ashot_trader_meet_
+shuffle                                  = rnd
+idle                                     = 0,0,100
+story_ids = jup_a6_freedom_trader_ashot
+
+[jup_a6_stalker_ashot_farewell]
+type                                     = npc
+;npc_prefix = false
+path                                     = scenario\jupiter\jup_ashot_trader_meet_bye_
+shuffle                                  = rnd
+idle                                     = 1,1,100
+story_ids = jup_a6_freedom_trader_ashot
+
+
 [jup_a6_stalker_medik_greeting]
 type                                     = npc
 ;npc_prefix = false
@@ -48,10 +65,19 @@ idle									= 0,0,100
 play_always								= true
 avail_communities						= ecolog
 
+[jup_b6_stalker_1_first_measurement_done]
+type                                     = actor
+npc_prefix                               = false
+path                                     = characters_voice\scenario\jupiter\jup_b6_stalker_1_first_measurement_done
+shuffle                                  = rnd
+idle                                     = 0,0,100
+play_always                              = true
+avail_communities						 = ecolog 
+
 [jup_b217_stalker_tech_greeting]
 type                                     = npc
 ;npc_prefix = false
-path                                     = scenario\jupiter\jup_b217_stalker_tech_greeting_
+path                                     = scenario\jupiter\jup_tech_meet_greet_ ;
 shuffle                                  = rnd
 idle                                     = 0,0,100
 story_ids = jup_b217_stalker_tech
@@ -59,7 +85,7 @@ story_ids = jup_b217_stalker_tech
 [jup_b217_stalker_tech_farewell]
 type                                     = npc
 ;npc_prefix = false
-path                                     = scenario\jupiter\jup_b217_stalker_tech_farewell_
+path                                     = scenario\jupiter\jup_tech_meet_bye_ ;
 shuffle                                  = rnd
 idle                                     = 1,1,100
 story_ids = jup_b217_stalker_tech

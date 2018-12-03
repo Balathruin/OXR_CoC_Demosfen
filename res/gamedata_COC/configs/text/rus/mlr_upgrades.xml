@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="st_upgr_enough_materials">
+		<text>недостаточно материалов</text>
+	</string>
+	<string id="st_upgr_required_materials">
+		<text>Необходимые материалы</text>
+	</string>	
+
+	<!-- RPM темп огня -->
+	<string id="st_up_assault_rifle_mlr_RPM_name">
+		<text>Увеличение темпа стрельбы</text>
+	</string>	
+	
+	<string id="st_up_assault_rifle_mlr_RPM_descr">
+		<text>Сталкеры научились впаивать элементы артефакта "Ночная звезда" в затворный механизм, что позволяет увеличить темп огня оружия.</text>
+	</string>
+	
+	<string id="st_up_assault_rifle_mlr_RPM_2_descr">
+		<text>Данный сплав артефактов "Медуза" и "Слизняк" был выбран не случайно. Следовало повысить темп огня, используя возможности гравитационных артефактов и при этом не перестараться с излучаемым ими полем. Путём проб и ошибок сталкерами был выведен данный рецепт влияния на механизм, который лишь незначительно увеличивает его износ.</text>
+	</string>	
+
+	<string id="st_up_assault_rifle_mlr_RPM_3_descr">
+		<text>Элементы артефакта "Медуза" позволят незначительно увеличить скорость работы подвижного механизма, а "Огненный шар", точнее его кусочек - уменьшить связанный с этим перегрев.</text>
+	</string>	
+
+	<string id="st_up_assault_rifle_mlr_RPM_4_descr">
+		<text>Элементы артефакта "Ночная звезда" позволят незначительно увеличить скорость работы подвижного механизма, а "Пламя", точнее его кусочек - уменьшить связанный с этим перегрев.</text>
+	</string>		
+	
+	<!-- RECOIL отдача -->
+	<string id="st_up_assault_rifle_mlr_RECOIL_name">
+		<text>Уменьшение отдачи</text>
+	</string>	
+	
+	<string id="st_up_assault_rifle_mlr_RECOIL_descr">
+		<text>"Выверт" как и "Медуза" излучает слабое гравитационное поле, которое позволяет при правильном применении стабилизировать отдачу оружия.</text>
+	</string>
+	
+	<string id="st_up_assault_rifle_mlr_RECOIL_2_descr">
+		<text>За счёт своей гравитационной природы и свойств, артефакт "Медуза" используется для стабилизации оружия и уменьшения его отдачи.</text>
+	</string>
+	
+	<string id="st_up_assault_rifle_mlr_RECOIL_3_descr">
+		<text>Сложно стабилизировать оружие и уменьшить отдачу дробовика, поэтому местные умельцы придумали использовать небольшие кусочки артефакта "Ночная звезда" для решения данной проблемы.</text>
+	</string>	
+
+	<string id="st_up_assault_rifle_mlr_RECOIL_4_descr">
+		<text>Для стабилизации пулемётов сталкеры обычно используют свойства артефактов "Ночная звезда" и "Грави".</text>
+	</string>		
+	
+	<!-- BULLET_SPEED настильность -->
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_name">
+		<text>Увеличени скорости полёта пули</text>
+	</string>		
+	
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_descr">
+		<text>Артефакт "Ночная звезда" имеет гравитационное поле, отталкивающее от себя различные предметы. Если натереть им основание ствола, то его частицы незначительно ускорят скорость полёта пути.</text>
+	</string>
+	
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_2_descr">
+		<text>Сталкеры научились припаивать данный сплав к движущемуся механизму. "Грави" облегчает массу пули во время старта, а "Ночная звезда" ускоряет её, в итоге скорость пули значительно возрастает.</text>
+	</string>
+	
+	<string id="st_up_assault_rifle_mlr_BULLET_SPEED_3_descr">
+		<text>К подвижному механизму припаиваются элементы артефакта "Ночная звезда", что позволяет повысить начальную скорость полёта пули.</text>
+	</string>	
+	
+	<!-- RELIABILITY прочность -->
+	<string id="st_up_assault_rifle_mlr_RELIABILITY_name">
+		<text>Увеличение долговечности</text>
+	</string>		
+	
+	<string id="st_up_assault_rifle_mlr_RELIABILITY_descr">
+		<text>Как оказалось выделяемое артефактом газообразное вещество позитивно влияет на характеристики металла, повышая его прочность.</text>
+	</string>	
+	
+	<!-- DISPERSION точность -->
+	<string id="st_up_assault_rifle_mlr_DISPERSION_name">
+		<text>Увеличение точности</text>
+	</string>		
+	
+	<string id="st_up_assault_rifle_mlr_DISPERSION_descr">
+		<text>Устанавливается в прикладе, гравитационное поле "Звезды" очень мощное, а при сплаве со "Вспышкой" имеет отрицательный эффект и создаёт значительный противовес, снижающий отдачу.</text>
+	</string>		
+
+	<string id="st_up_assault_rifle_mlr_DISPERSION_2_descr">
+		<text>Можно добиться более высокой точности пистолета, если использовать силу гравитационных артефактов.</text>
+	</string>	
+	
+	<string id="st_up_assault_rifle_mlr_DISPERSION_3_descr">
+		<text>Уплотнение ствола спаянными частицами артефактов "Медуза" позволяет в некоторой степени повысить точность полёта пули.</text>
+	</string>	
+	
+	<!-- INERTION удобность -->
+	<string id="st_up_assault_rifle_mlr_INERTION_name">
+		<text>Увеличение удобности</text>
+	</string>		
+	
+	<string id="st_up_assault_rifle_mlr_INERTION_descr">
+		<text>Артефакты подобраны не случайно, они балансируют характеристики друг друга и устанавливаются в оружии для ещё более лучшей стабилизации оружия.</text>
+	</string>	
+
+	<string id="st_up_assault_rifle_mlr_INERTION_2_descr">
+		<text>Сплав артефактов "Медуза" и "Выверт" благодаря своим свойствам поможет стабилизировать оружие.</text>
+	</string>	
+	
+	<!-- WEIGHT вес -->
+	<string id="st_up_assault_rifle_mlr_WEIGHT_name">
+		<text>Уменьшение веса</text>
+	</string>		
+	
+	<string id="st_up_assault_rifle_mlr_WEIGHT_descr">
+		<text>Артефакт благодаря своим свойствам облегчает массу самого оружия.</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a2_descr">
+		<text>Мало кто знает, но суховатая выделяемая артефактом масса, которая поглощает временные химические воздействия имеет свойство разъедать любую грязь, так или иначе оказавшуюся в ствольной коробке, что избавляет владельца от изнурительных процедур по чистке оружия, нужно лишь иногда её вытряхивать.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a2_name">
+		<text>Установка частицы артефакта "Кровь камня"</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a5_descr">
+		<text>Измельчённые частицы артефакта "Пружина" позволяют синхронизировать траекторию полёта пули с линией прицеливания.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a5_name">
+		<text>Напыление возвратного механизма</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a6_descr">
+		<text>Сталкеры поняли, что при соприкосновении артефактов "Медуза" и "Батарейка" последний меняет свойства гравитационного поля первого. Таким образом установка частиц данных артефактов, вплотную друг к другу позволяет стабилизировать стрельбу из оружия.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a6_name">
+		<text>Сплав артефактов "Медуза" и "Батарейка"</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a7_descr">
+		<text>Как и в случае с "Батарейкой", сталкерами замечено влияние артефакта "Вспышка" на "Ночную звезду", путём "подстёгивания" его свойств небольшими разрядами. Правильное размещение подобной спайки позволяет значительно стабилизировать оружие, сделав его более удобным в эксплуатации.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a7_name">
+		<text>Симбиоз артефактов "Ночная звезда" и "Вспышка"</text>
+	</string>
+
+	<string id="st_up_assault_rifle_mlr_a10_descr">
+		<text>Напыление газовой камеры оружия частицами артефакта "Ночная звезда" заметно увеличивает начальную скорость пули.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a10_name">
+		<text>Напыление газовой камеры</text>
+	</string>	
+
+	<string id="st_up_assault_rifle_mlr_a11_descr">
+		<text>Небольшие частицы артефакта "Пузырь" путём выделения газа создаёт противомассу затворному механизму и тем самым компенсирует импульс движения последнего - это положительно сказывается на точности боя оружия.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a11_name">
+		<text>Усиление газового поршня</text>
+	</string>	
+	
+	<string id="st_up_assault_rifle_mlr_a13_descr">
+		<text>Артефакт благодаря своим свойствам облегчает массу самого оружия.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a13_name">
+		<text>Установка частицы артефакта "Грави"</text>
+	</string>	
+
+	<string id="st_up_assault_rifle_mlr_a14_descr">
+		<text>"Кристалл" весьма неожиданно влияет на артефакт "Душа", поглощая у него некоторую часть энергии и видоизменяя её, что позволяет в значительной степени стабилизировать оружие.</text>
+	</string>
+	<string id="st_up_assault_rifle_mlr_a14_name">
+		<text>Сплав артефактов "Душа" и "Кристалл"</text>
+	</string>	
+	
+</string_table>

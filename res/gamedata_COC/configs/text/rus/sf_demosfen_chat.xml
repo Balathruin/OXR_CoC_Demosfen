@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_blackswan_connectionToServer">
+		<text>Соединение с сервером</text>
+	</string>
+
+	<string id="st_blackswan_exit">
+		<text>Выйти</text>
+	</string>
+	
+	<string id="st_blackswan_login">
+		<text>Войти</text>
+	</string>
+	
+	
+	<string id="st_blackswan_send">
+		<text>Отправить</text>
+	</string>
+	
+	
+	<string id="st_demosfen_errLogin">
+		<text>Невалидный ник. Либо он занят, либо он содержит недопустимые символы.</text>
+	</string>
+	
+	<string id="st_blackswan_title">
+		<text>Черный Лебедь</text>
+	</string>
+	
+	<string id="st_blackswan_notificationsCheckBox">
+		<text>Уведомления</text>
+	</string>
+	
+	<string id="st_blackswan_soundCheckBox">
+		<text>Звук</text>
+	</string>
+	
+	<string id="st_blackswan_newMember">
+		<text>присоединился к «Черному Лебедю»</text>
+	</string>
+	
+	<string id="st_blackswan_newMember_inGame">
+		<text>Новый участник:</text>
+	</string>
+	
+	<string id="st_blackswan_disconnectMember">
+		<text>отключился от «Черного Лебедя»</text>
+	</string>
+	
+	<string id="st_blackswan_disconnectMember_inGame">
+		<text>Участник отключился:</text>
+	</string>
+	
+	<string id="st_blackswan_blackswan">
+		<text>«Черный Лебедь»</text>
+	</string>
+	
+	<string id="st_blackswan_disconnected">
+		<text>Соединение с сервером было разорвано</text>
+	</string>
+	
+	<string id="st_blackswan_connected">
+		<text>Соединение с сервером установлено</text>
+	</string>
+</string_table>

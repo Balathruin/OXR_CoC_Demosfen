@@ -60,6 +60,9 @@
 	<string id="pda_btn_quests">
 		<text>Карта</text>
 	</string>
+	<string id="pda_btn_chat">
+		<text>Чат</text>
+	</string>
 	<string id="pda_btn_quests_hint">
 		<text>Показать карту Зоны и список заданий</text>
 	</string>
@@ -241,7 +244,7 @@
 		<text>Личный ящик</text>
 	</string>
 	<string id="filter_primary_objects_text">
-		<text>Аномальные зоны</text>
+		<text>Аномальные Зоны</text>
 	</string>
 	<string id="filter_quest_npcs_text">
 		<text>Важные объекты</text>
@@ -402,16 +405,16 @@
 		<text>Агрессивный режим</text>
 	</string>
 	<string id="st_pda_action_1__2_4_2_on">
-		<text>Собирательство откл</text>
+		<text>Не подбирать предметы</text>
 	</string>
 	<string id="st_pda_action_1__2_4_2_off">
-		<text>Собирательство вкл</text>
+		<text>Подбирать предметы</text>
 	</string>
 	<string id="st_pda_action_1__2_4_3_on">
-		<text>Откл. обыск тел</text>
+		<text>Не обыскивать тела</text>
 	</string>
 	<string id="st_pda_action_1__2_4_3_off">
-		<text>Вкл. обыск тел</text>
+		<text>Обыскивать тела</text>
 	</string>
 	<string id="pda_btn_contacts">
 		<text>Контакты</text>
@@ -485,6 +488,6 @@
 		<text>Удалить</text>
 	</string>
 	<string id="st_distance_to">
-		<text>Расстояние</text>
+		<text>Дистанция</text>
 	</string>
 </string_table>

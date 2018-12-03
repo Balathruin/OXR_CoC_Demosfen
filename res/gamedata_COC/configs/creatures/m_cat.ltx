@@ -15,10 +15,12 @@ visual				= monsters\cat\cat
 corpse_visual		= monsters\cat\cat
 icon = ui_npc_monster_cat	
 
+
 Friend_Community_Overrides	= actor_zombied
 
-hit_fraction_monster = 0.5
-skin_armor = 0.1
+
+hit_fraction_monster = 0.4
+skin_armor = 0.15
 
 cform                = skeleton					; collision class
 class                = SM_CAT_S					; AI class
@@ -26,7 +28,7 @@ class                = SM_CAT_S					; AI class
 ef_creature_type	 = 2				; option for evaluation functions
 ef_weapon_type		 = 2
 ef_detector_type			 = 1
-panic_threshold			= 0
+panic_threshold			= 0.2
 rank				= 6
 
 bone_torso			 = bip01_spine1 			; bone name
@@ -135,7 +137,7 @@ immunities_sect					= cat_immunities
 
 
 ;открытые раны
-bleeding_v						= 0.04						;потеря крови при номинальной ране в секунду
+bleeding_v						= 0.05						;потеря крови при номинальной ране в секунду
 wound_incarnation_v				= 0.05				;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
 min_wound_size					= 0.01
 
@@ -196,9 +198,21 @@ sound_distant_idle			= monsters\cat\c_idle_
 distant_idle_sound_delay	= 80000
 distant_idle_sound_range	= 100.0	
 
-DamagedThreshold		= 0.2
+DamagedThreshold		= 0.4
 
 material				= creatures\medium
+
+min_view_distance   		= 0.8				; коэффициент, который множится на eye_range, в зависимости от угла
+max_view_distance	 		= 1.0				; коэффициент, который множится на eye_range, в зависимости от угла
+visibility_threshold	 	= 100.0				; значение, при достижении суммой которого объект считается видимым
+always_visible_distance 	= 0.3
+time_quant					= 0.001
+decrease_value				= 0.01				; значение, на которое уменьшается вес, если объект попал в фрустум, но отсёкся по каким-то причинам
+velocity_factor		     	= 0.5
+luminocity_factor			= 1.5 				; фактор освещения (только для Актёра)
+transparency_threshold		= 0.25
+
+
 DynamicObjectsCount		= 32
 
 squad_attack_algorithm	= 1
@@ -229,8 +243,8 @@ terrain = cat_terrain
 
 
 [cat_vision_free]
-min_view_distance   		= 0.1				; min range of cone based on eye_range
-max_view_distance	 		= 0.5				; max range of cone based on eye_range
+min_view_distance   		= 0.3				; min range of cone based on eye_range
+max_view_distance	 		= 0.8				; max range of cone based on eye_range
 visibility_threshold	 	= 30				;Threshold in which object becomes visible based on factors
 always_visible_distance 	= 0					;Distance object is always considered visible (float)
 time_quant					= 0.005				;step increment to for sight calculations
@@ -328,8 +342,13 @@ wound_immunity			= 0.7
 radiation_immunity		= 0.0
 telepatic_immunity		= 0.0
 chemical_burn_immunity	= 0.8
-explosion_immunity		= 0.8
+explosion_immunity		= 0.9
 fire_wound_immunity		= 1
+
+
+[cat_protections]
+skin_armor = 0.1
+hit_fraction_monster = 0.5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;Cat population - Borovos 2013;;;;;;;;;;;;;;;;;
@@ -381,7 +400,10 @@ spec_rank				= weak
 
 immunities_sect					= cat_weak_immunities
 attack_params			= cat_weak_attack_params
-hit_fraction_monster = 0.55
+hit_fraction_monster = 0.45
+
+skin_armor = 0.08
+
 ;===========================================================================
 ; IMMUNITIES
 ;===========================================================================
@@ -393,7 +415,7 @@ wound_immunity			= 0.8
 radiation_immunity		= 0.0
 telepatic_immunity		= 0.0
 chemical_burn_immunity	= 0.9
-explosion_immunity		= 0.9
+explosion_immunity		= 1
 fire_wound_immunity		= 1
 
 [cat_weak_attack_params]
@@ -440,6 +462,8 @@ visual = monsters\cat\cat_strong
 spec_rank				= strong
 immunities_sect					= cat_strong_immunities
 attack_params			= cat_strong_attack_params
+
+skin_armor = 0.2
 
 ;===========================================================================
 ; IMMUNITIES
@@ -496,9 +520,147 @@ visual = monsters\cat\cat_strong5
 ;monster_type		= outdoor
 visual = monsters\cat\ca1
 
+
 [cat_normal]:cat_test
 visual = monsters\cat\ca2
+skin_armor = 0.1
 
 [cat_strong]:cat_strong_base
 $spawn = "monsters\cat"	
 visual = monsters\cat\ca2
+
+
+[cat_fake]:cat_strong
+$spawn        = "monsters\cat"
+
+
+[tark]:cat_strong_base
+$spawn              = "monsters\tark"			; option for Level Editor
+visual				= monsters\tark\tark
+corpse_visual		= monsters\tark\tark
+ph_mass 		     = 50;30						; also it's the food
+icon = ui_npc_monster_cat	
+
+cform                = skeleton					; collision class
+class                = SM_CAT_S					; AI class
+
+ef_creature_type	 = 2				; option for evaluation functions
+; ef_weapon_type		 = 2
+ef_detector_type			 = 1
+panic_threshold			= 0.0
+rank				= 6
+
+; Sounds
+sound_idle				= monsters\tark\tark_idle_1
+sound_eat				= monsters\tark\tark_eat
+sound_aggressive		= monsters\tark\tark_attack_1
+sound_attack_hit		= monsters\tark\tark_attack_2
+sound_take_damage		= monsters\tark\tark_hit
+sound_die				= monsters\tark\tark_die_1
+sound_threaten			= monsters\tark\tark_threat_2
+sound_landing			= monsters\tark\tark_idle_2
+sound_steal				= monsters\tark\tark_attack_3
+sound_panic				= monsters\tark\tark_threat_1
+sound_growling			= monsters\tark\tark_attack_4
+sound_die_in_anomaly	= monsters\tark\tark_die_2
+
+killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+
+idle_sound_delay		= 55000
+eat_sound_delay			= 3000
+attack_sound_delay		= 6000
+
+sound_distant_idle			= monsters\tark\tark_idle_1
+distant_idle_sound_delay	= 80000
+distant_idle_sound_range	= 100.0	
+
+DamagedThreshold		= 0.4
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;------------- Kisa -------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cat_friend]:cat_strong_base
+$spawn        = "monsters\cat\cat_friend"
+visual = monsters\romann\cat_friend\kisa
+
+
+Friend_Community_Overrides		= dolg, csky, stalker, ecolog, trader, actor_csky, actor_stalker, actor_ecolog, arena_enemy, actor_dolg, actor_army
+
+
+immunities_sect					= cat_friend_immunities
+attack_params			= cat_friend_attack_params
+
+;species of monster
+species					= cat_friend
+spec_rank				= strong
+
+skin_armor = 0.2
+
+
+; Sounds
+sound_idle				= monsters\cat\a_idle_
+sound_eat				= monsters\cat\eat_
+sound_aggressive		= monsters\cat\attack_
+sound_attack_hit		= monsters\cat\attack_
+sound_take_damage		= monsters\cat\a_hit_
+sound_die				= monsters\cat\die_
+sound_threaten			= monsters\cat\a_threat_
+sound_landing			= monsters\cat\a_idle_
+sound_steal				= monsters\cat\attack_
+sound_panic				= monsters\cat\a_threat_
+sound_growling			= monsters\cat\attack_
+sound_die_in_anomaly	= monsters\cat\a_threat_
+
+
+;===========================================================================
+; IMMUNITIES
+;===========================================================================
+[cat_friend_immunities]
+burn_immunity			= 0.4 ;0.66
+strike_immunity			= 0.3 ;0.66
+shock_immunity			= 0.4 ;0.66
+wound_immunity			= 0.4 ;0.85
+radiation_immunity		= 0.0 ;0.0
+telepatic_immunity		= 0.0 ;0.5
+chemical_burn_immunity	= 0.4 ;0.66
+explosion_immunity		= 0.5 ;0.66
+fire_wound_immunity		= 0.4 ;0.70
+
+[cat_friend_attack_params]
+
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;Left leg strike
+stand_attack_0 =	  	0.35,		0.30,		    110,        0.0, 0.5, 1.0,		 -1.2, 1.2, -1.2, 1.2,								  2.5
+;Both leg strike
+stand_attack_1 =	  	0.30,		0.30,		    110,        0.0, 0.5, 1.0,		 -1.2, 1.2, -1.2, 1.2,								  3.5
+stand_attack_rat_0  =	0.40,		0.30,			130,		0.0, -0.5,1.0,       -0.6, 0.6, -1.6, 0.6,								2.0
+jump_attack_2		=	0.50,		0.45,			200,		0.0, -0.5,1.0,       -0.6, 0.6, -1.6, 0.6,								2.0
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;------------- Kisa Dolg -------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[cat_friend_dolg]:cat_friend
+$spawn        = "monsters\cat\cat_friend_dolg"
+visual = monsters\romann\cat_friend\kisa
+
+immunities_sect					= cat_friend_immunities
+attack_params			= cat_friend_attack_params
+
+;species of monster
+;species					= cat_friend_dolg
+;spec_rank				= strong
+
+;skin_armor = 0.5
+
+
+

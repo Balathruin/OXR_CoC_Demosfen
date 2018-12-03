@@ -10,7 +10,7 @@ map_spot = treasure_player
 [sleeping_bag]
 dangerous_sleep = false ; Enable hostile squads to hunt actor if he sleeps in unsafe area. Disabled as there are no safe spots.
 enable = true
-have_at_start = false ; Self-explanatory, whether the player starts with a sleeping bag in inventory
+have_at_start = true ; Self-explanatory, whether the player starts with a sleeping bag in inventory
 unsafe_radius = 10000 ; The distance in which hostile squads will be drawn to actor if he sleeps in unsafe area.
 use_placeable = true ; Whether the items is placed at the player's location instead of using the item directly.
 
@@ -20,57 +20,87 @@ sleep_bag
 
 [sleeping_bag_ph_sections]
 ph_sleepbag = itm_sleepbag
-
+;--------------------------- Actor Backpack Keep Items
 [actor_backpack_keep_items]
-af_baloon
-af_blood
-af_compass
-af_cristall
-af_cristall_flower
-af_dummy_battery
-af_dummy_dummy
-af_dummy_glassbeads
-af_electra_flash
-af_electra_moonlight
-af_electra_sparkler
-af_eye
-af_fire
-af_fireball
-af_fuzz_kolobok
-af_glass
-af_gold_fish
-af_gravi
-af_ice
-af_medusa
-af_mincer_meat
-af_night_star
-af_oasis_heart
-af_soul
-af_quest_b14_twisted
-af_vyvert
 bandage
-bolt
-device_flashlight
-device_pda
-device_torch
-device_torch_dummy
-drug_anabiotic
-drug_antidot
-drug_coagulant
-drug_psy_blockade
-drug_radioprotector
-jup_b1_half_artifact
 medkit
 medkit_army
 medkit_scientic
+medkit_elite
+drug_coagulant
+drug_psy_blockade
+drug_antidot
+drug_radioprotector
+drug_anabiotic
+device_pda
+device_torch
+device_torch_dummy
+device_flashlight
+bolt
+geiger_dead
+
+;Artifacts
+af_cristall
+af_fireball
+af_dummy_glassbeads
+af_eye
+af_fire
+af_medusa
+af_cristall_flower
+af_night_star
+af_vyvert
+af_gravi
+af_gold_fish
+af_blood
+af_mincer_meat
+af_soul
+af_fuzz_kolobok
+af_baloon
+af_glass
+af_electra_sparkler
+af_electra_flash
+af_electra_moonlight
+af_dummy_battery
+af_dummy_dummy
+af_ice
+
+[cooking_mod]
+enable = true 	
+
+[cooking_mod_tools]   ;Add sections that will open repair ui
+cooking
+fieldcooker
+wood_stove
+
+[camp_cooking_tool]
+army_bowler
+
 
 [repair_mod]
 enable = true
-use_ui = false ; Determines whether the clunky interface is used instead of new drag-and-drop callbacks.
+use_ui = true 			;If false, you drag icon on to which item you want to repair instead of using a UI
 
-[repair_mod_tools]
-itm_gunsmith_toolkit
+[repair_mod_tools]   ;Add sections that work with repair_mod
 itm_outfit_toolkit
+itm_gunsmith_toolkit
+gun_oil
+gun_oil_2
+gun_oil_3
+gun_oil_ru
+gun_oil_ru_2
+gun_oil_ru_d
+gun_oil_ru_d_2
+glue_a
+glue_a_2
+glue_b
+glue_b_2
+glue_e
+glue_e_2
+solvent
+solvent_2
+armor_repair_fa
+armor_repair_fa_2
+spareparts
 
 [flashlight_mod]
 enable = false
@@ -83,72 +113,123 @@ decay_time = 2700 ; Number of seconds (game time) after which a mutant corpse be
 enable = true
 enable_ui = false ; Determines whether an interface is used to harvest mutant parts.
 
+[mutant_loot_drop_sections]
+bloodsucker
+boar
+burer
+chimera
+controller
+dog
+flesh
+gigant
+psy_dog
+pseudodog
+snork
+tushkano
+cat
+fracture
+zombie
+crow
+rat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;--------------------------- Mutant Loot Sections  [section,amount,chance]
+[poltergeist]
+powder_poltergeist, 1, 0.65
+
 ; Mutant loot sections.
 ; Usage: section, quantity, chance.
 ; See itms_manager.loot_mutant for implementation.
 
 [rat]
-mutant_part_tushkano_meat, 1, 0.66
+mutant_part_tushkano_meat, 1, 0.75
 
 [crow]
-mutant_part_crow_beak, 1, 0.5
+mutant_part_crow_beak, 1, 0.50
 
 [bloodsucker]
-mutant_part_krovosos_jaw, 1, 0.66
-mutant_part_krovosos_meat, 2, 0.66
+hide_bloodsucker, 1, 0.21
+mutant_part_krovosos_jaw, 1, 0.21
+mutant_part_krovosos_meat, 2, 0.22
 
 [boar]
-mutant_part_boar_chop, 2, 0.66
-mutant_part_boar_leg, 4, 0.33
+hide_boar, 1, 0.16
+mutant_part_boar_leg, 4, 0.12
+mutant_part_boar_chop, 2, 0.33
 
 [burer]
-mutant_part_burer_hand, 2, 0.75
+hide_burer, 1, 0.31
+mutant_part_burer_hand, 2, 0.31
 
 [chimera]
-mutant_part_chimera_claw, 8, 0.33
-mutant_part_chimera_teeth, 2, 0.5
+hide_chimera, 1, 0.44
+mutant_part_chimera_kogot, 4, 0.45
+mutant_part_chimera_claw, 8, 0.24
 mutant_part_chimera_meat, 2, 0.66
 
 [controller]
-mutant_part_controller_brain, 1, 0.66
-mutant_part_controller_hand, 2, 0.66
+mutant_part_controller_glass, 1, 0.38
+mutant_part_controller_hand, 2, 0.28
+hide_controller, 1, 0.55
+
+[oasis]
+af_oasis_heart, 1, 0.85
 
 [dog]
-mutant_part_dog_meat, 2, 0.5
-mutant_part_dog_tail, 1, 0.5
+mutant_part_dog_tail, 1, 0.22
+mutant_part_dog_meat, 2, 0.37
 
 [flesh]
-mutant_part_flesh_eye, 2, 0.33
-mutant_part_flesh_meat, 3, 0.66
+hide_flesh, 1, 0.45
+mutant_part_flesh_eye, 2, 0.22
+mutant_part_flesh_meat, 3, 0.37
 
 [gigant]
-mutant_part_pseudogigant_eye, 2, 0.5
-mutant_part_pseudogigant_hand, 2, 0.66
+hide_pseudogiant, 1, 0.66
+mutant_part_pseudogigant_hand, 2, 0.44
+mutant_part_pseudogigant_eye, 2, 0.44
 
 [psy_dog]
-mutant_part_psevdodog_meat, 2, 0.66
-mutant_part_psevdodog_tail, 1, 0.75
+hide_psy_dog, 1, 0.44
+mutant_part_psevdodog_tail, 1, 0.44
+mutant_part_psevdodog_meat, 2, 0.44
 
 [pseudodog]
-mutant_part_psevdodog_meat, 2, 0.66
-mutant_part_psevdodog_tail, 1, 0.66
+hide_pseudodog, 1, 0.37
+mutant_part_psevdodog_tail, 1, 0.27
+mutant_part_psevdodog_meat, 2, 0.33
 
 [snork]
-mutant_part_snork_hand, 2, 0.66
-mutant_part_snork_leg, 2, 0.5
+mutant_part_snork_leg, 2, 0.37
+mutant_part_snork_hand, 2, 0.22
+mutant_part_snork_mask, 1, 0.22
 
 [tushkano]
-mutant_part_tushkano_head, 1, 0.5
-mutant_part_tushkano_meat, 1, 0.66
+mutant_part_tushkano_head, 1, 0.31
+mutant_part_tushkano_meat, 1, 0.44
 
 [cat]
-mutant_part_cat_tail, 1, 0.75
+mutant_part_cat_tail, 1, 0.44
 
 [fracture]
-mutant_part_fracture_hand, 2, 0.66
+mutant_part_fracture_hand, 2, 0.44
+
 
 [zombie]
-mutant_part_zombi_hand, 2, 0.5
+mutant_part_zombi_hand, 2, 0.31
+
 
 [karlik]
-mutant_part_karlik_ear, 2, 0.75
+mutant_part_karlik_ear, 2, 0.5

@@ -42,6 +42,436 @@
 			</phrase>
         </phrase_list>
     </dialog>
+<!------------- army_companion_task_1 ----------->
+	<dialog id="army_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>army_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.army_companion_task_1_not_complete</precondition>
+                <text>army_companion_task_1_start_dialog_1</text>
+				<give_info>army_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>army_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.army_companion_task_1_not_complete</precondition>
+                <text>army_companion_task_1_start_dialog_2</text>
+				<give_info>army_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.army_companion_task_1_complete</precondition>
+                <text>army_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.army_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>army_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>army_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.army_companion_task_1_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+<!------------- freedom_companion_task_1 ----------->
+	<dialog id="freedom_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>freedom_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.freedom_companion_task_1_not_complete</precondition>
+                <text>freedom_companion_task_1_start_dialog_1</text>
+				<give_info>freedom_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>freedom_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.freedom_companion_task_1_not_complete</precondition>
+                <text>freedom_companion_task_1_start_dialog_2</text>
+				<give_info>freedom_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.freedom_companion_task_1_complete</precondition>
+                <text>freedom_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.freedom_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>freedom_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>freedom_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.freedom_companion_task_1_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+<!------------- dolg_companion_task_1 ----------->
+	<dialog id="dolg_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>dolg_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.dolg_companion_task_1_not_complete</precondition>
+                <text>dolg_companion_task_1_start_dialog_1</text>
+				<give_info>dolg_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>dolg_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.dolg_companion_task_1_not_complete</precondition>
+                <text>dolg_companion_task_1_start_dialog_2</text>
+				<give_info>dolg_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.dolg_companion_task_1_complete</precondition>
+                <text>killer_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.dolg_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>dolg_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>dolg_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.dolg_companion_task_2_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+<!------------- killer_companion_task_1 ----------->
+	<dialog id="killer_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>killer_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.killer_companion_task_1_not_complete</precondition>
+                <text>killer_companion_task_1_start_dialog_1</text>
+				<give_info>killer_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>killer_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.killer_companion_task_1_not_complete</precondition>
+                <text>killer_companion_task_1_start_dialog_2</text>
+				<give_info>killer_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.killer_companion_task_1_complete</precondition>
+                <text>killer_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.killer_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>killer_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>killer_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.killer_companion_task_1_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+<!------------- stalker_companion_task_1 ----------->
+	<dialog id="stalker_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>stalker_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.stalker_companion_task_1_not_complete</precondition>
+                <text>stalker_companion_task_1_start_dialog_1</text>
+				<give_info>stalker_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>stalker_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.stalker_companion_task_1_not_complete</precondition>
+                <text>stalker_companion_task_1_start_dialog_2</text>
+				<give_info>stalker_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.stalker_companion_task_1_complete</precondition>
+                <text>stalker_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.stalker_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>stalker_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>stalker_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.stalker_companion_task_1_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+<!------------- stalker_companion_task_2 ----------->
+	<dialog id="stalker_companion_task_2_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>stalker_companion_task_2_started</dont_has_info>
+				<precondition>dialogs_darkvalley.stalker_companion_task_2_not_complete</precondition>
+                <text>stalker_companion_task_2_start_dialog_1</text>
+				<give_info>stalker_companion_task_2_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>stalker_companion_task_2_started</has_info>
+				<precondition>dialogs_darkvalley.stalker_companion_task_2_not_complete</precondition>
+                <text>stalker_companion_task_2_start_dialog_2</text>
+				<give_info>stalker_companion_task_2_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.stalker_companion_task_2_complete</precondition>
+                <text>stalker_companion_task_2_complete</text>
+				<action>dialogs_darkvalley.stalker_companion_task_2_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>stalker_companion_task_2_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>stalker_companion_task_2_actor_reply</text>
+				<action>dialogs_darkvalley.stalker_companion_task_2_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+
+<!------------- stalker_companion_task_3 ----------->
+	<dialog id="stalker_companion_task_3_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>stalker_companion_task_3_started</dont_has_info>
+				<precondition>dialogs_darkvalley.stalker_companion_task_3_not_complete</precondition>
+                <text>stalker_companion_task_3_start_dialog_1</text>
+				<give_info>stalker_companion_task_3_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>stalker_companion_task_3_started</has_info>
+				<precondition>dialogs_darkvalley.stalker_companion_task_3_not_complete</precondition>
+                <text>stalker_companion_task_3_start_dialog_2</text>
+				<give_info>stalker_companion_task_3_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.stalker_companion_task_3_complete</precondition>
+                <text>stalker_companion_task_3_complete</text>
+				<action>dialogs_darkvalley.stalker_companion_task_3_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>stalker_companion_task_3_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>stalker_companion_task_3_actor_reply</text>
+				<action>dialogs_darkvalley.stalker_companion_task_3_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+
+<!------------- csky_companion_task_1 ----------->
+	<dialog id="csky_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>csky_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.csky_companion_task_1_not_complete</precondition>
+                <text>csky_companion_task_1_start_dialog_1</text>
+				<give_info>csky_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>csky_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.csky_companion_task_1_not_complete</precondition>
+                <text>csky_companion_task_1_start_dialog_2</text>
+				<give_info>csky_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.csky_companion_task_1_complete</precondition>
+                <text>csky_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.csky_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>csky_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>csky_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.csky_companion_task_1_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+<!------------- monolith_companion_task_1 ----------->
+	<dialog id="monolith_companion_task_1_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>monolith_companion_task_1_started</dont_has_info>
+				<precondition>dialogs_darkvalley.monolith_companion_task_1_not_complete</precondition>
+                <text>monolith_companion_task_1_start_dialog_1</text>
+				<give_info>monolith_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>monolith_companion_task_1_started</has_info>
+				<precondition>dialogs_darkvalley.monolith_companion_task_1_not_complete</precondition>
+                <text>monolith_companion_task_1_start_dialog_2</text>
+				<give_info>monolith_companion_task_1_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.monolith_companion_task_1_complete</precondition>
+                <text>monolith_companion_task_1_complete</text>
+				<action>dialogs_darkvalley.monolith_companion_task_1_give_reward</action>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>monolith_companion_task_1_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>monolith_companion_task_1_actor_reply</text>
+				<action>dialogs_darkvalley.monolith_companion_task_1_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
+
+    <!------------- ecolog_companion_task_3 ----------->
+	<dialog id="ecolog_companion_task_3_dialog">
+        <phrase_list>
+		    <phrase id="0">
+                <text />
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+				<text />
+				<next>111</next>
+				<next>112</next>
+				<next>113</next>
+			</phrase>
+		    <phrase id="111">
+				<dont_has_info>ecolog_companion_task_3_started</dont_has_info>
+				<precondition>dialogs_darkvalley.ecolog_companion_task_3_not_complete</precondition>
+                <text>ecolog_companion_task_3_start_dialog_1</text>
+				<give_info>ecolog_companion_task_3_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="112">
+				<has_info>ecolog_companion_task_3_started</has_info>
+				<precondition>dialogs_darkvalley.ecolog_companion_task_3_not_complete</precondition>
+                <text>ecolog_companion_task_3_start_dialog_2</text>
+				<give_info>ecolog_companion_task_3_started</give_info>
+				<next>1111</next>
+            </phrase>
+		    <phrase id="113">
+				<precondition>dialogs_darkvalley.ecolog_companion_task_3_complete</precondition>
+                <text>ecolog_companion_task_3_complete</text>
+				<next>1113</next>
+            </phrase>
+			<phrase id="1111">
+				<text>ecolog_companion_task_3_actor_reply</text>
+			</phrase>
+			<phrase id="1113">
+				<text>ecolog_companion_task_3_actor_reply</text>
+				<action>dialogs_darkvalley.ecolog_companion_task_3_give_reward</action>
+				<action>dialogs_darkvalley.ecolog_companion_task_4_complete_task</action>
+			</phrase>
+        </phrase_list>
+    </dialog>
 <!------------- val_smart_terrain_7_3_bandit_mechanic_stalker ---------->
     <dialog id="val_smart_terrain_7_3_bandit_mechanic_stalker_start_dialog">
         <phrase_list>

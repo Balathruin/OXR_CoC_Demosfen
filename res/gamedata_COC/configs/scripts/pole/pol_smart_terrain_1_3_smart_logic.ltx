@@ -1,0 +1,79 @@
+[logic@guard_1]
+active = walker@guard_1
+
+[logic@patrol_1]
+active = walker@patrol_1
+
+[walker@guard_1]
+path_walk = guard_1_walk
+path_look = guard_1_look
+
+[walker@patrol_1]
+path_walk = walker_1_walk
+; path_look = walker_1_look
+
+[logic@camp_animpoint_1]
+prior = 100
+active = animpoint@camp_animpoint_1
+suitable = {!surge_started} true, false
+
+[logic@camp_animpoint_2]
+prior = 100
+active = animpoint@camp_animpoint_2
+suitable = {!surge_started} true, false
+
+[logic@camp_animpoint_3]
+prior = 100
+active = animpoint@camp_animpoint_3
+suitable = {!surge_started} true, false
+
+[logic@camp_animpoint_4]
+prior = 100
+active = animpoint@camp_animpoint_4
+suitable = {!surge_started} true, false
+
+[animpoint@camp_animpoint_1]
+cover_name = pol_smart_terrain_1_3_animpoint_1
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@camp_animpoint_rain_1
+
+[animpoint@camp_animpoint_2]
+cover_name = pol_smart_terrain_1_3_animpoint_2
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@camp_animpoint_rain_2
+
+[animpoint@camp_animpoint_3]
+cover_name = pol_smart_terrain_1_3_animpoint_3
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@camp_animpoint_rain_3
+
+[animpoint@camp_animpoint_4]
+cover_name = pol_smart_terrain_1_3_animpoint_4
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@camp_animpoint_rain_4
+
+;rain
+
+[animpoint@camp_animpoint_rain_1]
+cover_name = pol_smart_terrain_1_3_animpoint_rain_1
+use_camp = true
+on_info = {!is_rain} animpoint@camp_animpoint_1
+
+[animpoint@camp_animpoint_rain_2]
+cover_name = pol_smart_terrain_1_3_animpoint_rain_2
+use_camp = true
+on_info = {!is_rain} animpoint@camp_animpoint_2
+
+[animpoint@camp_animpoint_rain_3]
+cover_name = pol_smart_terrain_1_3_animpoint_rain_3
+use_camp = true
+on_info = {!is_rain} animpoint@camp_animpoint_3
+
+[animpoint@camp_animpoint_rain_4]
+cover_name = pol_smart_terrain_1_3_animpoint_rain_4
+use_camp = true
+on_info = {!is_rain} animpoint@camp_animpoint_4

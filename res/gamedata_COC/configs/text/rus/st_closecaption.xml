@@ -16,7 +16,7 @@
 		<text>Без субтитров</text>
 	</string>
 	<string id="ui_mm_cc_storyonly">
-		<text>Важные субтитры</text>
+		<text>Только важные субтитры</text>
 	</string>
 	<string id="ui_mm_cc_all">
 		<text>Все субтитры</text>
@@ -50,7 +50,7 @@
 		<text>Генерал</text>
 	</string>
 	<string id="st_ssu_commander_name">
-		<text>СБУ</text>
+		<text>Командир СБУ</text>
 	</string>
 
 
@@ -312,7 +312,7 @@
 		<text>Подойти надо незаметно. Нельзя, чтобы она нас хоть как учуяла.</text>
 	</string>
 	<string id="zat_b106_gonta_see_chimera">
-		<text>Спишь, тварь... Ну что, привет тебе от Краба. Давай!</text>
+		<text>Спишь, тварь... Ну, что, привет тебе от Краба. Давай!</text>
 	</string>
 	<string id="zat_b106_gonta_story_angry">
 		<text>Эта скотина ещё пожалеет, что сбежала.</text>

@@ -2,131 +2,159 @@
 <string_table>
 
 	<string id="ui_st_abandoned_sawmill">
-		<text>Abandoned Sawmill (Zaton)</text>
+		<text>Лесопилка (Затон)</text>
 	</string>
 
 	<string id="ui_st_abandoned_school">
-		<text>Abandoned School (Dead City)</text>
-	</string>
-
-	<string id="ui_st_abandoned_village">
-		<text>Abandoned Village (Army Warehouses)</text>
-	</string>
-
-	<string id="ui_st_apartment">
-		<text>Apartment (Outskirts)</text>
+		<text>Заброшенная школа (Припять)</text>
 	</string>
 
 	<string id="ui_st_brain_scorcher">
-		<text>Brain Scorcher (Radar)</text>
-	</string>
-
-	<string id="ui_st_car_park">
-		<text>Car Park (Cordon)</text>
-	</string>
-
-	<string id="ui_st_construction_site">
-		<text>Construction Site (Wild Territory)</text>
-	</string>
-
-	<string id="ui_st_container_warehouse">
-		<text>Container Warehouse (Jupiter)</text>
+		<text>Выжигатель Мозгов (Радар)</text>
 	</string>
 
 	<string id="ui_st_cultural_center">
-		<text>Cultural Center (Pripyat)</text>
+		<text>ДК «Энергетик» (Припять)</text>
 	</string>
 
-	<string id="ui_st_eastern_factory">
-		<text>Eastern Factory (Dark Valley)</text>
+	<string id="ui_st_construction_site">
+		<text>Стройка (ДТ)</text>
 	</string>
 
-	<string id="ui_st_factory_complex">
-		<text>Factory Complex (Agroprom)</text>
+	<string id="ui_st_container_warehouse">
+		<text>Склад контейнеров (Юпитер)</text>
 	</string>
 
 	<string id="ui_st_hermanns_bunker">
-		<text>Hermann's Bunker (Jupiter)</text>
+		<text>МБУ (Янов)</text>
 	</string>
 
 	<string id="ui_st_hidden_base">
-		<text>Hidden Base (Great Swamp)</text>
+		<text>База «Чистого Неба» (Болота)</text>
 	</string>
 
 	<string id="ui_st_kopachy_village">
-		<text>Kopachy Village (Jupiter)</text>
+		<text>Копачи (Юпитер)</text>
 	</string>
 
 	<string id="ui_st_lodging_house">
-		<text>Lodging House (Rostok)</text>
+		<text>Бар «100 Рентген»</text>
+	</string>
+
+	<string id="ui_st_machine_yard">
+		<text>Механизаторский двор (Болота)</text>
 	</string>
 
 	<string id="ui_st_makeshift_barracks">
-		<text>Makeshift Barracks (Rostok)</text>
+		<text>База «Долга» (Бар)</text>
 	</string>
 
 	<string id="ui_st_military_base">
-		<text>Military Base (Army Warehouses)</text>
+		<text>База свободы (Милитари)</text>
 	</string>
 
 	<string id="ui_st_northern_factory">
-		<text>Northern Factory (Dark Valley)</text>
+		<text>База бандитов (ТД)</text>
 	</string>
 
-	<string id="ui_st_pumping_station">
-		<text>Pumping Station (Great Swamp)</text>
+	<string id="ui_st_hideout">
+		<text>Убежище в квартире (Окраины Припяти)</text>
 	</string>
-	
+
+	<string id="ui_st_power_station">
+		<text>ЧАЭС</text>
+	</string>
+
+	<string id="ui_st_processing_station">
+		<text>Станция переработки отходов (Затон)</text>
+	</string>
+
 	<string id="ui_st_river_port">
-		<text>River Port (Outskirts)</text>
+		<text>Речной порт (Окраины Припяти)</text>
 	</string>
 
 	<string id="ui_st_rookie_village">
-		<text>Rookie Village (Cordon)</text>
+		<text>Деревня новичков (Кордон)</text>
 	</string>
 
 	<string id="ui_st_research_institute">
-		<text>Research Institute (Agroprom)</text>
+		<text>НИИ «Агропром»</text>
 	</string>
 
 	<string id="ui_st_sakharovs_bunker">
-		<text>Sakharov's Bunker (Yantar)</text>
+		<text>МБУ (Янтарь)</text>
 	</string>
 
 	<string id="ui_st_skadovsk_shipwreck">
-		<text>Skadovsk Shipwreck (Zaton)</text>
+		<text>Скадовск (Затон)</text>
 	</string>
 
 	<string id="ui_st_southern_checkpoint">
-		<text>Southern Checkpoint (Cordon)</text>
+		<text>Южный блокпост (Кордон)</text>
 	</string>
 
 	<string id="ui_st_sports_center">
-		<text>Sports Center (Dead City)</text>
-	</string>
-
-	<string id="ui_st_substation_workshops">
-		<text>Substation Workshops (Zaton)</text>
+		<text>Торговый кооператив (МГ)</text>
 	</string>
 
 	<string id="ui_st_train_hangar">
-		<text>Train Hangar (Garbage)</text>
-	</string>
-
-	<string id="ui_st_tunnel_entrance">
-		<text>Tunnel Entrance (Jupiter)</text>
-	</string>
-
-	<string id="ui_st_tunnel_refuge">
-		<text>Tunnel Refuge (Agr. Underground)</text>
+		<text>Депо (Свалка)</text>
 	</string>
 
 	<string id="ui_st_tuzla_outpost">
-		<text>Tuzla Outpost (Great Swamp)</text>
+		<text>Рыбацкий хутор (Болота)</text>
+	</string>
+
+	<string id="ui_st_village_ruins">
+		<text>Сгоревший хутор (Болота)</text>
 	</string>
 
 	<string id="ui_st_yanov_station">
-		<text>Yanov Station (Jupiter)</text>
+		<text>Станция «Янов» (Юпитер)</text>
 	</string>
+	
+	<string id="ui_st_pole_bandit_base">
+		<text>Стоянка бандитов (Поляна)</text>
+	</string>
+	
+	<string id="ui_st_pole_stalker_village">
+		<text>Хуторок (Поляна)</text>
+	</string>
+	
+	<string id="ui_st_gar_baraholka">
+		<text>Барахолка (Свалка)</text>
+	</string>	
+
+	<string id="ui_st_red_forest_vagon_csky">
+		<text>Лагерь у капера (Рыжий лес)</text>
+	</string>
+	
+	<string id="ui_st_truck_cemetery_bandits_post">
+		<text>Стоянка на окраине (Кладбище техники)</text>
+	</string>
+	
+	<string id="ui_st_yanov_depo_monolith">
+		<text>Железнодорожное депо (Юпитер)</text>
+	</string>
+	
+	<string id="ui_st_esc_factory_bandit">
+		<text>База бандитов на фабрике (Кордон)</text>
+	</string>
+	
+	<string id="ui_st_kbo_monolith">
+		<text>КБО «Юбилейный» (окраины Припяти)</text>
+	</string>
+	
+		<string id="ui_st_prachechnya">
+		<text>Прачечная (окраины Припяти)</text>
+	</string>
+	
+	<string id="ui_st_after_cordon">
+		<text>За «Южным» блокпостом (Кордон)</text>
+	</string>	
+	
+	<string id="ui_st_dasc_base">
+		<text>Лесопилка (Тёмная лощина)</text>
+	</string>	
 	
 </string_table>

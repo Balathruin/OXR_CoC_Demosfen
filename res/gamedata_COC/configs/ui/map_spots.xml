@@ -39,6 +39,324 @@
                 <texture x="633" y="789" width="31" height="31">ui\ui_common</texture>
         </crlc_small_spot>
 
+        <circle_small_red>
+                <level_map spot="circle_red_spot" pointer="quest_pointer"/>
+        </circle_small_red>
+        <circle_small_green>
+                <level_map spot="circle_green_spot" pointer="quest_pointer"/>
+        </circle_small_green>
+        <circle_small_yellow>
+                <level_map spot="circle_yellow_spot" pointer="quest_pointer"/>
+        </circle_small_yellow>
+		
+        <circle_red_spot  x="0" y="0" width="31" height="31" alignment="c" scale="1" scale_min="1" scale_max="3" stretch = "1">
+                <texture a="128" r="255" g="4" b="4" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+        </circle_red_spot>
+        <circle_green_spot  x="0" y="0" width="31" height="31" alignment="c" scale="1" scale_min="1" scale_max="3" stretch = "1">
+				<texture a="128" r="4" g="255" b="4" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+        </circle_green_spot>
+        <circle_yellow_spot  x="0" y="0" width="31" height="31" alignment="c" scale="1" scale_min="1" scale_max="3" stretch = "1">
+				<texture a="128" r="255" g="255" b="255" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+        </circle_yellow_spot>
+		
+		<warfare_selected_target>
+			<level_map spot="warfare_selected_target_spot" pointer="quest_pointer2"/>
+			<mini_map spot="storyline_task_spot_mini" pointer="quest_pointer2"/>
+		</warfare_selected_target>
+		<warfare_selected_target_spot width="19" height="19" stretch="1" alignment="c" location_level="5">
+			<texture>ui_inGame2_PDA_icon_Primary_mission</texture>
+			<static_border x="-5" y="-5" width="29" height="29" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="242" g="231" b="11">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_selected_target_spot>		
+		
+		
+		
+		<!--  Faction point spots   -->				
+		
+		
+		<circle_stalker>
+			<level_map spot="circle_stalker_spot" pointer="quest_pointer"/>
+		</circle_stalker>
+        <circle_stalker_spot  x="35" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_stalker</texture>
+        </circle_stalker_spot>		
+		
+		<circle_bandit>
+			<level_map spot="circle_bandit_spot" pointer="quest_pointer"/>
+		</circle_bandit>
+        <circle_bandit_spot  x="83" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_bandit</texture>
+        </circle_bandit_spot>		
+		
+		<circle_csky>
+			<level_map spot="circle_csky_spot" pointer="quest_pointer"/>
+		</circle_csky>
+        <circle_csky_spot  x="131" y="105" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_csky</texture>
+        </circle_csky_spot>		
+		
+		<circle_army>
+			<level_map spot="circle_army_spot" pointer="quest_pointer"/>
+		</circle_army>
+        <circle_army_spot x="35" y="201" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_army</texture>
+        </circle_army_spot>		
+		
+		<circle_freedom>
+			<level_map spot="circle_freedom_spot" pointer="quest_pointer"/>
+		</circle_freedom>
+        <circle_freedom_spot  x="83" y="153" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_freedom</texture>
+        </circle_freedom_spot>		
+		
+		<circle_dolg>
+			<level_map spot="circle_dolg_spot" pointer="quest_pointer"/>
+		</circle_dolg>
+        <circle_dolg_spot  x="35" y="153" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_dolg</texture>
+        </circle_dolg_spot>		
+		
+		<circle_ecolog>
+			<level_map spot="circle_ecolog_spot" pointer="quest_pointer"/>
+		</circle_ecolog>
+        <circle_ecolog_spot  x="83" y="201" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_ecolog</texture>
+        </circle_ecolog_spot>		
+		
+		<circle_killer>
+			<level_map spot="circle_killer_spot" pointer="quest_pointer"/>
+		</circle_killer>
+        <circle_killer_spot  x="131" y="153" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_killer</texture>
+        </circle_killer_spot>		
+		
+		<circle_monolith>
+			<level_map spot="circle_monolith_spot" pointer="quest_pointer"/>
+		</circle_monolith>
+        <circle_monolith_spot  x="131" y="201" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture>ui_mm_faction_monolith</texture>
+        </circle_monolith_spot>			
+		
+		<circle_empty>
+			<level_map spot="circle_empty_spot" pointer="quest_pointer"/>
+		</circle_empty>
+        <circle_empty_spot  x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture a="255" r="255" g="255" b="255" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+        </circle_empty_spot>		
+		
+		<circle_target>
+			<level_map spot="circle_target_spot" pointer="quest_pointer"/>
+		</circle_target>
+        <circle_target_spot  x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture a="255" r="255" g="0" b="0" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+        </circle_target_spot>		
+		
+		<circle_zombied>
+			<level_map spot="circle_zombied_spot" pointer="quest_pointer"/>
+		</circle_zombied>
+        <circle_zombied_spot  x="0" y="0" width="24" height="24" alignment="c" scale="1" scale_min="1" scale_max="1" stretch = "1">
+			<texture a="255" r="0" g="0" b="0" x="633" y="789" width="31" height="31">ui\ui_common</texture>
+        </circle_zombied_spot>		
+		
+		
+		
+		<warfare_stalker_spot>
+			<level_map spot="warfare_stalker_tex"/>
+			<mini_map spot="warfare_stalker_spot_mini"/>
+		</warfare_stalker_spot>
+		<warfare_stalker_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="255" g="255" b="128">ui_pda2_squad_leader</texture>
+		</warfare_stalker_tex>				
+		<warfare_stalker_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="255" g="255" b="64">ui_minimap_squad_leader</texture>
+		</warfare_stalker_spot_mini>
+		
+		<warfare_duty_spot>
+			<level_map spot="warfare_duty_tex"/>
+			<mini_map spot="warfare_duty_spot_mini"/>
+		</warfare_duty_spot>
+		<warfare_duty_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="192" g="32" b="32">ui_pda2_squad_leader</texture>
+		</warfare_duty_tex>				
+		<warfare_duty_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="192" g="32" b="32">ui_minimap_squad_leader</texture>
+		</warfare_duty_spot_mini>
+		
+		<warfare_freedom_spot>
+			<level_map spot="warfare_freedom_tex"/>
+			<mini_map spot="warfare_freedom_spot_mini"/>
+		</warfare_freedom_spot>
+		<warfare_freedom_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="32" g="192" b="128">ui_pda2_squad_leader</texture>
+		</warfare_freedom_tex>				
+		<warfare_freedom_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="32" g="255" b="128">ui_minimap_squad_leader</texture>
+		</warfare_freedom_spot_mini>
+		
+		<warfare_killer_spot>
+			<level_map spot="warfare_killer_tex"/>
+			<mini_map spot="warfare_killer_spot_mini"/>
+		</warfare_killer_spot>
+		<warfare_killer_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="64" g="128" b="192">ui_pda2_squad_leader</texture>
+		</warfare_killer_tex>				
+		<warfare_killer_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="64" g="128" b="192">ui_minimap_squad_leader</texture>
+		</warfare_killer_spot_mini>
+		
+		<warfare_csky_spot>
+			<level_map spot="warfare_csky_tex"/>
+			<mini_map spot="warfare_csky_spot_mini"/>
+		</warfare_csky_spot>
+		<warfare_csky_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="144" g="244" b="255">ui_pda2_squad_leader</texture>
+		</warfare_csky_tex>				
+		<warfare_csky_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="144" g="244" b="255">ui_minimap_squad_leader</texture>
+		</warfare_csky_spot_mini>
+		
+		<warfare_monolith_spot>
+			<level_map spot="warfare_monolith_tex"/>
+			<mini_map spot="warfare_monolith_spot_mini"/>
+		</warfare_monolith_spot>
+		<warfare_monolith_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="192" g="192" b="192">ui_pda2_squad_leader</texture>
+		</warfare_monolith_tex>				
+		<warfare_monolith_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="192" g="192" b="192">ui_minimap_squad_leader</texture>
+		</warfare_monolith_spot_mini>
+		
+		<warfare_army_spot>
+			<level_map spot="warfare_army_tex"/>
+			<mini_map spot="warfare_army_spot_mini"/>
+		</warfare_army_spot>
+		<warfare_army_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="144" g="192" b="144">ui_pda2_squad_leader</texture>
+		</warfare_army_tex>
+		<warfare_army_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="144" g="192" b="144">ui_minimap_squad_leader</texture>
+		</warfare_army_spot_mini>
+		
+		<warfare_ecolog_spot>
+			<level_map spot="warfare_ecolog_tex"/>
+			<mini_map spot="warfare_ecolog_spot_mini"/>
+		</warfare_ecolog_spot>
+		<warfare_ecolog_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="255" g="128" b="0">ui_pda2_squad_leader</texture>
+		</warfare_ecolog_tex>				
+		<warfare_ecolog_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="255" g="128" b="0">ui_minimap_squad_leader</texture>
+		</warfare_ecolog_spot_mini>
+		
+		<warfare_renegate_spot>
+			<level_map spot="warfare_bandit_tex"/>
+			<mini_map spot="warfare_bandit_spot_mini"/>
+		</warfare_renegate_spot>
+		<warfare_bandit_spot>
+			<level_map spot="warfare_bandit_tex"/>
+			<mini_map spot="warfare_bandit_spot_mini"/>
+		</warfare_bandit_spot>
+		<warfare_bandit_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="112" g="66" b="20">ui_pda2_squad_leader</texture>
+		</warfare_bandit_tex>				
+		<warfare_bandit_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="112" g="66" b="20">ui_minimap_squad_leader</texture>
+		</warfare_bandit_spot_mini>
+		
+		<warfare_zombied_spot>
+			<level_map spot="warfare_zombied_tex"/>
+			<mini_map spot="warfare_zombied_spot_mini"/>
+		</warfare_zombied_spot>
+		<warfare_zombied_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="32" g="32" b="32">ui_pda2_squad_leader</texture>
+		</warfare_zombied_tex>				
+		<warfare_zombied_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="32" g="32" b="32">ui_minimap_squad_leader</texture>
+		</warfare_zombied_spot_mini>
+		
+		<warfare_mutant_spot>
+			<level_map spot="warfare_mutant_tex"/>
+			<mini_map spot="warfare_mutant_spot_mini"/>
+		</warfare_mutant_spot>
+		<warfare_mutant_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="160" g="92" b="160">ui_pda2_squad_leader</texture>
+		</warfare_mutant_tex>				
+		<warfare_mutant_spot_mini x="0" y="0" width="9" height="9" alignment="c" stretch="1" location_level="10" scale_min="3.0" scale_max="5.1" scale="0">
+			<texture r="160" g="92" b="160">ui_minimap_squad_leader</texture>
+		</warfare_mutant_spot_mini>
+		
+		
+		
+		
+		<warfare_friendly_spot>
+			<level_map spot="warfare_friendly_tex"/>
+			<mini_map spot="alife_presentation_squad_friend_spot_mini"/>
+		</warfare_friendly_spot>
+
+		<warfare_friendly_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="0" g="239" b="0">ui_pda2_squad_leader</texture>
+			<static_border x="-5" y="-5" width="9" height="9" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="0" g="255" b="0">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_friendly_tex>
+		<warfare_friendly_spot_moving>
+			<level_map spot="warfare_friendly_tex_moving"/>
+			<mini_map spot="alife_presentation_squad_friend_spot_mini"/>
+		</warfare_friendly_spot_moving>
+		<warfare_friendly_tex_moving width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="128" g="255" b="128">ui_pda2_squad_leader</texture>
+			<static_border x="-5" y="-5" width="9" height="9" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="0" g="255" b="0">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_friendly_tex_moving>
+		
+		<warfare_enemy_spot>
+			<level_map spot="warfare_enemy_tex"/>
+			<mini_map spot="alife_presentation_squad_enemy_spot_mini"/>
+		</warfare_enemy_spot>
+		
+		<warfare_enemy_tex width="19" height="19" stretch="1" alignment="c" location_level="5">
+			<texture r="255" g="0" b="0">ui_pda2_squad_leader</texture>
+			<static_border x="-5" y="-5" width="9" height="9" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="255" g="0" b="0">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_enemy_tex>
+		<warfare_enemy_spot_moving>
+			<level_map spot="warfare_enemy_tex_moving"/>
+			<mini_map spot="alife_presentation_squad_enemy_spot_mini"/>
+		</warfare_enemy_spot_moving>
+		<warfare_enemy_tex_moving width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="255" g="128" b="128">ui_pda2_squad_leader</texture>
+			<static_border x="-5" y="-5" width="9" height="9" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="0" g="255" b="0">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_enemy_tex_moving>
+		
+		
+		<warfare_neutral_spot>
+			<level_map spot="warfare_neutral_tex"/>
+			<mini_map spot="alife_presentation_squad_neutral_spot_mini"/>
+		</warfare_neutral_spot>		
+		<warfare_neutral_tex width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="255" g="240" b="0">ui_pda2_squad_leader</texture>
+			<static_border x="-5" y="-5" width="9" height="9" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="255" g="0" b="0">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_neutral_tex>
+		
+		<warfare_neutral_spot_moving>
+			<level_map spot="warfare_neutral_tex_moving"/>
+			<mini_map spot="alife_presentation_squad_neutral_spot_mini"/>
+		</warfare_neutral_spot_moving>
+		<warfare_neutral_tex_moving width="13" height="13" stretch="1" alignment="c" location_level="5">
+			<texture r="255" g="240" b="128">ui_pda2_squad_leader</texture>
+			<static_border x="-5" y="-5" width="9" height="9" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+				<texture r="0" g="255" b="0">ui_pda2_stask_last_02</texture>
+			</static_border>
+		</warfare_neutral_tex_moving>
+		
+
         <blue_location>
                 <level_map  spot="blue_spot"              pointer="quest_pointer"/>
                 <mini_map   spot="blue_mini_spot"                pointer="quest_pointer"/>
@@ -571,6 +889,55 @@
 
 
         <!-- Отряды -->
+ <!-- Защита от дятлов, что будут ставить мод поверх отображения отрядов нв карте -->
+  <alife_presentation_squad_friend_1>
+    <level_map spot="alife_presentation_squad_friend_spot_1"/>
+    <mini_map spot="alife_presentation_squad_friend_spot_mini_1"/>
+  </alife_presentation_squad_friend_1>
+  <alife_presentation_squad_friend_spot_1 width="11" height="11" alignment="c" stretch="1" location_level="5">
+
+    <texture r="0" g="255" b="0">ui_pda2_squad_leader</texture>
+  </alife_presentation_squad_friend_spot_1>
+  <alife_presentation_squad_friend_spot_mini_1 width="9" height="9" alignment="c" stretch="1" location_level="5">
+    <texture r="0" g="255" b="0">ui_minimap_squad_leader</texture>
+  </alife_presentation_squad_friend_spot_mini_1>
+
+  <alife_presentation_squad_neutral_1>
+    <level_map spot="alife_presentation_squad_neutral_spot_1"/>
+    <mini_map spot="alife_presentation_squad_neutral_spot_mini_1"/>
+  </alife_presentation_squad_neutral_1>
+  <alife_presentation_squad_neutral_spot_1 width="11" height="11" alignment="c" stretch="1" location_level="5">
+    <texture r="255" g="240" b="0">ui_pda2_squad_leader</texture>
+  </alife_presentation_squad_neutral_spot_1>
+  <alife_presentation_squad_neutral_spot_mini_1 width="9" height="9" alignment="c" stretch="1" location_level="5">
+    <texture r="255" g="240" b="0">ui_minimap_squad_leader</texture>
+  </alife_presentation_squad_neutral_spot_mini_1>
+
+
+  <alife_presentation_squad_enemy_1>
+   <level_map spot="alife_presentation_squad_enemy_spot_1"/>
+	<mini_map spot="alife_presentation_squad_enemy_spot_mini_1"/>
+  </alife_presentation_squad_enemy_1>
+  <alife_presentation_squad_enemy_spot_1 width="11" height="11" alignment="c" stretch="1" location_level="5">
+    <texture r="237" g="28" b="36">ui_pda2_squad_leader</texture>
+  </alife_presentation_squad_enemy_spot_1>
+  <alife_presentation_squad_enemy_spot_mini_1 width="9" height="9" alignment="c" stretch="1" location_level="5">
+    <texture r="237" g="28" b="36">ui_minimap_squad_leader</texture>
+  </alife_presentation_squad_enemy_spot_mini_1>
+
+  <alife_presentation_squad_monster_1>
+    <level_map spot="alife_presentation_squad_monster_spot_1"/>
+    <mini_map spot="alife_presentation_squad_monster_spot_mini_1"/>
+  </alife_presentation_squad_monster_1>
+  <alife_presentation_squad_monster_spot_1 width="11" height="11" alignment="c" stretch="1" location_level="5">
+    <texture r="255" g="255" b="255">ui_pda2_squad_leader</texture>
+  </alife_presentation_squad_monster_spot_1>
+  <alife_presentation_squad_monster_spot_mini_1 width="9" height="9" alignment="c" stretch="1" location_level="5">
+    <texture r="237" g="28" b="36">ui_mmap_squad_leader</texture>
+  </alife_presentation_squad_monster_spot_mini_1>
+
+
+ 
   <alife_presentation_squad_friend>
 <!--    <level_map spot="alife_presentation_squad_friend_spot"/> -->
     <mini_map spot="alife_presentation_squad_friend_spot_mini"/>

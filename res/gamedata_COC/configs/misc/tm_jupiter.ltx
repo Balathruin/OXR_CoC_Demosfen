@@ -27,8 +27,8 @@ task_complete_descr = jup_b6_scientist_tech_task_finish
 on_init = %=setup_companion_task(ecolog_companion_task_2:jup_b41) =setup_task_target_anomaly -ecolog_companion_task_2_started -ecolog_companion_task_2_force_started%
 precondition = {!squad_exist(ecolog_companion_task_1) !squad_exist(ecolog_companion_task_2)} true, false
 repeat_timeout = 172800
-on_complete = %=complete_task_inc_goodwill(50:ecolog) =remove_special_task_squad(ecolog_companion_task_2) =reward_stash(true) =reset_task_target_anomaly =reward_random_item(af_ameba_slug:1:af_dummy_glassbeads:1:af_fireball:1:af_soul:1:af_rusty_kristall:1:af_dummy_battery:1:detector_elite:1:detector_advanced:1)%
-on_fail = %=fail_task_dec_goodwill(50:ecolog) =remove_special_task_squad(ecolog_companion_task_2) =reset_task_target_anomaly%
+on_complete = %=complete_task_inc_goodwill(50:ecolog:csky) =remove_special_task_squad(ecolog_companion_task_2) =reward_stash(true) =reset_task_target_anomaly =reward_random_item(af_ameba_slug:1:af_dummy_glassbeads:1:af_fireball:1:af_soul:1:af_rusty_kristall:1:af_dummy_battery:1:detector_elite:1:detector_advanced:1)%
+on_fail = %=fail_task_dec_goodwill(50:ecolog:csky) =remove_special_task_squad(ecolog_companion_task_2) =reset_task_target_anomaly%
 on_cancel = %=remove_special_task_squad(ecolog_companion_task_2) =reset_task_target_anomaly%
 condlist_0 = {!squad_exist(ecolog_companion_task_2)} fail
 
@@ -53,8 +53,8 @@ target_functor = general_fetch_task
 task_complete_descr = jup_b6_scientist_tech_task_2_fetch_finish
 ; precondition = true
 repeat_timeout = 172800
-on_complete = %=complete_task_inc_goodwill(50:ecolog) =reward_item_cost_mult_and_remove(jup_b6_scientist_tech_task_2_fetch:0.7) =inc_task_stage(jup_b6_scientist_tech_task_2)%
-on_fail = %=fail_task_dec_goodwill(50:ecolog)%
+on_complete = %=complete_task_inc_goodwill(50:ecolog:csky) =reward_item_cost_mult_and_remove(jup_b6_scientist_tech_task_2_fetch:0.7) =inc_task_stage(jup_b6_scientist_tech_task_2) =reward_random_item(scientific_outfit:ecolog_outfit_orange:ecolog_outfit_green:detector_elite)%
+on_fail = %=fail_task_dec_goodwill(50:ecolog:csky)%
 
 ;--------------------------------------------------------------------------------------------------
 ; ELIMINATE MUTANTS FOR TRAPPER TASK-
@@ -74,8 +74,8 @@ stage_complete = 1
 on_init = %=find_smart_under_faction_control(jup_b220_trapper_task_1_id:monster)%
 precondition = {=all_avail_smart_stayed_squad_count_ge_by_faction(1:nil:false:monster)} true, false
 repeat_timeout = 86400
-on_complete = %=inc_task_stage(jup_b220_trapper_task_1) =complete_task_inc_goodwill(25:stalker) =reward_random_money(2500:3500) =reward_stash(true) =pstor_reset(jup_b220_trapper_task_1_id) =pstor_reset(jup_b220_trapper_task_1_target_id)%
-on_fail = %=fail_task_dec_goodwill(25:stalker) =pstor_reset(jup_b220_trapper_task_1_id) =pstor_reset(jup_b220_trapper_task_1_target_id)%
+on_complete = %=inc_task_stage(jup_b220_trapper_task_1) =complete_task_inc_goodwill(50:stalker) =reward_random_money(2500:3500) =reward_stash(true) =pstor_reset(jup_b220_trapper_task_1_id) =pstor_reset(jup_b220_trapper_task_1_target_id)%
+on_fail = %=fail_task_dec_goodwill(50:stalker) =pstor_reset(jup_b220_trapper_task_1_id) =pstor_reset(jup_b220_trapper_task_1_target_id)%
 on_cancel = %=pstor_reset(jup_b220_trapper_task_1_id) =pstor_reset(jup_b220_trapper_task_1_target_id)%
 
 ;--------------------------------------------------------------------------------------------------
@@ -142,7 +142,7 @@ repeat_timeout = 86400
 status_functor = actor_has_fetch_item
 target_functor = general_fetch_task
 task_complete_descr = jup_b220_trapper_task_4_fetch_finish
-on_complete = %=complete_task_inc_goodwill(25:stalker) =reward_stash(true) =reward_item_cost_mult_and_remove(jup_b220_trapper_task_4_fetch:2) =inc_task_stage(jup_b220_trapper_task_4)%
+on_complete = %=complete_task_inc_goodwill(50:stalker) =reward_stash(true) =reward_item_cost_mult_and_remove(jup_b220_trapper_task_4_fetch:2) =inc_task_stage(jup_b220_trapper_task_4)%
 
 
 ;--------------------------------------------------------------------------------------------------

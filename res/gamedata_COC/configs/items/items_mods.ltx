@@ -1,0 +1,905 @@
+;------------------------------------------------------------------------------------------;
+;                                 РАСШИРЕННЫЙ ПДА	                                       ;
+;------------------------------------------------------------------------------------------;
+;------------------------------------------------------------------------------------------;
+[extension_pda]:booster_script
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+$spawn                                   = "devices\pda"
+$prefetch                                = 16
+cform                                    = skeleton
+visual                                   = dynamics\devices\dev_pda\dev_pda.ogf
+description                              = "Дорогой, влаго-ударостойкий ПДА с раширенными возможностями"
+radius                                   = 68 ; 50               
+slot                                     = 7
+default_to_ruck                          = false
+sprint_allowed                           = true
+control_inertion_factor                  = 1
+script_binding                           = bind_physic_object.init
+can_trade                                = false
+
+inv_name                                 = "Расширенный ПДА"
+inv_name_short                           = "Расширенный ПДА"
+inv_weight                               = 0.1 ;0.2               
+
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 58
+inv_grid_y                               = 1.08
+cost                                     = 5000
+attach_angle_offset                      = -1.303,0.107,-1.702
+attach_position_offset                   = 0.14,0.001,0.02
+attach_bone_name                         = bip01_l_hand
+auto_attach                              = false
+
+remove_after_use                         = false
+
+
+;------------------------------------------------------------------------------------------;
+;                                 СЧЁТЧИК ГЕЙГЕРА	                                       ;
+;------------------------------------------------------------------------------------------;
+;------------------------------------------------------------------------------------------;
+[geiger_dead]:booster
+class       = II_ANTIR
+inv_weight			= 0.484
+visual				= dynamics\devices\dev_datchik_2\dev_datchik_2.ogf
+description			= st_geiger_dead_descr
+inv_name			= st_geiger_dead
+inv_name_short			= st_geiger_dead
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 6
+inv_grid_y			= 41
+cost				= 1790
+quest_item = true
+can_trade = false
+remove_after_use                         = false
+
+
+;------------------------------------------------------------------------------------------;
+;                                 КОШЕЛЁК И ДЕНЬГИ	                                       ;
+;------------------------------------------------------------------------------------------;
+;------------------------------------------------------------------------------------------;
+[money_base]:booster_script
+$spawn                                   = "money_base"
+
+//Найти нормальную модель
+visual                                   = money\money.ogf
+
+//Добавить описание по нормальному
+description                              = "Купюра base"
+
+inv_name                                 = Base
+inv_name_short                           = st_conserva
+inv_weight                               = 0.001
+
+//Добавить иконку
+inv_grid_width                           = 2
+inv_grid_height                          = 1
+inv_grid_x                               = 69
+inv_grid_y                               = 3
+cost                                     = 0
+
+//boost_time                               = 50.0
+//boost_health_restore                     = 0.0002
+//eat_satiety                              = 1
+//eat_alcohol                              = -0.05
+
+attach_angle_offset                      = 0.440521, 1.378287, -0.644026
+attach_position_offset                   = 0.104196, -0.010821, 0.076969
+attach_bone_name                         = bip01_r_hand
+auto_attach                              = false
+
+// should be deleted after update        =
+bone_name                                = bip01_r_hand
+position_offset                          = 0.0,0.0,0.0
+angle_offset                             = 1.570790,1.570790,3.92699
+
+
+//Спасибо товарищу Sinaps!
+use_sound                                = interface\money
+
+[money_10]:money_base
+$spawn                                   = "money_10"
+//Добавить описание по нормальному
+description                              = "Купюра номиналом 10 рублей"
+inv_name                                 = 10
+cost                                     = 10
+inv_grid_x                               = 80
+use_sound                                = interface\money
+visual                                   = money\money_10.ogf
+
+[money_50]:money_base
+$spawn                                   = "money_50"
+//Добавить описание по нормальному
+description                              = "Купюра номиналом 50 рублей"
+inv_name                                 = 50
+cost                                     = 50
+inv_grid_x                               = 78
+use_sound                                = interface\money
+visual                                   = money\money_50.ogf
+
+[money_100]:money_base
+$spawn                                   = "money_100"
+//Добавить описание по нормальному
+description                              = "Купюра номиналом 100 рублей"
+inv_name                                 = 100
+cost                                     = 100
+inv_grid_x                               = 76
+use_sound                                = interface\money
+visual                                   = money\money_100.ogf
+
+[money_500]:money_base
+$spawn                                   = "money_500"
+//Добавить описание по нормальному
+description                              = "Купюра номиналом 500 рублей"
+inv_name                                 = 500
+cost                                     = 500
+inv_grid_x                               = 74
+use_sound                                = interface\money_1
+visual                                   = money\money_500.ogf
+
+[money_1000]:money_base
+$spawn                                   = "money_1000"
+//Добавить описание по нормальному
+description                              = "Купюра номиналом 1000 рублей"
+inv_name                                 = 1000
+cost                                     = 1000
+inv_grid_x                               = 72
+use_sound                                = interface\money_1
+visual                                   = money\money_1000.ogf
+
+[money_5000]:money_base
+$spawn                                   = "money_5000"
+//Добавить описание по нормальному
+description                              = "Купюра номиналом 5000 рублей"
+inv_name                                 = 5000
+cost                                     = 5000
+inv_grid_x                               = 70
+use_sound                                = interface\money_1
+visual                                   = money\money_5000.ogf
+
+[cash]:money_base
+$spawn                                   = "cash"
+//Добавить описание по нормальному
+description                              = "Потрёпанный временем бумажник"
+inv_name                                 = "Кошелёк"
+cost                                     = 0
+inv_grid_width     = 1
+inv_grid_height    = 1
+use_sound                                = interface\money
+visual                                   = money\money_500.ogf
+can_trade                                = false
+quest_item     							 = true
+
+
+;------------------------------------------------------------------------------------------;
+;                                 ПАЛАТКА			                                       ;
+;------------------------------------------------------------------------------------------;
+;------------------------------------------------------------------------------------------;
+[camp_gear]:identity_immunities
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+$spawn                                   = "equipments\camp"
+class                                    = II_ATTCH
+cform                                    = skeleton
+visual                                   = dynamics\equipments\item_psevdodog_tail.ogf
+inv_weight                               = 0
+can_trade                                = true
+quest_item                               = false
+
+[item_tent]:camp_gear
+visual                                   = dynamics\equipments\item_tent.ogf
+description                              = st_itm_tent_desc
+inv_weight                               = 2.2
+inv_name                                 = st_itm_tent_name
+inv_name_short                           = st_itm_tent_name
+inv_grid_width                           = 3
+inv_grid_height                          = 2
+inv_grid_x                               = 6
+inv_grid_y                               = 39
+cost                                     = 2000
+
+
+;------------------------------------------------------------------------------------------;
+;                                 КЕВЛАРОВЫЕ ПЛАСТИНЫ                                      ;
+;------------------------------------------------------------------------------------------;
+;------------------------------------------------------------------------------------------;
+[cev_base]:identity_immunities
+GroupControlSection		= spawn_group
+cform           		= skeleton
+hud				= artefact_hud
+animation_slot			= 11
+allow_inertion			= true
+attach_angle_offset		= 0,0,0
+attach_position_offset		= -0.1,-0.1,0
+attach_bone_name		= bip01_root
+inv_grid_width			= 1
+inv_grid_height			= 1
+belt				= true
+slot 				= -1
+af_actor_properties		= on
+actor_properties		= on
+det_show_particles		= anomaly2\plasma_generator_death
+det_hide_particles		= anomaly2\plasma_generator_death
+det_show_snd			= anomaly\bfuzz_blowout
+det_hide_snd			= anomaly\pux_blast
+af_rank				= 1
+can_be_controlled		= true
+script_binding                  = bind_artefact.bind
+particles_bone			= link
+additional_inventory_weight     = 0
+;--------------------------------------------------------------------------------------------;
+[cev_plastin_1]:cev_base
+$spawn 				= "artefacts\cev_plastin_1"
+class   			= ARTEFACT
+visual				= dynamics\mod_items\cev_plastin_easy.ogf
+description			= st_cev_plastin_1_descr
+inv_name			= st_cev_plastin_1_name
+inv_name_short		        = st_cev_plastin_1_name
+inv_weight			= 1.0
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 17
+inv_grid_y			= 47
+cost				= 2500
+jump_height			= 0.0001
+particles		        = artefact\af_thermal_idle
+det_show_particles		= artefact\af_thermal_show
+det_hide_particles		= artefact\af_thermal_hide
+particles_bone			= joint2
+af_rank				= 0
+lights_enabled                  = false
+trail_light_color 		= 0.9,0.4,0.2
+trail_light_range 		= 2.0
+health_restore_speed		= 0
+radiation_restore_speed		= 0
+satiety_restore_speed		= 0
+power_restore_speed		= 0
+bleeding_restore_speed		= 0
+additional_inventory_weight	= 0
+additional_inventory_weight2	= 0
+hit_absorbation_sect            = cev_plastin_1_absorbation
+[cev_plastin_1_absorbation]
+burn_immunity 			= 0
+strike_immunity 		= 0
+shock_immunity 			= 0
+wound_immunity 			= 0
+radiation_immunity 		= 0
+telepatic_immunity 		= 0
+chemical_burn_immunity 	        = 0
+explosion_immunity 		= 0
+fire_wound_immunity  	        = 0.05
+;----
+[cev_plastin_2]:cev_base
+$spawn 				= "artefacts\cev_plastin_2"
+class   			= ARTEFACT
+visual				= dynamics\mod_items\cev_plastin_easy.ogf
+description			= st_cev_plastin_2_descr
+inv_name			= st_cev_plastin_2_name
+inv_name_short		        = st_cev_plastin_2_name
+inv_weight			= 1.0
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 18
+inv_grid_y			= 47
+cost				= 5000
+jump_height			= 0.0001
+particles		        = artefact\af_thermal_idle
+det_show_particles		= artefact\af_thermal_show
+det_hide_particles		= artefact\af_thermal_hide
+particles_bone			= joint2
+af_rank				= 0
+lights_enabled                  = false
+trail_light_color 		= 0.9,0.4,0.2
+trail_light_range 		= 2.0
+health_restore_speed		= 0
+radiation_restore_speed		= 0
+satiety_restore_speed		= 0
+power_restore_speed		= 0
+bleeding_restore_speed		= 0
+additional_inventory_weight	= 0
+additional_inventory_weight2	= 0
+hit_absorbation_sect            = cev_plastin_2_absorbation
+[cev_plastin_2_absorbation]
+burn_immunity 			= 0
+strike_immunity 		= 0
+shock_immunity 			= 0
+wound_immunity 			= 0
+radiation_immunity 		= 0
+telepatic_immunity 		= 0
+chemical_burn_immunity 	        = 0
+explosion_immunity 		= 0
+fire_wound_immunity  	        = 0.09
+;----
+[cev_plastin_3]:cev_base
+$spawn 				= "artefacts\cev_plastin_3"
+class   			= ARTEFACT
+visual				= dynamics\mod_items\cev_plastin_hard.ogf
+description			= st_cev_plastin_3_descr
+inv_name			= st_cev_plastin_3_name
+inv_name_short		        = st_cev_plastin_3_name
+inv_weight			= 1.0
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 19
+inv_grid_y			= 47
+cost				= 7500
+jump_height			= 0.0001
+particles		        = artefact\af_thermal_idle
+det_show_particles		= artefact\af_thermal_show
+det_hide_particles		= artefact\af_thermal_hide
+particles_bone			= joint2
+af_rank				= 0
+lights_enabled                  = false
+trail_light_color 		= 0.9,0.4,0.2
+trail_light_range 		= 2.0
+health_restore_speed		= 0
+radiation_restore_speed		= 0
+satiety_restore_speed		= 0
+power_restore_speed		= 0
+bleeding_restore_speed		= 0
+additional_inventory_weight	= 0
+additional_inventory_weight2	= 0
+hit_absorbation_sect            = cev_plastin_3_absorbation
+[cev_plastin_3_absorbation]
+burn_immunity 			= 0
+strike_immunity 		= 0
+shock_immunity 			= 0
+wound_immunity 			= 0
+radiation_immunity 		= 0
+telepatic_immunity 		= 0
+chemical_burn_immunity 	        = 0
+explosion_immunity 		= 0
+fire_wound_immunity  	        = 0.13
+;----
+[cev_plastin_4]:cev_base
+$spawn 				= "artefacts\cev_plastin_4"
+class   			= ARTEFACT
+visual				= dynamics\mod_items\cev_plastin_hard.ogf
+description			= st_cev_plastin_4_descr
+inv_name			= st_cev_plastin_4_name
+inv_name_short		        = st_cev_plastin_4_name
+inv_weight			= 1.0
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 20
+inv_grid_y			= 47
+cost				= 15000
+jump_height			= 0.0001
+particles		        = artefact\af_thermal_idle
+det_show_particles		= artefact\af_thermal_show
+det_hide_particles		= artefact\af_thermal_hide
+particles_bone			= joint2
+af_rank				= 0
+lights_enabled                  = false
+trail_light_color 		= 0.9,0.4,0.2
+trail_light_range 		= 2.0
+health_restore_speed		= 0
+radiation_restore_speed		= 0
+satiety_restore_speed		= 0
+power_restore_speed		= 0
+bleeding_restore_speed		= 0
+additional_inventory_weight	= 0
+additional_inventory_weight2	= 0
+hit_absorbation_sect            = cev_plastin_4_absorbation
+[cev_plastin_4_absorbation]
+burn_immunity 			= 0
+strike_immunity 		= 0
+shock_immunity 			= 0
+wound_immunity 			= 0
+radiation_immunity 		= 0
+telepatic_immunity 		= 0
+chemical_burn_immunity 	        = 0
+explosion_immunity 		= 0
+fire_wound_immunity  	        = 0.17
+;----
+[cev_plastin_5]:cev_base
+$spawn 				= "artefacts\cev_plastin_5"
+class   			= ARTEFACT
+visual				= dynamics\mod_items\cev_plastin_hard.ogf
+description			= st_cev_plastin_5_descr
+inv_name			= st_cev_plastin_5_name
+inv_name_short		        = st_cev_plastin_5_name
+inv_weight			= 1.0
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 21
+inv_grid_y			= 47
+cost				= 30000
+jump_height			= 0.0001
+particles		        = artefact\af_thermal_idle
+det_show_particles		= artefact\af_thermal_show
+det_hide_particles		= artefact\af_thermal_hide
+particles_bone			= joint2
+af_rank				= 0
+lights_enabled                  = false
+trail_light_color 		= 0.9,0.4,0.2
+trail_light_range 		= 2.0
+health_restore_speed		= 0
+radiation_restore_speed		= 0
+satiety_restore_speed		= 0
+power_restore_speed		= 0
+bleeding_restore_speed		= 0
+additional_inventory_weight	= 0
+additional_inventory_weight2	= 0
+hit_absorbation_sect            = cev_plastin_5_absorbation
+[cev_plastin_5_absorbation]
+burn_immunity 			= 0
+strike_immunity 		= 0
+shock_immunity 			= 0
+wound_immunity 			= 0
+radiation_immunity 		= 0
+telepatic_immunity 		= 0
+chemical_burn_immunity 	        = 0
+explosion_immunity 		= 0
+fire_wound_immunity  	        = 0.25
+;----
+
+
+;------------------------------------------------------------------------------------------;
+;                                  РАЗБОР ОРУЖИЯ		                                   ;
+;------------------------------------------------------------------------------------------;
+;------------------------------------------------------------------------------------------;
+[crowbar]:identity_immunities
+$spawn 				= "devices\roubles"
+$prefetch 			= 16
+class				= S_PDA
+cform				= skeleton
+visual				= dynamics\equipments\trade\crowbar.ogf
+radius				= 68; 50
+description			= st_crowbar_descr
+inv_name			= st_crowbar
+inv_name_short			= st_crowbar
+inv_grid_width			= 1
+inv_grid_height			= 2
+inv_grid_x			= 15
+inv_grid_y			= 41
+cost				= 390
+;box_size			= 1
+inv_weight			= 1.35
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+repair_part_bonus	 	= 0.03
+can_disassemble = true
+disassemble_categories = dis_stvol
+
+[hammer_inv]:identity_immunities
+$spawn 				= "devices\roubles"
+$prefetch 			= 16
+class				= S_PDA
+cform				= skeleton
+visual				= dynamics\equipments\trade\hammer.ogf
+radius				= 68; 50
+description			= st_hammer_descr
+inv_name			= st_hammer
+inv_name_short		= st_hammer
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x			= 16
+inv_grid_y			= 41
+cost				= 370
+;box_size			= 1
+inv_weight			= 1.8
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+repair_part_bonus	 	= 0.03
+can_disassemble = true
+disassemble_categories = dis_stvol
+can_trade			= false
+quest_item      	= true
+
+[spareparts]:booster ; Universal gun spray lubricant ;x2
+$spawn 				= "devices\roubles"
+description			= st_wpn_spareparts_descr
+inv_name			= st_wpn_spareparts
+inv_name_short			= st_wpn_spareparts
+can_trade			= true
+quest_item      	= false
+cost				= 124
+inv_weight			= 0.233
+visual				= dynamics\equipments\trade\parts.ogf
+
+inv_grid_width			= 3
+inv_grid_height			= 1
+inv_grid_x			= 2
+inv_grid_y			= 42
+
+use_condition                            = true
+max_uses                                 = 1
+remove_after_use                         = false
+
+repair_min_condition 	= 0.0		;Min required condition to use
+repair_max_condition 	= 0.70		;Max required condition to use
+repair_add_condition 	= 0.01		;Amount of condition added to repaired item
+repair_part_bonus	 	= 0.01		;Amount bonus to add_condition if parts are used
+repair_use_parts                         = true	    ;Allows the use of lesser conditioned weapons to be used for parts to add overall bonus to repair
+repair_type			 	= weapon	;weapon or outfit
+repair_refuse			= ;
+repair_only				=           ;Add sections separated by commas that exclude all sections but these
+repair_parts_include    = ;
+repair_parts_exclude	= ;
+;hide_time_wpn=5 = true   
+
+;use_sound			= interface\inv_repair_spray_oil
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; FIELDCRAFT ITEMS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[dis_stvol]
+wpn_k98  
+wpn_stg44  
+wpn_g43  
+wpn_mn91  
+wpn_groza1 
+wpn_groza2 
+wpn_vintorez1 
+wpn_sks 
+wpn_vityaz 
+wpn_ppsh41 
+wpn_toz34_sk2 
+wpn_mp412 
+wpn_aek973 
+wpn_trg22 
+wpn_trg42 
+wpn_l115a3 
+wpn_svd_m 
+wpn_stg58 
+wpn_m60 
+wpn_hk417 
+wpn_m14 
+wpn_ak12_762 
+wpn_sig552 
+wpn_ace21
+wpn_fnc 
+wpn_mtar21 
+wpn_mp7 
+wpn_9a91                                            
+wpn_9a91_1p29                                       
+wpn_9a91_9x39scope                                  
+wpn_9a91_ekp                                        
+wpn_9a91_kobra                                      
+wpn_abakan                                          
+wpn_abakan_1p29                                     
+wpn_abakan_ekp                                      
+wpn_abakan_kobra                                    
+wpn_abakan_pso                                      
+wpn_aek971                                          
+wpn_aek971_1p29                                     
+wpn_aek971_ekp                                      
+wpn_aek971_kobra                                    
+wpn_aek971_pso                                      
+wpn_ak                                              
+wpn_ak101                                          
+wpn_ak101_ac10632                                   
+wpn_ak101_ac11090                                   
+wpn_ak101_acog                                      
+wpn_ak101_c-more                                    
+wpn_ak101_eot                                       
+wpn_ak102                                           
+wpn_ak102_ac10632                                   
+wpn_ak102_ac11090                                   
+wpn_ak102_acog                                      
+wpn_ak102_c-more                                    
+wpn_ak102_eot                                       
+wpn_ak103                                           
+wpn_ak103_1p29                                      
+wpn_ak103_ekp                                       
+wpn_ak103_kobra                                     
+wpn_ak103_pso                                       
+wpn_ak104                                           
+wpn_ak104_1p29                                      
+wpn_ak104_ekp                                       
+wpn_ak104_kobra                                     
+wpn_ak104_pso                                      
+wpn_ak105                                           
+wpn_ak105_1p29                                      
+wpn_ak105_ekp                                       
+wpn_ak105_kobra                                     
+wpn_ak105_pso                                       
+wpn_ak12                                            
+wpn_ak12_ac10632                                    
+wpn_ak12_ac11090                                   
+wpn_ak12_acog                                       
+wpn_ak12_c-more                                     
+wpn_ak12_eot                                        
+wpn_ak74                                            
+wpn_ak74_1p29                                       
+wpn_ak74_ekp                                        
+wpn_ak74_kobra                                      
+wpn_ak74_pso                                        
+wpn_ak74_sk1                                        
+wpn_ak74_sk2                                        
+wpn_ak74_sk3                                        
+wpn_ak74_up                                         
+wpn_ak74_up2                                        
+wpn_ak74m                                           
+wpn_ak74m_1p29                                      
+wpn_ak74m_camo                                      
+wpn_ak74m_ekp                                       
+wpn_ak74m_kobra                                     
+wpn_ak74m_pso                                       
+wpn_ak74m_sk1                                       
+wpn_ak74m_sk1_1p29                                  
+wpn_ak74m_sk1_ekp                                   
+wpn_ak74m_sk1_kobra                                 
+wpn_ak74m_sk1_pso                                   
+wpn_ak74m_sk2                                       
+wpn_ak74m_sk2_1p29                                  
+wpn_ak74m_sk2_ekp                                   
+wpn_ak74m_sk2_kobra                                 
+wpn_ak74m_sk2_pso                                   
+wpn_ak74u                                           
+wpn_ak74u_1p29                                      
+wpn_ak74u_ekp                                       
+wpn_ak74u_kobra                                     
+wpn_ak74u_pso                                       
+wpn_ak74u_sk1                                       
+wpn_ak74u_sk2                                       
+wpn_ak74u_sk3                                       
+wpn_ak74u_sk4                                       
+wpn_ak74u_sk5                                       
+wpn_ak74u_snag                                      
+wpn_akm                                             
+wpn_akm_1p29                                        
+wpn_akm_ekp                                         
+wpn_akm_kobra                                       
+wpn_akm_pso                                         
+wpn_akms                                            
+wpn_akms_1p29                                       
+wpn_akms_ekp                                        
+wpn_akms_kobra                                      
+wpn_akms_pso                                        
+wpn_aks                                             
+wpn_aks74                                           
+wpn_aks74_1p29                                      
+wpn_aks74_ekp                                       
+wpn_aks74_kobra                                     
+wpn_aks74_pso                                       
+wpn_aps                                            
+wpn_aug                                             
+wpn_beretta                                         
+wpn_beretta_sk1                                     
+wpn_bizon                                           
+wpn_bizon_1p29                                      
+wpn_bizon_ekp                                       
+wpn_bizon_kobra                                     
+wpn_bizon_pso                                       
+wpn_bm16                                            
+wpn_bm16_full                                       
+wpn_colt1911                                        
+wpn_colt1911_sk1                                    
+wpn_colt1911_sk2                                    
+wpn_colt1911_sk3                                    
+wpn_cz75                                            
+wpn_desert_eagle                                    
+wpn_desert_eagle_docter_sight                       
+wpn_desert_eagle_nimble                             
+wpn_famas                                           
+wpn_famas_ac10632                                   
+wpn_famas_ac11090                                   
+wpn_famas_acog                                      
+wpn_famas_c-more                                    
+wpn_famas_eot                                       
+wpn_fn2000                                          
+wpn_fn57                                            
+wpn_fnp45                                           
+wpn_fnx45                                           
+wpn_fort                                            
+wpn_fort_snag                                       
+wpn_g3                                              
+wpn_g36                                             
+wpn_g36c                                            
+wpn_g36c_ac10632                                    
+wpn_g36c_ac11090                                    
+wpn_g36c_acog                                       
+wpn_g36c_c-more                                     
+wpn_g36c_eot                                        
+wpn_g36k                                            
+wpn_g3_ac10632                                      
+wpn_g3_ac11090                                      
+wpn_g3_acog                                         
+wpn_g3_c-more                                       
+wpn_g3_eot                                          
+wpn_g3sg1                                           
+wpn_galil                                           
+wpn_gauss                                           
+wpn_glock                                           
+wpn_groza                                           
+wpn_gsh18                                           
+wpn_gsh18_sk1                                       
+wpn_hk416                                           
+wpn_hk416_ac10632                                   
+wpn_hk416_ac11090                                   
+wpn_hk416_acog                                      
+wpn_hk416_c-more                                    
+wpn_hk416_eot                                       
+wpn_hpsa                                            
+wpn_hpsa_sk1                                        
+wpn_ksvk                                             
+wpn_l85                                             
+wpn_l96                                             
+wpn_lr300                                           
+wpn_lr300_ac10632                                   
+wpn_lr300_ac11090                                   
+wpn_lr300_acog                                      
+wpn_lr300_c-more                                    
+wpn_lr300_eot                                       
+wpn_m16                                             
+wpn_m16_ac10632                                     
+wpn_m16_ac11090                                     
+wpn_m16_acog                                        
+wpn_m16_c-more                                      
+wpn_m16_eot                                         
+wpn_m16a2                                           
+wpn_m249                                            
+wpn_m249_ac10632                                    
+wpn_m249_ac11090                                    
+wpn_m249_acog                                       
+wpn_m249_c-more                                     
+wpn_m249_eot                                       
+wpn_m4                                              
+wpn_m4_ac10632                                      
+wpn_m4_ac11090                                      
+wpn_m4_acog                                         
+wpn_m4_c-more                                       
+wpn_m4_eot                                          
+wpn_m4a1                                            
+wpn_m4a1_ac10632                                    
+wpn_m4a1_ac11090                                    
+wpn_m4a1_acog                                      
+wpn_m4a1_c-more                                     
+wpn_m4a1_eot                                        
+wpn_m79                                             
+wpn_m95                                             
+wpn_m98b                                            
+wpn_mp133                                           
+wpn_mp153                                           
+wpn_mp443                                           
+wpn_mp5                                             
+wpn_mp5_ac10632                                     
+wpn_mp5_ac11090                                     
+wpn_mp5_acog                                        
+wpn_mp5_c-more                                      
+wpn_mp5_eot                                         
+wpn_mp5sd                                           
+wpn_mp5sd_ac10632                                   
+wpn_mp5sd_ac11090                                  
+wpn_mp5sd_acog                                      
+wpn_mp5sd_c-more                                    
+wpn_mp5sd_eot                                       
+wpn_oc33                                            
+wpn_oc33_sk1                                        
+wpn_p90                                            
+wpn_p90_ac10632                                     
+wpn_p90_ac11090                                     
+wpn_p90_acog                                       
+wpn_p90_c-more                                      
+wpn_p90_eot                                         
+wpn_pb                                              
+wpn_pb_sk1                                          
+wpn_pkm                                             
+wpn_pkm_zulus                                      
+wpn_pm                                              
+wpn_pm_actor                                        
+wpn_pm_sk1                                          
+wpn_pmm                                             
+wpn_pp2000                                          
+wpn_pp2000_ac10632                                  
+wpn_pp2000_ac11090                                  
+wpn_pp2000_acog                                     
+wpn_pp2000_c-more                                   
+wpn_pp2000_eot                                     
+wpn_protecta                                        
+wpn_remington870                                    
+wpn_remington870_ac10632                            
+wpn_remington870_ac11090                            
+wpn_remington870_c-more                             
+wpn_remington870_eot                                
+wpn_rg-6                                            
+wpn_rpd                                             
+wpn_rpg7                                            
+wpn_rpk                                             
+wpn_rpk74                                           
+wpn_rpk74_1p29                                      
+wpn_rpk74_ekp                                       
+wpn_rpk74_kobra                                     
+wpn_rpk74_pso                                       
+wpn_saiga                                           
+wpn_saiga_1p29                                      
+wpn_saiga_ekp                                       
+wpn_saiga_kobra                                     
+wpn_saiga_pso                                       
+wpn_scar                                            
+wpn_scar_ac10632                                   
+wpn_scar_ac11090                                    
+wpn_scar_acog                                       
+wpn_scar_c-more                                     
+wpn_scar_eot                                        
+wpn_sig220                                          
+wpn_sig220                                          
+wpn_sig220_sk1                                      
+wpn_sig220_sk1                                      
+wpn_sig220_sk2                                      
+wpn_sig220_sk2                                      
+wpn_sig550                                          
+wpn_sig550                                          
+wpn_sig550_ac10632                                  
+wpn_sig550_ac11090                                  
+wpn_sig550_acog                                     
+wpn_sig550_c-more                                   
+wpn_sig550_eot                                      
+wpn_sig550_luckygun                                 
+wpn_spas12                                          
+wpn_spas12                                          
+wpn_sr25                                            
+wpn_sr25                                            
+wpn_sv98                                            
+wpn_sv98                                            
+wpn_svd                                             
+wpn_svd                                             
+wpn_svd_1p29                                        
+wpn_svd_ekp                                         
+wpn_svd_kobra                                       
+wpn_svt40                                           
+wpn_svu                                             
+wpn_svu_1p29                                        
+wpn_svu_ekp                                         
+wpn_svu_kobra                                       
+wpn_toz194                                          
+wpn_toz194                                          
+wpn_toz34                                           
+wpn_toz34                                           
+wpn_toz34_obrez                                    
+wpn_toz34_obrez                                     
+wpn_toz34_obrez_sk1                                 
+wpn_toz34_obrez_sk1                                 
+wpn_toz34_sk1                                       
+wpn_toz34_sk1                                      
+wpn_tt33                                            
+wpn_tt33                                            
+wpn_tt33_sk1                                        
+wpn_tt33_sk1                                       
+wpn_ump45                                           
+wpn_ump45                                           
+wpn_ump45_ac10632                                   
+wpn_ump45_ac11090                                   
+wpn_ump45_acog                                      
+wpn_ump45_c-more                                    
+wpn_ump45_eot                                       
+wpn_usp                                             
+wpn_usp_nimble                                      
+wpn_val                                            
+wpn_val_1p29                                        
+wpn_val_9x39scope                                   
+wpn_val_ekp                                         
+wpn_val_kobra                                      
+wpn_vepr                                            
+wpn_vepr_1p29                                       
+wpn_vepr_ekp                                        
+wpn_vepr_kobra                                     
+wpn_vepr_pso                                        
+wpn_vihr                                            
+wpn_vihr_1p29                                       
+wpn_vihr_9x39scope                                  
+wpn_vihr_ekp                                        
+wpn_vihr_kobra                                      
+wpn_vintorez                                        
+wpn_vintorez_1p29                                   
+wpn_vintorez_ekp                                    
+wpn_vintorez_kobra                                  
+wpn_vsk94                                           
+wpn_vsk94_1p29                                      
+wpn_vsk94_9x39scope                                 
+wpn_vsk94_ekp                                       
+wpn_vsk94_kobra                                     
+wpn_vssk                                           
+wpn_wa2000                                          
+wpn_walther                                         
+wpn_wincheaster1300                                 
+wpn_wincheaster1300_trapper                        
+random_parts = spareparts

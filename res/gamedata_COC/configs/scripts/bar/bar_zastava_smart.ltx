@@ -152,7 +152,22 @@ path_walk = guard_4_walk
 path_look = guard_4_look
 on_info = {!actor_enemy =see_actor =actor_has_weapon =actor_in_zone(bar_zastava_1_warn_zone) =dist_to_actor_le(35)} remark@duty_guard4
 ;out_restr = bar_zastava_online_restrictor
-meet = no_meet
+;mlr
+meet = meet_main
+
+[meet_main]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+;mlr
 
 [remark@duty_guard4]
 anim = threat

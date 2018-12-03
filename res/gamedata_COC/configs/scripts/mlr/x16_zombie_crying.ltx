@@ -1,0 +1,45 @@
+[logic@x16_zombie_crying]
+suitable = {=check_npc_name(x16_zombie_crying)} true
+prior = 200
+active = walker@x16_zombie_crying
+
+[walker@x16_zombie_crying]
+path_walk = zombcry_1_walk
+path_look = zombcry_1_look
+on_actor_in_zone = x16_space_restrictor | %=play_sound(x16_zombie_cry)%
+on_info = {+yan_kill_brain_done} walker@x16_zombie_no_crying
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+meet = no_meet
+out_restr = x16_space_restrictor
+
+[walker@x16_zombie_no_crying]
+path_walk = zombcry_1_walk
+path_look = zombcry_2_look
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+meet = meet
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = true
+allow_break = false
+meet_on_talking = false
+trade_enable = false

@@ -452,7 +452,7 @@
 	<string id="cc_generic-freedom-meet_use_no_weapon_8">
 		<text>Ну не люблю я говорить под прицелом, чувак.</text>
 	</string>
-	
+
 	<!-- Loner -->
 	
 	<string id="cc_generic-stalker-meet_hello_1">
@@ -691,10 +691,10 @@
 		<text>Ты пушку-то спрячь!</text>
 	</string>
 	<string id="cc_generic-killer-meet_use_no_default_1">
-		<text>Не, у меня нет настроения болтать.</text>
+		<text>Слышишь, иди с другими трепись. Я - пас.</text>
 	</string>
 	<string id="cc_generic-killer-meet_use_no_default_2">
-		<text>Извини, сейчас - неохота болтать.</text>
+		<text>Кореш, мне сейчас не до тёрок.</text>
 	</string>
 	<string id="cc_generic-killer-meet_use_no_default_3">
 		<text>Дружище, ты плохо понял? Я не хочу с тобой разговаривать.</text>
@@ -718,13 +718,13 @@
 		<text>Да не охота мне болтать, иди с командиром говори.</text>
 	</string>
 	<string id="cc_generic-killer-meet_use_no_weapon_1">
-		<text>Э! Сперва пушку спрячь. Потом поговорим.</text>
+		<text>Со стволом в лапах - какой базар? Убери на!</text>
 	</string>
 	<string id="cc_generic-killer-meet_use_no_weapon_2">
-		<text>Если хочешь говорить - убери волыну.</text>
+		<text>Волыну заныкай, тогда и побазарим.</text>
 	</string>
 	<string id="cc_generic-killer-meet_use_no_weapon_3">
-		<text>Спрячь волыну, потом потолкуем.</text>
+		<text>Или пушку нах, или сам вали!</text>
 	</string>
 
 	<!-- Military -->

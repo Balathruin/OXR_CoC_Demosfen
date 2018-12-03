@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_mm_fast_save_btn">
+		<text>Fast save</text>
+	</string>
+
+	<string id="ui_mm_show_load_dialog">
+		<text>Show load dialog</text>
+	</string>
+
+</string_table>

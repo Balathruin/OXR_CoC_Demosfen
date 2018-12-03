@@ -46,17 +46,63 @@
   </game_loaded>
 
 <intro_logo>
-	<global_wnd/>
-	<global_wnd_16/>
-	<item><length_sec>0</length_sec><main_wnd /></item>  
+	<global_wnd width="1920" height="1080">
+		<auto_static width="1920" height="1080" stretch="1">
+		<texture>intro\intro_back</texture>
+		<texture></texture>
+		</auto_static>
+	</global_wnd>
+  <global_wnd_16/>
+		<play_each_item>1</play_each_item>
+	<item type="video">
+	<sound>intro\intro_game</sound>
+		<delay>1</delay>
+		<pause_state>on</pause_state>
+		<video_wnd x="0" y="0" width="1920" height="1080" stretch="1" alignment="c">
+			<texture x="0" y="0" width="1920" height="1080">intro\intro_game</texture>
+		</video_wnd>
+	</item>
 </intro_logo>
 
 
 <intro_game>
-   <global_wnd/>
+	<global_wnd width="1920" height="1080">
+		<auto_static width="1920" height="1080" stretch="1">
+		<texture>intro\intro_back</texture>
+		<texture></texture>
+		</auto_static>
+	</global_wnd>
   <global_wnd_16/>
-<item><length_sec>0</length_sec><main_wnd /></item>  
+		<play_each_item>1</play_each_item>
+	<item type="video">
+	<sound>intro\intro_game</sound>
+		<delay>1</delay>
+		<pause_state>on</pause_state>
+		<video_wnd x="0" y="0" width="1920" height="1080" stretch="1" alignment="c">
+			<texture x="0" y="0" width="1920" height="1080">intro\intro_game</texture>
+		</video_wnd>
+	</item>
 </intro_game>
+
+<hip_1>
+	<play_each_item>1</play_each_item>
+	<global_wnd x="0" y="0" width="1920" height="1080">
+		<auto_static x="0" y="0" width="1920" height="1080" stretch="1">
+			<window_name>back</window_name>
+			<texture>intro\intro_back</texture>
+		</auto_static>
+	</global_wnd>
+		
+	<item type="video">
+	<sound>intro\hip_1</sound>
+		<delay>1</delay>
+		<pause_state>on</pause_state>
+		<can_be_stopped>on</can_be_stopped>
+		<video_wnd x="0" y="0" width="1920" height="1080" stretch="1" alignment="c">
+			<texture x="0" y="0" width="1920" height="1080">intro\hip_1</texture>
+		</video_wnd>
+	</item>
+</hip_1>
 
 <!--
 #Phrase|string_count|coordinate
@@ -510,4 +556,178 @@
 		</item>
 	</final_peace>
 
+<!-- mlr -->
+	<totaliz_helper_mlr>
+		<global_wnd/>
+		<item>
+			<length_sec>15</length_sec>
+			<pause_state/>
+			<guard_key/>
+			<sound/>
+			<cursor_pos/>
+			<pda_section/>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="15000" x="712" y="475" width="400" height="150" alignment="c" stretch="1"
+							light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
+					<window_name>w1</window_name>
+					<text font="graffiti22" r="225" g="225" b="250" a="255">totaliz_helper_mlr_text</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</totaliz_helper_mlr>	
+	
+	<bridge_down_red_forest>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.bridge_down</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">bridge_down_red_forest_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</bridge_down_red_forest>	
+	
+	<bridge_stop_red_forest>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.bridge_stop</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">bridge_stop_red_forest_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</bridge_stop_red_forest>		
+	
+	<bridge_up_red_forest>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.bridge_up</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">bridge_up_red_forest_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</bridge_up_red_forest>	
+
+	<disgusting_tree_1_search>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.disgusting_tree_1</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">disgusting_trees_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</disgusting_tree_1_search>	
+	
+	<disgusting_tree_2_search>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.disgusting_tree_2</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">disgusting_trees_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</disgusting_tree_2_search>	
+	
+	<disgusting_tree_3_search>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.disgusting_tree_3</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">disgusting_trees_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</disgusting_tree_3_search>	
+	
+	<disgusting_tree_4_search>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.disgusting_tree_4</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">disgusting_trees_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</disgusting_tree_4_search>
+	
+	<about_esc_m_trader_call>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<!-- <action id="use" finalize="1">xr_effects.disgusting_tree_4</action> -->
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">about_esc_m_trader_call_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</about_esc_m_trader_call>	
+
+	<esc_2_12_medic_mlr_medbag_hidden_search>
+		<global_wnd/>
+		<item>
+			<disabled_key>quit</disabled_key>
+			<length_sec/>
+			<action id="use" finalize="1">xr_effects.esc_2_12_medic_mlr_medbag_hidden_search_funct</action>
+			<guard_key>use</guard_key>
+			<grab_input>0</grab_input>
+			<main_wnd>
+				<auto_static start_time="0" length_sec="5000" x="512" y="660" width="300" height="60" alignment="c" stretch="1"
+							la_cyclic="1" la_texture="1" la_alpha="1">
+					<text font="graffiti22" r="225" g="225" b="250" a="255" align="c">esc_2_12_medic_mlr_medbag_hidden_search_tips</text>
+				</auto_static>
+			</main_wnd>
+		</item>
+	</esc_2_12_medic_mlr_medbag_hidden_search>
+	
 </window>

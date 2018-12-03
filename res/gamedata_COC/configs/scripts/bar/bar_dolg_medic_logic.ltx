@@ -1,0 +1,69 @@
+[logic@bar_dolg_medic]
+suitable = {=check_npc_name(bar_dolg_medic)} true
+prior = 200
+active = animpoint@base
+can_select_weapon = true
+level_spot = medic
+dont_keep_items = true
+trade = misc\trade\trade_mlr_duty_medic.ltx
+
+[animpoint@base]
+cover_name = dolg_bar_general_medic_plase
+avail_animations = animpoint_sit_normal
+use_camp = false
+meet = meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+
+[logic@bar_dolg_medic_bodyguard]
+active = walker@guard_1
+prior = 150
+suitable = {=check_npc_name(bodyguard_duty_medic_bar_general)} true
+
+[walker@guard_1]
+path_walk = dolg_medic_bodyguard_1_walk
+path_look = dolg_medic_bodyguard_1_look
+meet = meet@guard_1
+
+[meet@guard_1]
+close_distance = 5
+close_victim = actor
+close_anim = guard
+use = false
+
+[logic@sick_duty_stalker_bar_general]
+suitable = {=check_npc_name(sick_duty_stalker_bar_general)} true
+prior = 200
+active = animpoint@base1
+can_select_weapon = false
+dont_keep_items = true
+
+[animpoint@base1]
+cover_name = sick_duty_stalker_bar_general_plase
+avail_animations = trans_0
+use_camp = false
+meet = no_meet
+on_actor_in_zone = bar_dolg_general_kill_zone | %=play_sound(sick_duty_phrases)%
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false

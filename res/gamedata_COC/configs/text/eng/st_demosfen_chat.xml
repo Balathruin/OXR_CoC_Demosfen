@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_demosfen_chat_connectionToServer">
+		<text>Connection to server</text>
+	</string>
+
+	<string id="st_demosfen_chat_exit">
+		<text>Log out</text>
+	</string>
+	
+	<string id="st_demosfen_chat_login">
+		<text>Login</text>
+	</string>
+	
+	<string id="st_demosfen_chat_send">
+		<text>Send</text>
+	</string>
+	
+	<string id="st_demosfen_chat_chat">
+		<text>Chat</text>
+	</string>
+	
+	<string id="st_demosfen_errLogin">
+		<text>Invalid nickname. Already isused or bad symbols</text>
+	</string>
+	
+	<string id="st_demosfen_chat_title">
+		<text>Communications</text>
+	</string>
+</string_table>

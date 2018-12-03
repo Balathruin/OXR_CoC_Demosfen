@@ -3,6 +3,9 @@
 	<string id="st_ignite_fire">
 		<text>Зажечь ($$ACTION_USE$$)</text>
 	</string>
+	<string id="st_use_fire">
+		<text>Используйте набор для розжига</text>
+	</string>
 	<string id="st_extinguish_fire">
 		<text>Потушить ($$ACTION_USE$$)</text>
 	</string>
@@ -198,6 +201,10 @@
 	<string id="st_radiation_danger">
 		<text>Опасный уровень радиации. Для прохода необходима защита.</text>
 	</string>
+	<string id="st_health_danger"> 
+		<text>Критический уровень здоровья! Примите аптечку!</text>
+	</string>
+	<!---->
 	<string id="st_search_helicopter">
 		<text>Осмотреть вертолёт ($$ACTION_USE$$)</text>
 	</string>
@@ -245,9 +252,6 @@
 	</string>
 	<string id="ui_st_mp_experience_grow">
 		<text>-</text>
-	</string>
-	<string id="ui_st_mp_create">
-		<text>Создать</text>
 	</string>
 	<string id="zat_b12_conteiner_full_locked">
 		<text>Контейнер закрыт - необходимы два ключа</text>
@@ -301,7 +305,7 @@
 		<text>Получены координаты тайника</text>
 	</string>
 	<string id="st_press_any_key">
-		<text>Нажмите любую клавишу для перехода к игре</text>
+		<text>Периметр  пересечён ...</text>
 	</string>
 	<string id="tips_labx16switcher_press">
 		<text>Отключить пси-установку ($$ACTION_USE$$)</text>
@@ -309,6 +313,27 @@
 	<string id="tips_rad_switcher_press">
 		<text>Отключить Выжигатель Мозгов ($$ACTION_USE$$)</text>
 	</string>
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TIP TEXT  STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Activate BrainScorcher Switch Tip -->
+
+	<string id="drx_sl_tips_rad_switcher_press">
+		<text>Включить Выжигатель Мозгов ($$ACTION_USE$$)</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 	<string id="st_make_a_wish">
 		<text>Загадать желание ($$ACTION_USE$$)</text>
 	</string>
@@ -410,7 +435,7 @@
 	</string>
 	
 	<string id="st_screen_kick">
-		<text>Пнуть</text>
+		<text>Пнуть ($$ACTION_USE$$)</text>
 	</string>
 	<string id="st_screen_field_dress">
 		<text>Взять трофеи</text>

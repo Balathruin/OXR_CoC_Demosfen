@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {=actor_on_level(l11_pripyat) =actor_community(actor_monolith)} sr_idle@in_area %=give_main_monolith_mlr_task_1%
+
+[sr_idle@in_area]
+on_actor_inside = sr_idle@in_area_1 %+meet_to_teacher_monolith_mlr =send_tip(first_meet_words_mon_teacher:mon_teacher)%
+
+[sr_idle@in_area_1]
+on_game_timer = 75 | sr_idle@in_area_2 %=send_tip(second_meet_words_mon_teacher:mon_teacher)%
+
+[sr_idle@in_area_2]
+on_game_timer = 100 | sr_idle@giant %+talk_to_teacher_monolith_mlr +main_monolith_mlr_task_3_2_dlg_new_covers =send_tip(final_meet_words_mon_teacher:mon_teacher)%
+
+[sr_idle@giant]
+on_info = {=actor_in_zone(pri_underground_garage_surge_hide)} sr_idle@before_wings %=spawn_object(main_mon_task_1_pseudogiant:pri_followers_wave8_bomber_walk1)%
+
+[sr_idle@before_wings]
+on_info = {=actor_on_level(l11_pripyat) =actor_community(actor_monolith) +main_monolith_mlr_task_4_dlg_3} nil %=send_tip(give_main_monolith_mlr_task_5_message:mon_teacher) =give_main_monolith_mlr_task_5%

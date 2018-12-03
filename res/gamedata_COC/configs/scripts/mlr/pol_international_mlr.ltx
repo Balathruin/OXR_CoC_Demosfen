@@ -1,0 +1,10 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {=is_night_special_pole} %=play_sound(international_pole_mlr_snd)%
+on_signal = sound_end | sr_idle@stop
+
+[sr_idle@stop]
+on_info = %=stop_sound%
+on_info2 = {=is_day} sr_idle@start

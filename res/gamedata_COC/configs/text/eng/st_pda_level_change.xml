@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="plc_travel_to">
+		<text>Travel To</text>
+	</string>
+	<string id="plc_level_changer">
+		<text>Level Changer</text>
+	</string>
+	<string id="plc_travel">
+		<text>Travel</text>
+	</string>
+</string_table>

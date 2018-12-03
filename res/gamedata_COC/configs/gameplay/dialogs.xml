@@ -10,6 +10,16 @@
         <precondition>dialog_manager.uni_dialog_precond</precondition>
         <init_func>dialog_manager.init_new_dialog</init_func>
     </dialog>
+	    <dialog id="dm_traveler_dialog2">
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
+        <precondition>travel_manager.uni_traveler_precond</precondition>
+        <init_func>travel_manager.init_traveler_dialog</init_func>
+    </dialog>
+    <dialog id="dm_universal_dialog2">
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
+        <precondition>dialog_manager.uni_dialog_precond</precondition>
+        <init_func>dialog_manager.init_new_dialog</init_func>
+    </dialog>
 	<!-- hostage_companion_task_1 -->
 	<dialog id="hostage_companion_task_1_dialog">
         <phrase_list>
@@ -71,13 +81,24 @@
 	<dialog id="dm_ashot_and_yar_dialog">
 		<precondition>dialogs_jupiter.is_message_receiver</precondition>
         <init_func>dialog_manager.dm_init_dynamic_ashot_and_yar_dialog</init_func>
-    </dialog>	
+    </dialog>
+
+
 	<dialog id="dm_ordered_task_dialog">
 		<precondition>dialogs_axr_companion.is_not_actor_companion</precondition>
         <init_func>dialog_manager.dm_init_dynamic_task_dialog</init_func>
-    </dialog>	
+    </dialog>
+	<dialog id="dm_ordered_task_dialog2">
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
+        <init_func>dialog_manager.dm_init_dynamic_task_dialog</init_func>
+    </dialog>
+
 	<dialog id="dm_sim_ordered_task_dialog">
 		<precondition>dialogs_axr_companion.is_not_actor_companion</precondition>
+        <init_func>dialog_manager.dm_init_sim_dynamic_task_dialog</init_func>
+    </dialog>
+	<dialog id="dm_sim_ordered_task_dialog2">
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
         <init_func>dialog_manager.dm_init_sim_dynamic_task_dialog</init_func>
     </dialog>
 	<dialog id="dm_ordered_task_completed_dialog">
@@ -88,6 +109,10 @@
 		<precondition>dialogs.sim_actor_has_finished_task</precondition>
         <init_func>dialog_manager.dm_init_sim_dynamic_task_completed_dialog</init_func>
     </dialog>
+
+
+
+
 	<dialog id="dm_ordered_task_cancel_dialog">
         <precondition>dialogs.actor_has_ongoing_task</precondition>
         <init_func>dialog_manager.dm_init_dynamic_task_cancel_dialog</init_func>
@@ -96,9 +121,9 @@
         <precondition>dialogs.sim_actor_has_ongoing_task</precondition>
         <init_func>dialog_manager.dm_init_sim_dynamic_task_cancel_dialog</init_func>
     </dialog>
-	
+
 	<dialog id="dm_broker_dialog">
-        <init_func>dialog_manager.dm_init_dynamic_broker_dialog</init_func>
+       <init_func>dialog_manager.dm_init_dynamic_broker_dialog</init_func>
     </dialog>
 	<dialog id="dm_tech_repair">
 		<precondition>inventory_upgrades.has_repair_info</precondition>
@@ -114,6 +139,11 @@
         <precondition>dialogs_axr_companion.dm_actor_become_companion_guide_precond</precondition>
         <init_func>dialogs_axr_companion.dm_init_actor_become_guide_to_companion</init_func>
     </dialog>
+    <dialog id="dm_actor_become_guide_to_companion_dialog2">
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
+        <precondition>dialogs_axr_companion2.dm_actor_become_companion_guide_precond</precondition>
+        <init_func>dialogs_axr_companion2.dm_init_actor_become_guide_to_companion</init_func>
+    </dialog>	
 	<dialog id="dm_companion_trade">
         <precondition>dialogs_axr_companion.is_actor_companion</precondition>
         <phrase_list>
@@ -128,13 +158,24 @@
         <precondition>dialogs_axr_companion.is_actor_companion</precondition>
         <init_func>dialogs_axr_companion.dm_init_is_actor_companion</init_func>
     </dialog>
+    <dialog id="dm_is_actor_companion_dialog2">
+        <precondition>dialogs_axr_companion2.is_actor_companion</precondition>
+        <init_func>dialogs_axr_companion2.dm_init_is_actor_companion</init_func>
+    </dialog>
     <dialog id="dm_companion_patrol">
         <precondition>dialogs_axr_companion.is_actor_companion</precondition>
         <init_func>dialogs_axr_companion.dm_init_companion_patrol</init_func>
     </dialog>
-    <dialog id="dm_companion_leave">
+    <dialog id="dm_companion_patrol2">
+        <precondition>dialogs_axr_companion2.is_actor_companion</precondition>
+        <init_func>dialogs_axr_companion2.dm_init_companion_patrol</init_func>
+    </dialog>
+   <dialog id="dm_companion_leave">
 		<precondition>dialogs_axr_companion.can_dismiss_companion</precondition>
         <precondition>dialogs_axr_companion.is_actor_companion</precondition>
+		--mlr SBF
+        <precondition>jg_guider.is_not_guider_companion</precondition>	
+        --mlr SBF		
         <phrase_list>
             <phrase id="0">
                 <text>axr_phrase_actor_give_command_leave</text>
@@ -154,7 +195,35 @@
             </phrase>
         </phrase_list>
     </dialog>
+    <dialog id="dm_companion_leave2">
+		<precondition>dialogs_axr_companion2.can_dismiss_companion</precondition>
+        <precondition>dialogs_axr_companion2.is_actor_companion</precondition>
+		--mlr SBF
+        <precondition>jg_guider.is_not_guider_companion</precondition>	
+        --mlr SBF		
+        <phrase_list>
+            <phrase id="0">
+                <text>axr_phrase_actor_give_command_leave</text>
+				<next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>axr_phrase_companion_are_you_sure</text>
+				<next>2</next>
+				<next>3</next>
+            </phrase>
+            <phrase id="2">
+                <text>axr_phrase_actor_give_command_leave</text>
+				<action>dialogs_axr_companion2.remove_companions_from_squad</action>
+            </phrase>
+            <phrase id="3">
+                <text>axr_phrase_actor_give_command_nevermind</text>
+            </phrase>
+        </phrase_list>
+    </dialog>	
 	<dialog id="friendly_companion_dialog">
+	<!-- mlr -->
+		<precondition>xr_conditions.is_squad_commander</precondition>	
+	<!-- mlr -->	
 		<precondition>dialogs_axr_companion.is_non_story</precondition>
 		<precondition>dialogs_axr_companion.is_not_actor_companion</precondition>
 		<precondition>dialogs_axr_companion.is_actor_friend</precondition>
@@ -171,6 +240,26 @@
             </phrase>
         </phrase_list>
     </dialog>
+	<dialog id="friendly_companion_dialog2">
+	<!-- mlr -->
+		<precondition>xr_conditions.is_squad_commander</precondition>	
+	<!-- mlr -->	
+		<precondition>dialogs_axr_companion2.is_non_story</precondition>
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
+		<precondition>dialogs_axr_companion2.is_actor_friend</precondition>
+		<precondition>dialogs_axr_companion2.is_room_in_actor_squad</precondition>
+		<precondition>dialogs_axr_companion2.is_not_hostage_task_giver</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>axr_phrase_friend_companion_ask_join</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>axr_phrase_friend_companion_answer_join</text>
+				<action>dialogs_axr_companion2.become_actor_companion</action>
+            </phrase>
+        </phrase_list>
+    </dialog>	
 	<!-- For occasion when npc gives player hostage rescue task and player asks them to join -->
 	<dialog id="friendly_companion_dialog_hostage_version">
 		<precondition>dialogs_axr_companion.is_not_actor_companion</precondition>
@@ -184,6 +273,21 @@
             <phrase id="1">
                 <text>axr_phrase_friend_companion_answer_join_hostage</text>
 				<action>dialogs_axr_companion.become_actor_companion</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+	<dialog id="friendly_companion_dialog_hostage_version2">
+		<precondition>dialogs_axr_companion2.is_not_actor_companion</precondition>
+		<precondition>dialogs_axr_companion2.is_room_in_actor_squad</precondition>
+		<precondition>dialogs_axr_companion2.is_hostage_task_giver</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>axr_phrase_friend_companion_ask_join_hostage</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>axr_phrase_friend_companion_answer_join_hostage</text>
+				<action>dialogs_axr_companion2.become_actor_companion</action>
             </phrase>
         </phrase_list>
     </dialog>

@@ -3,6 +3,15 @@
 <string id="bar_arena_man_job_0">
 		<text>Есть для меня противник?</text>
 	</string>
+    <string id="bar_arena_manager_game_1">
+        <text>К сожалению, нет никого. Подожди день или два, пока мы не поймаем новых мутантов.</text>
+    </string>
+    <string id="bar_arena_manager_game_100">
+        <text>Предоплата - 1000 рублей.</text>
+    </string>
+    <string id="bar_arena_manager_game_101">
+        <text>Отлично. Вот,держи деньги.</text>
+    </string>
 	<string id="bar_arena_man_job_11">
 		<text>Ну что ж, первый бой. Твой противник - такой же кусок мяса, как и ты. Попал сюда из-за долгов. Его поставили перед выбором: либо выходишь и дерёшься, либо отправляешься в ближайшую аномалию. Так что драться он будет как пёс, загнанный в угол. Из снаряжения сегодня, дай-ка подумать, ага - будете драться на ПМах. Ну, и по две обоймы, я думаю, вам хватит. Иди и надери ему задницу, или пойдёшь собакам на корм, выбор небольшой. Вперёд.</text>
 	</string>
@@ -76,8 +85,8 @@
 		<text>Я не готов.</text>
     </string>
     <string id="bar_arena_man_start_111112">
-        <text>Эй! Ты заплатил мне за бой, а сам просто ушёл!</text>
-	</string>
+        <text>Эй! Ты заплатил за бой и тут же убежал. А драться-то кто будет?</text>
+    </string>
 	<string id="bar_arena_man_start_11">
 		<text>Здорово! Есть новый бой для тебя.</text>
 	</string>
@@ -95,15 +104,6 @@
 	</string>
     <string id="bar_arena_manager_game_0">
         <text>Я хочу сразиться. Но не с человеком, нет. Есть какая-нибудь тварь?</text>
-    </string>
-    <string id="bar_arena_manager_game_1">
-        <text>К сожалению, нет никого. Подожди день или два, пока мы не поймаем новых мутантов.</text>
-    </string>
-    <string id="bar_arena_manager_game_100">
-        <text>Предоплата - 1000 рублей.</text>
-    </string>
-    <string id="bar_arena_manager_game_101">
-        <text>Отлично. Вот,держи деньги.</text>
     </string>
     <string id="bar_arena_manager_game_105">
         <text>У меня нет достаточного количества денег.</text>

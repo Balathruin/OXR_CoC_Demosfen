@@ -3,11 +3,15 @@ squad_id = 3
 max_population = 2
 respawn_params = respawn@rad_antenna_monolith
 respawn_idle = 86400
-
 
 [respawn@rad_antenna_monolith]
-spawn_monolith
+spawn_zombied
+spawn_chimera
 
-[spawn_monolith]
-spawn_squads = monolith_sim_squad_advanced
-spawn_num = 2
+[spawn_zombied]
+spawn_squads = zombied_sim_squad_veteran
+spawn_num = 3
+
+[spawn_chimera]
+spawn_squads = simulation_chimera
+spawn_num = 1

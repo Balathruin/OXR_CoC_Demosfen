@@ -253,6 +253,10 @@ still_visible_time          = 0					;The time (milliseconds) that the object is 
 [rat_terrain]
 	255,000,255,255
 
+[rat_protections]
+skin_armor = 0
+hit_fraction_monster = 1.0
+
 [rat_damage]
 ;bone_name		 = <hit_scale>,-1,<wound_scale>
 ;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья)
@@ -293,8 +297,8 @@ stand_run_0	 		=	1,	   0.25,     1,	    0.25,    1,
 
 [rat_weak]:m_rat_e
 $spawn				= "monsters\rats\rat_weak"
-visual				 = monsters\rat\rat_normal1
-corpse_visual		 = monsters\rat\rat_normal1
+visual				 = monsters\rat\rat_weak1
+corpse_visual		 = monsters\rat\rat_weak1
 rank = 1
 spec_rank			= weak
 community			= rat
@@ -390,8 +394,8 @@ stand_attack_2 =	  	0.25,		0.18,		    6,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6
 
 [rat_wolf]:m_rat_e
 $spawn				= "monsters\rats\rat_wolf"
-visual				 = monsters\rat\rat_normal1
-corpse_visual		 = monsters\rat\rat_normal1
+visual				 = monsters\rat\rat_strong1
+corpse_visual		 = monsters\rat\rat_strong1
 rank = 1
 spec_rank			= strong
 community			= rat

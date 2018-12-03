@@ -1,0 +1,23 @@
+<w>
+
+
+    <file name="ui\ui_actor_portrets_mlr">
+	<texture id="ui_inGame2_merc_hero" x="0" y="0" width="123" height="87" />		
+	<texture id="ui_inGame2_csky_hero" x="0" y="0" width="123" height="87" />		
+	<texture id="ui_inGame2_barmen_army" x="0" y="87" width="123" height="87" />
+	<texture id="ui_inGame2_w_Vano_nauchniy" x="0" y="174" width="123" height="87"/>	
+	<texture id="ui_inGame2_soldier_Hero" x="0" y="261" width="123" height="87"/>	
+    <texture id="ui_inGame2_dolg_mechanik" x="123" y="87" width="123" height="87"/>
+    <texture id="ui_inGame2_agr_1_6_medic_army_mlr" x="123" y="174" width="123" height="87"/>
+    <texture id="ui_inGame2_monolith_wind" x="123" y="261" width="123" height="87"/>
+    <texture id="ui_inGame2_monolith_griffin" x="123" y="348" width="123" height="87"/>
+    <texture id="ui_inGame2_monolith_sparrow" x="123" y="435" width="123" height="87"/>
+    <texture id="ui_inGame2_monolith_pegasus" x="123" y="522" width="123" height="87"/>
+    <texture id="ui_inGame2_fatman" x="123" y="609" width="123" height="87"/>
+    <texture id="ui_inGame2_max_freedom" x="123" y="0" width="123" height="87"/>
+    <texture id="ui_inGame2_zombie_ecolog_orange" x="0" y="348" width="123" height="87"/>
+    <texture id="ui_inGame2_zombie_ecolog_green" x="0" y="435" width="123" height="87"/>	
+    <texture id="ui_inGame2_butcher" x="0" y="522" width="123" height="87"/>	
+    <texture id="ui_inGame2_miklouha" x="0" y="609" width="123" height="87"/>		
+   </file>
+</w>

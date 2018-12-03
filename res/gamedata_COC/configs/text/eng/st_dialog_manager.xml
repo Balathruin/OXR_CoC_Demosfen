@@ -1,5 +1,337 @@
 <?xml version="1.0" encoding="windows-1251"?>
+<!--===========================================================
+<
+< TEXT  STRINGS FOR DIALOGS
+<	CoC 1.4.22 - DoctorX Questlines 1.24
+<
+<	Modified by: DoctorX
+<	Translated by: av661194
+<	Last revised: February 16, 2017
+<
+<===========================================================-->
+
+
 <string_table>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MEET HONCHO DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ACTOR:  Meets honcho after being sent by another honcho: -->
+	<string id="st_drx_sl_meet_honcho">
+		<text>Если есть для меня дело, то я здесь.</text>
+	</string>
+
+	<!-- ACTOR:  Accepts storyline task from honcho: -->
+	<string id="st_drx_sl_accept_task">
+		<text>Хорошо.</text>
+	</string>
+
+	<!-- HONCHO:  Affirmation of task acceptance: -->
+	<string id="st_drx_sl_task_accepted">
+		<text>Удачи, сталкер.</text>
+	</string>
+
+	<!-- ACTOR:  Leaves honcho: -->
+	<string id="st_drx_sl_actor_exit">
+		<text>Спасибо.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE DEFAULT DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- DEFAULT END GAME TEXT: -->
+	<string id="drx_sl_default_endgame">
+		<text>Тебе нужно найти Исполнитель Желаний. Он находится где-то на Чернобыльской АЭС и до него не легко добраться. Это твой единственный выход.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE LONER GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- SIDOROVICH STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_esc_m_trader_game_start_dialog_1_0">
+		<text>Я хочу найти Исполнитель Желаний.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_game_start_dialog_1_1">
+		<text>Конечно, легко, это в Чернобыле, следующий автобус отправляется через двадцать минут, хе-хе. Слушай, было много сталкеров, которые пришли сюда в поисках Исполнителя Желаний, и знаешь, что все они имеют общего? Они все кормят червей прямо сейчас. Исполнитель Желаний это просто легенда, он не существует. Даже если бы он действительно существовал, ты знаешь, каким было бы моё желание, если бы я его нашёл? Что бы я никогда не пошёл искать его. Хочешь разбогатеть? Для этого не надо никаких желаний и исполнителей. Можно сделать много денег здесь, в Зоне, если не дурак. Поброди вокруг лагеря - здесь есть много работы. Черт возьми, у меня даже есть некоторые задания, которые нужно делать время от времени. И вот тебе список людей, которые тоже щедро заплатят за определённую работу. Это честный образ жизни, по крайней мере здесь, в Зоне.</text>
+	</string>
+
+	<!-- SIDOROVICH STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_esc_m_trader_start_game_1_endgame_1">
+		<text>Спасибо, сталкер. Слушай, я слышал, ты пришёл сюда в поисках Исполнителя Желаний, да? У меня есть важные новости для тебя. Исполнитель Желаний действительно существует, это не просто легенда. Если ты достаточно смел или глуп, это может быть твоим единственным шансом. Основные силы «Монолита» собраны в Припяти. Для защиты ЧАЭС осталась лишь малая часть. Но и теперь туда нелегко добраться из-за множества аномалий, которые порвут тебя на клочки, радиационных и пси-полей, которые превратят твой мозг в суп. Убедись, что готов. Удачи тебе, сталкер.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE DUTY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- PETRENKO STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_game_start_dialog_1_0">
+		<text>Я хочу вступить в «Долг».</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_game_start_dialog_1_1">
+		<text>Отлично! Ты заслужил неплохую репутацию, будучи сталкером. Нам бы пригодился такой боец, как ты. Мне нужен кто-то, знающий, как выжить в Зоне. У нас много друзей по всей Зоне, которые нуждаются в помощи, но немногие из наших солдат способны добраться к ним. Поэтому я отправлю тебя. Они расскажут, что нужно делать. Добро пожаловать на борт.</text>
+	</string>
+
+	<!-- PETRENKO STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_start_game_1_endgame_1">
+		<text>Отличная работа. Есть ещё одно задание, и его необходимо выполнить. Необходимо найти Исполнитель Желаний. «Монолит» хранит его глубоко в недрах Чернобыльской АЭС. Он должен быть уничтожен. Слушай внимательно, я точно знаю, что ты должен сделать. Исполнитель Желаний исполняет желания, не так ли? Это его слабость. Найди его и пожелай, чтобы он был разрушен. Не поддавайся искушению своих собственных эгоистичных желаний - это для общей пользы. Вот что ты должен сделать. Удачи тебе.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE FREEDOM GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- LUKASH STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_game_start_dialog_1_0">
+		<text>Ты хотел видеть меня?</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_game_start_dialog_1_1">
+		<text>Да, у меня есть очень важное задание. Мы не сможем защитить Зону, если будем отсиживаться на этих складах. Мне нужно помочь распространить наше влияние по Зоне. Я загрузил список контактов в твой КПК. Посети этих людей и посмотри, что можно сделать для них. Это укрепит наших союзников и поможет сохранить Зону свободной. И это, кстати, даст тебе возможность заработать хорошие деньги.</text>
+	</string>
+
+	<!-- LUKASH STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_start_game_1_endgame_1">
+		<text>Благодарю. Слушай, ты хотел сохранить зону свободной, не так ли? И выбрал неправильный путь. Распространение доброй воли одного человека не даст никакой пользы. Каждый здесь испорчен, все заботятся только о своих собственных потребностях. Даже если удастся изменить кого-то, они будут мертвы в ближайшее время, так что толку? Решение очевидно. Выжигатель был отключен, и путь к Исполнителю Желаний открыт, но ещё мало кто об этом знает. Ты можешь быть там первым, чтобы использовать его для блага Зоны. Найти Исполнитель Желаний, но избежать соблазна использовать его для своих собственных целей... это нелегко. Но если ты истинно хочешь сохранить Зону - это то, что надо сделать. Удачи!</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE CLEAR SKY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- COLD STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_game_start_dialog_1_0">
+		<text>Я готов к своей миссии.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_game_start_dialog_1_1">
+		<text>Хорошо, хорошо. Ты должен понять, насколько важна эта миссия. Ты не должен потерпеть неудачу. Я сожалею, что не могу сказать тебе больше, но тайна этой миссии должна быть абсолютной, и есть сведения, которые даже ты не должен знать. Просто сделай, как мы спланировали. Встретишься с людьми, которых мы обсуждали, их контактная информация хранится в твоем КПК. Когда настанет время, то будешь точно знать, что нужно сделать. Удачи.</text>
+	</string>
+
+	<!-- COLD STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_start_game_1_endgame_1">
+		<text>Хорошая работа. Очень хорошо. Сейчас настало время, чтобы выполнить свою миссию. Путь к Чернобылю очищен. В недрах реактора находится Исполнитель Желаний. Найди его. Ты знаешь, что нужно сделать.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE ECOLOGIST GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- SAKHAROV STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_yan_stalker_sakharov_game_start_dialog_1_0">
+		<text>Вы хотели видеть меня, профессор?</text>
+	</string>
+	<string id="drx_sl_yan_stalker_sakharov_game_start_dialog_1_1">
+		<text>Ах, да, да. Хорошо! Я рад что вы здесь. У меня есть важное задание для вас. Я хочу, чтобы вы попутешествовали по Зоне и научились всему, чему сможете. Существует так много всего, чего мы ещё не обнаружили! Назовём это... полевыми исследованиями. Я предоставил вам список контактов лиц, которые будут заботиться о вас в течение вашего путешествия. Посетите их, они могут предоставить вам работу или пищу, или укрытие. Исследуйте и любопытствуйте! Будьте смелы и находчивы! Думаю, что ваше исследование значительно увеличит наше понимание Зоны.</text>
+	</string>
+
+	<!-- SAKHAROV STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_yan_stalker_sakharov_start_game_1_endgame_1">
+		<text>Благодарю. Итак, скажите мне, Вы путешествовали по Зоне и видели все её чудеса. Но Вы ещё не изучали главный приз, не так ли? Я говорю, конечно, об Исполнителе Желаний. Сейчас Вы можете добраться до него, если готовы. Это будет нелегко. Смертельные уровни радиации, пси-поля, мутанты, и снайперы «Монолита» ждут вас. Но если Вы желаете истинно понять Зону - Вы должны идти туда, где все начиналось. То есть, на ЧАЭС. Удачи, коллега.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MERCENARY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- DUSHMAN STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_cit_killers_merc_trader_stalker_game_start_dialog_1_0">
+		<text>Так что известно о нашем заказчике?</text>
+	</string>
+	<string id="drx_sl_cit_killers_merc_trader_stalker_game_start_dialog_1_1">
+		<text>Пфф... Чёрт его разберёт. Никто, кажется, толком о нём ничего не знает. Всё, что я знаю - у него есть деньги, и много. Но нам, чтобы получить их, нужно очень постараться. Это место и по слухам - ад, но реальность и того кошмарнее. Во всяком случае, достаточно болтовни. У тебя есть работа. Тебе уже загрузили список контактов? Хорошо. Удачи.</text>
+	</string>
+
+	<!-- SWEDE STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_cit_killers_merc_trader_stalker_start_game_1_endgame_1">
+		<text>Спасибо. Слушай, у меня есть сообщение для тебя. Оно поступило прямо от нашего работодателя. Кажется, ты произвёл на него впечатление. У него есть особая миссия для тебя. Ты должен найти Исполнитель Желаний. Когда доберёшься до него, ты должен произнести следующую фразу: «Princeps magis opulentus». Сделай это, и наш «принц», пфф, заказчик, вознаградит тебя.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MILITARY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- KUZNETSOV STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_game_start_dialog_1_0">
+		<text>По вашему приказанию прибыл.</text>
+	</string>
+	<string id="drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_game_start_dialog_1_1">
+		<text>Добро пожаловать в ад. Ты должен был кого-то очень сильно разозлить, чтобы попасть сюда. Ну, слушай меня. Если хочешь остаться в живых - держи хвост пистолетом. Здесь всё и все пытаются убить тебя. В перестрелках  пригибайся пониже и ищи хорошее укрытие. Не доверяй никому. Сначала стреляй, а потом задавай вопросы. По долгу службы тебя будет бросать по всей Зоне, большую часть времени никого не будет рядом, чтобы помочь. Положись на тренировки по выживанию. Встретишься с лицами, контакты которых загружены в твой КПК. Они дадут тебе заказы. Просто заверши свой путь и останься в живых, и ты сможешь вернуться домой. Всё, свободен.</text>
+	</string>
+
+	<!-- KUZNETSOV STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_start_game_1_endgame_1">
+		<text>Спасибо, солдат. Задание выполнено, и награда найдет своего героя.  Ты хочешь свалить отсюда в ближайшее время, да? Боюсь, что у командования есть другие идеи. Периметр закрыт, никто и ничто больше не в состоянии выйти из Зоны. Военные в том числе. Ты остался здесь, чтобы умереть, и даже твой труп останется на корм червям. Ты не можешь даже бежать. Но надежда ещё есть, если смелости хватит. Существует  только один путь, чтобы выйти отсюда, и он лежит через Чернобыль. Похороненный глубоко внутри ЧАЭС Исполнитель Желаний. Если ты сможешь найти его и выживешь, то сможешь уйти отсюда. Это единственная надежда, солдат. Удачи тебе.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE BANDIT GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- SULTAN STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_zat_b7_bandit_boss_sultan_game_start_dialog_1_0">
+		<text>Ну, и чё надо?</text>
+	</string>
+	<string id="drx_sl_zat_b7_bandit_boss_sultan_game_start_dialog_1_1">
+		<text>Короче, есть люди здесь, в Зоне, которые платят бабло, и неплохое. Ясен пень, не за просто так. Я дам тебе список этих людей. Иди к ним, и делай то, что они попросят. Всё, что мне нужно, это 20 процентов от того, что они платят. Любые деньги, которые ты делаешь на стороне, как бы твои. Хорошая тема, а? Только не пытайся кинуть меня, понял? Я сделал хорошие примеры из тех, кто пытался кинуть меня. Теперь вали. У меня есть другие важные дела.</text>
+	</string>
+
+	<!-- SULTAN STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_zat_b7_bandit_boss_sultan_start_game_1_endgame_1">
+		<text>Что за нах, а-а-а, это ты... ик..., ну тогда на, выпей. Смотри, теперь, когда Выжигатель Мозгов... ик... вырублен, путь к Исполнителю Желаний открыт. Всё, что я должен сделать, это пройти через «Монолит», а затем это сладкая жизнь... Я пожелаю для всех пацанов и бабла, и бухла, но только тссс...</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MONOLITH GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- RABBIT STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_pri_monolith_monolith_trader_stalker_game_start_dialog_1_0">
+		<text>Проповедник, что я могу сделать для великого Монолита?</text>
+	</string>
+	<string id="drx_sl_pri_monolith_monolith_trader_stalker_game_start_dialog_1_1">
+		<text>Много работы предстоит сделать, брат мой. Зона должна быть очищена от неверных. Мы должны держать под контролем количество мутантов. Твои братья нуждаются в пище и оружии. Мы дадим задания. Ты должны выполнить своё предназначение. Хвала Монолиту и пусть Он благословит тебя.</text>
+	</string>
+
+	<!-- RABBIT STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_pri_monolith_monolith_trader_stalker_start_game_1_endgame_1">
+		<text>Ты доказал свою веру многими делами - они залог твоей преданности. Ты заслужил честь встретиться с великим Монолитом. Немногие достаточно сильны, чтобы посмотреть в глаза бога.  Путешествие в Саркофаге не будет легким, и ты должен идти в одиночку. Но если твоя вера чиста - Монолит будет звать тебя и указывать путь.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE CHANGE FACTIONS DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ACTOR:  Requests to change factions: -->
+	<string id="st_drx_sl_change_factions_request">
+		<text>Я хочу сменить группировку.</text>
+	</string>
+
+	<!-- ACTOR:  Accepts change factions task from npc -->
+	<string id="st_drx_sl_accept_change_factions_task">
+		<text>Я сделаю это.</text>
+	</string>
+
+	<!-- NPC:  Affirmation of task acceptance: -->
+	<string id="st_drx_sl_change_factions_task_accepted">
+		<text>Зайди, когда сделаешь.</text>
+	</string>
+
+	<!-- ACTOR:  Leaves npc: -->
+	<string id="st_drx_sl_change_factions_actor_exit">
+		<text>Хорошо.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 <!-- GENERAL -->
 	<string id="dm_universal_actor_start">
 		<text>I want to ask you something.</text>
@@ -189,9 +521,6 @@
 	<string id="dm_help_17">
 		<text>Get me a damn doctor! Urgh, have you got a medkit? Please! I need it!</text>
 	</string>
-	<string id="dm_help_18">
-		<text>Argh! I’m bleeding! Help me Stalker!</text>
-	</string>
 <!-- ANOMALIES -->
 	<string id="dm_anomalies_general_1">
 		<text>What do you know about anomalies or artefacts?</text>
@@ -299,7 +628,7 @@
 		<text>I wish I had known the Zone that I've heard about, the one that was like a no man's land. How can we be rich now? Now that after any emission, a bunch of stalkers rush on every anomaly field to pick up their flowers.</text>
 	</string>
 	<string id="dm_anomalies_32">
-		<text>Why should I give you any advice? More so when it comes to the business which many of us use for making money? Well, get a good detector and help yourself. The scientists will probably sell you what you're looking for.</text>
+		<text>Why should I give you any advice? More so when it comes to the business which many of us use for making money? Well, get a good detector and help yourself. The scientists will probably see you what you're looking for.</text>
 	</string>
 	<string id="dm_anomalies_33">
 		<text>Many newcomers dream about "the artefact that makes you rich". Even if the Zone can be fruitful, it often take a long time and a serious amount of money to get the gear that lets you go inside the most dangerous and productive areas. Of course, you can be lucky, but knowing this place I wouldn't count so much on that.</text>
@@ -532,7 +861,7 @@
 		<text>A couple of years ago we were led by Lebedev. Those were dog days, until a merc came along and helped us get our footing in the Great Swamp. But then the whole Strelok thing got out of hand. Most of Clear Sky followed Lebedev and the merc north to sort it all out. Well, you know how that went. Anyway, we keep hearing about the death trucks in the Cordon, bringing back old friends. On the rare occasion there's some signs of life, but it's like they've had a massive stroke or something.</text>
 	</string>
 	<string id="dm_information_48">
-		<text>New in the Zone? Listen to yourself, you almost sound like one of those bastards out there. Information huh, ever heard of Major Kuznetsov? He was a real piece, after he replaced Major Khaletskiy for the trouble he was causing, Kuznetsov goes and does the same thing! It's always the high ranking officers that are corrupted, they get a little taste of power and control and then start trying to make extra on the side through the criminals here in the Zone! I heard he met with a terrible fate when he crossed paths with that one guy... I can't recall his name but they picked him up in Pripyat I heard because he had some real important information.</text>
+		<text>New in the zone? Listen to yourself, you almost sound like one of those bastards out there. Information huh, ever heard of Major Kuznetsov? He was a real piece, after he replaced Major Khaletskiy for the trouble he was causing, Kuznetsov goes and does the same thing! It's always the high ranking officers that are corrupted, they get a little taste of power and control and then start trying to make extra on the side through the criminals here in the Zone! I heard he met with a terrible fate when he crossed paths with that one guy... I can't recall his name but they picked him up in Pripyat I heard because he had some real important information.</text>
 	</string>
 	<string id="dm_information_49">
 		<text>We've got more guys getting dropped in later in the month. Just waiting for the Zone to give us some quiet time, so the pilots can make it in and out. Rumour has it there's some French, Finnish and British operatives coming in this time, should be interesting.</text>
@@ -576,21 +905,6 @@
 	<string id="dm_information_62">
 		<text>There's a real demand for tools in the Zone. More intricate gear for adjustments to weapons and suits. I found a set on some guy I shot a couple of months ago, but we had to stash them in a hurry. Not sure where they we hid them, but I'm sure a trader might have the coordinates if you do a few jobs for them.</text>
 	</string>
-	<string id="dm_information_63">
-		<text>Had some new guys flown in from Europe the other day. They brought some nice goods with them and shared it all out. Burgers, beer, rum, wine. Just enough for every squad. \n Now we’re back to square one. Just vodka and canned food again.</text>
-	</string>
-	<string id="dm_information_64">
-		<text>So many squaddies come to the Dead City and need additional training. They’re combat ready, but they’re not ‘Zone ready’. They’re not used to wearing gas masks day and night, or checking for anomalies on patrol. We’ve designated some guys as trainers and had their contracts amended. All they do is teach the new Mercs about the Zone before passing them onto another squad for the serious jobs. Hopefully we won’t lose more guys to stupid mistakes.</text>
-	</string>
-	<string id="dm_information_65">
-		<text>Looks like I'm stuck here. I found a couple of artifacts and decided to head back to the Big Land, but the soldiers at the Cordon have everything secured. I guess I’ll have to find another way home.</text>
-	</string>
-	<string id="dm_information_66">
-		<text>You have trouble sleeping here? I'm exhausted. Most nights I have nightmares that feel so vivid and real. It's terrifying. People tell me stories of Stalkers dying in their sleep or going crazy. I've heard people can get a decent night's sleep by wearing a bucket over their head, but it's probably just some campfire joke.</text>
-	</string>
-	<string id="dm_information_67">
-		<text>My research is slow these days. I spend more time helping people and getting through the day than I do studying the Zone.</text>
-	</string>
 <!-- JOB -->
 	<string id="dm_job_general_1">
 		<text>Anyone posting jobs around here?</text>
@@ -633,13 +947,7 @@
 	</string>
 	<string id="dm_job_10">
 		<text>Sorry man, I've got nothing for you. Just dig in and help us hold on to what we've got.</text>
-	</string>
-	<string id="dm_job_11">
-		<text>Got nothing for now. Just form up on me and we’ll get the patrols done. Got plenty of war stories for you.</text>
-	</string>
-	<string id="dm_job_12">
-		<text>I’ve got no work for you, but you’ll always find some at Dead City base. Maybe other areas too if they don’t shoot you on sight. Avoid Rostok and the Military Warehouses if you’re no friends of Duty and Freedom.</text>
-	</string>
+	</string>	
 <!-- TIPS -->
 	<string id="dm_tips_general_1">
 		<text>Know anything useful?</text>
@@ -672,10 +980,10 @@
 		<text>You ain't gonna be able to hit shit if you're running while shooting. Find some cover to hide behind and lean out to shoot; you'll be far more accurate.</text>
 	</string>	
 	<string id="dm_tips_7">
-		<text>Keep your gear in good condition. You gun will jam and your suit will be full of holes if you don't see a technician every now and then.</text>
+		<text>Keep your gear in good condition. You gun will jam and your suit will be full of holes if you don't see a mechanic every now and then.</text>
 	</string>	
 	<string id="dm_tips_8">
-		<text>Last time I went to see a technician he couldn't upgrade half my shit, asked me to go out and fetch tools for him. What, am I his errand boy now?</text>
+		<text>Last time I went to see a mechanic he couldn't upgrade half my shit, asked me to go out and fetch tools for him. What, am I his errand boy now?</text>
 	</string>	
 	<string id="dm_tips_9">
 		<text>Ever met a guy who stood outside during an emission? Of course you haven't! Hide your ass whenever one hits unless you feel like having your brain boiled.</text>
@@ -711,7 +1019,7 @@
 		<text>Make sure to pack energy drinks with you, they'll come in handy if you keep tiring out when carrying loot back to camp.</text>
 	</string>
 	<string id="dm_tips_20">
-		<text>If your helmet has night vision make sure to upgrade it. You'll be able to see further and clearer if you let a technician screw around with it for some cash.</text>
+		<text>If your helmet has night vision make sure to upgrade it. You'll be able to see further and clearer if you let a mechanic screw around with it for some cash.</text>
 	</string>	
 	<string id="dm_tips_21">
 		<text>You aren't defenceless if you're out artefact hunting. So what if you're carrying your detector? You can still hold a pistol in the other hand.</text>
@@ -750,7 +1058,7 @@
 		<text>Crouch and sneak about if you don't wanna get seen or heard. Not ever battle is worth fighting, or maybe you just want to get the jump on someone?</text>
 	</string>	
 	<string id="dm_tips_33">
-		<text>You can attach scopes and launchers to your shooter y'know? There's just some things a technician just can't do. But you'll have to find the parts yourself...</text>
+		<text>You can attach scopes and launchers to your shooter y'know? There's just some things a mechanic just can't do. But you'll have to find the parts yourself...</text>
 	</string>	
 	<string id="dm_tips_34">
 		<text>There's different ways to take down different types of mutants, they all have their own weak spots. You can kick tushkanos and rats too y'know?</text>
@@ -778,13 +1086,6 @@
 		<text>Sorry, I don't have a medkit.</text>
 	</string>
 
-	<string id="dm_psy_wounded_medkit">
-		<text>Snap out of it!</text>
-	</string>
-	<string id="dm_psy_wounded_sorry">
-		<text>Sorry, I can't help you.</text>
-	</string>
-	
 	<string id="dm_traveler_bye">
 		<text>Ok.</text>
 	</string>
@@ -898,7 +1199,7 @@
 	</string>
 
 
-<!-------- Technician --->
+<!-------- Mechanic --->
 	<string id="st_mechanic_query_items">
 		<text>Is any of my equipment ready for pick-up?</text>
 	</string>
@@ -999,7 +1300,28 @@
 	<string id="st_surrender_victim_answer_zat_b7_bandit_boss_sultan_bounty_5">
 		<text>...</text>
 	</string>
-<!-- Broker -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- PDA BROKER DIALOG STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.9
+	<!--	October 30, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<string id="st_drx_broker_finish_1">
+		<text>Я куплю это.</text>
+	</string>
+	<string id="st_drx_broker_finish_2">
+		<text>Хорошо, я возьму это.</text>
+	</string>
+	<string id="st_drx_broker_finish_3">
+		<text>Подходит, беру.</text>
+	</string>
+
 	<string id="st_broker_query">
 		<text>I may have some information to sell.</text>
 	</string>
@@ -1025,7 +1347,7 @@
 		<text>I'll be the judge of that, what do you have?</text>
 	</string>
 	<string id="st_broker_npc_start_2">
-		<text>You better hope so, because you are wasting my god damn time.</text>
+		<text>You better hope it is, because you are wasting my god damn time.</text>
 	</string>
 	<string id="st_broker_npc_start_3">
 		<text>This better be worth my time, what do you have?</text>
@@ -1319,10 +1641,5 @@
 	</string>
 	<string id="st_inventory_upgrade_reply_9">
 		<text>It's almost ready.</text>
-	</string>
-	
-	<!-- Wounded -->
-	<string id="dm_psy_wounded">
-		<text>Help...me...my...brain!</text>
 	</string>
 </string_table>

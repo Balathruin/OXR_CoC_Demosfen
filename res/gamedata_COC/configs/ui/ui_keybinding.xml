@@ -34,6 +34,7 @@
 		<command id="kb_func"						  	exe="wpn_func"/>
 		<command id="kb_firemode_next"					exe="wpn_firemode_next"/>
 		<command id="kb_firemode_prev"					exe="wpn_firemode_prev"/>		
+		<command id="kb_custom11"                       exe="custom11"/> <!-- Unload All Weapons -->
 	</group>
 	<group name="kb_grp_inventory">
 		<command id="kb_inventory"						exe="inventory"/>
@@ -63,6 +64,7 @@
 		<command id="kb_quit"						  	exe="quit"/>
 		<command id="kb_console"						exe="console"/>
 		<command id="ui_mm_save_game"					exe="quick_save"/>
+		<command id="ui_mm_fast_save_btn"              exe="custom11"/> <!-- long save -->
 		<command id="ui_mm_load_game"					exe="quick_load"/>
 		<command id="kb_cam_1"                          exe="cam_1"/>
 		<command id="kb_cam_2"                          exe="cam_2"/>

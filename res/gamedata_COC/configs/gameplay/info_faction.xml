@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<game_information_portions>
+<info_portion id="actor_in_freedom"</info_portion>
+<info_portion id="actor_in_actor_freedom"></info_portion>
+<info_portion id="actor_in_dolg"</info_portion>
+<info_portion id="actor_in_actor_dolg"></info_portion>
+<info_portion id="actor_in_killer"</info_portion>
+<info_portion id="actor_in_actor_killer"></info_portion>
+<info_portion id="actor_in_stalker"</info_portion>
+<info_portion id="actor_in_actor_stalker"></info_portion>
+<info_portion id="actor_in_bandit"</info_portion>
+<info_portion id="actor_in_actor_bandit"></info_portion>
+<info_portion id="actor_in_csky"</info_portion>
+<info_portion id="actor_in_actor_csky"></info_portion>
+<info_portion id="actor_in_ecolog"</info_portion>
+<info_portion id="actor_in_actor_ecolog"></info_portion>
+<info_portion id="actor_in_army"</info_portion>
+<info_portion id="actor_in_actor_army"></info_portion>
+<info_portion id="actor_in_monolith"</info_portion>
+<info_portion id="actor_in_actor_monolith"></info_portion>
+    
+
+</game_information_portions>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+        <string id="pausa_off">
+		<text>Арена снова готова принять бесстрашных Сталкеров. Хочешь развлечься и подзаработать? Приходи.</text>
+	</string>
+        <string id="st_actor_in_Killer">
+		<text>Вы перешли в группировку Наёмники.</text>
+	</string>
+	<string id="st_actor_in_dolg">
+		<text>Вы перешли в группировку «Долг».</text>
+	</string>
+	<string id="st_actor_in_freedom">
+		<text>Вы перешли в группировку «Свобода».</text>
+	</string>
+        <string id="st_actor_in_army">
+		<text>Вы перешли в группировку «Военные».</text>
+	</string>
+        <string id="st_actor_in_ecolog">
+		<text>Вы перешли в группировку «Учёные».</text>
+	</string>
+        <string id="st_actor_in_bandit">
+		<text>Вы перешли в группировку «Бандиты».</text>
+	</string>
+        <string id="st_actor_in_monolith">
+		<text>Вы перешли в группировку «Монолит».</text>
+	</string>
+        <string id="st_actor_in_csky">
+		<text>Вы перешли в группировку «Чистое Небо».</text>
+	</string>
+        <string id="st_actor_in_stalker">
+		<text>Вы перешли в группировку «Одиночки».</text>
+	</string>
+</string_table>

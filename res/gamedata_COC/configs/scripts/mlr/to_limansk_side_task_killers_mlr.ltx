@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {=actor_on_level(l10_red_forest) !actor_community(actor_killer)} sr_idle@start_1 %=set_squad_goodwill(protectors_red_bridge_bandit_smart_skirmish_squad:0) =set_squad_goodwill(killer_bridge_trader_mlr_squad:0)%
+on_actor_inside = {-actor_on_limansk_side_mlr} sr_idle@task %=give_killer_task_to_lim_on_the_bridge =send_tip(to_lim_on_the_bridge_killer_ivent:tourist) =create_squad(chimera_killer_task_to_lim_on_the_bridge:red_smart_terrain_tonnel_lair_mlr)%
+
+[sr_idle@start_1]
+on_actor_inside = {-actor_on_limansk_side_mlr} sr_idle@task %=give_killer_task_to_lim_on_the_bridge =send_tip(to_lim_on_the_bridge_killer_ivent:tourist) =create_squad(chimera_killer_task_to_lim_on_the_bridge:red_smart_terrain_tonnel_lair_mlr)%
+
+[sr_idle@task]
+on_actor_inside = {+chimera_killer_task_to_lim_on_the_bridge_dead} nil %+killer_task_to_lim_on_the_bridge_done =send_tip(to_lim_on_the_bridge_killer_ivent_2:tourist) =bridge_down%

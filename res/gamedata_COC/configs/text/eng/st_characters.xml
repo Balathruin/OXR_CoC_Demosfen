@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
+    <!-------------------------- ROMANN ---------------------- -->
+	    <!------------------ Anya ----------------->
+	<string id="bar_anya_name">
+		<text>Анна</text>
+	</string>
+	
+	<string id="bar_anya_bio">
+		<text>Просто Аня.</text>
+	</string>
+	    <!------------------ Anya ----------------->
   <string id="jup_a10_bandit_leader_name">
     <text>Valet</text>
   </string>

@@ -1,0 +1,216 @@
+;hangar medic
+[logic@gar_smart_terrain_5_2_bandit_medic_logic]
+suitable = {=check_npc_name(gar_smart_terrain_5_2_bandit_medic)} true
+prior = 200
+active = animpoint@medic
+level_spot = medic
+can_select_weapon = true
+dont_keep_items = true
+trade = misc\trade\trade_bandit_main_base_medic_mlr.ltx
+
+[animpoint@medic]
+cover_name = gar_smart_cover_bandit_medic
+avail_animations = animpoint_sit_normal
+use_camp = false
+meet = meet@hangar
+on_info = {=is_night} sleeper@sleeper_medic
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[sleeper@sleeper_medic]
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+path_main = bandit_medic_depo_sleeper
+meet = no_meet
+on_info = {!is_night} animpoint@medic
+
+;hangar tech
+[logic@bandit_tech_gar_hangr_mlr]
+suitable = {=check_npc_name(bandit_tech_gar_hangr_mlr)} true
+prior = 200
+active = animpoint@stand
+level_spot = mechanic
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@stand]
+cover_name = gar_hangar_cover_tech_bandit_mlr
+avail_animations = animpoint_stay_table
+use_camp = false
+meet = meet@hangar
+on_info = {=is_night} animpoint@sit
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[animpoint@sit]
+cover_name = gar_smart_cover_bandit_trader_night
+avail_animations = animpoint_sit_normal
+use_camp = false
+meet = no_meet
+on_info = {!is_night} animpoint@stand
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet@hangar]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+
+;hangar trader
+[logic@bandit_barman_gar_hangr_mlr_logic]
+suitable = {=check_npc_name(bandit_barman_gar_hangr_mlr)} true
+prior = 200
+active = animpoint@trader
+level_spot = trader
+can_select_weapon = true
+dont_keep_items = true
+trade = misc\trade\trade_bandit.ltx
+
+[animpoint@trader]
+cover_name = gar_smart_cover_bandit_trader
+avail_animations = animpoint_sit_normal
+use_camp = false
+meet = meet@hangar
+on_info = {=is_rain} animpoint@trader_rain
+on_info2 = {=is_night} sleeper@sleeper_1
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[animpoint@trader_rain]
+cover_name = gar_hangar_cover_tech_bandit_mlr_rain
+avail_animations = smoking_stand
+use_camp = false
+meet = meet@hangar
+on_info = {!is_rain} animpoint@trader
+on_info2 = {=is_night} sleeper@sleeper_1
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[sleeper@sleeper_1]
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+path_main = gar_tech_mlr_sleeper
+meet = no_meet
+on_info = {!is_night} animpoint@trader
+
+;camping
+[logic@gar_smart_terrain_5_2_camp_work_1]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp1
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_2]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp2
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_3]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp3
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_4]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp4
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_5]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp5
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_6]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp6
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_7]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp7
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_8]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp8
+prior = 45
+
+[logic@gar_smart_terrain_5_2_camp_work_9]
+active = animpoint@gar_smart_terrain_5_2_animpoint_kamp9
+prior = 45
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp1]
+cover_name = gar_smart_terrain_5_2_animpoint_kamp1
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp2]
+cover_name = gar_smart_terrain_5_2_animpoint_kamp2
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp3]
+cover_name = gar_smart_terrain_5_2_animpoint_kamp3
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp4]
+cover_name = gar_smart_terrain_5_2_animpoint_kamp4
+use_camp = true
+avail_animations = animpoint_sit_low
+meet = no_meet
+turn_on_campfire = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp5]
+avail_animations = animpoint_sit_normal
+meet = no_meet
+cover_name = gar_smart_terrain_5_2_animpoint_kamp5
+use_camp = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp6]
+avail_animations = animpoint_stay_wall
+meet = no_meet
+cover_name = gar_smart_terrain_5_2_animpoint_kamp6
+use_camp = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp7]
+avail_animations = animpoint_sit_low
+meet = no_meet
+cover_name = gar_smart_terrain_5_2_animpoint_kamp7
+use_camp = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp8]
+avail_animations = animpoint_sit_low
+meet = no_meet
+cover_name = gar_smart_terrain_5_2_animpoint_kamp8
+use_camp = true
+
+[animpoint@gar_smart_terrain_5_2_animpoint_kamp9]
+avail_animations = animpoint_sit_normal
+meet = no_meet
+cover_name = gar_smart_terrain_5_2_animpoint_kamp9
+use_camp = true

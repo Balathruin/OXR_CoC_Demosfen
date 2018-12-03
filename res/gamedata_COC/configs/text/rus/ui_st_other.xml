@@ -543,8 +543,41 @@
 	</string>
 	
 	<!-- Miscellaneous -->
+	<string id="st_ui_selected">
+		<text>Выбрано</text>
+	</string>
+	<string id="st_ui_arts">
+		<text>Артефакты</text>
+	</string>
+	<string id="st_ui_containers">
+		<text>Контейнеры</text>
+	</string>
+	<string id="st_ui_remove_art">
+		<text>Достать артефакт</text>
+	</string>
+	<string id="st_ui_place_art">
+		<text>Положить артефакт</text>
+	</string>
+	<string id="st_body_loot">
+		<text>Собрать трофеи</text>
+	</string>
 	<string id="st_body_decayed">
 		<text>Тело слишком повреждено</text>
+	</string>
+	<string id="st_body_useless">
+		<text>Ничего полезного</text>
+	</string>
+	<string id="st_body_knife_needed">
+		<text>Необходим нож</text>
+	</string>
+	<string id="st_body_knife_bad">
+		<text>Нож в слишком плохом состоянии</text>
+	</string>
+	<string id="st_body_knife_weak">
+		<text>Для этого мутанта нужен нож получше</text>
+	</string>
+	<string id="st_body_kick">
+		<text>Пнуть</text>
 	</string>
 	<string id="st_invalid_position">
 		<text>Позиция вне AI-сетки</text>
@@ -555,7 +588,21 @@
 	<string id="st_lamp_equipped">
 		<text>Фонарь подключён</text>
 	</string>
-	
+	<string id="st_upd_disconnected">
+		<text>UPD отсутствет</text>
+	</string>
+	<string id="st_upd_low">
+		<text>Низкий заряд батереи</text>
+	</string>
+	<string id="st_cfm">
+		<text>Готовить в армейском котелке можно только около горящего костра</text>
+	</string>
+	<string id="st_fail">
+		<text>Разжечь костер не удалось</text>
+	</string>
+	<string id="st_rad_level">
+		<text>Уровень заражения</text>
+	</string>
 	<string id="st_travel_event">
 		<text>Путешествовать опасно - поблизости много врагов</text>
 	</string>
@@ -567,6 +614,12 @@
 	</string>
 	<string id="st_wish_granted">
 		<text> ЖЕЛАНИЕ ИСПОЛНЕНО ! </text>
+	</string>
+	<string id="st_only_campfire_load">
+		<text>Загрузка при живом игроке отключена</text>
+	</string>
+	<string id="st_only_campfire_quit">
+		<text>Завершение игры при живом игроке отключено</text>
 	</string>
 	<string id="ui_inv_download">
 		<text>скачать</text>

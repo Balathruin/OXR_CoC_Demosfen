@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+
+	<string id="treasure_detector_name">
+		<text>Детекторы</text>
+	</string>
+	<string id="treasure_artefact_name">
+		<text>Артефакты</text>
+	</string>
+	<string id="treasure_medecine_name">
+		<text>Медикаменты</text>
+	</string>
+	<string id="treasure_grenade_name">
+		<text>Гранаты</text>
+	</string>
+	<string id="treasure_wpngrenade_name">
+		<text>Гранаты для подствольника</text>
+	</string>
+	<string id="treasure_drink_name">
+		<text>Напитки</text>
+	</string>
+	<string id="treasure_ammo_name">
+		<text>Боеприпасы</text>
+	</string>
+	<string id="treasure_mutant_name">
+		<text>Части монстров</text>
+	</string>
+	<string id="treasure_addon_name">
+		<text>Аддоны к оружию</text>
+	</string>
+	<string id="treasure_eat_name">
+		<text>Еда</text>
+	</string>
+	<string id="treasure_drug_name">
+		<text>Антибиотики</text>
+	</string>
+	<string id="treasure_wpn_name">
+		<text>Оружие</text>
+	</string>
+
+
+
+</string_table>

@@ -142,15 +142,28 @@ use_camp = false
 [logic@duty2_guard4]
 active = walker@duty2_guard4
 suitable = {=check_npc_name(bar_zastava_2_commander) =npc_in_zone(bar_zastava_restrictor_2) !surge_started} true
-prior = 100
+prior = 125
 on_death = death@bar_zastava_2_duty2_guard4
+
+[meet@dayn]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} true
+allow_break = false
+meet_on_talking = false
 
 [walker@duty2_guard4]
 path_walk = walker_4_walk
 path_look = walker_4_look
 on_info = {!actor_enemy =see_actor =actor_has_weapon =actor_in_zone(bar_zastava_2_warn_zone) =dist_to_actor_le(35)} remark@duty2_guard4
 ;out_restr = bar_zastava2_online_restrictor
-meet = no_meet
+meet = meet@dayn
 
 [remark@duty2_guard4]
 anim = threat
@@ -158,7 +171,7 @@ target = story | actor
 ;on_info = %=play_sound(jup_b207_duty_guards_warning_actor)%
 on_game_timer = 75 | walker@duty2_guard4
 ;out_restr = bar_zastava2_online_restrictor
-meet = no_meet
+meet = meet@dayn
 
 [logic@duty2_guard5]
 active = walker@duty2_guard5_reach

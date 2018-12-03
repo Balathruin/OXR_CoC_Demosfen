@@ -1,7 +1,7 @@
 <w>
 	<background width="1024" height="768">
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
 	    </auto_static>
 	</background>
 
@@ -152,8 +152,41 @@
 	        <texture>ui_inGame2_checkbox</texture>
             <options_item entry="rs_fullscreen" group="mm_opt_video" depend="vid"/>
         </check_fullscreen>
-
-
+		
+		<cap_color_correction x="240" y="440" width="90" height="21">
+            <text align="l" font="letterica16" r="95" g="92" b="79">ui_mm_color_correction</text>
+        </cap_color_correction>
+		
+		<cap_color_r x="240" y="470" width="90" height="21">
+            <text align="l" font="letterica16" r="95" g="92" b="79">ui_mm_color_r</text>
+        </cap_color_r>
+		<track_color_r x="320" y="468" width="165" height="21" step="0.01">
+            <options_item entry="r__color_base_r" group="mm_opt_video" depend="runtime"/>
+        </track_color_r>
+		<cap_color_r_val x="490" y="470">
+			<text align="l" r="95" g="92" b="79" font="letterica16"></text>
+		</cap_color_r_val>
+		
+		<cap_color_g x="240" y="500" width="90" height="21">
+            <text align="l" font="letterica16" r="95" g="92" b="79">ui_mm_color_g</text>
+        </cap_color_g>
+		<track_color_g x="320" y="498" width="165" height="21" step="0.01">
+            <options_item entry="r__color_base_g" group="mm_opt_video" depend="runtime"/>
+        </track_color_g>
+		<cap_color_g_val x="490" y="500">
+			<text align="l" r="95" g="92" b="79" font="letterica16"></text>
+		</cap_color_g_val>
+		
+		<cap_color_b x="240" y="530" width="90" height="21">
+            <text align="l" font="letterica16" r="95" g="92" b="79">ui_mm_color_b</text>
+        </cap_color_b>
+		<track_color_b x="320" y="528" width="165" height="21" step="0.01">
+            <options_item entry="r__color_base_b" group="mm_opt_video" depend="runtime"/>
+        </track_color_b>
+		<cap_color_b_val x="490" y="530">
+			<text align="l" r="95" g="92" b="79" font="letterica16"></text>
+		</cap_color_b_val>
+		
         <btn_advanced x="338" y="299" width="86" height="24" stretch="1">
             <text r="170" g="170" b="170" align="c" font="letterica16">ui_mm_advanced</text>
             <texture>ui_inGame2_button</texture>
@@ -205,6 +238,13 @@
 			<options_item entry="r__detail_scale" group="mm_opt_video_adv" depend="restart"/>
 		</track_detail_scale>
 		
+		<cap_detail_height x="15" y="3" width="108" height="24">
+			<text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_detail_height</text>
+		</cap_detail_height>
+		<track_detail_height x="147" y="6" width="188" height="16" step="0.5">
+			<options_item entry="r__detail_height" group="mm_opt_video_adv"/>
+		</track_detail_height>
+		
         <cap_texture_lod x="15" y="3" width="108" height="24" >
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_texture_quality</text>
         </cap_texture_lod>
@@ -218,6 +258,13 @@
         <track_aniso x="147" y="6" width="188" height="16" step="1" is_integer="1">
             <options_item entry="r__tf_aniso" group="mm_opt_video_adv"/>
         </track_aniso>
+
+        <cap_r__detail_height x="15" y="3" width="108" height="24">
+            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_detail_height</text>
+        </cap_r__detail_height>
+        <track_r__detail_height x="147" y="6" width="188" height="16" step="0.1">
+            <options_item entry="r__detail_height" group="mm_opt_video_adv"/>
+        </track_r__detail_height>
 
         <cap_ssample x="15" y="3" width="108" height="24">
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_supersample</text>
@@ -233,6 +280,20 @@
 	            <d r="70" g="70" b="70"/>
 		    </text_color>
         </combo_ssample>
+
+        <cap_r2_sun_shafts_value x="15" y="3" width="108" height="24">
+            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_r2_shafts_value</text>
+        </cap_r2_sun_shafts_value>
+        <track_r2_sun_shafts_value x="147" y="6" width="188" height="16" step="0.1">
+            <options_item entry="r2_sun_shafts_value" group="mm_opt_video_adv"/>
+        </track_r2_sun_shafts_value>
+		
+		<cap_r2_gloss_factor x="15" y="3" width="108" height="24">
+            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_r2_gloss_factor</text>
+        </cap_r2_gloss_factor>
+        <track_r2_gloss_factor x="147" y="6" width="188" height="16" step="2">
+            <options_item entry="r2_gloss_factor" group="mm_opt_video_adv"/>
+        </track_r2_gloss_factor>
 
         <cap_r2_sun x="15" y="3" width="108" height="24">
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_r2_sun</text>
@@ -639,18 +700,6 @@
 			<options_item entry="g_invert_zoom" group="mm_opt_gameplay"/>
 		</check_invert_zoom>
 		
-		<cap_localization x="45" y="3" width="108" height="24">
-            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_localization</text>
-        </cap_localization>
-        <list_localization x="173" y="3" width="175" height="20">
-            <options_item entry="g_language" group="mm_opt_gameplay"/>
-            <list_font r="170" g="170" b="170" font="letterica16"/>
-		    <text_color>
-	            <e r="170" g="170" b="170"/>
-	            <d r="70" g="70" b="70"/>
-		    </text_color>
-        </list_localization>
-		
         <cap_check_axr x="45" y="3" width="108" height="24">
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c"></text>
         </cap_check_axr>
@@ -717,6 +766,14 @@
 			<texture>ui_inGame2_checkbox</texture>
 			<options_item entry="hud_draw" group="mm_opt_gameplay_ui"/>
 		</check_hud_draw>
+
+      <btn_check_updates x="1310" y="1322" width="126" height="24" stretch="1">
+            <text align="c" font="letterica16">ui_mm_check_updates</text>
+            <texture>ui_inGame2_button</texture>
+			<text_color>
+				<e r="210" g="210" b="210"/>
+			</text_color>
+        </btn_check_updates>
 
 		<char_icon x="280" y="202" width="123" height="87">
 		</char_icon>

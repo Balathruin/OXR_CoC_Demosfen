@@ -1,0 +1,24 @@
+[spawn_loadout] \n
+wpn_ak74_pso = 1 \n
+wpn_ak74u = 1, silencer \n
+wpn_svd, silencer = 1 \n
+wpn_mp133 = 1 \n
+wpn_saiga_kobra = 1 \n
+wpn_ak74m = 1, silencer \n
+wpn_toz194 = 1 \n
+wpn_ak104_kobra = 1, silencer \n
+wpn_ak105_pso = 1 \n
+wpn_akm = 1 \n
+wpn_akms = 1 \n
+wpn_aks74 = 1 \n
+wpn_rpk74_pso = 1 \n
+[spawn_loadout2] \n
+wpn_aps = 1 \n
+wpn_fort = 1, silencer \n
+wpn_mp443 = 1 \n
+wpn_gsh18 = 1 \n
+wpn_tt33 = 1 \n
+wpn_pb = 1 \n
+wpn_glock = 1 \n
+wpn_colt1911 = 1 \n
+[spawn] \n

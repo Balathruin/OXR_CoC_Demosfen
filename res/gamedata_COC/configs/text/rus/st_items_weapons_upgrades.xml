@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
+
+
+	<!-- Added by Tronex -->
+	<string id="st_prop_trx_zoom">
+		<text>Увеличение</text>
+	</string>
+	<string id="st_prop_trx_nightvision">
+		<text>Ночное видение</text>
+	</string>
+	
+	<string id="st_up_binoc_a1_name">
+		<text>Объектив (10-кратное увеличение)</text>
+	</string>
+	<string id="st_up_binoc_a1_descr">
+		<text>Установка нового комплекта линз 10-кратного увеличения для дальних расстояний.</text>
+	</string>
+	<string id="st_up_binoc_a2_name">
+		<text>Объектив (15-кратное увеличение)</text>
+	</string>
+	<string id="st_up_binoc_a2_descr">
+		<text>Установка нового комплекта линз 15-кратного увеличения для дальних расстояний.</text>
+	</string>
+	<string id="st_up_binoc_a3_name">
+		<text>Высококачественный объектив (20-кратное увеличение)</text>
+	</string>
+	<string id="st_up_binoc_a3_descr">
+		<text>Установка высококачественного комплекта линз 20-кратного увеличения для сверхдальних расстояний.</text>
+	</string>
+	<string id="st_up_binoc_b1_name">
+		<text>Низкодисперсионный объектив</text>
+	</string>
+	<string id="st_up_binoc_b1_descr">
+		<text>Применение низкодисперсионного стекла в линзах позволяет уменьшить остаточную хроматическую аберрацию, что особенно полезно для длиннофокусных объективов.</text>
+	</string>
+	<string id="st_up_binoc_b2_name">
+		<text>ПНВ 1-го поколения</text>
+	</string>
+	<string id="st_up_binoc_b2_descr">
+		<text>Установка прибора ночного видения позволяет более чётко видеть окружающую обстановку в условиях недостаточной освещённости.</text>
+	</string>
+	<string id="st_up_binoc_b3_name">
+		<text>ПНВ 2-го поколения</text>
+	</string>
+	<string id="st_up_binoc_b3_descr">
+		<text>Улучшенная технология приборов ночного видения. Обладает большей чувствительностью и даёт более чёткое изображение.</text>
+	</string>
+	<string id="st_up_binoc_c1_name">
+		<text>Замена каркаса</text>
+	</string>
+	<string id="st_up_binoc_c1_descr">
+		<text>Замена материалов на более лёгкие даёт выигрыш в весе.</text>
+	</string>
+	<string id="st_up_bp_a1_name">
+		<text>Увеличение объёма</text>
+	</string>
+	<string id="st_up_bp_a1_descr">
+		<text>Увеличивает вместимость рюкзака.</text>
+	</string>
+	<string id="st_up_bp_a2_name">
+		<text>Вставки из артефакта «Грави»</text>
+	</string>
+	<string id="st_up_bp_a2_descr">
+		<text>Встроенные частицы артефакта «Грави» позволяют уменьшить общий вес рюкзака и, тем самым, брать с собой больше груза.</text>
+	</string>
+	<string id="st_up_bp_a3_name">
+		<text>Вставки из артефакта «Батарейка»</text>
+	</string>
+	<string id="st_up_bp_a3_descr">
+		<text>Добавление частиц артефакта «Батарейка» в наплечные ремни повышает мышечный тонус владельца и уменьшает утомляемость.</text>
+	</string>
+	<string id="st_up_bp_a4_name">
+		<text>Вставки из артефакта «Золотая рыбка»</text>
+	</string>
+	<string id="st_up_bp_a4_descr">
+		<text>Встроенные частицы антигравитационного артефакта «Золотая рыбка» позволяют значительно уменьшить общий вес и, тем самым, брать с собой больше груза. Однако, это оказывает негативное влияние на тонус мышц владельца рюкзака.</text>
+	</string>
+	<string id="st_up_bp_a5_name">
+		<text>Вставки из артефакта «Снежинка»</text>
+	</string>
+	<string id="st_up_bp_a5_descr">
+		<text>Добавление частиц артефакта «Снежинка» в наплечные ремни значительно повышает мышечный тонус владельца и резко уменьшает утомляемость. Однако, это приводит к увеличению веса поклажи.</text>
+	</string>
+	<!-- Ends here -->
+	
 	<string id="st_prop_bullet_speed">
 		<text>Настильность</text>
 	</string>
@@ -1960,7 +2044,7 @@
 		<text>Высококонтрастный прицел</text>
 	</string>
 	<string id="st_prop_sprint">
-		<text>Усилители сервоприводов</text>
+		<text>Усилители сервоприводов </text>
 	</string>
 	<string id="st_prop_durability">
 		<text>Прочность костюма</text>
@@ -2018,5 +2102,50 @@
 	</string>
 	<string id="st_up_kom_a5_name">
 		<text>Подстёжка из прорезиненной ткани</text>
+	</string>
+<string id="st_prop_scope_10x">
+		<text>Оптический прицел x10</text>
+	</string>
+	<string id="st_prop_scope_12x">
+		<text>Оптический прицел x12</text>
+	</string>
+<string id="st_up_opt_a3_nimble_descr">
+		<text>Установка оптического прицела для ведения боя на дальних дистанциях.</text>
+	</string>
+	<string id="st_up_opt_a3_nimble_name">
+		<text>Оптический прицел х10</text>
+	</string>
+<string id="st_up_opt_a4_nimble_descr">
+		<text>Установка оптического прицела для ведения боя на дальних дистанциях.</text>
+	</string>
+	<string id="st_up_opt_a4_nimble_name">
+		<text>Оптический прицел х12</text>
+	</string>
+	<string id="st_prop_binoc_zoom">
+		<text>Увеличенная кратность</text>
+	</string>
+	<string id="st_prop_binoc_nightvision">
+		<text>Высокая контрастность</text>
+	</string>
+	<string id="st_prop_binoc_weight">
+		<text>Масса бинокля</text>
+	</string>
+	<string id="st_up_binoc_1_name">
+		<text>Углепластиковые компоненты</text>
+	</string>
+	<string id="st_up_binoc_1_descr">
+		<text>Замена металла углепластиками позволяет снизить массу бинокля без утраты функционала.</text>
+	</string>
+	<string id="st_up_binoc_2_name">
+		<text>Высококонтрастная оптика</text>
+	</string>
+	<string id="st_up_binoc_2_descr">
+		<text>Модификация отптики, которая заключается в повышении контрастности. Помогает вести наблюдение при недостаточном освещёни.</text>
+	</string>
+	<string id="st_up_binoc_3_name">
+		<text>Увеличение кратности</text>
+	</string>
+	<string id="st_up_binoc_3_descr">
+		<text>Установка более сильных линз позволяет вести наблюдение на несколько больших дистанциях.</text>
 	</string>
 </string_table>

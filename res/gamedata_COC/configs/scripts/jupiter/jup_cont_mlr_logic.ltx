@@ -1,0 +1,53 @@
+[logic@jup_cont_trader_bandit]
+suitable = {=check_npc_name(jup_cont_trader_bandit)} true
+trade = misc\trade\trade_bandit.ltx
+prior = 200
+active = walker@base
+can_select_weapon = true
+level_spot = trader
+dont_keep_items = true
+
+[walker@base]
+path_walk = cont_trader_1_walk
+path_look = cont_trader_1_look
+use_camp = false
+meet = meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+
+[logic@jup_cont_mech_bandit]
+suitable = {=check_npc_name(jup_cont_mech_bandit)} true
+prior = 200
+active = walker@base2
+can_select_weapon = true
+level_spot = mechanic
+dont_keep_items = true
+
+[walker@base2]
+path_walk = cont_mech_1_walk
+path_look = cont_mech_1_look
+use_camp = false
+meet = meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false

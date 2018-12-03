@@ -1,0 +1,9 @@
+[logic]
+active = sr_idle@search
+
+[sr_idle@search]
+on_info = {+esc_2_12_medic_mlr_save_task_mlr_2 =actor_in_zone(esc_2_12_medic_mlr_medbag_hidden)} sr_idle@stop %=run_tutorial(esc_2_12_medic_mlr_medbag_hidden_search)%
+
+[sr_idle@stop]
+on_info = {!actor_in_zone(esc_2_12_medic_mlr_medbag_hidden)} sr_idle@search %=stop_tutorial%
+on_info2 = {+esc_2_12_medic_mlr_medbag_with_actor} nil %=stop_tutorial%

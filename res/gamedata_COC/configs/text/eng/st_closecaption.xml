@@ -662,6 +662,36 @@
 	<string id="zat_b5_sultan_kill_stalkers">
 		<text>Take them down, boys!</text>
 	</string>
+	<string id="zat_b51_stalker_nimble_greeting_1">
+		<text>Hello, stalker. Thinking of placing an order?</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_2">
+		<text>What's up? Decided to order something?</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_3">
+		<text>Hey! You need something?</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_order_not_ready_1">
+		<text>Don't worry, you'll get the goods a bit later.</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_order_not_ready_2">
+		<text>Come back later, I don't have the goods yet.</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_order_not_ready_3">
+		<text>Drop by later. I'll have your order by then.</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_order_ready_1">
+		<text>That's your order complete. Collect your goods.</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_order_ready_2">
+		<text>I have the goods. Take them!</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_greeting_order_ready_3">
+		<text>Take your goods, stalker! As you can see, I keep my word.</text>
+	</string>
+	<string id="zat_b51_stalker_nimble_order">
+		<text>The job's done. You can collect the goods.</text>
+	</string>
 	<string id="zat_b52_port_bandits_after_pay_snd_1">
 		<text>Good. Now get the hell out of here, before I change my mind!</text>
 	</string>

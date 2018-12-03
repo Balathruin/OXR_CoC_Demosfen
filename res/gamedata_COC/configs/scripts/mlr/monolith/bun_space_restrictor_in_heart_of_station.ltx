@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = {+main_monolith_mlr_task_4_dlg_1_in_bun} sr_idle@protect %+main_monolith_mlr_task_4_dlg_1_in_heart_of_station =send_tip(main_monolith_mlr_task_4_dlg_1_in_heart_of_station_tip:wings_leader_mon)%
+
+[sr_idle@protect]
+on_info = {+main_monolith_mlr_task_4_dlg_2} sr_idle@timer_protection
+
+[sr_idle@timer_protection]
+on_game_timer = 200 | sr_idle@timer_protection_1 %=create_squad(heart_of_station_bloodsucker_wave_1:bun2_tushkano_lair)%
+
+[sr_idle@timer_protection_1]
+on_game_timer = 200 | sr_idle@timer_protection_2 %=create_squad(heart_of_station_bloodsucker_wave_2:bun2_tushkano_lair)%
+
+[sr_idle@timer_protection_2]
+on_game_timer = 200 | sr_idle@over %=create_squad(heart_of_station_bloodsucker_wave_3:bun2_tushkano_lair)%
+
+[sr_idle@over]
+on_game_timer = 10 | nil %+main_monolith_mlr_task_4_dlg_1_over%

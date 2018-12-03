@@ -237,6 +237,7 @@ species				= flesh
 
 terrain				= flesh_terrain
 damage				= m_flesh_damage
+protections_sect 	= flesh_protections
 immunities_sect		= flesh_immunities
 attack_effector		= m_flesh_attack_effector
 attack_params		= m_flesh_attack_params
@@ -293,19 +294,23 @@ bip01_spine 		= 1.0, -1, 0.1
 bip01_neck 			= 1.0, -1, 0.3
 bip01_head 			= 2.0, -1, 0.1
 
+[flesh_protections]
+
+hit_fraction_monster = 0.4
+
 ;===========================================================================
 ; Immunities
 ;===========================================================================
 [flesh_immunities]
-burn_immunity			= 0.7
-strike_immunity			= 0.7
-shock_immunity			= 0.7
-wound_immunity			= 0.6
+burn_immunity			= 0.8
+strike_immunity			= 0.8
+shock_immunity			= 0.8
+wound_immunity			= 0.7
 radiation_immunity 		= 0
 telepatic_immunity 		= 0
-chemical_burn_immunity 	= 0.7
-explosion_immunity 		= 0.7
-fire_wound_immunity  	= 0.9
+chemical_burn_immunity 	= 0.8
+explosion_immunity 		= 0.6
+fire_wound_immunity  	= 0.6
 
 ;===========================================================================
 ; Attack Animation Parameters
@@ -376,17 +381,19 @@ spec_rank			= normal
 community			= flesh
 
 MaxHealthValue		     = 1.0			; range [0..200]
+skin_armor = 0.1
+
 
 [flesh_immunities_normal]
-burn_immunity			= 0.7
-strike_immunity			= 0.7
-shock_immunity			= 0.7
-wound_immunity			= 0.6
+burn_immunity			= 0.8
+strike_immunity			= 0.8
+shock_immunity			= 0.8
+wound_immunity			= 0.7
 radiation_immunity 		= 0
 telepatic_immunity 		= 0
-chemical_burn_immunity 	= 0.7
-explosion_immunity 		= 0.7
-fire_wound_immunity  	= 0.9
+chemical_burn_immunity 	= 0.8
+explosion_immunity 		= 0.6
+fire_wound_immunity  	= 0.6
 
 [flesh_attack_params_normal]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -415,17 +422,19 @@ attack_params		= flesh_attack_params_strong
 spec_rank			= strong
 community			= flesh
 MaxHealthValue		     = 1.25			; range [0..200]
+skin_armor = 0.25
+
 
 [flesh_immunities_strong]
-burn_immunity			= 0.6
-strike_immunity			= 0.6
-shock_immunity			= 0.6
-wound_immunity			= 0.5
+burn_immunity			= 0.7
+strike_immunity			= 0.7
+shock_immunity			= 0.7
+wound_immunity			= 0.6
 radiation_immunity 		= 0
 telepatic_immunity 		= 0
-chemical_burn_immunity 	= 0.6
-explosion_immunity 		= 0.8
-fire_wound_immunity  	= 0.8
+chemical_burn_immunity 	= 0.7
+explosion_immunity 		= 0.5
+fire_wound_immunity  	= 0.5
 
 [flesh_attack_params_strong]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -500,16 +509,18 @@ attack_params		= flesh_attack_params_weak
 $spawn               = "monsters\fleshes\flesh_weak"
 MaxHealthValue		     = 0.75			; range [0..200]
 
+skin_armor = 0.08
+
 [flesh_immunities_weak]
-burn_immunity			= 0.8
-strike_immunity			= 0.8
-shock_immunity			= 0.8
-wound_immunity			= 0.7
+burn_immunity			= 0.9
+strike_immunity			= 0.9
+shock_immunity			= 0.9
+wound_immunity			= 0.8
 radiation_immunity 		= 0
 telepatic_immunity 		= 0
-chemical_burn_immunity 	= 0.8
-explosion_immunity 		= 0.9
-fire_wound_immunity  	= 1
+chemical_burn_immunity 	= 0.9
+explosion_immunity 		= 0.7
+fire_wound_immunity  	= 0.7
 
 [flesh_attack_params_weak]
 ;---------------------------------------------------------------------------------------------------------------------------------------------

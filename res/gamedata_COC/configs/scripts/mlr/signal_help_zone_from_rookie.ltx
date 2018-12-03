@@ -1,0 +1,16 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = %=send_tip(st_plz_save_rookie:fatty) +spawn_angry_bloodsucker%
+on_info = {+spawn_angry_bloodsucker} sr_idle@kill %=spawn_object(bloodsucker_black_strong_wanna_eat_rookie:bloodsucker_black_strong_wanna_eat_rookie_1_walk)%
+
+[sr_idle@kill]
+on_info = {+you_save_rookie_hero} sr_idle@final_task %+fat_open_the_door =send_tip(st_plz_save_rookie_done:fatty)%
+
+[sr_idle@final_task]
+on_info = {+rookie_pole_task_2_dlg} sr_idle@final_task_1 
+
+[sr_idle@final_task_1]
+on_info = {!is_night} nil %+morning_here_is_wake_up_pole_task_2%
+on_info2 = {+boss_controller_pole_dead} nil

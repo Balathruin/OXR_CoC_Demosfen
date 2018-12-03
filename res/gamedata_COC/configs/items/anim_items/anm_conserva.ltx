@@ -1,0 +1,38 @@
+[anm_conserva]:anm_base
+$spawn						= "weapons\wpn_tubik"
+hud							= anm_conserva_hud
+visual						= dynamics\devices\dev_binoculars\dev_binoculars.ogf
+description					= st_binocular_descr
+inv_name		 			= st_binocular_name
+inv_name_short				= st_binocular_name
+
+
+snd_close                                = interface\inv_nosound
+snd_draw                                 = interface\inv_nosound
+snd_empty                                = interface\inv_nosound
+snd_gyro                                 = interface\inv_nosound
+snd_holster                              = interface\inv_nosound
+snd_reload                               = interface\inv_nosound
+snd_shoot                                = interface\inv_nosound
+snd_zoomin                               = interface\inv_nosound
+snd_zoomout                              = interface\inv_nosound
+
+[anm_conserva_hud]:anm_base_hud
+hands_position 				= 0.0, -0.383296, 0.424578
+hands_orientation 			= 0.0, 16.4738, 0.0
+hands_position_16x9 		= 0.0, -0.383296, 0.424578
+hands_orientation_16x9 		= 0.0, 16.4738, 0.0
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+item_visual             	= dynamics\hud_anims\eat\eat_tushonka.ogf
+anm_show				= eat_tushonka_d_use_h		;binoculars_draw
+anm_hide				= eat_tushonka_draw		;binoculars_holster
+anm_idle				= eat_tushonka_idle			;binoculars_idle
+anm_idle_aim			= eat_tushonka_idle			;binoculars_idle
+anm_idle_moving			= eat_tushonka_idle_moving	;binoculars_idle_moving
+anm_idle_sprint			= eat_tushonka_idle_sprint	;binoculars_idle_sprint
+anm_bore				= eat_tushonka_use		;binoculars_idle_bore
+
+
+
+

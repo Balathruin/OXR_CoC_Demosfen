@@ -61,16 +61,16 @@
 		<text>%c[0,245,245,220]М-мачи-и-и-и!!!\n \nСталкеры, чей разум был разрушен в результате воздействия пси-установок или атаки контролёра. Обладают лишь основными инстинктами, нападают на всё и всех.</text>
 	</string>
 	<string id="st_mm_faction_back">
-		<text>Назад</text>
+		<text>Очкую</text>
 	</string>
 	<string id="st_mm_faction_submit">
-		<text>Начать</text>
+		<text>Пересечь перриметр</text>
 	</string>
 	<string id="st_mm_faction_rand">
 		<text>Случайно</text>
 	</string>
 	<string id="st_mm_faction_cap_character_name">
-		<text>Имя:</text>
+		<text>Прозвище:</text>
 	</string>
 	<string id="st_mm_faction_cap_faction">
 		<text>Клан:</text>

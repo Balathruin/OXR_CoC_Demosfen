@@ -8,6 +8,7 @@ respawn_idle = 86400
 
 [respawn@pri_sim_6]
 merc_sim_squad
+hostile_killer
 spawn_merc
 spawn_zombied
 
@@ -17,6 +18,11 @@ spawn_num = {-bar_deactivate_radar_done} 1, 0
 
 [merc_sim_squad]
 spawn_squads = merc_sim_squad_advanced, merc_sim_squad_advanced, merc_sim_squad_veteran
+;spawn_num =  {+pri_a28_actor_in_zone_stay} 2, 0
+spawn_num = {+bar_deactivate_radar_done} 2, 0
+
+[hostile_killer]
+spawn_squads = simulation_hostile_killer
 ;spawn_num =  {+pri_a28_actor_in_zone_stay} 2, 0
 spawn_num = {+bar_deactivate_radar_done} 2, 0
 

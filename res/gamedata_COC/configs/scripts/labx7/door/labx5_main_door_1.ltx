@@ -1,0 +1,22 @@
+[logic]
+active = ph_door@open
+
+[ph_door@locked]
+anim = idle
+closed = true
+locked = true
+snd_open_start = trader_door_locked
+tip_open = tip_door_locked
+on_info = {+labx5_b1_first_door_open} ph_door@open
+
+
+[ph_door@open]
+anim = idle
+closed = false
+locked = false
+on_use = ph_door@closed
+on_game_timer = 20 | {-lx8_door_open} %+lx8_door_open =anim_obj_forward(level_lab_spectrum_door_lab_5)% 
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+snd_init = door_servomotor

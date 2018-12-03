@@ -101,7 +101,8 @@ suitable = {=check_npc_name(agr_smart_terrain_1_6_army_trader_stalker)} true
 prior = 200
 active = animpoint@trade
 level_spot = trader
-trade = misc\trade\trade_army_spooner.ltx
+trade = misc\trade\trade_military.ltx
+can_select_weapon = false
 dont_keep_items = true
 
 [animpoint@trade]
@@ -116,6 +117,7 @@ help_wounded_enabled = false
 corpse_detection_enabled = false
 invulnerable = {!actor_enemy} true, false
 meet = meet@trade
+on_game_timer = 7200 | {!is_rain -soldiers_ukraine_private_death} walker@agr_otzhiman_main
 
 [meet@trade]
 close_anim 		= nil
@@ -133,6 +135,7 @@ suitable = {=check_npc_name(agr_smart_terrain_1_6_army_mechanic_stalker)} true
 prior = 200
 active = animpoint@stand
 level_spot = mechanic
+can_select_weapon = false
 
 [animpoint@stand]
 cover_name = agr_smart_terrain_1_6_smart_cover_mechanic
@@ -238,3 +241,224 @@ home_min_radius = 1
 home_max_radius = 30
 aggressive = true
 panic = 0
+
+;MLR CAMP
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+[logic@agr_smart_terrain_1_6_camp_work_6]
+active = animpoint@agr_smart_terrain_1_6_camp_work_6
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_7]
+active = animpoint@agr_smart_terrain_1_6_camp_work_7
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_8]
+active = animpoint@agr_smart_terrain_1_6_camp_work_8
+suitable = {!surge_started +soldiers_ukraine_private_death} true, {!surge_started =target_squad_name(soldiers_ukraine_private)} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_9]
+active = animpoint@agr_smart_terrain_1_6_camp_work_9
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_10]
+active = animpoint@agr_smart_terrain_1_6_camp_work_10
+suitable = {!surge_started +soldiers_ukraine_private_death} true, {!surge_started =target_squad_name(soldiers_ukraine_private)} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_11]
+active = animpoint@agr_smart_terrain_1_6_camp_work_11
+suitable = {!surge_started +soldiers_ukraine_private_death} true, {!surge_started =target_squad_name(soldiers_ukraine_private)} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_12]
+active = animpoint@agr_smart_terrain_1_6_camp_work_12
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_13]
+active = animpoint@agr_smart_terrain_1_6_camp_work_13
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_14]
+active = animpoint@agr_smart_terrain_1_6_camp_work_14
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_15]
+active = animpoint@agr_smart_terrain_1_6_camp_work_15
+suitable = {!surge_started +soldiers_ukraine_private_death} true, {!surge_started =target_squad_name(soldiers_ukraine_private)} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_16]
+active = animpoint@agr_smart_terrain_1_6_camp_work_16
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_17]
+active = animpoint@agr_smart_terrain_1_6_camp_work_17
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_18]
+active = animpoint@agr_smart_terrain_1_6_camp_work_18
+suitable = {!surge_started +soldiers_ukraine_private_death} true, {!surge_started =target_squad_name(soldiers_ukraine_private)} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_19]
+active = animpoint@agr_smart_terrain_1_6_camp_work_19
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_20]
+active = animpoint@agr_smart_terrain_1_6_camp_work_20
+suitable = {!surge_started} true
+prior = 45
+
+[logic@agr_smart_terrain_1_6_camp_work_21]
+active = animpoint@agr_smart_terrain_1_6_camp_work_21
+suitable = {!surge_started} true
+prior = 45
+
+[animpoint@agr_smart_terrain_1_6_camp_work_6]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_1
+use_camp = true
+
+[animpoint@agr_smart_terrain_1_6_camp_work_7]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_2
+use_camp = true
+
+[animpoint@agr_smart_terrain_1_6_camp_work_8]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_3
+use_camp = true
+on_game_timer = 7200 | {!is_rain -soldiers_ukraine_private_death} animpoint@agr_smart_cover_otzhiman_5
+
+[animpoint@agr_smart_terrain_1_6_camp_work_9]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_4
+use_camp = true
+
+[animpoint@agr_smart_terrain_1_6_camp_work_10]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_5
+use_camp = true
+on_game_timer = 7200 | {!is_rain -soldiers_ukraine_private_death} animpoint@agr_smart_cover_otzhiman_4
+
+[animpoint@agr_smart_terrain_1_6_camp_work_11]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_6
+use_camp = true
+on_game_timer = 7200 | {!is_rain -soldiers_ukraine_private_death} animpoint@agr_smart_cover_otzhiman_3
+
+[animpoint@agr_smart_terrain_1_6_camp_work_12]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_7
+use_camp = true
+meet = no_meet
+
+[animpoint@agr_smart_terrain_1_6_camp_work_13]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_8
+use_camp = false
+meet = no_meet
+
+[animpoint@agr_smart_terrain_1_6_camp_work_14]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_9
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@agr_smart_terrain_1_6_camp_work_15]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_10
+use_camp = true
+turn_on_campfire = true
+on_game_timer = 7200 | {!is_rain -soldiers_ukraine_private_death} animpoint@agr_smart_cover_otzhiman_2
+
+[animpoint@agr_smart_terrain_1_6_camp_work_16]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_11
+use_camp = true
+meet = no_meet
+turn_on_campfire = true
+
+[animpoint@agr_smart_terrain_1_6_camp_work_17]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_12
+use_camp = true
+meet = no_meet
+
+[animpoint@agr_smart_terrain_1_6_camp_work_18]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_13
+use_camp = true
+meet = no_meet
+on_game_timer = 7200 | {!is_rain -soldiers_ukraine_private_death} animpoint@agr_smart_cover_otzhiman_1
+
+[animpoint@agr_smart_terrain_1_6_camp_work_19]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_14
+use_camp = true
+meet = no_meet
+avail_animations = animpoint_stay_ohrana
+
+[animpoint@agr_smart_terrain_1_6_camp_work_20]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_15
+use_camp = true
+
+[animpoint@agr_smart_terrain_1_6_camp_work_21]
+cover_name = agr_smart_terrain_1_6_animpoint_camp_16
+use_camp = true
+
+;physic
+[animpoint@agr_smart_cover_otzhiman_1]
+cover_name = agr_smart_cover_otzhiman_1
+use_camp = false
+on_info = {=surge_started} animpoint@agr_smart_terrain_1_6_camp_work_18
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@agr_smart_terrain_1_6_camp_work_18
+
+[animpoint@agr_smart_cover_otzhiman_2]
+cover_name = agr_smart_cover_otzhiman_2
+use_camp = false
+on_info = {=surge_started} animpoint@agr_smart_terrain_1_6_camp_work_15
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@agr_smart_terrain_1_6_camp_work_15
+
+[animpoint@agr_smart_cover_otzhiman_3]
+cover_name = agr_smart_cover_otzhiman_3
+use_camp = false
+on_info = {=surge_started} animpoint@agr_smart_terrain_1_6_camp_work_11
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@agr_smart_terrain_1_6_camp_work_11
+
+[animpoint@agr_smart_cover_otzhiman_4]
+cover_name = agr_smart_cover_otzhiman_4
+use_camp = false
+on_info = {=surge_started} animpoint@agr_smart_terrain_1_6_camp_work_10
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@agr_smart_terrain_1_6_camp_work_10
+
+[animpoint@agr_smart_cover_otzhiman_5]
+cover_name = agr_smart_cover_otzhiman_5
+use_camp = false
+on_info = {=surge_started} animpoint@agr_smart_terrain_1_6_camp_work_8
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@agr_smart_terrain_1_6_camp_work_8
+
+[walker@agr_otzhiman_main]:animpoint@trade
+path_walk = agr_otzhiman_main_walk
+path_look = agr_otzhiman_main_look
+on_info = {=surge_started} animpoint@trade
+on_game_timer = 3600 | animpoint@trade
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+corpse_detection_enabled = false
+gather_items_enabled = false
+help_wounded_enabled = false
+meet = no_meet
+invulnerable = {=actor_enemy} false, true

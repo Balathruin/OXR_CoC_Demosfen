@@ -1,0 +1,68 @@
+[logic@fat_rookie_in_the_house_pole]
+suitable = {=check_npc_name(fat_rookie_in_the_house_pole)} true
+prior = 140
+active = walker@teleport
+
+[walker@teleport]
+path_walk = fat_stalker_1_walk
+path_look = fat_stalker_1_look
+on_info = {=actor_on_level(y04_pole)} %=teleport_npc(pol_smart_terrain_1_5_fat_stalker_1_look)% walker@open_door
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+reach_distance = 10
+meet = meet
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+
+[walker@fat_rookie_in_the_house_pole]
+path_walk = fat_stalker_1_walk
+path_look = fat_stalker_1_look
+on_info = {=is_night -rookie_pole_task_1_dlg_no_sleep} sleeper@sleeper_1
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+reach_distance = 10
+meet = meet
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+
+[walker@open_door]
+path_walk = fat_stalker_2_walk
+path_look = fat_stalker_2_look
+meet = meet
+on_info = {+talk_to_saving_rookie} walker@fat_rookie_in_the_house_pole
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+
+[sleeper@sleeper_1]
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+path_main = fat_stalker_sleeper
+meet = no_meet
+on_info = {!is_night} walker@fat_rookie_in_the_house_pole
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {+rookie_pole_task_2_dlg_docum_on_actor} false, true
+allow_break = false
+meet_on_talking = false
+trade_enable = false

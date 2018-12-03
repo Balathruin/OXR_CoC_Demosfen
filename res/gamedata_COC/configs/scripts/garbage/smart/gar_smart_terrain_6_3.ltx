@@ -1,13 +1,13 @@
 [smart_terrain]
-squad_id = 14
-max_population = 2
+squad_id = 20
+max_population = 1
 respawn_params = respawn@gar_smart_terrain_6_3
-respawn_idle = 86400
-
+respawn_idle = 60000
+respawn_radius = 200
 
 [respawn@gar_smart_terrain_6_3]
-sim_tushkano
+spawn_monster@boars
 
-[sim_tushkano]
-spawn_squads = simulation_tushkano
-spawn_num = 3
+[spawn_monster@boars]
+spawn_squads = simulation_mix_boar_flesh
+spawn_num = 1

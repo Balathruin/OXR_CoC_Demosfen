@@ -309,6 +309,8 @@ spec_rank				= weak
 community				= burer
 monster_type			= indoor
 
+
+protections_sect 		= burer_protections
 immunities_sect			= burer_immunities
 
 ;-------------------------------------------------------------------------
@@ -323,6 +325,10 @@ vision_danger_section		= burer_vision_danger
 
 ; ЗНАЧЕНИЯ visibility_threshold ДОЛЖНЫ БЫТЬ РАВНЫ для денжера и фри,
 ; иначе возникают артефакты с потерей видимости при переходе от денжера во фри.
+
+[burer_protections]
+
+hit_fraction_monster = 0.2
 
 [burer_immunities]
 burn_immunity			= 0.8
@@ -466,6 +472,8 @@ spec_rank			= normal
 
 MaxHealthValue		    = 1.0						; range [0..200]
 
+skin_armor = 0.5
+
 ;*********************************************************************************
 ; NORMAL PROFILE 2
 ;*********************************************************************************
@@ -480,6 +488,8 @@ spec_rank			= normal
 
 MaxHealthValue		    = 1.0						; range [0..200]
 
+skin_armor = 0.5
+
 ;*********************************************************************************
 ; WEAK PROFILE
 ;*********************************************************************************
@@ -493,6 +503,8 @@ rank				= 18
 spec_rank			= weak
 immunities_sect		= burer_immunities_weak
 MaxHealthValue		    = 0.75						; range [0..200]
+
+skin_armor = 0.4
 
 [burer_immunities_weak]
 burn_immunity			= 0.9
@@ -519,6 +531,9 @@ spec_rank			= weak
 immunities_sect		= burer_immunities_weak
 
 MaxHealthValue		    = 0.75						; range [0..200]
+
+skin_armor = 0.5
+
 
 ;----------------------------------------------------------------------------
 ;--------------------------Borovos -  May 2014 - Fire Burer -----------------
@@ -575,8 +590,17 @@ spec_rank			= weak
 rank				= 0
 community			= burer
 
-explosion_immunity		= 0.4
-fire_wound_immunity		= 0.4
+explosion_immunity		= 0.2
+fire_wound_immunity		= 0.1
+
+; Gravi Strike
+Gravi_Speed					= 76	; meter/sec	
+Gravi_Step					= 2		; meter
+Gravi_Time_To_Hold			= 1200	; milisec
+Gravi_Radius				= 3.0
+Gravi_Impulse_To_Objects	= 60.0
+Gravi_Impulse_To_Enemy		= 1000.0
+Gravi_Hit_Power				= 0.5
 
 ; Tele Strike
 Tele_Max_Handled_Objects = 3	;1;3	

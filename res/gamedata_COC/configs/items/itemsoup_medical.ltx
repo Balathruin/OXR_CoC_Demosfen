@@ -1,0 +1,489 @@
+;MEDICAL
+
+[bandage_israeli]:booster_script
+$spawn                                   = "food and drugs\bandage_israeli"
+visual                                   = dynamics\devices\dev_bandage\dev_bandage.ogf
+description                              = st_bandage_israeli_descr
+
+inv_name                                 = st_bandage_israeli
+inv_name_short                           = st_bandage_israeli
+inv_weight                               = 0.08	                                       ;0.2
+cost                                     = 500
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 7
+inv_grid_y         = 79
+
+boost_time                               = 5.0
+boost_bleeding_restore                   = 0.06
+
+use_sound                                = interface\inv_bandage
+hide_time_wpn=4
+
+[amphetamines_4]:booster_script
+$spawn                                   = "food and drugs\amphetamines"
+inv_name                                 = st_amphetamines
+inv_name_short                           = st_amphetamines
+visual				= dynamics\devices\dev_caffeine\dev_caffeine.ogf
+description                              = st_amphetamines_descr
+cost                                     = 1200
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 8
+inv_grid_y         = 79
+
+inv_weight                               = 0.02
+
+attach_angle_offset                      = 0.000000, 0.000000, 0.000000
+attach_position_offset                   = 0.087266, -0.078540, 0.052360
+attach_bone_name                         = bip01_r_hand
+auto_attach                              = false
+
+boost_time                               = 720
+boost_radiation_restore                  = 0
+boost_power_restore                      = 0.005	                                       ;0.001
+eat_alcohol                              = -0.2
+eat_satiety                              = 0.2
+
+use_sound                                = interface\inv_pills
+
+use_condition                            = true
+max_uses                                 = 4
+remove_after_use                         = true
+empty_weight                             = 0.01
+allow_repair                             = false
+hide_time_wpn=3
+
+[amphetamines_3]:booster_script
+$spawn                                   = "food and drugs\amphetamines"
+inv_name                                 = st_amphetamines
+inv_name_short                           = st_amphetamines
+visual				= dynamics\devices\dev_caffeine\dev_caffeine.ogf
+description                              = st_amphetamines_descr
+cost                                     = 900
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 8
+inv_grid_y         = 79
+
+inv_weight                               = 0.02
+
+attach_angle_offset                      = 0.000000, 0.000000, 0.000000
+attach_position_offset                   = 0.087266, -0.078540, 0.052360
+attach_bone_name                         = bip01_r_hand
+auto_attach                              = false
+
+boost_time                               = 720
+boost_radiation_restore                  = 0
+boost_power_restore                      = 0.005	                                       ;0.001
+eat_alcohol                              = -0.2
+eat_satiety                              = 0.2
+
+use_sound                                = interface\inv_pills
+
+use_condition                            = true
+max_uses                                 = 3
+remove_after_use                         = true
+empty_weight                             = 0.01
+allow_repair                             = false
+hide_time_wpn=3
+
+[amphetamines_2]:booster_script
+$spawn                                   = "food and drugs\amphetamines"
+inv_name                                 = st_amphetamines
+inv_name_short                           = st_amphetamines
+visual				= dynamics\devices\dev_caffeine\dev_caffeine.ogf
+description                              = st_amphetamines_descr
+cost                                     = 600
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 8
+inv_grid_y         = 79
+
+inv_weight                               = 0.01
+
+attach_angle_offset                      = 0.000000, 0.000000, 0.000000
+attach_position_offset                   = 0.087266, -0.078540, 0.052360
+attach_bone_name                         = bip01_r_hand
+auto_attach                              = false
+
+boost_time                               = 720
+boost_radiation_restore                  = 0
+boost_power_restore                      = 0.005	                                       ;0.001
+eat_alcohol                              = -0.2
+eat_satiety                              = 0.2
+
+use_sound                                = interface\inv_pills
+
+use_condition                            = true
+max_uses                                 = 2
+remove_after_use                         = true
+empty_weight                             = 0.005
+allow_repair                             = false
+hide_time_wpn=3
+
+[amphetamines_1]:booster_script
+$spawn                                   = "food and drugs\amphetamines"
+inv_name                                 = st_amphetamines
+inv_name_short                           = st_amphetamines
+visual				= dynamics\devices\dev_caffeine\dev_caffeine.ogf
+description                              = st_amphetamines_descr
+cost                                     = 300
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 8
+inv_grid_y         = 79
+
+inv_weight                               = 0.01
+
+attach_angle_offset                      = 0.000000, 0.000000, 0.000000
+attach_position_offset                   = 0.087266, -0.078540, 0.052360
+attach_bone_name                         = bip01_r_hand
+auto_attach                              = false
+
+boost_time                               = 720
+boost_radiation_restore                  = 0
+boost_power_restore                      = 0.005	                                       ;0.001
+eat_alcohol                              = -0.2
+eat_satiety                              = 0.2
+
+use_sound                                = interface\inv_pills
+
+use_condition                            = true
+max_uses                                 = 1
+remove_after_use                         = true
+empty_weight                             = 0.01
+allow_repair                             = false
+hide_time_wpn=3
+
+[diazepam]:booster_script
+$spawn                                   = "food and drugs\diazepam"
+visual                                   = dynamics\equipments\medical\drug_psy_blockade.ogf
+inv_name                                 = st_diazepam
+inv_name_short                           = st_diazepam
+description                              = st_diazepam_descr
+
+inv_weight                               = 0.01
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 9
+inv_grid_y         = 79
+
+cost                                     = 450
+
+boost_time                               = 720
+;boost_telepat_immunity	= 0.05
+boost_telepat_protection                 = 0.05
+
+use_sound                                = interface\inv_pills
+hide_time_wpn=3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;------------------------------------------------------------------------------------------;
+;                                    Meds                                                ;
+;------------------------------------------------------------------------------------------;
+[psy_complex]:booster_script
+$spawn 						= "food and drugs\psy_complex"
+visual						= dynamics\equipments\medical\drug_psyhodelin.ogf
+inv_name					= st_psy_complex
+inv_name_short		        = st_psy_complex
+description					= st_psy_complex_descr
+inv_weight					= 0.07
+inv_grid_width		        = 1
+inv_grid_height		        = 1
+inv_grid_x					= 26
+inv_grid_y					= 80
+cost						= 2000
+use_sound					= interface\inv_drug_psyhodelin
+eat_psy_health				= 1.0
+eat_toxicity                = -0.50
+eat_alcohol                 = 0.02
+activation_time             = 4.0
+
+empty_weight				= 0.01
+hide_time_wpn=4
+
+[bio_bandage]:booster_script
+$spawn 						= "food and drugs\bio_bandage"
+visual						= dynamics\devices\dev_bandage\dev_bandage_spec.ogf
+description					= st_bio_bandage_descr
+inv_name					= st_bio_bandage
+inv_name_short		        = st_bio_bandage
+inv_weight					= 0.08
+cost						= 500
+inv_grid_width		        = 1
+inv_grid_height		        = 1
+inv_grid_x					= 17
+inv_grid_y					= 81
+boost_time					= 8.0
+boost_bleeding_restore	    = 0.05
+
+use_sound					= interface\inv_bandage
+hide_time_wpn=4
+
+[drug_engine]:booster_script
+$spawn 						= "food and drugs\drug_engine"
+visual						= dynamics\equipments\medical\drug_lsd_engine.ogf
+inv_name					= st_drug_engine
+inv_name_short		        = st_drug_engine
+description					= st_drug_engine_descr
+inv_grid_width		        = 1
+inv_grid_height		        = 1
+inv_grid_x					= 24
+inv_grid_y					= 79
+cost						= 6000
+boost_time					= 140.0
+boost_radiation_protection	= 0.015
+boost_chemburn_protection 	= 0.1
+boost_telepat_protection 	= 0.05
+boost_max_weight			= 35.0
+use_sound					= interface\inv_drug_engine
+eat_health					= -0.25
+eat_toxicity                = 0.50
+eat_alcohol                 = 0.05
+activation_time             = 5.0
+
+use_condition               = true
+max_uses                    = 3
+remove_after_use            = true
+empty_weight                = 0.01
+hide_time_wpn=4
+
+[drug_cat_eye]:booster_script
+$spawn 						= "food and drugs\cat_eye"
+visual						= dynamics\equipments\medical\drug_cat_eye.ogf
+inv_name					= st_cat_eye
+inv_name_short		        = st_cat_eye
+description					= st_cat_eye_descr
+inv_weight					= 0.2
+inv_grid_width		        = 1
+inv_grid_height		        = 1
+inv_grid_x					= 25
+inv_grid_y					= 79
+cost						= 800
+use_sound					= interface\inv_pills
+eat_toxicity                = 0.05
+activation_time             = 3.0
+hide_time_wpn=4
+
+;@medo
+[medo]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency	=
+$spawn						= "devices\quest_items\medo"
+$prefetch					= 32
+;class						= S_FOOD
+class						= II_ANTIR
+cform						= skeleton
+visual						= dynamics\devices\dev_meds\medo.ogf
+radius						= 1
+description					= TGZ_medo_desc
+inv_name					= TGZ_medo
+inv_name_short				= TGZ_medo
+inv_weight					= 0.15
+quest_item					= false
+use_sound					= interface\inv_softdrink
+
+inv_grid_width				= 1
+inv_grid_height				= 1
+inv_grid_x					= 18
+inv_grid_y					= 81
+
+cost						= 1000
+eat_health					= 0.00
+eat_satiety					= -0.05
+eat_radiation				= 0.0
+eat_power					= 0.0
+eat_alcohol					= 0.03
+wounds_heal_perc			= 0.0
+
+boost_time					= 100.0
+boost_wound_immunity		= 0.0
+boost_bleeding_restore		= 0.0
+boost_health_restore		= 0.0
+boost_power_restore			= 0.0
+boost_max_weight			= 0.0
+boost_telepat_protection 	= 0.03
+boost_radiation_restore		= 0.02
+hide_time_wpn=4
+
+;@mbk
+[mbk]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency		=
+$spawn						= "devices\quest_items\mbk"
+$prefetch					= 32
+;class						= S_FOOD
+class						= II_ANTIR
+cform						= skeleton
+visual						= dynamics\devices\dev_meds\mbk.ogf
+radius						= 1
+description					= TGZ_mbk_desc
+inv_name					= TGZ_mbk
+inv_name_short				= TGZ_mbk
+inv_weight					= 0.03
+quest_item					= false
+use_sound					= interface\inv_softdrink
+
+inv_grid_width				= 1
+inv_grid_height				= 1
+inv_grid_x					= 19
+inv_grid_y					= 81
+
+cost						= 600
+eat_health					= 0.00
+eat_satiety					= -0.1
+eat_power					= 0.05
+eat_radiation				= 0.0
+eat_alcohol					= 0.005
+wounds_heal_perc			= 0.0
+
+boost_time					= 500.0
+boost_wound_immunity		= 0.0
+boost_bleeding_restore		= 0.0
+boost_health_restore		= 0.0
+boost_power_restore			= 0.02
+boost_max_weight			= 30.0
+boost_telepat_protection 	= 0.0
+hide_time_wpn=4
+
+
+;-------------------------------;
+;-------------------------------;
+
+[medkit_elite]:booster_script
+$spawn 						= "food and drugs\medkit_elite"
+visual						= dynamics\devices\dev_aptechka\dev_aptechka_elite.ogf
+inv_name					= st_medkit_elite
+inv_name_short		        = st_medkit_elite
+description					= st_medkit_elite_descr
+inv_weight					= 0.2
+
+inv_grid_width		        = 1
+inv_grid_height		        = 1
+inv_grid_x					= 26
+inv_grid_y					= 79
+cost						= 4000
+
+boost_time					= 20.0
+boost_health_restore		= 0.02
+boost_radiation_restore	    = 0.02
+boost_bleeding_restore	    = 0.008
+boost_power_restore			= 0.004
+
+use_sound					= interface\inv_medkit
+eat_toxicity                = 0.20
+
+use_condition               = true
+max_uses                    = 3
+remove_after_use            = true
+empty_weight                = 0.02
+;hide_time_wpn=4
+
+[bag_medkit_1]:booster_script
+$spawn 			        	= "food and drugs\bag_medkits"
+visual			        	= dynamics\devices\dev_med_bag\dev_med_bag.ogf
+description					= st_bag_medkit_1_descr
+inv_name					= st_bag_medkit_1_title
+inv_name_short	            = st_bag_medkit_1_title
+inv_weight					= 5.3
+inv_grid_width		        = 2
+inv_grid_height		        = 2
+inv_grid_x					= 27
+inv_grid_y					= 78
+
+cost						= 30000
+boost_time					= 20.0
+boost_health_restore		= 0.005
+boost_radiation_restore	    = 0.005
+boost_bleeding_restore	    = 0.002
+boost_power_restore			= 0.001
+eat_toxicity                = 0.05
+use_condition               = true
+use_sound					= interface\inv_medkit
+max_uses                    = 10
+remove_after_use            = true
+eat_portions_num                = 1
+hide_time_wpn=4
+
+[bag_medkit_2]:bag_medkit_1
+description					= st_bag_medkit_2_descr
+inv_name					= st_bag_medkit_2_title
+inv_name_short	            = st_bag_medkit_2_title
+inv_weight					= 5.25
+inv_grid_x					= 29
+inv_grid_y					= 78
+
+cost						= 40000
+boost_time					= 20.0
+boost_health_restore		= 0.01
+boost_radiation_restore	    = 0.01
+boost_bleeding_restore	    = 0.004
+boost_power_restore			= 0.002
+eat_toxicity                = 0.1
+use_condition               = true
+use_sound					= interface\inv_medkit
+max_uses                    = 10
+remove_after_use            = true
+eat_portions_num                = 1
+hide_time_wpn=4
+
+[bag_medkit_3]:bag_medkit_1
+description					= st_bag_medkit_3_descr
+inv_name					= st_bag_medkit_3_title
+inv_name_short	            = st_bag_medkit_3_title
+inv_weight					= 5.25
+inv_grid_x					= 27
+inv_grid_y					= 80
+cost						= 45000
+boost_time					= 20.0
+boost_health_restore		= 0.02
+boost_radiation_restore	    = 0.02
+boost_bleeding_restore	    = 0.008
+boost_power_restore			= 0.004
+eat_toxicity                = 0.2
+use_condition               = true
+use_sound					= interface\inv_medkit
+max_uses                    = 10
+remove_after_use            = true
+eat_portions_num                = 1
+hide_time_wpn=4
+
+[bag_medkit_4]:bag_medkit_1
+description					= st_bag_medkit_4_descr
+inv_name					= st_bag_medkit_4_title
+inv_name_short	                = st_bag_medkit_4_title
+inv_weight					= 5.47
+inv_grid_x					= 29
+inv_grid_y					= 80
+cost						= 50000
+boost_time					= 20.0
+boost_health_restore		= 0.02
+boost_radiation_restore	    = 0.02
+boost_bleeding_restore	    = 0.008
+boost_power_restore			= 0.004
+eat_toxicity                = 0.2
+use_condition               = true
+use_sound					= interface\inv_medkit
+max_uses                    = 15
+remove_after_use            = true
+eat_portions_num                = 1
+hide_time_wpn=4

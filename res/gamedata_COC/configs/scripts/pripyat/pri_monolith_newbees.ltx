@@ -1,0 +1,194 @@
+[logic@pri_monolith_newbees_1]
+suitable = {-talk_to_teacher_monolith_mlr =check_npc_name(newbee_monolith_stalker_1) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_1
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_1]
+cover_name = pri_smart_cover_newbee_mlr_1
+avail_animations = salut_free
+use_camp = false
+meet = no_meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_newbees_2]
+suitable = {-talk_to_teacher_monolith_mlr =check_npc_name(newbee_monolith_stalker_2) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_2
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_2]
+cover_name = pri_smart_cover_newbee_mlr_2
+avail_animations = salut_free
+use_camp = false
+meet = no_meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_newbees_3]
+suitable = {-talk_to_teacher_monolith_mlr =check_npc_name(newbee_monolith_stalker_3) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_3
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_3]
+cover_name = pri_smart_cover_newbee_mlr_3
+avail_animations = salut_free
+use_camp = false
+meet = no_meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_newbees_4]
+suitable = {-talk_to_teacher_monolith_mlr =check_npc_name(newbee_monolith_stalker_4) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_4
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_4]
+cover_name = pri_smart_cover_newbee_mlr_4
+avail_animations = salut_free
+use_camp = false
+meet = no_meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[walker@newbee_1_1]
+path_walk = newbee_to_prisoners_1_walk
+path_look = newbee_to_prisoners_1_look
+use_camp = false
+meet = no_meet
+on_info = {+main_monolith_mlr_task_2_dlg_prisoners_dead} remark@newbee_1_1_free
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[remark@newbee_1_1_free]:walker@newbee_1_1
+anim = guard
+on_info = {+main_monolith_mlr_task_2_dlg_3} animpoint@newbee_1_3
+
+; 3_2
+
+[logic@pri_monolith_newbees_2_1]
+suitable = {+main_monolith_mlr_task_3_2_dlg_new_covers =check_npc_name(newbee_monolith_stalker_1) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_2_1
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_2_1]
+cover_name = pri_smart_cover_newbee_mlr_2_1
+avail_animations = animpoint_stay_wall
+use_camp = false
+meet = meet
+on_info = {+main_monolith_mlr_task_2_dlg_to_prisoners} walker@newbee_1_1
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_newbees_2_2]
+suitable = {+main_monolith_mlr_task_3_2_dlg_new_covers =check_npc_name(newbee_monolith_stalker_2) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_2_2
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_2_2]
+cover_name = pri_smart_cover_newbee_mlr_2_2
+avail_animations = animpoint_sit_ass
+use_camp = false
+meet = meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_newbees_2_3]
+suitable = {+main_monolith_mlr_task_3_2_dlg_new_covers =check_npc_name(newbee_monolith_stalker_3) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_2_3
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_2_3]
+cover_name = pri_smart_cover_newbee_mlr_2_3
+avail_animations = animpoint_sit_ass
+use_camp = false
+meet = meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_newbees_2_4]
+suitable = {+main_monolith_mlr_task_3_2_dlg_new_covers =check_npc_name(newbee_monolith_stalker_4) =actor_community(actor_monolith)} true, false
+prior = 150
+active = animpoint@newbee_2_4
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@newbee_2_4]
+cover_name = pri_smart_cover_newbee_mlr_2_4
+avail_animations = animpoint_stay_ohrana
+use_camp = false
+meet = meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+trade_enable = false

@@ -29,13 +29,13 @@ title = cit_killers_merc_trader_stalker_task_2_name
 descr = cit_killers_merc_trader_stalker_task_2_text
 job_descr = cit_killers_merc_trader_stalker_task_2_about
 task_complete_descr = cit_killers_merc_trader_stalker_task_2_finish
-repeat_timeout = 86400
+repeat_timeout = 259200
 target_functor = general_under_faction_control
 status_functor = check_smart_under_faction_control_staged_enemy
-status_functor_params = killer
+status_functor_params = killer,stalker,bandit,dolg,army
 stage_complete = 1
-on_init = %=find_smart_under_faction_control_enemy(cit_killers_merc_trader_stalker_task_2_id:killer)%
-precondition = {=all_avail_smart_stayed_squad_count_ge_by_faction_enemy(1:nil:false:killer)} true, false
+on_init = %=find_smart_under_faction_control_enemy(cit_killers_merc_trader_stalker_task_2_id:killer:stalker:bandit:dolg:army)%
+precondition = {=all_avail_smart_stayed_squad_count_ge_by_faction_enemy(1:nil:false:killer:stalker:bandit:dolg:army)} true, false
 on_complete = %=complete_task_inc_goodwill(50:killer) =reward_random_money(7000:8000) =reward_stash(true) =inc_task_stage(cit_killers_merc_trader_stalker_task_2) =pstor_reset(cit_killers_merc_trader_stalker_task_2_id) =pstor_reset(cit_killers_merc_trader_stalker_task_2_target_id)%
 on_fail = %=fail_task_dec_goodwill(50:killer) =pstor_reset(cit_killers_merc_trader_stalker_task_2_id) =pstor_reset(cit_killers_merc_trader_stalker_task_2_target_id)%
 on_cancel = %=pstor_reset(cit_killers_merc_trader_stalker_task_2_id) =pstor_reset(cit_killers_merc_trader_stalker_task_2_target_id)%

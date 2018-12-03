@@ -1,0 +1,130 @@
+;==============================================================
+;
+; TASKS PROVIDED ON JUPITER AND ZATON MAP
+;	CoC 1.3.11
+;       CoC 1.3.20
+;	Main Faction: Сталкеры, Учёные (Борода, Гаваец, Учёные в бункере "Юпитера")
+;	Strings file: st_quests_zaton.xml
+;	Modified by: DoctorX, First_Lieutenant_Skelja
+;	March 18, 2016, Июль 05, 2016
+;
+;==============================================================
+
+;ЛИНЕЙКА КВЕСТОВ СЫЧА 1 тасk добыть ствол
+[zat_b30_owl_stalker_trader_task_1]
+icon = ui_inGame2_Sich
+prior = 50
+storyline = false
+title = zat_b30_owl_stalker_trader_task_1_name
+title_functor = general_fetch_task
+descr = zat_b30_owl_stalker_trader_task_1_text
+descr_functor = general_fetch_task
+job_descr = zat_b30_owl_stalker_trader_task_1_about
+fetch_descr = zat_b30_owl_stalker_trader_task_1_fetch_about
+fetch_func = %=setup_weapon_fetch_task(zat_b30_owl_stalker_trader_task_1_fetch)%
+stage_complete = 1
+;precondition = {=random_chance(50)} true, false
+repeat_timeout = 86400
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = zat_b30_owl_stalker_trader_task_1_fetch_finish
+on_complete = %=complete_task_inc_goodwill(550:trader) =reward_random_money(3000:4500) =reward_stash(true) =remove_fetch_item(zat_b30_owl_stalker_trader_task_1_fetch) =inc_task_stage(zat_b30_owl_stalker_trader_task_1)%
+reward_item = af_rusty_sea
+
+
+;Добыть артефакт
+[zat_b30_owl_stalker_trader_task_2]
+icon = ui_inGame2_Zamanchiviy_biznes
+prior = 50
+storyline = false
+title = zat_b30_owl_stalker_trader_task_2_name
+title_functor = general_fetch_task
+descr = zat_b30_owl_stalker_trader_task_2_text
+descr_functor = general_fetch_task
+job_descr = zat_b30_owl_stalker_trader_task_2_about
+fetch_descr = zat_b30_owl_stalker_trader_task_2_fetch_about
+fetch_func = %=setup_artefact_fetch_task(zat_b30_owl_stalker_trader_task_2_fetch)%
+stage_complete = 1
+;precondition = {=random_chance(50)} true, false
+repeat_timeout = 86400
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = zat_b30_owl_stalker_trader_task_2_fetch_finish
+on_complete = %=complete_task_inc_goodwill(50:trader) =reward_random_money(6000:8500) =reward_stash(true) =remove_fetch_item(zat_b30_owl_stalker_trader_task_2_fetch) =inc_task_stage(zat_b30_owl_stalker_trader_task_2)%
+reward_item = wpn_val
+
+;--------------------------------------------------------------------------------------------------
+; Убить одиночку
+
+[zat_b30_owl_stalker_trader_task_3]
+icon = ui_inGame2_Sich
+prior = 35
+storyline = false
+title = zat_b30_owl_stalker_trader_task_3_name
+descr = zat_b30_owl_stalker_trader_task_3_text
+job_descr = zat_b30_owl_stalker_trader_task_3_about
+task_complete_descr = zat_b30_owl_stalker_trader_task_3_finish
+;precondition = {=random_chance(75)} true, false
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(zat_b30_owl_stalker_trader_task_3:stalker)%
+on_complete = %=reward_random_money(4500:5000) =reward_stash(true) =inc_task_stage(zat_b30_owl_stalker_trader_task_3) =complete_task_inc_goodwill(-150:stalker)%
+
+;--------------------------------------------------------------------------------------------------
+; Убить свободовца
+
+[zat_b30_owl_stalker_trader_task_4]
+icon = ui_inGame2_Sich
+prior = 35
+storyline = false
+title = zat_b30_owl_stalker_trader_task_4_name
+descr = zat_b30_owl_stalker_trader_task_4_text
+job_descr = zat_b30_owl_stalker_trader_task_4_about
+task_complete_descr = zat_b30_owl_stalker_trader_task_4_finish
+;precondition = {=random_chance(75)} true, false
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(zat_b30_owl_stalker_trader_task_4:freedom)%
+on_complete = %=reward_random_money(5500:6000) =reward_stash(true) =inc_task_stage(zat_b30_owl_stalker_trader_task_4) =complete_task_inc_goodwill(-150:freedom)%
+
+;--------------------------------------------------------------------------------------------------
+; Убить долговца
+
+[zat_b30_owl_stalker_trader_task_5]
+icon = ui_inGame2_Sich
+prior = 35
+storyline = false
+title = zat_b30_owl_stalker_trader_task_5_name
+descr = zat_b30_owl_stalker_trader_task_5_text
+job_descr = zat_b30_owl_stalker_trader_task_5_about
+task_complete_descr = zat_b30_owl_stalker_trader_task_5_finish
+;precondition = {=random_chance(75)} true, false
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(zat_b30_owl_stalker_trader_task_5:dolg)%
+on_complete = %=reward_random_money(5500:6000) =reward_stash(true) =inc_task_stage(zat_b30_owl_stalker_trader_task_5) =complete_task_inc_goodwill(-150:dolg)%
+
+;--------------------------------------------------------------------------------------------------
+; Убить Учёного
+
+[zat_b30_owl_stalker_trader_task_6]
+icon = ui_inGame2_Zamanchiviy_biznes
+prior = 55
+storyline = false
+title = zat_b30_owl_stalker_trader_task_6_name
+descr = zat_b30_owl_stalker_trader_task_6_text
+job_descr = zat_b30_owl_stalker_trader_task_6_about
+task_complete_descr = zat_b30_owl_stalker_trader_task_6_finish
+;precondition = {=random_chance(75)} true, false
+repeat_timeout = 86400
+status_functor = bounty_task
+target_functor = general_bounty_task
+stage_complete = 1
+on_init = %=on_init_bounty_hunt(zat_b30_owl_stalker_trader_task_6:ecolog)%
+on_complete = %=reward_random_money(8500:9000) =reward_stash(true) =inc_task_stage(zat_b30_owl_stalker_trader_task_6) =complete_task_inc_goodwill(-150:ecolog)%

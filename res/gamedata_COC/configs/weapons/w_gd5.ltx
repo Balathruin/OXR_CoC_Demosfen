@@ -1,6 +1,7 @@
 [grenade_gd-05]:identity_immunities,weapon_probability,default_weapon_params
 $prefetch                                = 128
 $spawn                                   = "weapons\grenades\gd-05"
+// should be deleted after update        = 
 GroupControlSection                      = spawn_group
 angle_offset                             = 1.570790,1.570790,3.92699
 animation_slot                           = 7
@@ -14,7 +15,7 @@ blast_r                                  = 0
 bone_name                                = bip01_r_hand
 cform                                    = skeleton
 class                                    = G_F1
-control_inertion_factor                  = 1.0
+control_inertion_factor                  = 1
 cost                                     = 300
 default_to_ruck                          = false
 description                              = st_grenade_smoke_descr
@@ -64,7 +65,7 @@ throw_point                              = 0.4, 0.3, 0.1
 up_throw_factor                          = 0
 visual                                   = dynamics\weapons\wpn_grenades\wpn_gd5.ogf
 wallmark_section                         = explosion_marks
-wm_size                                  = 0.01
+wm_size                                  = 0.1
 zoom_dof                                 = 0.5, 1.0, 180
 
 [grenade_gd-05_hud]:hud_base

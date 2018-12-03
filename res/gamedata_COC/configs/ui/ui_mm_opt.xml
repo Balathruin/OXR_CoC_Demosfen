@@ -1,7 +1,7 @@
 <w>
 	<background width="1024" height="768">
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
 		</auto_static>
 	</background>
 
@@ -219,6 +219,13 @@
             <options_item entry="r__tf_aniso" group="mm_opt_video_adv"/>
         </track_aniso>
 
+        <cap_r__detail_height x="15" y="3" width="108" height="24">
+            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_detail_height</text>
+        </cap_r__detail_height>
+        <track_r__detail_height x="147" y="6" width="188" height="16" step="0.1">
+            <options_item entry="r__detail_height" group="mm_opt_video_adv"/>
+        </track_r__detail_height>
+
         <cap_ssample x="15" y="3" width="108" height="24">
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_supersample</text>
         </cap_ssample>
@@ -233,6 +240,20 @@
 	            <d r="70" g="70" b="70"/>
             </text_color>
         </combo_ssample>
+
+        <cap_r2_sun_shafts_value x="15" y="3" width="108" height="24">
+            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_r2_shafts_value</text>
+        </cap_r2_sun_shafts_value>
+        <track_r2_sun_shafts_value x="147" y="6" width="188" height="16" step="0.1">
+            <options_item entry="r2_sun_shafts_value" group="mm_opt_video_adv"/>
+        </track_r2_sun_shafts_value>
+		
+		<cap_r2_gloss_factor x="15" y="3" width="108" height="24">
+            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_r2_gloss_factor</text>
+        </cap_r2_gloss_factor>
+        <track_r2_gloss_factor x="147" y="6" width="188" height="16" step="2">
+            <options_item entry="r2_gloss_factor" group="mm_opt_video_adv"/>
+        </track_r2_gloss_factor>
 
         <cap_r2_sun x="15" y="3" width="108" height="24">
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_r2_sun</text>
@@ -639,19 +660,6 @@
 			<options_item entry="g_invert_zoom" group="mm_opt_gameplay"/>
 		</check_invert_zoom>
 		
-		
-		<cap_localization x="45" y="3" width="108" height="24">
-            <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c">ui_mm_localization</text>
-        </cap_localization>
-        <list_localization x="173" y="3" width="175" height="20">
-            <options_item entry="g_language" group="mm_opt_gameplay"/>
-            <list_font r="170" g="170" b="170" font="letterica16"/>
-            <text_color>
-	            <e r="170" g="170" b="170"/>
-	            <d r="70" g="70" b="70"/>
-            </text_color>
-        </list_localization>
-		
         <cap_check_axr x="45" y="3" width="108" height="24">
             <text r="170" g="170" b="170" font="letterica16" align="r" vert_align="c"></text>
         </cap_check_axr>
@@ -717,6 +725,14 @@
 			<texture>ui_inGame2_checkbox</texture>
 			<options_item entry="hud_draw" group="mm_opt_gameplay_ui"/>
 		</check_hud_draw>
+
+      <btn_check_updates x="1310" y="1322" width="126" height="24" stretch="1">
+            <text align="c" font="letterica16">ui_mm_check_updates</text>
+            <texture>ui_inGame2_button</texture>
+			<text_color>
+				<e r="210" g="210" b="210"/>
+			</text_color>
+        </btn_check_updates>
 
 		<char_icon x="280" y="202" width="123" height="87">
 		</char_icon>

@@ -1,0 +1,330 @@
+; јмериканский автомат HK-416
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 				5.56x45 мм
+; длина ствола 				368 мм
+; магазин				30
+; вес с пустым магазином		3.74 кг
+; максимальная дальность стрельбы	3400 м
+; эффективная дальность стрельбы	300 м
+; прицельная дальность			300 м
+; дульная скорость пули			880 м/с
+; темп стрельбы				850 в/м
+;---------------------------------------------------
+[wpn_hk416]:identity_immunities,weapon_probability,default_weapon_params
+$npc                                               = on
+$prefetch                                          = 8
+$spawn                                             = "weapons\hk416"
+ammo_class                                         = ammo_5.56x45_ss190, ammo_5.56x45_ap
+ammo_current                                       = 180
+ammo_elapsed                                       = 30
+ammo_limit                                         = 210
+ammo_mag_size                                      = 30
+animation_slot                                     = 2
+bullet_speed                                       = 880
+cam_dispersion                                     = 1.0
+cam_dispersion_frac                                = 0.7
+cam_dispersion_inc                                 = 0.15
+cam_max_angle                                      = 50.0
+cam_max_angle_horz                                 = 10.0
+cam_relax_speed                                    = 5
+cam_relax_speed_ai                                 = 360
+cam_return                                         = 0
+cam_step_angle_horz                                = 3.0
+cform                                              = skeleton
+class                                              = WP_AK74
+condition_queue_shot_dec = 0.0005;                 = 0.0015
+condition_shot_dec = 0.0003;                        = 0.0014
+control_inertion_factor                            = 1.3f
+cost                                               = 40000
+crosshair_inertion                                 = 6.0
+description                                        = st_wpn_hk416_descr
+ef_main_weapon_type                                = 2
+ef_weapon_type                                     = 8
+fire_dispersion_base                     = 0.25
+fire_dispersion_condition_factor         = 2
+fire_distance = 1000;                            = 500
+fire_modes                                         = 1, -1
+fire_point                                         = 0,0.199,0.575
+fire_point2                                        = 0,0.199,0.575
+flame_particles                                    = amik\weapons\nato_shoot_00
+grenade_class                                      = ammo_m209
+grenade_flame_particles                            = weapons\generic_weapon01
+grenade_launcher_name                              = wpn_addon_grenade_launcher_m203
+grenade_launcher_status                            = 2
+grenade_launcher_x                                 = 139
+grenade_launcher_y                                 = 26
+grenade_vel                                        = 76
+GroupControlSection                                = spawn_group
+hand_dependence                                    = 1
+hit_power                                          = 0.52
+hit_type                                           = fire_wound
+holder_fov_modifier                                = 1
+holder_range_modifier                              = 1
+hud                                                = wpn_hk416_hud
+installed_upgrades                                 = 
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 33
+inv_grid_y                                         = 18
+inv_name                                           = st_wpn_hk416
+inv_name_short                                     = st_wpn_hk416
+inv_weight                                         = 3.74
+kill_msg_height                                    = 28
+kill_msg_width                                     = 82
+kill_msg_x                                         = 175
+kill_msg_y                                         = 0
+launch_speed                                       = 76
+light_color                                        = 0.6,0.5,0.3
+light_disabled                                     = false
+light_range                                        = 5
+light_time                                         = 0.2
+light_var_color                                    = 0.05
+light_var_range                                    = 0.1
+max_radius                                         = 50
+min_radius                                         = 30
+misfire_end_condition                              = 0.1
+misfire_end_prob                                   = 0.072
+misfire_probability                                = 0.005
+misfire_start_condition                            = 0.6
+misfire_start_prob                                 = 0.006
+orientation                                        = 0,0,0
+parent_section                                     = wpn_hk416
+PDM_disp_accel_factor                              = 2.0
+PDM_disp_base                                      = 0.5
+PDM_disp_crouch                                    = 1.0
+PDM_disp_crouch_no_acc                             = 1.0
+PDM_disp_vel_factor                                = 2.0
+ph_mass                                            = 4
+position                                           = -0.026,-0.13,0
+reload_dof                                         = 0, 0.5, 5, 2
+rpm                                                = 850
+rpm_empty_click                                    = 200
+scheduled                                          = off
+scope_status                                       = 0
+scope_zoom_factor                                  = 1.2
+scopes                                             = ac10632, ac11090, acog, eot, c-more, acog_detector
+shell_dir                                          = 0,0,0.4
+shell_particles                                    = weapons\556x45
+shell_point                                        = 0.12,0,0.07
+silencer_bullet_speed                              = 880
+silencer_fire_distance = 1000;                             = 1000
+silencer_hit_impulse                               = 20
+silencer_hit_power                                 = 0.42
+silencer_light_color                               = 0.6,0.5,0.3
+silencer_light_range                               = 0.01
+silencer_light_time                                = 0.2
+silencer_light_var_color                           = 0.05
+silencer_light_var_range                           = 0.5
+silencer_name                                      = sil_nato
+silencer_smoke_particles                           = amik\weapons\smoke_particles\silencer_smoke_particles_00
+silencer_status                                    = 2
+silencer_x                                         = 227
+silencer_y                                         = 14
+single_handed                                      = 0
+slot                                               = 2
+smoke_particles                                    = amik\weapons\nato_smoke_00
+snd_draw				= weapons\lr300\lr300_draw
+snd_holster				= weapons\rifle_holster
+snd_shoot				= weapons\m16\m16_shoot
+snd_empty				= weapons\lr300\lr300_empty,	0.8
+snd_reload				= weapons\hk416\hk416_reload
+snd_shoot_grenade			= weapons\m203\M203_grenshoot
+snd_reload_grenade			= weapons\hk416\hk416_grenload
+snd_switch				= $no_sound
+snd_silncer_shot			= weapons\m4a1\m4a1_shot_sil
+snd_bore				= $no_sound
+snd_empty				= weapons\lr300\lr300_empty,	0.7
+startup_ammo                                       = 90
+strap_bone0                                        = bip01_spine2
+strap_bone1                                        = bip01_spine1
+strap_orientation                                  = -10, -5, 10
+strap_position                                     = -0.15, -0.37, 0.2
+time_to_aim                                        = 2.0
+upgr_icon_height = 200;                                   = 100
+upgr_icon_width = 300;                                    = 300
+upgr_icon_x = 0;                                        = 600
+upgr_icon_y = 0;                                        = 1000
+upgrade_scheme          		= upgrade_scheme_lr300
+upgrades                		= up_gr_firstab_lr300, up_gr_seconab_lr300, up_gr_thirdab_lr300, up_gr_fourtab_lr300, up_gr_fifthab_lr300
+use_aim_bullet                                     = false
+visual                                             = dynamics\weapons\wpn_hk416\wpn_hk416.ogf
+weapon_class                                       = assault_rifle
+zoom_cam_dispersion                                = 0.5
+zoom_cam_dispersion_frac                           = 1.0
+zoom_cam_dispersion_inc                            = 0.12
+zoom_cam_max_angle                                 = 50.0
+zoom_cam_max_angle_horz                            = 10.0
+zoom_cam_relax_speed                               = 5
+zoom_cam_relax_speed_ai                            = 360
+zoom_cam_step_angle_horz                           = 2
+zoom_dof                                           = 0.5, 1.0, 180
+zoom_enabled                                       = true
+zoom_rotate_time                                   = 0.20
+
+[wpn_hk416_hud]
+aim_hud_offset_pos 			= -0.1271,0.063,-0.15
+aim_hud_offset_rot 			= 0.04,0.035,0
+
+aim_hud_offset_pos_16x9 		= -0.1271,0.063,-0.15
+aim_hud_offset_rot_16x9 		= 0.04,0.035,0
+anm_show				= hk416_draw
+anm_hide                		= hk416_holster
+anm_idle                		= hk416_idle
+anm_idle_sprint         		= hk416_sprint
+anm_idle_moving         		= hk416_move
+anm_shots               		= hk416_shoot, shoot
+anm_reload              		= hk416_reload, reload
+anm_idle_aim            		= hk416_aim
+anm_switch             	 		= hk416_switch_off        
+anm_switch_g            		= hk416_switch_on        
+anm_bore                		= hk416_bore
+anm_hide_w_gl           		= hk416_holster_w_gl
+anm_show_w_gl           		= hk416_draw_w_gl
+anm_idle_w_gl           		= hk416_idle_w_gl
+anm_shots_w_gl          		= hk416_shoot_w_gl, shoot
+anm_reload_w_gl         		= hk416_reload_w_gl, reload
+anm_idle_w_gl_aim       		= hk416_aim_w_gl
+anm_idle_sprint_w_gl    		= hk416_sprint_w_gl
+anm_idle_moving_w_gl    		= hk416_move_w_gl
+anm_bore_w_gl           		= hk416_bore_w_gl
+anm_show_g              		= hk416_draw_g					
+anm_hide_g              		= hk416_holster_g					
+anm_idle_g              		= hk416_idle_g					
+anm_reload_g            		= hk416_reload_g, reload_g
+anm_idle_g_aim          		= hk416_aim_g						
+anm_shots_g             		= hk416_shoot_g, shoot_g
+anm_idle_sprint_g       		= hk416_sprint_g					
+anm_idle_moving_g       		= hk416_move_g					
+anm_bore_g              		= hk416_bore_g
+attach_place_idx                                   = 0
+fire_bone                                          = muzzle
+fire_bone2                                         = muzzle_gl
+fire_point                                         = 0,0,0
+fire_point2                                        = 0,0,0
+gl_hud_offset_pos_16x9 			= 0,0,0
+gl_hud_offset_rot_16x9 			= 0,0,0
+
+gl_hud_offset_pos 			= 0,0,0
+gl_hud_offset_rot 			= 0,0,0
+hands_position				= 0.04,0.02,0.3
+hands_orientation			= 2,2,0
+hands_position_16x9 			= 0.04,0.02,0.3
+hands_orientation_16x9 			= 2,2,0
+item_orientation                                   = 0,0,0
+item_position                                      = 0,0,0
+item_visual                                        = dynamics\weapons\wpn_hk416\wpn_hk416_hud.ogf
+lean_hud_offset_pos                                = 0,0,0
+lean_hud_offset_rot                                = 0,0,0
+shell_bone                                         = gilza
+shell_dir                                          = 0,1,0
+shell_point                                        = 0,0,0
+zoom_hide_crosshair                                = true
+
+[wpn_hk416_ac10632]:wpn_hk416
+$spawn             			= "weapons\hk416_ac10632"
+visual					= dynamics\weapons\wpn_hk416\wpn_hk416_ac10632.ogf
+hud					= wpn_hk416_ac10632_hud
+
+scope_zoom_factor			= 1.2
+1icon_layer                                        = ac10632
+1icon_layer_x                                      = 105
+1icon_layer_y                                      = -8
+
+[wpn_hk416_ac10632_hud]:wpn_hk416_hud
+item_visual            	 		= dynamics\weapons\wpn_hk416\wpn_hk416_ac10632_hud.ogf
+
+aim_hud_offset_pos			= -0.127,0.0467,-0.15
+aim_hud_offset_rot			= 0.0185,0.035,0
+
+aim_hud_offset_pos_16x9 		= -0.127,0.0467,-0.15
+aim_hud_offset_rot_16x9 		= 0.0185,0.035,0
+
+[wpn_hk416_ac11090]:wpn_hk416
+$spawn             			= "weapons\hk416_ac11090"
+visual					= dynamics\weapons\wpn_hk416\wpn_hk416_ac11090.ogf
+hud					= wpn_hk416_ac11090_hud
+
+scope_zoom_factor			= 1.3
+1icon_layer                                        = ac11090
+1icon_layer_x                                      = 120
+1icon_layer_y                                      = -8
+
+[wpn_hk416_ac11090_hud]:wpn_hk416_hud
+item_visual            	 		= dynamics\weapons\wpn_hk416\wpn_hk416_ac11090_hud.ogf
+
+aim_hud_offset_pos			= -0.127,0.0505,-0.05
+aim_hud_offset_rot			= 0.035,0.0344,0
+
+aim_hud_offset_pos_16x9 		= -0.127,0.0505,-0.05
+aim_hud_offset_rot_16x9 		= 0.035,0.0344,0
+
+[wpn_hk416_acog]:wpn_hk416
+$spawn					= "weapons\hk416_acog"
+hud					= wpn_hk416_acog_hud
+visual					= dynamics\weapons\wpn_hk416\wpn_hk416_acog.ogf
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_acog
+scope_zoom_factor			= 19
+zoom_rotate_time			= 0.25
+1icon_layer                                        = acog
+1icon_layer_x                                      = 119
+1icon_layer_y                                      = -5
+
+[wpn_hk416_acog_hud]:wpn_hk416_ac11090_hud
+item_visual            	 		= dynamics\weapons\wpn_hk416\wpn_hk416_acog_hud.ogf
+
+[wpn_hk416_eot]:wpn_hk416
+$spawn					= "weapons\hk416_eot"
+visual					= dynamics\weapons\wpn_hk416\wpn_hk416_eot.ogf
+hud					= wpn_hk416_eot_hud
+
+scope_zoom_factor			= 1.2
+1icon_layer                                        = eot
+1icon_layer_x                                      = 93
+1icon_layer_y                                      = -2
+
+[wpn_hk416_eot_hud]:wpn_hk416_hud
+item_visual				= dynamics\weapons\wpn_hk416\wpn_hk416_eot_hud.ogf
+
+aim_hud_offset_pos			= -0.1269,0.05,-0.15
+aim_hud_offset_rot			= 0.032,0.0343,0
+
+aim_hud_offset_pos_16x9 		= -0.1269,0.05,-0.15
+aim_hud_offset_rot_16x9 		= 0.032,0.0343,0
+
+[wpn_hk416_c-more]:wpn_hk416
+$spawn					= "weapons\hk416_c-more"
+visual					= dynamics\weapons\wpn_hk416\wpn_hk416_c-more.ogf
+hud					= wpn_hk416_c-more_hud
+
+scope_zoom_factor			= 1.2
+1icon_layer                                        = c-more
+1icon_layer_x                                      = 115
+1icon_layer_y                                      = -6
+
+[wpn_hk416_c-more_hud]:wpn_hk416_hud
+item_visual				= dynamics\weapons\wpn_hk416\wpn_hk416_c-more_hud.ogf
+
+aim_hud_offset_pos			= -0.127,0.052,-0.1
+aim_hud_offset_rot	 		= 0.0225,0.0344,0
+
+aim_hud_offset_pos_16x9 		= -0.127,0.052,-0.1
+aim_hud_offset_rot_16x9 		= 0.0225,0.0344,0
+
+[wpn_hk416_acog_detector]:wpn_hk416
+$spawn                                             = "weapons\hk416_acog_detector"
+1icon_layer                                        = acog_detector
+1icon_layer_x                                      = 119
+1icon_layer_y                                      = -5
+hud                                                = wpn_hk416_acog_detector_hud
+inv_weight                                         = 4.14
+scope_status                                       = 1
+scope_texture                                      = wpn_crosshair_acog
+scope_zoom_factor                                  = 12
+scope_dynamic_zoom                                 = on
+visual                                             = dynamics\weapons\wpn_hk416\wpn_hk416_acog.ogf
+zoom_rotate_time                                   = 0.25
+
+[wpn_hk416_acog_detector_hud]:wpn_hk416_ac11090_hud
+item_visual                                        = dynamics\weapons\wpn_hk416\wpn_hk416_acog_hud.ogf

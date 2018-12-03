@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
+	<string id="ui_st_mp_login">
+		<text>Ввод</text>
+	</string>
+	<string id="ui_st_mp_logout">
+		<text>Выход</text>
+	</string>
+	
 	<string id="Clear">
 		<text>Clear</text>
 	</string>
@@ -31,7 +38,7 @@
 		<text>GAME TYPE</text>
 	</string>
 	<string id="gd_master">
-		<text>Master</text>
+		<text>Realistic</text>
 	</string>
 	<string id="gd_novice">
 		<text>Rookie</text>
@@ -58,10 +65,10 @@
 		<text>DirectX 9 (Enhanced)</text>
 	</string>
 	<string id="renderer_r3">
-		<text>DirectX 10 (Enhanced)</text>
+		<text>DirectX 10 (Unstable)</text>
 	</string>
 	<string id="renderer_r4">
-		<text>DirectX 11 (Enhanced)</text>
+		<text>DirectX 11 (Unfinished)</text>
 	</string>
 	<string id="st_opt_high">
 		<text>High</text>
@@ -135,6 +142,9 @@
     <string id="ui_mm_detail_radius">
 	    <text>Grass rendering distance</text>
     </string>
+    <string id="ui_mm_detail_height">
+	    <text>Высота травы</text>
+   	</string>
 	<string id="ui_mm_difficulty">
 		<text>Difficulty</text>
 	</string>
@@ -278,6 +288,12 @@
 	</string>
 	<string id="ui_mm_r2_sun_details">
 		<text>Grass shadow</text>
+	</string>
+	<string id="ui_mm_r2_shafts_value">
+		<text>Интенсивность лучей</text>
+	</string>
+	<string id="ui_mm_r2_gloss_factor">
+		<text>Интенсивность блеска</text>
 	</string>
     <string id="ui_mm_r__actor_shadow">
 		<text>Actor shadow</text>
@@ -445,11 +461,17 @@
 	<string id="st_cap_check_azazel_mode">
 		<text>Azazel mode</text>
 	</string>
+	<string id="st_cap_check_hardcore_aim">
+		<text>Меткие НПС</text>
+	</string>
 	<string id="st_cap_check_campfire">
 		<text>Campfire save mode</text>
 	</string>
 	<string id="ui_mm_debug_hud">
 		<text>Debug HUD</text>
+	</string>
+	<string id="ui_mm_dynamic_news">
+		<text>Dynamic news</text>
 	</string>
 	<string id="ui_mm_debug_map_hud">
 		<text>Debug HUD Mapspots</text>
@@ -470,16 +492,40 @@
 		<text>Helicopter patrols</text>
 	</string>
 	<string id="ui_mm_ai_die_in_anomaly">
-		<text>AI die in anomalies</text>
-	</string>
-	<string id="ui_mm_dynamic_news">
-		<text>Dynamic news</text>
+		<text>AI die to anomalies</text>
 	</string>
 	<string id="ui_mm_art_degrade">
 		<text>Artefact degradation</text>
 	</string>
 	<string id="ui_mm_sleep_deprived">
 		<text>Sleep deprivation</text>
+	</string>
+	<string id="ui_mm_food_irradiate">
+		<text>Облучение продуктов</text>
+	</string>
+	<string id="ui_mm_shot_effects">
+		<text>Эффект отдачи оружия</text>
+	</string>
+	<string id="ui_mm_item_animation">
+		<text>Item animations:</text>
+	</string>
+	<string id="ui_mm_enhanced_animation">
+		<text>Улучшенные анимации</text>
+	</string>
+	<string id="ui_mm_consumable_animation">
+		<text>Анимации</text>
+	</string>
+	<string id="ui_mm_slot_hud">
+		<text>Extended HUD</text>
+	</string>
+	<string id="ui_mm_weapon_heat">
+		<text>Перегрев оружия</text>
+	</string>
+	<string id="ui_mm_weapon_heat_ui">
+		<text>Индикатор перегрева</text>
+	</string>
+	<string id="ui_mm_weapon_mags">
+		<text>Патроны и магазины</text>
 	</string>
     <string id="ui_mm_excl_dist">
         <text>Online exclusion radius</text>
@@ -497,7 +543,7 @@
 		<text>Quicksave count</text>
 	</string>
 	<string id="ui_mm_actor_hud">
-		<text>Mask Overlay</text>
+		<text>Mask overlay</text>
 	</string>
 	<string id="ui_mm_alife_mutant_pop">
 		<text>Population factor (mutants)</text>
@@ -511,9 +557,6 @@
 	<string id="ui_mm_fov">
 		<text>FOV</text>
 	</string>
-	<string id="ui_mm_slot_hud">
-		<text>Extended HUD</text>
-	</string>
 	<string id="ui_mm_show_tracers">
 		<text>Show tracers</text>
 	</string>
@@ -523,8 +566,20 @@
 	<string id="ui_mm_hardcore_ai_aim">
 		<text>Hardcore AI aim</text>
 	</string>
+	<string id="ui_mm_dark_mode">
+		<text>Днем фонит радиация</text>
+	</string>
 	<string id="ui_mm_localization">
-		<text>Localization</text>
+		<text>Localisation</text>
+	</string>
+	<string id="ui_mm_only_campfire">
+		<text>Сохранение игры только у костра</text>
+	</string>
+	<string id="ui_mm_switch_distance">
+		<text>Радиус загрузки локации</text>
+	</string>
+			<string id="ui_mm_objects_per_update">
+	<text>Фризы: чаще/быстрые-реже/долгие</text>
 	</string>
 	<string id="ui_mm_r__enable_grass_shadow">
 		<text>Grass shadow</text>
@@ -556,12 +611,6 @@
 	<string id="ui_mm_multi_loot">
 		<text>Factor (loot scale)</text>
 	</string>
-	<string id="eng">
-		<text>English</text>
-	</string>
-	<string id="rus">
-		<text>Русский</text>
-	</string>
 	<string id="ui_mm_r2_sun_shafts_mode">
 		<text>Sun rays mode</text>
 	</string>
@@ -591,5 +640,16 @@
 	</string>
 	<string id="ui_mm_detector_charge">
 		<text>Detector charge</text>
+	</string>
+
+	<!-- Smurth’s Dynamic HUD -->
+	<string id="ui_mm_day_radiation">
+		<text>Daytime radiation</text>
+	</string>
+	<string id="ui_mm_inventory_radiation">
+		<text>Inventory radiation</text>
+	</string>
+	<string id="ui_mm_sleep_zone_save">
+		<text>Sleep zone save</text>
 	</string>
 </string_table>

@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@open
+
+[ph_idle@close]
+nonscript_usable = false
+tips = mon_blue_box_mlr_no_use
+on_info = {+main_monolith_mlr_task_1_dlg_2} ph_idle@open
+
+[ph_idle@open]
+nonscript_usable = true
+tips = actor_inventory_box_use
+on_info = {+close_blue_box_mlr_mon} ph_idle@close

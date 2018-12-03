@@ -1,0 +1,188 @@
+[wpn_ksvk]:weapon_probability,default_weapon_params
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+$spawn                  = "weapons\svd"		; option for Level Editor
+
+ammo_class				= ammo_12.7x55_fmj
+ammo_elapsed			= 0
+ammo_mag_size			= 5
+animation_slot          = 2                ; type of the animation that will be used
+bullet_speed		= 835	;начальная скорость пули
+cam_dispersion          = 3.08	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_frac		= 1.1	;ствол будет подыматься на cam_dispersion*cam_dispersion_frac +- cam_dispersion*(1-cam_dispersion_frac)
+cam_dispersion_inc		= 3.66	;увеличениe cam_dispersion с каждым выстрелом
+cam_max_angle			= 50.0	;максимальный угол отдачи
+cam_max_angle_horz		= 50.0	;(degree) maximum shot horizontal degree
+cam_relax_speed         = 2.4	;скорость возврата в исходное положение
+cam_relax_speed_ai      = 360	;скорость возврата в исходное положение
+cam_return = 0 ;				= 0
+cam_step_angle_horz		= 2.75	;(degree) size of step camera moved in horizontal position while shooting
+cform                   = skeleton
+class                   = WP_SVD
+condition_queue_shot_dec	= 0.0032
+condition_shot_dec       	= 0.0032
+control_inertion_factor	= 2.94f
+cost					= 174520
+crosshair_inertion      = 11.8
+default_to_ruck         = false
+description				= st_wpn_ksvk_descr
+ef_main_weapon_type		= 3
+ef_weapon_type			= 11
+fire_dispersion_base	= 0.07	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_condition_factor = 8	;увеличение дисперсии в процентах при максимальном износе
+fire_distance = 1000;           = 1720
+fire_modes		  = 1;
+fire_point           	= 0.0, 0.169, 0.902
+fire_point2          	= 0.0, 0.169, 0.902
+grenade_launcher_status		= 0
+hand_dependence         = 1
+hit_impulse			= 75
+hit_power           	= 3.2
+hit_probability_gd_master	= 1
+hit_probability_gd_novice	= 1
+hit_probability_gd_stalker	= 1
+hit_probability_gd_veteran	= 1
+hit_type 		= fire_wound
+holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
+holder_range_modifier	= 2.15               ; во сколько раз увеличивается eye_range
+hud                     = wpn_ksvk_hud
+installed_upgrades      =
+inv_grid_height    = 2
+inv_grid_width     = 6
+inv_grid_x         = 29
+inv_grid_y         = 43
+inv_name				= st_wpn_ksvk
+inv_name_short			= st_wpn_ksvk
+inv_weight				= 12.9
+kill_msg_height			= 23
+kill_msg_width			= 98
+kill_msg_x				= 0
+kill_msg_y				= 0
+light_color		 			= 0.6,0.5,0.3
+light_disabled				= false
+light_range		 			= 4.0
+light_time 		 			= 0.2
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+max_radius              = 500
+min_radius              = 0
+misfire_end_condition		= 0.14
+misfire_end_prob = 0.02 ;	     	= 0.03
+misfire_probability        = 0.005
+misfire_start_condition		= 0.93
+misfire_start_prob = 0.003 ;	     	= 0.0052
+orientation             = 0, 0, 0
+GroupControlSection		= spawn_group
+PDM_disp_accel_factor 		= 3.05
+PDM_disp_base 				= 1.45
+PDM_disp_crouch = 1.0 ;  			= 1.225
+PDM_disp_crouch_no_acc = 1.0 ; 		= 1.425
+PDM_disp_vel_factor 		= 3.05
+ph_mass			 			= 3
+position                = -0.026, -0.077, 0.00
+reload_dof				= 0.0, 0.5, 5, 2.2
+rpm                     = 30
+rpm_empty_click 		= 200
+rpm_empty_click         = 200
+scheduled               = off              	; option for ALife Simulator
+scope_name 					= wpn_addon_scope
+scope_status			= 1
+scope_texture				= wpn_crosshair_m82
+scope_x 						= 60
+scope_y 						= -2
+scope_zoom_factor			= 12	;POSP 8x42
+scopes                                   = 
+shell_dir		 	= 0.0, 0.0, 0.4
+shell_particles	 		= ;weapons\generic_shells
+shell_point		 	= 0.0, 0.129, 0.192
+silencer_light_color			= 0.6,0.5,0.3
+silencer_light_range			= 0.01
+silencer_light_time 			= 0.2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_name           = wpn_addon_silencer_1143x23    ; section name for the attachable silencer
+silencer_smoke_particles 	= weapons\generic_shoot_00
+silencer_status			= 0
+silencer_x              = 270                ; offset in inventory icon
+silencer_y              = -12
+single_handed           = 0
+slot                    = 2                ; // secondary
+smoke_particles                          = amik\weapons\smoke_particles\smoke_particles_01
+snd_close				= weapons\generic_close
+snd_draw                = weapons\ksvk\ksvk_draw
+snd_empty				= weapons\ksvk\ksvk_empty
+snd_holster				= weapons\ksvk\ksvk_holster
+snd_reload              = weapons\ksvk\ksvk_reload
+snd_shoot               = weapons\ksvk\ksvk_shoot
+snd_silncer_shot			= weapons\trg\trg42_shoot_sil
+sprint_allowed       	= true
+startup_ammo            = 5
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+strap_orientation      	= -25,-189,65				; (3rd person view in degrees)
+strap_position         	= -0.15,-0.15,0.45			; position (offset) and orientation of the weapon when it is strapped
+time_to_aim		= 1.0
+upgr_icon_height = 200;   	= 159 ; 130
+upgr_icon_width = 300;		= 167 ; 287
+upgr_icon_x = 0;			= 1724 ; 1271
+upgr_icon_y = 0;			= 802 ; 11
+upgrade_scheme          = upgrade_scheme_svd
+upgrades				= up_gr_firstab_svd, up_gr_seconab_svd, up_gr_thirdab_svd, up_gr_fourtab_svd, up_gr_fourtcd_svd, up_gr_fourtef_svd
+use_aim_bullet		= false		;Поддерживается ли первая суппер пуля
+visual                  = dynamics\weapons\wpn_ksvk\wpn_ksvk.ogf
+weapon_class			= sniper_rifle
+zoom_cam_dispersion         = 2.06
+zoom_cam_dispersion_frac    = 1.0
+zoom_cam_dispersion_inc     = 3.26
+zoom_cam_max_angle          = 50.0
+zoom_cam_max_angle_horz     = 50.0
+zoom_cam_relax_speed        = 0.75    ; scope & ironsight
+zoom_cam_relax_speed_ai     = 120.75
+zoom_cam_step_angle_horz    = 2.55
+zoom_enabled				= true
+zoom_rotate_time			= 0.25
+
+[wpn_ksvk_hud]:hud_base
+zoom_hide_crosshair		= true
+attach_place_idx		= 0
+item_visual             = dynamics\weapons\wpn_ksvk\wpn_ksvk_hud
+
+hands_position				= 0.05,-0.023,0.5
+hands_orientation			= 2,2,0
+
+hands_position_16x9 		= 0.05,-0.023,0.5
+hands_orientation_16x9 		= 2,2,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+shell_point                	= 0,0,0
+shell_dir               	= 0.0, 1.0, 0.0
+shell_bone                	= gilza
+
+fire_point					= 0,0,0
+fire_bone                   = muzzle
+
+
+aim_hud_offset_pos_16x9 = -0.123200,0.010000,-0.2
+aim_hud_offset_rot_16x9 = 0.016500,0.034500,0.0
+gl_hud_offset_pos_16x9 = 0,0,0
+gl_hud_offset_rot_16x9 = 0,0,0
+
+aim_hud_offset_pos = -0.123200,0.010000,-0.2
+aim_hud_offset_rot = 0.016500,0.034500,0.0
+gl_hud_offset_pos = 0,0,0
+gl_hud_offset_rot = 0,0,0
+
+lean_hud_offset_pos        = 0,0,0
+lean_hud_offset_rot        = 0,0,0
+
+anm_show						= ksvk_draw
+anm_hide             	= ksvk_holster
+anm_shots					= ksvk_shoot, shoot
+anm_reload					= ksvk_reload, reload
+anm_bore						= ksvk_idle_bore
+anm_idle             	= ksvk_idle
+anm_idle_aim				= ksvk_idle_aim
+anm_idle_moving 			= ksvk_idle_move
+anm_idle_sprint			= ksvk_idle_sprint

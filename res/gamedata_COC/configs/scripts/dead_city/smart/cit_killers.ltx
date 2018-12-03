@@ -1,16 +1,15 @@
 [smart_terrain]
 squad_id = 4
-max_population = 12
+max_population = 5
 respawn_params = respawn@cit_killers
 respawn_idle = 86400
-
 
 [respawn@cit_killers]
 merc_sim_squad
 
 [merc_sim_squad]
 spawn_squads = merc_sim_squad_advanced, merc_sim_squad_advanced, merc_sim_squad_veteran
-spawn_num = 7
+spawn_num = 3
 
 [exclusive]
 cit_killers_merc_trader = dead_city\cit_killers_smart_logic.ltx
@@ -33,3 +32,8 @@ faction_base_defense_enemy3 = dead_city\cit_killers_smart_logic.ltx
 faction_base_defense_enemy4 = dead_city\cit_killers_smart_logic.ltx
 faction_base_defense_enemy5 = dead_city\cit_killers_smart_logic.ltx
 faction_base_defense_enemy6 = dead_city\cit_killers_smart_logic.ltx
+;mlr
+cit_killers_merc_barman_mlr =  dead_city\cit_killers_merc_barman_mlr_logic.ltx
+ds_killer_guide_main_base   =  dead_city\ds_killer_guide_main_base_logic.ltx
+ds_killer_medic_mlr = dead_city\ds_killer_medic_mlr_logic.ltx
+;mlr

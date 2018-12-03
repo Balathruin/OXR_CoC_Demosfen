@@ -1,0 +1,17 @@
+[spawn_loadout] \n
+wpn_pkm = 1 \n
+wpn_ak74u = 1, silencer \n
+wpn_ak74_kobra = 1 \n
+wpn_ak101_eot = 1, silencer \n
+wpn_ak102_eot = 1, silencer \n
+wpn_ak103_kobra = 1 \n
+wpn_ak104_kobra = 1 \n
+wpn_ak105_pso = 1 \n
+wpn_ak12 = 1, launcher \n
+wpn_ak12 = 1 \n
+[spawn_loadout2] \n
+wpn_fort = 1 \n
+wpn_pm = 1 \n
+wpn_aps = 1 \n
+wpn_tt33 = 1 \n
+[spawn] \n

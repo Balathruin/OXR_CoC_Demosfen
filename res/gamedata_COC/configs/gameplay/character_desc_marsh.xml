@@ -8,20 +8,22 @@
     </map_icon>
     <bio>Doctor.</bio>
     <class>mar_smart_terrain_base_doctor</class>
-    <community>csky</community>
+    <community>trader</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>14430</rank>
     <reputation>1403</reputation>
     <money min="1000000" max="1000000" infinitive="1" />
-    <visual>actors\stalker_nebo\stalker_nebo_1</visual>
+    <visual>actors\mnp_npc_remeik\vanya_tropnik</visual>
     <supplies>
         [spawn] \n
         wpn_ak74u = 1 \n
         ammo_5.45x39_fmj = 1 \n
     </supplies>
+	<!-- mlr -->
     <start_dialog>mar_smart_terrain_base_doctor_start</start_dialog>
     <actor_dialog>mar_smart_terrain_base_doctor_need_health_care</actor_dialog>
+    <actor_dialog>mar_smart_terrain_base_doctor_heal</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_doctor_background</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals.xml"
@@ -67,12 +69,12 @@
     <rank>12280</rank>
     <reputation>1246</reputation>
     <money min="1000000" max="1000000" infinitive="1" />
-    <visual>actors\stalker_nebo\stalker_nebo_smask1</visual>
+    <visual>actors\mnp_npc_remeik\barmen_nalivaiko</visual>
     <supplies>
         [spawn] \n
         wpn_sig550 \n
         ammo_5.56x45_ap = 1 \n
-        wpn_beretta \n
+        wpn_glock \n
         ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -80,6 +82,11 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>marsh_stalker_barmen_start_dialog</start_dialog>
+<!-- mlr -->	
+	<actor_dialog>story_b_cs</actor_dialog>
+	<actor_dialog>story_dog</actor_dialog>	
+	<actor_dialog>about_dog_marsh_part_two</actor_dialog>	
+<!-- mlr -->	
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
@@ -95,7 +102,7 @@
     </map_icon>
     <bio>Îïûòíûé ñòàëêåð. Äåòàëüíàÿ èíôîðìàöèÿ îòñóòñòâóåò.</bio>
     <class>mar_base_owl_stalker_trader</class>
-    <community>csky</community>
+    <community>trader</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>21786</rank>
@@ -108,8 +115,13 @@
         <actor_dialog>dm_ordered_task_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
+        <actor_dialog>dm_broker_dialog</actor_dialog>
         <actor_dialog>mar_smart_terrain_base_trader_background</actor_dialog>
 		<actor_dialog>dm_broker_dialog</actor_dialog>
+    <!--------------------- mlr ------------------------>
+		<actor_dialog>request_to_no_trade_dialog</actor_dialog>
+        <actor_dialog>low_level_of_buy_equpments</actor_dialog>
+    <!--------------------- mlr ------------------------>
         <actor_dialog>actor_break_dialog</actor_dialog>
         </specific_character>
         
@@ -121,7 +133,7 @@
         </map_icon>
         <bio>Îïûòíûé ñòàëêåð. Òåõíèê Àçîò.</bio>
         <class>mar_base_stalker_tech</class>
-        <community>csky</community>
+        <community>trader</community>
         <mechanic_mode>1</mechanic_mode>
         <terrain_sect>stalker_terrain</terrain_sect>
         <snd_config>characters_voice\human_01\csky\</snd_config>
@@ -173,8 +185,15 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>hello_dialog</start_dialog>
+    <!--------------------- mlr ------------------------>	
+    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>	
+    <actor_dialog>find_blackbox_mlr_reward_csky</actor_dialog>
+    <!--------------------- mlr ------------------------>	
     <actor_dialog>mar_smart_terrain_base_leader_background</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_leader_csky_history</actor_dialog>
+	<actor_dialog>xolod_minigame</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     

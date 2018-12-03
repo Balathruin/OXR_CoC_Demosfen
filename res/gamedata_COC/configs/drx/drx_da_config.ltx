@@ -1,0 +1,846 @@
+;==============================================================
+;
+; Dynamic Anomaly Generator Settings (drx_da_config.ltx)
+;	CoC 1.5b r4 - DoctorX Dynamic Anomalies 2.0
+;
+;	- Note: Any changes made here will require a new game to take effect
+;
+;	Created by: DoctorX
+;	Last revised: January 31, 2018
+;
+;==============================================================
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Anomaly Field Properties
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	January 31, 2018
+;
+;--------------------------------------------------------------------------------------------------
+
+; Anomaly field properties:
+[field_properties]
+
+; Percent chance an anomaly field will be spawned at a specific smart (float, decimal percent):
+spawn_percent = 0.3  ; 30%
+
+; Maximum number of active anomalies in each anomaly field (int):
+anomaly_max_active = 16
+
+; Maximum number of spawned anomalies in each anomaly field (int):
+anomaly_max_number = 32
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Location Offset Limits
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 2.0
+;	January 31, 2018
+;
+;--------------------------------------------------------------------------------------------------
+
+; Random position offset settings:
+[location_offset]
+
+; Magnitude for anomaly offset from smart terrain center (float, meters) (x=east, y=up, z=north):
+max_offset_x = 50
+max_offset_y = 0
+max_offset_z = 50
+
+; Maximum number of iterations to try generating a spawn position before aborting (int):
+max_tries = 100
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Anomaly Types
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 12, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable types of anomalies to spawn (string, anomaly names) (from configs\zones\{zone name}.ltx [{section}]):
+[anomaly_types]
+zone_mine_gravitational_weak
+zone_mine_gravitational_average
+zone_mine_gravitational_strong
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Anomaly Levels
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 2.0
+;	August 09, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Levels dynamic anomalies can spawn on (allowable smart terrains for each level must be declared below):
+[anomaly_levels]
+k00_marsh
+k01_darkscape
+l01_escape
+l02_garbage
+l03_agroprom
+l04_darkvalley
+l05_bar
+l06_rostok
+l07_military
+l08_yantar
+l09_deadcity
+l10_limansk
+l10_radar
+l10_red_forest
+l11_pripyat
+l12_stancia
+l12_stancia_2
+zaton
+jupiter
+pripyat
+k02_trucks_cemetery
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Great Swamp (k00_marsh) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.3
+;	April 16, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Great Swamp (string, smart terrain names):
+[k00_marsh]
+; mar_smart_terrain_3_3
+mar_smart_terrain_3_7
+mar_smart_terrain_3_10
+; mar_smart_terrain_4_5
+mar_smart_terrain_4_7
+; mar_smart_terrain_5_8
+; mar_smart_terrain_5_12
+mar_smart_terrain_6_4
+mar_smart_terrain_6_7
+mar_smart_terrain_6_8
+mar_smart_terrain_6_10
+mar_smart_terrain_6_11
+; mar_smart_terrain_7_3
+mar_smart_terrain_7_7
+mar_smart_terrain_8_4
+mar_smart_terrain_8_8
+; mar_smart_terrain_8_9
+; mar_smart_terrain_8_11
+; mar_smart_terrain_10_5
+mar_smart_terrain_10_7
+mar_smart_terrain_10_10
+mar_smart_terrain_11_3
+; mar_smart_terrain_11_11
+; mar_smart_terrain_12_2
+; mar_smart_terrain_base
+; mar_smart_terrain_doc
+; mar_smart_terrain_doc_2
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Darkscape (k01_darkscape) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Darkscape (string, smart terrain names):
+[k01_darkscape]
+ds_boars_nest
+; ds_deb1
+ds_grverfer2
+ds_kem1
+; ds_kem2
+ds_kem3
+ds_ptr
+ds_ptr2
+ds_ptr3
+ds_ptr4
+; ds2_domik_st
+; ds2_lager_st
+ds2_st_dogs
+ds2_st_hoofs
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Cordon (l01_escape) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 2.0
+;	August 06, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Cordon (string, smart terrain names):
+[l01_escape]
+esc_smart_terrain_1_11
+; esc_smart_terrain_2_12
+esc_smart_terrain_2_14
+esc_smart_terrain_3_7
+; esc_smart_terrain_3_16
+esc_smart_terrain_4_9
+esc_smart_terrain_4_11
+; esc_smart_terrain_4_13
+esc_smart_terrain_5_2
+esc_smart_terrain_5_4
+esc_smart_terrain_5_6
+; esc_smart_terrain_5_7
+; esc_smart_terrain_5_9
+esc_smart_terrain_5_12
+esc_smart_terrain_6_6
+; esc_smart_terrain_6_8
+; esc_smart_terrain_7_11
+esc_smart_terrain_8_9
+esc_smart_terrain_8_10
+esc_smart_terrain_9_7
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Garbage (l02_garbage) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Garbage (string, smart terrain names):
+[l02_garbage]
+; gar_smart_terrain_1_5
+; gar_smart_terrain_1_7
+gar_smart_terrain_2_4
+; gar_smart_terrain_3_5
+; gar_smart_terrain_3_7
+gar_smart_terrain_4_2
+gar_smart_terrain_4_5
+; gar_smart_terrain_5_2
+gar_smart_terrain_5_4
+gar_smart_terrain_5_5
+gar_smart_terrain_5_6
+gar_smart_terrain_6_1
+gar_smart_terrain_6_3
+gar_smart_terrain_6_6
+gar_smart_terrain_6_7
+gar_smart_terrain_7_4
+gar_smart_terrain_8_5
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Agroprom (l03_agroprom) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Agroprom (string, smart terrain names):
+[l03_agroprom]
+agr_smart_terrain_1_2
+agr_smart_terrain_1_3
+; agr_smart_terrain_1_6
+; agr_smart_terrain_1_6_near_1
+; agr_smart_terrain_1_6_near_2
+agr_smart_terrain_2_2
+; agr_smart_terrain_4_4
+agr_smart_terrain_4_4_near_1
+agr_smart_terrain_4_4_near_2
+agr_smart_terrain_4_4_near_3
+agr_smart_terrain_4_6
+agr_smart_terrain_5_2
+agr_smart_terrain_5_3
+agr_smart_terrain_5_7
+agr_smart_terrain_6_4
+agr_smart_terrain_7_5
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Dark Valley (l04_darkvalley) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Dark Valley (string, smart terrain names):
+[l04_darkvalley]
+; val_smart_terrain_1_2
+val_smart_terrain_3_0
+; val_smart_terrain_4_0
+val_smart_terrain_5_10
+val_smart_terrain_6_4
+val_smart_terrain_6_5
+; val_smart_terrain_7_3
+; val_smart_terrain_7_4
+; val_smart_terrain_7_5
+val_smart_terrain_7_8
+; val_smart_terrain_8_6
+val_smart_terrain_8_7
+val_smart_terrain_8_9
+val_smart_terrain_9_2
+; val_smart_terrain_9_4
+val_smart_terrain_9_6
+val_smart_terrain_9_10
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Rostok (l05_bar) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 13, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Rostok (string, smart terrain names):
+[l05_bar]
+; bar_dolg_bunker
+; bar_dolg_general
+; bar_visitors
+; bar_zastava
+; bar_zastava_2
+bar_zastava_dogs_lair
+bar_zastava_dogs_lair_2
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Wild Territory (l06_rostok) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.3
+;	April 16, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Wild Territory (string, smart terrain names):
+[l06_rostok]
+; ros_smart_killers1
+ros_smart_monster4
+ros_smart_monster5
+ros_smart_monster7
+ros_smart_poltergeist2
+ros_smart_snork1
+; ros_smart_stalker_killers1
+; ros_smart_stalker1
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Military Warehouses (l07_military) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 13, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Military Warehouses (string, smart terrain names):
+[l07_military]
+mil_smart_terrain_2_1
+; mil_smart_terrain_2_2
+; mil_smart_terrain_2_4
+; mil_smart_terrain_2_6
+; mil_smart_terrain_2_10
+; mil_smart_terrain_3_8
+mil_smart_terrain_4_2
+mil_smart_terrain_4_3
+; mil_smart_terrain_4_5
+mil_smart_terrain_4_7
+; mil_smart_terrain_4_8
+; mil_smart_terrain_7_4
+; mil_smart_terrain_7_7
+; mil_smart_terrain_7_8
+; mil_smart_terrain_7_10
+; mil_smart_terrain_7_12
+mil_smart_terrain_8_3
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Yantar (l08_yantar) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.3
+;	January 29, 2018
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Yantar (string, smart terrain names):
+[l08_yantar]
+yan_smart_terrain_1_6
+; yan_smart_terrain_2_4
+yan_smart_terrain_2_5
+; yan_smart_terrain_3_4
+; yan_smart_terrain_3_6
+yan_smart_terrain_4_2
+yan_smart_terrain_4_4
+yan_smart_terrain_4_5
+yan_smart_terrain_5_3
+yan_smart_terrain_5_5
+yan_smart_terrain_6_2
+; yan_smart_terrain_6_4
+; yan_smart_terrain_snork_u
+; yan_smart_terrain_zombi_spawn
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Dead City (l09_deadcity) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Dead City (string, smart terrain names):
+[l09_deadcity]
+; cit_bandits
+; cit_bandits_2
+; cit_kanaliz1
+cit_kanaliz2
+; cit_killers
+; cit_killers_2
+; cit_killers_vs_bandits
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Limansk (l10_limansk) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Limansk (string, smart terrain names):
+[l10_limansk]
+; lim_smart_terrain_1
+; lim_smart_terrain_3
+; lim_smart_terrain_4
+; lim_smart_terrain_5
+; lim_smart_terrain_6
+; lim_smart_terrain_7
+lim_smart_terrain_8
+; lim_smart_terrain_9
+; lim_smart_terrain_10
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Radar (l10_radar) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Radar (string, smart terrain names):
+[l10_radar]
+rad_after_valley
+; rad_antenna_camper
+; rad_antenna_monolith
+; rad_antenna_patrol
+rad_bloodsucker
+; rad_entrance
+rad_pseudodogs
+rad_snork1
+rad_snork2
+rad_valley
+rad_valley_dogs
+; rad_zombied1
+; rad_zombied2
+rad2_loner_0000
+; rad2_loner_0001
+rad2_loner_0002
+; rad2_prip_teleport
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Red Forest (l10_red_forest) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Red Forest (string, smart terrain names):
+[l10_red_forest]
+red_smart_terrain_3_1
+red_smart_terrain_3_2
+red_smart_terrain_3_3
+; red_smart_terrain_4_2
+red_smart_terrain_4_3
+red_smart_terrain_4_5
+red_smart_terrain_5_5
+red_smart_terrain_5_6
+red_smart_terrain_6_3
+red_smart_terrain_6_6
+; red_smart_terrain_bridge
+; red_smart_terrain_monsters
+red_smart_terrain_monsters_2
+red_smart_terrain_monsters_3
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Pripyat (l11_pripyat) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Pripyat (string, smart terrain names):
+[l11_pripyat]
+; pri_depot
+; pri_monolith
+pri_smart_bloodsucker_lair1
+pri_smart_controler_lair1
+pri_smart_controler_lair2
+pri_smart_giant_lair1
+; pri_smart_monolith_stalker2
+; pri_smart_monolith_stalker3
+; pri_smart_monolith_stalker4
+; pri_smart_monolith_stalker6
+pri_smart_monster_lair1
+; pri_smart_neutral_stalker1
+pri_smart_pseudodog_lair1
+pri_smart_snork_lair1
+pri_smart_snork_lair2
+pri_smart_tushkano_lair1
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Chernobyl NPP South (l12_stancia) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Chernobyl NPP South (string, smart terrain names):
+[l12_stancia]
+; aes_smart_terrain_monolit_blockpost
+; aes_smart_terrain_monolit_blockpost2
+; aes_smart_terrain_monolit_blockpost4
+aes_smart_terrain_monsters1
+aes_smart_terrain_monsters2
+aes_smart_terrain_monsters3
+aes_smart_terrain_monsters4
+; aes_smart_terran_soldier
+; aes_smart_terran_soldier2
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Chernobyl NPP North (l12_stancia_2) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Chernobyl NPP North (string, smart terrain names):
+[l12_stancia_2]
+; aes2_monolith_camp1
+; aes2_monolith_camp2
+; aes2_monolith_camp3
+; aes2_monolith_camp4
+; aes2_monolith_snipers_1
+; aes2_monolith_snipers_2
+; aes2_monolith_snipers_3
+aes2_monsters1
+aes2_monsters2
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Zaton (zaton) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Zaton (string, smart terrain names):
+[zaton]
+; zat_a1
+zat_a23_smart_terrain
+; zat_b5_smart_terrain
+; zat_b7
+; zat_b7_stalker_raider
+; zat_b12
+; zat_b14_smart_terrain
+; zat_b18
+; zat_b20_smart_terrain
+zat_b28
+zat_b33
+zat_b38
+; zat_b38u
+; zat_b39
+; zat_b40_smart_terrain
+zat_b42_smart_terrain
+; zat_b52
+; zat_b53
+; zat_b54
+; zat_b55
+; zat_b56
+zat_b100
+; zat_b101
+; zat_b103_merc_smart
+; zat_b104_zombied
+zat_b106_smart_terrain
+; zat_medic_home_smart
+zat_sim_1
+zat_sim_2
+zat_sim_3
+zat_sim_4
+zat_sim_5
+zat_sim_6
+zat_sim_7
+zat_sim_8
+zat_sim_9
+; zat_sim_10
+zat_sim_11
+zat_sim_12
+; zat_sim_13
+zat_sim_14
+zat_sim_15
+zat_sim_16
+zat_sim_17
+zat_sim_18
+; zat_sim_19
+; zat_sim_20
+zat_sim_21
+zat_sim_22
+zat_sim_23
+zat_sim_24
+zat_sim_25
+zat_sim_26
+zat_sim_27
+; zat_sim_28
+; zat_sim_29
+zat_sim_30
+; zat_stalker_base_smart
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Jupiter (jupiter) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Jupiter (string, smart terrain names):
+[jupiter]
+; jup_a6
+jup_a9
+; jup_a10_smart_terrain
+; jup_a12
+; jup_a12_merc
+; jup_b1
+; jup_b4
+; jup_b6_anom_2
+jup_b8_smart_terrain
+; jup_b19
+; jup_b25
+; jup_b32
+; jup_b41
+; jup_b46
+jup_b47
+; jup_b200
+; jup_b200_tushkan_smart_terrain
+; jup_b202
+; jup_b203
+; jup_b204
+; jup_b206
+; jup_b207
+; jup_b207_depot_attack
+jup_b208
+jup_b209
+; jup_b211
+jup_b212
+; jup_b219
+jup_sim_1
+jup_sim_2
+jup_sim_3
+jup_sim_4
+; jup_sim_5
+jup_sim_6
+jup_sim_7
+jup_sim_8
+; jup_sim_9
+jup_sim_10
+jup_sim_11
+; jup_sim_12
+jup_sim_13
+jup_sim_14
+jup_sim_15
+jup_sim_16
+jup_sim_17
+jup_sim_18
+jup_sim_19
+; jup_sim_20
+; jup_sim_21
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Pripyat Outskirts (pripyat) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	January 30, 2018
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Pripyat Outskirts (string, smart terrain names):
+[pripyat]
+; pri_a15
+; pri_a16
+; pri_a17
+; pri_a18_smart_terrain
+pri_a21_smart_terrain
+pri_a22_smart_terrain
+pri_a25_smart_terrain
+; pri_b35_mercs
+; pri_b35_military
+; pri_b36_smart_terrain
+pri_b301
+; pri_b302
+pri_b303
+; pri_b304
+; pri_b306
+; pri_b307
+; pri_sim_1
+; pri_sim_2
+pri_sim_3
+; pri_sim_4
+pri_sim_5
+; pri_sim_6
+; pri_sim_7
+pri_sim_8
+pri_sim_9
+pri_sim_10
+pri_sim_11
+pri_sim_12
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; Truck Cemetery (k02_trucks_cemetery) Dynamic Anomaly Locations
+;
+;	Created by DoctorX
+;	for DoctorX Dynamic Anomalies 1.0
+;	March 14, 2017
+;
+;--------------------------------------------------------------------------------------------------
+
+; Allowable smart terrains for dynamic anomalies to spawn in Truck Cemetery (string, smart terrain names):
+[k02_trucks_cemetery]
+; trc_sim_1
+; trc_sim_2
+; trc_sim_3
+; trc_sim_4
+trc_sim_5
+; trc_sim_6
+; trc_sim_7
+trc_sim_8
+trc_sim_9
+; trc_sim_10
+trc_sim_11
+; trc_sim_12
+trc_sim_13
+trc_sim_14
+trc_sim_15
+trc_sim_16
+; trc_sim_17
+; trc_sim_18
+trc_sim_19
+; trc_sim_20
+trc_sim_21
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

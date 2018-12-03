@@ -1,12 +1,18 @@
 [smart_terrain]
 squad_id = 8
-max_population = 2
+max_population = 3
 respawn_params = respawn@rad_pseudodogs 
-respawn_idle = 86400
-
+respawn_idle = 30000
+
+
 
 [respawn@rad_pseudodogs]
+spawn_medwed
 spawn_pseudodogs
+
+[spawn_medwed]
+spawn_squads = simulation_medwed
+spawn_num = 1
 
 [spawn_pseudodogs]
 spawn_squads = simulation_pseudodog

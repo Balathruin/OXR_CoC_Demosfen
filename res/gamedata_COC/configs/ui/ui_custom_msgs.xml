@@ -1,5 +1,10 @@
 <header>
 
+<!-- Condition Drink -->
+<indicator_drink x="0" y="0" stretch="1" complex_mode="1">
+	<texture><!-- заглушка --></texture>
+</indicator_drink>
+<!--/ Condition Drink -->
         <debug_info x="10" y="160" width="1024" height="768" la_text="1" la_alpha="1" complex_mode="1">
             <text font="arial_14" r="225" g="225" b="225" a="255" />
         </debug_info>
@@ -13,11 +18,11 @@
                 <text x="0" y="0" font="graffiti22" r="240" g="217" b="182" a="255" align="c"/>
         </hud_timer_text>
 
-		<cs_debug  x="350" y="20" width="400" height="100" la_text="1" la_alpha="1" complex_mode="1">
-				<text font="arial_14"  r="240" g="217" b="180" a="255" align="l"/>
+		<cs_debug  x="450" y="20" width="300" height="100" la_text="1" la_alpha="1" complex_mode="1">
+				<text font="letterica16"  r="240" g="217" b="180" a="255" align="l"/>
 		</cs_debug>
 		<cop_debug  x="20" y="250" width="600" height="100" la_text="1" la_alpha="1" complex_mode="1">
-				<text font="arial_14"  r="240" g="217" b="180" a="255" align="l"/>
+				<text font="letterica16"  r="240" g="217" b="180" a="255" align="l"/>
 		</cop_debug>
 		<cop2_debug  x="750" y="20" width="255" height="100" la_text="1" la_alpha="1" complex_mode="1">
 				<text font="arial_14" r="240" g="217" b="180" a="255" align="l"/>
@@ -54,36 +59,40 @@
                 <text font="graffiti22"  r="240" g="217" b="182" a="255" align="c"/>
         </cs_radiation_danger>
 
+		<cs_health_danger  x="262" y="100" width="500" height="20" complex_mode="1">
+			<text font="graffiti22"  r="255" g="0" b="0" a="255" align="c"/>
+		</cs_health_danger>
+
   <cs_demo_play  x="30" y="710" width="600" height="50" complex_mode="1" stretch="1"
                                                         light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
     <text font="letterica18"  r="240" g="217" b="182" a="255" align="l"/>
   </cs_demo_play>
 
-	<closecaption_1  x="512" y="670" width="600" height="50" alignment="c" complex_mode="1">	<!-- normal -->
+	<closecaption_1  x="512" y="670" width="600" height="72" alignment="c" complex_mode="1">	<!-- normal -->
 		<text font="graffiti22" r="240" g="217" b="182" a="255" align="c"/>
 	</closecaption_1>
-	<closecaption_1_shadow  x="513" y="671" width="600" height="50" alignment="c" complex_mode="1">
+	<closecaption_1_shadow  x="513" y="671" width="600" height="72" alignment="c" complex_mode="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</closecaption_1_shadow>
 
-	<closecaption_2  x="512" y="635" width="600" height="50" alignment="c" complex_mode="1">	<!-- distant voice, "shouting from afar" -->
+	<closecaption_2  x="512" y="635" width="600" height="72" alignment="c" complex_mode="1">	<!-- distant voice, "shouting from afar" -->
 		<text font="graffiti22" r="216" g="186" b="140" a="255" align="c"/>
 	</closecaption_2>
-	<closecaption_2_shadow  x="513" y="636" width="600" height="50" alignment="c" complex_mode="1">
+	<closecaption_2_shadow  x="513" y="636" width="600" height="72" alignment="c" complex_mode="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</closecaption_2_shadow>
 
-	<closecaption_3  x="512" y="561" width="740" height="50" alignment="c" complex_mode="1">	<!-- monolith pray -->
+	<closecaption_3  x="512" y="600" width="740" height="72" alignment="c" complex_mode="1">	<!-- megafon, "megaphone" -->
 		<text font="graffiti22" r="180" g="172" b="148" a="255" align="c"/>
 	</closecaption_3>
-	<closecaption_3_shadow  x="513" y="562" width="740" height="50" alignment="c" complex_mode="1">
+	<closecaption_3_shadow  x="513" y="601" width="740" height="72" alignment="c" complex_mode="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</closecaption_3_shadow>
 
-	<closecaption_4  x="512" y="705" width="600" height="50" alignment="c" complex_mode="1">	<!-- second talker -->
+	<closecaption_4  x="512" y="705" width="600" height="72" alignment="c" complex_mode="1">	<!-- second talker -->
 		<text font="graffiti22" r="238" g="155" b="23" a="255" align="c"/>
 	</closecaption_4>
-	<closecaption_4_shadow  x="513" y="706" width="600" height="50" alignment="c" complex_mode="1">
+	<closecaption_4_shadow  x="513" y="706" width="600" height="72" alignment="c" complex_mode="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</closecaption_4_shadow>
 
@@ -94,10 +103,10 @@
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</cs_subtitles_npc_shadow>
 
-	<closecaption_6  x="512" y="561" width="600" height="50" alignment="c" complex_mode="1">	<!-- "danger" -->
-		<text font="graffiti22" r="240" g="0" b="0" a="255" align="c"/>
+	<closecaption_6  x="512" y="565" width="600" height="72" alignment="c" complex_mode="1">	<!-- "speaker" -->
+		<text font="graffiti22" r="255" g="255" b="255" a="255" align="c"/>
 	</closecaption_6>
-	<closecaption_6_shadow  x="513" y="562" width="600" height="50" alignment="c" complex_mode="1">
+	<closecaption_6_shadow  x="513" y="566" width="600" height="72" alignment="c" complex_mode="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</closecaption_6_shadow>
 
@@ -108,17 +117,17 @@
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</cs_subtitles_actor_shadow>
 
-	<cs_subtitles_object  x="175" y="516" width="674" height="50" complex_mode="1" stretch="1" light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
+	<cs_subtitles_object  x="175" y="597" width="674" height="50" complex_mode="1" stretch="1" light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
 		<text font="graffiti22"  r="255" g="255" b="255" a="255" align="c"/>
 	</cs_subtitles_object>
-	<cs_subtitles_object_shadow  x="176" y="517" width="674" height="50" complex_mode="1" stretch="1" light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
+	<cs_subtitles_object_shadow  x="176" y="598" width="674" height="50" complex_mode="1" stretch="1" light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</cs_subtitles_object_shadow>
 
-	<closecaption_9  x="512" y="597" width="600" height="50" alignment="c" complex_mode="1">	<!-- [closed caption] -->
+	<closecaption_9  x="512" y="635" width="600" height="72" alignment="c" complex_mode="1">	<!-- [closed caption] -->
 		<text font="graffiti22" r="240" g="192" b="0" a="255" align="c"/>
 	</closecaption_9>
-	<closecaption_9_shadow  x="513" y="598" width="600" height="50" alignment="c" complex_mode="1">
+	<closecaption_9_shadow  x="513" y="636" width="600" height="72" alignment="c" complex_mode="1">
 		<text font="graffiti22"  r="0" g="0" b="0" a="200" align="c"/>
 	</closecaption_9_shadow>
 
@@ -213,11 +222,22 @@
 		<texture>ui_sega_healph</texture>
 	</cs_enemy_health>
 
+        <cs_heli_health  x="680" y="15" width="325" height="25" stretch="1">
+                <!--                <text font="graffiti22"  r="240" g="217" b="182" a="255" align="l"/>
+                <texture x="0" y="0" width="325" height="25" a="255">ui_sega_healph</texture> -->
+                <texture>ui_sega_healph</texture>
+        </cs_heli_health>
+
+        <cs_strelok_health  x="680" y="15" width="325" height="25" stretch="1">
+			<text font="graffiti19"  r="240" g="217" b="182" a="255" align="c"/>
+               <texture>ui_sega_healph</texture>
+        </cs_strelok_health>
+
 	<crow_timer  x="869" y="0" width="155" height="66">
-		<text x="20" y="23" font="graffiti32" r="238" g="155" b="23" a="255" align="c"/>
+		<text x="20" y="23it" font="graffiti32" r="238" g="155" b="23" a="255" align="c"/>
 		<texture>ui_hud_timer_games</texture>
 <!--
-		<text x="-15" y="23" font="graffiti32" r="238" g="155" b="23" a="255" align="r"/>
+		<text x="-15" y="23it" font="graffiti32" r="238" g="155" b="23" a="255" align="r"/>
 		<texture>ui_hud_timer_games</texture>
 -->
 	</crow_timer>
@@ -226,11 +246,11 @@
 	</crow_timer_text>
 
 	<shooting_timer x="869" y="0" width="155" height="66">
-		<text x="20" y="23" font="graffiti32" r="238" g="155" b="23" a="255" align="c"/>
+		<text x="20" y="23it" font="graffiti32" r="238" g="155" b="23" a="255" align="c"/>
 		<texture>ui_hud_timer_games</texture>
 	</shooting_timer>
 	<shooting_counter  x="433" y="0" width="224" height="46">
-		<text x="2" y="6" font="graffiti32" r="238" g="155" b="23" a="255" align="c"/>
+		<text x="2" y="6it" font="graffiti32" r="238" g="155" b="23" a="255" align="c"/>
 		<texture>ui_hud_points_count</texture>
 	</shooting_counter>
 	<shooting_get_ready  x="212" y="300" width="600" height="68" complex_mode="1" light_anim="ui_slow_blinking_alpha">
@@ -280,85 +300,315 @@
     <texture>intro\intro_back</texture>
   </blackscreen>
 
-<!-- AtmosFear 4:3 ratio -->
-	<atm_indik_rad_green x="30" y="230" width="37" height="33" stretch="1">
+  <!-- Dinamic HUD -->
+	<hud_gas_blue x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_gas1</texture>
+	</hud_gas_blue>
+	<hud_gas_green x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_gas2</texture>
+	</hud_gas_green>
+	<hud_gas_yellow x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_gas3</texture>
+	</hud_gas_yellow>
+	<hud_gas_red x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_gas4</texture>
+	</hud_gas_red>
+	<hud_gas_red2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_gas5</texture>
+	</hud_gas_red2>
+	<hud_gas_red3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_gas6</texture>
+	</hud_gas_red3>
+	<hud_kill_blue x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_merc1</texture>
+	</hud_kill_blue>
+	<hud_kill_green x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_merc2</texture>
+	</hud_kill_green>
+	<hud_kill_yellow x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_merc3</texture>
+	</hud_kill_yellow>
+	<hud_kill_red x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_merc4</texture>
+	</hud_kill_red>
+	<hud_kill_red2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_merc5</texture>
+	</hud_kill_red2>
+	<hud_kill_red3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_merc6</texture>
+	</hud_kill_red3>
+	<hud_sci_blue x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_sci1</texture>
+	</hud_sci_blue>
+	<hud_sci_green x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_sci2</texture>
+	</hud_sci_green>
+	<hud_sci_yellow x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_sci3</texture>
+	</hud_sci_yellow>
+	<hud_sci_red x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_sci4</texture>
+	</hud_sci_red>
+	<hud_sci_red2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_sci5</texture>
+	</hud_sci_red2>
+	<hud_sci_red3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_sci6</texture>
+	</hud_sci_red3>
+	<hud_mil_blue x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_mil1</texture>
+	</hud_mil_blue>
+	<hud_mil_green x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_mil2</texture>
+	</hud_mil_green>
+	<hud_mil_yellow x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_mil3</texture>
+	</hud_mil_yellow>
+	<hud_mil_red x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_mil4</texture>
+	</hud_mil_red>
+	<hud_mil_red2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_mil5</texture>
+	</hud_mil_red2>
+	<hud_mil_red3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_mil6</texture>
+	</hud_mil_red3>
+	<hud_exo_blue x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_exo1</texture>
+	</hud_exo_blue>
+	<hud_exo_green x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_exo2</texture>
+	</hud_exo_green>
+	<hud_exo_yellow x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_exo3</texture>
+	</hud_exo_yellow>
+	<hud_exo_red x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_exo4</texture>
+	</hud_exo_red>
+	<hud_exo_red2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_exo5</texture>
+	</hud_exo_red2>
+	<hud_exo_red3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\hud_exo6</texture>
+	</hud_exo_red3>
+	<hud_blood1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\blood1</texture>
+	</hud_blood1>
+	<hud_blood2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\blood2</texture>
+	</hud_blood2>
+	<hud_blood3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\blood3</texture>
+	</hud_blood3>
+	<hud_blood4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\blood4</texture>
+	</hud_blood4>
+	<hud_blood5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>dinamic_hud\blood5</texture>
+	</hud_blood5>
+	<hud_blur1_1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="25">dinamic_hud\breath1</texture>
+	</hud_blur1_1>
+	<hud_blur1_2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="51">dinamic_hud\breath1</texture>
+	</hud_blur1_2>
+	<hud_blur1_3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="76">dinamic_hud\breath1</texture>
+	</hud_blur1_3>
+	<hud_blur1_4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="102">dinamic_hud\breath1</texture>
+	</hud_blur1_4>
+	<hud_blur1_5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="127">dinamic_hud\breath1</texture>
+	</hud_blur1_5>
+	<hud_blur1_6 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="153">dinamic_hud\breath1</texture>
+	</hud_blur1_6>
+	<hud_blur1_7 x="" y="0" width="1024" height="768" stretch="1">
+		<texture a="178">dinamic_hud\breath1</texture>
+	</hud_blur1_7>
+	<hud_blur1_8 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="204">dinamic_hud\breath1</texture>
+	</hud_blur1_8>
+	<hud_blur1_9 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="229">dinamic_hud\breath1</texture>
+	</hud_blur1_9>
+	<hud_blur1_10 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="255">dinamic_hud\breath1</texture>
+	</hud_blur1_10>
+	<hud_blur2_1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="25">dinamic_hud\breath2</texture>
+	</hud_blur2_1>
+	<hud_blur2_2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="51">dinamic_hud\breath2</texture>
+	</hud_blur2_2>
+	<hud_blur2_3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="76">dinamic_hud\breath2</texture>
+	</hud_blur2_3>
+	<hud_blur2_4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="102">dinamic_hud\breath2</texture>
+	</hud_blur2_4>
+	<hud_blur2_5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="127">dinamic_hud\breath2</texture>
+	</hud_blur2_5>
+	<hud_blur2_6 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="153">dinamic_hud\breath2</texture>
+	</hud_blur2_6>
+	<hud_blur2_7 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="178">dinamic_hud\breath2</texture>
+	</hud_blur2_7>
+	<hud_blur2_8 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="204">dinamic_hud\breath2</texture>
+	</hud_blur2_8>
+	<hud_blur2_9 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="229">dinamic_hud\breath2</texture>
+	</hud_blur2_9>
+	<hud_blur2_10 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="255">dinamic_hud\breath2</texture>
+	</hud_blur2_10>
+	<hud_blur3_1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="25">dinamic_hud\breath5</texture>
+	</hud_blur3_1>
+	<hud_blur3_2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="51">dinamic_hud\breath5</texture>
+	</hud_blur3_2>
+	<hud_blur3_3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="76">dinamic_hud\breath5</texture>
+	</hud_blur3_3>
+	<hud_blur3_4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="102">dinamic_hud\breath5</texture>
+	</hud_blur3_4>
+	<hud_blur3_5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="127">dinamic_hud\breath5</texture>
+	</hud_blur3_5>
+	<hud_blur3_6 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="153">dinamic_hud\breath5</texture>
+	</hud_blur3_6>
+	<hud_blur3_7 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="178">dinamic_hud\breath5</texture>
+	</hud_blur3_7>
+	<hud_blur3_8 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="204">dinamic_hud\breath5</texture>
+	</hud_blur3_8>
+	<hud_blur3_9 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="229">dinamic_hud\breath5</texture>
+	</hud_blur3_9>
+	<hud_blur3_10 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="255">dinamic_hud\breath5</texture>
+	</hud_blur3_10>
+	<hud_blur4_1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="25">dinamic_hud\breath3</texture>
+	</hud_blur4_1>
+	<hud_blur4_2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="51">dinamic_hud\breath3</texture>
+	</hud_blur4_2>
+	<hud_blur4_3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="76">dinamic_hud\breath3</texture>
+	</hud_blur4_3>
+	<hud_blur4_4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="102">dinamic_hud\breath3</texture>
+	</hud_blur4_4>
+	<hud_blur4_5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="127">dinamic_hud\breath3</texture>
+	</hud_blur4_5>
+	<hud_blur4_6 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="153">dinamic_hud\breath3</texture>
+	</hud_blur4_6>
+	<hud_blur4_7 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="178">dinamic_hud\breath3</texture>
+	</hud_blur4_7>
+	<hud_blur4_8 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="204">dinamic_hud\breath3</texture>
+	</hud_blur4_8>
+	<hud_blur4_9 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="229">dinamic_hud\breath3</texture>
+	</hud_blur4_9>
+	<hud_blur4_10 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="255">dinamic_hud\breath3</texture>
+	</hud_blur4_10>
+<!-- /Dinamic HUD -->
+
+	<!-- AtmosFear 4:3 ratio -->
+	<atm_indik_rad_green x="44" y="157" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_green</texture>
 	</atm_indik_rad_green>
-	<atm_indik_rad_yellow x="30" y="230" width="37" height="33" stretch="1">
+	<atm_indik_rad_yellow x="44" y="157" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_yellow</texture>
 	</atm_indik_rad_yellow>
-	<atm_indik_rad_orange x="30" y="230" width="37" height="33" stretch="1">
+	<atm_indik_rad_orange x="44" y="157" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_orange</texture>
 	</atm_indik_rad_orange>
-	<atm_indik_rad_red x="30" y="230" width="37" height="33" stretch="1">
+	<atm_indik_rad_red x="44" y="157" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_red</texture>
 	</atm_indik_rad_red>
-
-	<atm_indik_acid_green x="165" y="230" width="37" height="33" stretch="1">
+	
+	<atm_indik_acid_green x="64" y="164" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_green</texture>
 	</atm_indik_acid_green>
-	<atm_indik_acid_yellow x="165" y="230" width="37" height="33" stretch="1">
+	<atm_indik_acid_yellow x="64" y="164" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_yellow</texture>
 	</atm_indik_acid_yellow>
-	<atm_indik_acid_orange x="165" y="230" width="37" height="33" stretch="1">
+	<atm_indik_acid_orange x="64" y="164" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_orange</texture>
 	</atm_indik_acid_orange>
-	<atm_indik_acid_red x="165" y="230" width="37" height="33" stretch="1">
+	<atm_indik_acid_red x="64" y="164" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_red</texture>
 	</atm_indik_acid_red>
 
-	<atm_indik_psi_green x="120" y="230" width="37" height="33" stretch="1">
+	<atm_indik_psi_green x="26" y="146" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_green</texture>
 	</atm_indik_psi_green>
-	<atm_indik_psi_yellow x="120" y="230" width="37" height="33" stretch="1">
+	<atm_indik_psi_yellow x="26" y="146" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_yellow</texture>
 	</atm_indik_psi_yellow>
-	<atm_indik_psi_orange x="120" y="230" width="37" height="33" stretch="1">
+	<atm_indik_psi_orange x="26" y="146" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_orange</texture>
 	</atm_indik_psi_orange>
-	<atm_indik_psi_red x="120" y="230" width="37" height="33" stretch="1">
+	<atm_indik_psi_red x="26" y="146" width="24" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_red</texture>
 	</atm_indik_psi_red>
 
 	<!-- AtmosFear 16:10 ratio -->
-	<atm_indik_rad_green_16 x="24" y="230" width="29" height="33" stretch="1">
+	<atm_indik_rad_green_16 x="35" y="157" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_green</texture>
 	</atm_indik_rad_green_16>
-	<atm_indik_rad_yellow_16 x="24" y="230" width="29" height="33" stretch="1">
+	<atm_indik_rad_yellow_16 x="35" y="157" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_yellow</texture>
 	</atm_indik_rad_yellow_16>
-	<atm_indik_rad_orange_16 x="24" y="230" width="29" height="33" stretch="1">
+	<atm_indik_rad_orange_16 x="35" y="157" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_orange</texture>
 	</atm_indik_rad_orange_16>
-	<atm_indik_rad_red_16 x="24" y="230" width="29" height="33" stretch="1">
+	<atm_indik_rad_red_16 x="35" y="157" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Radiation_red</texture>
 	</atm_indik_rad_red_16>
-
-	<atm_indik_acid_green_16 x="132" y="230" width="29" height="33" stretch="1">
+	
+	<atm_indik_acid_green_16 x="51" y="164" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_green</texture>
 	</atm_indik_acid_green_16>
-	<atm_indik_acid_yellow_16 x="132" y="230" width="29" height="33" stretch="1">
+	<atm_indik_acid_yellow_16 x="51" y="164" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_yellow</texture>
 	</atm_indik_acid_yellow_16>
-	<atm_indik_acid_orange_16 x="132" y="230" width="29" height="33" stretch="1">
+	<atm_indik_acid_orange_16 x="51" y="164" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_orange</texture>
 	</atm_indik_acid_orange_16>
-	<atm_indik_acid_red_16 x="132" y="230" width="29" height="33" stretch="1">
+	<atm_indik_acid_red_16 x="51" y="164" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Biological_red</texture>
 	</atm_indik_acid_red_16>
 
 	<atm_indik_psi_green_16 x="21" y="146" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_green</texture>
 	</atm_indik_psi_green_16>
-	<atm_indik_psi_yellow_16 x="96" y="230" width="29" height="33" stretch="1">
+	<atm_indik_psi_yellow_16 x="21" y="146" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_yellow</texture>
 	</atm_indik_psi_yellow_16>
-	<atm_indik_psi_orange_16 x="96" y="230" width="29" height="33" stretch="1">
+	<atm_indik_psi_orange_16 x="21" y="146" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_orange</texture>
 	</atm_indik_psi_orange_16>
-	<atm_indik_psi_red_16 x="96" y="230" width="29" height="33" stretch="1">
+	<atm_indik_psi_red_16 x="21" y="146" width="19" height="22" stretch="1">
 		<texture>ui_inGame2_triangle_Psy_red</texture>
 	</atm_indik_psi_red_16>
+	
+	<!-- AtmosFear Nano hud finishes here. Everything above this strictly relates to the Nano Hud. Everything below this is not relevant. -->
 
 	<helm_respirator1 x="0" y="0" width="1024" height="768" stretch="1">
 		<texture>ui\helm_respirator1</texture>

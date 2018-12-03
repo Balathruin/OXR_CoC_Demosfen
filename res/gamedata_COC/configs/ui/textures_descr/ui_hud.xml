@@ -89,6 +89,12 @@
     <texture id="ui_hud2_res_fire"	x="929" y="878" width="22" height="22" />
     <texture id="ui_hud2_res_acid"	x="907" y="878" width="22" height="22" />
 
+<!-- buy_menu-->
+    <texture id="ui_btn_shotgun_e"	x="198" y="97" width="256" height="100" />
+    <texture id="ui_btn_sniper_e"	x="198" y="97" width="256" height="100" />
+    <texture id="ui_btn_heavy_e"	x="198" y="97" width="256" height="100"  />
+    <texture id="ui_btn_assault_e"	x="198" y="97" width="256" height="100"  />
+
 <!-- logos -->
 
     <texture id="ui_hud_shk_stamina_new"		x="789" y="862" width="68" height="14" />

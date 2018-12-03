@@ -1,0 +1,38 @@
+[anm_bandage]:anm_base
+$spawn						= "weapons\wpn_tubik"
+hud							= anm_bandage_hud
+visual						= dynamics\devices\dev_conserv\dev_conserv.ogf
+description					= st_binocular_descr
+inv_name		 			= st_binocular_name
+inv_name_short				= st_binocular_name
+
+
+snd_close                                = interface\inv_nosound
+snd_draw                                 = interface\inv_nosound
+snd_empty                                = interface\inv_nosound
+snd_gyro                                 = interface\inv_nosound
+snd_holster                              = interface\inv_nosound
+snd_reload                               = interface\inv_nosound
+snd_shoot                                = interface\inv_nosound
+snd_zoomin                               = interface\inv_nosound
+snd_zoomout                              = interface\inv_nosound
+
+[anm_bandage_hud]:anm_base_hud
+hands_position 				= 0.0, -0.383296, 0.374578
+hands_orientation 			= 0.0, 16.4738, 0.0
+hands_position_16x9 		= 0.0, -0.383296, 0.3724578
+hands_orientation_16x9 		= 0.0, 16.4738, 0.0
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+item_visual             	= dynamics\hud_anims\eat\eat_conserva.ogf
+anm_show				= actor_use_protector		;binoculars_draw
+anm_hide				= actor_use_protector_draw		;binoculars_holster
+anm_idle				= actor_use_protector_idle			;binoculars_idle
+anm_idle_aim			= actor_use_protector_idle			;binoculars_idle
+anm_idle_moving			= actor_use_protector_idle	;binoculars_idle_moving
+anm_idle_sprint			= actor_use_protector_idle	;binoculars_idle_sprint
+anm_bore				= actor_use_protector		;binoculars_idle_bore
+
+
+
+

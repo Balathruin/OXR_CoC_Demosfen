@@ -1,0 +1,47 @@
+<w>
+	<static_weap_condition x="900" y="570" width="124" height="34" stretch="1">
+		<texture x="0" y="0" width="155" height="34" stretch="0">ui\ui_progress_bar</texture>
+		<heat_icon x="4" y="12" width="19" height="19">
+			<texture x="12" y="36" width="11" height="19" stretch="0" align="c">ui\ui_progress_bar</texture>
+		</heat_icon>
+		<heat_icon_progress x="4" y="12" width="19" height="19" align="c" horz="0" min="1" max="100" pos="0" stretch="0">
+			<min_color r="107" g="207" b="119"/>
+			<middle_color r="255" g="255" b="118"/>
+			<max_color r="196" g="18" b="18"/>
+			<progress>
+				<texture x="0" y="36" width="11" height="19" align="c">ui\ui_progress_bar</texture>
+			</progress> 
+		</heat_icon_progress>
+		<heat_progress x="24" y="18 "width="84" height="10" horz="1" min="0" max="100" pos="0" stretch="1">
+			<min_color r="107" g="207" b="119"/>
+			<middle_color r="255" g="255" b="118"/>
+			<max_color r="196" g="18" b="18"/>
+			<progress>
+               <texture x="34" y="56" width="110" height="10" stretch="0">ui\ui_progress_bar</texture>
+			</progress>
+		</heat_progress>
+    </static_weap_condition>
+
+	<inv_static2 x="396" y="366" width="53" height="9" stretch="1">
+		<texture x="367" y="376" width="66" height="9">ui\ui_actor_menu</texture>
+		<inv_heat_progress2 x="2" y="2" width="47" height="5" horz="1" min="0" max="100" pos="0">
+			<progress stretch="1">
+				<texture r="142" g="149" b="149">ui_inGame2_inventory_status_bar</texture>
+			</progress>
+			<min_color r="107" g="207" b="119"/>
+			<middle_color r="255" g="255" b="118"/>
+			<max_color r="196" g="18" b="18"/>
+		</inv_heat_progress2>
+	</inv_static2>
+	<inv_static3 x="575" y="366" width="53" height="9" stretch="1">
+		<texture x="591" y="376" width="66" height="9">ui\ui_actor_menu</texture>
+		<inv_heat_progress3 x="2" y="2" width="47" height="5" horz="1" min="0" max="100" pos="0">
+			<progress stretch="1">
+				<texture r="142" g="149" b="149">ui_inGame2_inventory_status_bar</texture>
+			</progress>
+			<min_color r="107" g="207" b="119"/>
+			<middle_color r="255" g="255" b="118"/>
+			<max_color r="196" g="18" b="18"/>
+		</inv_heat_progress3>
+	</inv_static3>
+</w>

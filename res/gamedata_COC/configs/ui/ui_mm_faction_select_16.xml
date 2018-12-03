@@ -2,7 +2,7 @@
 
 	<background width="1024" height="768">
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
 		</auto_static>
 	</background>
 
@@ -13,10 +13,10 @@
 			</auto_static>
 		</dialog>
 
-		<cap_character_name x="33" y="40" width="32" height="29">
+		<cap_character_name x="25" y="40" width="35" height="29">
 			<text r="190" g="190" b="190" font="letterica18" align="l" vert_align="c">st_mm_faction_cap_character_name</text>
 		</cap_character_name>
-		<input_character_name x="67" y="40" width="175" height="29">
+		<input_character_name x="80" y="40" width="175" height="29">
 			<text x="5" font="letterica18" vert_align="c" align="l"/>
 		</input_character_name>
 
@@ -194,7 +194,7 @@
 			<texture>ui_inGame2_button</texture>
 		</btn_rand>
 
-		<btn_submit x="277" y="382" width="86" height="24" stretch="1">
+		<btn_submit x="277" y="382" width="125" height="24" stretch="1">
 			<text align="c" font="letterica18">st_mm_faction_submit</text>
 			<texture>ui_inGame2_button</texture>
 		</btn_submit>

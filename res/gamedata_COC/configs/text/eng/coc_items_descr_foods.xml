@@ -1,0 +1,86 @@
+<string_table>
+<string id="st_sardina">
+	<text>Sardines</text>
+</string>
+<string id="st_sardina_descr">
+	<text>Very tasty fish! It was caught in the Pacific Ocean, cooked with fine oil, and transported into the Zone by some dealers. Shelf life is 1.5 months.</text>
+</string>
+<string id="st_nuts_2">
+	<text>Tin of nuts</text>
+</string>
+<string id="st_nuts_2_descr">
+	<text>Nuts have a high amount of vitamins and carbohydrates. Eating a tin of nuts is an effective way to stave of hunger and it also restores some energy.</text>
+</string>
+<string id="st_wild_drink">
+	<text>"Wild" drink</text>
+</string>
+<string id="st_wild_drink_descr">
+	<text>The drink is called "Wild" because it contains 5% alcohol and some drugs that cause an adrenaline boost in the bloodstream.</text>
+</string>
+<string id="st_olivki">
+	<text>Olives</text>
+</string>
+<string id="st_olivki_descr">
+	<text>Tins of fresh olives are a rare sight in the Zone. A popular and highly tradable item for stalkers, but also spoils quickly. It has a slight radiation reducing effect.</text>
+</string>
+<string id="st_cheese">
+	<text>Processed cheese</text>
+</string>
+<string id="st_cheese_descr">
+	<text>Ordinary processed cheese from the local underground factory. Despite the fact that it is made in the Zone, no one has yet been poisoned.</text>
+</string>
+<string id="st_galet">
+	<text>Dry biscuits</text>
+</string>
+<string id="st_galet_descr">
+	<text>Quite a nutritious product, good for long storage, but it is not a meal on its own.</text>
+</string>
+<string id="st_shokolad">
+	<text>Chocolate</text>
+</string>
+<string id="st_shokolad_descr">
+	<text>The favorite treat of many stalkers. An excellent remedy for a bad mood.</text>
+</string>
+<string id="st_batonchik">
+	<text>Chocolate bar</text>
+</string>
+<string id="st_batonchik_descr">
+	<text>Delicious milk chocolate bar with cream filling. An excellent remedy for a bad mood as treats in the zone are few and far between.</text>
+</string>
+<string id="st_beer">
+	<text>Beer</text>
+</string>
+<string id="st_beer_descr">
+	<text>Good drink, It cheers you up but that's about it. It does reduce the radiation in the body but you will need to drink lots and you'll have to get very drunk before it has any real effect.</text>
+</string>
+<string id="st_juice">
+	<text>Orange juice</text>
+</string>
+<string id="st_juice_descr">
+	<text>Nutritious drink with plenty of Vitamin C, excellent for restoring health.</text>
+</string>
+<string id="TGZ_jerky">
+	<text>Beef-Jerky</text>
+</string>
+<string id="TGZ_jerky_desc">
+	<text>Strips of your favorite Beef-jerky. Perfectly seasoned and moist with a salty fat that keeps you chewing for hours. This particular batch was harvested from the best meat in the Zone, the side-effects of which are slightly better than your typical Zone fare.</text>
+</string>
+<string id="chips">
+	<text>Chips</text>
+</string>
+<string id="chips_descr">
+	<text>Light potato chips. A good source of salt and preservatives is always a useful thing in the Zone.</text>
+</string>
+<string id="TGZ_hash">
+	<text>Hash Cookies</text>
+	</string>
+<string id="TGZ_hash_desc">
+	<text>Looking for that little extra boost and head-fuzzing-goodness? BOING! Eat a handfull of these and you'll find that night's aren't as dark and getting shot actually tickles a little.</text>
+</string>
+<string id="TGZ_cpcb">
+	<text>Cocoa-Puffed Crunchy-Block</text>
+</string>
+<string id="TGZ_cpcb_desc">
+	<text>These formed-marshmellow crispy-chunks made are sticky and full of sugar. The perfect get up and go breakfast in the Zone. YUM!</text>
+</string>
+</string_table>

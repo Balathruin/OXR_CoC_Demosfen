@@ -28,18 +28,18 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>hello_dialog</start_dialog>
+    <actor_dialog>minigames_military</actor_dialog>
 	<actor_dialog>dm_broker_dialog</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
-    <!-------------------------- ARMY TRADER ------------------------>
+        <!-------------------------- ARMY TRADER ------------------------>
     <specific_character id="agr_smart_terrain_1_6_army_trader_stalker" team_default="1">
     <name>agr_smart_terrain_1_6_army_trader_stalker_name</name>
     <icon>ui_inGame2_Spooner</icon>
     <map_icon x="1" y="0"/>
     <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
     <class>agr_smart_terrain_1_6_army_trader_stalker</class>
-    <community>army</community>
+    <community>trader</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <rank>19180</rank>
     <reputation>1172</reputation>
@@ -53,7 +53,16 @@
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-	<actor_dialog>dm_broker_dialog</actor_dialog>
+    <!---------- mlr ----------->
+    <actor_dialog>guid_agr_mlr_military</actor_dialog>
+    <actor_dialog>guid_agr_mlr_military_vert</actor_dialog>
+    <actor_dialog>guid_agr_mlr_military_list</actor_dialog>
+    <actor_dialog>dm_broker_dialog</actor_dialog>
+	<actor_dialog>request_to_no_trade_dialog</actor_dialog>
+    <actor_dialog>ussr_level_of_buy_equpments</actor_dialog>
+    <actor_dialog>find_blackbox_mlr_reward_army</actor_dialog>
+    <!---------- mlr ----------->    <actor_dialog>minigames_military</actor_dialog>
+    <actor_dialog>minigames_military</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     
@@ -63,7 +72,7 @@
     <icon>ui_inGame2_Kirilov</icon>
     <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
     <class>agr_smart_terrain_1_6_army_mechanic_stalker</class>
-    <community>army</community>
+    <community>trader</community>
     <map_icon x="1" y="0"/>
     <terrain_sect>stalker_terrain</terrain_sect>
     <mechanic_mode>1</mechanic_mode>

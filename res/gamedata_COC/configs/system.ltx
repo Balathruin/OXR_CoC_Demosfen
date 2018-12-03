@@ -1,5 +1,6 @@
 #include "defines.ltx"
 #include "prefetch\prefetch_single.ltx"
+#include "weathers\environment.ltx"
 #include "creatures\monsters.ltx"
 #include "creatures\stalkers.ltx"
 #include "creatures\helicopter.ltx"
@@ -21,7 +22,11 @@
 #include "evaluation.ltx"
 #include "fonts.ltx"
 #include "alife.ltx"
+
+; Respawns
 #include "creatures\spawn_sections.ltx"
+
+; Extra Content
 #include "extracontent.ltx"
 #include "localization.ltx"
 #include "smart_cover.ltx"
@@ -67,19 +72,19 @@ files                                    = ui_npc_unique, ui_npc_unique_2, ui_np
 files                                    = info_portions, info_upgrades, info_alife_switch, info_yantar, info_katacomb, info_escape, info_zaton, info_jupiter, info_pripyat
 
 [dialogs]
-files                                    = dialogs, dialogs_yantar, dialogs_marsh, dialogs_redforest, dialogs_katacomb, dialogs_escape, dialogs_bar, dialogs_zaton, dialogs_jupiter, dialogs_pripyat, dialogs_darkvalley, dialogs_warlab
+files                                    = dialogs, dialogs_yantar, dialogs_marsh, dialogs_redforest, dialogs_katacomb, dialogs_escape, dialogs_bar, dialogs_zaton, dialogs_jupiter, dialogs_pripyat, dialogs_darkvalley, dialogs_warlab, dialogs_mlr, dialogs_mlr_arena, dialogs_minigames, jg_dialogs, dialogs_faction
 
 [profiles]
-files                                    = npc_profile
-specific_characters_files                = character_desc_general, character_desc_marsh, character_desc_agroprom, character_desc_darkvalley, character_desc_bar, character_desc_escape, character_desc_red_forest, character_desc_yantar, character_desc_military, character_desc_deadcity, character_desc_katacomb, character_desc_zaton, character_desc_pripyat, character_desc_jupiter, character_desc_underpass, character_desc_sarcofag, character_desc_warlab
+files                                    = npc_profile, npc_profile_mlr
+specific_characters_files                = character_desc_general, character_desc_marsh, character_desc_agroprom, character_desc_darkvalley, character_desc_bar, character_desc_escape, character_desc_red_forest, character_desc_yantar, character_desc_military, character_desc_deadcity, character_desc_katacomb, character_desc_zaton, character_desc_pripyat, character_desc_jupiter, character_desc_underpass, character_desc_sarcofag, character_desc_warlab, character_desc_mlr, character_desc_labx7_coll22_1
 
 
 ;New in CoC: You can have as many slots as you want, simply create slot_active_* and slot_persistent_* for it in sequential order
 ;Set slot_persistent_* = false to treat actor inventory as a 'slot'. Setting highlight_equipped = true in the item section will highlight equipped items in inventory
 [inventory]
 take_dist                                = 2	                                       ; not used at all
-max_weight                               = 30
-max_ruck                                 = 56
+max_weight                               = 50
+max_ruck                                 = 60
 max_belt                                 = 5	                                       ;16
 
 slot_persistent_1                        = false	                                       ;knife
@@ -155,7 +160,7 @@ max_count                                = 5
 [bloody_marks]
 wallmarks                                = wm\wm_blood_1,wm\wm_blood_2,wm\wm_blood_3,wm\wm_blood_4,wm\wm_blood_5,wm\wm_blood_6,wm\wm_blood_7,wm\wm_blood_8,wm\wm_blood_9,wm\wm_blood_10,wm\wm_blood_11,wm\wm_blood_1_1,wm\wm_blood_1_2,wm\wm_blood_1_3,wm\wm_blood_1_4,wm\wm_blood_1_5
 dist                                     = 6.0	                                       ;2.4  ;(м) max расстољние отлета крови
-max_size                                 = 0.3	                                       ;0.3  ;(м)радиус пљтна при хите силой nominal hit по большому объекту (по маленькому *0.5)
+max_size                                 = 0.5	                                       ;0.3  ;(м)радиус пљтна при хите силой nominal hit по большому объекту (по маленькому *0.5)
 min_size                                 = 0.05	                                       ;(м)минимальнvй радиус пљтна
 nominal_hit                              = 0.25	                                       ;величина номинального хита, при котором разлетаетсљ максимум крови (max_size)
 
@@ -322,9 +327,16 @@ lim_zoom                                 = 5, 10
 rot_speed                                = 3.14, 1.0, 10
 first_person_zoom						 = true
 
+[heli_front_cam]
+;lim_yaw    = -0.01,0.01
+lim_pitch                = -1.2, 1.2
+lim_yaw                  = -1.5, 1.5
+rot_speed                = 3.14, 1.5, 0
+first_person_zoom		 = false
+
 [heli_look_cam]
 lim_pitch                                = 0, 1.56
-lim_yaw                                  = 0  , 0
+lim_yaw                                  = 0, 0
 lim_zoom                                 = 10, 30
 rot_speed                                = 25, 1.0, 10
 first_person_zoom						 = true
@@ -691,6 +703,17 @@ swing_fast_rot2                          = .5	                                  
 swing_fast_speed                         = 0.5	                                       ;1
 
 ;Vehicles
+
+[romann_t340]:m_car
+$spawn                                   = "romann_t340"
+cform                                    = skeleton
+visual                                   = dynamics\vehicles\romann_auto_park\romann_panda_t340.ogf
+
+[romann_mav]:m_car
+$spawn                                   = "romann_mav"
+cform                                    = skeleton
+visual                                   = dynamics\vehicles\romann_auto_park\romann_mav.ogf
+
 [veh_niva]:m_car
 $spawn                                   = "veh_niva"
 cform                                    = skeleton
@@ -777,6 +800,9 @@ cform                                    = skeleton
 visual                                   = dynamics\vehicles\veh_baggi\veh_baggi_u_01.ogf
 
 [ph_capture_visuals]
+;Список объектов которvе можно таскать.
+
+;NPC
 actors\barman\barman
 actors\dolg\stalker_do_balon_1
 actors\izgoy\izgoy

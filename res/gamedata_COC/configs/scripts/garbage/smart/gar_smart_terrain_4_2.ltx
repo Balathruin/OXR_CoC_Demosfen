@@ -2,12 +2,17 @@
 squad_id = 7
 max_population = 2
 respawn_params = respawn@gar_smart_terrain_4_2
-respawn_idle = 86400
-
+respawn_idle = 50000
 
 [respawn@gar_smart_terrain_4_2]
-spawn_mix_boar_flesh
+spawn_bandits
 
-[spawn_mix_boar_flesh]
-spawn_squads = simulation_boar, simulation_flesh, simulation_mix_boar_flesh
+[spawn_bandits]
+spawn_squads = bandit_sim_squad_novice, bandit_sim_squad_advanced
 spawn_num = 1
+
+[exclusive]
+gar_smart_terrain_4_2_camp_work_1 = garbage\gar_smart_terrain_4_2_smart_logic.ltx
+gar_smart_terrain_4_2_camp_work_2 = garbage\gar_smart_terrain_4_2_smart_logic.ltx
+gar_smart_terrain_4_2_camp_work_3 = garbage\gar_smart_terrain_4_2_smart_logic.ltx
+gar_smart_terrain_4_2_camp_work_4 = garbage\gar_smart_terrain_4_2_smart_logic.ltx

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
+	<string id="ui_st_mp_create">
+		<text>Создать</text>
+	</string>
+	<string id="ui_st_mp_login">
+		<text>Ввод</text>
+	</string>
+	<string id="ui_st_mp_logout">
+		<text>Выход</text>
+	</string>
+	
 	<string id="Clear">
 		<text>Ясная</text>
 	</string>
@@ -7,19 +17,19 @@
 		<text>Облачная</text>
 	</string>
 	<string id="Default">
-		<text>средние</text>
+		<text>Средние</text>
 	</string>
 	<string id="Extreme">
-		<text>максимальные</text>
+		<text>Максимальные</text>
 	</string>
 	<string id="High">
-		<text>высокие</text>
+		<text>Высокие</text>
 	</string>
 	<string id="Low">
-		<text>низкие</text>
+		<text>Низкие</text>
 	</string>
 	<string id="Minimum">
-		<text>минимальные</text>
+		<text>Минимальные</text>
 	</string>
 	<string id="Night">
 		<text>Ночь</text>
@@ -31,13 +41,13 @@
 		<text>ТИП ИГРЫ</text>
 	</string>
 	<string id="gd_master">
-		<text>мастер</text>
+		<text>Легенда</text>
 	</string>
 	<string id="gd_novice">
-		<text>новичок</text>
+		<text>Сталкер</text>
 	</string>
 	<string id="gd_veteran">
-		<text>ветеран</text>
+		<text>Мастер</text>
 	</string>
 	<string id="icon">
 		<text>ЗНАЧКИ</text>
@@ -46,34 +56,34 @@
 		<text>КАРТА</text>
 	</string>
 	<string id="renderer_r1">
-		<text>Статичное освещение DX8</text>
+		<text>Статичное освещение DX9(1 рендер)</text>
 	</string>
 	<string id="renderer_r2a">
-		<text>Динамическое освещение DX9</text>
+		<text>Динам. освещение DX9(2 рендер(a))</text>
 	</string>
 	<string id="renderer_r2">
-		<text>Полное динам.освещение DX9</text>
+		<text>Полное динамич. освещение DX9(2 рендер)</text>
 	</string>
 	<string id="renderer_r2.5">
-		<text>Улучш.динамич.освещение DX9</text>
+		<text>Улучш. полное освещение DX9(2.5 рендер)</text>
 	</string>
 	<string id="renderer_r3">
-		<text>Ул. полное освещение (DX10)</text>
+		<text>Стабильный DX10(3 рендер)</text>
 	</string>
 	<string id="renderer_r4">
-		<text>Ул. полное освещение (DX11)</text>
+		<text>Ул. полное освещение DX11(4 рендер)</text>
 	</string>
 	<string id="st_opt_high">
-		<text>высоко</text>
+		<text>Высоко</text>
 	</string>
 	<string id="st_opt_low">
-		<text>низко</text>
+		<text>Низко</text>
 	</string>
 	<string id="st_opt_medium">
-		<text>средне</text>
+		<text>Средне</text>
 	</string>
 	<string id="st_opt_off">
-		<text>отключено</text>
+		<text>Отключено</text>
 	</string>
 	<string id="ui_mm_60_hz">
 		<text>Частота 60Гц</text>
@@ -115,10 +125,7 @@
 		<text>Управление</text>
 	</string>
 	<string id="ui_mm_credits">
-		<text>Титры</text>
-	</string>
-	<string id="ui_mm_crosshair_distance">
-		<text>Дистанция до цели</text>
+		<text>Создатели</text>
 	</string>
 	<string id="ui_mm_default">
 		<text>По умолчанию</text>
@@ -135,6 +142,9 @@
     <string id="ui_mm_detail_radius">
 	    <text>Дальность отрисовки травы</text>
     </string>
+    <string id="ui_mm_detail_height">
+	    <text>Высота травы</text>
+   	</string>
 	<string id="ui_mm_difficulty">
 		<text>Сложность</text>
 	</string>
@@ -148,7 +158,10 @@
 		<text>Глубина резкости</text>
 	</string>
 	<string id="ui_mm_dyn_crosshair">
-		<text>Динамич. прицел</text>
+		<text>Динамический прицел</text>
+	</string>
+	<string id="ui_mm_crosshair_distance">
+		<text>Прицел: дистанция до цели</text>
 	</string>
 	<string id="ui_mm_dynamic_music">
 		<text>Динамическая музыка</text>
@@ -181,22 +194,22 @@
 		<text>Настройка клавиатуры</text>
 	</string>
 	<string id="ui_mm_last_save">
-		<text>Посл. сохранение</text>
+		<text>Посл. безопасное место</text>
 	</string>
 	<string id="ui_mm_light_distance">
 		<text>Дальность освещения</text>
 	</string>
 	<string id="ui_mm_load">
-		<text>Загрузить</text>
+		<text>В путь</text>
 	</string>
 	<string id="ui_mm_load_game">
-		<text>Загрузить игру</text>
+		<text>Вспомнить ходку</text>
 	</string>
 	<string id="ui_mm_logout">
 		<text>Выйти из профиля</text>
 	</string>
 	<string id="ui_mm_master">
-		<text>Мастер</text>
+		<text>Легенда</text>
 	</string>
 	<string id="ui_mm_master_volume">
 		<text>Громкость</text>
@@ -232,22 +245,22 @@
 		<text>Сетевая игра</text>
 	</string>
 	<string id="ui_mm_newgame">
-		<text>Новая игра</text>
+		<text>Отправиться в ходку</text>
 	</string>
 	<string id="ui_mm_novice">
-		<text>Новичок</text>
+		<text>Сталкер</text>
 	</string>
 	<string id="ui_mm_npc_torch">
 		<text>Свет фонариков NPC</text>
 	</string>
 	<string id="ui_mm_options">
-		<text>ОПЦИИ</text>
+		<text>Снаряга</text>
 	</string>
 	<string id="ui_mm_options_n">
-		<text>Опции</text>
+		<text>Снаряга</text>
 	</string>
 	<string id="ui_mm_weather_options">
-		<text>Погода</text>
+		<text>Прогноз Погоды</text>
 	</string>
 	<string id="ui_mm_particles_distance">
 		<text>Дальность частиц</text>
@@ -256,16 +269,16 @@
 		<text>Установки качества</text>
 	</string>
 	<string id="ui_mm_quit2windows">
-		<text>Выйти в Windows</text>
+		<text>Выбраться за перриметр</text>
 	</string>
 	<string id="ui_mm_quit_game">
-		<text>Завершить игру</text>
+		<text>Завершить ходку</text>
 	</string>
 	<string id="ui_mm_quit_game_message">
-		<text>Действительно покинуть игру?</text>
+		<text>Вы действительно хотите завершить ходку?</text>
 	</string>
 	<string id="ui_mm_quit_windows_message">
-		<text>Действительно выйти в Windows?</text>
+		<text>Вы действительно хотите выбраться за перриметр?</text>
 	</string>
 	<string id="ui_mm_r2_detail_bump">
 		<text>Детальный рельеф</text>
@@ -278,6 +291,12 @@
 	</string>
 	<string id="ui_mm_r2_sun_details">
 		<text>Тень травы</text>
+	</string>
+	<string id="ui_mm_r2_shafts_value">
+		<text>Интенсивность лучей</text>
+	</string>
+	<string id="ui_mm_r2_gloss_factor">
+		<text>Интенсивность блеска</text>
 	</string>
     	<string id="ui_mm_r__actor_shadow">
     		<text>Тень от игрока</text>
@@ -309,14 +328,17 @@
 	<string id="ui_mm_resolution">
 		<text>Разрешение</text>
 	</string>
+	<string id="ui_mm_vibrance">
+		<text>Насыщенность</text>
+	</string>
 	<string id="ui_mm_return_game">
-		<text>Продолжить</text>
+		<text>Продолжить ходку</text>
 	</string>
 	<string id="ui_mm_save">
 		<text>Сохранить</text>
 	</string>
 	<string id="ui_mm_save_game">
-		<text>Сохранить игру</text>
+		<text>Сохранить безопасное место</text>
 	</string>
 	<string id="ui_mm_show_crosshair">
 		<text>Показывать прицел</text>
@@ -343,7 +365,7 @@
 		<text>Качество звука</text>
 	</string>
 	<string id="ui_mm_stalker">
-		<text>Сталкер</text>
+		<text>Ветеран</text>
 	</string>
 	<string id="ui_mm_sun_quality">
 		<text>Качество теней</text>
@@ -364,7 +386,7 @@
 		<text>Распознавание NPC</text>
 	</string>
 	<string id="ui_mm_veteran">
-		<text>Ветеран</text>
+		<text>Мастер</text>
 	</string>
 	<string id="ui_mm_video">
 		<text>Видео</text>
@@ -403,7 +425,7 @@
 		<text>Режим SSAO</text>
 	</string>
 	<string id="ui_mm_ssao">
-		<text>по умолчанию</text>
+		<text>По умолчанию</text>
 	</string>
 	<string id="ui_mm_hdao">
 		<text>HDAO</text>
@@ -412,29 +434,29 @@
 		<text>HBAO</text>
 	</string>
 	<string id="ui_st_disable_hud">
-		<text>Вкл. интерфейс</text>
+		<text>Показывать интерфейс</text>
 	</string>
 	<string id="ui_mm_hud_draw">
-		<text>Вкл. интерфейс</text>
+		<text>Показывать интерфейс</text>
 	</string>
 	<string id="gd_stalker">
-		<text>сталкер</text>
+		<text>Ветеран</text>
 	</string>
 	<string id="st_opt_extreme">
-		<text>макс. высоко</text>
+		<text>Макс. высоко</text>
 	</string>
 
 	<string id="st_opt_ultra">
-		<text>очень высоко</text>
+		<text>Очень высоко</text>
 	</string>
 	<string id="ui_mm_r4_enable_tessellation">
 		<text>Тесселяция</text>
 	</string>
 	<string id="ui_mm_confirm_changes">
-		<text>Применить совершённые изменения? Все изменения будут отменены через</text>
+		<text>Для применения изменений, нужно выйти в Windows! Все изменения будут отменены через</text>
 	</string>
 	<string id="st_cap_check_story">
-		<text>Тайна Зоны</text>
+		<text>Сюжет "Тайна Зоны"</text>
 	</string>
 	<string id="st_cap_check_survival">
 		<text>Выживание</text>
@@ -445,14 +467,17 @@
 	<string id="st_cap_check_azazel_mode">
 		<text>Жизнь после жизни</text>
 	</string>
-	<string id="st_cap_check_campfire">
-		<text>Сохранения только у костров</text>
-	</string>
 	<string id="st_cap_check_hardcore_aim">
 		<text>Меткие НПС</text>
 	</string>
+	<string id="st_cap_check_campfire">
+		<text>Сохранения только у костров</text>
+	</string>
 	<string id="ui_mm_debug_hud">
-		<text>Debug Hud</text>
+		<text>Debug-интерфейс</text>
+	</string>
+	<string id="ui_mm_dynamic_news">
+		<text>Динамические новости</text>
 	</string>
 	<string id="ui_mm_debug_map_hud">
 		<text>Debug режим глоб.карты</text>
@@ -475,18 +500,39 @@
 	<string id="ui_mm_ai_die_in_anomaly">
 		<text>НПС гибнут в аномалиях</text>
 	</string>
-	<string id="ui_mm_dynamic_news">
-		<text>Динамические новости</text>
-	</string>
 	<string id="ui_mm_art_degrade">
 		<text>Портящиеся артефакты</text>
 	</string>
 	<string id="ui_mm_sleep_deprived">
 		<text>Недосыпание</text>
 	</string>
-        <string id="ui_mm_excl_dist">
-                <text>Радиус запрета спавна</text>
-        </string>
+	<string id="ui_mm_food_irradiate">
+		<text>Облучение продуктов</text>
+	</string>
+	<string id="ui_mm_shot_effects">
+		<text>Эффект отдачи оружия</text>
+	</string>
+	<string id="ui_mm_item_animation">
+		<text>Анимации предметов:</text>
+	</string>
+	<string id="ui_mm_enhanced_animation">
+		<text>Улучшенные анимации</text>
+	</string>
+	<string id="ui_mm_consumable_animation">
+		<text>Анимации</text>
+	</string>
+	<string id="ui_mm_weapon_heat">
+		<text>Перегрев оружия</text>
+	</string>
+	<string id="ui_mm_weapon_heat_ui">
+		<text>Индикатор перегрева</text>
+	</string>
+	<string id="ui_mm_weapon_mags">
+		<text>Патроны и магазины</text>
+	</string>
+    <string id="ui_mm_excl_dist">
+        <text>Радиус запрета спавна</text>
+    </string>
 	<string id="ui_mm_char_portrait">
 		<text>Исходный портрет</text>
 	</string>
@@ -494,10 +540,10 @@
 		<text>Портрет в костюме</text>
 	</string>
 	<string id="ui_mm_show_enemy_health">
-		<text>Данные о противнике</text>
+		<text>Отряды противника на карте</text>
 	</string>
 	<string id="ui_mm_quicksave_cnt">
-		<text>Быстрое сохранение</text>
+		<text>Кол-во быстрых сохранений</text>
 	</string>
 	<string id="ui_mm_actor_hud">
 		<text>Динамический HUD</text>
@@ -509,7 +555,7 @@
 		<text>Коэф-нт числа сталкеров</text>
 	</string>
 	<string id="ui_mm_hud_fov">
-		<text>Интерфейс</text>
+		<text>FOV интерфейса</text>
 	</string>
 	<string id="ui_mm_fov">
 		<text>Угол обзора</text>
@@ -526,8 +572,17 @@
 	<string id="ui_mm_hardcore_ai_aim">
 		<text>Меткие НПС</text>
 	</string>
+	<string id="ui_mm_dark_mode">
+		<text>Днем фонит радиация</text>
+	</string>
 	<string id="ui_mm_localization">
 		<text>Локализация</text>
+	</string>
+	<string id="ui_mm_only_campfire">
+		<text>Сохранение игры только у костра</text>
+	</string>
+		<string id="ui_mm_switch_distance">
+		<text>Радиус загрузки локации</text>
 	</string>
 	<string id="ui_mm_r__enable_grass_shadow">
 		<text>Тень травы</text>
@@ -535,11 +590,14 @@
 	<string id="ui_mm_cod_pickup_mode">
 		<text>Автоподбор лута</text>
 	</string>
+	<string id="ui_mm_objects_per_update">
+		<text>Фризы: чаще/быстрые-реже/долгие</text>
+	</string>
 	<string id="ui_mm_invert_zoom">
 		<text>Инвертировать зум</text>
 	</string>
 	<string id="ui_mm_detail_scale">
-		<text>Прорисовка травы</text>
+		<text>Размер травы</text>
 	</string>
 	<string id="ui_mm_enhanced_recoil">
 		<text>Усиленная отдача</text>
@@ -559,17 +617,11 @@
 	<string id="ui_mm_multi_loot">
 		<text>Фактор лута</text>
 	</string>
-	<string id="eng">
-		<text>English</text>
-	</string>
-	<string id="rus">
-		<text>Русский</text>
-	</string>
 	<string id="ui_mm_r2_sun_shafts_mode">
-		<text>Тип лучей</text>
+		<text>Солнечные лучи</text>
 	</string>
 	<string id="volumetric">
-		<text>Volumetric</text>
+		<text>Объёмный</text>
 	</string>
 	<string id="screen_space">
 		<text>Размер экрана</text>
@@ -594,5 +646,15 @@
 	</string>
 	<string id="ui_mm_detector_charge">
 		<text>Заряд детекторов</text>
+	</string>
+	<!-- Smurth’s Dynamic HUD -->
+	<string id="ui_mm_day_radiation">
+		<text>Daytime radiation</text>
+	</string>
+	<string id="ui_mm_inventory_radiation">
+		<text>Inventory radiation</text>
+	</string>
+	<string id="ui_mm_sleep_zone_save">
+		<text>Sleep zone save</text>
 	</string>
 </string_table>

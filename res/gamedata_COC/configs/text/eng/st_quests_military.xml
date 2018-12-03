@@ -1,135 +1,315 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+
+<!--===========================================================
+<
+< TEXT  STRINGS FOR TASKS ON MILITARY WAREHOUSES MAP
+<	CoC 1.4.22 - DoctorX Questlines 1.24
+<
+<	Modified by: DoctorX
+<	Translated by: av661194
+<	Last revised: February 16, 2017
+<
+<===========================================================-->
+
 <string_table>
-	<!-- FIND MUTANT MEAT FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_name">
-		<text>Procure "%s"</text>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Default Storyline Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_name">
+		<text>Получить следующее задание</text>
 	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_text">
-		<text>Field dress freshly dead mutants to collect game meat. Then deliver %s to Skinflint in the Military Warehouse base camp.</text>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_text">
+		<text>Получите следующее задание.</text>
 	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_about">
-		<text>I have just the job for you, man, if you are not afraid of a few mutants. Are you interested?</text>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_about">
+		<text>Я хочу, чтобы ты встретился кое с кем. Он не мой друг, но ему может понадобится твоя помощь.</text>
 	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_fetch_about">
-		<text>Some of the guys bring me back a kill or two every now and again. But it's been slow lately - So if you aren't too busy and you are out and about, I need %s. Our cook kills and processes the meat, right here in the kitchen.</text>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_finish">
+		<text>Удачи, сталкер.</text>
 	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_fetch_finish">
-		<text>Great, you are a good hunter! I have payment for you.</text>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Assassination Storyline Task- -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_name">
+		<text>Убийство для Лукаша</text>
 	</string>
-	<!-- STOP ENEMY ASSAULT FOR FREEDOM TASK -->
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_text">
+		<text>Лукаш дал задание на заказное убийство.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_about">
+		<text>Эй, я рад, что ты пришел. Нужно кое-что сделать для меня. Надо устранить нашего врага. Он опасен.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_finish">
+		<text>Благодарю.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Freedom Assault on Monolith Storyline Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_name">
+		<text>«Свобода» против «Монолита»</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_text">
+		<text>Лукаш попросил провести отряд «Свободы» для нападения на «Монолит».</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_about">
+		<text>Силы «Монолита» смогли прорвать нашу оборону. Я хочу окончательно покончить с ними. Возьми штурмовой отряд, и возглавь его в рейде на территорию «Монолита».</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_finish">
+		<text>Отличная работа.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Search Lab X-8 (Outskirts) Storyline Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_name">
+		<text>Исследование X-8</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_text">
+		<text>Обследовать лабораторию X-8 в поисках следов членов группировки «Чистое Небо».</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_about">
+		<text>Я получил информацию, что бывшие члены «Чистого Неба» некоторое время назад, возможно, работали в лаборатории X-8 в Припяти. Нужно исследовать саму лабораторию и принести любые документы, которые там ещё остались.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_finish">
+		<text>Хорошо. Отличная работа.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- CHANGE FACTIONS TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Payoff Change Factions Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_name">
+		<text>Добыть деньги для вступления в «Свободу»</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_text">
+		<text>Лукаш хочет 15000 за право вступить в «Свободу».</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_about">
+		<text>А, хорошо. Ты не пожалеешь, что пришёл в «Свободу». Просто заплати 15000 - и ты с нами.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_finish">
+		<text>Добро пожаловать в «Свободу»!</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DYNAMIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Stop Enemy Assault Task -->
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_name">
-		<text>Repel enemy assault</text>
+		<text>Уничтожить противника.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_text">
-		<text>Intercept the assault squad closing in on a Freedom camp. Report back to Lukash once you have cleared the area.</text>
+		<text>Необходимо уничтожить отряд противника в указанной точке и доложить о выполнении.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_about">
-		<text>Forces hostile to Freedom are moving in on one of our camps. I need someone capable to repel the incursion. Are you the man for the job?</text>
+		<text>Мне тут шепнули, что на лагерь наш атака готовится. Надо бы пришить супостатов до того, как они на нас нападут. Сделаешь?</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_finish">
-		<text>The task is done? Good.</text>
+		<text>Выполнил? Молодец.</text>
 	</string>
-	<!-- RECAPTURE TERRITORY FOR FREEDOM TASK -->
+
+
+
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_name">
-		<text>Recapture territory for Freedom</text>
+		<text>Отвоевать территорию</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_text">
-		<text>You have been tasked to recapture a faction territory. Report back to Lukash after the job is done.</text>
+		<text>Необходимо отвоевать территорию группировки и доложить о выполнении.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_about">
-		<text>I have an important mission if you are willing. Duty has taken over one of our camps and I need an infiltrator to reclaim it.</text>
+		<text>Есть одна миссия. «Должники», чтоб им пусто было, всё не унимаются: патрули наши обстреливают, на блокпосты нападают. Вот на днях лагерь наш захапали. Некрасиво это, понимаешь? Надо бы проучить этих засранцев, пока они в открытую на нас не поперли.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_finish">
-		<text>Excellent. Well done.</text>
+		<text>Сделал? Молодец, чувак.</text>
 	</string>
-	<!-- ASSASSINATE MONOLITH FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_name">
-		<text>Assassinate target</text>
+
+
+
+
+        <string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_name">
+		<text>Убить монолитовца</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_text">
-		<text>Lukash has tasked you with finding and eliminating an important member of the Monolith.</text>
+		<text>Лукаш дал задание найти и устранить цель.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_about">
-		<text>I have a very dangerous mission. I've asked for volunteers but so far no one has stepped forward. Monolith forces keep breaking through our blockade. I want to take the fight to them for once. I need someone to enter their territory and take out a certain member of their faction to send them a message. What do you think? Are you the biggest daredevil in this camp?</text>
+		<text>Есть одна работа... Опасная, да. Наших сколько не проси - ни в какую не соглашаются, может хоть ты откликнешься. «Монолит» раз за разом продолжает прорываться за наш Барьер, мы уже едва сдерживаем эти бесконечные толпы фанатиков, прущие напролом. Но у меня есть идея, как прекратить эти прорывы хотя бы на время. Нужен кто-то, кто сможет пробраться на их территорию и убрать определенного члена группировки, чтобы слегка поубавить им боевой дух. Что скажешь? Остались ещё в Зоне храбрецы?</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_finish">
-		<text>Ah, you survived! Man, you've got a set on you. Great job.</text>
+		<text>Отлично! Вот - то, что я обещал:</text>
 	</string>
+
+
 	<!-- ASSASSINATE DUTY FOR FREEDOM TASK -->
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_name">
-		<text>Assassinate target</text>
+		<text>Смерть предателям</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_text">
-		<text>Lukash has tasked you with finding and eliminating a target.</text>
+		<text>Лукаш просил найти и устранить предателя.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_about">
-		<text>There is a certain individual who has been very loud in his opposition to Freedom and needs to be quieted. Are you any good at shutting people up?</text>
+		<text>Один сталкер, бывший «свободовец», который знал много чего о важных объектах в Припяти, недавно переметнулся на сторону «Долга». Нужно прикончить его, пока он не наболтал лишнего.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_finish">
-		<text>Great! You do us proud. Here is what I promised:</text>
+		<text>Хорошо! Ты здорово помог нам. Вот - то, что я обещал:</text>
 	</string>
+
+
 	<!-- FIND WEAPON FOR FREEDOM TASK -->
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_name">
-		<text>Find "%s"</text>
+		<text>%s для Лукаша</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_text">
-		<text>Lukash has asked you to find a specific firearm in mint condition. Return to him when you find what he is looking for.</text>
+		<text>%s. Лукаш попросил найти в безупречном состоянии. Возвратитесь к нему, когда найдёте.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_about">
-		<text>With Duty to the south of us and Monolith to the north, we are cut off. Our weaponry is wearing out and we need replacements. Have you ever done any gun running?</text>
+		<text>«Долг» к югу от нас, с севера пути перекрывает «Монолит». Мы буквально отрезаны от наших поставщиков. Оружие изнашивается, а нам нужно где-то брать новое. Поможешь с этим?</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_fetch_about">
-		<text>We could really use a new %s. If you can find us one in great condition I would be willing to pay a good price for it.</text>
+		<text>«Долг» к югу от нас, с севера пути перекрывает «Монолит». Мы буквально отрезаны от наших поставщиков. Оружие изнашивается, а нам нужно где-то брать новое. Поможешь с этим? %s - то, что сейчас нужно. Если ты сможешь найти такое оружие в отличном состоянии - я хорошо заплачу.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_fetch_finish">
-		<text>Well done. This will go a long way in helping us defend the Zone. Here is the payment I promised.</text>
+		<text>Спасибо за ствол. Вот платеж, как я и обещал.</text>
 	</string>
-	<!-- FIND LEVEL 1 TOOLS FOR SCREW TASK -->
+
+	<!-- FIND MUTANT MEAT FOR FREEDOM TASK -->
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_name">
+		<text>Охота на дичь</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_text">
+		<text>%s - это необходимо доставить Скряге, чтобы «Свободе» было чем кормить бойцов.</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_about">
+		<text>Да, чувак, есть для тебя одно дельце. Времена нынче голодные, сам понимаешь. Нормальной еды не найдёшь, а бойцов кормить чем-то надо. Бывает, конечно, иногда чуваки приносят пару-тройку плотей или кабанов, но в последнее время что-то всё меньше желающих за мясом ходить. Подсоби, а? Пока мы тут совсем с голоду не померли.</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_fetch_about">
+		<text>Спасибо, мэн. %s принеси, а Повар наш уж что-нибудь из этого сообразит.</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_fetch_finish">
+		<text>Спасибо, чувак, ну выручил! Вот, держи, чем богат.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Skinflint (Freedom Mechanic) Deliver Equipment Dynamic Task -->
+
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_name">
+		<text>Поставка оборудования для Скряги</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_text">
+		<text>Доставить оборудование для Скряги.</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_about">
+		<text>Нужно забрать и доставить мне одну посылку.</text>
+	</string>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_finish">
+		<text>Спасибо, сталкер!</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- MECHANIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Screw (Freedom Mechanic) Find Level 1 Toolkit Task -->
+
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_name">
-		<text>Find "%s"</text>
+		<text>Найти Шурупу %s</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_text">
-		<text>%s are required by Screw to install basic equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Нужно принести Шурупу %s, чтобы он мог проводить более серьёзную модернизацию оружия или бронежилета.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_about">
-		<text>Yo, man. Are you interested in doing a job for me? I need specific tools to operate on weapons.</text>
+		<text>О, тебе работа нужна? Принеси мне кое-какие инструменты, а я тебя отблагодарю как положено. Сделаешь?</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_fetch_about">
-		<text>Good, I need a %s. I will pay you if you can bring a set back to me.</text>
+		<text>О, тебе работа нужна? Принеси мне кое-какие инструменты, а я тебя отблагодарю как положено. Сделаешь? Хорошо, мне нужны %s. Я даже денег тебе отвалю, если достать сможешь.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_fetch_finish">
-		<text>Thanks, man! I knew there was a reason I asked you. You look like a man who can get shit done.</text>
+		<text>Спасибо, мэн! Я знал, что ты справишься! Сразу видно - надёжный человек.</text>
 	</string>
-	<!-- FIND LEVEL 2 TOOLS FOR SCREW TASK -->
+
+
+
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_name">
-		<text>Find "%s"</text>
+		<text>Найти Шурупу %s</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_text">
-		<text>%s are required by Screw to install advanced equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Нужно принести Шурупу %s, чтобы он мог проводить более серьёзную модернизацию оружия или бронежилета.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_about">
-		<text>Haha, I hate to ask. But I could really use more tools. You brought me what I have asked last time but I need a higher quality set. Can you help out again?</text>
+		<text>Да, работа найдётся. Я не очень-то люблю что-то выпрашивать, но мне нужны ещё инструменты. Не, чувак, ты не подумай, тот набор, что ты притащил, просто отпадный, но в нём нет кое-каких хреновин. Сможешь достать набор получше?</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_fetch_about">
-		<text>I need a set of advanced tools. It should contain what I need. If you can bring some back for me I will be grateful, I will even offer you a discount from here on out.</text>
+		<text>Да, работа найдётся. Я не очень-то люблю что-то выпрашивать, но мне нужны ещё инструменты. Не, чувак, ты не подумай, тот набор, что ты притащил, просто отпадный, но в нём нет кое-каких хреновин. Сможешь достать набор получше? Я знаю, что ты не откажешь! Мне нужен набор для тонкой работы. С ним-то я смогу сделать если не всё, то многое. Загляни, как найдешь.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_fetch_finish">
-		<text>You keep this shit up, everyone around here is going to love you. Thanks, man.</text>
+		<text>Офигенно, чувак! Теперь все здесь будут знать: на тебя таки можно положиться! Спасибо, мэн.</text>
 	</string>
-	<!-- FIND LEVEL 3 TOOLS FOR SCREW TASK -->
+
+
+
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_name">
-		<text>Find "%s"</text>
+		<text>Найти Шурупу %s</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_text">
-		<text>%s are required by Screw to install expert equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Нужно принести Шурупу %s, чтобы он мог проводить ещё более серьёзную модернизацию оружия или бронежилета.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_about">
-		<text>Haha, I hate to ask. But I could really use more tools. You brought me what I have asked last time but I need a higher quality set. Can you help out again?</text>
+		<text>Хех, я не очень-то люблю что-то выпрашивать, но мне бы не помешали ещё инструменты. Не, чувак, ты не подумай, ты притащил просто офигительный набор, но в нём, как назло, кое-чего нет. Сможешь достать набор получше?</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_fetch_about">
-		<text>I need a set of expert tools. It should contain what I need. If you can bring some back for me I will be grateful, I will even offer you a discount from here on out.</text>
+		<text>Хех, я не очень-то люблю что-то выпрашивать, но мне бы не помешали ещё инструменты. Не, чувак, ты не подумай, ты притащил просто офигительный набор, но в нём, как назло, кое-чего нет. Сможешь достать набор получше? Я знаю, что ты не откажешь! Мне нужен набор для калибровки. С ним-то я смогу сделать всё, что угодно. Загляни, как найдешь.</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_fetch_finish">
-		<text>You keep this shit up, everyone around here is going to love you. Thanks, man.</text>
+		<text>Спасибо. Ты реально свой мэн!</text>
 	</string>
+
+
+
 </string_table>

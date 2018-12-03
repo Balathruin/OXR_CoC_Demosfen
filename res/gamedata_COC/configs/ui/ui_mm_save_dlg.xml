@@ -1,7 +1,7 @@
 <w>
 	<background width="1024" height="768">
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
 		</auto_static>
 	</background>
 	<file_item>

@@ -1,15 +1,13 @@
 [smart_terrain]
 def_restr = jup_a6_sr_noweap
 safe_restr = jup_a6_sr_light
+smart_control = smart_control
 squad_id = 4
 max_population = 6
 respawn_params = respawn@jup_a6   
 ;arrive_dist = 75
-respawn_idle = 86400
-ignore_zone = jup_a6_sr_light
-;alarm_start_sound = jup_a6_base_alarm
-;alarm_stop_sound = jup_a6_base_relax
-
+respawn_idle = 60000
+ 
 [respawn@jup_a6]
 spawn_stalker@advanced
 spawn_stalker@master
@@ -22,8 +20,17 @@ spawn_num = {+bar_deactivate_radar_done} 2, 0
 spawn_squads = stalker_sim_squad_veteran, freedom_sim_squad_veteran
 spawn_num = {+bar_deactivate_radar_done} 2, 0
 
+[smart_control]
+noweap_zone = jup_a6_sr_noweap
+ignore_zone = jup_a6_sr_light
+alarm_start_sound = jup_a6_base_alarm
+alarm_stop_sound = jup_a6_base_relax
+
 [exclusive]
 ; still exists in CoC
+;mlr
+jup_b43_stalker_assistant_yanov1 = jupiter\jup_b43_stalker_assistant1.ltx
+;mlr
 jup_a6_freedom_leader = jupiter\jup_a6_freedom_leader.ltx
 jup_a6_important_npc_1 = jupiter\jup_a6_freedom_trader_ashot.ltx
 jup_b217_stalker_tech = jupiter\jup_b217_stalker_tech.ltx

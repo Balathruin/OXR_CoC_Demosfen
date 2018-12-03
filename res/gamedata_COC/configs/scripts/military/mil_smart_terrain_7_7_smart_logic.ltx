@@ -4,6 +4,7 @@ suitable = {=check_npc_name(mil_smart_terrain_7_7_freedom_mechanic_stalker)} tru
 prior = 200
 active = animpoint@stand
 level_spot = mechanic
+can_select_weapon = false
 
 [animpoint@stand]
 cover_name = mil_smart_terrain_7_7_freedom_mechanic_smart_cover
@@ -46,6 +47,11 @@ corpse_detection_enabled = false
 gather_items_enabled = false
 help_wounded_enabled = false
 use_camp = false
+on_game_timer = 3500 | animpoint@smoke
+
+[animpoint@smoke]:animpoint@mil_freedom_leader
+avail_animations = smoking_stand
+on_game_timer = 1300 | animpoint@mil_freedom_leader
 
 [meet@stand_base]
 close_snd_hello = jup_a6_freedom_leader_greeting

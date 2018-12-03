@@ -22,14 +22,25 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>yan_stalker_sakharov_start</start_dialog>
+	<!-- mlr -->
+    <actor_dialog>baraholka_trader_task_sacharov_talk</actor_dialog>
+	<!-- mlr -->
+
+
+
+    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+
     <actor_dialog>yan_stalker_sakharov_about_brain_scorcher</actor_dialog>
     <actor_dialog>yan_stalker_sakharov_bad_psi_helmet</actor_dialog>
     <actor_dialog>yan_stalker_sakharov_good_psi_helmet</actor_dialog>
     <actor_dialog>yan_stalker_sakharov_upgrade_psi_helmet</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
+
+    <actor_dialog>saxarov_minigame</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
+		<!-- g0dl1ke -->
+		<actor_dialog>svarog_1_dialog</actor_dialog>
     </specific_character>
     
     <!-- KRUGLOV -->
@@ -39,18 +50,18 @@
     <map_icon x="0" y="6"></map_icon>
     <bio>yan_kruglov_bio</bio>
     <class>yan_ecolog_kruglov</class>
-    <community>ecolog</community>
+    <community>trader</community>
 	<terrain_sect>stalker_terrain</terrain_sect>
 	<mechanic_mode>1</mechanic_mode>
     <money min="2000" max="5000" infinitive="0"></money>
     <rank>4142</rank>
-    <reputation>303</reputation>
+    <reputation>-603</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <crouch_type>1</crouch_type>
     <supplies>
         [spawn] \n
-        wpn_protecta \n
+        wpn_vepr \n
         ammo_12x76_zhekan = 2 \n
         wpn_walther \n
         ammo_9x19_fmj \n
@@ -58,6 +69,7 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>yan_ecolog_kruglov_start_dialog</start_dialog>
+    <actor_dialog>dm_add_repair</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
@@ -82,7 +94,7 @@
     <crouch_type>1</crouch_type>
     <supplies>
         [spawn] \n
-        wpn_protecta \n
+        wpn_vepr \n
         ammo_12x76_zhekan = 2 \n
         wpn_walther \n
         ammo_9x19_fmj \n
@@ -99,10 +111,9 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     
-    <!-- CHERENKOV -->
-	<!-- TECHNICALLY VASILYEV IN ALL CONFIGS, BUT HE'S DEAD IN LORE SO IS RENAMED-->
+    <!-- VASILYEV -->
     <specific_character id="yan_ecolog_vasilyev" team_default = "1">
-    <name>yan_cherenkov_name</name>
+    <name>yan_vasilyev_name</name>
     <icon>ui_inGame2_ecolog_orange</icon>
     <map_icon x="0" y="6"></map_icon>
     <bio>yan_vasilyev_bio</bio>
@@ -115,7 +126,7 @@
     <crouch_type>1</crouch_type>
     <supplies>
         [spawn] \n
-        wpn_protecta \n
+        wpn_vepr \n
         ammo_12x76_zhekan = 2 \n
         wpn_walther \n
         ammo_9x19_fmj \n
@@ -170,19 +181,20 @@
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
         [spawn] \n
-        wpn_l85 \n
+        wpn_m16 \n
         ammo_5.56x45_ap  = 1 \n
-        wpn_sig220 \n
+        wpn_colt1911 \n
         ammo_11.43x23_fmj  = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
     <start_dialog>yan_merc_guards_start</start_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+  
     <specific_character id="yan_merc_03" team_default = "1">
     <name>yan_merc_03</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -202,13 +214,14 @@
         ammo_5.56x45_ap  = 1 \n
         wpn_sig220 \n
         ammo_11.43x23_fmj  = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
     <start_dialog>yan_merc_guards_start</start_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="yan_ghost" team_default = "1">

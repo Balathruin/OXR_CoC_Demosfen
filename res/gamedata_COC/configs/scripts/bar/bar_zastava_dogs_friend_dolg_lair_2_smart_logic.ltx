@@ -1,0 +1,124 @@
+;------------------------------
+;------- Mutant swarm ----------
+;------------------------------
+
+[hit]
+on_info = {+bar_zastava_minigunner_dead}
+on_info1 = {+actor_enemy}
+
+
+;************************************************************************************************
+[mob_walker@dog_friend_dolg_okay_def]
+gulag_point = true
+home_min_radius = 5
+home_mid_radius = 10
+home_max_radius = 20
+panic = 0
+actor_friendly = true
+npc_friendly = false
+aggressive = false
+
+;************************************************************************************************
+[mob_walker@dog_friend_dolg_no_okay_def]
+gulag_point = true
+home_min_radius = 5
+home_mid_radius = 10
+home_max_radius = 20
+aggressive = true
+panic = 0
+actor_friendly = false
+npc_friendly = false
+
+;************************************************************************************************
+
+[remark@zone1]
+path_walk = dogs_agr_1_walk
+path_look = dogs_agr_1_look
+anim = stand_growl_idle_0
+snd = monsters\dog\bdog_groan_0
+no_reset = true
+
+[remark@zone2]
+path_walk = dogs_agr_2_walk
+path_look = dogs_agr_2_look
+anim = stand_growl_idle_0
+snd = monsters\dog\bdog_growl_2
+no_reset = true
+
+[remark@zone3]
+path_walk = dogs_agr_3_walk
+path_look = dogs_agr_3_look
+anim = stand_threaten_0
+snd = monsters\dog\bdog_panic_1
+no_reset = true
+
+[remark@zone4]
+path_walk = dogs_agr_4_walk
+path_look = dogs_agr_4_look
+anim = stand_threaten_0
+snd = monsters\dog\bdog_attack_2
+no_reset = true
+
+;************************************************************************************************
+
+[logic@faction_base_defense_enemy1]
+active = mob_walker@faction_base_defense_enemy1
+suitable = {=target_squad_name(simulation_dog_friend_dolg_2)} true
+monster_job = false
+prior = 300
+
+[mob_walker@faction_base_defense_enemy1]:mob_walker@dog_friend_dolg_okay_def
+path_walk = walker_1_walk
+path_look = walker_1_look
+on_info =  {=actor_in_zone(actor_in_bar)} remark@zone1
+on_hit = hit
+
+
+;************************************************************************************************bar_zastava_dogs_friend_dolg_lair_2_home_attackers
+
+[logic@faction_base_defense_enemy2]
+active = mob_walker@faction_base_defense_enemy2
+suitable = {=target_squad_name(simulation_dog_friend_dolg_2)} true
+monster_job = false
+prior = 200
+
+[mob_walker@faction_base_defense_enemy2]:mob_walker@dog_friend_dolg_okay_def
+path_walk = walker_2_walk
+path_look = walker_2_look
+on_info =  {=actor_in_zone(actor_in_bar)} remark@zone2
+on_hit = hit
+
+;************************************************************************************************
+
+[logic@faction_base_defense_enemy3]
+active = mob_walker@faction_base_defense_enemy3
+suitable = {=target_squad_name(simulation_dog_friend_dolg_2)} true
+monster_job = false
+prior = 300
+
+[mob_walker@faction_base_defense_enemy3]:mob_walker@dog_friend_dolg_okay_def
+path_walk = walker_3_walk
+path_look = walker_3_look
+on_info =  {=actor_in_zone(actor_in_bar)} remark@zone3
+on_hit = hit
+
+;************************************************************************************************
+
+[logic@faction_base_defense_enemy4]
+active = mob_walker@faction_base_defense_enemy4
+suitable = {=target_squad_name(simulation_dog_friend_dolg_2)} true
+monster_job = false
+prior = 200
+
+[mob_walker@faction_base_defense_enemy4]:mob_walker@dog_friend_dolg_okay_def
+path_walk = walker_4_walk
+path_look = walker_4_look
+on_info =  {=actor_in_zone(actor_in_bar)} remark@zone4
+on_hit = hit
+
+;************************************************************************************************
+
+
+;**path_home = home_attackers
+
+

@@ -3,6 +3,9 @@
 	<string id="st_ignite_fire">
 		<text>Ignite ($$ACTION_USE$$)</text>
 	</string>
+	<string id="st_use_fire">
+		<text>Используйте набор для розжига</text>
+	</string>
 	<string id="st_extinguish_fire">
 		<text>Extinguish ($$ACTION_USE$$)</text>
 	</string>
@@ -198,6 +201,10 @@
 	<string id="st_radiation_danger">
 		<text>Dangerous radiation levels. Protection required to go further.</text>
 	</string>
+	<string id="st_health_danger"> 
+		<text>Критический уровень здоровья! Примите аптечку!</text>
+	</string>
+	<!---->
 	<string id="st_search_helicopter">
 		<text>Examine helicopter ($$ACTION_USE$$)</text>
 	</string>
@@ -309,6 +316,27 @@
 	<string id="tips_rad_switcher_press">
 		<text>Turn off the Brain Scorcher ($$ACTION_USE$$)</text>
 	</string>
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TIP TEXT  STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Activate BrainScorcher Switch Tip -->
+
+	<string id="drx_sl_tips_rad_switcher_press">
+		<text>Включить Выжигатель Мозгов ($$ACTION_USE$$)</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 	<string id="st_make_a_wish">
 		<text>Make a wish ($$ACTION_USE$$)</text>
 	</string>

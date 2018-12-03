@@ -1,125 +1,188 @@
 [up_sect_firsta_abakan]
-cost		      		= 800
+;Отдача(1)-10%
+;------------
+cost		      		= 700
 value					= -10
 
-cam_dispersion              = -0.07
-cam_step_angle_horz        	= -0.07
+cam_dispersion              = -0.07		;0.5
+cam_dispersion_inc         	= -0.03		;0.5
+cam_step_angle_horz        	= -0.07		;1.5 [0.73 в остатке]
+
+zoom_cam_dispersion         = -0.09		;0.5 [0.093 в остатке]
+zoom_cam_dispersion_inc     = -0.045		;0.5
+zoom_cam_step_angle_horz    = -0.09 	;1.0 [0.505 в остатке]
 
 [up_sect_firstc_abakan]
-cost		      		= 1600
+;Надежность(2)15%
+;---------------
+cost		      		= 1050
 value					= +15
 
-fire_dispersion_condition_factor    = -0.8
-condition_queue_shot_dec	= -0.0001
-condition_shot_dec      	= -0.0001
-misfire_start_prob	     	= -0.001
-misfire_end_prob	     	= -0.01
+;увеличение дисперсии в процентах при максимальном износе
+fire_dispersion_condition_factor    = -0.5 ;15
+;увеличение изношености при выстреле очередью
+condition_queue_shot_dec	= -0.0001 ;0.0013
+;увеличение изношености при одиночном выстреле
+condition_shot_dec      	= -0.0001 ;0.0011
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= -0.0015
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= -0.02 ;0.03
 
 [up_sect_firste_abakan]
-cost		      		= 3200
+;Скорострельность(3)25%
+;----------------------
+cost		      		= 1300
 value					= +25
 
-rpm                     = +100
+rpm                     = +125 ;650
+
 
 [up_sect_firstf_abakan]
-cost		      		= 3200
+;Отдача(3)-30%
+;------------
+cost		      		= 1300
 value					= -30
 
-cam_dispersion              = -0.21
-cam_step_angle_horz        	= -0.21
+cam_dispersion              = -0.3		;0.1
+cam_dispersion_inc         	= -0.1		;0.6
+cam_step_angle_horz        	= -0.15		;0.6
+
+zoom_cam_dispersion          = -0.27	;0.1
+zoom_cam_dispersion_inc      = -0.11	;0.5
+zoom_cam_step_angle_horz     = -0.16	;0.5
 
 [up_sect_secona_abakan]
-cost		      		= 800
+;Настильность(1)10%
+;------------------
+cost		      		= 700
 value					= +10
-bullet_speed			= +45
-fire_dispersion_base    = -0.005
+bullet_speed			= +50 ;550
+fire_dispersion_base    = -0.01 
 
 [up_sect_seconc_abakan]
-cost		      		= 1600
+;Точность(2)20%
+;---------------
+cost		      		= 1050
 value					= +20
 
-fire_dispersion_base    = -0.05
-fire_dispersion_condition_factor    = -0.25
+fire_dispersion_base    = -0.06 ;0.07
+fire_dispersion_condition_factor    = -0.25 ;15
 
 [up_sect_second_abakan]
-cost		      		= 1600
+;Скорострельность(2)15%
+;----------------------
+cost		      		= 1050
 value					= +15
 
-rpm                     = +70
+rpm                     = +90 ;650
+
 
 [up_sect_secone_abakan]
-cost		      		= 3200
+;Настильность(3)30%
+;------------------
+cost		      		= 1300
 value					= +30
 
-bullet_speed			= +90
-fire_dispersion_base    = -0.015
+bullet_speed			= +90 ;550
+fire_dispersion_base    = -0.03 
 
 [up_sect_thirda_abakan]
-cost		      		= 800
+;Надежность(1)10%
+;---------------
+cost		      		= 700
 value					= +10
 
-fire_dispersion_condition_factor    = -0.4
-condition_queue_shot_dec	= -0.00005
-condition_shot_dec      	= -0.00005
-misfire_start_prob	     	= -0.0005
-misfire_end_prob	     	= -0.005
+;увеличение дисперсии в процентах при максимальном износе
+fire_dispersion_condition_factor    = -0.25 ;15
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= -0.001
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= -0.01 ;0.03
 
 [up_sect_thirdc_abakan]
-cost		      		= 1600
+;Настильность(2)20%
+;------------------
+cost		      		= 1050
 value					= +20
-bullet_speed			= +65
-fire_dispersion_base    = -0.01
+bullet_speed			= +70 ;550
+fire_dispersion_base    = -0.02 
 
 [up_sect_thirdd_abakan]
-cost		      		= 1600
+;Отдача(2)-20%
+;------------
+cost	      	     	= 1050
 value					= -20
 
-cam_dispersion              = -0.14
-cam_step_angle_horz        	= -0.14
+cam_dispersion              = -0.16		;0.1
+cam_dispersion_inc         	= -0.07		;0.6
+cam_step_angle_horz        	= -0.11		;0.6
+
+zoom_cam_dispersion          = -0.18	;0.1
+zoom_cam_dispersion_inc      = -0.08	;0.5
+zoom_cam_step_angle_horz     = -0.13	;0.5
+
 
 [up_sect_thirde_abakan]
-cost		      		= 3200
+;Точность(3)30%
+cost		      		= 1300
 value					= +30
-fire_dispersion_base    = -0.08
-fire_dispersion_condition_factor    = -0.25
+fire_dispersion_base    = -0.09 ;0.07
+fire_dispersion_condition_factor    = -0.25 ;15
 
 [up_sect_fourta_abakan]
-cost		      		= 800
+;Вес
+;------------------
+cost		      		= 700
 value              		= -1
 
-inv_weight              = -1
+inv_weight              = -1 ;3.6
+
+crosshair_inertion		   = -0.5
+ 
+PDM_disp_base 				= -0.05 ;0.5
+PDM_disp_vel_factor 		= -0.1 ;1.5
+PDM_disp_accel_factor 		= -0.1 ;1.5
 
 [up_sect_fourtc_abakan]
-cost		      		= 1600
+;Удобство(2)15%
+;--------------
+cost		      		= 1050
 value					= +15
 
-crosshair_inertion		   = -0.8
+crosshair_inertion		   = -0.5
  
-PDM_disp_vel_factor 		= -0.42
-PDM_disp_accel_factor 		= -0.42
+PDM_disp_base 				= -0.1 ;0.5
+PDM_disp_vel_factor 		= -0.33 ;1.5
+PDM_disp_accel_factor 		= -0.33 ;1.5
 
 [up_sect_fourte_abakan]
-cost		      		= 3200
+;Удобство(3)25%
+;--------------
+cost		      		= 1300
 value					= +25
  
-crosshair_inertion		   = -1.2
+crosshair_inertion		   = -0.7
  
-PDM_disp_vel_factor 		= -0.66
-PDM_disp_accel_factor 		= -0.66
+PDM_disp_base 				= -0.12 ;0.5
+PDM_disp_vel_factor 		= -0.42 ;1.5
+PDM_disp_accel_factor 		= -0.42 ;1.5
+
 
 [up_sect_fourtf_abakan]
-cost		      		= 3200
+;Настильность(3)30%
+;------------------
+cost		      		= 1300
 value					= +30
-bullet_speed			= +90
-fire_dispersion_base    = -0.015 
+bullet_speed			= +90 ;550
+fire_dispersion_base    = -0.03 
 
 [up_sect_fiftha_abakan]
-cost		      		= 2500
-grenade_launcher_status    = 2
-grenade_launcher_name   = wpn_addon_grenade_launcher
-grenade_launcher_x      = 126
-grenade_launcher_y      = 24
-
+;Объем магазина +10
+;--------------
+cost		      		= 1000
+value					= +15
+ammo_mag_size        	= 15
 
 [up_firsta_abakan]
 scheme_index            = 0, 0
@@ -209,7 +272,7 @@ scheme_index            = 0, 1
 known                   = 1
 effects                 = up_gr_seconcd_abakan
 section                 = up_sect_secona_abakan
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -272,7 +335,7 @@ scheme_index            = 2, 2
 known                   = 1
 effects                 =
 section                 = up_sect_secone_abakan
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -312,7 +375,7 @@ scheme_index            = 1, 3
 known                   = 1
 effects                 = up_gr_thirdef_abakan
 section                 = up_sect_thirdc_abakan
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -437,7 +500,7 @@ icon                    = ui_inGame2_upgrade_AS96_2_15
 scheme_index            = 2, 5
 effects                 =
 section                 = up_sect_fourtf_abakan
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 known                   = 1
 
@@ -456,14 +519,15 @@ icon                    = ui_inGame2_upgrade_AS96_2_16
 
 [up_fiftha_abakan]
 scheme_index            = 0, 4
+known                   = 1
 effects                 =
 section                 = up_sect_fiftha_abakan
-property                = prop_underbarrel_slot
+property                 = prop_ammo_size 
 
 known                   = 1
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
-precondition_parameter  = a & b
+precondition_parameter  = true
 
 effect_functor          = inventory_upgrades.effect_functor_a
 effect_parameter        = something_here
@@ -471,9 +535,9 @@ effect_parameter        = something_here
 prereq_functor          = inventory_upgrades.prereq_functor_a
 prereq_tooltip_functor  = inventory_upgrades.prereq_tooltip_functor_a
 prereq_params           = 
-name                    = st_up_add_a3_name
-description             = st_up_add_a3_descr
-icon                    = ui_inGame2_upgrade_AS96_2_17
+name                    = st_up_add_a4_name
+description             = st_up_add_a4_descr
+icon                    = ui_inGame2_upgrade_AKM_74_2U_16
 
 
 

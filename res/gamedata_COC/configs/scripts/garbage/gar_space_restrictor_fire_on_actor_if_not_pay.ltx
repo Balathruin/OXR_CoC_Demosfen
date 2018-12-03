@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@fire
+
+[sr_idle@fire]
+on_info = {=actor_community(actor_zombied)} nil
+on_info2 = {=actor_community(actor_bandit)} nil
+on_info3 = {=actor_community(actor_monolith)} nil
+on_info4 = {=actor_community(actor_killer)} nil
+on_info5 = {=actor_community(actor_freedom)} nil
+on_info6 = {=actor_community(actor_dolg)} nil
+on_info7 = {+gar_smart_terrain_5_4_main_dolg_soldier_squad_nil} nil
+on_actor_inside = {=actor_on_level(l02_garbage) -pay_or_go_away_gar_oupost_talk} %=dec_faction_goodwill_to_actor(dolg:5000)%

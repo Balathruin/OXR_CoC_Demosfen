@@ -11,15 +11,57 @@
 #include "upgrade_infos\jup_b6_scientist_tech_upgr.ltx"
 #include "upgrade_infos\m_lesnik_upgr.ltx"
 #include "upgrade_infos\yan_ecolog_kruglov_upgr.ltx"
+;mlr
+#include "upgrade_infos\esc_factory_smart_terrain_10_bandit_mechanic_upgr.ltx"
+#include "upgrade_infos\bandit_tech_gar_hangr_mlr_upgr.ltx"
+#include "upgrade_infos\zat_stancia_mech_merc_upgr.ltx"
+#include "upgrade_infos\jup_cont_mech_bandit_upgr.ltx"
+#include "upgrade_infos\army_south_mechan_mlr_upgr.ltx"
+#include "upgrade_infos\trucks_cemetery_bandit_mechanic_upgr.ltx"
+#include "upgrade_infos\mechanic_monolith_kbo_upgr.ltx"
+#include "upgrade_infos\mechanic_monolith_jup_depo_upgr.ltx"
+#include "upgrade_infos\jup_b19_freedom_yar_upgr.ltx"
+;#include "upgrade_infos\mechanic_army_yan_mlr_upgr.ltx"
+
+[esc_factory_smart_terrain_10_bandit_mechanic]
+discount_condlist = {+esc_factory_smart_terrain_10_bandit_mechanic_first_meet_angry} %=mech_discount(6)%, {+esc_factory_smart_terrain_10_bandit_mechanic_first_meet_angry +esc_factory_smart_terrain_10_bandit_mechanic_upgrade_tier_2} %=mech_discount(5.2)%, {+esc_factory_smart_terrain_10_bandit_mechanic_first_meet_angry +esc_factory_smart_terrain_10_bandit_mechanic_upgrade_tier_1} %=mech_discount(5.8)%, {-esc_factory_smart_terrain_10_bandit_mechanic_first_meet_angry +esc_factory_smart_terrain_10_bandit_mechanic_upgrade_tier_2} %=mech_discount(3)%, {-esc_factory_smart_terrain_10_bandit_mechanic_first_meet_angry +esc_factory_smart_terrain_10_bandit_mechanic_upgrade_tier_1} %=mech_discount(3.7)%, %=mech_discount(4)%
+
+[bandit_tech_gar_hangr_mlr]
+discount_condlist = {+bandit_tech_gar_hangr_mlr_upgrade_tier_2} %=mech_discount(2.1)%, {+bandit_tech_gar_hangr_mlr_upgrade_tier_1} %=mech_discount(2.6)%, %=mech_discount(3)%
+
+[jup_b19_freedom_yar]
+discount_condlist = {+jup_b19_freedom_yar_upgrade_tier_3} %=mech_discount(2.1)%, {+jup_b19_freedom_yar_upgrade_tier_2} %=mech_discount(2.4)%, {+jup_b19_freedom_yar_upgrade_tier_1} %=mech_discount(2.7)%, %=mech_discount(3)%
+
+[mechanic_army_yan_mlr]
+discount_condlist = %=mech_discount(5)%
+
+[jup_cont_mech_bandit]
+discount_condlist = {+jup_cont_mech_bandit_upgrade_tier_2} %=mech_discount(1.9)%, {+jup_cont_mech_bandit_upgrade_tier_1} %=mech_discount(2)%, %=mech_discount(2.5)%
+
+[zat_stancia_mech_merc]
+discount_condlist = {+zat_stancia_mech_merc_upgrade_tier_2} %=mech_discount(1.9)%, {+zat_stancia_mech_merc_upgrade_tier_1} %=mech_discount(2.1)%, %=mech_discount(2.5)%
+
+[army_south_mechan_mlr]
+discount_condlist = {+army_south_mechan_mlr_upgrade_tier_2} %=mech_discount(1.88)%, {+army_south_mechan_mlr_upgrade_tier_1} %=mech_discount(1.92)%, %=mech_discount(2)%
+
+[mechanic_monolith_kbo]
+discount_condlist = {+mechanic_monolith_kbo_upgrade_tier_2} %=mech_discount(1.9)%, {+mechanic_monolith_kbo_upgrade_tier_1} %=mech_discount(1.95)%, %=mech_discount(2)%
+
+[mechanic_monolith_jup_depo]
+discount_condlist = {+mechanic_monolith_jup_depo_upgrade_tier_2} %=mech_discount(1.9)%, {+mechanic_monolith_jup_depo_upgrade_tier_1} %=mech_discount(1.95)%, %=mech_discount(2)%
+
+[trucks_cemetery_bandit_mechanic]
+discount_condlist = {+trucks_cemetery_bandit_mechanic_upgrade_tier_2} %=mech_discount(1.8)%, {+trucks_cemetery_bandit_mechanic_upgrade_tier_1} %=mech_discount(1.85)%, %=mech_discount(2)%
+;mlr
 
 [zat_a2_stalker_mechanic]
-discount_condlist = {+zat_b3_tech_discount_2} %=mech_discount(1.8)%, {+zat_b3_tech_discount_1} %=mech_discount(1.9)%, %=mech_discount(2)%
+discount_condlist = %=mech_discount(3.2)%
 
 [bar_visitors_stalker_mechanic]
 discount_condlist = {+bar_visitors_stalker_mechanic_upgrade_tier_2} %=mech_discount(1.9)%, {+bar_visitors_stalker_mechanic_upgrade_tier_1} %=mech_discount(1.95)%, %=mech_discount(2)%
 
 [jup_b217_stalker_tech]
-discount_condlist = {+jup_b217_stalker_tech_upgrade_tier_2} %=mech_discount(1.9)%, {+jup_b217_stalker_tech_upgrade_tier_1} %=mech_discount(1.95)%, %=mech_discount(2)%
+discount_condlist = %=mech_discount(3)%
 
 [jup_b6_scientist_tech]
 discount_condlist = {+jup_b6_scientist_tech_upgrade_tier_2} %=mech_discount(1.9)%, {+jup_b6_scientist_tech_upgrade_tier_1} %=mech_discount(1.9)%, %=mech_discount(2)%
@@ -37,7 +79,7 @@ discount_condlist = {+pri_monolith_monolith_mechanic_stalker_upgrade_tier_2} %=m
 discount_condlist = {+mar_base_stalker_tech_upgrade_tier_2} %=mech_discount(1.9)%, {+mar_base_stalker_tech_upgrade_tier_1} %=mech_discount(1.95)%, %=mech_discount(2)%
 
 [esc_smart_terrain_5_7_loner_mechanic_stalker]
-discount_condlist = {+esc_smart_terrain_5_7_loner_mechanic_stalker_upgrade_tier_2} %=mech_discount(1.9)%, {+esc_smart_terrain_5_7_loner_mechanic_stalker_upgrade_tier_1} %=mech_discount(1.9)%, %=mech_discount(2)%
+discount_condlist = {+esc_smart_terrain_5_7_loner_mechanic_stalker_upgrade_tier_2} %=mech_discount(1.5)%, {+esc_smart_terrain_5_7_loner_mechanic_stalker_upgrade_tier_1} %=mech_discount(1.6)%, %=mech_discount(1.7)%
 
 [mil_smart_terrain_7_7_freedom_mechanic_stalker]
 discount_condlist = {+mil_smart_terrain_7_7_freedom_mechanic_stalker_upgrade_tier_2} %=mech_discount(1.9)%, {+mil_smart_terrain_7_7_freedom_mechanic_stalker_upgrade_tier_1} %=mech_discount(1.95)%, %=mech_discount(2)%

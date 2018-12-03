@@ -1,122 +1,150 @@
 [up_sect_firsta_svu]
-cost		      		= 1500
-value					= +10
+;“очность(1)10%
+;---------------
+cost								= 1500
+value								= +10
 
-fire_dispersion_base    = -0.03
+fire_dispersion_base				= -0.02	;0.15
 
 [up_sect_firstc_svu]
-cost		      		= 3000
-value					= +15
+;Ќадежность(2)15%
+;---------------
+cost								= 2100
+value								= +15
 
-fire_dispersion_condition_factor    = -0.5
-condition_queue_shot_dec	= -0.0002
-condition_shot_dec      	= -0.0002
-misfire_start_prob	     	= -0.001
-misfire_end_prob	     	= -0.01
+fire_dispersion_condition_factor	= -0.15 ;15			;увеличение дисперсии в процентах при максимальном износе
+condition_queue_shot_dec			= -0.001 ;0.0013	;увеличение изношености при выстреле очередью
+condition_shot_dec					= -0.001 ;0.0011	;увеличение изношености при одиночном выстреле
+misfire_start_prob	 				= -0.001			;шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob				 	= -0.01 ;0.03		;шанс осечки при изношености больше чем misfireEndCondition
 
 [up_sect_firste_svu]
-cost		      		= 6000
-value					= +30
-
-bullet_speed			= +100
-fire_dispersion_base    = -0.01
+;Ќастильность(3)30%
+;------------------ 
+cost								= 2700
+value								= +30
+bullet_speed						= +240
+fire_dispersion_base				= -0.03
 
 [up_sect_firstf_svu]
-cost		      		= 6000
-value					= +30
-
-fire_dispersion_base    = -0.07
-fire_dispersion_condition_factor    = -0.35
+;“очность(3)30%
+;---------------
+cost								= 2700
+value								= +30
+fire_dispersion_base				= -0.06	;0.15
+fire_dispersion_condition_factor	= -0.15
 
 [up_sect_secona_svu]
-cost		      		= 1500
-value					= +10
+;Ќадежность(1)10%
+;---------------
+cost								= 1500
+value								= +10
 
-fire_dispersion_condition_factor    = -0.5
-condition_queue_shot_dec	= -0.0001
-condition_shot_dec      	= -0.0001
-misfire_start_prob	     	= -0.0005
-misfire_end_prob	     	= -0.005
+fire_dispersion_condition_factor	= -0.15 ;15			;увеличение дисперсии в процентах при максимальном износе
+condition_queue_shot_dec			= -0.0005 ;0.0013	;увеличение изношености при выстреле очередью
+condition_shot_dec					= -0.0005 ;0.0011	;увеличение изношености при одиночном выстреле
+misfire_start_prob	 				= -0.0005			;шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob				 	= -0.005 ;0.03		;шанс осечки при изношености больше чем misfireEndCondition
 
 [up_sect_seconc_svu]
-cost		      		= 3000
-value					= -20
+;ќтдача(2)20%
+;---------------
+cost								= 2100
+value								= -20
 
-cam_dispersion         = -0.3
-cam_step_angle_horz    = -0.15
+zoom_cam_dispersion					= -0.2		;1.8
+zoom_cam_dispersion_inc				= -0.2		;1.8
+zoom_cam_step_angle_horz			= -0.2		;0.25
+zoom_cam_relax_speed				= +0.05
 
 [up_sect_second_svu]
-cost		      		= 3000
-value					= +15
+;Ќадежность(2)15%
+;---------------
+cost								= 2100
+value								= +15
 
-fire_dispersion_condition_factor    = -0.5
-condition_queue_shot_dec	= -0.0002
-condition_shot_dec      	= -0.0002
-misfire_start_prob	     	= -0.001
-misfire_end_prob	     	= -0.01
+fire_dispersion_condition_factor	= -0.15 ;15			;увеличение дисперсии в процентах при максимальном износе
+condition_queue_shot_dec			= -0.001 ;0.0013	;увеличение изношености при выстреле очередью
+condition_shot_dec					= -0.001 ;0.0011	;увеличение изношености при одиночном выстреле
+misfire_start_prob	 				= -0.001			;шанс осечки при изношености больше чем misfireStartCondition
+misfire_end_prob				 	= -0.01 ;0.03		;шанс осечки при изношености больше чем misfireEndCondition
 
 [up_sect_secone_svu]
-cost		      		= 6000
-value					= +1
+;»нтегрированный глушитель
+;---------------
+cost								= 2700
+value								= +1
 
-silencer_status				= 1
-silencer_name           = wpn_addon_silencer 
-silencer_x              = 224                
-silencer_y              = 13
-snd_silncer_shot        = weapons\w_ak74_shot1
-silencer_smoke_particles   = weapons\generic_shoot_00
-silencer_light_color                     = 0.6,0.5,0.3
-silencer_light_range                     = 0.01
-silencer_light_time                      = 0.2
-silencer_light_var_color                 = 0.05
-silencer_light_var_range                 = 0.5
+silencer_status						= 1
+snd_silncer_shot					= weapons\w_ak74_shot1
+
+silencer_name						= wpn_addon_silencer 
+silencer_x							= 224
+silencer_y							= 13
 
 [up_sect_seconf_svu]
-cost		      		= 6000
-value					= +25
-rpm 					= +35
+;—корострельность(3)25%
+;----------------------
+cost								= 2700
+value								= +25
+rpm 								= +162
+ef_weapon_type						= 6
 
 [up_sect_thirda_svu]
-cost		      		= 1500
-value					= -10
+;ќтдача(1)-10%
+;------------
+cost								= 1500
+value								= -10
 
-cam_dispersion         = -0.15
-cam_step_angle_horz    = -0.075
+zoom_cam_dispersion					= -0.1		;1.8
+zoom_cam_dispersion_inc				= -0.1		;1.8
+zoom_cam_step_angle_horz			= -0.1		;0.25
+zoom_cam_relax_speed				= +0.05
 
 [up_sect_thirdc_svu]
-cost		      		= 3300
-value					= +20
+;”добство(2)20%
+;--------------
+cost								= 2100
+value								= +20
 
-crosshair_inertion			= -2
+crosshair_inertion					= -1.5
 
-PDM_disp_vel_factor 		= -1
-PDM_disp_accel_factor 		= -1
+PDM_disp_base 						= -0.2
+PDM_disp_vel_factor 				= -0.3
+PDM_disp_accel_factor 				= -0.3
 
 [up_sect_fourta_svu]
-cost		      		= 3500
+;5x прицел.
+;------------
+cost								= 2000
 
-scope_zoom_factor       = +2
+scope_zoom_factor					= -3
 
 [up_sect_fourtc_svu]
-cost		      		= 4500
+; онтрастный прицел
+;------------
+cost								= 3000
 
-scope_nightvision = scope_contrast
+scope_nightvision					= scope_contrast
 
 [up_sect_fourte_svu]
-cost		      		= 9000
-
-scope_nightvision = scope_nightvision
-
+;ѕЌ¬
+;------------
+cost								= 4500
+scope_nightvision					= scope_nightvision
 [up_sect_fourtf_svu]
-cost		      		= 7500
+;–егулируемый прицел
+;------------
+cost								= 7000
 
-scope_dynamic_zoom = on
+scope_dynamic_zoom					= on
 
 [up_sect_fiftha_svu]
-cost		      		= 5000
-value					= +5
-ammo_mag_size        	= +10
+cost		      					= 1500
+value								= +5
+ammo_mag_size   			     	= +5 
 
+;=================================================================================================
 [up_firsta_svu]
 scheme_index            = 0, 0
 known                   = 1
@@ -164,7 +192,7 @@ scheme_index            = 2, 0
 known                   = 1
 effects                 =
 section                 = up_sect_firste_svu
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -355,7 +383,7 @@ scheme_index            = 0, 3
 known                   = 1
 effects                 = 
 section                 = up_sect_fourta_svu
-property                = prop_scope_6x
+property                = prop_scope_5x
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -398,6 +426,10 @@ known                   = 1
 effects                 =
 section                 = up_sect_fourte_svu
 property                = prop_nightvision
+
+scope_name 							= scope_nightvision
+scope_x 							= 60
+scope_y 							= -2
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b

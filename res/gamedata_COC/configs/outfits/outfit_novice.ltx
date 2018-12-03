@@ -1,7 +1,10 @@
+;---------------------------------------------------------------------------------------------
+;		BASE
+;---------------------------------------------------------------------------------------------
 [outfit_novice_base]
 GroupControlSection                      = spawn_group
 discovery_dependency                     =
-class                                    = EQU_STLK ;Change to E_STLK if you want to use se_item.se_outfit script binding
+class                                    = EQU_STLK	;Change to E_STLK if you want to use se_item.se_outfit script binding
 cform                                    = skeleton
 
 player_hud_section                       = actor_hud_05
@@ -12,31 +15,32 @@ additional_inventory_weight2             = 5 ;	+40 kg
 default_to_ruck                          = false
 sprint_allowed                           = true
 control_inertion_factor                  = 1
-power_restore_speed = 0
 
 ef_equipment_type                        = 3
+full_icon_name                           = npc_icon_novice_outfit
 
 slot                                     = 6
 full_scale_icon                          = 0,11
 
-inv_grid_x                               = 14
-inv_grid_y                               = 12
+inv_grid_x         = 14
+inv_grid_y         = 12
 
 upgrades                                 = up_gr_firstab_novice_outfit, up_gr_seconab_novice_outfit, up_gr_thirdab_novice_outfit
 installed_upgrades                       =
 upgrade_scheme                           = upgrade_scheme_novice_outfit
 
 artefact_count                           = 0
-hit_fraction_actor                       = 0.9
+hit_fraction_actor                       = 0.75
 
-burn_protection                          = 0.01
-shock_protection                         = 0.05
+; NO RESISTANCE
+burn_protection                          = 0.0133
+shock_protection                         = 0.0533
 radiation_protection                     = 0.0020
-chemical_burn_protection                 = 0.01
+chemical_burn_protection                 = 0.0133
 telepatic_protection                     = 0.0
-strike_protection                        = 0.03
-explosion_protection                     = 0.03
-wound_protection                         = 0.025
+strike_protection                        = 0.0175
+explosion_protection                     = 0.0175
+wound_protection                         = 0.0175
 
 inv_weight                               = 1.0
 
@@ -44,36 +48,36 @@ immunities_sect                          = sect_novice_outfit_immunities
 
 cost                                     = 2500
 
-power_loss                               = 0.03
+power_loss                               = 0.65
 
 bones_koeff_protection                   = actor_armor_novice
 
 inv_grid_width                           = 2
 inv_grid_height                          = 2
 
-character_portrait                       = ui_inGame2_neutral_1
+character_portrait							 = ui_inGame2_neutral_1
 
 [sect_novice_outfit_immunities]
-burn_immunity                            = 0.06
+burn_immunity                            = 0.025	                                       ;коэффициенты иммунитета самого костюма
 strike_immunity                          = 0.0
-shock_immunity                           = 0.03
-wound_immunity                           = 0.055
+shock_immunity                           = 0.025
+wound_immunity                           = 0.025
 radiation_immunity                       = 0.0
 telepatic_immunity                       = 0.0
-chemical_burn_immunity                   = 0.06
-explosion_immunity                       = 0.055
-fire_wound_immunity                      = 0.035
+chemical_burn_immunity                   = 0.025
+explosion_immunity                       = 0.025
+fire_wound_immunity                      = 0.01
 
 [sect_novice_outfit_immunities_add]
-burn_immunity                            = -0.02
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
 strike_immunity                          = 0.0
 shock_immunity                           = -0.01
-wound_immunity                           = -0.02
+wound_immunity                           = -0.01
 radiation_immunity                       = 0.0
 telepatic_immunity                       = 0.0
-chemical_burn_immunity                   = -0.02
-explosion_immunity                       = -0.02
-fire_wound_immunity                      = -0.01
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.005
 ;---------------------------------------------------------------------------------------------
 ;       CS Novice Outfit
 ;---------------------------------------------------------------------------------------------
@@ -89,15 +93,15 @@ inv_name                                 = csky_novice_outfit_name
 inv_name_short                           = csky_novice_outfit_name
 description                              = novice_outfit_description
 
-inv_grid_x                               = 12
-inv_grid_y                               = 11
+inv_grid_x         = 12
+inv_grid_y         = 11
 
 upgr_icon_x                              = 2195
 upgr_icon_y                              = 1009
 upgr_icon_width                          = 297
 upgr_icon_height                         = 145
 
-character_portrait                       = ui_inGame2_csky_1
+character_portrait						 = ui_inGame2_csky_1
 
 upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
 
@@ -114,13 +118,17 @@ player_hud_section                       = actor_hud_loner_novice
 inv_name                                 = novice_outfit_name
 inv_name_short                           = novice_outfit_name
 description                              = novice_outfit_description
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 12
+inv_grid_y                               = 25
 
 upgr_icon_x                              = 935
 upgr_icon_y                              = 340
 upgr_icon_width                          = 303
 upgr_icon_height                         = 162
 
-character_portrait                       = ui_inGame2_neutral_1_gas
+character_portrait						 = ui_inGame2_neutral_1_gas
 
 upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
 
@@ -128,7 +136,7 @@ upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_se
 ;		Bandit Novice Outfit
 ;---------------------------------------------------------------------------------------------
 [bandit_novice_outfit]:outfit_novice_base
-$spawn                                   = "outfit\novice_outfit_bandit"
+$spawn                                   = "outfit\novice_outfit"
 visual                                   = dynamics\outfit\bandit_outfit
 actor_visual                             = actors\stalker_bandit\stalker_bandit_1_gas.ogf
 npc_visual                               = actors\stalker_bandit\stalker_bandit_1_gas.ogf
@@ -139,15 +147,17 @@ inv_name                                 = bandit_novice_outfit_name
 inv_name_short                           = bandit_novice_outfit_name
 description                              = bandit_novice_outfit_description
 
-inv_grid_x                               = 10
-inv_grid_y                               = 11
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 14
+inv_grid_y                               = 25
 
 upgr_icon_x                              = 1239
 upgr_icon_y                              = 340
 upgr_icon_width                          = 303
 upgr_icon_height                         = 162
 
-character_portrait                       = ui_inGame2_bandit_1
+character_portrait						 = ui_inGame2_bandit_1
 
 upgrades                                 = up_gr_firstab_bandit_outfit, up_gr_seconab_bandit_outfit, up_gr_thirdab_bandit_outfit
 
@@ -166,15 +176,17 @@ inv_name                                 = svoboda_novice_outfit_name
 inv_name_short                           = svoboda_novice_outfit_name
 description                              = novice_outfit_description
 
-inv_grid_x                               = 12
-inv_grid_y                               = 39
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 18
+inv_grid_y                               = 25
 
 upgr_icon_x                              = 2186
 upgr_icon_y                              = 667
 upgr_icon_width                          = 292
 upgr_icon_height                         = 140
 
-character_portrait                       = ui_inGame2_freedom_nov
+character_portrait						 = ui_inGame2_freedom_0
 
 upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
 ;---------------------------------------------------------------------------------------------
@@ -192,15 +204,17 @@ inv_name                                 = dolg_novice_outfit_name
 inv_name_short                           = dolg_novice_outfit_name
 description                              = novice_outfit_description
 
-inv_grid_x                               = 10
-inv_grid_y                               = 39
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 16
+inv_grid_y                               = 25
 
 upgr_icon_x                              = 2185
 upgr_icon_y                              = 506
 upgr_icon_width                          = 295
 upgr_icon_height                         = 140
 
-character_portrait                       = ui_inGame2_Dolg_0
+character_portrait						 = ui_inGame2_Dolg_0
 
 upgrades                                 = up_gr_firstab_bandit_outfit, up_gr_seconab_bandit_outfit, up_gr_thirdab_bandit_outfit
 
@@ -219,15 +233,15 @@ inv_name                                 = novice_outfit_name
 inv_name_short                           = novice_outfit_name
 description                              = novice_outfit_description
 
-inv_grid_x                               = 16
-inv_grid_y                               = 12
+inv_grid_x         = 16
+inv_grid_y         = 12
 
 upgr_icon_x                              = 2191
 upgr_icon_y                              = 831
 upgr_icon_width                          = 289
 upgr_icon_height                         = 140
 
-character_portrait                       = ui_inGame2_neutral_1w_gas
+character_portrait						 = ui_inGame2_neutral_1w_gas
 
 upgrades                                 = up_gr_firstab_rookie_outfit, up_gr_seconab_rookie_outfit, up_gr_thirdab_rookie_outfit
 
@@ -258,43 +272,167 @@ upgr_icon_height                         = 162
 
 cost                                     = 4000
 
-power_loss                               = 0.06
-
 hit_fraction_actor                       = 0.85
 
 immunities_sect                          = sect_trenchcoat_outfit_immunities
 
-burn_protection                          = 0.015
-shock_protection                         = 0.075
-radiation_protection                     = 0.003
-chemical_burn_protection                 = 0.015
+; NO RESISTANCE
+burn_protection                          = 0.0233
+shock_protection                         = 0.0933
+radiation_protection                     = 0.0035
+chemical_burn_protection                 = 0.0233
 telepatic_protection                     = 0.0
-strike_protection                        = 0.06
-explosion_protection                     = 0.06
-wound_protection                         = 0.05
+strike_protection                        = 0.0350
+explosion_protection                     = 0.0350
+wound_protection                         = 0.0350
 
 bones_koeff_protection                   = actor_armor_trench
 
-character_portrait                       = ui_inGame2_bandit_3_mask
+character_portrait							 = ui_inGame2_bandit_3_mask
 
 [sect_trenchcoat_outfit_immunities]
-burn_immunity                            = 0.055
+burn_immunity                            = 0.05	                                       ;коэффициенты иммунитета самого костюма
 strike_immunity                          = 0.0
-shock_immunity                           = 0.025
+shock_immunity                           = 0.05
 wound_immunity                           = 0.05
 radiation_immunity                       = 0.0
 telepatic_immunity                       = 0.0
-chemical_burn_immunity                   = 0.055
+chemical_burn_immunity                   = 0.05
 explosion_immunity                       = 0.05
-fire_wound_immunity                      = 0.03
+fire_wound_immunity                      = 0.02
 
 [sect_trenchcoat_outfit_immunities_add]
-burn_immunity                            = -0.02
+burn_immunity                            = -0.01	                                       ;коэффициенты иммунитета самого костюма
 strike_immunity                          = 0.0
 shock_immunity                           = -0.01
-wound_immunity                           = -0.02
+wound_immunity                           = -0.01
 radiation_immunity                       = 0.0
 telepatic_immunity                       = 0.0
 chemical_burn_immunity                   = -0.02
 explosion_immunity                       = -0.02
 fire_wound_immunity                      = -0.01
+
+
+;---------------------------------------------------------------------------------------------
+;	Масхалат для ГГ
+;---------------------------------------------------------------------------------------------
+[actor_hud_como_04]
+visual                                   = dynamics\weapons\wpn_hand\wpn_hand_military_suit
+
+[outfit_base_como]
+additional_inventory_weight              = 0
+additional_inventory_weight2             = 0
+full_icon_name                           = npc_icon_without_outfit
+default_to_ruck                          = false
+sprint_allowed                           = true
+control_inertion_factor                  = 1
+
+[como_voeni_outfit_n]:outfit_base_como
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+$spawn                                   = "outfit\como_tigra"
+;$prefetch 		= 32
+class                                    = E_STLK
+cform                                    = skeleton
+visual                                   = dynamics\outfit\soldier_outfit
+actor_visual                             = actors\stalker_ghillie.ogf
+player_hud_section                       = actor_hud_como_04
+ef_equipment_type                        = 3
+inv_name                                 = ghillie_outfit_name
+inv_name_short                           = ghillie_outfit_name
+description                              = ghillie_outfit_description
+inv_weight                               = 6.2
+inv_grid_width                           = 2
+inv_grid_height                          = 3
+inv_grid_x                               = 55
+inv_grid_y                               = 31
+full_icon_name                           = npc_icon_bandit_outfit
+upgr_icon_x                              = 942
+upgr_icon_y                              = 0
+upgr_icon_width                          = 303
+upgr_icon_height                         = 162
+
+cost                                     = 100000
+slot                                     = 6
+full_scale_icon                          = 0,6 ;иконка сталкера в костюме в полный рост
+
+immunities_sect                          = sect_como_voeni_outfit_n_immunities
+
+; NO RESISTANCE
+burn_protection                          = 0.057
+shock_protection                         = 0.088
+radiation_protection                     = 0.0033
+chemical_burn_protection                 = 0.015
+telepatic_protection                     = 0.008
+strike_protection                        = 0.08
+explosion_protection                     = 0.17
+wound_protection                         = 0.28
+fire_wound_protection                    = 0.15
+physic_strike_wound_immunity             = 0.30
+npc_blindness_koeff                      = 20 ; видимость гг в м
+
+bones_koeff_protection                   = actor_armor_svoboda_light
+hit_fraction_actor                       = 0.25
+artefact_count                           = 3
+control_inertion_factor                  = 1.5
+
+upgrades                                 = up_gr_firstab_stalker_outfit, up_gr_seconab_stalker_outfit, up_gr_thirdab_stalker_outfit
+installed_upgrades                       =
+upgrade_scheme                           = upgrade_scheme_stalker_outfit
+
+[sect_como_voeni_outfit_n_immunities]
+burn_immunity                            = 0.03
+strike_immunity                          = 0.03
+shock_immunity                           = 0.0
+wound_immunity                           = 0.03
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.01
+chemical_burn_immunity                   = 0.01
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.01
+
+[sect_como_voeni_outfit_n_immunities_add]
+burn_immunity                            = -0.01
+strike_immunity                          = 0.0
+shock_immunity                           = -0.01
+wound_immunity                           = -0.01
+radiation_immunity                       = 0.0
+telepatic_immunity                       = -0.01
+chemical_burn_immunity                   = -0.01
+explosion_immunity                       = -0.01
+fire_wound_immunity                      = -0.002
+
+;-------------------------------------------------------------------------------
+[body_armor_1]
+bip01_pelvis                             = 1.0,	0.33
+bip01_spine                              = 1.0,	0.33
+bip01_spine1                             = 1.0,	0.33
+bip01_spine2                             = 1.0,	0.33
+
+bip01_l_clavicle                         = 1.0,	0.15
+bip01_l_upperarm                         = 1.0,	0.10
+bip01_l_forearm                          = 1.0,	0.10
+bip01_l_hand                             = 1.0,	0.00
+
+bip01_r_clavicle                         = 1.0,	0.15
+bip01_r_upperarm                         = 1.0,	0.10
+bip01_r_forearm                          = 1.0,	0.10
+bip01_r_hand                             = 1.0,	0.00
+
+bip01_l_thigh                            = 1.0,	0.15
+bip01_l_calf                             = 1.0,	0.05
+bip01_l_foot                             = 1.0,	0.10
+
+bip01_r_thigh                            = 1.0,	0.15
+bip01_r_calf                             = 1.0,	0.05
+bip01_r_foot                             = 1.0,	0.10
+
+[head_armor_absent]
+bip01_neck                               = 1.0,	-1
+bip01_head                               = 1.0,	-1
+eyelid_1                                 = 1.0,	-1
+eye_left                                 = 1.0,	-1
+eye_right                                = 1.0,	-1
+jaw_1                                    = 1.0,	-1
+
+[actor_armor_svoboda_light]:body_armor_1, head_armor_absent

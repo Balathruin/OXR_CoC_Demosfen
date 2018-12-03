@@ -12,8 +12,8 @@ meet = meet
 path_walk = yan_walker_saharov_walk
 path_look = yan_walker_saharov_look
 on_info = {+yan_actor_away_saharov} camper@1
-on_actor_in_zone = yan_smart_terrain_6_4_base_defense_quest | %=play_sound(yan_stalker_sakharov_idle)%
-combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+on_actor_in_zone = yan_smart_terrain_6_4_surge_hide_a1 | %=play_sound(sacharov_talk_to_himself_phrases)%
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
 combat_ignore_keep_when_attacked = true
 invulnerable = {!actor_enemy} true, false
 gather_items_enabled = false
@@ -24,7 +24,7 @@ aggressive = false
 
 [camper@default]
 meet = meet
-combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
 combat_ignore_keep_when_attacked = true
 invulnerable = {!actor_enemy} true, false
 gather_items_enabled = false

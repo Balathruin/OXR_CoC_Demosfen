@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
-    <string id="cit_doctor_hello_dialog_11">
+<!---------------------------- doctor --->
+	 <string id="cit_doctor_hello_dialog_11">
         <text>Yes? What do you want? Strelok? Is that you?</text>
     </string>
     <string id="cit_doctor_hello_dialog_21">

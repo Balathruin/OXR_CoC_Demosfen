@@ -1,0 +1,34 @@
+[spawn_loadout] \n
+wpn_abakan_1p29 = 1 \n
+wpn_aek971 = 1 \n
+wpn_ak74 = 1, launcher \n
+wpn_ak12 = 1 \n
+wpn_vepr_ekp = 1 \n
+wpn_rpd = 1 \n
+wpn_pkm = 1 \n
+wpn_saiga_kobra = 1 \n
+wpn_rpk74_pso = 1 \n
+wpn_rpk = 1 \n
+wpn_ak101_acog = 1 \n
+wpn_ak102 = 1 \n
+wpn_pp2000 = 1 \n
+wpn_ak103 = 1, launcher \n
+wpn_ak104_pso = 1 \n
+wpn_ak105_pso = 1, launcher \n
+wpn_akms = 1, launcher \n
+wpn_akm = 1, launcher \n
+wpn_vintorez = 1 \n
+wpn_remington870 = 1 \n
+[spawn_loadout2] \n
+wpn_aps = 1 \n
+wpn_fort = 1 \n
+wpn_mp443 = 1 \n
+wpn_gsh18 = 1 \n
+wpn_pm = 1 \n
+wpn_pmm = 1 \n
+wpn_tt33 = 1 \n
+wpn_colt1911 = 1 \n
+wpn_cz75 = 1 \n
+wpn_oc33 = 1 \n
+wpn_pb = 1 \n
+[spawn] \n

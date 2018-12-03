@@ -150,15 +150,14 @@
 	<string id="kb_team_menu">
 		<text>Team selection menu</text>
 	</string>
-	<string id="kb_torch">
-		<text>Headlamp</text>
-	</string>
+	 <!-- Romann -->
 	<string id="kb_flashlight">
-		<text>Flashlight</text>
+		<text>Hend Flashlight</text>
 	</string>
-	<string id="kb_turn_engine">
-		<text>Activate</text>
+	<string id="kb_torch">
+		<text>Head Flashlight</text>
 	</string>
+	 <!-- Romann -->
 	<string id="kb_up">
 		<text>Up</text>
 	</string>
@@ -268,8 +267,18 @@
 		<text>Quick release backpack</text>
 	</string>
 	<string id="kb_custom8">
-		<text>Toggle minimap</text>
-	</string>	
+		<text>Контакты</text>
+	</string>
+	<string id="kb_custom9">
+		<text>Статистика</text>
+	</string>
+	<string id="kb_custom10">
+		<text>Сообщения</text>
+	</string>
+	<string id="kb_custom11">
+		<text>Сменить HUD</text>
+	</string>
+	
 	<string id="kb_pda_tab1">
 		<text>PDA Map</text>
 	</string>
@@ -287,5 +296,14 @@
 	</string>
 	<string id="kb_pda_tab6">
 		<text>PDA Guide</text>
+	</string>
+	<string id="kb_grp_vehicle">
+		<text>Vehicle</text>
+	</string>
+	<string id="kb_turn_engine">
+		<text>Turn engine</text>
+	</string>
+	<string id="kb_switch_horn">
+		<text>Horn</text>
 	</string>
 </string_table>

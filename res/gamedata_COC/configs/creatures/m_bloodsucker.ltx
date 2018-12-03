@@ -470,7 +470,7 @@ stand_attack_1 =      0.30,   0.3,       50,        0.0, 2.0, 4.0,     -0.6, 0.6
 ;Right hand Strike
 stand_attack_2 =      0.30,   0.3,       50,       -4.0, 2.5, 0.50,    -0.6, 0.6, -0.6, 0.6,          2.6
 ;Right hand Strike
-vampire_2   =     	  0.60,   0.7,       100,        0.0, 2.5, 4.50,    -1.2, 1.2, -1.2, 1.2,	       2 ;4.5
+vampire_2   =     	  0.60,   0.7,       50,        0.0, 2.5, 4.50,    -1.2, 1.2, -1.2, 1.2,	       2 ;4.5
 
 stand_run_attack_left_0  = 0.30,   0.4,       50,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.7
 stand_run_attack_right_0 = 0.30,   0.4,       50,        3.5, 2.0, 0.5,     -1.0, 1.0, -1.0, 1.0,     2.7
@@ -480,15 +480,15 @@ stand_run_attack_right_0 = 0.30,   0.4,       50,        3.5, 2.0, 0.5,     -1.0
 ; Immunities
 ;===========================================================================
 [bloodsucker_immunities]
-burn_immunity     		= 0.5
-strike_immunity     	= 0.5
-shock_immunity			= 0.5
-wound_immunity         	= 0.4
+burn_immunity     		= 0.1
+strike_immunity     	= 0.1
+shock_immunity			= 0.1
+wound_immunity         	= 0.3
 radiation_immunity     	= 0.0
 telepatic_immunity     	= 0.0
-chemical_burn_immunity 	= 0.5
-explosion_immunity      = 0.55
-fire_wound_immunity     = 0.55
+chemical_burn_immunity 	= 0.1
+explosion_immunity      = 0.1
+fire_wound_immunity     = 0.7
 
 
 ;===========================================================================
@@ -526,6 +526,10 @@ ce_time       	= 1; 0.65 ;time
 ce_amplitude    = 15;12.0
 ce_period_number = 2.0;3.0
 ce_power      	= 3.0 ;0.7 ; power
+
+[bloodsucker_protections]
+
+hit_fraction_monster = 0.3
 
 
 ;*********************************************************************************

@@ -1,12 +1,18 @@
 [smart_terrain]
 squad_id = 5
-max_population = 3
+max_population = 4
 respawn_params = respawn@ros_smart_monster4
-respawn_idle = 86400
-
+respawn_idle = 60000
+
+
 
 [respawn@ros_smart_monster4]
+spawn_medwed
 spawn_mix_dogs
+
+[spawn_medwed]
+spawn_squads = simulation_medwed
+spawn_num = 1
 
 [spawn_mix_dogs]
 spawn_squads = simulation_dog, simulation_pseudodog, simulation_mix_dogs

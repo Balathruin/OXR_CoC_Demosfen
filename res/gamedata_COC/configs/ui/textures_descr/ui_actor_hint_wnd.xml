@@ -1,5 +1,11 @@
 <w>
     <file name="ui\ui_actor_hint_wnd">
+	    <texture id="ui_inGame2_circle_drink_empty"		x="0"	y="0"	width="0"	height="0" />
+	    <texture id="ui_inGame2_circle_drink_green"		x="865" y="983" width="35"	height="40" />
+	    <texture id="ui_inGame2_circle_drink_yellow"	x="903" y="983" width="35"	height="40" />
+	    <texture id="ui_inGame2_circle_drink_orange"	x="941" y="983" width="35"	height="40" />
+	    <texture id="ui_inGame2_circle_drink_red"		x="978" y="983" width="35"	height="40" />
+		
 	    <texture id="ui_inGame2_inv_trash"    x="5" y="651" width="29" height="36" />
 
 	    <texture id="ui_inGame2_hint_wnd_main_window_lt"    x="0" y="0" width="60" height="150" />
@@ -25,14 +31,16 @@
 	    <texture id="ui_inGame2_hint_wnd_upgrades" x="284" y="33" width="242" height="7" />
 
 
-	    <texture id="ui_inGame2_Radar_main_window" x="529" y="7" width="226" height="226" />
-	    <texture id="ui_inGame2_Radar_blue_bar" x="540" y="235" width="206" height="206" />
-	    <texture id="ui_inGame2_Radar_green_bar" x="748" y="235" width="206" height="206" />
-	    <texture id="ui_inGame2_Radar_compass" x="508" y="52" width="9" height="33" />
+	    <texture id="ui_inGame2_Radar_main_window" x="526" y="0" width="248" height="248" />
+	    <texture id="ui_inGame2_Radar_blue_bar" x="526" y="251" width="206" height="206" />
+	    <texture id="ui_inGame2_Radar_green_bar" x="818" y="0" width="206" height="206" />
+	    <texture id="ui_inGame2_Radar_compass" x="885" y="246" width="139" height="139" />
 
-        <texture id="ui_inGame2_Patroni_HUD_main_window" x="782" y="14" width="222" height="126" />
-        <texture id="ui_inGame2_Patroni_HUD_red_bar" x="782" y="144" width="94" height="16" />
-        <texture id="ui_inGame2_Patroni_HUD_blue_bar" x="782" y="167" width="94" height="10" />
+        <texture id="ui_inGame2_Patroni_HUD_main_window" x="732" y="251" width="144" height="120" />
+        <texture id="ui_inGame2_Patroni_HUD_red_bar" x="742" y="376" width="89" height="9" />
+        <texture id="ui_inGame2_Patroni_HUD_blue_bar" x="742" y="389" width="89" height="9" />
+		
+		<texture id="ui_inGame2_quickslot_background" x="742" y="410" width="82" height="42" />
 
 		<texture id="ui_inGame2_Patroni_HUD_active_items_icon_b" 	x="503" y="92" width="3" height="23" />
 		<texture id="ui_inGame2_Patroni_HUD_active_items_icon_back" x="506" y="92" width="3" height="23" />
@@ -51,6 +59,13 @@
 	    <texture id="ui_inGame2_circle_hunger_yellow" x="11" y="886" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_hunger_orange" x="11" y="927" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_hunger_red" x="11" y="969" width="33" height="35" />
+
+		<texture id="ui_inGame2_circle_thirst_green" x="58" y="927" width="33" height="35" />
+	    <texture id="ui_inGame2_circle_thirst_yellow" x="106" y="927" width="33" height="35" />
+	    <texture id="ui_inGame2_circle_thirst_orange" x="153" y="927" width="33" height="35" />
+	    <texture id="ui_inGame2_circle_thirst_red" x="200" y="927" width="33" height="35" />
+		
+		<!-- Unchanged Start -->
 	    <texture id="ui_inGame2_circle_bloodloose_green" x="593" y="983" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_bloodloose_yellow" x="58" y="886" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_bloodloose_orange" x="58" y="927" width="33" height="35" />

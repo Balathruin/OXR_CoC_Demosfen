@@ -2,12 +2,18 @@
 squad_id = 2
 max_population = 2
 respawn_params = respawn@val_smart_terrain_3_0
-respawn_idle = 86400
-
+respawn_idle = 45000
+
+
 
 [respawn@val_smart_terrain_3_0]
+spawn_medwed
 spawn_mutants
 
+[spawn_medwed]
+spawn_squads = simulation_medwed
+spawn_num = 1
+
 [spawn_mutants]
-spawn_squads = simulation_boar, simulation_cat
+spawn_squads = simulation_fracture, simulation_boar, simulation_cat
 spawn_num = 1

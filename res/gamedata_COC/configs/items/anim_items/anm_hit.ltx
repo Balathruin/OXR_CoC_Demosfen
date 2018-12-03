@@ -1,0 +1,21 @@
+[anm_hit]:anm_base
+$spawn						= "weapons\anm_hit"
+hud							= anm_hit_hud
+visual						= dynamics\devices\dev_pda\dev_pda.ogf
+description					= st_vodka_descr
+inv_name					= st_hit
+inv_name_short				= st_hit
+
+[anm_hit_hud]:anm_base_hud
+hands_position				= 0.2000,-0.1700,0.4000
+hands_position_16x9			= 0.2000,-0.1700,0.4000
+item_position    			= 0,0,0
+item_orientation   			= 0,0,0
+item_visual             	= dynamics\devices\dev_pda\dev_pda.ogf
+anm_show					= actor_hit_anim		;binoculars_draw
+anm_hide					= hende_hoh_draw		;binoculars_holster
+anm_idle					= hende_hoh_idle			;binoculars_idle
+anm_idle_aim				= hende_hoh_idle			;binoculars_idle
+anm_idle_moving				= hende_hoh_idle	;binoculars_idle_moving
+anm_idle_sprint				= hende_hoh_idle	;binoculars_idle_sprint
+anm_bore					= actor_hit_anim		;binoculars_idle_bore

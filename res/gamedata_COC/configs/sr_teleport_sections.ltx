@@ -93,32 +93,13 @@ path = esc_space_restrictor_to_garbage_2_drop
 reject_path = esc_level_changer_2_reject_way
 autosave = true
 
-[esc_space_restrictor_to_darkscape_1]
-enable = true
-spot = level_changer_right
-text = st_level_changer_descr
-hint = esc_space_restrictor_to_darkscape_descr
-path = esc_space_restrictor_to_darkscape_drop
-reject_path = esc_level_changer_to_darkvalley_1_reject_way
-autosave = true
-
-;DARKSCAPE
-[ds_space_restrictor_to_escape]
-enable = true
-spot = level_changer_left
-text = st_level_changer_descr
-hint = ds_space_restrictor_to_escape_descr
-path = ds_space_restrictor_to_escape_drop
-reject_path = ds_level_changer_to_escape_1_reject_way
-autosave = true
-
-[ds_space_restrictor_to_darkvalley]
+[esc_space_restrictor_to_darkvalley_1]
 enable = true
 spot = level_changer_up
 text = st_level_changer_descr
 hint = ds_space_restrictor_to_darkvalley_desc
-path = ds_space_restrictor_to_darkvalley_drop
-reject_path = ds_level_changer_to_darkvalley_1_reject_way
+path = esc_space_restrictor_to_darkvalley_1_drop
+reject_path = esc_level_changer_to_darkvalley_1_reject_way
 autosave = true
 
 ;AGROPROM
@@ -288,13 +269,13 @@ autosave = true
 
 
 ;DARK VALLEY
-[val_space_restrictor_to_darkscape]
+[val_space_restrictor_to_escape_1]
 enable = true
 spot = level_changer_down
 text = st_level_changer_descr
-hint = esc_space_restrictor_to_darkscape_descr
-path = val_space_restrictor_to_darkscape_drop
-reject_path = val_level_changer_to_darkscape_1_reject_way
+hint = ds_space_restrictor_to_escape_descr
+path = val_space_restrictor_to_escape_1_drop
+reject_path = val_level_changer_to_escape_1_reject_way
 autosave = true
 
 [val_space_restrictor_to_garbage_1]
@@ -304,15 +285,6 @@ text = st_level_changer_descr
 hint = esc_space_restrictor_to_garbage_descr
 path = val_space_restrictor_to_garbage_1_drop
 reject_path = val_level_changer_to_garbage_1_reject_way
-autosave = true
-
-[val_space_restrictor_to_garbage_2]
-enable = true
-spot = level_changer_left
-text = st_level_changer_descr
-hint = esc_space_restrictor_to_garbage_descr
-path = val_space_restrictor_to_garbage_2_drop
-reject_path = val_level_changer_to_garbage_2_reject_way
 autosave = true
 
 [val_space_restrictor_to_labx18]
@@ -915,3 +887,180 @@ hint = space_restrictor_to_military_desc
 path = tc_space_restrictor_to_military_drop
 reject_path = tc_way_if_reject_to_military_3
 autosave = true
+
+[pol_space_restrictor_to_escape_1]
+enable = true
+spot = level_changer_left
+text = st_level_changer_descr
+hint = pol_space_restrictor_to_esc_1_descr
+path = pol_space_restrictor_to_esc_1_drop
+reject_path = pol_level_changer_to_esc_1_reject_way
+
+[esc_space_restrictor_to_pole_1]
+enable = true
+spot = level_changer_up
+text = st_level_changer_descr
+hint = esc_space_restrictor_to_pol_1_descr
+path = esc_space_restrictor_to_pol_1_drop
+reject_path = esc_level_changer_to_pol_1_reject_way
+
+[val_space_restrictor_to_pole_1]
+enable = true
+spot = level_changer_left 
+text = st_level_changer_descr
+hint = val_space_restrictor_to_pole_1_descr	
+path = val_space_restrictor_to_pole_1_drop 
+reject_path = val_level_changer_to_pole_1_reject_way
+
+[pol_space_restrictor_to_val_1]
+enable = true
+spot = level_changer_up
+text = st_level_changer_descr
+hint = pol_space_restrictor_to_val_1_descr
+path = pol_space_restrictor_to_val_1_drop
+reject_path = pol_level_changer_to_val_1_reject_way
+
+;//Romann
+
+;//Черта
+;//В ТД
+[wiz_space_restrictor_to_darkvalley_1]
+enable = true
+spot = level_changer_right_down
+text = st_level_changer_descr
+hint = pol_space_restrictor_to_val_1_descr
+path = wiz_space_restrictor_to_darkvalley_1_drop
+reject_path = wiz_level_changer_to_darkvalley_1_reject_way
+
+;//На свалку
+[wiz_space_restrictor_to_garbage_1]
+enable = true
+spot = level_changer_down_left
+text = st_level_changer_descr
+hint = esc_space_restrictor_to_garbage_descr
+path = wiz_space_restrictor_to_garbage_1_drop
+reject_path = wiz_level_changer_to_garbage_1_reject_way
+autosave = true
+
+;//ТД
+;//На Черту
+[val_space_restrictor_to_wiz_1]
+enable = true
+spot = level_changer_left_up; level_changer_down_left
+text = st_level_changer_descr
+hint = space_restrictor_to_wiz_desc
+path = val_space_restrictor_to_wiz_1_drop
+reject_path = val_level_changer_to_wiz_1_reject_way
+autosave = true
+
+;//Свалка
+;//На Черту  
+[gar_space_restrictor_to_wiz_1]
+enable = true
+spot = level_changer_up_right
+text = st_level_changer_descr
+hint = space_restrictor_to_wiz_desc
+path = gar_space_restrictor_to_wiz_1_drop
+reject_path = gar_level_changer_to_wiz_1_reject_way
+autosave = true
+
+;//Бар
+;//В Коллектор
+[bar_space_restrictor_to_collector]
+enable = true
+spot = level_changer_down
+text = st_level_changer_descr
+hint = space_restrictor_to_collector_desc
+path = bar_space_restrictor_to_collector_drop
+reject_path = bar_level_changer_to_collector_reject_way
+autosave = true
+;level_changer - bar_level_changer_to_collector
+;граф - col_graph_point_actor_spawn_1
+;граф - bar_col_actor_spawn
+;граф - bar_graph_point_to_collector
+;граф ту - col_graph_point_to_bar
+
+
+;//Коллектор
+;//В Бар
+[col_space_restrictor_to_bar]
+enable = true
+spot = level_changer_up
+text = st_level_changer_descr
+hint = space_restrictor_to_bar_desc
+path = col_space_restrictor_to_bar_drop
+reject_path = col_level_changer_to_bar_reject_way
+autosave = true
+
+
+
+
+;//Коллектор
+;//На Черту
+[col_space_restrictor_to_wiz]
+enable = true
+spot = level_changer_down
+text = st_level_changer_descr
+hint = space_restrictor_to_wiz_desc
+path = col_space_restrictor_to_wiz_drop
+reject_path = col_level_changer_to_wiz_reject_way
+autosave = true
+
+
+;//Черта
+;//В Коллектор
+[wiz_space_restrictor_to_collector]
+enable = true
+spot = level_changer_up
+text = st_level_changer_descr
+hint = space_restrictor_to_collector_desc
+path = wiz_space_restrictor_to_collector_drop
+reject_path = wiz_level_changer_to_collector_reject_way
+autosave = true
+
+;level_changer - wiz_level_changer_to_collector
+;граф - col_graph_point_actor_spawn_2
+;граф - wiz_col_actor_spawn
+;граф - wiz_graph_point_to_collector
+;граф ту - col_graph_point_to_wiz
+
+
+
+;//tunnel_lab_1
+;//На Черту
+[lab_space_restrictor_to_wiz]
+enable = true
+spot = level_changer_up_right
+text = st_level_changer_descr
+hint = space_restrictor_to_wiz_desc
+path = lab_space_restrictor_to_wiz_drop
+reject_path = lab_space_restrictor_to_wiz_reject_way
+autosave = true
+
+;level_changer - lab_level_changer_to_wiz
+;граф - lab_graph_point_actor_spawn_1
+;граф - wiz_lab_actor_spawn
+;граф - lab_graph_point_to_wiz
+;граф ту - wiz_graph_point_to_lab
+
+
+;//Черта
+;//В tunnel_lab_1
+[wiz_space_restrictor_to_lab]
+enable = true
+spot = level_changer_down_left
+text = st_level_changer_descr
+hint = space_restrictor_to_lab_desc
+path = wiz_space_restrictor_to_lab_drop
+reject_path = wiz_space_restrictor_to_lab_reject_way
+autosave = true
+
+;level_changer - wiz_level_changer_to_lab
+;граф - lab_graph_point_actor_spawn_1
+;граф - wiz_lab_actor_spawn
+;граф - lab_graph_point_to_wiz
+;граф ту - wiz_graph_point_to_lab
+
+
+
+;//Romann

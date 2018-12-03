@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
+    <!-------------------------- ROMANN ---------------------- -->
+	    <!------------------ Anya ----------------->
+	<string id="bar_anya_name">
+		<text>Анна</text>
+	</string>
+	
+	<string id="bar_anya_bio">
+		<text>Просто Аня.</text>
+	</string>
+	    <!------------------ Anya ----------------->
 	<string id="jup_a10_bandit_leader_name">
 		<text>Валет</text>
+	</string>
+	<string id="devushka">
+		<text>Хип</text>
 	</string>
 	<string id="jup_a10_stalker_vano">
 		<text>Вано</text>
@@ -158,6 +171,9 @@
 	</string>
 	<string id="pri_b305_strelok_name">
 		<text>Стрелок</text>
+	</string>
+	<string id="no_name_name">
+		<text>No name</text>
 	</string>
 	<string id="pri_b306_envoy_name">
 		<text>Барчук</text>
@@ -351,6 +367,9 @@
 	<string id="esc_wolf_name">
 		<text>Волк</text>
 	</string>
+	<string id="top_danil">
+		<text>Даниил Варварецкий</text>
+	</string>
 	<string id="esc_fanat_bio">
 		<text>Стал лидером лагеря новичков после Волка. Целеустремлен, агрессивен, пользуется среди новичков заслуженным авторитетом.</text>
 	</string>
@@ -415,7 +434,7 @@
 		<text>Доктор биологических наук. За пределами Зоны занимался патогенными мутациями животных. В Зону отправился для изучения мутаций слепых псов.</text>
 	</string>
 	<string id="yan_kruglov_name">
-		<text>Круглов</text>
+		<text>Профессор Круглов</text>
 	</string>
   <string id="mar_base_stalker_tech_name">
 	<text>Новиков</text>
@@ -481,7 +500,7 @@
 	<text>Учёный «О-Сознания»</text>  
   </string>
   <string id="sar2_clone_name">
-	<text>Голопроекция</text> 
+	<text>Галопроекция</text> 
   </string>
   <string id="sar2_arena_manager_name">
 		<text>Арни</text>
@@ -610,7 +629,7 @@
 		<text>Волк</text>
   </string>
   <string id="dar_kalugin_name">
-	<text>Пётр Калугин</text> 
+	<text>Тимур Калугин</text> 
     </string>
 	<string id="dar_rockatansky_name">
 	    <text>Рокатанский</text> 
@@ -630,14 +649,20 @@
 	<string id="yan_ghost_name">
 		<text>Призрак</text>
 	</string>
+	<string id="demosfen_name">
+		<text>Демосфен</text>
+	</string>
+	<string id="abdul_name">
+		<text>Абдул Альхазред</text>
+	</string>
 	<string id="warlab_entity_name">
-		<text>Сущность</text>
+		<text>Неизвестное существо</text>
 	</string>
 	<string id="warlab_main_poltergeist_1">
 		<text>Сущность</text>
 	</string>
 	<string id="warlab_main_poltergeist_2">
-		<text>Сущность</text>
+		<text>Неизвестное существо</text>
 	</string>
 	<string id="warlab_main_psysucker">
 		<text>Сущность</text>
@@ -650,5 +675,5 @@
 	</string>
 	<string id="agr_kuznetsov_name">
 		<text>Майор Кузнецов</text>
-  </string>  
+	</string>
 </string_table>

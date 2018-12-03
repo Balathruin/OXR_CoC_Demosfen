@@ -56,4 +56,10 @@
 		<texture id="ui_inGame2_artefakt_highlighter" x="410" y="614" width="52" height="52" />
 
    </file>
+
+   <file name="ui\ui_actor_portret_fast_anim">
+		<texture id="no_data_anim" x="0" y="0" width="123" height="87"/>
+   </file>
+   
+   
 </w>

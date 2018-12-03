@@ -7,21 +7,16 @@ hands_position			= 0.033,-0.1895,0.039
 hands_orientation		= 2,2,0
 hands_position_16x9		= 0.033,-0.1895,0.039
 hands_orientation_16x9	= 2,2,0
-
 aim_hud_offset_pos		= 0,0,0
 aim_hud_offset_rot		= 0,0,0
-
 gl_hud_offset_pos			= 0,0,0
 gl_hud_offset_rot			= 0,0,0
-
 lean_hud_offset_pos		= 0,0,0
 lean_hud_offset_rot		= 0,0,0
 
 [detector_simple_hud]:detector_base_hud
-
 item_position				= -0.072424,0.030392,-0.012213
 item_orientation			= 324.640503,-189.627350,-183.009415
-
 item_visual                   	= dynamics\devices\dev_detector_1\dev_detector_1_hud
 
 fire_point			= 0,0,-0.05
@@ -54,7 +49,6 @@ onoff_light_range		= 0.1
 
 item_position				= -0.078949,0.039172,-0.019197
 item_orientation			= 320.606964,-194.089020,-186.572464
-
 item_visual                   	= dynamics\devices\dev_detector_2\dev_detector_2_hud
 
 anm_show				= d2_draw, draw
@@ -74,6 +68,9 @@ anm_idle_16x9				= d2_idle, idle
 anm_idle_moving_16x9		= d2_move, move
 anm_idle_moving_crouch_16x9	= d2_crouch, move
 anm_idle_sprint_16x9		= d2_sprint, sprint
+
+flash_light_range                        = 0.1
+onoff_light_range                        = 0.1
 
 [detector_elite_hud]:detector_base_hud
 item_position				= -0.071685,0.036188,-0.009934
@@ -102,7 +99,6 @@ anm_idle_sprint_16x9		= d3_sprint, sprint
 [detector_scientific_hud]:detector_base_hud
 item_position				= -0.071685,0.036188,-0.009934
 item_orientation			= 314.589233,-186.420761,-189.323669
-
 item_visual                   	= dynamics\devices\dev_detector_4\dev_detector_4_hud
 
 anm_show				= d3_draw, draw
@@ -148,7 +144,7 @@ inv_grid_width                           = 1
 inv_grid_height                          = 1
 inv_grid_x                               = 2
 inv_grid_y                               = 5
-cost                                     = 500
+cost                                     = 10000
 default_to_ruck                          = false
 
 af_radius                                = 30
@@ -157,7 +153,7 @@ af_vis_radius                            = 3
 af_class_1                               = af_cristall
 af_sound_1_                              = detectors\art_beep1
 af_freq_1                                = 0.05, 2
-af_class_2                               = af_night_star
+af_class_2                               = af_fireball
 af_sound_2_                              = detectors\art_beep1
 af_freq_2                                = 0.05, 2
 
@@ -206,6 +202,18 @@ af_class_14                              = af_rusty_thorn
 af_sound_14_                             = detectors\art_beep1
 af_freq_14                               = 0.05, 2
 
+af_class_15		= af_fonar
+af_sound_15_	= detectors\art_beep1
+af_freq_15		= 0.05, 2
+
+af_class_16		= af_thorn
+af_sound_16_		= detectors\art_beep1
+af_freq_16		= 0.05, 2
+
+af_class_17		= af_skull_miser
+af_sound_17_		= detectors\art_beep1
+af_freq_17		= 0.05, 2
+
 attach_angle_offset                      = -1.303,-1.493,-1.202
 attach_position_offset                   = 0.110,-0.019,0.000
 
@@ -213,6 +221,7 @@ attach_bone_name                         = bip01_l_hand
 auto_attach                              = false
 snd_draw                                 = weapons\ak74_draw
 snd_holster                              = weapons\generic_holster
+
 
 [detector_advanced]:detector_simple
 $spawn                                   = "devices\detector_advanced"
@@ -230,51 +239,75 @@ inv_grid_width                           = 1
 inv_grid_height                          = 1
 inv_grid_x                               = 3
 inv_grid_y                               = 5
-cost                                     = 1000
+cost                                     = 30000
 hud                                      = detector_advanced_hud
 
 af_radius                                = 30
 af_vis_radius                            = 4
 
-af_class_15                              = af_dummy_glassbeads
-af_sound_15_                             = detectors\art_beep1
-af_freq_15                               = 0.05, 2
-
-af_class_16                              = af_fireball
-af_sound_16_                             = detectors\art_beep1
-af_freq_16                               = 0.05, 2
-
-af_class_17                              = af_vyvert
-af_sound_17_                             = detectors\art_beep1
-af_freq_17                               = 0.05, 2
-
-af_class_18                              = af_soul
+af_class_18                              = af_dummy_glassbeads
 af_sound_18_                             = detectors\art_beep1
 af_freq_18                               = 0.05, 2
 
-af_class_19                              = af_fuzz_kolobok
+af_class_19                              = af_night_star
 af_sound_19_                             = detectors\art_beep1
 af_freq_19                               = 0.05, 2
 
-af_class_20                              = af_electra_moonlight
+af_class_20                              = af_vyvert
 af_sound_20_                             = detectors\art_beep1
 af_freq_20                               = 0.05, 2
 
-af_class_21                              = af_dummy_battery
+af_class_21                              = af_soul
 af_sound_21_                             = detectors\art_beep1
 af_freq_21                               = 0.05, 2
 
-af_class_22                              = af_ameba_slug
+af_class_22                              = af_fuzz_kolobok
 af_sound_22_                             = detectors\art_beep1
 af_freq_22                               = 0.05, 2
 
-af_class_23                              = af_rusty_kristall
+af_class_23                              = af_electra_moonlight
 af_sound_23_                             = detectors\art_beep1
 af_freq_23                               = 0.05, 2
 
-af_class_24                              = af_gravi
+af_class_24                              = af_dummy_battery
 af_sound_24_                             = detectors\art_beep1
 af_freq_24                               = 0.05, 2
+
+af_class_25                              = af_dummy_spring
+af_sound_25_                             = detectors\art_beep1
+af_freq_25                               = 0.05, 2
+
+af_class_26                              = af_ameba_slug
+af_sound_26_                             = detectors\art_beep1
+af_freq_26                               = 0.05, 2
+
+af_class_27                              = af_rusty_kristall
+af_sound_27_                             = detectors\art_beep1
+af_freq_27                               = 0.05, 2
+
+af_class_28		= af_cocoon
+af_sound_28_	= detectors\art_beep1
+af_freq_28		= 0.05, 2
+
+af_class_29		= af_repei
+af_sound_29_	= detectors\art_beep1
+af_freq_29		= 0.05, 2
+
+af_class_30		= af_fountain
+af_sound_30_	= detectors\art_beep1
+af_freq_30		= 0.05, 2
+
+af_class_31		= af_generator
+af_sound_31_	= detectors\art_beep1
+af_freq_31		= 0.05, 2
+
+af_class_32		= af_tapeworm
+af_sound_32_	= detectors\art_beep1
+af_freq_32		= 0.05, 2
+
+af_class_33		= af_moh
+af_sound_33_	= detectors\art_beep1
+af_freq_33		= 0.05, 2
 
 [detector_elite]:detector_advanced
 $spawn                                   = "devices\detector_elite"
@@ -289,7 +322,7 @@ inv_grid_width                           = 1
 inv_grid_height                          = 1
 inv_grid_x                               = 4
 inv_grid_y                               = 5
-cost                                     = 2000
+cost                                     = 90000
 
 ; elite x="0.00096" y="0.0035"
 ui_p                                     = -0.02904,0.01,0.0364
@@ -298,45 +331,69 @@ ui_r                                     = 0,90,0
 af_radius                                = 30
 af_vis_radius                            = 5
 
-af_class_25                              = af_dummy_spring
-af_sound_25_                             = detectors\art_beep1
-af_freq_25                               = 0.05, 2
-
-af_class_26                              = af_eye
-af_sound_26_                             = detectors\art_beep1
-af_freq_26                               = 0.05, 2
-
-af_class_27                              = af_fire
-af_sound_27_                             = detectors\art_beep1
-af_freq_27                               = 0.05, 2
-
-af_class_28                              = af_gold_fish
-af_sound_28_                             = detectors\art_beep1
-af_freq_28                               = 0.05, 2
-
-af_class_29                              = af_baloon
-af_sound_29_                             = detectors\art_beep1
-af_freq_29                               = 0.05, 2
-
-af_class_30                              = af_glass
-af_sound_30_                             = detectors\art_beep1
-af_freq_30                               = 0.05, 2
-
-af_class_31                              = af_dummy_dummy
-af_sound_31_                             = detectors\art_beep1
-af_freq_31                               = 0.05, 2
-
-af_class_32                              = af_ice
-af_sound_32_                             = detectors\art_beep1
-af_freq_32                               = 0.05, 2
-
-af_class_33                              = af_ameba_mica
-af_sound_33_                             = detectors\art_beep1
-af_freq_33                               = 0.05, 2
-
-af_class_34                              = af_rusty_sea
+af_class_34                              = af_eye
 af_sound_34_                             = detectors\art_beep1
-af_freq_34                               = 0.05, 2
+af_freq_34                              = 0.05, 2
+
+af_class_35                              = af_fire
+af_sound_35_                             = detectors\art_beep1
+af_freq_35                              = 0.05, 2
+
+af_class_36                              = af_gravi
+af_sound_36_                             = detectors\art_beep1
+af_freq_36                              = 0.05, 2
+
+af_class_37                              = af_gold_fish
+af_sound_37_                             = detectors\art_beep1
+af_freq_37                              = 0.05, 2
+
+af_class_38                              = af_baloon
+af_sound_38_                             = detectors\art_beep1
+af_freq_38                              = 0.05, 2
+
+af_class_39                              = af_glass
+af_sound_39_                             = detectors\art_beep1
+af_freq_39                               = 0.05, 2
+
+af_class_40                              = af_dummy_dummy
+af_sound_40_                             = detectors\art_beep1
+af_freq_40                               = 0.05, 2
+
+af_class_41                              = af_ice
+af_sound_41_                             = detectors\art_beep1
+af_freq_41                               = 0.05, 2
+
+af_class_42                              = af_ameba_mica
+af_sound_42_                             = detectors\art_beep1
+af_freq_42                               = 0.05, 2
+
+af_class_43                              = af_rusty_sea
+af_sound_43_                             = detectors\art_beep1
+af_freq_43                               = 0.05, 2
+
+af_class_44		= af_cell
+af_sound_44_	= detectors\art_beep1
+af_freq_44		= 0.05, 2
+
+af_class_45		= af_spaika
+af_sound_45_	= detectors\art_beep1
+af_freq_45		= 0.05, 2
+
+af_class_46		= af_fire_loop
+af_sound_46_	= detectors\art_beep1
+af_freq_46		= 0.05, 2
+
+af_class_47		= af_kislushka
+af_sound_47_	= detectors\art_beep1
+af_freq_47		= 0.05, 2
+
+af_class_48		= af_ball
+af_sound_48_	= detectors\art_beep1
+af_freq_48		= 0.05, 2
+
+af_class_49		= af_elektron
+af_sound_49_	= detectors\art_beep1
+af_freq_49		= 0.05, 2
 
 [detector_scientific]:detector_elite
 $spawn                                   = "devices\detector_scientific"
@@ -356,7 +413,7 @@ inv_grid_width                           = 1
 inv_grid_height                          = 1
 inv_grid_x                               = 5
 inv_grid_y                               = 5
-cost                                     = 15500
+cost                                     = 300000
 
 ; elite x="0.00096" y="0.0035"
 ui_p                                     = -0.02904,0.01,0.0364
@@ -365,9 +422,97 @@ ui_r                                     = 0,90,0
 af_radius                                = 30
 af_vis_radius                            = 6
 
-af_class_35                              = af_oasis_heart
-af_sound_35_                             = detectors\art_beep1
-af_freq_35                               = 0.05, 2
+af_class_50                              = af_oasis_heart
+af_sound_50_                             = detectors\art_beep1
+af_freq_50                              = 0.05, 2
+
+af_class_51                              = af_dummy_pellicle
+af_sound_51_                             = detectors\art_beep1
+af_freq_51                              = 0.05, 2
+
+af_class_52		= af_signet
+af_sound_52_	= detectors\art_beep1
+af_freq_52		= 0.05, 2
+
+af_class_53		= af_bat
+af_sound_53_	= detectors\art_beep1
+af_freq_53		= 0.05, 2
+
+af_class_54		= af_sun
+af_sound_54_	= detectors\art_beep1
+af_freq_54		= 0.05, 2
+
+af_class_55		= af_ear
+af_sound_55_	= detectors\art_beep1
+af_freq_55		= 0.05, 2
+
+af_class_56		= af_chelust
+af_sound_56_	= detectors\art_beep1
+af_freq_56		= 0.05, 2
+
+af_class_57		= af_atom
+af_sound_57_	= detectors\art_beep1
+af_freq_57		= 0.05, 2
+
+af_class_58		= af_lighthouse
+af_sound_58_	= detectors\art_beep1
+af_freq_58		= 0.05, 2
+
+af_class_59		= af_zhelch
+af_sound_59_	= detectors\art_beep1
+af_freq_59		= 0.05, 2
+
+af_class_60		= af_sandstone
+af_sound_60_	= detectors\art_beep1
+af_freq_60		= 0.05, 2
+
+af_class_61		= af_black_angel
+af_sound_61_	= detectors\art_beep1
+af_freq_61		= 0.05, 2
+
+af_class_62		= af_grapes
+af_sound_62_	= detectors\art_beep1
+af_freq_62		= 0.05, 2
+
+af_class_63		= af_star_phantom
+af_sound_63_	= detectors\art_beep1
+af_freq_63		= 0.05, 2
+
+af_class_64		= af_medallion
+af_sound_64_	= detectors\art_beep1
+af_freq_64		= 0.05, 2
+
+af_class_65		= af_peas
+af_sound_65_	= detectors\art_beep1
+af_freq_65		= 0.05, 2
+
+af_class_66		= af_serofim
+af_sound_66_	= detectors\art_beep1
+af_freq_66		= 0.05, 2
+
+af_class_67		= af_kogot
+af_sound_67_	= detectors\art_beep1
+af_freq_67		= 0.05, 2
+
+af_class_68		= af_vaselisk
+af_sound_68_	= detectors\art_beep1
+af_freq_68		= 0.05, 2
+
+af_class_69		= af_geliy
+af_sound_69_	= detectors\art_beep1
+af_freq_69		= 0.05, 2
+
+af_class_70		= af_gimlet
+af_sound_70_	= detectors\art_beep1
+af_freq_70		= 0.05, 2
+
+af_class_71		= af_dragon_eye
+af_sound_71_	= detectors\art_beep1
+af_freq_71		= 0.05, 2
+
+af_class_72		= af_monolith
+af_sound_72_	= detectors\art_beep1
+af_freq_72		= 0.05, 2
 
 af_class_36                              = af_dummy_pellicle
 af_sound_36_                             = detectors\art_beep1

@@ -18,6 +18,9 @@
 	<string id="st_dyn_news_boar_6">
 		<text>a pack of wild boars</text>
 	</string>
+	<string id="st_dyn_news_boar_7">
+		<text>Кабан</text>
+	</string>
 
 	<string id="st_dyn_news_dog_1">
 		<text>a dog</text>
@@ -37,6 +40,9 @@
 	<string id="st_dyn_news_dog_6">
 		<text>a pack of dogs</text>
 	</string>
+	<string id="st_dyn_news_dog_7">
+		<text>Слепой пёс</text>
+	</string>
 
 	<string id="st_dyn_news_flesh_1">
 		<text>a flesh</text>
@@ -54,7 +60,10 @@
 		<text>We got attacked by flesh</text>
 	</string>
 	<string id="st_dyn_news_flesh_6">
-		<text>a pound of flesh</text>
+		<text>A pound of fleshd</text>
+	</string>
+	<string id="st_dyn_news_flesh_7">
+		<text>Плоть</text>
 	</string>
 
 	<string id="st_dyn_news_pseudodog_1">
@@ -75,6 +84,9 @@
 	<string id="st_dyn_news_pseudodog_6">
 		<text>a pack of pseudodogs</text>
 	</string>
+	<string id="st_dyn_news_pseudodog_7">
+		<text>Псевдособака</text>
+	</string>
 
 	<string id="st_dyn_news_snork_1">
 		<text>a snork</text>
@@ -93,6 +105,9 @@
 	</string>
 	<string id="st_dyn_news_snork_6">
 		<text>A group of snorks</text>
+	</string>
+	<string id="st_dyn_news_snork_7">
+		<text>Снорк</text>
 	</string>
 
 	<string id="st_dyn_news_bloodsucker_1">
@@ -113,6 +128,9 @@
 	<string id="st_dyn_news_bloodsucker_6">
 		<text>a pack of bloodsuckers</text>
 	</string>
+	<string id="st_dyn_news_bloodsucker_7">
+		<text>Кровосос</text>
+	</string>
 
 	<string id="st_dyn_news_burer_1">
 		<text>a burer</text>
@@ -130,7 +148,10 @@
 		<text>We ran into some burers</text>
 	</string>
 	<string id="st_dyn_news_burer_6">
-		<text>a bunch of burers</text>
+		<text>A bunch of burers</text>
+	</string>
+	<string id="st_dyn_news_burer_7">
+		<text>Бюрер</text>
 	</string>
 
 	<string id="st_dyn_news_chimera_1">
@@ -151,6 +172,9 @@
 	<string id="st_dyn_news_chimera_6">
 		<text>a pack of chimeras</text>
 	</string>
+	<string id="st_dyn_news_chimera_7">
+		<text>Химера</text>
+	</string>
 
 	<string id="st_dyn_news_controller_1">
 		<text>a controller</text>
@@ -168,7 +192,10 @@
 		<text>We ran into a school of controllers</text>
 	</string>
 	<string id="st_dyn_news_controller_6">
-		<text>a school of controllers</text>
+		<text>A school of controllers</text>
+	</string>
+	<string id="st_dyn_news_controller_7">
+		<text>Контролёр</text>
 	</string>
 
 	<string id="st_dyn_news_poltergeist_1">
@@ -187,7 +214,10 @@
 		<text>We ran into poltergeists</text>
 	</string>
 	<string id="st_dyn_news_poltergeist_6">
-		<text>a couple poltergeists</text>
+		<text>A couple poltergeists</text>
+	</string>
+	<string id="st_dyn_news_poltergeist_7">
+		<text>Полтергейст</text>
 	</string>
 
 	<string id="st_dyn_news_gigant_1">
@@ -206,7 +236,10 @@
 		<text>We were attacked by pseudogiants</text>
 	</string>
 	<string id="st_dyn_news_gigant_6">
-		<text>a couple pseudogiants</text>
+		<text>A couple pseudogiants</text>
+	</string>
+	<string id="st_dyn_news_gigant_7">
+		<text>Псевдогигант</text>
 	</string>
 	
 	<string id="st_dyn_news_karlik_1">
@@ -225,7 +258,7 @@
 		<text>We were attacked by karliks</text>
 	</string>
 	<string id="st_dyn_news_karlik_6">
-		<text>a couple midgets</text>
+		<text>A couple midgets</text>
 	</string>
 
 	<string id="st_dyn_news_tushkano_1">
@@ -246,43 +279,53 @@
 	<string id="st_dyn_news_tushkano_6">
 		<text>a pack of tushkano</text>
 	</string>
+	<string id="st_dyn_news_tushkano_7">
+		<text>Тушкан</text>
+	</string>
+
 
 	<string id="st_dyn_news_psy_dog_1">
-		<text>a psy-dog</text>
+		<text>a psy dog</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_2">
-		<text>We got attacked by a psy-dog</text>
+		<text>We got attacked by a psy dog</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_3">
-		<text>We got ambushed by a psy-dog</text>
+		<text>We got ambushed by a psy dog</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_4">
-		<text>We ran into a pack of psy-dogs</text>
+		<text>We ran into a pack of psy dogs</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_5">
-		<text>We got attacked by psy-dogs</text>
+		<text>We got attacked by psy dogs</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_6">
-		<text>a pack of psy-dogs</text>
+		<text>a pack of psy dogs</text>
+	</string>
+	<string id="st_dyn_news_psy_dog_7">
+		<text>Пси-собака</text>
 	</string>
 
 	<string id="st_dyn_news_psy_dog_phantom_1">
 		<text>a phantom</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_2">
-		<text>We got attacked by a psy-dog</text>
+		<text>We got attacked by a psy dog</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_3">
-		<text>We ran into a psy-dog</text>
+		<text>We ran into a psy dog</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_4">
-		<text>We got ambushed by psy-dogs</text>
+		<text>We got ambushed by psy dogs</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_5">
-		<text>We ran into a pack of psy-dogs</text>
+		<text>We ran into a pack of psy dogs</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_6">
-		<text>a pack of psy-dogs</text>
+		<text>a pack of psy dogs</text>
+	</string>
+	<string id="st_dyn_news_psy_dog_phantom_7">
+		<text>Фантом пси-собаки</text>
 	</string>
 
 	<string id="st_dyn_news_zombied_1">
@@ -301,7 +344,10 @@
 		<text>We ran into a bunch of zombies</text>
 	</string>
 	<string id="st_dyn_news_zombied_6">
-		<text>a squad of zombies</text>
+		<text>A squad of zombies</text>
+	</string>
+	<string id="st_dyn_news_zombied_7">
+		<text>Зомбированный</text>
 	</string>
 
 	<string id="st_dyn_news_cat_1">
@@ -320,7 +366,10 @@
 		<text>We got jumped by some fucking cats</text>
 	</string>
 	<string id="st_dyn_news_cat_6">
-		<text>a group of cats</text>
+		<text>A group of cats</text>
+	</string>
+	<string id="st_dyn_news_cat_7">
+		<text>Кот</text>
 	</string>
 
 	<string id="st_dyn_news_fracture_1">
@@ -339,7 +388,10 @@
 		<text>Fractures attacked us</text>
 	</string>
 	<string id="st_dyn_news_fracture_6">
-		<text>a group of fractures</text>
+		<text>A group of fractures</text>
+	</string>
+	<string id="st_dyn_news_fracture_7">
+		<text>Излом</text>
 	</string>
 
 	<string id="st_dyn_news_zombie_1">
@@ -358,7 +410,10 @@
 		<text>We ran into some zombies</text>
 	</string>
 	<string id="st_dyn_news_zombie_6">
-		<text>a bunch of zombies</text>
+		<text>A bunch of zombies</text>
+	</string>
+	<string id="st_dyn_news_zombie_7">
+		<text>Зомби</text>
 	</string>
 
 	<string id="st_dyn_news_rat_1">
@@ -377,7 +432,10 @@
 		<text>We got attacked by a bunch of rats</text>
 	</string>
 	<string id="st_dyn_news_rat_6">
-		<text>a bunch of rats</text>
+		<text>A bunch of rats</text>
+	</string>
+	<string id="st_dyn_news_rat_7">
+		<text>Крысы</text>
 	</string>
 
 	
@@ -1120,7 +1178,7 @@
 		<text>in Red Forest,</text>
 	</string>
 	<string id="st_dyn_news_l11_hospital">
-		<text>in Deserted Hospital</text>
+		<text>в Заброшенном Госпитале.</text>
 	</string>
 	<string id="st_dyn_news_l11_pripyat">
 		<text>in Pripyat,</text>
@@ -1139,6 +1197,9 @@
 	</string>
 	<string id="st_dyn_news_l12_stancia_2">
 		<text>in Chernobyl NPP (North),</text>
+	</string>
+	<string id="st_dyn_news_l13_generators">
+		<text>на Генераторах.</text>
 	</string>
 	<!-- Daleko -->
 	<string id="st_dyn_l09_deadcity_daleko_1">
@@ -1453,20 +1514,20 @@
 	<string id="st_dyn_l10_red_forest_daleko_6">
 		<text>the road to Jupiter</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_1">
-		<text>the road to Cordon</text>
+	<string id="st_dyn_l01_escape_daleko_10">
+		<text>перехода на кордон</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_2">
-		<text>the gas station</text>
+	<string id="st_dyn_l01_escape_daleko_11">
+		<text>заправки</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_3">
-		<text>the sawmill</text>
+	<string id="st_dyn_l01_escape_daleko_12">
+		<text>лесопилки</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_4">
-		<text>the bridge</text>
+	<string id="st_dyn_l01_escape_daleko_13">
+		<text>моста</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_5">
-		<text>the road to Dark Valley</text>
+	<string id="st_dyn_l01_escape_daleko_14">
+		<text>перехода в ТД</text>
 	</string>
 	<string id="st_dyn_l08_yantar_daleko_1">
 		<text>the anomaly behind the plant</text>
@@ -1896,20 +1957,20 @@
 	<string id="st_dyn_l10_red_forest_blizko_6">
 		<text>on the road to Jupiter</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_1">
-		<text>at the exit to Cordon</text>
+	<string id="st_dyn_l01_escape_blizko_10">
+		<text>у перехода на кордон</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_2">
-		<text>at the gas station</text>
+	<string id="st_dyn_l01_escape_blizko_11">
+		<text>на заправке</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_3">
-		<text>at the sawmill</text>
+	<string id="st_dyn_l01_escape_blizko_12">
+		<text>на лесопилке</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_4">
-		<text>on the bridge</text>
+	<string id="st_dyn_l01_escape_blizko_13">
+		<text>у моста</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_5">
-		<text>at the exit to Dark Valley</text>
+	<string id="st_dyn_l01_escape_blizko_14">
+		<text>у перехода в ТД</text>
 	</string>
 	<string id="st_dyn_l08_yantar_blizko_1">
 		<text>at the anomaly behind the plant</text>

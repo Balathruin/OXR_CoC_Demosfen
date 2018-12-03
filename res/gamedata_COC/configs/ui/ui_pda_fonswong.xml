@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<gui>
+<!-- Окно ПДА -->
+	<okno x="100" y="100" width="824" height="568" stretch="1">
+	<!-- Постоянные объекты ПДА -->
+		<texture x="0" y="0" width="0" height="0">ui\ui_pda_FonSwong</texture>
+		<caption_title x="88" y="40" width="644" height="486" stretch="1">
+		    	<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
+        </caption_title>
+		<clock_wnd x="170" y="57" width="165" height="29" alignment="c" hint="Текущее игровое время">
+			<text font="letterica18" r="220" g="220" b="220" />
+		</clock_wnd>
+		<btn_exit x="38" y="282" width="50" height="50" hint="Выход из ПДА">
+			<!-- <texture_e>exit_a</texture_e>
+			<texture_h>exit_b</texture_h> -->
+		</btn_exit>
+	<!-- Постоянные объекты ПДА от плеера 1-->
+		<btn_track_back x="99" y="500" width="31" height="23" hint="Предыдущий трек">
+			<texture_e>back_a</texture_e>
+			<texture_h>back_b</texture_h>
+		</btn_track_back>
+		<btn_track_play x="152" y="500" width="25" height="25" hint="Играть текущий трек">
+			<texture_e>play_a</texture_e>
+			<texture_h>play_b</texture_h>
+		</btn_track_play>
+		<btn_track_pause x="152" y="500" width="25" height="25" hint="Приостановить текущий трек">
+			<texture_e>pause_a</texture_e>
+			<texture_h>pause_b</texture_h>
+		</btn_track_pause>
+		<btn_track_next x="199" y="500" width="31" height="23" hint="Следующий трек">
+			<texture_e>next_a</texture_e>
+			<texture_h>next_b</texture_h>
+		</btn_track_next>
+		<btn_track_list_down x="700" y="66" width="31" height="23" hint="Развернуть список треков">
+			<texture_e>list_down_a</texture_e>
+		</btn_track_list_down>
+		<btn_track_list_up x="700" y="66" width="31" height="23" hint="Свернуть список треков">
+			<texture_e>list_up_a</texture_e>
+		</btn_track_list_up>
+	    <check_repeat x="80" y="65" width="44" height="29" hint="Повторять трек">
+			<texture>ui_inGame2_checkbox</texture>
+		</check_repeat>
+		<check_queue x="80" y="85" width="44" height="29" hint="Повторять весь список треков">
+			<texture>ui_inGame2_checkbox</texture>
+		</check_queue>
+	<!-- Лист звуков -->
+		<mp3_list x="1" y="3" width="480" height="300" item_height="22" can_select="1" always_show_scroll="0">
+			<frame1 x="0" y="0" width="488" height="308">
+				<texture>ui_tablist_textbox</texture>
+			</frame1>
+	        <font font="letterica16" r="210" g="210" b="210"/>
+		</mp3_list>	
+	<!-- Главная вкладка -->
+		<vkladka_general x="112" y="72" width="683" height="467">
+			<btn_in_chat x="100" y="165" width="100" height="100" stretch="1" hint="Войти в чат">
+				<texture_e>ui\ui_pda_chat_in_FonSwong</texture_e>
+			</btn_in_chat>
+			<btn_in_player x="268" y="165" width="100" height="100" stretch="1" hint="Развернуть список треков">
+				<texture_e>ui\ui_pda_player_in_FonSwong</texture_e>
+			</btn_in_player>
+			<btn_in_about x="435" y="165" width="100" height="100" stretch="1" hint="О ПДА">
+				<texture_e>ui\ui_pda_about_in_FonSwong</texture_e>
+			</btn_in_about>
+		</vkladka_general>
+	<!-- Вкладка Чат -->
+		<vkladka_chat x="112" y="72" width="683" height="467" >
+		<!-- Постоянные объекты Чата -->
+		     <scroll_v x="0" y="0" width="680" height="353" right_ident="50" left_ident="20" top_indent="0" bottom_indent="0" vert_interval="0" always_show_scroll="0"/>
+                <edit1 x="200" y="368" width="400" height="25" hint="Поле для ввода сообщения">
+				<texture>ui_inGame2_edit_box_1</texture>
+				<text font="letterica18" align="l" r="220" g="220" b="220"/>
+			</edit1>
+			<btn_vvod x="350" y="400" width="120" height="25" hint="Отправить сообщение">
+				<texture>ui_inGame2_Mp_bigbuttone</texture>
+				<text font="letterica18">Ввод</text>
+			</btn_vvod>
+			<btn_clear x="200" y="400" width="120" height="25" hint="Очистить историю сообщений">
+				<texture>ui_inGame2_Mp_bigbuttone</texture>
+				<text font="letterica18">Очистить историю</text>
+			</btn_clear>
+		<!-- Динамическая форма для заполнения истории Чата -->
+			<okno_msg width="371" height="88">
+				<caption x="0" y="10" width="0" height="0" hint="Прозвище отправителя"/>
+				<!-- <content x="100" y="30" width="371" height="48" complex_mode="1" hint="Сообщение отправителя">
+					<text font="letterica18" color="ui_1"/>
+				</content> -->
+				<icon x="0" y="30" width="84" height="48" stretch="1" hint="Аватара отправителя"/>
+			</okno_msg>
+		</vkladka_chat>
+		
+	<!-- Вкладка Справка -->
+		<vkladka_about x="112" y="72" width="683" height="467">
+			<pic x="70" y="220" width="250" height="250" stretch="1">
+				<texture>ui\ui_pda_about_pict_FonSwong</texture>
+			</pic>
+			<scroll_v x="330" y="87" width="300" height="300" always_show_scroll="0"/>
+			<!-- <content_text width="300" complex_mode="1">
+				<text font="letterica18" color="ui_1"/>
+			</content_text> -->
+		</vkladka_about>
+	</okno>
+</gui>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="encyclopedia_stason174_info">
+		<text>Все достижения игры</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_1">
+		<text>ПЕРФЕКЦИОНИСТ</text>
+	</string>
+	<string id="encyclopedia_stason174_info_1_text">
+		<text>
+		• Условие: Получить все доступные, в зависимости от выбранной группировки и наличия “Сюжетного режима”, достижения.\n
+		• Эффект: "Сердце Оазиса" начнёт спавниться в тайниках.\n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_2">
+		<text>ПРИЗЕМЛЕНИЕ</text>
+	</string>
+	<string id="encyclopedia_stason174_info_2_text">
+		<text>
+		• Условие: Уничтожить 3 вертолёта, или уничтожить 1 вертолёт с помощью РПГ-7. \n
+		• Эффект: На замену уничтоженных Ми-23 прилетят вертолёты Ми-2. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_3">
+		<text>СВОБОДНЫЙ ПУТЬ (НЕДОСТУПНО БЕЗ “СЮЖЕТНОГО РЕЖИМА”)</text>
+	</string>
+	<string id="encyclopedia_stason174_info_3_text">
+		<text>
+		• Условие: Отключить пси-установки на Янтаре и Выжигателе. \n
+		• Эффект: Пути через Янтарь и Радар вновь открыты для сталкеров. (Отключение пси-щита на Янтаре и Радаре.) \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_4">
+		<text>ГЕОЛОГ</text>
+	</string>
+	<string id="encyclopedia_stason174_info_4_text">
+		<text>
+		• Условие: Найти 50 артефактов. (Артефакты с трупов, тайников и артефакт “Компас” в Рыжем лесу не засчитываются.) \n
+		• Эффект: Повышена вероятность спавна артефактов. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_5">
+		<text>СОСТОЯТЕЛЬНЫЙ КЛИЕНТ</text>
+	</string>
+	<string id="encyclopedia_stason174_info_5_text">
+		<text>
+		• Условие: Накопить 300к. \n
+		• Эффект: Торговцы чаще предлагают Вам самые редкие и дорогие товары. \n
+		</text>
+	</string>	
+	<string id="encyclopedia_stason174_info_6">
+		<text>ИНФОРМАТОР</text>
+	</string>
+	<string id="encyclopedia_stason174_info_6_text">
+		<text>
+		• Условие: Отдать торговцам 25 КПК.\n
+		• Эффект: Отныне торговцы будут платить Вам дополнительный процент за каждый найденный КПК. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_7">
+		<text>ПЛЮШКИН</text>
+	</string>
+	<string id="encyclopedia_stason174_info_7_text">
+		<text>
+		• Условие: Найти и обчистить 100 тайников. \n
+		• Эффект: Ваше везение на тайники слегка увеличилось. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_8">
+		<text>ТЕХНИЧЕСКОЕ ПРЕВОСХОДСТВО</text>
+	</string>
+	<string id="encyclopedia_stason174_info_8_text">
+		<text>
+		• Условие: Принести механику все инструменты. \n
+		• Эффект: Вы можете полностью улучшать своё снаряжение у еще одного техника, помимо Лесника. (Также рем. комплекты начнут восстанавливать на 35 процентов вместо 25 процентов) \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_9">
+		<text>ЛЕГЕНДА</text>
+	</string>
+	<string id="encyclopedia_stason174_info_9_text">
+		<text>
+		• Условие: Получить ранг “Легенда” >= 60000 очков в статистике. \n
+		• Эффект: Вы можете брать больше сталкеров в отряд. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_10">
+		<text>РЕНТГЕНОТЕРАПИЯ (НЕДОСТУПНО ДЛЯ “МОНОЛИТА” И ЗОМБИРОВАННЫХ)</text>
+	</string>
+	<string id="encyclopedia_stason174_info_10_text">
+		<text>
+		• Условие: Пережить 25 выбросов и 25 пси-штормов. \n
+		• Эффект: Даже без приёма анабиотика у Вас есть шанс пережить выброс или пси-шторм вне укрытия. \n
+		</text>
+	</string>	
+	<string id="encyclopedia_stason174_info_11">
+		<text>ОХОТНИК НА МУТАНТОВ</text>
+	</string>
+	<string id="encyclopedia_stason174_info_11_text">
+		<text>
+		• Условие: Убить 500 мутантов, или собрать с их тел 250 фрагментов. \n
+		• Эффект: Отныне есть шанс получить больше трофеев с тела убитого мутанта. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_12">
+		<text> ПОСЛЕДНЕЕ СЛОВО</text>
+	</string>
+	<string id="encyclopedia_stason174_info_12_text">
+		<text>
+		• Условие: Убить 500 сталкеров, или взять в плен 50. \n
+		• Эффект: Пленённые сталкеры иногда могут выдать координаты сразу нескольких тайников. \n
+		</text>
+	</string>
+	
+	<string id="encyclopedia_stason174_info_13">
+		<text> ТУРИСТ</text>
+	</string>
+	<string id="encyclopedia_stason174_info_13_text">
+		<text>
+		• Условие: Посетить все локации. \n
+		• Эффект: Вы начинаете вспоминать о тайниках, замеченных во время предыдущих вылазок. \n
+		</text>
+	</string>
+	
+</string_table>

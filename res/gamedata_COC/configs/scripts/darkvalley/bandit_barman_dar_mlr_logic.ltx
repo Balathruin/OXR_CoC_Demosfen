@@ -1,0 +1,75 @@
+[logic@bandit_barman_dar_mlr]
+suitable = {=check_npc_name(bandit_barman_dar_mlr)} true
+prior = 250
+active = animpoint@stand
+level_spot = trader
+trade = misc\trade\bandit_barman_dar_mlr_trade.ltx
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@stand]
+cover_name = bandit_barman_dar_mlr_cover
+avail_animations = animpoint_stay_table
+use_camp = false
+meet = meet@trader
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+on_info = {=is_night} sleeper@sleeper_1
+out_restr = val_lager_bandits_restrictor
+
+[sleeper@sleeper_1]
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {!actor_enemy} true, false
+path_main = bandit_barman_dar_mlr_sleeper
+meet = no_meet
+on_info = {!is_night} animpoint@stand
+out_restr = val_lager_bandits_restrictor
+
+[meet@trader]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+
+[beh@general]
+meet = no_meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+sound_idle = state
+behavior_state = beh_move
+target = waypoint
+walk_dist = 100
+jog_dist = 220
+wait_anim = guard
+walk_anim = patrol
+jog_anim = patrol
+run_anim = rush
+delay_anim = guard
+
+[logic@val_smart_terrain_7_4_beh_trade_1]
+active = beh@val_smart_terrain_7_4_beh_trade_1
+suitable = {=npc_has_items_to_sell(val_smart_terrain_7_4) !surge_started} true
+prior = 65
+
+[beh@val_smart_terrain_7_4_beh_trade_1]:beh@general
+pt1 = 20000,choose | pos:42.630737304688,0.25857001543045,38.077613830566 look:41.751892089844,0.024679005146027,41.720329284668
+pt2 = 9000,zat_b14_give_artefact_act | pos:42.630737304688,0.25857001543045,38.077613830566 look:41.751892089844,0.024679005146027,41.720329284668 sig:trade
+pt3 = 15000,guard | pos:42.630737304688,0.25857001543045,38.077613830566 look:41.751892089844,0.024679005146027,41.720329284668
+on_signal = trade | %=trade_job_sell_items%
+path_end = loop

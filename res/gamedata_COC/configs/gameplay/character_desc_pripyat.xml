@@ -173,15 +173,16 @@
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
         [spawn] \n
-        wpn_gauss = 1 \n
+        pri_a17_gauss_rifle \n
         wpn_colt1911 = 1 \n
         ammo_gauss = 1 \n
         ammo_11.43x23_fmj = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food_army.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- pri_a15_sokolov -->
@@ -195,7 +196,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>6430</rank>
+    <rank>3215</rank>
     <reputation>69</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_1_face_1</visual>
     <supplies>
@@ -209,7 +210,7 @@
 #include "gameplay\character_drugs_2.xml"
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     <start_dialog>pri_a15_sokolov_start_dialog</start_dialog>
     <actor_dialog>pri_a15_sokolov_where_from</actor_dialog>
     <actor_dialog>pri_a15_sokolov_jupiter</actor_dialog>
@@ -237,7 +238,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>8428</rank>
+    <rank>4214</rank>
     <reputation>159</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_ecolog_face_1</visual>
     <supplies>
@@ -250,7 +251,7 @@
 #include "gameplay\character_drugs_2.xml"
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     <start_dialog>pri_a15_sokolov_start_dialog</start_dialog>
     <actor_dialog>pri_a15_sokolov_pripyat_ready</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
@@ -266,7 +267,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>8586</rank>
+    <rank>4293</rank>
     <reputation>447</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_1_face_1</visual>
     <supplies>
@@ -280,7 +281,7 @@
 #include "gameplay\character_drugs_2.xml"
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     <start_dialog>pri_a15_sokolov_start_dialog</start_dialog>
     <actor_dialog>pri_a15_sokolov_pripyat_ready</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
@@ -296,7 +297,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>14854</rank>
+    <rank>7427</rank>
     <reputation>-840</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
@@ -311,7 +312,7 @@
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a22_military_skelja" team_default = "1">
@@ -324,7 +325,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>13284</rank>
+    <rank>6642</rank>
     <reputation>-1692</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
@@ -339,7 +340,7 @@
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a22_military_yarmoshuk" team_default = "1">
@@ -352,7 +353,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>12756</rank>
+    <rank>6378</rank>
     <reputation>1646</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3</visual>
     <supplies>
@@ -361,13 +362,14 @@
         ammo_5.45x39_fmj = 1 \n
         wpn_fort \n
         ammo_9x18_fmj = 1 \n
+        pri_a25_explosive_charge_item = 1 \n
         wpn_binoc = 1 \n
 #include "gameplay\character_food_army.xml"
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- pri_a15_military_recon_leader -->
@@ -381,7 +383,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>8654</rank>
+    <rank>4327</rank>
     <reputation>-366</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -395,7 +397,7 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- pri_a15_military_recon_1 -->
@@ -409,7 +411,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>8494</rank>
+    <rank>4247</rank>
     <reputation>-1067</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -422,7 +424,7 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- pri_a15_military_recon_2 -->
@@ -436,7 +438,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>14264</rank>
+    <rank>7132</rank>
     <reputation>1814</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
@@ -449,7 +451,7 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- pri_a15_military_recon_3 -->
@@ -463,7 +465,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>12650</rank>
+    <rank>6325</rank>
     <reputation>-2284</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
@@ -476,7 +478,7 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a21_sentry_lieutenant_stecenko" team_default = "1">
@@ -489,7 +491,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>7102</rank>
+    <rank>3551</rank>
     <reputation>-505</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -503,7 +505,7 @@
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a25_army_medic" team_default = "1">
@@ -516,7 +518,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>9686</rank>
+    <rank>4843</rank>
     <reputation>270</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2_face_1</visual>
     <supplies>
@@ -531,7 +533,7 @@
 #include "gameplay\character_drugs_mil.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     <start_dialog>pri_a25_army_medic_start_dialog</start_dialog>
     <actor_dialog>pri_a25_army_medic_rescued</actor_dialog>
     <actor_dialog>pri_a25_army_medic_supply_medicine</actor_dialog>
@@ -549,17 +551,18 @@
     <class>pri_b306_envoy</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>28322</rank>
+    <rank>14161</rank>
     <reputation>2160</reputation>
     <visual>actors\stalker_merc\stalker_merc_2_face_1</visual>
     <supplies>
         [spawn] \n
         wpn_ak74 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -572,7 +575,7 @@
     <class>pri_a15_actor</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>494</rank>
+    <rank>247</rank>
     <reputation>147</reputation>
     <visual>actors\stalker_hero\stalker_hero_1</visual>
     <supplies>
@@ -584,7 +587,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_vano" team_default = "1">
@@ -595,7 +598,7 @@
     <class>pri_a15_vano</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>11416</rank>
+    <rank>5708</rank>
     <reputation>629</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy_face_1</visual>
     <supplies>
@@ -606,7 +609,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_sokolov_scene" team_default = "1">
@@ -619,7 +622,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>8992</rank>
+    <rank>4496</rank>
     <reputation>123</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_ecolog_face_1</visual>
     <supplies>
@@ -630,7 +633,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_zulus" team_default = "1">
@@ -643,7 +646,7 @@
     <community>stalker</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
-    <rank>17766</rank>
+    <rank>8883</rank>
     <reputation>104</reputation>
     <visual>actors\stalker_dolg\stalker_dolg_1_face_1</visual>
     <supplies>
@@ -655,7 +658,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_wanderer" team_default="1">
@@ -668,7 +671,7 @@
     <community>stalker</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>10324</rank>
+    <rank>5162</rank>
     <reputation>430</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1_face_1</visual>
     <supplies>
@@ -679,7 +682,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_military_tarasov" team_default = "1">
@@ -692,7 +695,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>6812</rank>
+    <rank>3406</rank>
     <reputation>1213</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -703,7 +706,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_military_2" team_default = "1">
@@ -716,7 +719,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>10294</rank>
+    <rank>5147</rank>
     <reputation>1535</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
@@ -727,7 +730,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_military_3" team_default = "1">
@@ -740,7 +743,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>7440</rank>
+    <rank>3720</rank>
     <reputation>-1470</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -751,7 +754,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="pri_a15_military_4" team_default = "1">
@@ -764,7 +767,7 @@
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>14348</rank>
+    <rank>7174</rank>
     <reputation>2440</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3</visual>
     <supplies>
@@ -775,7 +778,7 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- Pripyat B35 -->
@@ -786,7 +789,7 @@
     </map_icon>
     <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
     <class>pri_a22_army_signaller</class>
-    <community>stalker</community>
+    <community>trader</community>
     <mechanic_mode>1</mechanic_mode>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
@@ -854,7 +857,7 @@
     <community>killer</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>14964</rank>
+    <rank>7482</rank>
     <reputation>848</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
@@ -862,11 +865,12 @@
         wpn_rpg7 \n
         wpn_usp = 1 \n
         ammo_11.43x23_fmj = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -880,7 +884,7 @@
     <community>killer</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>10862</rank>
+    <rank>5431</rank>
     <reputation>2300</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
@@ -888,11 +892,12 @@
         wpn_rpg7 \n
         wpn_usp = 1 \n
         ammo_11.43x23_fmj = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -906,18 +911,20 @@
     <community>killer</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>4342</rank>
+    <rank>2171</rank>
     <reputation>-1463</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <supplies>
         [spawn] \n
         wpn_usp = 1 \n
         ammo_11.43x23_fmj = 1 \n
+        pri_b35_lab_x8_key \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -931,7 +938,7 @@
     <community>killer</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>5314</rank>
+    <rank>2657</rank>
     <reputation>828</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <supplies>
@@ -940,11 +947,12 @@
         ammo_5.56x45_ap = 1 \n
         wpn_usp = 1 \n
         ammo_11.43x23_fmj = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -958,7 +966,7 @@
     <community>killer</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>3948</rank>
+    <rank>1974</rank>
     <reputation>14</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <supplies>
@@ -967,11 +975,12 @@
         ammo_5.56x45_ap = 1 \n
         wpn_usp = 1 \n
         ammo_11.43x23_fmj = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -993,6 +1002,11 @@
 #include "gameplay\loadouts\monolith_base.ltx"
 #include "gameplay\loadouts\monolith_sniper.ltx"
         [spawn] \n
+        wpn_svd = 1 \n
+        ammo_7.62x54_7h1 = 3 \n
+        wpn_colt1911 = 1 \n
+        ammo_11.43x23_fmj = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
     </supplies>
@@ -1010,7 +1024,7 @@
     <community>monolith</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
-    <rank>18288</rank>
+    <rank>9144</rank>
     <reputation>-471</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
@@ -1019,6 +1033,8 @@
         ammo_12x76_zhekan = 1 \n
         wpn_desert_eagle = 1 \n
         ammo_11.43x23_hydro = 1 \n
+        pri_b36_monolith_hiding_place_pda = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
     </supplies>
@@ -1036,7 +1052,7 @@
     <community>monolith</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
-    <rank>17692</rank>
+    <rank>8846</rank>
     <reputation>-1033</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
@@ -1045,10 +1061,11 @@
         ammo_9x39_ap = 3 \n
         wpn_colt1911 = 1 \n
         ammo_11.43x23_hydro = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
@@ -1062,7 +1079,7 @@
     <community>stalker</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>976</rank>
+    <rank>488</rank>
     <reputation>136</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy_face_2</visual>
     <supplies>
@@ -1079,7 +1096,7 @@
 #include "gameplay\character_drugs_sci.xml"
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     <start_dialog>pri_b305_strelok_dialog</start_dialog>
     <actor_dialog>pri_b305_strelok_about_information</actor_dialog>
     <actor_dialog>pri_b305_strelok_about_station</actor_dialog>
@@ -1096,7 +1113,7 @@
     <class>pri_a28_evac_com</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>6172</rank>
+    <rank>3086</rank>
     <reputation>-1762</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -1105,12 +1122,13 @@
         ammo_5.45x39_ap = 1 \n
         wpn_fort \n
         ammo_9x18_pmm = 1 \n
+#include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
     <actor_dialog>actor_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <specific_character id="sim_default_stalker_pri_a16" team_default = "1">
@@ -1121,7 +1139,7 @@
     <class>sim_default_stalker_pri_a16</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>11882</rank>
+    <rank>5941</rank>
     <money min="5000" max="10000" infinitive="0"/>
     <reputation>-1140</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
@@ -1131,7 +1149,7 @@
         ammo_9x39_ap = 1 \n
         wpn_sig220 = 1 \n
         ammo_11.43x23_hydro = 1 \n
-        wpn_spas12 \n
+        wpn_vepr \n
         ammo_12x76_zhekan = 1 \n
         grenade_f1 = 4 \n
 #include "gameplay\character_items_3.xml"
@@ -1140,7 +1158,7 @@
 #include "gameplay\character_drugs_sci.xml"
 
     </supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
     
@@ -1154,7 +1172,7 @@
     <community>stalker</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\freedom\</snd_config>
-    <rank>18778</rank>
+    <rank>9389</rank>
     <reputation>2309</reputation>
     <money min="1000000" max="1000000" infinitive="1"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_face_2</visual>
@@ -1162,7 +1180,7 @@
         [spawn] \n
         wpn_svd = 1 \n
         ammo_7.62x54_7h1 = 3 \n
-        wpn_beretta = 1 \n
+        wpn_glock = 1 \n
         ammo_9x19_pbp = 1 \n
 #include "gameplay\character_food_army.xml"
 #include "gameplay\character_drugs.xml"
@@ -1170,7 +1188,7 @@
     </supplies>
     <actor_dialog>jup_b19_freedom_yar_pripyat_healing</actor_dialog>
     <actor_dialog>jup_b19_freedom_yar_break_dialog</actor_dialog>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
     </specific_character>
     
     <!-- MONOLITH TRADER -->
@@ -1179,7 +1197,7 @@
     <icon>ui_inGame2_monolith_trade</icon>
     <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
     <class>pri_monolith_monolith_trader_stalker</class>
-    <community>monolith</community>
+    <community>trader</community>
     <map_icon x="1" y="0"/>
     <terrain_sect>stalker_terrain</terrain_sect>
     <rank>23692</rank>
@@ -1193,6 +1211,16 @@
         <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
 		<actor_dialog>dm_broker_dialog</actor_dialog>
+		    <!---------- mlr ----------->
+		<actor_dialog>main_monolith_mlr_task_4_dlg_4</actor_dialog>			
+		<actor_dialog>request_to_no_trade_dialog_monolith</actor_dialog>
+        <actor_dialog>ussr_level_of_buy_equpments</actor_dialog>
+        <actor_dialog>meet_guid_l11pri_mon_haron</actor_dialog>
+        <actor_dialog>meet_guid_l11pri_mon_haron_list</actor_dialog>
+        <actor_dialog>travel_guid_l11pri_mon_haron</actor_dialog>
+        <actor_dialog>find_blackbox_mlr_reward_haron</actor_dialog>		
+			<!---------- mlr ----------->
+        <actor_dialog>minigames_propovednik</actor_dialog>
         <actor_dialog>actor_break_dialog</actor_dialog>
         </specific_character>
         
@@ -1202,7 +1230,7 @@
         <icon>ui_inGame2_monolith_tech</icon>
         <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
         <class>pri_monolith_monolith_mechanic_stalker</class>
-        <community>monolith</community>
+        <community>trader</community>
         <map_icon x="1" y="0"/>
         <terrain_sect>stalker_terrain</terrain_sect>
         <mechanic_mode>1</mechanic_mode>
@@ -1211,7 +1239,8 @@
         <visual>actors\stalker_monolith\stalker_monolith_2_face_2</visual>
         <snd_config>characters_voice\human_01\monolith\</snd_config>
     <supplies></supplies>
-#include "gameplay\character_criticals.xml"
+#include "gameplay\character_criticals_4.xml"
+        <actor_dialog>dm_broker_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>

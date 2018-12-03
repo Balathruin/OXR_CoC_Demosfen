@@ -1,0 +1,26 @@
+[smart_terrain]
+squad_id = 7
+max_population = 3
+respawn_params = respawn@pol_smart_terrain_2_3
+respawn_idle = 60000
+
+[respawn@pol_smart_terrain_2_3]
+spawn_zombie
+spawn_controller
+
+[spawn_zombie]
+spawn_squads = simulation_zombie
+spawn_num = 3
+
+[spawn_controller]
+spawn_squads = simulation_controller
+spawn_num = 1
+
+[exclusive]
+guard_1 = pole\pol_smart_terrain_2_3_smart_logic.ltx
+patrol_1 = pole\pol_smart_terrain_2_3_smart_logic.ltx
+camp_animpoint_1 = pole\pol_smart_terrain_2_3_smart_logic.ltx
+camp_animpoint_2 = pole\pol_smart_terrain_2_3_smart_logic.ltx
+camp_animpoint_3 = pole\pol_smart_terrain_2_3_smart_logic.ltx
+camp_animpoint_4 = pole\pol_smart_terrain_2_3_smart_logic.ltx
+camp_animpoint_5 = pole\pol_smart_terrain_2_3_smart_logic.ltx

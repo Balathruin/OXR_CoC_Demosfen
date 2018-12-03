@@ -1,156 +1,278 @@
-; This plugin determines the items a player spawns with when they create their character.
 
-; A custom loadout can be used if the "custom_loadout" value in axr_options.ltx is set to true.
-; Multiple weapons can be spawned at once by separating each section name with a comma.
-[custom]
+
+
+
+[custom]; If custom_loadout in axr_options.ltx is true, custom section will be loaded instead of the faction choices
+money 			= 1000
+weapons			= wpn_abakan, wpn_pb			; Can add more options separated by comma
 device_torch
-medkit = 3, 3
-money = 1000
-novice_outfit
-weapons = wpn_abakan, wpn_pb
-wpn_abakan
 wpn_binoc
 wpn_knife
+novice_outfit
+wpn_abakan
+medkit 			= 3,3
 
 [shared]
-device_torch
+device_torch_low
 wpn_binoc
-wpn_knife
-medkit
+mineral_water = 3
+geiger_dead
+hammer_inv
+matches = 3
+army_bowler
 
 [stalker]:shared
-money = 300, 500, 700
+money                                              = 300,500,700
 novice_outfit
+wpn_knife_survival
+
 
 [bandit]:shared
+helm_rp_bala
 bandit_novice_outfit
-money = 300, 500, 700
+money                                              = 400,600,800
+wpn_knife_survival
 
 [ecolog]:shared
 ecolog_guard_outfit
-money = 300, 500, 700
+money                                              = 300,500,700,1000
+wpn_knife
 
 [dolg]:shared
+helm_rp_beret_black
 dolg_novice_outfit
-money = 300, 500, 700
+money                                              = 300,500,700,1000
+wpn_knife_spetsnaz
 
 [freedom]:shared
-money = 300, 500, 700
+helm_rp_bandana
+money                                              = 300,500,700,1000
 svoboda_novice_outfit
+wpn_knife_colt
 
 [killer]:shared
+helm_rp_bala
 merc_outfit
-money = 750, 1000, 1500
+money                                              = 1000,1500,2000
+wpn_knife_extrema
 
 [army]:shared
+helm_rp_beret_blue
 army_outfit
-money = 300, 500, 700
+money                                              = 300,500,700,1000
+wpn_knife_spetsnaz
 
 [monolith]:shared
-money = 300, 500, 700
+money                                              = 300,500,700,1000
 monolith_outfit
+wpn_knife_hunting
 
 [csky]:shared
 cs_novice_outfit
-money = 300, 500, 700
+money                                              = 300,500,700
+wpn_knife_extrema
 
 [zombied]:stalker
 
 [1]
-antirad = 0, 1
-bandage = 1, 2
-bread = 0, 2
-conserva = 0, 1
-kolbasa = 0, 2
-vodka = 0, 1
+antirad                                            = 0,1
+bandage                                            = 0,3
+bread                                              = 0,2
+conserva                                           = 0,2
+kolbasa                                            = 0,2
+medkit                                             = 0,2
+psy_blockade                                       = 0,1
+vodka                                              = 0,2
 
 [2]
-antirad = 0, 1
-bandage = 1, 1
-bread = 0, 1
-energy_drink = 0, 1
-kolbasa = 1, 2
-vodka = 0, 1
+antirad                                            = 0,1
+bread                                              = 0,1
+dectector_simple                                   = 0,1
+kolbasa                                            = 0,2
+medkit                                             = 0,4
+vodka                                              = 0,2
+wpn_mine                                           = 0,2
 
 [3]
-bandage = 1, 1
-bread = 0, 1
-conserva = 1, 1
-energy_drink = 1, 1
-kolbasa = 0, 1
+antirad                                            = 0,1
+bread                                              = 0,2
+conserva                                           = 0,2
+energy_drink                                       = 0,1
+grenade_f1                                         = 0,2
+kolbasa                                            = 0,1
+medkit                                             = 0,1
 
 [4]
-bandage = 1, 2
-bread = 0, 1
-energy_drink = 0, 1
-grenade_rgd5 = 0, 1
-kolbasa = 0, 2
-vodka = 0, 1
+bandage                                            = 0,3
+bread                                              = 0,1
+energy_drink                                       = 0,2
+grenade_f1                                         = 0,1
+itm_backpack                                       = 0,1
+kolbasa                                            = 0,1
+medkit                                             = 0,2
+pda_common                                         = 0,1
+psy_blockade                                       = 0,1
+wpn_mine                                           = 0,1
 
 [5]
-antirad = 0, 1
-bread = 0, 1
-conserva = 0, 1
-grenade_rgd5 = 0, 1
-kolbasa = 0, 1
-bandage = 1, 1
-vodka = 0, 1
+antirad                                            = 0,1
+antirad                                            = 0,1
+bread                                              = 0,1
+conserva                                           = 0,2
+grenade_f1                                         = 0,1
+itm_gunsmith_toolkit                               = 0,1
+kolbasa                                            = 0,1
+medkit                                             = 0,2
+vodka                                              = 0,2
+wpn_mine                                           = 0,1
 
-[choose_only_one_army]
+[choose_only_one]
 wpn_ak74u
+wpn_ak74u_sk1
+wpn_ak74u_sk2
+wpn_ak74u_sk3
+wpn_ak74u_sk4
+;wpn_beretta
+;wpn_beretta_sk1
+;wpn_bm16
+;wpn_bm16_full
+;wpn_colt1911
+;wpn_colt1911_sk1
+;wpn_colt1911_sk2
+;wpn_colt1911_sk3
 wpn_fort
+;wpn_hpsa
+;wpn_hpsa_sk1
+;wpn_mp5
+wpn_vityaz
+wpn_pb
 wpn_pm
+wpn_tt33
+wpn_tt33_sk1
+wpn_pm_sk1
+;wpn_sig220
+;wpn_sig220_sk1
+;wpn_sig220_sk2
+;wpn_toz34
+wpn_toz34_obrez
+wpn_toz34_obrez_sk1
+;wpn_toz34_sk1
+;wpn_usp
+;wpn_walther
 
-[choose_only_one_bandit]
-wpn_bm16
-wpn_fort
-wpn_hpsa
-wpn_pm
-wpn_toz34
-
-[choose_only_one_csky]
-wpn_bm16
-wpn_fort
-wpn_hpsa
-wpn_pm
-wpn_toz34
-
-[choose_only_one_dolg]
-wpn_ak74u
-wpn_fort
-wpn_pm
-wpn_toz34
-
-[choose_only_one_ecolog]
-wpn_hpsa
-wpn_mp5
-wpn_walther
-
-[choose_only_one_freedom]
+[wpn_stalker]
 wpn_beretta
-wpn_mp5
-wpn_walther
-wpn_wincheaster1300
-
-[choose_only_one_killer]
-wpn_beretta
-wpn_mp5
-wpn_walther
-
-[choose_only_one_monolith]
-wpn_ak74u
+wpn_bm16
 wpn_colt1911
+wpn_fort
+wpn_hpsa
+wpn_mp5
+wpn_pb
+wpn_pm
+wpn_sig220
+wpn_toz34
+wpn_walther
+
+[wpn_army]
+wpn_ak74u
+wpn_fort
+wpn_pm
+wpn_pb
+wpn_toz34
+
+[wpn_bandit]
+wpn_beretta
+wpn_bm16
+wpn_fort
+wpn_hpsa
+wpn_mp5
+wpn_pb
+wpn_pm
+wpn_toz34
+wpn_walther
+
+[wpn_csky]
+wpn_ak74u
 wpn_lr300
+wpn_beretta
+wpn_colt1911
+wpn_fort
+wpn_hpsa
+wpn_mp5
+wpn_pb
+wpn_pm
+wpn_sig220
+wpn_toz34
+wpn_walther
+
+[wpn_ecolog]
+wpn_beretta
+wpn_hpsa
+wpn_mp5
+wpn_sig220
+wpn_walther
 wpn_usp
 
-[choose_only_one_stalker]
-wpn_bm16
-wpn_fort
-wpn_pm
-wpn_toz34
+[wpn_freedom]
+wpn_lr300
+wpn_beretta
+wpn_colt1911
+wpn_hpsa
+wpn_mp5
+wpn_sig220
+wpn_walther
 
-[choose_only_one_zombied]
-wpn_bm16
+[wpn_killer]
+wpn_sig550
+wpn_lr300
+wpn_beretta
+wpn_colt1911
+wpn_hpsa
+wpn_mp5
+wpn_sig220
+wpn_walther
+wpn_usp
+
+[wpn_monolith]
+wpn_ak74u
+wpn_lr300
+wpn_sig550
+wpn_beretta
+wpn_colt1911
+wpn_hpsa
+wpn_mp5
+wpn_sig220
+wpn_walther
+wpn_usp
+
+[wpn_zombied]
+wpn_beretta
+wpn_colt1911
 wpn_fort
 wpn_hpsa
+wpn_pb
 wpn_pm
+wpn_sig220
+wpn_walther
+wpn_usp
+
+
+[choose_only_one_stalker]:wpn_stalker
+
+[choose_only_one_bandit]:wpn_bandit
+
+[choose_only_one_killer]:wpn_killer
+
+[choose_only_one_army]:wpn_army
+
+[choose_only_one_dolg]:wpn_army
+
+[choose_only_one_freedom]:wpn_freedom
+
+[choose_only_one_ecolog]:wpn_ecolog
+
+[choose_only_one_csky]:wpn_csky
+
+[choose_only_one_monolith]:wpn_monolith
+
+[choose_only_one_zombied]:wpn_zombied

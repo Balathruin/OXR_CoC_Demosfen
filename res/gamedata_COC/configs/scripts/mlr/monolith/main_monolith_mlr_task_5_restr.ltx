@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {=actor_on_level(pripyat) =actor_community(actor_monolith) +main_monolith_mlr_task_5_dlg_1} sr_idle@start1 %=create_squad(main_monolith_mlr_task_5_attack_squad:pri_a28_base) =send_tip(main_monolith_mlr_task_5_dlg_1_mess_attack:monolith_inquisitor)%
+
+[sr_idle@start1]
+on_info = {=actor_on_level(pripyat) =actor_community(actor_monolith) +neutral_killer_sim_mlr_squad_nil +stalker_defenders_pri_a16_mlr_mon_task_5_nil +jup_b19_freedom_yar_squad_nil +merc_pri_a16_trader_mlr_squad_nil +merc_pri_a16_tesak_mlr_squad_nil} nil %=send_tip(agr_main_monolith_mlr_task_5_attack_done_message:mon_teacher)%

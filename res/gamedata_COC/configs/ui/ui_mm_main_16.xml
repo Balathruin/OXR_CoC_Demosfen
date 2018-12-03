@@ -1,7 +1,7 @@
 <w>
   	<background x="0" y="0" width="1024" height="768">
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
+			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
 		</auto_static>
 	    <auto_static x="102" y="0" width="819" height="768" stretch="1">
 			<texture>ui_inGame2_background</texture>
@@ -110,13 +110,62 @@
 	<!-- Official theme by Noxx -->
 	<!-- https://www.youtube.com/watch?v=zP-SQJuSFos -->
 	<menu_sound random="0" >
-		<menu_music>music\menu</menu_music>
+		<menu_music>music\menu\menu_0</menu_music>
+		<menu_music>music\menu\menu_1</menu_music>
+		<menu_music>music\menu\menu_2</menu_music>
+		<menu_music>music\menu\menu_3</menu_music>
+		<menu_music>music\menu\menu_4</menu_music>
+		<menu_music>music\menu\menu_5</menu_music>
+		<menu_music>music\menu\menu_6</menu_music>
+		<menu_music>music\menu\menu_7</menu_music>
+		<menu_music>music\menu\menu_8</menu_music>
+		<menu_music>music\menu\menu_9</menu_music>
+		<menu_music>music\menu\menu_10</menu_music>
+
+		<menu_music>music\menu\menu_11</menu_music>
+		<menu_music>music\menu\menu_12</menu_music>
+		<menu_music>music\menu\menu_13</menu_music>
+		<menu_music>music\menu\menu_14</menu_music>
+		<menu_music>music\menu\menu_15</menu_music>
+		<menu_music>music\menu\menu_16</menu_music>
+		<menu_music>music\menu\menu_17</menu_music>
+		<menu_music>music\menu\menu_18</menu_music>
+		<menu_music>music\menu\menu_19</menu_music>
+		<menu_music>music\menu\menu_20</menu_music>
+		
+		<menu_music>music\menu\menu_21</menu_music>
+		<menu_music>music\menu\menu_22</menu_music>
+		<menu_music>music\menu\menu_23</menu_music>
+		<menu_music>music\menu\menu_24</menu_music>
+		<menu_music>music\menu\menu_25</menu_music>
+		<menu_music>music\menu\menu_26</menu_music>
+		<menu_music>music\menu\menu_27</menu_music>
+		<menu_music>music\menu\menu_28</menu_music>
+		<menu_music>music\menu\menu_29</menu_music>
+		<menu_music>music\menu\menu_30</menu_music>
+		<menu_music>music\menu\menu_31</menu_music>
+		<menu_music>music\menu\menu_32</menu_music>
+		<menu_music>music\menu\menu_33</menu_music>
+		<menu_music>music\menu\menu_34</menu_music>
+		<menu_music>music\menu\menu_35</menu_music>
+		<menu_music>music\menu\menu_36</menu_music>
+		<menu_music>music\menu\menu_37</menu_music>
+		<menu_music>music\menu\menu_38</menu_music>
     </menu_sound>
 
-	<static_version x="14" y="740">
+	<static_version x="14" y="735">
 		<text align="l" font="graffiti22" r="0" g="0" b="0" complex_mode="0"/>
 	</static_version>
 	
+	<static_version_2 x="180" y="735">
+		<text align="l" font="graffiti22" r="0" g="0" b="0" complex_mode="0"/>
+	</static_version_2>
+	
+	<static_version_3 x="440" y="735">
+		<text align="l" font="graffiti22" r="0" g="0" b="0" complex_mode="0"/>
+	</static_version_3>
+
+
 	<msg_wnd x="0" y="0" width="210" height="100">
 	    <background x="0" y="0" width="210" height="100">
 		    <texture>ui_icons_PDA_tooltips</texture>

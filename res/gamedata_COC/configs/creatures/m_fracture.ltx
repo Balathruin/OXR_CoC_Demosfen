@@ -15,9 +15,8 @@ visual				 = monsters\izlom\izlom
 corpse_visual		 = monsters\izlom\izlom
 icon = ui_npc_monster_fracture
 
-hit_fraction_monster = 0.7
-skin_armor = 0.01
-
+hit_fraction_monster = 0.8
+skin_armor = 0.1
 MaxHealthValue         = 1.0              ; range [0..200]
 
 rank = 3 
@@ -137,8 +136,8 @@ psy_health_v = 0.1						;скорость восстановления psy-здоровья
 immunities_sect				= fracture_normal_immunities
 
 ;открытые раны
-bleeding_v					= 0.04						;потеря крови при номинальной ране в секунду
-wound_incarnation_v			= 0.05				;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
+bleeding_v					= 0.4						;потеря крови при номинальной ране в секунду
+wound_incarnation_v			= 0.01				;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
 min_wound_size				= 0.01
 
 sleep_health = 1.0		;1.5				;ъю¤ЇЇшЎшхэЄv ёъюЁюёЄхщ шчьхэхэш  ярЁрьхЄЁют тю тЁхь  ёэр
@@ -309,6 +308,8 @@ still_visible_time          = 0					;The time (milliseconds) that the object is 
 visual				 = monsters\izlom\izlam
 MaxHealthValue		 = 0.75			; range [0..200]
 
+skin_armor				= 0.01
+
 rank = 1 
 spec_rank = weak
 
@@ -317,6 +318,8 @@ hit_fraction_monster = 0.6
 [fracture_strong]:fracture_normal
 visual				 = monsters\izlom\izlim
 MaxHealthValue		 = 1.5			; range [0..200]
+
+skin_armor				= 0.05
 
 rank = 6 
 spec_rank = strong
@@ -327,12 +330,16 @@ hit_fraction_monster = 0.4
 visual				 = monsters\izlom\izlum
 MaxHealthValue		 = 1.0			; range [0..200]
 
+skin_armor				= 0.03
+
 rank = 3 
 spec_rank = normal
 
 [fracture_3]:fracture_normal
 visual				 = monsters\izlom\izlem
 MaxHealthValue		 = 1.25			; range [0..200]
+
+skin_armor				= 0.03
 
 rank = 3 
 spec_rank = normal

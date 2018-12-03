@@ -280,6 +280,9 @@
             </phrase>
             <phrase id="4">
                 <text>cit_doctor_main_dialog_4</text>
+<!-- mlr -->
+                <action>transitions.open_agr_up_doctor_mlr</action>
+<!-- mlr -->
                 <action>dialogs_marsh.take_key</action>
                 <give_info>cit_jail_doctor_pryp_task</give_info>
                 <give_info>mar_doctor_found</give_info>

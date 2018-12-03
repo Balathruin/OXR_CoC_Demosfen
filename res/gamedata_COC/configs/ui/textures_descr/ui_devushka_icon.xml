@@ -1,0 +1,11 @@
+<w>
+	<file name="ui\devushka_icon">
+		<Texture id="devushka_icon" x="0" y="0" width="165" height="108"/>
+	</file>
+	
+	<file name="ui\ui_actor_portrets_romann">
+		<Texture id="anya_icon" x="0" y="0" width="165" height="108"/>
+	</file>
+	
+	
+</w>	

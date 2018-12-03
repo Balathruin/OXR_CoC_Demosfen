@@ -23,9 +23,9 @@ on_info = {=actor_in_zone(zat_b103_merc_inside_yard) -zat_b103_merc_task_done} %
 ;LEADER JOB
 
 [logic@surge_job_leader]
-suitable   = {=surge_started} true
+suitable   = {=check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active     = animpoint@leader
-prior      = 100
+prior      = 200
 on_hit = hit
 
 [animpoint@leader]
@@ -51,45 +51,45 @@ on_game_timer = 50 | {-zat_b103_merc_fight} %+zat_b103_merc_fight%
 ;JOB HEADERS  
 
 [logic@surge_job_1]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started} true
 active = animpoint@1
-prior = 60
+prior = 200
 on_hit = hit
 
 [logic@surge_job_2]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active = animpoint@2
-prior = 60
+prior = 200
 on_hit = hit
 
 [logic@surge_job_3]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active = animpoint@3
-prior = 60
+prior = 200
 on_hit = hit
 
 [logic@surge_job_4]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active = animpoint@4
-prior = 60
+prior = 200
 on_hit = hit
 
 [logic@surge_job_5]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active = animpoint@5
-prior = 60
+prior = 200
 on_hit = hit
 
 [logic@surge_job_6]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active = animpoint@6
-prior = 60
+prior = 200
 on_hit = hit
 
 [logic@surge_job_7]
-suitable = {=surge_started} true
+suitable = {!check_npc_name(zat_b103_lost_merc_leader) =surge_started}
 active = animpoint@7
-prior = 60
+prior = 200
 on_hit = hit
 
 ;JOB SECTIONS

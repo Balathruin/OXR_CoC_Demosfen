@@ -1,0 +1,10 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = {+fanat_kmb_1_give3} %+visit_esc_2_12_village_kmb_restr%
+on_info = {+fanat_kmb_1_give4} sr_idle@start2
+
+[sr_idle@start2]
+on_actor_inside = {+esc_5_9_atp_kmb_death} %+visit_esc_5_9_atp_kmb%
+on_info = {+fanat_kmb_3_give2} nil

@@ -1,0 +1,34 @@
+[logic@trucks_cemetery_bandit_mechanic]
+suitable = {=check_npc_name(trucks_cemetery_bandit_mechanic)} true
+prior = 200
+active = animpoint@base
+can_select_weapon = true
+dont_keep_items = true
+level_spot = mechanic
+
+[animpoint@base]
+cover_name = trucks_cemetery_bandit_mechanic_place
+avail_animations = animpoint_sit_normal
+use_camp = false
+reach_movement = walk_noweap
+reach_distance = 10
+meet = meet
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false

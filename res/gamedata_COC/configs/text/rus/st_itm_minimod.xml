@@ -9,9 +9,6 @@
 	<string id="st_itm_backpack_desc">
 		<text>Рюкзак из прочного материала, способный выдержать самые суровые погодные условия.\n \n%c[255,255,255,0] Чтобы сбросить на землю - дважды щёлкните по нему.</text>
 			</string>
-	<string id="st_itm_sleepbag_name">
-		<text>Спальный мешок</text>
-			</string>
 	<string id="st_itm_sleepbag_desc">
 		<text>Походный спальный мешок, достаточно тёплый, чтобы пережить ночь в Зоне.\n \n%c[255,255,255,0] Чтобы расстелить мешок - дважды щёлкните по нему.</text>
 			</string>
@@ -68,5 +65,11 @@
 	</string>
 	<string id="st_itm_stash_of_character">
 		<text>%s. Его тайник</text>
+	</string>
+	<string id="st_itm_tent_name">
+		<text>Военная палатка</text>
+	</string>
+	<string id="st_itm_tent_desc">
+		<text>Основное укрытие от дождя, ветра и мутантов. (Для развертывания)</text>
 	</string>
 </string_table>

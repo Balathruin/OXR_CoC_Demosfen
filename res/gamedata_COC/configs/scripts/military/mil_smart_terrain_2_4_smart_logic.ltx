@@ -1,0 +1,69 @@
+[logic@mil_smart_terrain_2_4_camp_work_1]
+active = animpoint@mil_smart_terrain_2_4_camp_work_1
+suitable = {!surge_started} true
+prior = 41
+
+[logic@mil_smart_terrain_2_4_camp_work_2]
+active = animpoint@mil_smart_terrain_2_4_camp_work_2
+suitable = {!surge_started} true
+prior = 41
+
+[logic@mil_smart_terrain_2_4_camp_work_3]
+active = animpoint@mil_smart_terrain_2_4_camp_work_3
+suitable = {!surge_started} true
+prior = 41
+
+[logic@mil_smart_terrain_2_4_camp_work_4]
+active = animpoint@mil_smart_terrain_2_4_camp_work_4
+suitable = {!surge_started} true
+prior = 41
+
+[animpoint@mil_smart_terrain_2_4_camp_work_1]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp1
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mil_smart_terrain_2_4_camp_work_5
+
+[animpoint@mil_smart_terrain_2_4_camp_work_2]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp2
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mil_smart_terrain_2_4_camp_work_6
+
+[animpoint@mil_smart_terrain_2_4_camp_work_3]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp3
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mil_smart_terrain_2_4_camp_work_7
+
+[animpoint@mil_smart_terrain_2_4_camp_work_4]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp4
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mil_smart_terrain_2_4_camp_work_8
+
+;rain
+
+[animpoint@mil_smart_terrain_2_4_camp_work_5]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp5
+use_camp = true
+turn_on_campfire = true
+on_info = {!is_rain} animpoint@mil_smart_terrain_2_4_camp_work_1
+
+[animpoint@mil_smart_terrain_2_4_camp_work_6]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp6
+use_camp = true
+turn_on_campfire = true
+on_info = {!is_rain} animpoint@mil_smart_terrain_2_4_camp_work_2
+
+[animpoint@mil_smart_terrain_2_4_camp_work_7]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp7
+use_camp = true
+turn_on_campfire = true
+on_info = {!is_rain} animpoint@mil_smart_terrain_2_4_camp_work_3
+
+[animpoint@mil_smart_terrain_2_4_camp_work_8]
+cover_name = mil_smart_terrain_2_4_animpoint_kamp8
+use_camp = true
+turn_on_campfire = true
+on_info = {!is_rain} animpoint@mil_smart_terrain_2_4_camp_work_4

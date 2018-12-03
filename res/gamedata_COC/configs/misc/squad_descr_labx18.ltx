@@ -13,14 +13,16 @@ spawn_point = dar_control_poltergeist_home
 story_id = dar_control_poltergeist_squad
 on_death = %+dar_door3_free%
 
+;mlr
 [dar_military_scout_squad]:online_offline_group
-faction = army
+faction = bandit
 relationship = enemy
 sympathy = 0
-npc = sim_default_military_4, sim_default_military_3, sim_default_military_3, sim_default_military_4
+npc = sim_default_bandit_3, sim_default_bandit_3, sim_default_bandit_3, sim_default_bandit_4
 target_smart = dar_military_scout
 story_id = dar_military_scout_squad
 on_death = %+dar_military_scout_squad_killed%
+;mlr
 
 [dar_poltergeist_ring_squad_1]:online_offline_group
 faction = monster

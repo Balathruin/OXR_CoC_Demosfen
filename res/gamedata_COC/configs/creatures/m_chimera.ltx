@@ -11,7 +11,7 @@ icon							= ui_npc_monster_snork		; @@@@@NEEDS REFACTORING@@@@@
 terrain				 			= chimera_terrain
 
 hit_fraction_monster = 0.2
-skin_armor = 0.5
+skin_armor = 0.4
 
 ;------------------------------------------------------------------------
 ; Influences
@@ -156,6 +156,7 @@ health_hit_part					= 1.0		;0.8			;процент хита, уходящий на отнимание здоровья
 power_hit_part					= 1.0		;0.9			;процент хита, уходящий на отнимание силы
 psy_health_v					= 0.1						;скорость восстановления psy-здоровья
 
+protections_sect 				= chimera_protections
 immunities_sect					= chimera_immunities
 
 ;открытые раны
@@ -297,11 +298,15 @@ velocity_factor		     		= 0.5
 luminocity_factor				= 2.5 				; фактор освещения (только для Актёра)
 transparency_threshold			= 0.25
 
+[chimera_protections]
+
+hit_fraction_monster = 0.2
+
 ;---------------------------------------------------------------------------------------------------------------------------------------------
 ;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
 ;---------------------------------------------------------------------------------------------------------------------------------------------
 [m_chimera_attack_params]
-jump_attack_1  		= 	0.3,		0.7,		700,       0.0, 1.0, 0.0,		-1.8, 1.8, -1.8, 1.8,							  2.5
+jump_attack_1  		= 	0.3,		0.7,		400,       0.0, 1.0, 0.0,		-1.8, 1.8, -1.8, 1.8,							  2.5
 
 [m_chimera_attack_effector]
 duality_h						= 0.1; 0.01 
@@ -375,16 +380,18 @@ immunities_sect = chimera_immunities_normal
 spec_rank     	= normal
 MaxHealthValue					= 1.0			; range [0..200]
 
+skin_armor = 0.7
+
 [chimera_immunities_normal]
-burn_immunity           = 0.3
-strike_immunity     	= 0;0.1
-shock_immunity      	= 0.3
-wound_immunity      	= 0.25
+burn_immunity     		= 0.2
+strike_immunity     	= 0.0
+shock_immunity      	= 0.2
+wound_immunity      	= 0.2
 radiation_immunity   	= 0.0
 telepatic_immunity    	= 0.0
-chemical_burn_immunity  = 0.3
-explosion_immunity    	= 0.2
-fire_wound_immunity   	= 0.2
+chemical_burn_immunity  = 0.2
+explosion_immunity    	= 0.5
+fire_wound_immunity   	= 0.3
 
 [chimera_normal2]:m_chimera_e
 visual		= monsters\chimera\chimera2
@@ -424,11 +431,13 @@ attack_params					= m_chimera_weak_attack_params
 
 MaxHealthValue					= 0.75			; range [0..200]
 
+skin_armor = 0.6
+
 [chimera_immunities_weak]
 burn_immunity           = 0.4
 strike_immunity     	= 0;0.15
 shock_immunity      	= 0.4
-wound_immunity      	= 0.35
+wound_immunity      	= 0.4
 radiation_immunity   	= 0.0
 telepatic_immunity    	= 0.0
 chemical_burn_immunity  = 0.4
@@ -439,7 +448,7 @@ fire_wound_immunity   	= 0.3
 ;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
 ;---------------------------------------------------------------------------------------------------------------------------------------------
 [m_chimera_weak_attack_params]
-jump_attack_1  		= 	0.3,		0.6,		600,       0.0, 1.0, 0.0,		-1.8, 1.8, -1.8, 1.8,							  2.5
+jump_attack_1  		= 	0.3,		0.55,		300,       0.0, 1.0, 0.0,		-1.8, 1.8, -1.8, 1.8,							  2.5
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;------------- Strong -------------
@@ -453,6 +462,8 @@ panic_threshold = 0.05
 immunities_sect = chimera_immunities_strong
 attack_params					= m_chimera_strong_attack_params
 MaxHealthValue					= 1.25			; range [0..200]
+
+skin_armor = 0.75
 
 [chimera_immunities_strong]
 burn_immunity           = 0.2
@@ -505,4 +516,4 @@ MaxHealthValue					= 1.33			; range [0..200]
 ;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
 ;---------------------------------------------------------------------------------------------------------------------------------------------
 [m_chimera_strong_attack_params]
-jump_attack_1  		= 	0.3,		0.8,		800,       0.0, 1.0, 0.0,		-1.8, 1.8, -1.8, 1.8,							  2.5
+jump_attack_1  		= 	0.3,		0.5,		500,       0.0, 1.0, 0.0,		-1.8, 1.8, -1.8, 1.8,							  2.5

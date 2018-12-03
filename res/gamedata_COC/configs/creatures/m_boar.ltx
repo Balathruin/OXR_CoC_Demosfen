@@ -12,7 +12,7 @@ corpse_visual			= monsters\mutant_boar\mutant_boar_dead
 icon					= ui_npc_monster_mutant_boar
 
 hit_fraction_monster = 0.3
-skin_armor = 0.4
+skin_armor = 0.42
 
 ;------------------------------------------------------------------------
 ; Offline Alife
@@ -151,6 +151,7 @@ psy_health_v			= 0.1								;скорость восстановления psy-здоровья
 
 ;Immunities
 immunities_sect			= boar_immunities
+protections_sect		= boar_protections
 
 ;открытые раны
 bleeding_v					= 0.04						;потеря крови при номинальной ране в секунду
@@ -449,15 +450,27 @@ stand_drag_0		=	  1,	0.2,    1,	     0.25,    0.7,    0.7,    1.0,     0.7,   1.
 ; IMMUNITIES
 ;===========================================================================
 [boar_immunities]
-burn_immunity			= 0.6								;коэффициенты иммунитета
-strike_immunity			= 0.5
-shock_immunity			= 0.5
-wound_immunity			= 0.4
+burn_immunity			= 0.7								;коэффициенты иммунитета
+strike_immunity			= 0.6
+shock_immunity			= 0.6
+wound_immunity			= 0.5
 radiation_immunity		= 0.0
-telepatic_immunity		= 0.0
-chemical_burn_immunity	= 0.6
-explosion_immunity		= 0.6
-fire_wound_immunity		= 0.75
+telepatic_immunity		= 0.5
+chemical_burn_immunity	= 0.7
+explosion_immunity		= 0.2
+fire_wound_immunity		= 0.6
+
+;*********************************************************************************
+; PROTECTIONS
+;*********************************************************************************
+[boar_protections]
+
+hit_fraction_monster	= 0.3
+
+
+
+
+
 
 ;*********************************************************************************
 ; BASE PROFILES
@@ -479,16 +492,18 @@ spec_rank			= normal
 community			= boar
 MaxHealthValue         = 1.0              ; range [0..200]
 
+skin_armor				= 0.5
+
 [boar_immunities_normal]
 burn_immunity			= 0.6
 strike_immunity			= 0.5
 shock_immunity			= 0.5
-wound_immunity			= 0.4
+wound_immunity			= 0.5
 radiation_immunity		= 0.0
 telepatic_immunity		= 0.0
 chemical_burn_immunity	= 0.6
-explosion_immunity		= 0.6
-fire_wound_immunity		= 0.75
+explosion_immunity		= 0.4
+fire_wound_immunity		= 0.4
 
 [boar_attack_params_normal]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -516,6 +531,8 @@ spec_rank			= strong
 community			= boar
 MaxHealthValue         = 1.25              ; range [0..200]
 
+skin_armor				= 0.7
+
 ;*********************************************************************************
 ; STRONG PROFILE
 ;*********************************************************************************
@@ -523,12 +540,12 @@ MaxHealthValue         = 1.25              ; range [0..200]
 burn_immunity			= 0.5
 strike_immunity			= 0.4
 shock_immunity			= 0.4
-wound_immunity			= 0.3
+wound_immunity			= 0.4
 radiation_immunity		= 0.0
 telepatic_immunity		= 0.0
 chemical_burn_immunity	= 0.5
-explosion_immunity		= 0.5
-fire_wound_immunity		= 0.6
+explosion_immunity		= 0.3
+fire_wound_immunity		= 0.3
 
 [boar_attack_params_strong]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -560,6 +577,8 @@ visual				= monsters\mutant_boar\mutant_boar_small
 corpse_visual			= monsters\mutant_boar\mutant_boar_small_dead
 MaxHealthValue         = 0.75              ; range [0..200]
 
+skin_armor				= 0.33
+
 panic_threshold		= 0.3
 
 immunities_sect		= boar_immunities_weak
@@ -569,12 +588,12 @@ attack_params		= boar_attack_params_weak
 burn_immunity			= 0.7
 strike_immunity			= 0.6
 shock_immunity			= 0.6
-wound_immunity			= 0.5
+wound_immunity			= 0.6
 radiation_immunity		= 0.0
 telepatic_immunity		= 0.0
 chemical_burn_immunity	= 0.7
-explosion_immunity		= 0.7
-fire_wound_immunity		= 0.85
+explosion_immunity		= 0.6
+fire_wound_immunity		= 0.55
 
 [boar_attack_params_weak]
 ;---------------------------------------------------------------------------------------------------------------------------------------------
@@ -626,12 +645,12 @@ attack_params		= boar_attack_params_hard
 burn_immunity			= 0.45
 strike_immunity			= 0.35
 shock_immunity			= 0.35
-wound_immunity			= 0.25
+wound_immunity			= 0.35
 radiation_immunity		= 0.0
 telepatic_immunity		= 0.0
 chemical_burn_immunity	= 0.45
-explosion_immunity		= 0.45
-fire_wound_immunity		= 0.55
+explosion_immunity		= 0.25
+fire_wound_immunity		= 0.25
 
 [boar_attack_params_hard]
 ;---------------------------------------------------------------------------------------------------------------------------------------------

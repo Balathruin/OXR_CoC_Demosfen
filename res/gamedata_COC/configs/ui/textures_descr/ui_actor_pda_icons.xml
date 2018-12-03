@@ -45,4 +45,10 @@
 
 	    <texture id="ui_inGame2_PDA_icon_location" x="0" y="585" width="205" height="205" />
    </file>
+   
+   <file name="ui\svarog2artifact">
+
+		<texture id="ui_svarog2_artifact" x="32" y="32" width="64" height="64" />
+
+   </file>
 </w>

@@ -18,9 +18,6 @@
 	<string id="st_sleep">
 		<text>Sleep</text>
 			</string>
-	<string id="st_itm_actor_backpack_name">
-		<text>Field kit</text>
-			</string>
 	<string id="st_itm_actor_backpack_desc">
 		<text>A durable backpack with various pouches and compartments equipped with quick release clips; giving the ability to drop the field kit at a moment's notice.</text>
 	</string>
@@ -69,4 +66,10 @@
 	<string id="st_itm_stash_of_character">
 		<text>%s's stash</text>
 	</string>
+	<string id="st_itm_tent_name">
+		<text>Военная палатка</text>
+			</string>
+	<string id="st_itm_tent_desc">
+		<text>Основное укрытие от дождя, ветра и мутантов. (Для развертывания)</text>
+			</string>
 </string_table>

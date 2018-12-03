@@ -1,22 +1,168 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+<!--===========================================================
+<
+< TEXT  STRINGS FOR TASKS ON ESCAPE (CORDON) MAP
+<	CoC 1.4.08 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 07, 2016
+<
+<===========================================================-->
+
 <string_table>
-	<!-- FIND WEAPON FOR NIMBLE TASK -->
-	<string id="esc_2_12_stalker_nimble_task_1_name">
-		<text>Найти %s</text>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Sidorovich (Loner Trader) Default Storyline Task -->
+
+	<string id="drx_sl_esc_m_trader_default_task_name">
+		<text>Получить следующее задание</text>
 	</string>
-	<string id="esc_2_12_stalker_nimble_task_1_text">
-		<text>Шустрый попросил достать ему определенное оружие. Оно должно быть в хорошем состоянии, иначе клиент не станет его покупать.</text>
+	<string id="drx_sl_esc_m_trader_default_task_text">
+		<text>Получите следующее задание.</text>
 	</string>
-	<string id="esc_2_12_stalker_nimble_task_1_about">
-		<text>В общем, есть один клиент, который ищет определённое оружие, и мне нужен кто-то, кто сможет его достать. Если интересует, могу рассказать подробности. Ну так что?</text>
+	<string id="drx_sl_esc_m_trader_default_task_about">
+		<text>У меня нет больше заданий, но я знаю у кого они есть. Я пометил его местоположение на карте.</text>
 	</string>
-	<string id="esc_2_12_stalker_nimble_task_1_fetch_about">
-		<text>В общем, есть один клиент, который ищет определённое оружие, и мне нужен кто-то, кто сможет его достать. %s... Вот что мне нужно, но запомни: состояние оружия должно быть отличным. Клиент заплатил немалые деньги, и я не думаю, что ему понравится какой-нибудь ржавый кусок дерьма, который клинит через выстрел. Получишь большой процент от его суммы, если сделаешь все как надо. Возвращайся, когда найдешь.</text>
+	<string id="drx_sl_esc_m_trader_default_task_finish">
+		<text>Удачи, сталкер.</text>
 	</string>
-	<string id="esc_2_12_stalker_nimble_task_1_fetch_finish">
-		<text>Отлично, то, что надо! Я уверен, клиент будет доволен. Держи, как обещал.</text>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Sidorovich (Loner Trader) Mutant Safari Storyline Task -->
+
+	<string id="drx_sl_esc_m_trader_task_1_name">
+		<text>Сафари на мутантов</text>
 	</string>
-	<!-- ASSAULT BANDIT BASE FOR SIDOROVICH TASK -->
+	<string id="drx_sl_esc_m_trader_task_1_text">
+		<text>Вам поручено возглавить группу туристов для охоты на мутантов.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_task_1_about">
+		<text>У меня есть группа туристов, которые хотят убить мутанта. Возьми их на охоту, дай им острые ощущения. Только проследи, чтобы их самих не убили. Это плохо для бизнеса.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_task_1_finish">
+		<text>С охоты? Хорошо. Вот награда.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Sidorovich (Loner Trader) Rookie Initiation Storyline Task- -->
+
+	<string id="drx_sl_esc_m_trader_task_2_name">
+		<text>Подготовка новичков</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_task_2_text">
+		<text>Возьми группу новобранцев в Зону и покажи им, как здесь выживать.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_task_2_about">
+		<text>Новички в лагере совсем зелёные. Я обеспокоен тем, что они не проживут и дня в Зоне. Для бизнеса плохо, если они умирают - это уменьшает число моих клиентов. Я хочу, чтобы ты взял их в экспедицию в Зону. Покажи им, за чем надо следить, покажи им аномалии, научи их, как остаться в живых.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_task_2_finish">
+		<text>А, мои клиенты всё ещё живы. И им нужно будет купить у меня патронов, хе-хе. Спасибо, сталкер. Возьми это за беспокойство.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Xenotech (Loner Mechanic) Default Storyline Task -->
+
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_default_task_name">
+		<text>Получить следующее задание</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_default_task_text">
+		<text>Получите следующее задание.</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_default_task_about">
+		<text>Один мой знакомый хочет воспользоваться твоими услугами. Я пометил его местоположение на карте.</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_default_task_finish">
+		<text>Удачи, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Xenotech (Loner Mechanic) Rescue Missing Stalker Storyline Task -->
+
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_1_name">
+		<text>Пропавший сталкер</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_1_text">
+		<text>Сталкер пропал из лагеря, надо его найти.</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_1_about">
+		<text>Мне нужна помощь. Один сталкер вышел из моего лагеря и не пришел назад. Боюсь, что с ним может случиться беда. Я отмечу его последнее известное местоположение на карте. Возвращайся, если сможешь найти его.</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_1_finish">
+		<text>Ты спас его! Отличная работа, сталкер. Возьми это, в знак благодарности.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Xenotech (Loner Mechanic) Track Wounded Attacker Storyline Task -->
+
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_2_name">
+		<text>Преследование</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_2_text">
+		<text>Военный отряд напал на лагерь, Фургон и ребята убили их. Но одному из нападавших удалось скрыться. Надо его выследить.</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_2_about">
+		<text>Где ты был? Военный отряд напал на лагерь. Потом ещё этот чертов вертолет... Они уничтожили почти всех в лагере. Мы смогли прикончить большинство из них, но одному удалось уйти. Он может привести новый отряд, если не догнать его. Я покажу направление.</text>
+	</string>
+	<string id="drx_sl_esc_smart_terrain_5_7_loner_mechanic_stalker_task_2_finish">
+		<text>Спасибо, сталкер. Возьми это в качестве подарка.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- CHANGE FACTIONS TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Sidorovich (Loner Trader) Payoff Change Factions Task -->
+
+	<string id="drx_sl_esc_m_trader_cf_task_1_name">
+		<text>Заплатить Сидоровичу за право называться сталкером</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_cf_task_1_text">
+		<text>Сидорович поручится за вас за плату в размере 10000.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_cf_task_1_about">
+		<text>Что ж, это хорошо, что ты пришёл ко мне. У меня есть много связей здесь, в Зоне. Я могу поручиться за тебя, но это недёшево. Нужно будет кое-кого подмазать. Если сможешь заполучить для меня, скажем... 10000, я посмотрю, что можно сделать.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_cf_task_1_finish">
+		<text>Хорошо! Можешь считать себя вольным сталкером.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DYNAMIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Sidorovich (Loner Trader) Eliminate Car Park Bandits Task -->
+
 	<string id="esc_m_trader_task_1_name">
 		<text>Уничтожить бандитов на АТП</text>
 	</string>
@@ -29,7 +175,7 @@
 	<string id="esc_m_trader_task_1_finish">
 		<text>Отлично сработал, сталкер! Я вижу, мы сработаемся. Вот, как обещал:</text>
 	</string>
-	<!-- ASSASSINATION FOR SIDOROVICH TASK -->
+
 	<string id="esc_m_trader_task_2_name">
 		<text>Убить сталкера</text>
 	</string>
@@ -42,23 +188,7 @@
 	<string id="esc_m_trader_task_2_finish">
 		<text>Отлично, ты избавился от этого ублюдка! Вот награда, как обещал:</text>
 	</string>
-	<!-- FIND ARTEFACT FOR SIDOROVICH TASK -->
-	<string id="esc_m_trader_task_3_name">
-		<text>Я хочу, чтобы ты принёс мне артефакт %s.</text>
-	</string>
-	<string id="esc_m_trader_task_3_text">
-		<text>Сидорович просил найти для него артефакт %s.</text>
-	</string>
-	<string id="esc_m_trader_task_3_about">
-		<text>Артефакты - это прибыльный бизнес. Спрос на них есть и внутри Зоны, и за её пределами. Для таких парней, как ты, поиск артефактов является выгодным промыслом. Интересно?</text>
-	</string>
-	<string id="esc_m_trader_task_3_fetch_about">
-		<text>Я ищу артефакт %s. И если сможешь достать его для меня, то я хорошо заплачу.</text>
-	</string>
-	<string id="esc_m_trader_task_3_fetch_finish">
-		<text>Хорошая работа. С тобой приятно иметь дело.</text>
-	</string>
-	<!-- ELIMINATE MUTANTS FOR WOLF TASK -->
+	<!--     esc_2_12_stalker_wolf	 -->
 	<string id="esc_2_12_stalker_wolf_task_1_name">
 		<text>Уничтожить логово мутантов</text>
 	</string>
@@ -71,7 +201,90 @@
 	<string id="esc_2_12_stalker_wolf_task_1_finish">
 		<text>Спасибо, благодаря тебе новички будут в относительной безопасности. Вот твоя награда.</text>
 	</string>
-	<!-- FIND LEVEL 1 TOOLS FOR XENOTECH TASK -->
+	<!-- esc_smart_terrain_5_7_loner_mechanic_stalker -->
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Wolf (Loner Honcho) Stalker Search and Rescue Dynamic Task -->
+
+	<string id="esc_2_12_stalker_wolf_task_2_name">
+		<text>Поиск и спасение сталкера</text>
+	</string>
+	<string id="esc_2_12_stalker_wolf_task_2_text">
+		<text>Найти пропавшего сталкера.</text>
+	</string>
+	<string id="esc_2_12_stalker_wolf_task_2_about">
+		<text>Сталкер пропал из лагеря. Мне нужно узнать, какого рода беда с ним приключилась.</text>
+	</string>
+	<string id="esc_2_12_stalker_wolf_task_2_finish">
+		<text>Спасибо. Именно такие сталкеры делают это место единственным безопасным районом в Зоне.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Wolf (Loner Honcho) Stalker Guide Dynamic Task -->
+
+	<string id="esc_2_12_stalker_wolf_task_3_name">
+		<text>Предводитель</text>
+	</string>
+	<string id="esc_2_12_stalker_wolf_task_3_text">
+		<text>Возглавить группу новичков.</text>
+	</string>
+	<string id="esc_2_12_stalker_wolf_task_3_about">
+		<text>Группа новобранцев впервые направляется в Зону. Мне нужен компетентный сталкер, чтобы направлять их и держать в безопасности.</text>
+	</string>
+	<string id="esc_2_12_stalker_wolf_task_3_finish">
+		<text>Благодарю, что сохранил новичков, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Nimble (Loner Trader) Find Weapon Task -->
+
+	<string id="esc_2_12_stalker_nimble_task_1_name">
+		<text>%s - найти для Шустрого</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_1_text">
+		<text>Шустрый попросил достать ему определенное оружие. Оно должно быть в хорошем состоянии, иначе клиент не станет его покупать.</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_1_about">
+		<text>В общем, есть один клиент, который ищет определенное оружие, и мне нужен кто-то, кто сможет его достать. Если интересует, могу рассказать подробности. Ну так что?</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_1_fetch_about">
+		<text>%s... Вот что мне нужно, но запомни: состояние оружия должно быть отличным. Клиент заплатил немалые деньги, и я не думаю, что ему понравится какой-нибудь ржавый кусок дерьма, который клинит через выстрел. Получишь процент от суммы, если сделаешь всё как надо. Возвращайся, когда найдёшь.</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_1_fetch_finish">
+		<text>Отлично! То, что надо! Я уверен, клиент будет доволен. Держи, как обещал.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Nimble (Loner Trader) Retrieve PDA Dynamic Task -->
+
+	<string id="esc_2_12_stalker_nimble_task_2_name">
+		<text>Принести КПК для Шустрого</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_2_text">
+		<text>Принести Шустрому КПК.</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_2_about">
+		<text>Мне нужно, чтобы ты нашёл один КПК для меня. Он скрыт в надёжном месте.</text>
+	</string>
+	<string id="esc_2_12_stalker_nimble_task_2_finish">
+		<text>Спасибо, сталкер!</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- MECHANIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Xenotech (Loner Mechanic) Find Level 1 Toolkit Task -->
+
 	<string id="esc_smart_terrain_5_7_loner_mechanic_stalker_task_1_name">
 		<text>Найти Фургону %s</text>
 	</string>
@@ -87,7 +300,6 @@
 	<string id="esc_smart_terrain_5_7_loner_mechanic_stalker_task_1_fetch_finish">
 		<text>Спасибо, именно то, что мне нужно. Вот, я обещал тебе награду, держи:</text>
 	</string>
-	<!-- FIND LEVEL 2 TOOLS FOR XENOTECH TASK -->
 	<string id="esc_smart_terrain_5_7_loner_mechanic_stalker_task_2_name">
 		<text>Найти Фургону %s</text>
 	</string>
@@ -103,7 +315,6 @@
 	<string id="esc_smart_terrain_5_7_loner_mechanic_stalker_task_2_fetch_finish">
 		<text>Отлично! Вот твоя награда, ты ее заслужил!</text>
 	</string>
-	<!-- FIND LEVEL 3 TOOLS FOR XENOTECH TASK -->
 	<string id="esc_smart_terrain_5_7_loner_mechanic_stalker_task_3_name">
 		<text>Найти Фургону %s</text>
 	</string>
@@ -118,5 +329,5 @@
 	</string>
 	<string id="esc_smart_terrain_5_7_loner_mechanic_stalker_task_3_fetch_finish">
 		<text>Да! Да! Вот твоя награда, ты её заслужил!</text>
-	</string>
+	</string>			
 </string_table>

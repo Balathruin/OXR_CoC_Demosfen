@@ -67,21 +67,25 @@ prior = 100
 cover_name = mar_base_animpoint_kamp1
 use_camp = true
 turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp12
 
 [animpoint@mar_base_animpoint_kamp2]
 cover_name = mar_base_animpoint_kamp2
 use_camp = true
 turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp13
 
 [animpoint@mar_base_animpoint_kamp3]
 cover_name = mar_base_animpoint_kamp3
 use_camp = true
 turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp14
 
 [animpoint@mar_base_animpoint_kamp4]
 cover_name = mar_base_animpoint_kamp4
 use_camp = true
 turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp18
 
 ;[animpoint@mar_base_animpoint_kamp5]
 ;cover_name = mar_smart_terrain_base_animpoint_1
@@ -224,3 +228,94 @@ home_min_radius = 1
 home_max_radius = 30
 aggressive = true
 panic = 0
+
+
+;mlr
+
+[logic@mar_base_animpoint_kamp5]
+active = animpoint@mar_base_animpoint_kamp5
+suitable = {!surge_started} true
+prior = 100
+
+[logic@mar_base_animpoint_kamp6]
+active = animpoint@mar_base_animpoint_kamp6
+suitable = {!surge_started} true
+prior = 100
+
+[logic@mar_base_animpoint_kamp7]
+active = animpoint@mar_base_animpoint_kamp7
+suitable = {!surge_started} true
+prior = 100
+
+[animpoint@mar_base_animpoint_kamp5]
+cover_name = mar_smart_terrain_base_animpoint_1
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp15
+
+[animpoint@mar_base_animpoint_kamp6]
+cover_name = mar_smart_terrain_base_animpoint_2
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp16
+
+[animpoint@mar_base_animpoint_kamp7]
+cover_name = mar_smart_terrain_base_animpoint_3
+use_camp = true
+turn_on_campfire = true
+on_info = {=is_rain} animpoint@mar_base_animpoint_kamp17
+
+;mlr rain
+
+[animpoint@mar_base_animpoint_kamp12]
+cover_name = mar_base_animpoint_kamp5
+use_camp = true
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp1
+meet = meet_random
+
+[animpoint@mar_base_animpoint_kamp13]
+cover_name = mar_base_animpoint_kamp6
+use_camp = true
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp2
+
+[animpoint@mar_base_animpoint_kamp14]
+cover_name = mar_base_animpoint_kamp7
+use_camp = true
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp3
+meet = meet_random
+
+[animpoint@mar_base_animpoint_kamp15]
+cover_name = mar_base_animpoint_kamp8
+use_camp = true
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp5
+meet = meet_random
+
+[animpoint@mar_base_animpoint_kamp16]
+cover_name = mar_base_animpoint_kamp9
+use_camp = true
+meet = meet_random
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp6
+
+[animpoint@mar_base_animpoint_kamp17]
+cover_name = mar_base_animpoint_kamp10
+use_camp = true
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp7
+
+[animpoint@mar_base_animpoint_kamp18]
+cover_name = mar_base_animpoint_kamp11
+use_camp = true
+meet = meet_random
+on_info = {!is_rain} animpoint@mar_base_animpoint_kamp4
+
+[meet_random]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 6
+abuse           = false
+use = false
+allow_break = false
+meet_on_talking = false

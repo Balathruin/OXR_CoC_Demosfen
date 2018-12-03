@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="lootmoney_1">
+		<text>Dead stalker:&#032;</text>
+	</string>
+	<string id="lootmoney_2">
+		<text>Found money: %c[255,255,0,0]</text>
+	</string>
+	<string id="lootmoney_3">
+		<text>%c[default] RU.</text>
+	</string>
+	<string id="lootmoney_4">
+		<text>'s stash</text>
+	</string>
+</string_table>

@@ -51,12 +51,12 @@ prior = 60
 [logic@bar_visitors_animp_04]
 active = animpoint@bar_visitors_animp_04
 suitable = {=npc_community(stalker)} true
-prior = 60
+prior = 180
 
 [logic@bar_visitors_animp_05]
 active = animpoint@bar_visitors_animp_05
 suitable = {=npc_community(dolg)} true
-prior = 60
+prior = 180
 
 [logic@bar_visitors_animp_06]
 active = animpoint@bar_visitors_animp_06
@@ -158,8 +158,30 @@ path_end = loop
 
 [animpoint@bar_visitors_animp_01]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_01
-use_camp = true
-on_info = {=npc_in_zone(bar_no_weapon_zone)} animpoint@bar_visitors_animp_01_reached
+;mlr
+use_camp = false
+on_game_timer = 3600 | animpoint@smoke_stand_1
+;mlr
+
+;mlr
+[animpoint@smoke_stand_1]:animpoint@bar_visitors_animp_gen_reach
+cover_name = smoke_stand_1
+avail_animations = smoking_stand
+use_camp = false
+on_game_timer = 1200 | animpoint@bar_visitors_animp_01
+meet = no_meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} true
+combat_ignore_keep_when_attacked = true
+
+[animpoint@smoke_stand_2]:animpoint@bar_visitors_animp_gen_reach
+cover_name = smoke_stand_2
+avail_animations = smoking_stand
+use_camp = false
+on_game_timer = 1200 | animpoint@bar_visitors_animp_18
+meet = no_meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} true
+combat_ignore_keep_when_attacked = true
+;mlr
 
 [animpoint@bar_visitors_animp_02]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_02
@@ -173,13 +195,14 @@ use_camp = true
 
 [animpoint@bar_visitors_animp_04]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_04
-on_info = {=npc_in_zone(bar_no_weapon_zone)} animpoint@bar_visitors_animp_04_reached
-use_camp = true
+on_actor_in_zone = bar_no_weapon_zone | %=play_sound(bar_sad_stalker_phrases)%
+avail_animations = animpoint_stay_bar_2
 
 [animpoint@bar_visitors_animp_05]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_05
-on_info = {=npc_in_zone(bar_no_weapon_zone)} animpoint@bar_visitors_animp_05_reached
-use_camp = true
+avail_animations = drunk_stand_table_2
+on_actor_in_zone = bar_no_weapon_zone | %=play_sound(bar_sad_veteran_phrases)%
+use_camp = false
 
 [animpoint@bar_visitors_animp_06]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_06
@@ -188,8 +211,11 @@ use_camp = true
 
 [animpoint@bar_visitors_animp_07]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_07
-on_info = {=npc_in_zone(bar_no_weapon_zone)} animpoint@bar_visitors_animp_07_reached
-use_camp = true
+;mlr
+avail_animations = drunk_stand_table_2
+use_camp = false
+meet = no_meet
+;mlr
 
 [animpoint@bar_visitors_animp_08]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_08
@@ -244,9 +270,10 @@ on_info = {=npc_in_zone(bar_no_weapon_zone)} animpoint@bar_visitors_animp_17_rea
 [animpoint@bar_visitors_animp_18]:animpoint@bar_visitors_animp_gen_reach
 cover_name = bar_visitors_animp_18
 use_camp = true
-on_info = {=npc_in_zone(bar_no_weapon_zone)} animpoint@bar_visitors_animp_18_reached
-
-
+;mlr
+meet = no_meet
+on_game_timer = 3600 | animpoint@smoke_stand_2
+;mlr
 
 [animpoint@bar_visitors_animp_01_reached]:animpoint@bar_visitors_animp_gen
 cover_name = bar_visitors_animp_01
@@ -619,3 +646,82 @@ combat_ignore_keep_when_attacked = false
 invulnerable = true
 on_info = %=play_sound(arena_public)%
 on_info2 = {-bar_arena_start} %=stop_sound%
+
+
+;;;;;;;MLR camp
+[logic@bar_visitors_animp_19]
+active = animpoint@bar_visitors_animp_19
+suitable = {!surge_started} true, {!is_rain} true
+prior = 60
+
+[logic@bar_visitors_animp_20]
+active = animpoint@bar_visitors_animp_20
+suitable = {!surge_started} true, {!is_rain} true
+prior = 60
+
+[logic@bar_visitors_animp_21]
+active = animpoint@bar_visitors_animp_21
+suitable = {!surge_started} true, {!is_rain} true
+prior = 60
+
+[logic@bar_visitors_animp_22]
+active = animpoint@bar_visitors_animp_22
+suitable = {!surge_started} true, {!is_rain} true
+prior = 60
+
+[logic@bar_visitors_animp_23]
+active = animpoint@bar_visitors_animp_23
+suitable = {!surge_started} true
+prior = 60
+
+[logic@bar_visitors_animp_24]
+active = animpoint@bar_visitors_animp_24
+suitable = {!surge_started} true
+prior = 60
+
+[logic@bar_visitors_animp_25]
+active = animpoint@bar_visitors_animp_25
+suitable = {!surge_started} true
+prior = 60
+
+[logic@bar_visitors_animp_26]
+active = animpoint@bar_visitors_animp_26
+suitable = {!surge_started} true
+prior = 60
+
+[animpoint@bar_visitors_animp_19]
+cover_name = bar_visitors_animp_19
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@bar_visitors_animp_20]
+cover_name = bar_visitors_animp_20
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@bar_visitors_animp_21]
+cover_name = bar_visitors_animp_21
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@bar_visitors_animp_22]
+cover_name = bar_visitors_animp_22
+use_camp = true
+turn_on_campfire = true
+
+[animpoint@bar_visitors_animp_23]
+avail_animations = animpoint_stay_ohrana
+cover_name = bar_visitors_animp_23
+use_camp = false
+
+[animpoint@bar_visitors_animp_24]
+cover_name = bar_visitors_animp_24
+use_camp = false
+
+[animpoint@bar_visitors_animp_25]
+cover_name = bar_visitors_animp_25
+use_camp = true
+
+[animpoint@bar_visitors_animp_26]
+cover_name = bar_visitors_animp_26
+use_camp = true

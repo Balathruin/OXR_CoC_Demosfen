@@ -63,6 +63,9 @@
             <phrase id="112">
                 <text>yan_stalker_sakharov_player_psi_helmet_1_2</text>
 				<action>dialogs_yantar.give_player_bad_psi_helmet</action>
+				<!-- mlr -->
+				<action>transitions.open_x16_saharov_mlr</action>	
+                <!-- mlr -->			
 				<next>113</next>
             </phrase>
             <phrase id="113">
@@ -141,6 +144,9 @@
 				<precondition>dialogs_yantar.actor_has_good_psi_helmet_task_completed</precondition>
                 <text>yan_stalker_sakharov_npc_psi_helmet_2_3</text>
 				<action>dialogs_yantar.give_player_good_psi_helmet</action>
+				<!-- mlr -->
+				<action>transitions.open_x16_saharov_mlr</action>	
+                <!-- mlr -->	
             </phrase>
 			<phrase id="2222">
 				<precondition>dialogs_yantar.actor_dont_has_good_psi_helmet_task_completed</precondition>

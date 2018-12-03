@@ -40,6 +40,9 @@
 	<string id="actor_zombied">
 		<text>Zombified</text>
 	</string>
+	<string id="actor_monster">
+		<text>Мутант</text>
+  </string>
 	
 	<!-- NPC Factions -->
 	<string id="arena_enemy">
@@ -74,6 +77,9 @@
 	</string>
 	<string id="stalker">
 		<text>Loner</text>
+	</string>
+	<string id="monster">
+		<text>Мутант</text>
 	</string>
 	<string id="trader">
 		<text>Trader</text>

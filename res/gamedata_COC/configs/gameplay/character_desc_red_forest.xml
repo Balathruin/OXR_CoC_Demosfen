@@ -25,6 +25,7 @@
     <actor_dialog>red_forester_about_zone</actor_dialog>
     <actor_dialog>red_forester_about_forest</actor_dialog>
     <actor_dialog>dm_tech_repair</actor_dialog>
+    <actor_dialog>lesnik_minigame</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     

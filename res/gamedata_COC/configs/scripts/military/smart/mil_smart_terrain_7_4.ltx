@@ -2,17 +2,22 @@
 squad_id = 14
 max_population = 3
 respawn_params = respawn@mil_smart_terrain_7_4
-respawn_idle = 86400
+respawn_idle = 60000
 
 
 [respawn@mil_smart_terrain_7_4]
 spawn_duty@advanced
-spawn_duty@veteran
+spawn_freedom@advanced
 
 [spawn_duty@advanced]
 spawn_squads = duty_sim_squad_advanced, duty_sim_squad_advanced, duty_sim_squad_novice
-spawn_num = 2
+spawn_num = {+mil_smart_terrain_7_7_freedom_leader_stalker_task_6_done} 0, 2
 
-[spawn_duty@veteran]
-spawn_squads = duty_sim_squad_advanced, duty_sim_squad_advanced, duty_sim_squad_veteran
-spawn_num = 1
+[spawn_freedom@advanced]
+spawn_squads = freedom_sim_squad_advanced, freedom_sim_squad_advanced
+spawn_num = {+mil_smart_terrain_7_7_freedom_leader_stalker_task_6_done} 2, 0
+
+[exclusive]
+mil_smart_terrain_7_4_camp_work_1 = military\mil_smart_terrain_7_4_smart_logic.ltx
+mil_smart_terrain_7_4_camp_work_2 = military\mil_smart_terrain_7_4_smart_logic.ltx
+mil_smart_terrain_7_4_camp_work_3 = military\mil_smart_terrain_7_4_smart_logic.ltx

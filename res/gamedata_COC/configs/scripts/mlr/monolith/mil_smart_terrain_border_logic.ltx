@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {+main_monolith_mlr_task_3_1_dlg_1 +border_freedom_keeper_max_squad_dead +mil_smart_terrain_3_8_barrier_freedom_squad_dead} sr_idle@end %+main_monolith_mlr_task_3_dlg_final_message_to_rad%
+
+[sr_idle@end]
+on_info = nil %=create_squad(wings_special_squad_mlr:rad2_loner_0001) =send_tip(main_monolith_mlr_task_3_1_tip:mon_teacher)%

@@ -1,0 +1,53 @@
+[logic@trader_monolith_kbo]
+suitable = {=check_npc_name(trader_monolith_kbo)} true
+trade = misc\trade\trade_monolith.ltx
+prior = 200
+active = animpoint@base
+can_select_weapon = true
+level_spot = trader
+dont_keep_items = true
+
+[animpoint@base]
+cover_name = monolith_trader_kbo_plase
+avail_animations = animpoint_sit_normal
+use_camp = false
+meet = meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
+
+[logic@mechanic_monolith_kbo]
+suitable = {=check_npc_name(mechanic_monolith_kbo)} true
+prior = 200
+active = animpoint@base1
+can_select_weapon = true
+level_spot = mechanic
+dont_keep_items = true
+
+[animpoint@base1]
+cover_name = mechanic_monolith_kbo_plase
+avail_animations = jup_b41_novikov_stand
+use_camp = false
+meet = meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false

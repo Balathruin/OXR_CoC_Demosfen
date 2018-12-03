@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@read
+
+[sr_idle@read]
+on_info = {=actor_in_zone(about_esc_m_trader)} sr_idle@stop %=run_tutorial(about_esc_m_trader_call)%
+
+[sr_idle@stop]
+on_info = {!actor_in_zone(about_esc_m_trader)} sr_idle@read %=stop_tutorial%

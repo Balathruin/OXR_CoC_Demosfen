@@ -1,0 +1,304 @@
+; Штурмовая винтовка FAMAS F1
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 				5.56x45 мм
+; длина ствола 				488 мм
+; магазин				25
+; вес с пустым магазином		3.77 кг
+; максимальная дальность стрельбы	3000 м
+; эффективная дальность стрельбы	300 м
+; прицельная дальность			300 м
+; дульная скорость пули			960 м/с
+; темп стрельбы				900-1000 в/м
+;---------------------------------------------------
+[wpn_famas]:weapon_probability,default_weapon_params
+$npc                                               = on
+$prefetch                                          = 8
+$spawn                                             = "weapons\famas"
+ammo_class                                         = ammo_5.56x45_ss190, ammo_5.56x45_ap
+ammo_current                                       = 180
+ammo_elapsed                                       = 25
+ammo_limit                                         = 210
+ammo_mag_size                                      = 25
+animation_slot                                     = 2
+bullet_speed                                       = 960
+cam_dispersion                                     = 0.8
+cam_dispersion_frac                                = 0.7
+cam_dispersion_inc                                 = 0.15
+cam_max_angle                                      = 50.0
+cam_max_angle_horz                                 = 10.0
+cam_relax_speed                                    = 5
+cam_relax_speed_ai                                 = 360
+cam_return                                         = 0
+cam_step_angle_horz                                = 3.0
+cform                                              = skeleton
+class                                              = WP_AK74
+condition_queue_shot_dec = 0.0005;                 = 0.0015
+condition_shot_dec = 0.0003;                        = 0.0014
+control_inertion_factor                            = 1.2f
+cost                                               = 35000
+crosshair_inertion                                 = 6.45
+description                                        = st_wpn_famas_descr
+ef_main_weapon_type                                = 2
+ef_weapon_type                                     = 8
+fire_dispersion_base                     = 0.25
+fire_dispersion_condition_factor         = 2
+fire_distance = 1000;                            = 500
+fire_modes                                         = 1, 3, -1
+fire_point                                         = 0.0, 0.199, 0.575
+fire_point2                                        = 0.0, 0.199, 0.575
+flame_particles                                    = amik\weapons\nato_shoot_00
+grenade_class                                      = ammo_m209
+grenade_flame_particles                            = weapons\generic_weapon01
+grenade_launcher_name                              = wpn_addon_grenade_launcher_m203
+grenade_launcher_status                            = 0
+grenade_launcher_x                                 = 139
+grenade_launcher_y                                 = 26
+grenade_vel                                        = 76
+GroupControlSection                                = spawn_group
+hand_dependence                                    = 1
+hit_power                                          = 0.5
+hit_type                                           = fire_wound
+holder_fov_modifier                                = 1.00
+holder_range_modifier                              = 1.00
+hud                                                = wpn_famas_hud
+installed_upgrades                                 = 
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 28
+inv_grid_y                                         = 32
+inv_name                                           = st_wpn_famas
+inv_name_short                                     = st_wpn_famas
+inv_weight                                         = 3.77
+kill_msg_height                                    = 28
+kill_msg_width                                     = 82
+kill_msg_x                                         = 175
+kill_msg_y                                         = 0
+launch_speed                                       = 76
+light_color                                        = 0.6, 0.5, 0.3
+light_disabled                                     = false
+light_range                                        = 5
+light_time                                         = 0.2
+light_var_color                                    = 0.05
+light_var_range                                    = 0.1
+max_radius                                         = 50
+min_radius                                         = 30
+misfire_end_condition                              = 0.1
+misfire_end_prob                                   = 0.072
+misfire_probability                                = 0.005
+misfire_start_condition                            = 0.6
+misfire_start_prob                                 = 0.006
+orientation                                        = 0.0, 0.0, 0.0
+parent_section                                     = wpn_famas
+PDM_disp_accel_factor                              = 1.5
+PDM_disp_base                                      = 0.5
+PDM_disp_crouch                                    = 1.0
+PDM_disp_crouch_no_acc                             = 1.0
+PDM_disp_vel_factor                                = 1.5
+ph_mass                                            = 4
+position                                           = -0.026, -0.130, 0.0
+reload_dof                                         = 0.0, 0.5, 5, 2
+rpm                                                = 950
+rpm_empty_click                                    = 200
+scheduled                                          = off
+scope_status                                       = 0
+scope_zoom_factor                                  = 1.2
+scopes                                             = ac10632, ac11090, acog, eot, c-more, acog_detector
+shell_dir                                          = 0.0, 0.0, 0.4
+shell_particles                                    = weapons\556x45
+shell_point                                        = 0.120000, 0.000000, 0.070000
+silencer_bullet_speed                              = 960
+silencer_fire_distance = 1000;                             = 1000
+silencer_hit_impulse                               = 20
+silencer_hit_power                                 = 0.41
+silencer_light_color                               = 0.6, 0.5, 0.3
+silencer_light_range                               = 0.01
+silencer_light_time                                = 0.2
+silencer_light_var_color                           = 0.05
+silencer_light_var_range                           = 0.5
+silencer_name                                      = sil_nato
+silencer_smoke_particles                           = amik\weapons\smoke_particles\silencer_smoke_particles_00
+silencer_status                                    = 2
+silencer_x                                         = 217
+silencer_y                                         = 26
+single_handed                                      = 0
+slot                                               = 2
+smoke_particles                                    = amik\weapons\nato_smoke_00
+snd_bore                                           = $no_sound
+snd_close                                          = weapons\generic_close
+snd_draw                                           = weapons\lr300\lr300_draw
+snd_empty                                          = weapons\lr300\lr300_empty,	0.8
+snd_holster                                        = weapons\rifle_holster
+snd_reload                                         = weapons\famas\famas_reload
+snd_reload_grenade                                 = weapons\m203\M203_reload
+snd_shoot                                          = wpn_famas_snd_shoot
+snd_shoot_grenade                                  = weapons\m203\M203_grenshoot
+snd_silncer_shot                                   = wpn_famas_snd_silncer_shot
+snd_switch                                         = weapons\groza_switch, 1.0, 0.5
+startup_ammo                                       = 90
+strap_bone0                                        = bip01_spine2
+strap_bone1                                        = bip01_spine1
+strap_orientation                                  = -10, -5, 10
+strap_position                                     = -0.15, -0.37, 0.2
+time_to_aim                                        = 2.0
+upgr_icon_height = 200;                                   = 100
+upgr_icon_width = 300;                                    = 300
+upgr_icon_x = 0;                                        = 300
+upgr_icon_y = 0;                                        = 1000
+upgrade_scheme                                     = upgrade_scheme_sig550
+upgrades                				= up_gr_firstab_sig550, up_gr_seconab_sig550, up_gr_thirdab_sig550, up_gr_fourtab_sig550, up_gr_fifthab_sig550
+use_aim_bullet                                     = false
+visual                                             = dynamics\weapons\wpn_famas\wpn_famas.ogf
+weapon_class                                       = assault_rifle
+zoom_cam_dispersion                                = 0.5
+zoom_cam_dispersion_frac                           = 1.0
+zoom_cam_dispersion_inc                            = 0.12
+zoom_cam_max_angle                                 = 50.0
+zoom_cam_max_angle_horz                            = 10.0
+zoom_cam_relax_speed                               = 5
+zoom_cam_relax_speed_ai                            = 360
+zoom_cam_step_angle_horz                           = 2
+zoom_dof                                           = 0.5, 1.0, 180
+zoom_enabled                                       = true
+zoom_rotate_time                                   = 0.2
+
+[wpn_famas_hud]:hud_base
+aim_hud_offset_pos                                 = -0.09134,0.06112,-0.1
+aim_hud_offset_pos_16x9                            = -0.09134,0.06112,-0.1
+aim_hud_offset_rot                                 = 0.0465,0.00899,-0.007
+aim_hud_offset_rot_16x9                            = 0.0465,0.00899,-0.007
+anm_bore                                           = lancew_famas_no_reload
+anm_hide                                           = lancew_famas_holster
+anm_idle                                           = lancew_famas_idle
+anm_idle_aim                                       = lancew_famas_idle_aim, idle_aim
+anm_idle_moving                                    = lancew_famas_mvoing
+anm_idle_sprint                                    = lancew_famas_sprint
+anm_reload                                         = lancew_famas_reload, reload
+anm_shots                                          = lancew_famas_shoot, shoot
+anm_show                                           = lancew_famas_draw
+attach_place_idx                                   = 0
+fire_bone                                          = wpn_body
+fire_bone2                                         = wpn_body
+fire_point                                         = -0.011,0.043190,0.438116
+fire_point2                                        = 0,-0.028,0.678
+gl_hud_offset_pos                                  = 0,0,0
+gl_hud_offset_pos_16x9                             = 0,0,0
+gl_hud_offset_rot                                  = 0,0,0
+gl_hud_offset_rot_16x9                             = 0,0,0
+hands_orientation                                  = 0.52,2.409999,0.15
+hands_orientation_16x9                             = 0.52,2.409999,0.15
+hands_position                                     = -0.064,-0.19,0.2055
+hands_position_16x9                                = -0.064,-0.19,0.2055
+item_orientation                                   = 0,0,0
+item_position                                      = 0,0,0
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_hud.ogf
+lean_hud_offset_pos                                = 0,0,0
+lean_hud_offset_rot                                = 0,0,0
+shell_bone                                         = wpn_body
+shell_dir                                          = 0,1,0
+shell_point                                        = 0.02,0.06,-0.099
+zoom_hide_crosshair                                = true
+
+[wpn_famas_ac10632]:wpn_famas
+$spawn                                             = "weapons\famas_ac10632"
+1icon_layer                                        = ac10632
+1icon_layer_x                                      = 131
+1icon_layer_y                                      = -12
+hud                                                = wpn_famas_ac10632_hud
+inv_weight                                         = 3.885
+scope_zoom_factor                                  = 1.2
+visual                                             = dynamics\weapons\wpn_famas\wpn_famas_ac10632.ogf
+
+[wpn_famas_ac10632_hud]:wpn_famas_hud
+aim_hud_offset_pos                                 = -0.09205,0.00325,-0.15
+aim_hud_offset_pos_16x9                            = -0.09205,0.00325,-0.15
+anm_idle_aim                                       = lancew_famas_idle_aim, idle_aim
+anm_shots                                          = lancew_famas_shoot_scope, shoot
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_ac10632_hud.ogf
+
+[wpn_famas_ac11090]:wpn_famas
+$spawn                                             = "weapons\famas_ac11090"
+1icon_layer                                        = ac11090
+1icon_layer_x                                      = 115
+1icon_layer_y                                      = -12
+hud                                                = wpn_famas_ac11090_hud
+inv_weight                                         = 4.02
+scope_zoom_factor                                  = 1.3
+visual                                             = dynamics\weapons\wpn_famas\wpn_famas_ac11090.ogf
+
+[wpn_famas_ac11090_hud]:wpn_famas_hud
+aim_hud_offset_pos                                 = -0.0914,-0.0023,-0.1
+aim_hud_offset_pos_16x9                            = -0.0914,-0.0023,-0.1
+aim_hud_offset_rot                                 = 0.04,0.00899,-0.007
+aim_hud_offset_rot_16x9                            = 0.04,0.00899,-0.007
+anm_idle_aim                                       = lancew_famas_idle_aim, idle_aim
+anm_shots                                          = lancew_famas_shoot_scope, shoot
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_ac11090_hud.ogf
+
+[wpn_famas_acog]:wpn_famas
+$spawn                                             = "weapons\famas_acog"
+1icon_layer                                        = acog
+1icon_layer_x                                      = 113
+1icon_layer_y                                      = -10
+hud                                                = wpn_famas_acog_hud
+inv_weight                                         = 4.12
+scope_status                                       = 1
+scope_texture                                      = wpn_crosshair_acog
+scope_zoom_factor                                  = 19
+zoom_rotate_time                                   = 0.25
+
+[wpn_famas_acog_hud]:wpn_famas_ac11090_hud
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_hud.ogf
+
+[wpn_famas_eot]:wpn_famas
+$spawn                                             = "weapons\famas_eot"
+1icon_layer                                        = eot
+1icon_layer_x                                      = 118
+1icon_layer_y                                      = -8
+hud                                                = wpn_famas_eot_hud
+inv_weight                                         = 4.08
+scope_zoom_factor                                  = 1.2
+visual                                             = dynamics\weapons\wpn_famas\wpn_famas_eot.ogf
+
+[wpn_famas_eot_hud]:wpn_famas_hud
+aim_hud_offset_pos                                 = -0.0902,-0.00005,-0.05
+aim_hud_offset_pos_16x9                            = -0.0902,-0.00005,-0.05
+aim_hud_offset_rot                                 = 0.04,0.006,-0.007
+aim_hud_offset_rot_16x9                            = 0.04,0.006,-0.007
+anm_idle_aim                                       = lancew_famas_idle_aim, idle_aim
+anm_shots                                          = lancew_famas_shoot_scope, shoot
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_eot_hud.ogf
+
+[wpn_famas_c-more]:wpn_famas
+$spawn                                             = "weapons\famas_c-more"
+1icon_layer                                        = c-more
+1icon_layer_x                                      = 116
+1icon_layer_y                                      = -12
+hud                                                = wpn_famas_c-more_hud
+inv_weight                                         = 3.954
+scope_zoom_factor                                  = 1.2
+visual                                             = dynamics\weapons\wpn_famas\wpn_famas_c-more.ogf
+
+[wpn_famas_c-more_hud]:wpn_famas_hud
+aim_hud_offset_pos                                 = -0.091,0.0019,-0.1
+aim_hud_offset_pos_16x9                            = -0.091,0.0019,-0.1
+aim_hud_offset_rot                                 = 0.04,0.007,-0.007
+aim_hud_offset_rot_16x9                            = 0.04,0.007,-0.007
+anm_idle_aim                                       = lancew_famas_idle_aim, idle_aim
+anm_shots                                          = lancew_famas_shoot_scope, shoot
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_c-more_hud.ogf
+
+[wpn_famas_acog_detector]:wpn_famas
+$spawn                                             = "weapons\famas_acog_detector"
+1icon_layer                                        = acog_detector
+1icon_layer_x                                      = 113
+1icon_layer_y                                      = -10
+hud                                                = wpn_famas_acog_detector_hud
+inv_weight                                         = 4.12
+scope_status                                       = 1
+scope_texture                                      = wpn_crosshair_acog
+scope_zoom_factor                                  = 12
+scope_dynamic_zoom                                 = on
+zoom_rotate_time                                   = 0.25
+
+[wpn_famas_acog_detector_hud]:wpn_famas_ac11090_hud
+item_visual                                        = dynamics\weapons\wpn_famas\wpn_famas_hud.ogf

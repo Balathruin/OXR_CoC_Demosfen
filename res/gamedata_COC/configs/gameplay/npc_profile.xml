@@ -1575,4 +1575,33 @@
 	<character id="yan_ghost">
 		<class>yan_ghost</class>
 	</character>
+	
+	
+    <!-------------------------- ROMANN ---------------------- -->
+	
+    <!------------------ Anya ----------------->
+	
+	<character id="bar_anya">
+		<class>bar_anya</class>
+		<specific_character>bar_anya</specific_character>
+	</character>
+	
+
+	<character id="stalker_excluzive_rm_1">
+		<class>stalker_excluzive_rm_1</class>
+	</character>
+
+	<character id="stalker_excluzive_mechanic">
+		<class>stalker_excluzive_mechanic</class>
+	</character>
+
+	<character id="lab7xc_wu">
+		<class>lab7xc_wu</class>
+	</character>
+
+	<character id="l7xc_stalker_medik">
+		<class>l7xc_stalker_medik</class>
+	</character>
+
+    <!------------------ Anya ----------------->
 </xml>

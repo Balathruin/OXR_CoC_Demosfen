@@ -2,12 +2,17 @@
 squad_id = 3
 max_population = 2
 respawn_params = respawn@gar_smart_terrain_2_4
-respawn_idle = 86400
-
+respawn_idle = 60000
 
 [respawn@gar_smart_terrain_2_4]
-spawn_mutants
+spawn_stalkers
 
-[spawn_mutants]
-spawn_squads = simulation_cat
-spawn_num = 1
+[spawn_stalkers]
+spawn_squads = stalker_sim_squad_novice
+spawn_num = 2
+
+[exclusive]
+gar_smart_terrain_2_4_camp_work_1 = garbage\gar_smart_terrain_2_4_smart_logic.ltx
+gar_smart_terrain_2_4_camp_work_2 = garbage\gar_smart_terrain_2_4_smart_logic.ltx
+gar_smart_terrain_2_4_camp_work_3 = garbage\gar_smart_terrain_2_4_smart_logic.ltx
+gar_smart_terrain_2_4_camp_work_4 = garbage\gar_smart_terrain_2_4_smart_logic.ltx

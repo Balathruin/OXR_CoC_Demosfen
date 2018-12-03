@@ -1,0 +1,68 @@
+<string_table>
+<string id="st_psy_complex">
+	<text>Psychodelin</text>
+</string>
+<string id="st_psy_complex_descr">
+	<text>Stops the mental effects on the brain, restores mental health.</text>
+</string>
+<string id="st_medkit_elite">
+	<text>Elite medkit</text>
+</string>
+<string id="st_medkit_elite_descr">
+	<text>Elite medical kit, designed specifically for use in the Zone. The set includes specific medicines and dressings for treating combat wounds and serum for radionuclide removal from the organism. Prevents radiation sickness development, restores energy and reduces the cumulative radiation dose.</text>
+</string>
+<string id="st_bio_bandage">
+	<text>Special bandage</text>
+</string>
+<string id="st_bio_bandage_descr">
+	<text>Enhanced wound dressing. Stops bleeding and helps wound healing.</text>
+</string>
+<string id="st_drug_engine">
+	<text>LSD Booster</text>
+</string>
+<string id="st_drug_engine_descr">
+	<text>Ingredients: artificially created steroids, indralin-B190, hydrochloride, vicasol, metoclopramide, pyridoxine, thiamin, riboksin and others. This long-acting drug brings into the blood substances which are able to decompose protein toxins, as well as absorbents of synthetic poisons. The drug is the strongest among this kind.</text>
+</string>
+<string id="st_bag_medkit_1_title">
+	<text>Standard medical kitbag</text>
+</string>
+<string id="st_bag_medkit_1_descr">
+	<text>Small set of standard field med's.</text>
+</string>
+<string id="st_bag_medkit_2_title">
+	<text>Military medical kitbag</text>
+</string>
+<string id="st_bag_medkit_2_descr">
+	<text>A small collection of army field med's.</text>
+</string>
+<string id="st_bag_medkit_3_title">
+	<text>Scientific kitbag</text>
+</string>
+<string id="st_bag_medkit_3_descr">
+	<text>Contains a small selection of scientific field med's.</text>
+</string>
+<string id="st_bag_medkit_4_title">
+	<text>Elite medical kitbag</text>
+</string>
+<string id="st_bag_medkit_4_descr">
+	<text>A small selection of top grade med's specifically designed for use by stalkers. These sets contain the best med's available for field use .</text>
+</string>
+<string id="st_cat_eye">
+    <text>Cat-eye</text>
+</string>
+<string id="st_cat_eye_descr">
+    <text>A new drug developed by scientists in the zone. It forces the pupil to open beyond its natural maximum size allowing  a huge improvement in the users vision when it is dark. One of the ingredients used in its preperation is extracted from the eye of the Chernobyl cat. This is a popular item with night patrollers and hunters. To use it must be eaten in a safe place well in advance as one of the possible side effects is a very brief period of blindness before it takes effect. It can last upto 1 hour.</text>
+</string>
+<string id="TGZ_medo">
+		<text>Hooch</text>
+	</string>
+<string id="TGZ_medo_desc">
+		<text>This homemade swill is freshly brewed for excursions into the Zone. It contains some special-ingredients that have been handed down from stalker to stalker. These single-shot mason-jars make the perfect mouth-full of hopped-up goodness.</text>
+</string>
+<string id="TGZ_mbk">
+	<text>Max Ball-Kicker</text>
+</string>
+<string id="TGZ_mbk_desc">
+	<text>This energy-shot is essentially caffeine, B-12 and a steroid derived from Boar Tetstosterone. It will keep you alert, energized and dramatically decrease the lactic-acid buildup in your muscles, allowing you to haul more gear further and for longer.</text>
+</string>
+</string_table>

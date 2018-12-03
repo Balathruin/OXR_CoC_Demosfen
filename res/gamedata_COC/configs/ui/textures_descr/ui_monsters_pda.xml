@@ -21,5 +21,7 @@
 	    <texture id="ui_inGame2_Krovosos_2" x="393" y="400" width="393" height="200" />
 	    <texture id="ui_inGame2_Flesh_1" x="0" y="600" width="393" height="200" />
 	    <texture id="ui_inGame2_Poltergeist_1" x="393" y="600" width="393" height="200" />
+	    <texture id="ui_inGame2_Deathclaw" x="0" y="800" width="393" height="200" />
+	    <texture id="ui_inGame2_Oasis" x="393" y="800" width="393" height="200" />
    </file>
 </w>

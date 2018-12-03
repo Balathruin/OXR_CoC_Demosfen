@@ -301,7 +301,7 @@
 		<text>Состояние здоровья</text>
 	</string>
 	<string id="ui_ammo_types">
-		<text>Боеприпасы</text>
+		<text>Боеприпасы:</text>
 	</string>
 	<string id="ui_inv_effect_time">
 		<text>Время действия</text>
@@ -330,8 +330,14 @@
 	<string id="ui_inv_af_condition">
 		<text>Заряд</text>
 	</string>
+	<string id="ui_inv_af_jump_speed">
+		<text>Jump power</text>
+	</string>
+	<string id="ui_inv_af_walk_accel">
+		<text>Movement speed</text>
+	</string>
 	<string id="ui_st_usable_parts">
-		<text>Доступны запчасти</text>
+		<text>Запчасти</text>
 	</string>
 	<string id="ui_st_repairable_equipment">
 		<text>Требует ремонта</text>

@@ -37,6 +37,9 @@
 	<string id="actor_stalker">
 		<text>Вольный сталкер</text>
 	</string>
+	<string id="actor_monster">
+		<text>Мутант</text>
+  </string>
 	<string id="actor_zombied">
 		<text>Зомбированный</text>
 	</string>

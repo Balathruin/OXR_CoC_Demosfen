@@ -1,14 +1,17 @@
 [logic@zat_b7_bandit_boss_sultan]
-active = animpoint@base
+;mlr
+active = walker@base
+;mlr
 suitable = {=check_npc_name(zat_b7_bandit_boss_sultan)} true
 prior = 200
 level_spot = quest_npc
 
-[animpoint@base]
+;mlr
+[walker@base]
 use_camp = false
-avail_animations = animpoint_sit_normal
-cover_name = val_smart_terrain_7_5_sc_sultan
-;reach_distance = 1.5
+path_walk = bandit_boss_1_walk
+path_look = bandit_boss_1_look
+;mlr
 meet = meet@base
 combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
 combat_ignore_keep_when_attacked = true
@@ -32,3 +35,54 @@ allow_break = false
 close_snd_distance = 3
 meet_dialog	= {-zat_b7_bandit_boss_sultan_intro} zat_b7_bandit_boss_sultan_intro, {+zat_b30_barmen_got_af +zat_b30_actor_with_sultan -zat_b30_sultan_refuses_af -zat_b30_compass_to_sultan_reversed} zat_b7_bandit_boss_sultan_b30_refuse_af_dialog, {+zat_b30_barmen_got_af +zat_b30_sultan_got_af -zat_b30_sultan_refuses_af -zat_b30_compass_to_sultan_reversed} zat_b7_bandit_boss_sultan_b30_refuse_af_dialog, {+zat_b7_actor_help_bandits -zat_b5_actor_with_bandits} zat_b7_bandit_boss_sultan_b5_give_task_dialog
 meet_on_talking = false
+
+;bandit guard1
+[logic@val_smart_terrain_7_5_bandit_bodyguard1]
+active = walker@guard_1
+prior = 150
+suitable = {=check_npc_name(val_smart_terrain_7_5_bandit_bodyguard1)} true
+
+[walker@guard_1]
+path_walk = bandit_bodyguard_1_walk
+path_look = bandit_bodyguard_1_look
+meet = meet@guard_1
+
+[meet@guard_1]
+close_distance = 5
+close_victim = actor
+close_anim = guard
+use = false
+
+;bandit guard2
+[logic@val_smart_terrain_7_5_bandit_bodyguard2]
+active = walker@guard_2
+prior = 150
+suitable = {=check_npc_name(val_smart_terrain_7_5_bandit_bodyguard2)} true
+
+[walker@guard_2]
+path_walk = bandit_bodyguard_2_walk
+path_look = bandit_bodyguard_2_look
+meet = meet@guard_2
+
+[meet@guard_2]
+close_distance = 5
+close_victim = actor
+close_anim = guard
+use = false
+
+;bandit guard3
+[logic@val_smart_terrain_7_5_bandit_bodyguard3]
+active = walker@guard_3
+prior = 150
+suitable = {=check_npc_name(val_smart_terrain_7_5_bandit_bodyguard3)} true
+
+[walker@guard_3]
+path_walk = bandit_bodyguard_3_walk
+path_look = bandit_bodyguard_3_look
+meet = meet@guard_3
+
+[meet@guard_3]
+close_distance = 5
+close_victim = actor
+close_anim = guard
+use = false

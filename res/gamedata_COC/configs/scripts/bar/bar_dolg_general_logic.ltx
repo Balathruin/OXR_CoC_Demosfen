@@ -1,21 +1,21 @@
 [logic@bar_dolg_general_animpoint_kamp1]
 active = animpoint@bar_dolg_general_animpoint_kamp1
-suitable = {=npc_community(dolg) !surge_started} true
+suitable = {=npc_community(dolg) !surge_started} true, {=npc_community(dolg) !is_rain} true
 prior = 45
 
 [logic@bar_dolg_general_animpoint_kamp2]
 active = animpoint@bar_dolg_general_animpoint_kamp2
-suitable = {=npc_community(dolg) !surge_started} true
+suitable = {=npc_community(dolg) !surge_started} true, {=npc_community(dolg) !is_rain} true
 prior = 45
 
 [logic@bar_dolg_general_animpoint_kamp3]
 active = animpoint@bar_dolg_general_animpoint_kamp3
-suitable = {=npc_community(dolg) !surge_started} true
+suitable = {=npc_community(dolg) !surge_started} true, {=npc_community(dolg) !is_rain} true
 prior = 45
 
 [logic@bar_dolg_general_animpoint_kamp4]
 active = animpoint@bar_dolg_general_animpoint_kamp4
-suitable = {=npc_community(dolg) !surge_started} true
+suitable = {=npc_community(dolg) !surge_started} true, {=npc_community(dolg) !is_rain} true
 prior = 45
 
 
@@ -25,6 +25,9 @@ use_camp = true
 on_info = {=surge_started} walker@hide_1
 turn_on_campfire = true 
 meet = meet@bar_dolg_general_animpoint
+;mlr
+on_game_timer = 10800 | {!is_rain} animpoint@bar_smart_cover_otzhiman_1
+;mlr
 
 [walker@hide_1]
 path_walk = surge_11_walk
@@ -38,6 +41,9 @@ use_camp = true
 on_info = {=surge_started} walker@hide_2
 turn_on_campfire = true 
 meet = meet@bar_dolg_general_animpoint
+;mlr
+on_game_timer = 10800 | {!is_rain} animpoint@bar_smart_cover_otzhiman_2
+;mlr
 
 [walker@hide_2]
 path_walk = surge_12_walk
@@ -50,6 +56,8 @@ use_camp = true
 on_info = {=surge_started} walker@hide_3
 turn_on_campfire = true 
 meet = meet@bar_dolg_general_animpoint
+on_game_timer = 10800 | {!is_rain} animpoint@bar_smart_cover_otzhiman_3
+;mlr
 
 [walker@hide_3]
 path_walk = surge_13_walk
@@ -61,6 +69,8 @@ cover_name = bar_dolg_general_animpoint_kamp4
 use_camp = true
 on_info = {=surge_started} walker@hide_4
 turn_on_campfire = true 
+on_game_timer = 10800 | {!is_rain} animpoint@bar_smart_cover_otzhiman_4
+;mlr
 
 [walker@hide_4]
 path_walk = surge_14_walk
@@ -101,12 +111,14 @@ snd_on_use = {!dist_to_actor_le(3)} nil
 meet_on_talking = false
 
 ;duty trader
+;;;******Petrenko******
 [logic@bar_dolg_general_petrenko]
 suitable = {=check_npc_name(bar_dolg_general_petrenko_stalker)} true
 prior = 200
 active = animpoint@stand
 level_spot = trader
 trade = misc\trade\trade_dolg_petrenko.ltx
+can_select_weapon = true ;mlr
 dont_keep_items = true
 
 [animpoint@stand]
@@ -115,6 +127,9 @@ reach_movement = walk_noweap
 avail_animations = jup_b41_novikov_stand
 use_camp = false
 meet = meet@trader
+;mlr
+on_game_timer = 10800 | {!is_rain} walker@otzhiman_petrenko
+;mlr
 combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
 combat_ignore_keep_when_attacked = true
 invulnerable = {!actor_enemy} true, false
@@ -132,3 +147,89 @@ close_distance  = 0
 far_distance 	= 0
 close_snd_distance = 3
 use = {=actor_enemy} false, true
+
+;physic
+[animpoint@bar_smart_cover_otzhiman_1]
+cover_name = bar_smart_cover_otzhiman_1
+use_camp = false
+on_info = {=surge_started} walker@hide_1
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@bar_dolg_general_animpoint_kamp1
+
+[animpoint@bar_smart_cover_otzhiman_2]
+cover_name = bar_smart_cover_otzhiman_2
+use_camp = false
+on_info = {=surge_started} walker@hide_2
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@bar_dolg_general_animpoint_kamp2
+
+[animpoint@bar_smart_cover_otzhiman_3]
+cover_name = bar_smart_cover_otzhiman_3
+use_camp = false
+on_info = {=surge_started} walker@hide_3
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@bar_dolg_general_animpoint_kamp3
+
+[animpoint@bar_smart_cover_otzhiman_4]
+cover_name = bar_smart_cover_otzhiman_4
+use_camp = false
+on_info = {=surge_started} walker@hide_4
+turn_on_campfire = false
+meet = no_meet
+avail_animations = otzhiman
+on_game_timer = 3600 | animpoint@bar_dolg_general_animpoint_kamp4
+
+[walker@otzhiman_petrenko]
+path_walk = otzhiman_petrenko_walk
+path_look = otzhiman_petrenko_look
+on_info = {=surge_started} animpoint@stand
+on_game_timer = 3600 | animpoint@stand
+meet = no_meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+corpse_detection_enabled = false
+gather_items_enabled = false
+help_wounded_enabled = false
+invulnerable = {=actor_enemy} false, true
+
+
+;;;******Romann******
+[animpoint@stand_sit]
+
+cover_name = bar_dolg_general_petrenko_smart_cover_2
+reach_movement = walk_noweap
+avail_animations = zat_b3_tech_idle_short
+use_camp = false
+meet = meet@trader_sit
+;mlr
+on_game_timer = 5400 | {!is_rain} animpoint@stand
+;mlr
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+
+[meet@trader_sit]
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+
+;;;******Romann******
+
+
+;;;******Petrenko******

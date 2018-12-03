@@ -1,0 +1,13 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {+rookie_pole_task_2_dlg =actor_in_zone(pol_space_restrictor_main_build) =npc_in_zone(pol_space_restrictor_main_build)} sr_idle@final_message %+rookie_pole_task_2_near_main_build =send_tip(st_pole_main_build_factory:fatty)%
+on_info2 = {+boss_controller_pole_spawn} nil
+
+[sr_idle@final_message]
+on_info = {=actor_has_item(pole_factory_doc_1) =actor_has_item(pole_factory_doc_2) =actor_has_item(pole_factory_doc_3) =actor_has_item(pole_factory_doc_4)} sr_idle@controller %=send_tip(st_pole_here_zero_staff:fatty)%
+
+[sr_idle@controller]
+on_actor_inside = {=actor_has_item(pole_factory_doc_1) =actor_has_item(pole_factory_doc_2) =actor_has_item(pole_factory_doc_3) =actor_has_item(pole_factory_doc_4)} nil %+boss_controller_pole_spawn =send_tip(st_pole_meet_controller:fatty) =spawn_object(pole_boss_controller:pole_controller_spawn_entrance_1)%
+on_info = {+boss_controller_pole_spawn} nil

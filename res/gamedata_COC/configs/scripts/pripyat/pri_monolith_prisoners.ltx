@@ -1,0 +1,39 @@
+[logic@pri_monolith_prisoner_1]
+suitable = {=target_squad_name(main_monolith_mlr_task_2_dlg_prisoners)} true
+prior = 150
+active = animpoint@prisoner_1
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@prisoner_1]
+cover_name = pri_smart_cover_prisoner_1
+avail_animations = prisoner
+use_camp = false
+meet = no_meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[logic@pri_monolith_prisoner_2]
+suitable = {=target_squad_name(main_monolith_mlr_task_2_dlg_prisoners)} true
+prior = 150
+active = animpoint@prisoner_2
+can_select_weapon = true
+dont_keep_items = true
+
+[animpoint@prisoner_2]
+cover_name = pri_smart_cover_prisoner_2
+avail_animations = prisoner
+use_camp = false
+meet = no_meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = false
+reach_distance = 10
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false

@@ -1,154 +1,390 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+<!--===========================================================
+<
+< TEXT  STRINGS FOR TASKS ON JUPITER (YANOV) MAP
+<	CoC 1.4.08 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 07, 2016
+<
+<===========================================================-->
+
 <string_table>
-	<!-- Jup A6 Yar -->
-	<string id="jup_b19_freedom_yar_task_1_name">
-		<text>Special delivery</text>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev  (Ecologist Mechanic) Default Storyline Task -->
+
+	<string id="drx_sl_jup_b6_scientist_tech_default_task_name">
+		<text>Получить следующее задание</text>
 	</string>
-	<string id="jup_b19_freedom_yar_task_1_text">
-		<text>You need to deliver a message. How did you get caught up in the middle of this?</text>
+	<string id="drx_sl_jup_b6_scientist_tech_default_task_text">
+		<text>Получите следующее задание.</text>
 	</string>
-	<string id="jup_b19_freedom_yar_task_1_about">
-		<text>Alright, I have a very simple job for you. I need you to deliver a message to my pal, Ashot. He needs his PDA fixed - tell him to bring it over here.</text>
+	<string id="drx_sl_jup_b6_scientist_tech_default_task_about">
+		<text>Да, мой коллега нуждается в вашей помощи.</text>
 	</string>
-	<string id="jup_b19_freedom_yar_task_1_finish">
-		<text>Haha, we were just playing a prank on you, stalker. I can't believe you put up with this shit for so long.</text>
+	<string id="drx_sl_jup_b6_scientist_tech_default_task_finish">
+		<text>Удачи, сталкер.</text>
 	</string>
-	<string id="jup_b19_freedom_yar_task_1_dm_query">
-		<text>I'm here to deliver a message</text>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev  (Ecologist Mechanic) Mutant Tissue Experiment Storyline Task -->
+
+	<string id="drx_sl_jup_b6_scientist_tech_task_1_name">
+		<text>%s - добыть трофей для Гарина</text>
 	</string>
-	<!-- ESCORT ECOGS TASK -->
+	<string id="drx_sl_jup_b6_scientist_tech_task_1_text">
+		<text>%s. Добыть и принести Гарину этот трофей.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_1_about">
+		<text>Мне нужно провести эксперимент над конкретным мутантом. Поохотитесь на него?</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_1_fetch_about">
+		<text>%s - добудьте мне этот трофей. Я обещаю хорошую награду.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_1_fetch_finish">
+		<text>Это именно то, что мне было нужно. Возьмите это в награду.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev  (Ecologist Mechanic) Find Missing Scientist Storyline Task -->
+
+	<string id="drx_sl_jup_b6_scientist_tech_task_2_name">
+		<text>Найти пропавшего учёного</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_2_text">
+		<text>Найти пропавшего учёного.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_2_about">
+		<text>Один из моих коллег пропал. Он вышел в исследовательский поход и не вернулся. Вот область, которую он исследовал, ищите там. Надеюсь, сможете найти его.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_2_finish">
+		<text>Спасибо, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev  (Ecologist Mechanic) Recover Stolen PDA Storyline Task -->
+
+	<string id="drx_sl_jup_b6_scientist_tech_task_3_name">
+		<text>Вернуть КПК Гарину</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_3_text">
+		<text>КПК, который содержал важные исследования, украден. Найти его и вернуть Гарину.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_3_about">
+		<text>Бандиты ворвались в одну из наших мобильных лабораторий и разграбили её. Одна из вещей, которую они взяли - карманный компьютер с данными исследований, которые очень важны. Я получил информацию о том, где они могли спрятать его. Проверьте это. Если найдёте КПК, я вознагражу за его возвращение.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_3_finish">
+		<text>Отлично! Очень хорошо.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev  (Ecologist Mechanic) Search Jupiter Underground Storyline Task -->
+
+	<string id="drx_sl_jup_b6_scientist_tech_task_4_name">
+		<text>Спуститься в Путепровод.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_4_text">
+		<text>Найти и вернуть утраченные документы.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_4_about">
+		<text>Один из наших коллег был убит в Путепроводе, когда возвращался из Припяти. Он нёс результаты одного очень важного исследования. Нужно найти и доставить мне эти материалы.</text>
+	</string>
+	<string id="drx_sl_jup_b6_scientist_tech_task_4_finish">
+		<text>Неплохо, неплохо. Просто превосходно.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Loki  (Freedom Honcho) Default Storyline Task -->
+
+	<string id="drx_sl_jup_a6_freedom_leader_default_task_name">
+		<text>Получить следующее задание</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_default_task_text">
+		<text>Получите следующее задание.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_default_task_about">
+		<text>Мне нужно, чтобы ты встретился кое с кем. Спроси, что можешь сделать для него. Он хорошо заплатит.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_default_task_finish">
+		<text>Удачи, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Loki  (Freedom Honcho) Arms Dealer Storyline Task -->
+
+	<string id="drx_sl_jup_a6_freedom_leader_task_1_name">
+		<text>%s для Локи</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_1_text">
+		<text>%s - добыть и доставить Локи.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_1_about">
+		<text>У «Свободы» сейчас трудное время. Мне нужно оружие. Много оружия.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_1_fetch_about">
+		<text>%s - именно такое оружие мне надо. Если сможешь протащить это мимо Выжигателя - я хорошо заплачу.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_1_fetch_finish">
+		<text>Хорошо поработал. Чем больше оружия у меня есть, тем лучше я сплю. Возьми, это оплата.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Loki  (Freedom Honcho) Clear Monolith Beachhead Storyline Task -->
+
+	<string id="drx_sl_jup_a6_freedom_leader_task_2_name">
+		<text>Уничтожить плацдарм «Монолита»</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_2_text">
+		<text>Очистить обозначенную область от любых бойцов «Монолита».</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_2_about">
+		<text>Мы готовим вторжение на территорию «Монолита». Я хочу, чтобы ты зачистил для нас одну область.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_2_finish">
+		<text>Отлично сработано! Теперь мы можем начать наше вторжение! Ну, не сейчас, позже не сегодня, так... может быть завтра. Во всяком случае, спасибо.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Loki  (Freedom Honcho) Hunt Artefact Storyline Task -->
+
+	<string id="drx_sl_jup_a6_freedom_leader_task_3_name">
+		<text>Артефакт %s</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_3_text">
+		<text>Нужно достать для Локи артефакт %s.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_3_about">
+		<text>Я посылаю одного из моих людей на задание, где ему нужна большая защита, чем могут предложить наши лучшие костюмы. Мне нужен конкретный артефакт, чтобы защитить его.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_3_fetch_about">
+		<text>Нужен артефакт %s. Если сможешь найти, я хорошо заплачу за него.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_3_fetch_finish">
+		<text>Хорошая работа, мэн.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Loki  (Freedom Honcho) Search Monolith Control Center (Chernobyl) Storyline Task -->
+
+	<string id="drx_sl_jup_a6_freedom_leader_task_4_name">
+		<text>Проникнуть в секретный центр управления.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_4_text">
+		<text>Найти чертежи секретного оружия в секретной лаборатории.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_4_about">
+		<text>Есть сведения о чертежах нового оружия, хранящихся внутри одной секретной лаборатории в пределах Чернобыльской АЭС. Мы должны выкрасть их во что бы то ни стало, если хотим иметь шанс выстоять против «Монолита». Я знаю, насколько серьезен риск, но если ты сможешь захватить эти документы, я награжу более чем щедро.</text>
+	</string>
+	<string id="drx_sl_jup_a6_freedom_leader_task_4_finish">
+		<text>Отлично! Просто нет слов!</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DYNAMIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev (Ecog Mechanic) Escort Jupiter Scientists Task -->
+
 	<string id="jup_b6_scientist_tech_task_1_name">
-		<text>Escort the Ecologists</text>
+		<text>Сопроводить учёных</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_1_text">
-		<text>Scientists have hired you to guide them to a specific location for study. Once their research has been successfully conducted, return them safely to camp.</text>
+		<text>Необходимо провести учёных к определенному месту и обеспечить их безопасность, пока те проводят исследования, а затем привести обратно в лабораторию.</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_1_about">
-		<text>We need an experienced stalker to lead a few of our the colleagues out into the field for study. Are you up for the task?</text>
+		<text>Нам нужен опытный сталкер, который согласится провести наших коллег до места исследований и обеспечить их безопасность во время оных. Вы нам не поможете?</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_1_fetch_finish">
-		<text>Thank you for your protection, stalker. Please, take this as a token of our gratitude.</text>
+		<text>Спасибо за вашу защиту, сталкер. Пожалуйста, примите это в знак нашей признательности.</text>
 	</string>
-	<!-- FIND ARTEFACT FOR ECOGS TASK -->
+
 	<string id="jup_b6_scientist_tech_task_2_name">
-		<text>Find the "%s" artefact</text>
+		<text>Найти артефакт %s</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_2_text">
-		<text>You have been asked to retrieve the %s artefact. Bring it back to Tukarev if you happen to get your hands on one.</text>
+		<text>Гарин поручил принести артефакт %s, чтобы учёные смогли провести его исследования.</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_2_about">
-		<text>We are looking for certain kinds of artefacts. If you are interested, I will tell you what we need.</text>
+		<text>Учёным нужны некоторые виды артефактов, чтобы провести их исследования. Если интересует - расскажу подробнее.</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_2_fetch_about">
-		<text>I need you to bring us back a %s. You ever heard of it?</text>
+		<text>Учёным нужны некоторые виды артефактов, чтобы провести их исследования. К примеру, %s. Слышал о таком? Если принесёшь - получишь достойное вознаграждение.</text>
 	</string>
 	<string id="jup_b6_scientist_tech_task_2_fetch_finish">
-		<text>Great! You've found exactly what we are looking for. Here's your payment.</text>
+		<text>Отличный образец, именно то, что нужно. Спасибо, сталкер, вот обещанная награда:</text>
 	</string>
-	<!-- ELIMINATE MUTANTS FOR TRAPPER TASK -->
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Tukarev (Ecog Mechanic) Brains vs Brawn Dynamic Task -->
+
+	<string id="jup_b6_scientist_tech_task_3_name">
+		<text>Против бандитов</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_3_text">
+		<text>Возглавить отряд учёных.</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_3_about">
+		<text>Мои исследователи находятся в постоянной опасности. Я хочу, чтобы вы совместно с моими людьми очистили местность от бандитов</text>
+	</string>
+	<string id="jup_b6_scientist_tech_task_3_finish">
+		<text>Отличная работа. Спасибо.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Trapper (Loner Honcho) Lead Mutant Hunt Task -->
+
 	<string id="jup_b220_trapper_task_1_name">
-		<text>Clear area of mutants</text>
+		<text>Зачистить логово мутантов</text>
 	</string>
 	<string id="jup_b220_trapper_task_1_text">
-		<text>Mutants have been spotted near this location making the area dangerous for some of the locals. You have been tasked to eliminate the mutant threat within the area. Report back to Trapper after the job is done.</text>
+		<text>Вблизи этого места было замечено скопление мутантов, что создает угрозу местным сталкерам. Зверобой поручил зачистить логово тварей.</text>
 	</string>
 	<string id="jup_b220_trapper_task_1_about">
-		<text>I've been looking for someone to help keep the area around Yanov a bit safer by depopulating the various mutant lairs found in area. Would you like the job?</text>
+		<text>Хмм... Ты, вроде бы, довольно опытен. Я ищу охотника, который смог бы очистить территорию вокруг Янова от мутантов. Не поможешь?</text>
 	</string>
 	<string id="jup_b220_trapper_task_1_finish">
-		<text>Thank you, stalker. The area will be much safer for others because of you. Here is your payment.</text>
+		<text>Спасибо, сталкер. Благодаря тебе, здесь теперь будет намного безопаснее. Вот твоя награда:</text>
 	</string>
-	<!-- ASSASSINATION FOR TRAPPER TASK -->
+
 	<string id="jup_b220_trapper_task_2_name">
-		<text>Assassinate target</text>
+		<text>Покушение</text>
 	</string>
 	<string id="jup_b220_trapper_task_2_text">
-		<text>Trapper has a high value target that needs to be eliminated.</text>
+		<text>Зверобой просит устранить опасного сталкера.</text>
 	</string>
 	<string id="jup_b220_trapper_task_2_about">
-		<text>I have a dangerous threat that needs to be eliminated. Not a mutant this time, but a man. He will not be easy to get to but I promise to pay you well. Are you up for the job?</text>
+		<text>Есть опасность, которую необходимо устранить. На этот раз не мутант, а человек. Хотя неизвестно, кто из них хуже. Нужно устранить опасного сталкера. До него будет нелегко добраться, но я обещаю хорошо заплатить. Готов на работу?</text>
 	</string>
 	<string id="jup_b220_trapper_task_2_finish">
-		<text>Excellent work stalker. Here is your payment.</text>
+		<text>Спасибо, сталкер. Вот твоя награда:</text>
 	</string>
-	<!-- FIND WEAPON FOR TRAPPER TASK -->
+
+
+	<!-- FIND WEAPON FOR HUNTSMAN TASK -->
 	<string id="jup_b220_trapper_task_3_name">
-		<text>Find "%s"</text>
+		<text>%s - оружие для Зверобоя</text>
 	</string>
 	<string id="jup_b220_trapper_task_3_text">
-		<text>Trapper is looking for a specific firearm in perfect condition. Return to him if you find one.</text>
+		<text>Зверобой ищет конкретное оружие в отличном состоянии. Вернитесь к нему, когда найдёте.</text>
 	</string>
 	<string id="jup_b220_trapper_task_3_about">
-		<text>One of my trappers is in the market for a specific firearm that I don't have available. Would you be able to track one down for me?</text>
+		<text>Значит, такая тут история случилась. Примчался один тип - карманы от денег прямо топырятся! Начал народ себе в компанию нанимать, который не поопытней, а погоношистей, снаряжение пачками скупать... У меня ствол был - чудо, а не пушка! - так я сдуру ему и продал. По деньгам-то не прогадал, врать не буду... Только вся эта компания быстренько накрылась где-то в Зоне. Ну, жалко людей, конечно... Только вот другие теперь будут знать: одним баблом дорогу сквозь Зону не выстелишь. Да, так мне до сих пор ствол тот жалко - такой ствол, и где-то гниёт! Найди такой, а? Хороший гонорар за мной!</text>
 	</string>
 	<string id="jup_b220_trapper_task_3_fetch_about">
-		<text>I need a %s. The trapper who wants it goes after dangerous game so he needs it to be in excellent condition. I can pay you well if you find one.</text>
+		<text>%s - вот что мне нужно. Для охоты на мутантов нужно только самое лучшее оружие. Я готов хорошо заплатить за него.</text>
 	</string>
 	<string id="jup_b220_trapper_task_3_fetch_finish">
-		<text>Ah, perfect. This will do nicely. Here is the money I promised you.</text>
+		<text>Безупречно. Красота-то какая. Вот деньги, которые я обещал.</text>
 	</string>
-	<!-- FIND MUTANT PARTS FOR TRAPPER TASK -->
+
+
+	<!-- FIND MUTANT PARTS FOR HUNTSMAN TASK -->
 	<string id="jup_b220_trapper_task_4_name">
-		<text>Procure "%s"</text>
+		<text>%s. Добыть трофей</text>
 	</string>
 	<string id="jup_b220_trapper_task_4_text">
-		<text>Trapper says he will pay well if I can bring him %s.</text>
+		<text>%s - за этот трофей Зверобой хорошо заплатит.</text>
 	</string>
 	<string id="jup_b220_trapper_task_4_about">
-		<text>I have a bounty out on a particular type of mutant. Are you interested?</text>
+		<text>У меня есть заказ на определенного типа трофеи. Интересно?</text>
 	</string>
 	<string id="jup_b220_trapper_task_4_fetch_about">
-		<text>Kill this mutant and bring me its %s and I will pay you well, stalker.</text>
+		<text>А заказ, значит, не простой. %s. Я заплачу.</text>
 	</string>
 	<string id="jup_b220_trapper_task_4_fetch_finish">
-		<text>Ah, another threat eliminated and a new decoration for the camp. Well done, stalker.</text>
+		<text>Ага, ещё одна угроза устранена и новое украшение для лагеря. Молодец!</text>
 	</string>
-	<!-- FIND LEVEL 1 TOOLKIT FOR NITRO TASK -->
+
+
+	<!--- Call of Chernobyl -->
+
+
 	<string id="jup_b217_stalker_tech_task_1_name">
-		<text>Find "%s"</text>
+		<text>Найти для Азота %s</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_1_text">
-		<text>%s are required by Nitro to install basic equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Необходимо принести Азоту %s, чтобы он мог проводить модернизацию снаряжения.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_1_about">
-		<text>I need new tools, stalker, something that is hard to come by in the Zone. If you are interested in helping me out, I will tell you what I need.</text>
+		<text>Мне нужны новые инструменты. В Зоне их сейчас днем с огнём не сыщешь, а снаряжение чинить чем-то надо. Если интересует - расскажу подробнее.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_1_fetch_about">
-		<text>I need a set of basic tools. It should contain what I need. If you can bring some back for me I will be grateful, I will even offer you a discount from here on out.</text>
+		<text>Мне нужны новые инструменты. В Зоне их сейчас днем с огнём не сыщешь, а снаряжение чинить чем-то надо. Принеси мне хотя бы инструменты для грубой работы. В наборе должно быть всё, что мне нужно. Если найдешь, приноси, наградой не обижу.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_1_fetch_finish">
-		<text>Perfect! This is just what I need, stalker. If you need any of your equipment fine-tuned, now I can do it properly.</text>
+		<text>Отлично! То, что мне нужно! Нужно будет улучшить снарягу - заходи, теперь я всё, что угодно сделать могу.</text>
 	</string>
-	<!-- FIND LEVEL 2 TOOLKIT FOR NITRO TASK -->
 	<string id="jup_b217_stalker_tech_task_2_name">
-		<text>Find "%s"</text>
+		<text>Найти для Азота %s</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_2_text">
-		<text>%s are required by Nitro to install advanced equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Необходимо принести Азоту %s, чтобы он мог проводить серьёзную модернизацию снаряжения.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_2_about">
-		<text>The toolkit you brought me is great, but it doesn't have everything I need. Do you think you can find me a better set?</text>
+		<text>Ты принес мне отличный ремнабор, но в нём оказалось не всё необходимое. Как думаешь, сможешь найти набор получше?</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_2_fetch_about">
-		<text>I need an %s. I'm not sure where you can get one of these, but if you can find one, I need it.</text>
+		<text>Ты принес мне отличный ремнабор, но в нём оказалось не всё необходимое. Как думаешь, сможешь найти набор получше? Принеси мне %s, и я смогу сделать с твоей снарягой очень, очень многое.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_2_fetch_finish">
-		<text>Whoa! You found a nice set of tools for me. Here, I promised you some money in return.</text>
+		<text>Ого! Ты принес отличный набор, дружище. Вот, держи, ты это заслужил.</text>
 	</string>
-	<!-- FIND LEVEL 3 TOOLKIT FOR NITRO TASK -->
 	<string id="jup_b217_stalker_tech_task_3_name">
-		<text>Find "%s"</text>
+		<text>Найти для Азота %s</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_3_text">
-		<text>%s are required by Nitro to install expert equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Необходимо принести Азоту %s, чтобы он мог обеспечить ещё более серьёзную модернизацию снаряжения.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_3_about">
-		<text>The toolkit you brought me is great, but it doesn't have everything I need. Do you think you can find me a better set?</text>
+		<text>Ты принес мне отличный ремнабор, но и в нём, оказалось, кое-чего нет. Как думаешь, сможешь найти инструменты для калибровки?</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_3_fetch_about">
-		<text>I need an %s. I'm not sure where you can get one of these, but if you can find one, I need it.</text>
+		<text>Ты принес мне отличный ремнабор, но и в нём, оказалось, кое-чего нет. Как думаешь, сможешь найти %s? Принеси мне их, и я смогу сделать с твоей снарягой всё, что только пожелаешь.</text>
 	</string>
 	<string id="jup_b217_stalker_tech_task_3_fetch_finish">
-		<text>Whoa! You found a nice set of tools for me. Here, I promised you some money in return.</text>
+		<text>Ого! Ты принес отличный набор, дружище. Прямо глазам своим не верю. Вот, держи, ты это заслужил.</text>
 	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- Jup A6 Yar -->
+	<string id="jup_b19_freedom_yar_task_1_name">
+		<text>Курьер</text>
+	</string>
+	<string id="jup_b19_freedom_yar_task_1_text">
+		<text>Нужно доставить сообщение. И как можно было в это ввязаться?</text>
+	</string>
+	<string id="jup_b19_freedom_yar_task_1_about">
+		<text>Хорошо, у меня есть очень простая работа. Мне нужно доставить сообщение моему приятелю, Ашоту. Ему нужен отремонтированный КПК - скажи ему, пусть приходит и забирает.</text>
+	</string>
+	<string id="jup_b19_freedom_yar_task_1_finish">
+		<text>Ха-ха, мы просто разыграли малость тебя, сталкер. Я не могу поверить, что ты мирился с этим дерьмом так долго.</text>
+	</string>
+	
+	<string id="jup_b19_freedom_yar_task_1_dm_query">
+		<text>Я принёс сообщение.</text>
+	</string>
+
 </string_table>

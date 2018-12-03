@@ -11,12 +11,20 @@ MinSpeed		= 1.0				;-- option for ALife Simulator
 MaxSpeed		= 5.0				;-- option for ALife Simulator
 going_speed             = 2 ;--/4.5                     ;-- option for ALife Simulator
 search_speed            = 1.5                           ;-- option for ALife Simulator
-visual			= monsters\zombi\zombi_2
-corpse_visual		= monsters\zombi\zombi_2
+visual			= monsters\zombi\zombi_1
+corpse_visual		= monsters\zombi\zombi_1
 icon                    = ui_npc_monster_kontroler	
 
-hit_fraction_monster = 0.5
+hit_fraction_monster = 0.75
 skin_armor = 0.1
+
+;------------------------------------------------------------------------
+; Influences
+;------------------------------------------------------------------------
+radiation_max_distance		=	3
+radiation_max_power			=	0.05
+radiation_linear_factor		=	1
+radiation_quadratic_factor	=	1
 
 spawn_phantom 		= m_phantom_zombi
 can_spawn_phantom 	= false
@@ -308,6 +316,7 @@ fire_wound_immunity	= 0.05
 GroupControlSection	= spawn_group
 SpaceRestrictionSection = space_restrictor,zone_mosquito_bald,zone_witches_galantine,zone_burning_fuzz1,zone_mincer,zone_gravi_zone
 $spawn			= "monsters\zombies\zombie_01_weak"
+visual			= monsters\zombi\zombi_2
 ;$spawn                 = "monsters\zombies\zombie_base";-- option for Level Editor
 $npc			= on				;-- option for Level Editor
 $prefetch 		= 16
@@ -318,6 +327,8 @@ MinSpeed		= 1.0				;-- option for ALife Simulator
 MaxSpeed		= 5.0				;-- option for ALife Simulator
 going_speed             = 2;4.5                         ;-- option for ALife Simulator
 search_speed            = 1.5                           ;-- option for ALife Simulator
+;--/visual		= monsters\zombi\zombi_1
+corpse_visual		= monsters\zombi\zombi_1
 icon = ui_npc_monster_kontroler	
 community                       = zombie
 MaxHealthValue		     = 100			;-- range [0..200]
@@ -590,3 +601,12 @@ spec_rank = strong
 
 [zombie_strong2]:zombie_strong
 visual                          = monsters\zombi\zombi_1
+
+; Doesn't actually have a ghost model.
+; Could always be borrowed from another mod.
+
+[zombie_ghost]:zombie_weak
+visual                          = monsters\zombi\zombi_1
+
+[zombie_fake]:zombie_weak
+visual				= monsters\zombi\zombi_4

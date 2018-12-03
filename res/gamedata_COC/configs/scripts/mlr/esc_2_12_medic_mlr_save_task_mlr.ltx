@@ -1,0 +1,16 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_info = {=actor_community(actor_stalker)} sr_idle@start_1
+on_info2 = {=actor_community(actor_dolg)} sr_idle@start_1
+on_info3 = {=actor_community(actor_freedom)} sr_idle@start_1
+on_info4 = {=actor_community(actor_ecolog)} sr_idle@start_1
+on_info5 = {=actor_community(actor_csky)} sr_idle@start_1
+
+[sr_idle@start_1]
+on_actor_inside = sr_idle@timer %+esc_2_12_medic_mlr_save_task_mlr_1 =send_tip(esc_2_12_medic_mlr_save_task_mlr_message:tourist) =give_esc_2_12_medic_mlr_save_task_mlr%
+
+[sr_idle@timer]
+on_game_timer = 1800 | nil %+esc_2_12_medic_mlr_ignor =kill_npc(esc_2_12_medic_mlr)%
+on_info = {+esc_2_12_medic_mlr_save_task_mlr_2} nil

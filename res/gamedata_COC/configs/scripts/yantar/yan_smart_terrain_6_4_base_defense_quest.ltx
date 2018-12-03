@@ -44,8 +44,8 @@ on_info = {+yan_faction_base_defense_zombi_wave_6_killed} sr_idle@wait_for_end %
 on_info = {+yan_faction_base_defense_zombi_wave_7_1_killed +yan_faction_base_defense_zombi_wave_7_2_killed +yan_faction_base_defense_zombi_wave_7_3_killed} sr_idle@pda_message %=stop_surge =actor_surge_immuned(false) +faction_base_defense_enemy_killed +faction_base_defense_2nd_enemy_killed%
 
 [sr_idle@pda_message]
-on_info = {+yan_stalker_sakharov_offer_free_upgrade} sr_idle@timer
-on_timer = 4000 | {-yan_stalker_sakharov_offer_free_upgrade} sr_idle@timer %=yan_saharov_message(free_upgrade) +yan_stalker_sakharov_offer_free_upgrade%
+on_info = {+yan_stalker_sakharov_psi_helmet_upgrade +yan_stalker_sakharov_offer_free_upgrade} sr_idle@timer
+on_timer = 3000 | {-yan_stalker_sakharov_psi_helmet_upgrade -yan_stalker_sakharov_offer_free_upgrade} sr_idle@timer %=yan_saharov_message(free_upgrade) +yan_stalker_sakharov_offer_free_upgrade%
 
 [sr_idle@timer]
 on_game_timer = 86400 | sr_idle@wait_for_actor %-yan_faction_base_defense_zombi_wave_1_killed -yan_faction_base_defense_zombi_wave_2_killed -yan_faction_base_defense_zombi_wave_3_killed -yan_faction_base_defense_zombi_wave_4_killed -yan_faction_base_defense_zombi_wave_5_killed -yan_faction_base_defense_zombi_wave_6_killed -yan_faction_base_defense_zombi_wave_7_1_killed -yan_faction_base_defense_zombi_wave_7_2_killed -yan_faction_base_defense_zombi_wave_7_3_killed -mar_smart_terrain_5_12_mutants_to_base -faction_base_defense_enemy_killed -faction_base_defense_2nd_enemy_killed -yantar_faction_base_defense_quest_started%

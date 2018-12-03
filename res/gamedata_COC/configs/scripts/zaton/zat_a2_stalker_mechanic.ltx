@@ -2,6 +2,7 @@
 suitable = {=check_npc_name(zat_a2_stalker_mechanic)} true
 prior = 200
 active = animpoint@base
+can_select_weapon = false
 level_spot = mechanic
 
 [animpoint@base]
@@ -29,7 +30,7 @@ avail_animations = zat_b3_tech_idle_short
 on_actor_dist_ge_nvis = 10 | animpoint@base
 
 [meet]
-close_snd_hello = nil
+close_snd_hello = zat_b3_tech_drink_no_more
 close_snd_bye   = nil
 close_anim 		= nil
 close_victim 	= nil

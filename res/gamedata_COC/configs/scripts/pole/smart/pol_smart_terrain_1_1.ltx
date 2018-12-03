@@ -1,0 +1,20 @@
+[smart_terrain]
+squad_id = 2
+max_population = 3
+respawn_params = respawn@pol_smart_terrain_1_1
+respawn_idle = 60000
+
+[respawn@pol_smart_terrain_1_1]
+spawn_stalker@sim
+
+[spawn_stalker@sim]
+spawn_squads = stalker_sim_squad_novice
+spawn_num = 2
+
+[exclusive]
+guard_1 = pole\pol_smart_terrain_1_1_smart_logic.ltx
+patrol_1 = pole\pol_smart_terrain_1_1_smart_logic.ltx
+camp_animpoint_1 = pole\pol_smart_terrain_1_1_smart_logic.ltx
+camp_animpoint_2 = pole\pol_smart_terrain_1_1_smart_logic.ltx
+camp_animpoint_3 = pole\pol_smart_terrain_1_1_smart_logic.ltx
+camp_animpoint_4 = pole\pol_smart_terrain_1_1_smart_logic.ltx

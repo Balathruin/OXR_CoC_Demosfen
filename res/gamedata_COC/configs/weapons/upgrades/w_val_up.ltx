@@ -1,144 +1,215 @@
 [up_sect_firsta_val]
-cost		      		= 1200
+;Ќадежность(1)10%
+;---------------
+cost		      		= 1000
 value					= +10
 
-fire_dispersion_condition_factor    = -0.25
-condition_queue_shot_dec	= -0.00005
-condition_shot_dec      	= -0.00005
-misfire_start_prob	     	= -0.0005
-misfire_end_prob	     	= -0.005
+;увеличение дисперсии в процентах при максимальном износе
+fire_dispersion_condition_factor    = -0.25 ;15
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= -0.0008
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= -0.008 ;0.03.03
 
 [up_sect_firstc_val]
-cost		      		= 2400
+;ќтдача(2)-20%
+;------------
+cost		      		= 1400
 value					= -20
 
-cam_dispersion              = -0.10
-cam_step_angle_horz        	= -0.10
+cam_dispersion              = -0.06		;0.5
+cam_dispersion_inc         	= -0.04		;0.5
+cam_step_angle_horz        	= -0.14		;1.5 [0.73 в остатке]
+
+zoom_cam_dispersion         = -0.07		;0.5 [0.093 в остатке]
+zoom_cam_dispersion_inc     = -0.04		;0.5
+zoom_cam_step_angle_horz    = -0.6 	;1.0 [0.505 в остатке]
 
 [up_sect_firstd_val]
-cost		      		= 2400
+;Ќастильность(2)20%
+;------------------
+cost		      		= 1400
 value					= +20
 
-bullet_speed            = +50
-fire_dispersion_base	= -0.01
+bullet_speed            = +56
+fire_dispersion_base	= -0.01 ;0.7
 
 [up_sect_firste_val]
-cost		      		= 4800
+;—корострельность(3)25%
+;----------------------
+cost		      		= 1800
 value					= +30
 
-rpm          = +100
+rpm          = +200
 
 [up_sect_firstf_val]
-cost		      		= 4800
+;“очность(3)30%
+;---------------
+cost		      		= 1800
 value					= +30
 
-fire_dispersion_base	= -0.045
-fire_dispersion_condition_factor    = -0.25
+fire_dispersion_base	= -0.05 ;0.7
+fire_dispersion_condition_factor    = -0.25 ;15
 
 [up_sect_secona_val]
-cost		      		= 1200
+;ќтдача(1)-10%
+;------------
+cost		      		= 1000
 value					= -10
 
-cam_dispersion              = -0.05
-cam_step_angle_horz        	= -0.05
+cam_dispersion              = -0.05		;0.5
+cam_dispersion_inc         	= -0.02		;0.5
+cam_step_angle_horz        	= -0.09		;1.5 [0.73 в остатке]
+
+zoom_cam_dispersion         = -0.05		;0.5 [0.093 в остатке]
+zoom_cam_dispersion_inc     = -0.02		;0.5
+zoom_cam_step_angle_horz    = -0.05 	;1.0 [0.505 в остатке]
 
 [up_sect_seconc_val]
-cost		      		= 2400
+;”добство(2)15%
+;--------------
+cost		      		= 1400
 value					= +15
-
-crosshair_inertion		   = -0.5
- 
-PDM_disp_vel_factor 		= -0.35
-PDM_disp_accel_factor 		= -0.35
-
-[up_sect_secone_val]
-cost		      		= 4800
-value					= +25
 
 crosshair_inertion		   = -0.75
+ 
+PDM_disp_base 				= -0.1 ;0.5
+PDM_disp_vel_factor 		= -0.35 ;1.5
+PDM_disp_accel_factor 		= -0.35 ;1.5
 
-PDM_disp_vel_factor 		= -0.55
-PDM_disp_accel_factor 		= -0.55
-
-[up_sect_seconf_val]
-cost		      		= 4800
-value					= -30
-
-cam_dispersion              = -0.15
-cam_step_angle_horz        	= -0.15
-
-[up_sect_thirda_val]
-cost		      		= 1200
-value					= +10
-
-bullet_speed            = +30
-fire_dispersion_base    = -0.005
-
-[up_sect_thirdc_val]
-cost		      		= 2400
-value					= +20
-
-fire_dispersion_condition_factor    = -0.5
-condition_queue_shot_dec	= -0.0001
-condition_shot_dec      	= -0.0001
-misfire_start_prob	     	= -0.001
-misfire_end_prob	     	= -0.01
-
-[up_sect_thirdd_val]
-cost		      		= 2400
-value					= +20
-
-fire_dispersion_base	= -0.025
-fire_dispersion_condition_factor    = -0.15
-
-[up_sect_thirde_val]
-cost		      		= 4800
+[up_sect_secone_val]
+;”добство(3)25%
+;--------------
+cost		      		= 1800
 value					= +25
 
-rpm          = +100
+crosshair_inertion		   = -1.25
+ 
+PDM_disp_base 				= -0.15 ;0.5
+PDM_disp_vel_factor 		= -0.4 ;1.5
+PDM_disp_accel_factor 		= -0.4 ;1.5
 
-[up_sect_thirdf_val]
-cost		      		= 4800
-value					= +30
-
-bullet_speed          = +70
-fire_dispersion_base  = -0.015
-
-[up_sect_fourta_val]
-cost		      		= 1200
-value					= +10
-
-rpm          = +40
-
-[up_sect_fourtc_val]
-cost		      		= 2400
-value					= +15
-
-fire_dispersion_condition_factor    = -0.5
-condition_queue_shot_dec	= -0.0001
-condition_shot_dec      	= -0.0001
-misfire_start_prob	     	= -0.001
-misfire_end_prob	     	= -0.01
-
-[up_sect_fourte_val]
-cost		      		= 4800
-value					= +30
-
-fire_dispersion_base	= -0.045
-fire_dispersion_condition_factor    = -0.25
-
-[up_sect_fourtf_val]
-cost		      		= 4800
+[up_sect_seconf_val]
+;ќтдача(3)-30%
+;------------
+cost		      		= 1800
 value					= -30
 
-cam_dispersion              = -0.15
-cam_step_angle_horz        	= -0.15
+cam_dispersion              = -0.16		;0.5
+cam_dispersion_inc         	= -0.06		;0.5
+cam_step_angle_horz        	= -0.18		;1.5 [0.73 в остатке]
+
+zoom_cam_dispersion         = -0.11		;0.5 [0.093 в остатке]
+zoom_cam_dispersion_inc     = -0.055		;0.5
+zoom_cam_step_angle_horz    = -0.16 	;1.0 [0.505 в остатке]
+
+[up_sect_thirda_val]
+;Ќастильность(1)10%
+;------------------
+cost		      		= 1000
+value					= +10
+
+bullet_speed            = +29
+
+[up_sect_thirdc_val]
+;Ќадежность(2)20%
+;---------------
+cost		      		= 1400
+value					= +20
+
+;увеличение дисперсии в процентах при максимальном износе
+fire_dispersion_condition_factor    = -0.25 ;15
+;увеличение изношености при выстреле очередью
+condition_queue_shot_dec	= -0.0001 ;0.0013
+;увеличение изношености при одиночном выстреле
+condition_shot_dec      	= -0.0001 ;0.0011
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= -0.0018
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= -0.014 ;0.03
+
+[up_sect_thirdd_val]
+;“очность(2)20%
+;---------------
+cost		      		= 1400
+value					= +20
+
+fire_dispersion_base	= -0.03 ;0.7
+fire_dispersion_condition_factor    = -0.25 ;15
+
+[up_sect_thirde_val]
+;—корострельность(3)25%
+;----------------------
+cost		      		= 1800
+value					= +25
+
+rpm          = +200
+
+
+[up_sect_thirdf_val]
+;Ќастильность(3)30%
+;------------------
+cost		      		= 1800
+value					= +30
+
+bullet_speed          = +84
+fire_dispersion_base  = -0.02
+
+[up_sect_fourta_val]
+;—корострельность(1)10%
+;------------------
+cost		      		= 1000
+value					= +10
+
+rpm          = +80
+
+
+[up_sect_fourtc_val]
+;Ќадежность(2)20%
+;---------------
+cost		      		= 1400
+value					= +15
+
+;увеличение дисперсии в процентах при максимальном износе
+fire_dispersion_condition_factor    = -0.25 ;15
+;увеличение изношености при выстреле очередью
+condition_queue_shot_dec	= -0.0001 ;0.0013
+;увеличение изношености при одиночном выстреле
+condition_shot_dec      	= -0.0001 ;0.0011
+;шанс осечки при изношености больше чем misfireStartCondition
+misfire_start_prob	     	= -0.0018
+;шанс осечки при изношености больше чем misfireEndCondition
+misfire_end_prob	     	= -0.014 ;0.03
+
+[up_sect_fourte_val]
+;“очность(3)30%
+;---------------
+cost		      		= 1800
+value					= +30
+
+fire_dispersion_base	= -0.05 ;0.7
+fire_dispersion_condition_factor    = -0.25 ;15
+
+[up_sect_fourtf_val]
+;ќтдача(3)-30%
+;------------
+cost		      		= 1800
+value					= -30
+
+cam_dispersion              = -0.16		;0.5
+cam_dispersion_inc         	= -0.06		;0.5
+cam_step_angle_horz        	= -0.18		;1.5 [0.73 в остатке]
+
+zoom_cam_dispersion         = -0.11		;0.5 [0.093 в остатке]
+zoom_cam_dispersion_inc     = -0.055		;0.5
+zoom_cam_step_angle_horz    = -0.16 	;1.0 [0.505 в остатке]
 
 [up_sect_fiftha_val]
-cost		      		= 3200
+;”величен патронтаж
+;------------
+cost		      		= 1500
 value					= +10
 ammo_mag_size        	= +10 
-
 
 [up_firsta_val]
 scheme_index            = 0, 0
@@ -189,7 +260,7 @@ scheme_index            = 1, 1
 known                   = 1
 effects                 = up_gr_firstef_val
 section                 = up_sect_firstd_val
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -335,7 +406,7 @@ scheme_index            = 0, 2
 known                   = 1
 effects                 = up_gr_thirdcd_val
 section                 = up_sect_thirda_val
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b
@@ -416,7 +487,7 @@ icon                    = ui_inGame2_upgrade_SA_Lavina_13
 scheme_index            = 2, 5
 effects                 =
 section                 = up_sect_thirdf_val
-property                = prop_bullet_speed, prop_dispersion
+property                = prop_bullet_speed
 
 known                   = 1
 

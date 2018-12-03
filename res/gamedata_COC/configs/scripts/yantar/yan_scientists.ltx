@@ -6,6 +6,20 @@ help_wounded_enabled = false
 corpse_detection_enabled = false
 invulnerable = {!actor_enemy} true, false
 
+[logic@yan_kruglov]
+active = walker@yan_kruglov
+suitable = {=check_npc_name(yan_ecolog_kruglov)} true
+
+[walker@yan_kruglov]:walker@def
+path_walk = collector_1_walk
+path_look = collector_1_look
+on_info = {=surge_started} walker@hide_1
+
+[walker@hide_1]:walker@def
+path_walk = hide_1_walk
+path_look = hide_1_look
+on_info = {=surge_complete} walker@yan_kruglov
+
 [logic@yan_semenov]
 active = walker@yan_semenov
 suitable = {=check_npc_name(yan_ecolog_semenov)} true

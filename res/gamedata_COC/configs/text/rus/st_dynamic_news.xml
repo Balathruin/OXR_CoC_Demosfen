@@ -1516,19 +1516,19 @@
 	<string id="st_dyn_l10_red_forest_daleko_6">
 		<text>аномалии «Подземная гроза»</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_1">
+	<string id="st_dyn_l01_escape_daleko_10">
 		<text>перехода на Кордон</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_2">
+	<string id="st_dyn_l01_escape_daleko_11">
 		<text>заправки</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_3">
+	<string id="st_dyn_l01_escape_daleko_12">
 		<text>лесопилки</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_4">
+	<string id="st_dyn_l01_escape_daleko_13">
 		<text>моста</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_daleko_5">
+	<string id="st_dyn_l01_escape_daleko_14">
 		<text>перехода в Тёмную Долину</text>
 	</string>
 	<string id="st_dyn_l08_yantar_daleko_1">
@@ -1702,7 +1702,7 @@
 		<text>на «Шевченко»</text>
 	</string>
 	<string id="st_dyn_zaton_blizko_14">
-		<text>на земснаряде</text>
+		<text>на Земснаряде</text>
 	</string>
 	<string id="st_dyn_zaton_blizko_15">
 		<text>на портовых кранах</text>
@@ -1959,19 +1959,19 @@
 	<string id="st_dyn_l10_red_forest_blizko_6">
 		<text>у аномалии «Подземная гроза»</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_1">
+	<string id="st_dyn_l01_escape_blizko_10">
 		<text>у перехода на Кордон</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_2">
+	<string id="st_dyn_l01_escape_blizko_11">
 		<text>на заправке</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_3">
+	<string id="st_dyn_l01_escape_blizko_12">
 		<text>на лесопилке</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_4">
+	<string id="st_dyn_l01_escape_blizko_13">
 		<text>у моста</text>
 	</string>
-	<string id="st_dyn_k01_darkscape_blizko_5">
+	<string id="st_dyn_l01_escape_blizko_14">
 		<text>у перехода в Тёмную Долину</text>
 	</string>
 	<string id="st_dyn_l08_yantar_blizko_1">

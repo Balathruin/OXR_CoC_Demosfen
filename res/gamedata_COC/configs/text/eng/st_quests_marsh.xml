@@ -1,202 +1,409 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+<!--===========================================================
+<
+< TEXT  STRINGS FOR TASKS ON MARSH (SWAMPS) MAP
+<	CoC 1.4.10 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 14, 2016
+<
+<===========================================================-->
 <string_table>
-	<!-- DELIVER PDA FOR SPORE TASK -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Cold (Clear Sky Honcho) Default Storyline Task -->
+
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_default_task_name">
+		<text>Получить следующее задание</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_default_task_text">
+		<text>Получите следующее задание.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_default_task_about">
+		<text>Да, мой друг нуждается в помощи. Сходи к нему.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_default_task_finish">
+		<text>Удачи, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Cold (Clear Sky Honcho) Covert Agent Storyline Task -->
+
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_1_name">
+		<text>Тайный агент</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_1_text">
+		<text>Заполучить документы, оставленные оперативником «Чистого Неба» и вернуть их Холоду.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_1_about">
+		<text>Один из моих оперативников оставил какие-то документы для меня. Я хочу, чтобы ты нашёл их. Не позволяй никому следовать за собой. Если увидишь хвост - убери его немедленно.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_1_finish">
+		<text>Хорошая работа.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Cold (Clear Sky Honcho) Protect Clear Sky Base Storyline Task -->
+
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_2_name">
+		<text>Защитить базу «Чистого Неба»</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_2_text">
+		<text>Уничтожить вражеские силы, чтобы предотвратить обнаружение базы «Чистого Неба».</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_2_about">
+		<text>Активность наших врагов на Болотах возросла. Я не могу рисковать. Нужно очистить область от любых враждебных элементов.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_2_finish">
+		<text>Хорошо всё сделал. Спасибо, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Cold (Clear Sky Honcho) Find Artefact Storyline Task -->
+
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_3_name">
+		<text>Найти артефакт %s для Холода</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_3_text">
+		<text>Найти артефакт %s для Холода.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_3_about">
+		<text>Сталкер, ты мне нужен, чтобы добыть артефакт.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_3_fetch_about">
+		<text>Найди мне артефакт %s. Мне нужен один для изучения. Я считаю, что у него есть свойства, которые пока не обнаружены.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_3_fetch_finish">
+		<text>Ах, замечательно, что ты нашёл его. Ты хорошо поработал.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Cold (Clear Sky Honcho) Search Agroprom Underground Storyline Task -->
+
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_4_name">
+		<text>В Подземелья Агропрома</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_4_text">
+		<text>Военные документы спрятаны в Подземельях Агропрома. Найти их и принести Холоду.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_4_about">
+		<text>Один из наших агентов смог захватить важные документы военных, но был убит, прежде чем успел доставить их на базу. В настоящее время они спрятаны в Подземельях Агропрома. Нужно тайно проникнуть туда и найти эти материалы до того, как это сделают военные. Удачи!</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_task_4_finish">
+		<text>Отличная работа.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Librarian (Clear Sky Trader) Default Storyline Task -->
+
+	<string id="drx_sl_mar_base_stalker_barmen_default_task_name">
+		<text>Получить следующее задание</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_default_task_text">
+		<text>Получите следующее задание.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_default_task_about">
+		<text>Я знаю, кто мог бы воспользоваться твоими услугами.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_default_task_finish">
+		<text>Удачи, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Librarian (Clear Sky Trader) Clear Out Mutant Lair Storyline Task -->
+
+	<string id="drx_sl_mar_base_stalker_barmen_task_1_name">
+		<text>Уничтожить логово мутантов</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_1_text">
+		<text>Наливайко узнал про логово мутантов и поручил его уничтожить.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_1_about">
+		<text>Неподалёку есть логово мутантов. Надо бы избавиться от такого соседства.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_1_finish">
+		<text>Хех, хорошая работа. Вот кое-что за беспокойство.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Librarian (Clear Sky Trader) Procure Supplies Storyline Task -->
+
+	<string id="drx_sl_mar_base_stalker_barmen_task_2_name">
+		<text>%s. Припасы для «Чистого Неба»</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_2_text">
+		<text>%s - то, что нужно Наливайко.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_2_about">
+		<text>Мне нужна помощь. Припасы на исходе, а здесь их не так-то просто пополнить.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_2_fetch_about">
+		<text>%s - это то, что нам нужно.</text>
+	</string>
+	<string id="drx_sl_mar_base_stalker_barmen_task_2_finish">
+		<text>Благодарю.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- CHANGE FACTIONS TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Cold (Clear Sky Honcho) Payoff Change Factions Task -->
+
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_cf_task_1_name">
+		<text>Получить средства, чтобы присоединиться к «Чистому Небу»</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_cf_task_1_text">
+		<text>Холод примет вас в «Чистое Небо» за 15000.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_cf_task_1_about">
+		<text>Да, мы наблюдали за тобой и ты нам подходишь. Каждый платит 15000 за право присоединиться к нам, это помогает финансировать и наши исследования, и затраты на защиту. Что скажешь?</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_cf_task_1_finish">
+		<text>Хорошо. Мы рады, что ты с нами.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DYNAMIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Spore (Clear Sky Trader) Deliver PDA Task -->
+
 	<string id="mar_base_owl_stalker_trader_task_1_name">
-		<text>Deliver PDA to Nimble</text>
+		<text>Доставить КПК Шустрому в Бар</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_1_text">
-		<text>Spore needs you to deliver an encrypted PDA to Nimble in Cordon.</text>
+		<text>Дрозд попросил отнести зашифрованный КПК Шустрому в Бар.</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_1_about">
-		<text>Okay, hotshot. Need a job? This PDA needs delivered to a dude who hangs out at the rookie camp in Cordon; his name is Nimble. He will compensate you on delivery. Don't drop it in a puddle or some dumb shit like that... Or I'll have your ass. While you are there check out what he has to offer, he can get his hands on some nice equipment... For a price.</text>
+		<text>Ладно, говоришь работа нужна? Смотри, ты должен доставить этот КПК чуваку, ошивающемуся в лагере новичков на Кордоне. Его зовут Шустрый. Он тебе за это и заплатит. Только постарайся не уронить компьютер в лужу по пути, или ещё чего подобного сотворить, ладно?</text>
 	</string>
+
 	<!-- DESTROY HELICOPTER FOR SPORE TASK -->
 	<string id="mar_base_owl_stalker_trader_task_2_name">
-		<text>Destroy the helicopter</text>
+		<text>Уничтожить военный вертолёт</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_2_text">
-		<text>Spore is fed up and wants you to destroy the helicopter. He will offer you a discount if you follow through.</text>
+		<text>Дрозд поручил уничтожить военный вертолет. За выполнение задачи он обещал неплохую скидку.</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_2_about">
-		<text>That damn chopper is driving me nuts. I have bad tinnitus and every time that fucking thing is patrolling the southern border it makes my ears scream! Makes me want to bludgeon a baby flesh! Down the fucking thing and I'll give you a discount, please, before I kill somebody.</text>
+		<text>Слушай, одна наша разведгруппа была тайно отправлена обследовать гм... некий объект. Операция шла удачно, но сейчас она на грани срыва. Видимо, военные что-то пронюхали и теперь их вертолет регулярно патрулирует территорию. Нужно уничтожить вертолет и освободить путь. Да и трещит эта грёбаная вертушка так, что уже в ушах шумит, хоть в омут лезь! Так что польза от этого всем будет, в том числе, и тебе. Справишься - считай, что скидка тебе обеспечена. Ну как, по рукам?</text>
 	</string>
+
 	<!-- ESCORT SCIENTISTS FOR CLEAR SKY TASK -->
 	<string id="mar_base_owl_stalker_trader_task_3_name">
-		<text>Escort the Ecologists</text>
+		<text>Сопроводить учёных</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_3_text">
-		<text>Clear Sky scientists have hired you to guide them to a specific location for study. Once their research has been successfully conducted, return them safely to camp; where you will be compensated.</text>
+		<text>Необходимо провести учёных «Чистого Неба» к определенному месту и обеспечить их безопасность, пока те проводят исследования, и затем привести их обратно в лагерь.</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_3_about">
-		<text>Scientists here in camp need an experienced stalker to lead them out into the field for study. Are you up for it? Your job is to keep them alive and guide them to their destination. Failure will give you a bad reputation around here.</text>
+		<text>Группе наших учёных нужен опытный проводник. Необходимо провести их до места назначения и обратно целыми и невредимыми. Эти учёные - одни из наших лучших специалистов, поэтому если с ними что-то случится, кхм... тебя здесь невзлюбят, мягко говоря.</text>
 	</string>
 	<string id="mar_base_owl_stalker_trader_task_3_finish">
-		<text>Thank you stalker. You may have this as payment for your services.</text>
+		<text>Спасибо, сталкер. Вот и награда.</text>
 	</string>
+
 	<!-- HUNT MUTANTS FOR CLEAR SKY TASK -->
 	<string id="mar_base_stalker_barmen_task_1_name">
-		<text>Clear area of mutants</text>
+		<text>Уничтожить скопление мутантов</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_1_text">
-		<text>Mutants have been spotted near this location making the area dangerous for some of the locals. You have been tasked to eliminate the mutant threat within the area. Report back to Librarian after the job is done.</text>
+		<text>В этом месте было обнаружено скопление мутантов, представляющих опасность для местных сталкеров. Необходимо зачистить местность и вернуться к Наливайко за наградой.</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_1_about">
-		<text>Are you an avid hunter? We've been looking for someone to keep the marshes a bit safer by clearing out mutants in areas that our faction frequents. Would you like the job?</text>
+		<text>Ты охотой не увлекаешься? Тут на днях, около одной важной для нас точки, мутанты устроили логово, и было бы неплохо, если бы кто-нибудь их пострелял. Возьмёшься?</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_1_finish">
-		<text>Fantastic! Here is your payment. I'll make sure to pass the word around that it's safe there once again. Thank you, stalker.</text>
+		<text>Великолепно! Держи деньги. Теперь на Болотах станет немного спокойнее. Спасибо, сталкер.</text>
 	</string>
+
 	<!-- ASSAULT BANDIT CAMP FOR CLEAR SKY TASK -->
 	<string id="mar_base_stalker_barmen_task_2_name">
-		<text>Assault the Bandit camp</text>
+		<text>Уничтожить лагерь бандитов</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_2_text">
-		<text>You have been tasked to eliminate the bandit threat within the area. Report back to Librarian after the job is done.</text>
+		<text>Необходимо зачистить данную местность от бандитов.</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_2_about">
-		<text>We have a big problem with bandits in the area. Those murderous thugs have been ambushing our camps outside the main base trying to take the territory over. It will deny us passage through many safe routes through the marshes; as long as they are in the area. We need an experienced stalker who is not afraid to get his hands dirty. Will you help us out?</text>
+		<text>У нас большие проблемы с бандитами в этом районе. Эти сволочи житья нам не дают: грабят, шантажируют, захватывают наших людей. Они перекрыли большинство безопасных маршрутов через Болота, от них просто необходимо избавиться! Поможешь?</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_2_finish">
-		<text>Fantastic! Here is your payment. I'll make sure to pass the word around that it's safe there once again. Thank you, stalker.</text>
+		<text>Чёрт возьми, спасибо! Уж теперь-то они к нам долго не сунутся! Держи свою награду.</text>
 	</string>
+
 	<!-- FIND MUTANT MEAT FOR CLEAR SKY TASK -->
 	<string id="mar_base_stalker_barmen_task_3_name">
-		<text>Procure "%s"</text>
+		<text>Охота на дичь</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_3_text">
-		<text>Field dress freshly dead mutants to collect game meat. Then deliver %s to Librarian in the Clear Sky base camp.</text>
+		<text>%s - добыть и принести Наливайко, чтобы ему было чем кормить бойцов.</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_3_about">
-		<text>If you are good with a rifle and not afraid of a few mutants, then I have a job for you. Are you interested?</text>
+		<text>Если ты неплохо стреляешь и не боишься мутантов, у меня есть для тебя работа. Интересует?</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_3_fetch_about">
-		<text>Rations are running low and I need to keep everyone in camp's bellies full. Some of the guys bring me back a kill or two every now and again. But it's been slow lately - So if you aren't too busy and you are out and about, I need %s. I kill and process the meat, right here in my kitchen. Keep in mind that getting the mutants all riled up makes the meat tough because of the adrenaline. Also, the lesser the bleeding, the better the meat tastes. So, just be careful with your shots, okay?</text>
+		<text>Запасы еды на исходе, а мне же нужно чем-то ребят кормить. Кое-кто время от времени приносит мне одну-две туши мутантов, но в последнее время что-то никто не хочет охотиться. Так что, если ты не занят, и тебя интересует эта работа, будь добр, не откажи. %s - сейчас это было бы очень кстати. Главное запомни: адреналин, выделяющийся из-за чрезмерного волнения животного, делает мясо жестким. Да и чем меньше крови во время убийства, тем вкуснее мясо. Так что стреляй осторожнее, ладно?</text>
 	</string>
 	<string id="mar_base_stalker_barmen_task_3_fetch_finish">
-		<text>Great, you are a good hunter after all! I have payment for you.</text>
+		<text>Отлично, а ты таки неплохой охотник! Вот твое вознаграждение:</text>
 	</string>
+
 	<!-- FIND LEVEL 1 TOOLS FOR NOVIKOV TASK -->
 	<string id="mar_base_stalker_tech_task_1_name">
-		<text>Find "%s"</text>
+		<text>Найти %s</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_1_text">
-		<text>%s are required by Novikov to install basic equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Необходимо принести Новикову %s, чтобы он мог проводить модернизацию оружия или бронежилетов.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_1_about">
-		<text>It's really hard to come by tools here in the Zone. I would be able to perform upgrades on a greater variety of equipment if I can just get my hands on some new tools. If you are interested, I will tell you what I need.</text>
+		<text>В Зоне довольно трудно найти нормальные инструменты, а уж в такой глуши и подавно. Я бы мог чинить и даже улучшать больше снаряжения, будь у меня нормальный набор. Если согласен помочь, скажу, что именно мне нужно.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_1_fetch_about">
-		<text>I need a set of basic tools. It should contain what I need. If you can bring some back for me I will be grateful, I will even offer you a discount from here on out.</text>
+		<text>В Зоне довольно трудно найти нормальные инструменты, а уж в такой глуши и подавно. Я бы мог чинить и даже улучшать больше снаряжения, будь у меня нормальный набор. Мне нужен хотя бы набор инструментов для грубой работы. Там должны быть инструменты и масла, необходимые для работы с оружием. Если сможешь принести их мне - я в долгу не останусь.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_1_fetch_finish">
-		<text>Awesome, man! Here, let me throw some money at you.</text>
+		<text>Отлично! Спасибо, тебе, мужик. Вот твоя награда:</text>
 	</string>
 	<!-- FIND LEVEL 2 TOOLS FOR NOVIKOV TASK -->
 	<string id="mar_base_stalker_tech_task_2_name">
-		<text>Find "%s"</text>
+		<text>Найти %s</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_2_text">
-		<text>%s are required by Novikov to install advanced equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Необходимо принести Новикову %s, чтобы он мог проводить более серьёзную модернизацию оружия или бронежилетов.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_2_about">
-		<text>I could really use more tools. You brought me some good shit last time but I need a higher quality set. If you are interested, I will tell you what I need.</text>
+		<text>Я бы мог делать больше апгрейдов, если бы у меня было достаточно инструментов. Нет, ты принес хороший набор, но в нём нет инструментов, необходимых для более серьёзных улучшений. Мне бы кое-что посолиднее. Поможешь мне ещё раз? Деньгами не обижу.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_2_fetch_about">
-		<text>I need a set of advanced tools. It should contain what I need. If you can bring some back for me I will be grateful, I will even offer you a discount from here on out.</text>
+		<text>Я бы мог делать больше апгрейдов, если бы у меня было достаточно инструментов. Нет, ты принес хороший набор, но в нём нет инструментов, необходимых для более серьёзных улучшений. Мне бы кое-что посолиднее. Поможешь мне ещё раз? Деньгами не обижу. Мне нужен набор инструментов для тонкой работы. В нём должны быть все инструменты, что мне понадобятся.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_2_fetch_finish">
-		<text>Awesome, man! You came through for me once again! Here, let me throw some money at you.</text>
+		<text>Ого, ну спасибо! Ну теперь-то я смогу сделать всё, что угодно! Держи, вот твоя награда:</text>
 	</string>
 	<!-- FIND LEVEL 3 TOOLS FOR NOVIKOV TASK -->
 	<string id="mar_base_stalker_tech_task_3_name">
-		<text>Find "%s"</text>
+		<text>Найти %s</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_3_text">
-		<text>%s are required by Novikov to install expert equipment upgrades, you should bring them back to him if you find any.</text>
+		<text>Необходимо принести Новикову %s, чтобы он мог проводить ещё более серьёзную модернизацию оружия или бронежилетов.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_3_about">
-		<text>I could really use more tools. You brought me some good shit last time but I need a higher quality set. If you are interested, I will tell you what I need.</text>
+		<text>Я бы мог замахнуться на куда более сложные вещи, если бы у меня было достаточно инструментов. Нет, ты принес просто отличный набор, но в нём всё-таки нет кое-чего. Поможешь мне ещё раз? Деньгами не обижу.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_3_fetch_about">
-		<text>I need a set of expert tools. It should contain what I need. If you can bring some back for me I will be grateful, I will even offer you a discount from here on out.</text>
+		<text>В прошлый раз ты принес просто отличный набор, но в нём всё-таки нет кое-чего. Поможешь мне ещё раз? Деньгами не обижу. Мне нужен набор инструментов для калибровки. В нём должны быть все инструменты, что мне понадобятся.</text>
 	</string>
 	<string id="mar_base_stalker_tech_task_3_fetch_finish">
-		<text>Awesome, man! You came through for me once again! Here, let me throw some money at you.</text>
+		<text>Ого, ну спасибо! Уж теперь-то я смогу сделать всё, что угодно! Держи, вот твоя награда:</text>
 	</string>
+
 	<!-- ESCORT SCIENTISTS DIALOGS -->
 	<string id="ecolog_companion_task_1_start_dialog_1">
-		<text>You are our guide? I will mark the location on your PDA. Lead the way and we will follow. After we complete our analysis escort us back safely. Speak to me again when we return to camp.</text>
+		<text>Вы наш проводник? Я отмечу нужное место на вашем КПК. Ваша задача - обеспечить нашу безопасность на пути к нему и, после того, как мы закончим анализы, провести нас обратно. Награду получите по возвращении в лагерь.</text>
 	</string>
 	<string id="ecolog_companion_task_1_start_dialog_2">
-		<text>Yes? We should get moving, the longer we wait around the more dangerous it gets.</text>
+		<text>Вы что-то хотели? Нам нужно поторапливаться, здесь опасно долго находиться.</text>
 	</string>
 	<string id="ecolog_companion_task_1_complete">
-		<text>Thank you, stalker. You did your job well. Here is your payment.</text>
+		<text>Спасибо Вам, сталкер. Вы хорошо поработали, вот Ваша награда.</text>
 	</string>
 	<string id="ecolog_companion_task_1_actor_reply">
-		<text>Okay.</text>
+		<text>Спасибо.</text>
 	</string>
-	<!-- FIND SWAMP DOCTOR -->
+		<!-- FIND SWAMP DOCTOR -->
 	<string id="mar_doctor_task">
-		<text>Mysteries of the Zone</text>
+		<text>Тайна Зоны</text>
 	</string>
 	<string id="mar_doctor_task_0">
-		<text>You came to the Zone seeking to unravel its many mysteries, a familiar face may hold the answers that you seek.</text>
+		<text>Вы стремитесь разгадать тайны Зоны. Кое-кто может знать ответы на вопросы, которые Вы ищете.</text>
 	</string>
+	
 	<!-- MARSH DOCTOR STASH IN PRIPYAT -->
 	<string id="cit_doctor_task">
-		<text>The Hotel Polissya</text>
+		<text>Гостиница «Полесье»</text>
 	</string>
 	<string id="cit_doctor_task_1">
-		<text>The key and coordinates the doctor gave you indicates that Strelok has hidden a stash in a room at the Hotel Polissya in Pripyat.</text>
+		<text>Ключ и координаты, которые дал Доктор, указывают на то, что Стрелок спрятал тайник в одной из комнат гостиницы «Полесье» в Припяти.</text>
 	</string>
 	<string id="cit_doctor_task_2">
-		<text>You have found the hotel at the coordinates you were given, around here somewhere should be the room matching the inscription on the key.</text>
+		<text>Вы нашли гостиницу. Где-то здесь должна быть нужная комната.</text>
 	</string>
 	<string id="cit_doctor_task_3">
-		<text>A few scattered items are littered about the room left abandoned by Strelok. They should be investigated for potential clues.</text>
+		<text>Несколько, на первый взгляд, никак не связанных предметов, оставленных Стрелком в комнате. Их нужно исследовать на предмет поиска потенциальных ключей.</text>
 	</string>
 	<!-- MARSH DOCTOR VISIT LABS -->
 	<string id="st_main_1_search_agr_ug_name">
-		<text>Investigate Agroprom Underground</text>
+		<text>Подземелья Агропрома</text>
 	</string>
 	<string id="st_main_1_search_agr_ug_text">
-		<text>Investigate Agroprom Underground and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте Подземелья Агропрома. Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
 	<string id="st_main_2_search_labx18_name">
-		<text>Investigate Lab X-18</text>
+		<text>Лаборатория Х-18</text>
 	</string>
 	<string id="st_main_2_search_labx18_text">
-		<text>Investigate Lab X-18 and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте лабораторию Х-18. Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
 	<string id="st_main_3_search_labx16_name">
-		<text>Investigate Lab X-16</text>
+		<text>Лаборатория Х-16</text>
 	</string>
 	<string id="st_main_3_search_labx16_text">
-		<text>Investigate Lab X-16 and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте лабораторию Х-16. Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
 	<string id="st_main_4_search_labx10_name">
-		<text>Investigate Lab X-19</text>
+		<text>Лаборатория Х-19 (Х-10)</text>
 	</string>
 	<string id="st_main_4_search_labx10_text">
-		<text>Investigate Lab X-19 and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте лабораторию Х-19 (Х-10). Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
 	<string id="st_main_5_search_labx8_name">
-		<text>Investigate Lab X-8</text>
+		<text>Лаборатория Х-8</text>
 	</string>
 	<string id="st_main_5_search_labx8_text">
-		<text>Investigate Lab X-8 and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте лабораторию Х-8. Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
 	<string id="st_main_6_search_jup_ug_name">
-		<text>Investigate Jupiter Underground</text>
+		<text>Путепровод «Припять-1»</text>
 	</string>
 	<string id="st_main_6_search_jup_ug_text">
-		<text>Investigate Jupiter Underground and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте Путепровод "Припять-1". Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
 	<string id="st_main_7_search_mon_con_name">
-		<text>Investigate Chernobyl NPP</text>
+		<text>ЧАЭС</text>
 	</string>
 	<string id="st_main_7_search_mon_con_text">
-		<text>Investigate Chernobyl NPP and search for hard evidence of a conspiracy.</text>
+		<text>Исследуйте ЧАЭС. Возможно, там до сих пор лежат какие-нибудь интересные документы.</text>
 	</string>
-</string_table>
+	</string_table>

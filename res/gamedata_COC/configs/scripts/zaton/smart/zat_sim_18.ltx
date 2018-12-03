@@ -1,18 +1,23 @@
 [smart_terrain];zat_sim_18
 squad_id = 18
-max_population = 1
+max_population = 15
 ;respawn_only_smart = true
 respawn_params = respawn@zat_sim_18  
-respawn_idle = 86400
+respawn_idle = 60000
  
 
 [respawn@zat_sim_18]
+spawn_komar
 spawn_mix_dogs
 spawn_mix_boar_flesh
 spawn_rat
 
+[spawn_komar]
+spawn_squads = simulation_komar
+spawn_num = 5
+
 [spawn_rat]
-spawn_squads = simulation_rat
+spawn_squads = simulation_rat, simulation_rats
 spawn_num = 1
 
 [spawn_mix_boar_flesh]

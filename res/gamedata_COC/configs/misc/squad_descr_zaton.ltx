@@ -70,7 +70,9 @@ story_id = zat_b30_owl_stalker_trader_squad
 [zat_b7_bandit_boss_sultan_squad]:online_offline_group
 faction = bandit
 ;relationship = neutral
-npc = zat_b7_bandit_boss_sultan
+;mlr
+npc = zat_b7_bandit_boss_sultan, val_smart_terrain_7_5_bandit_bodyguard1, val_smart_terrain_7_5_bandit_bodyguard2, val_smart_terrain_7_5_bandit_bodyguard3
+;mlr
 ;target_smart = zat_stalker_base_smart
 target_smart = val_smart_terrain_7_5
 story_id = zat_b7_bandit_boss_sultan_squad
@@ -257,7 +259,7 @@ story_id = zat_b29_stalker_rival_default_2_squad
 
 
 ;-----------------------zaton B18-------------------
-
+;mlr
 [zat_b18_noah_squad]:online_offline_group
 faction = stalker
 relationship = neutral
@@ -266,12 +268,12 @@ target_smart = zat_b18
 sympathy = 0
 spawn_point = zat_b18_noah_spawn_point
 story_id = zat_b18_noah_squad
+on_death = %+zat_b18_noah_squad_death%
 
-
-
+;mlr
 [zat_b18_dog_noah_squad]:online_offline_group
 faction = monster
-npc = zat_b18_dog_noah
+npc = zat_b18_dog_noah, zat_b18_dog_little, zat_b18_dog_little_two
 sympathy = 0
 target_smart = {-zat_b18_dog_noah_free} zat_b18, nil
 spawn_point = zat_b18_noah_spawn_point
@@ -343,7 +345,7 @@ story_id = zat_b39_dogs_squad
 ;----------------------zaton a23----------------------
 [zat_a23_zombie_squad]:online_offline_group
 faction = zombied
-npc = sim_default_zombied_4, sim_default_zombied_4, sim_default_zombied_3, sim_default_zombied_3, sim_default_zombied_2, sim_default_zombied_2
+npc = sim_default_zombied_3, sim_default_zombied_3, sim_default_zombied_2, sim_default_zombied_2
 target_smart = zat_a23_smart_terrain
 spawn_point = zat_a23_smart_terrain_zat_a23_zombie_spawn
 story_id = zat_a23_zombie_squad

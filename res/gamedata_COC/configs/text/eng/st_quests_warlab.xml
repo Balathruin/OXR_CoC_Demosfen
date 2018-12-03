@@ -3,10 +3,10 @@
 
 	<!-- FIND AND ENTER THE WARLAB -->
 	<string id="sar_perception">
-		<text>Northern passage</text>
+		<text>Northern Passage</text>
 	</string>
 	<string id="sar_perception_1">
-		<text>Meet whomever - or whatever - is behind the Monolith.</text>
+		<text>Meet whomever - or whatever, is behind the Monolith.</text>
 	</string>
 	<string id="sar_perception_2">
 		<text>Find the laboratory mentioned in the manuscript and discover what it is hiding.</text>

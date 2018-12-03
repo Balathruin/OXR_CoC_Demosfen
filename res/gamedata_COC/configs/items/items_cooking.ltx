@@ -1,44 +1,662 @@
-[charcoal]:booster
-$spawn 					= "cooking\charcoal"
-cost					= 1000
-description				= st_charcoal_descr
-empty_weight           	= 0.001
-inv_grid_height    		= 2
-inv_grid_width     		= 1
-inv_grid_x         		= 2
-inv_grid_y         		= 39
-inv_name				= st_charcoal
-inv_name_short			= st_charcoal
-inv_weight				= 2.04
-max_uses               	= 8
-remove_after_use       	= true
-use_condition           = true
-visual					= dynamics\cooking\charcoal.ogf
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Cooking equipments ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Section configs for 'cooking kits' - items which initiate the manual cooking UI. Kits are allowed to use other items as 'materials' boosting cooking efficiency. 19.10.2013 ponney68
 
 [wood_stove]:booster
-$spawn					= "cooking\wood_stove"
-cost					= 2000
-description				= st_wood_stove_descr
-dont_stack				= true
-empty_weight			= 1.02
-inv_grid_height			= 1
-inv_grid_width			= 1
-inv_grid_x				= 3
-inv_grid_y				= 39
-inv_name				= st_wood_stove
-inv_name_short			= st_wood_stove
-inv_weight				= 1.66
-max_uses				= 1
-remove_after_use		= false
-consume_charge_on_use	= false
-script_binding			= bind_container.bind
-use1_functor			= itm_cooking.can_access_inventory
-use1_action_functor		= itm_cooking.access_inventory
-use2_functor			= itm_cooking.try_add_fuel
-use2_action_functor		= itm_cooking.add_fuel
-use3_functor			= itm_cooking.check_can_cook_functor
-use3_action_functor		= itm_cooking.try_to_cook
-use_condition			= true
+$spawn 				= "devices\repair_kit_10"
+can_trade			= true
+quest_item      	= false
 visual					= dynamics\cooking\wood_stove.ogf
-allow_take_list			= mutant_part_flesh_meat, mutant_part_boar_chop, mutant_part_dog_meat, mutant_part_psevdodog_meat, mutant_part_krovosos_meat, mutant_part_chimera_meat, mutant_part_tushkano_meat
-allow_take_count		= 3
+cost					= 1996
+inv_name				= st_wood_stove
+inv_name_short				= st_wood_stove
+description				= st_wood_stove_descr
+inv_weight				= 0.24
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 12
+inv_grid_y				= 43
+
+cooking_use_parts	 	= true	;Allows the use of lesser conditioned weapons to be used for parts to add overall bonus to cooking
+cooking_type			 	= fuel	;weapon or outfit
+cooking_refuse			= wpn_upd, kerosene, kerosene2, kerosene3, kerosene4, kerosene5, explo_metalcan_powder, explo_jerrycan_fuel, explo_jerrycan_fuel2, explo_jerrycan_fuel3, explo_jerrycan_fuel4, explo_jerrycan_fuel5, explo_jerrycan_fuel6, explo_jerrycan_fuel7, explo_jerrycan_fuel8, explo_balon_gas, explo_balon_gas2, explo_balon_gas3, explo_balon_gas4, explo_balon_gas5, explo_balon_gas6, explo_balon_gas7, explo_balon_gas8 ;Add sections separated by commas that cannot be cookinged by this item
+cooking_only				=          ;Add sections separated by commas that exclude all sections but these
+cooking_parts_include    = mutant_part_tushkano_meat, mutant_part_flesh_meat, mutant_part_boar_chop, mutant_part_dog_meat, mutant_part_psevdodog_meat, mutant_part_snork_hand			;Add sections of items to include to be considered cooking parts
+cooking_parts_exclude	= charcoal, charcoal2, charcoal3
+cooking_use_actor_effects = true      ;Uses actor_effects script. Setup a *_dummy section for the item in actor_effects_data.script
+
+;use_sound			= interface\inv_cooking
+
+[fieldcooker]:booster
+$spawn 				= "devices\repair_kit_10"
+can_trade			= true
+quest_item      	= false
+visual					= dynamics\cooking\multi_fuel_stove.ogf
+cost					= 6055
+inv_name				= st_fieldcooker
+inv_name_short				= st_fieldcooker
+description				= st_fieldcooker_descr
+inv_weight				= 0.46
+inv_grid_width			= 2
+inv_grid_height			= 1
+inv_grid_x				= 13
+inv_grid_y				= 43
+
+cooking_use_parts	 	= true	;Allows the use of lesser conditioned weapons to be used for parts to add overall bonus to cooking
+cooking_type			 	= fuel	;weapon or outfit
+cooking_refuse			= wpn_upd, charcoal, charcoal2, charcoal3, explo_metalcan_powder ;Add sections separated by commas that cannot be cookinged by this item
+cooking_only				=          ;Add sections separated by commas that exclude all sections but these
+cooking_parts_include    = mutant_part_tushkano_meat, mutant_part_flesh_meat, mutant_part_boar_chop, mutant_part_dog_meat, mutant_part_psevdodog_meat, mutant_part_krovosos_meat, mutant_part_snork_hand, mutant_part_chimera_meat, mutant_part_crow_beak			;Add sections of items to include to be considered cooking parts
+cooking_parts_exclude	= kerosene, kerosene2, kerosene3, kerosene4, kerosene5, explo_jerrycan_fuel, explo_jerrycan_fuel2, explo_jerrycan_fuel3, explo_jerrycan_fuel4, explo_jerrycan_fuel5, explo_jerrycan_fuel6, explo_jerrycan_fuel7, explo_jerrycan_fuel8, explo_balon_gas, explo_balon_gas2, explo_balon_gas3, explo_balon_gas4, explo_balon_gas5, explo_balon_gas6, explo_balon_gas7, explo_balon_gas8
+cooking_use_actor_effects = true      ;Uses actor_effects script. Setup a *_dummy section for the item in actor_effects_data.script
+
+;use_sound			= interface\inv_cooking
+
+
+[cooking]:booster
+$spawn 				= "devices\repair_kit_10"
+can_trade			= true
+quest_item      	= false
+visual				= dynamics\equipments\trade\ckit.ogf
+inv_name			= st_cooking
+inv_name_short		= st_cooking
+description			= st_cooking_descr
+inv_weight			= 0.564
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 16
+inv_grid_y			= 44
+cost				= 270
+
+cooking_use_parts	 	= true	;Allows the use of lesser conditioned weapons to be used for parts to add overall bonus to cooking
+cooking_type			 	= fuel	;weapon or outfit
+cooking_refuse			= wpn_upd, kerosene, kerosene2, kerosene3, kerosene4, kerosene5, explo_metalcan_powder, explo_jerrycan_fuel, explo_jerrycan_fuel2, explo_jerrycan_fuel3, explo_jerrycan_fuel4, explo_jerrycan_fuel5, explo_jerrycan_fuel6, explo_jerrycan_fuel7, explo_jerrycan_fuel8, explo_balon_gas, explo_balon_gas2, explo_balon_gas3, explo_balon_gas4, explo_balon_gas5, explo_balon_gas6, explo_balon_gas7, explo_balon_gas8 ;Add sections separated by commas that cannot be cookinged by this item
+cooking_only				=          ;Add sections separated by commas that exclude all sections but these
+cooking_parts_include    = mutant_part_tushkano_meat, mutant_part_flesh_meat, mutant_part_boar_chop, mutant_part_dog_meat, mutant_part_psevdodog_meat, mutant_part_snork_hand			;Add sections of items to include to be considered cooking parts
+cooking_parts_exclude	= charcoal, charcoal2, charcoal3
+cooking_use_actor_effects = true      ;Uses actor_effects script. Setup a *_dummy section for the item in actor_effects_data.script
+
+[army_bowler]:booster
+$spawn 				= "devices\repair_kit_10"
+can_trade			= true
+quest_item      	= false
+visual					= dynamics\cooking\wood_stove.ogf
+cost					= 4000
+inv_name				= st_army_bowler
+inv_name_short				= st_army_bowler
+description				= st_army_bowler_descr
+inv_weight				= 1.5
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 15
+inv_grid_y				= 44
+
+
+cooking_use_parts	 	= true	;Allows the use of lesser conditioned weapons to be used for parts to add overall bonus to cooking
+cooking_type			 	= fuel	;weapon or outfit
+cooking_refuse			= wpn_upd, kerosene, kerosene2, kerosene3, kerosene4, kerosene5, explo_metalcan_powder, explo_jerrycan_fuel, explo_jerrycan_fuel2, explo_jerrycan_fuel3, explo_jerrycan_fuel4, explo_jerrycan_fuel5, explo_jerrycan_fuel6, explo_jerrycan_fuel7, explo_jerrycan_fuel8, explo_balon_gas, explo_balon_gas2, explo_balon_gas3, explo_balon_gas4, explo_balon_gas5, explo_balon_gas6, explo_balon_gas7, explo_balon_gas8 ;Add sections separated by commas that cannot be cookinged by this item
+cooking_only				=          ;Add sections separated by commas that exclude all sections but these
+cooking_parts_include    = mutant_part_tushkano_meat, mutant_part_flesh_meat, mutant_part_boar_chop, mutant_part_dog_meat, mutant_part_psevdodog_meat, mutant_part_snork_hand, mutant_part_krovosos_meat, mutant_part_chimera_meat, mutant_part_crow_beak				;Add sections of items to include to be considered cooking parts
+cooking_parts_exclude	= 
+cooking_use_actor_effects = true      ;Uses actor_effects script. Setup a *_dummy section for the item in actor_effects_data.script
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;; Cooking fuels ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[explosive_jerrycan_immunities_sect]
+;коэффициенты для попаданий различными типами хитов
+burn_immunity			= 0.0
+strike_immunity			= 1.0
+shock_immunity			= 1.0
+wound_immunity			= 0.16
+radiation_immunity		= 1.0
+telepatic_immunity		= 1.0
+chemical_burn_immunity	= 1.0
+explosion_immunity		= 0.84
+fire_wound_immunity		= 0.66
+
+[kerosene]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\kerosene.ogf
+radius				= 68; 50
+
+description			= st_kerosene_descr
+inv_name			= st_kerosene
+inv_name_short			= st_kerosene
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 4
+inv_grid_y				= 43
+
+cost				= 1019
+
+box_size			= 1
+
+inv_weight			= 4.47
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 5
+blast_r				= 5
+blast_impulse		= 5
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+repair_part_bonus	 	= 0.03
+
+[kerosene2]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\kerosene.ogf
+radius				= 68; 50
+
+description			= st_kerosene_descr
+inv_name			= st_kerosene2
+inv_name_short			= st_kerosene2
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 5
+inv_grid_y				= 43
+
+cost				= 917
+
+box_size			= 1
+
+inv_weight			= 3.63
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 4
+blast_r				= 4
+blast_impulse		= 4
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+repair_part_bonus	 	= 0.03
+
+[kerosene3]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\kerosene.ogf
+radius				= 68; 50
+
+description			= st_kerosene_descr
+inv_name			= st_kerosene3
+inv_name_short			= st_kerosene3
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 6
+inv_grid_y				= 43
+
+cost				= 800
+
+box_size			= 1
+
+inv_weight			= 2.79
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 3
+blast_r				= 3
+blast_impulse		= 3
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+repair_part_bonus	 	= 0.03
+
+[kerosene4]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\kerosene.ogf
+radius				= 68; 50
+
+description			= st_kerosene_descr
+inv_name			= st_kerosene4
+inv_name_short			= st_kerosene4
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 7
+inv_grid_y				= 43
+
+cost				= 646
+
+box_size			= 1
+
+inv_weight			= 1.95
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 2
+blast_r				= 2
+blast_impulse		= 2
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+repair_part_bonus	 	= 0.01
+
+[kerosene5]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\kerosene.ogf
+radius				= 68; 50
+
+description			= st_kerosene_descr
+inv_name			= st_kerosene5
+inv_name_short			= st_kerosene5
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 8
+inv_grid_y				= 43
+
+cost				= 542
+
+box_size			= 1
+
+inv_weight			= 1.11
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 1
+blast_r				= 1
+blast_impulse		= 1
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+repair_part_bonus	 	= 0.03
+
+[charcoal]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\charcoal.ogf
+radius				= 68; 50
+
+description			= st_charcoal_descr
+inv_name			= st_charcoal
+inv_name_short			= st_charcoal
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 9
+inv_grid_y				= 43
+
+cost				= 880
+
+inv_weight			= 3.12
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 0.3
+blast_r				= 0.3
+blast_impulse		= 0.3
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+[charcoal2]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\charcoal.ogf
+radius				= 68; 50
+
+description			= st_charcoal_descr
+inv_name			= st_charcoal2
+inv_name_short			= st_charcoal2
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 10
+inv_grid_y				= 43
+
+cost				= 605
+
+inv_weight			= 2.12
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 0.2
+blast_r				= 0.2
+blast_impulse		= 0.2
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+[charcoal3]:identity_immunities,delayed_action_fuse,default_weapon_params
+$spawn 				= "weapons\explosive\mobiltank"
+$prefetch 			= 16
+class				= S_EXPLO
+cform				= skeleton
+visual				= dynamics\cooking\charcoal.ogf
+radius				= 68; 50
+
+description			= st_charcoal_descr
+inv_name			= st_charcoal3
+inv_name_short			= st_charcoal3
+
+inv_grid_width     = 1
+inv_grid_height    = 2
+inv_grid_x         = 11
+inv_grid_y				= 43
+
+cost				= 327
+
+inv_weight			= 1.12
+
+attach_angle_offset		= -0.287979, 1.560923, 1.544060
+attach_position_offset		= 0.096910, -0.013594, 0.107925
+attach_bone_name		= bip01_r_hand
+auto_attach				= false
+use_condition = false
+
+;-------------------------------------------------------------------------------
+blast				= 0.1
+blast_r				= 0.1
+blast_impulse		= 0.1
+;delete
+blast_impulse_factor = 1
+
+frags				= 0
+frags_r				= 0
+frag_hit			= 0
+frag_hit_impulse	= 0
+
+hit_type_blast		= explosion
+hit_type_frag		= fire_wound
+
+up_throw_factor		= 0.46
+;-------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_mobiltank
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 1.0
+light_time 		         = 1
+
+;трассы от осколков
+fragment_speed				= 0		;скорость осколков (м/с)
+explode_duration		 = 0		;подолжительность взрыва (с)
+time_to_explode			= 0.f
+wallmark_section		= explosion_marks
+
+;звуки
+snd_explode = weapons\explo\fuelcan_boom
+
+immunities_sect			= explosive_jerrycan_immunities_sect
+
+
+[matches]:booster
+$spawn 				= "devices\pda"
+visual				= dynamics\drink\drink_match0.ogf
+description			= st_matches_descr
+inv_name			= st_matches
+inv_name_short		= st_matches
+inv_weight				= 0.04
+inv_grid_width			= 1
+inv_grid_height			= 1
+inv_grid_x				= 12
+inv_grid_y				= 29
+cost				= 320
+can_trade			= true
+quest_item      	= false
+use_condition       = false
+;use_sound			= interface\inv_matches
+remove_after_use    = true

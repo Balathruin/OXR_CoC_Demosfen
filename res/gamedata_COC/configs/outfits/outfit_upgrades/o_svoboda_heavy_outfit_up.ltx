@@ -2,8 +2,8 @@
 cost 		= 650
 value		= +10
 
-fire_wound_protection  				= 0.02
-bones_koeff_protection_add  		= actor_body_damage_add_002
+fire_wound_protection  				= 0.06
+bones_koeff_protection_add  		= actor_armor_add_2
 
 [up_sect_firstc_svoboda_heavy_outfit]
 cost 		= 1300
@@ -15,9 +15,8 @@ immunities_sect_add 				= sect_svoboda_heavy_outfit_immunities_add
 cost 		= 2600
 value		= +30
 
-fire_wound_protection  				= 0.04
-bones_koeff_protection_add 			= actor_body_damage_add_004
-hit_fraction_actor					= -0.05
+fire_wound_protection  				= 0.1
+bones_koeff_protection_add 			= actor_armor_add_4
 inv_weight							= +0.30
 power_loss							= +0.015
 
@@ -133,7 +132,7 @@ scheme_index            = 2, 0
 known                   = 1
 effects                 = 
 section                 = up_sect_firste_svoboda_heavy_outfit
-property                = prop_armor, prop_damage, prop_weightoutfit
+property                = prop_armor, prop_weightoutfit
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b

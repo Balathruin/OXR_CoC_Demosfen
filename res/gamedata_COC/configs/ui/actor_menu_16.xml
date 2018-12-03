@@ -11,21 +11,23 @@
 	    <auto_static x="375" y="0" width="546" height="768" stretch="1">
 		    <texture>ui_inGame2_inventory_back</texture>
 	    </auto_static>
-	    <auto_static x="920" y="0" width="104" height="768" stretch="1">
+		<!-- DISABLED SIDE PANELS -->
+	    <!-- auto_static x="920" y="0" width="104" height="768" stretch="1">
 		    <texture>ui_inGame2_widescreen_sidepanels_right</texture>
-	    </auto_static>
+	    </auto_static -->
 	</main>
 
 	<left_background x="102" y="0" width="273" height="768" stretch="1">
 		<texture>ui_inGame2_left_side</texture>
-	    <auto_static x="-102" y="0" width="104" height="768" stretch="1">
+	    <!-- DISABLED SIDE PANELS -->
+		<!-- auto_static x="-102" y="0" width="104" height="768" stretch="1">
 		    <texture>ui_inGame2_widescreen_sidepanels_left</texture>
-	    </auto_static>
+	    </auto_static -->
 	</left_background>
 
 	<!-- Player Information -->
 	<!-- Start -->
-	<actor_ch_info x="657" y="10" width="257" height="89">
+	<actor_ch_info x="657" y="17" width="257" height="89">
 		<name_static x="5" y="-3" width="112" height="16">
 			<text align="l" font="letterica18" color="ui_2"/>
 		</name_static>
@@ -89,6 +91,7 @@
 	</partner_ch_info>
 	<!-- Finish -->
 
+	<!-- old money
 	<actor_money_static x="701" y="75" width="104" height="22">
 		<text align="r" font="graffiti22"/>
 	</actor_money_static>
@@ -96,7 +99,16 @@
 	<partner_money_static x="155" y="75" width="104" height="22">
 		<text align="r" font="graffiti22"/>
 	</partner_money_static>
+	-->
 	
+	<!-- we got a whole lotta new money tho -->
+	<actor_money_static x="701" y="77" width="104" height="22">
+		<text align="r" font="letterica18" r="168" g="202" b="255"/>
+	</actor_money_static>
+
+	<partner_money_static x="155" y="80" width="104" height="22">
+		<text align="r" font="letterica18" r="168" g="202" b="255"/>
+	</partner_money_static>
 	
 	<!--NEW DYNAMIC SLOTS (Goes by slot order, must have tag for all slots, leave blank if unused. If slot_persistent = false in system.ltx and left blank it will show equipped in inventory bag
 	; slot_dragdrop and slot_highlight are mandatory if used, progress can be absent)-->
@@ -228,20 +240,20 @@
 	</quick_slot4_text>
 
 	<actor_weight_caption x="750" y="736" width="57" height="16">
-		<text align="r" font="letterica16" color="ui_3">ui_total_weight</text>
+		<text align="r" font="arial_14" color="ui_3">ui_total_weight</text>
 	</actor_weight_caption>
 	<actor_weight x="807" y="736" width="35" height="16">
-		<text align="c" font="letterica16"/>
+		<text align="c" font="arial_14"/>
 	</actor_weight>
 	<actor_weight_max x="842" y="736" width="68" height="16">
-		<text align="l" font="letterica16" color="ui_3"/>
+		<text align="l" font="arial_14" color="ui_3"/>
 	</actor_weight_max>
 
 	<partner_weight_caption x="174" y="738" width="68" height="14">
-		<text align="r" font="letterica16" color="ui_3">ui_total_weight</text>
+		<text align="r" font="arial_14" color="ui_3">ui_total_weight</text>
 	</partner_weight_caption>
 	<partner_weight x="342" y="738" width="36" height="14">
-		<text align="l" font="letterica16" color="ui_7"/>
+		<text align="l" font="arial_14" color="ui_7"/>
 	</partner_weight>
 
 	<!-- partner  ---------------------------------------------------------------- -->
@@ -314,10 +326,10 @@
 	    cell_width="33" cell_height="41" a="0" rows_num="1"	cols_num="4"
 		cell_sp_x="32" cell_sp_y="0" custom_placement="1"/>
 
-	<trade_buy_button x="113" y="295" width="107" height="26" stretch="1" hint="ui_st_buy_hint">
+	<trade_buy_button x="113" y="295" width="107" height="26" stretch="1" hint="ui_st_buy_hint" light_anim="ui_slow_blinking_alpha">
 	    <window_name>trade_buy_button</window_name>
 	    <texture>ui_inGame2_inventory_button</texture>
-	    <text font="graffiti22" align="c">ui_st_buy</text>
+	    <text font="letterica16" align="c">ui_st_buy</text>
 	    <text_color>
 	        <e color ="ui_6"/>
 	        <t color ="ui_black"/>
@@ -326,10 +338,10 @@
 	    </text_color>
 	</trade_buy_button>
 
-	<trade_sell_button x="660" y="295" width="107" height="26" stretch="1" hint="ui_st_sell_hint">
+	<trade_sell_button x="660" y="295" width="107" height="26" stretch="1" hint="ui_st_sell_hint" light_anim="ui_slow_blinking_alpha">
 	    <window_name>trade_sell_button</window_name>
 	    <texture>ui_inGame2_inventory_button</texture>
-	    <text font="graffiti22" align="c">ui_st_sell</text>
+	    <text font="letterica16" align="c">ui_st_sell</text>
 	    <text_color>
 	        <e color ="ui_6"/>
 	        <t color ="ui_black"/>
@@ -338,10 +350,10 @@
 	    </text_color>
 	</trade_sell_button>
 
-	<takeall_button x="115" y="695" width="249" height="24" stretch="1" hint="ui_st_take_all_hint">
+	<takeall_button x="115" y="695" width="249" height="24" stretch="1" hint="ui_st_take_all_hint" light_anim="ui_slow_blinking_alpha">
 	    <window_name>takeall_button</window_name>
 	    <texture>ui_inGame2_big_inventory_button</texture>
-	    <text font="graffiti22" align="c">ui_st_take_all</text>
+	    <text font="letterica16" align="c">ui_st_take_all</text>
 	    <text_color>
 	        <e color ="ui_6"/>
 	        <t color ="ui_black"/>
@@ -350,10 +362,10 @@
 	    </text_color>
 	</takeall_button>
 
-	<exit_button x="384" y="736" width="256" height="24" stretch="1" hint="ui_st_exit_hint">
+	<exit_button x="384" y="736" width="256" height="24" stretch="1" hint="ui_st_exit_hint" light_anim="ui_slow_blinking_alpha">
 	    <window_name>exit_button</window_name>
 	    <texture>ui_inGame2_big_inventory_button</texture>
-	    <text font="graffiti22" align="c">ui_inv_exit</text>
+	    <text font="letterica16" align="c">ui_inv_exit</text>
 	    <text_color>
 	        <e color ="ui_6"/>
 	        <t color ="ui_black"/>

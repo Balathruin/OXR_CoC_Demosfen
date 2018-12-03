@@ -1,0 +1,29 @@
+[logic]
+active = ph_idle@music
+
+[ph_idle@music]
+on_info = %=play_sound(mil_freebase_mlr)%
+on_signal = sound_end | ph_idle@propaganda
+on_info2 = {=is_night} ph_idle@night
+on_info3 = {=surge_started} ph_idle@surge
+hit_on_bone = 2 | ph_idle@broken
+
+[ph_idle@propaganda]
+on_info = %=play_sound(mil_freebase_mlr_propaganda)%
+on_signal = sound_end | ph_idle@music
+on_info2 = {=is_night} ph_idle@night
+on_info3 = {=surge_started} ph_idle@surge
+hit_on_bone = 2 | ph_idle@broken
+
+[ph_idle@night]
+on_info = %=play_sound(no_sound_mlr)%
+on_info2 = {!is_night} ph_idle@music
+hit_on_bone = 2 | ph_idle@broken
+
+[ph_idle@surge]
+on_info = %=play_sound(broken_radio_mlr)%
+on_info2 = {!surge_started} ph_idle@music
+hit_on_bone = 2 | ph_idle@broken
+
+[ph_idle@broken]
+on_info = nil %=stop_sound%

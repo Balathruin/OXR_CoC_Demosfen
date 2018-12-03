@@ -20,6 +20,10 @@
 		<text align="l" font="letterica16" complex_mode="1"/>
 	</static_no_trade>
 
+	<static_expiration x="20" y="5" width="200" height="20">
+		<text align="l" font="letterica16"/>
+	</static_expiration>
+	
 	<descr_list x="20" y="60" width="265" height="130" always_show_scroll="0" fit_to_height="1">
 		<font font="letterica16" r="170" g="170" b="170"/>
 	</descr_list>

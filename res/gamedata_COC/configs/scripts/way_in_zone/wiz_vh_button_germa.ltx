@@ -1,0 +1,14 @@
+[logic]
+active = ph_button@code
+
+[ph_button@code] 
+anim = idle
+code = 123
+on_code = ph_idle@wreck %=anim_obj_forward(wiz_vh_door_big_germa) +wiz_code_door_unlocked%
+tooltip = tip_door_open
+
+[ph_idle@wreck]
+on_game_timer =  60 | ph_idle@field_off %+wiz_door_germa_opened% 
+
+[ph_idle@field_off]
+on_game_timer = 200 | ph_button@code %-wiz_code_door_unlocked =anim_obj_backward(wiz_vh_door_big_germa)% | %-wiz_door_germa_opened%

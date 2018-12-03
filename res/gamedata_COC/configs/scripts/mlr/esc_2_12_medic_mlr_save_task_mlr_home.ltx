@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = {+esc_2_12_medic_mlr_save_task_mlr_3} sr_idle@final %+esc_2_12_medic_mlr_save_task_mlr_home_here_is%
+
+[sr_idle@final]
+on_info = {+esc_2_12_medic_mlr_save_task_mlr_4} sr_idle@timer
+
+[sr_idle@timer]
+on_game_timer = 259200 | nil %+esc_2_12_medic_mlr_can_talk%

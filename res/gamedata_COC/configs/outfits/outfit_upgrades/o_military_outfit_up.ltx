@@ -15,8 +15,8 @@ immunities_sect_add				= sect_military_outfit_immunities_add
 cost 		= 2500
 value		= +20
 
-fire_wound_protection  			= 0.02
-bones_koeff_protection_add  	= actor_armor_add_002
+fire_wound_protection  			= 0.06
+bones_koeff_protection_add  	= actor_armor_add_2
 
 [up_sect_firste_military_outfit]
 cost 		= 4500
@@ -32,9 +32,8 @@ cost 		= 4500
 inv_weight	= +0.25
 value		= +30
 
-fire_wound_protection  			= 0.05
-bones_koeff_protection_add  	= actor_armor_add_005
-hit_fraction_actor				= -0.05
+fire_wound_protection  			= 0.1
+bones_koeff_protection_add  	= actor_armor_add_4
 
 [up_sect_secona_military_outfit]
 cost 		= 1000
@@ -200,7 +199,7 @@ scheme_index            = 2, 1
 known                   = 1
 effects                 = 
 section                 = up_sect_firstf_military_outfit
-property                = prop_armor, prop_damage
+property                = prop_armor, prop_weightoutfit
 
 precondition_functor    = inventory_upgrades.precondition_functor_a
 precondition_parameter  = a & b

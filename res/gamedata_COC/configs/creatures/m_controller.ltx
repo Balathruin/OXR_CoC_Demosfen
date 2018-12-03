@@ -6,7 +6,7 @@ $npc			     = on						; option for Level Editor
 $prefetch 			 = 16
 Scheduled		     = on						; option for ALife Simulator
 Human		     	 = off						; option for ALife Simulator
-Health			     = 600						; option for ALife Simulator
+Health			     = 1000						; option for ALife Simulator
 MinSpeed		     = 1.0						; option for ALife Simulator
 MaxSpeed		     = 5.0						; option for ALife Simulator
 going_speed          = 3;4.5                      ; option for ALife Simulator
@@ -53,8 +53,8 @@ fire_quadratic_factor	=	0.025
 
 psy_linear_factor		=	0.5
 psy_quadratic_factor	=	0.0
-psy_max_distance		=	20.0
-psy_max_power			=	0.5
+psy_max_distance		=	30.0
+psy_max_power			=	1.5
 psy_sound				=	anomaly\psy_voices_1_l		;monsters\controller\controller_presence_l
 psy_pp_effector_name	= 	psy_antenna 				;postprocess_psi
 psy_pp_highest_at		= 	0.1
@@ -256,7 +256,7 @@ Max_Controlled_Count	= 10;4
 
 control_effector			= controller_control_effector
 
-Friend_Community_Overrides	= monolith
+Friend_Community_Overrides	= actor_zombied
 
 ;-------------------------------------------------------------------------
 ; Anti-aim Ability
@@ -276,6 +276,8 @@ species						= controller
 rank						= 18
 spec_rank					= normal
 community					= controller
+
+protections_sect = controller_protections
 
 ;-------------------------------------------------------------------------
 ; Vision
@@ -312,6 +314,10 @@ velocity_factor		     	= 1.0				;Higher value = greater bonus to detection speed
 luminocity_factor			= 0.8				;Low value = easier to see at night
 transparency_threshold	 	= 0.4				;Low value = easier to see through objects (if greater then 1 then enemies are blind)
 still_visible_time          = 0					;The time (milliseconds) that the object is still considered visible , even if it is not in the frustum (u32)
+
+[controller_protections]
+skin_armor = 0.5
+hit_fraction_monster = 0.4
 
 ;===========================================================================
 ; Step Events
@@ -468,6 +474,18 @@ community			= controller
 ;*********************************************************************************
 ; NORMAL PROFILE 2
 ;*********************************************************************************
+[controller_tubeman]:m_controller_e ; temporary!
+$spawn              = "monsters\old\controller_tubeman"
+visual				= monsters\controller\controller_1
+corpse_visual		 = monsters\controller\controller_dead
+icon				= ui_npc_monster_controller
+spec_rank			= normal
+rank				= 18
+community			= controller
+
+;*********************************************************************************
+; NORMAL PROFILE 3
+;*********************************************************************************
 [m_controller_normal2]:m_controller_e
 $spawn				= "monsters\controller\controller_02_normal"
 visual				= monsters\controller\controller2a
@@ -542,3 +560,30 @@ bip01_r_thigh
 bip01_r_calf
 bip01_r_foot
 bip01_r_toe1
+
+;mlr
+[m_pole_boss_controller]:m_controller_normal
+$spawn              		= "monsters\old\m_pole_boss_controller"
+can_spawn_phantom 			= true
+protections_sect 			= pole_boss_controller_protections
+immunities_sect				= pole_boss_controller_immunities
+MinSpeed		     		= 1.5
+MaxSpeed		    	    = 6.0
+going_speed         		= 4.5 
+MaxHealthValue		        = 600
+Health			     		= 1600
+
+[pole_boss_controller_protections]
+skin_armor 				= 1.3
+hit_fraction_monster 	= 0.7
+
+[pole_boss_controller_immunities]
+burn_immunity 						= 0.4
+strike_immunity 					= 0.3
+shock_immunity 						= 0.4
+wound_immunity 						= 0.1
+radiation_immunity 					= 0.0
+telepatic_immunity 					= 0.0
+chemical_burn_immunity 				= 0.5
+explosion_immunity 					= 0.6
+fire_wound_immunity  				= 0.3

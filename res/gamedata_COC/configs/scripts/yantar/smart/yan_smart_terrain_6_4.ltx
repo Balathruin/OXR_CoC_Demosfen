@@ -1,20 +1,27 @@
 [smart_terrain]
 squad_id = 13
-max_population = 5
+max_population = 4
 respawn_params = respawn@yan_smart_terrain_6_4
 respawn_idle = 86400
 
-
-
 [respawn@yan_smart_terrain_6_4]
-spawn_csky
+spawn_ecolog
 
-[spawn_csky]
+[spawn_ecolog]
 spawn_squads =  ecolog_sim_squad_novice, ecolog_sim_squad_advanced, ecolog_sim_squad_veteran
-spawn_num = 5
+spawn_num = 2
 
 [exclusive]
+;mlr
+yan_smart_terrain_6_4_camp_work_1 = military\yan_smart_terrain_6_4_smart_logic.ltx
+yan_smart_terrain_6_4_camp_work_2 = military\yan_smart_terrain_6_4_smart_logic.ltx
+yan_smart_terrain_6_4_camp_work_3 = military\yan_smart_terrain_6_4_smart_logic.ltx
+yan_smart_terrain_6_4_camp_work_4 = military\yan_smart_terrain_6_4_smart_logic.ltx
+mechanic_army_yan_mlr = yantar\mechanic_army_yan_mlr_logic.ltx
+yan_povar_army_mlr = yantar\yan_povar_army_mlr.ltx
+;mlr
 yan_saharov	= yantar\yan_saharov.ltx
+yan_kruglov = yantar\yan_scientists.ltx
 yan_semenov = yantar\yan_scientists.ltx
 yan_vasiliev = yantar\yan_scientists.ltx
 yan_bunker_guards = yantar\yan_scientists.ltx
@@ -33,9 +40,3 @@ yan_smart_terrain_6_4_zombie_wave_12 = yantar\yan_smart_terrain_6_4_smart_logic.
 yan_smart_terrain_6_4_zombie_wave_13 = yantar\yan_smart_terrain_6_4_smart_logic.ltx
 yan_smart_terrain_6_4_zombie_wave_14 = yantar\yan_smart_terrain_6_4_smart_logic.ltx
 yan_smart_terrain_6_4_zombie_wave_15 = yantar\yan_smart_terrain_6_4_smart_logic.ltx
-
--- Sit Covers Jobs
-yan_bunk_hide_00 = yantar\yan_smart_terrain_6_4_smart_logic.ltx
-yan_bunk_hide_04 = yantar\yan_smart_terrain_6_4_smart_logic.ltx
-yan_bunk_hide_05 = yantar\yan_smart_terrain_6_4_smart_logic.ltx
-yan_bunk_hide_06 = yantar\yan_smart_terrain_6_4_smart_logic.ltx

@@ -18,7 +18,7 @@ belt                                     = true
 slot                                     = -1	                                       ;10
 default_to_ruck                          = true
 af_actor_properties                      = on
-actor_properties                         = on	                                       ;??????? ????????? ?? ????? ? ??????
+actor_properties                         = on	                                       ;влияние артефакта на поясе у актера
 det_show_particles                       = anomaly2\plasma_generator_death
 det_hide_particles                       = anomaly2\plasma_generator_death
 
@@ -31,8 +31,9 @@ script_binding                           = bind_artefact.bind
 particles_bone                           = link
 additional_inventory_weight              = 0
 idle_light_shadow                        = false
-lights_enabled                           = false	                                       ;???? ?????? ??????, ?? ????? ??????
+lights_enabled                           = false	                                       ;свет вокруг ракеты, во время полета
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = 0
 satiety_restore_speed                    = 0
@@ -42,6 +43,7 @@ bleeding_restore_speed                   = 0
 hit_absorbation_sect                     = af_base_1_absorbation
 degrade_rate							 = 1.0	;Artefact Degradation
 
+;коэффициенты иммунитета
 [af_base_1_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = 0
@@ -77,7 +79,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 7
 inv_grid_y                               = 0
 
-cost                                     = 7000
+cost                                     = 6000
 jump_height                              = .1
 
 particles                                = anomaly2\artefact\artefact_zharka
@@ -90,6 +92,7 @@ trail_light_color                        = 0.6,0.7,0.5
 trail_light_range                        = 0.5
 
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = -0.00225
 satiety_restore_speed                    = 0
@@ -97,6 +100,7 @@ power_restore_speed                      = -0.00125
 bleeding_restore_speed                   = 0
 hit_absorbation_sect                     = af_drops_absorbation
 
+;коэффициенты иммунитета
 [af_drops_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = 0
@@ -131,7 +135,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 1
 inv_grid_y                               = 0
 
-cost                                     = 7000
+cost                                     = 6000
 
 jump_height                              = .0
 
@@ -145,6 +149,7 @@ af_rank                                  = 1
 lights_enabled                           = false
 
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0.0
 radiation_restore_speed                  = 0.0
 satiety_restore_speed                    = 0.0
@@ -152,6 +157,7 @@ power_restore_speed                      = 0.0
 bleeding_restore_speed                   = 0.003
 hit_absorbation_sect                     = af_ameba_slime_absorbation
 
+;коэффициенты иммунитета
 [af_ameba_slime_absorbation]
 burn_immunity                            = -0.011
 strike_immunity                          = 0
@@ -182,7 +188,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 2
 inv_grid_y                               = 0
 
-cost                                     = 12000
+cost                                     = 7500
 
 jump_height                              = .1
 
@@ -197,6 +203,7 @@ lights_enabled                           = true
 trail_light_color                        = 0.6,0.6,0.5
 trail_light_range                        = 1.0
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = 0
 satiety_restore_speed                    = 0
@@ -204,6 +211,7 @@ power_restore_speed                      = 0
 bleeding_restore_speed                   = 0.00425
 hit_absorbation_sect                     = af_ameba_absorbation
 
+;коэффициенты иммунитета
 [af_ameba_absorbation]
 burn_immunity                            = -0.0125
 strike_immunity                          = 0
@@ -234,7 +242,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 0
 inv_grid_y                               = 0
 
-cost                                     = 21000
+cost                                     = 9000
 
 jump_height                              = .1
 
@@ -249,6 +257,7 @@ lights_enabled                           = true
 trail_light_color                        = 0.6,0.7,0.6
 trail_light_range                        = 1
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = 0
 satiety_restore_speed                    = 0
@@ -256,6 +265,7 @@ power_restore_speed                      = 0
 bleeding_restore_speed                   = 0.006
 hit_absorbation_sect                     = af_ameba_mica_absorbation
 
+;коэффициенты иммунитета
 [af_ameba_mica_absorbation]
 burn_immunity                            = -0.015
 strike_immunity                          = 0
@@ -290,13 +300,14 @@ inv_weight                               = 0.5
 inv_grid_x                               = 12
 inv_grid_y                               = 0
 
-cost                                     = 22000
+cost                                     = 9000
 jump_height                              = .2
 
 af_rank                                  = 3
 
 lights_enabled                           = false
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = 0.0025
 satiety_restore_speed                    = 0
@@ -304,6 +315,7 @@ power_restore_speed                      = 0.00375
 bleeding_restore_speed                   = 0
 hit_absorbation_sect                     = af_dummy_spring_absorbation
 
+;коэффициенты иммунитета
 [af_dummy_spring_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = -0.05
@@ -335,7 +347,7 @@ inv_grid_y                               = 0
 
 jump_height                              = .2
 
-cost                                     = 40000	                                       ;200
+cost                                     = 9000	                                       ;200
 particles                                = anomaly2\artefact\artefact_ameba
 det_show_particles                       = artefact\af_acidic_show
 det_hide_particles                       = artefact\af_acidic_hide
@@ -345,6 +357,7 @@ af_rank                                  = 0
 lights_enabled                           = false
 
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = 0
 satiety_restore_speed                    = 0
@@ -352,6 +365,7 @@ power_restore_speed                      = 0
 bleeding_restore_speed                   = 0
 hit_absorbation_sect                     = af_dummy_pellicle_absorbation
 
+;коэффициенты иммунитета
 [af_dummy_pellicle_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = 0
@@ -383,7 +397,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 5
 inv_grid_y                               = 1
 
-cost                                     = 7000
+cost                                     = 6000
 jump_height                              = .3
 
 lights_enabled                           = false
@@ -392,6 +406,7 @@ af_rank                                  = 1
 det_show_particles                       = artefact\af_acidic_show
 det_hide_particles                       = artefact\af_acidic_hide
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = -0.002
 satiety_restore_speed                    = 0
@@ -399,6 +414,7 @@ power_restore_speed                      = 0
 bleeding_restore_speed                   = -0.003
 hit_absorbation_sect                     = af_rusty_thorn_absorbation
 
+;коэффициенты иммунитета
 [af_rusty_thorn_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = 0
@@ -429,7 +445,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 3
 inv_grid_y                               = 1
 
-cost                                     = 12000	                                       ;100
+cost                                     = 8500	                                       ;100
 jump_height                              = .4
 
 af_rank                                  = 2
@@ -437,6 +453,7 @@ af_rank                                  = 2
 lights_enabled                           = false
 
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = -0.00375
 satiety_restore_speed                    = 0
@@ -444,6 +461,7 @@ power_restore_speed                      = 0
 bleeding_restore_speed                   = -0.00349
 hit_absorbation_sect                     = af_rusty_kristall_absorbation
 
+;коэффициенты иммунитета
 [af_rusty_kristall_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = 0
@@ -474,7 +492,7 @@ inv_weight                               = 0.5
 inv_grid_x                               = 4
 inv_grid_y                               = 1
 
-cost                                     = 20000
+cost                                     = 9000
 jump_height                              = .5
 
 af_rank                                  = 3
@@ -482,6 +500,7 @@ af_rank                                  = 3
 lights_enabled                           = false
 
 
+;скорости увеличения (уменьшения)
 health_restore_speed                     = 0
 radiation_restore_speed                  = -0.005
 satiety_restore_speed                    = 0
@@ -489,6 +508,7 @@ power_restore_speed                      = 0
 bleeding_restore_speed                   = -0.004
 hit_absorbation_sect                     = af_rusty_sea_absorbation
 
+;коэффициенты иммунитета
 [af_rusty_sea_absorbation]
 burn_immunity                            = 0
 strike_immunity                          = 0
@@ -496,6 +516,6 @@ shock_immunity                           = 0
 wound_immunity                           = 0
 radiation_immunity                       = 0
 telepatic_immunity                       = 0
-chemical_burn_immunity                   = 0
+chemical_burn_immunity                   = 0.02
 explosion_immunity                       = 0
 fire_wound_immunity                      = 0

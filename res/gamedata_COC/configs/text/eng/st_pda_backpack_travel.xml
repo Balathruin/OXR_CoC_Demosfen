@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="bp_to">
+		<text>Travel to backpack</text>
+	</string>
+	<string id="bp_open">
+		<text>Open backpack</text>
+	</string>
+	<string id="ui_mm_bp_travel">
+		<text>Backpack travel</text>
+	</string>
+	<string id="ui_mm_bp_combat">
+		<text>Backpack travel in combat</text>
+	</string>
+	<string id="ui_mm_bp_damage">
+		<text>Backpack travel if damaged</text>
+	</string>
+	<string id="ui_mm_bp_notime">
+		<text>Backpack travel no time change</text>
+	</string>
+	<string id="ui_mm_bp_storm">
+		<text>Backpack travel in emissions</text>
+	</string>
+	<string id="ui_mm_bp_weight">
+		<text>Backpack travel if overweight</text>
+	</string>
+</string_table>

@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@start
+
+[sr_idle@start]
+on_actor_inside = {+main_monolith_mlr_task_2_dlg_1} sr_idle@time_beg %+main_monolith_mlr_task_2_dlg_talk_to_teacher%
+
+[sr_idle@time_beg]
+on_info = {+main_monolith_mlr_task_2_dlg_3} sr_idle@time
+
+[sr_idle@time]
+on_game_timer = 3600 | nil %+main_monolith_mlr_task_3_dlg_1_start =send_tip(main_monolith_mlr_task_3_tip:mon_teacher)%

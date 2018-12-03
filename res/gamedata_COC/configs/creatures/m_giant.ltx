@@ -152,6 +152,7 @@ power_hit_part 		= 1	;0.9			;процент хита, уходящий на отнимание силы
 psy_health_v		= 0.1				;скорость восстановления psy-здоровья
 
 immunities_sect				= giant_immunities
+protections_sect			= giant_protections
 
 ;открытые раны
 bleeding_v					= 0.01						;потеря крови при номинальной ране в секунду
@@ -313,6 +314,10 @@ luminocity_factor			= 0.8				;Low value = easier to see at night
 transparency_threshold	 	= 0.6 			    ;Low value = easier to see through objects
 still_visible_time          = 0 				;The time (milliseconds) that the object is still considered visible , even if it is not in the frustum (u32)
 
+[giant_protections]
+
+hit_fraction_monster = 0.2
+
 ;=========================================================================================
 ; Damage Params
 ;=========================================================================================
@@ -435,6 +440,8 @@ spec_rank			= normal
 community			= pseudo_gigant
 MaxHealthValue		     = 1.0			; range [0..200]
 
+skin_armor = 0.6
+
 [gigant_strong]:m_gigant_e
 $spawn				= "monsters\gigants\gigant_strong"
 visual				= monsters\psevdogigant\psevdogigant_big
@@ -444,6 +451,8 @@ rank				= 20
 spec_rank			= strong
 community			= pseudo_gigant
 MaxHealthValue		     = 1.25			; range [0..200]
+
+skin_armor = 0.75
 
 immunities_sect				= giant_immunities_strong
 attack_params			= m_gigant_attack_params_strong
@@ -483,6 +492,8 @@ rank				= 2
 spec_rank			= weak
 community			= pseudo_gigant
 MaxHealthValue		     = 0.75			; range [0..200]
+
+skin_armor = 0.5
 
 immunities_sect				= giant_immunities_weak
 attack_params			= m_gigant_attack_params_weak

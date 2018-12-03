@@ -10,7 +10,8 @@ def_state_standing = guard
 def_state_moving1 = walk
 def_state_moving2 = walk
 def_state_moving3 = walk
-;on_info = {+bar_barman_need_room} walker@guard_nodoor
+on_game_timer = 4700 | remark@smoke
+on_info = {+actor_meet_nimble_room} walker@guard_nodoor
 ;soundgroup = bar_visitors1
 danger = danger_ignore
 ;on_actor_in_zone = bar_bar_room_area | walker@guard_nodoor
@@ -19,28 +20,36 @@ corpse_detection_enabled = false
 gather_items_enabled = false
 help_wounded_enabled = false
 
+[remark@smoke]:walker@guard_door
+anim = smoking_stand
+on_game_timer = 1200 | walker@guard_door
+
 [meet@1]
-close_distance = 2
-close_victim = actor
-close_anim = guard
-close_snd_hello = bar_guard_stop
-close_snd_distance = 2
-use			    = false
-use_wpn		    = false
+close_anim 		= nil
+close_victim 	= nil
+far_anim 		= nil
+far_victim 		= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
 abuse           = false
+use = {=actor_enemy} false, true
+allow_break = false
+meet_on_talking = false
 
 
 [danger_ignore]
 ignore_distance = 0
 
 [walker@guard_nodoor]
-path_walk = guard_nodoor_walk
-path_look = guard_nodoor_look
+path_walk = guard_far_door_walk
+path_look = guard_door_look
 def_state_standing = ward
 def_state_moving1 = walk
 def_state_moving2 = walk
 def_state_moving3 = walk
-on_actor_not_in_zone = bar_bar_room_area |  {-bar_barman_need_room} walker@guard_door
+;on_actor_not_in_zone = bar_bar_room_area |  {-bar_barman_need_room} walker@guard_door
 ;soundgroup = bar_visitors1
 danger = danger_ignore
 meet = meet@1
+on_game_timer = 100 | %=disable_meet_nimble_info% walker@guard_door

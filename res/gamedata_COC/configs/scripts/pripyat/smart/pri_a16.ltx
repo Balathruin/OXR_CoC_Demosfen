@@ -3,16 +3,21 @@ def_restr = pri_a16_sr_noweap
 safe_restr = pri_surge_hide_a16; pri_a16_sr_light
 smart_control = smart_control
 squad_id = 26
-max_population = 4
+max_population = 2
 respawn_params = respawn@pri_a16
 ;arrive_dist = 65
 
 [respawn@pri_a16]
 spawn_stalker
+spawn_monolith
 
 [spawn_stalker]
-spawn_squads = stalker_sim_squad_advanced, stalker_sim_squad_advanced, stalker_sim_squad_veteran
-spawn_num = 4
+spawn_squads = stalker_sim_squad_veteran
+spawn_num = {+main_monolith_mlr_task_5_dlg_2} 0, 1
+
+[spawn_monolith]
+spawn_squads = monolith_sim_squad_advanced
+spawn_num = {+main_monolith_mlr_task_5_dlg_2} 1, 0
 
 [smart_control]
 noweap_zone = pri_a16_sr_noweap
@@ -21,7 +26,10 @@ alarm_start_sound = {-pri_b305_fifth_cam_end} pri_a16_base_alarm, nil
 alarm_stop_sound = {-pri_b305_fifth_cam_end} pri_a16_base_relax, nil
 
 [exclusive]
-pri_medic_stalker = pripyat\pri_medic_stalker.ltx
+main_monolith_mlr_task_5_attack_squad_leader = pripyat\pri_a16_logic_monolith.ltx
+merc_pri_a16_tesak_mlr = pripyat\pri_a16_logic_stalker.ltx
+merc_pri_a16_trader_mlr = pripyat\pri_a16_logic_stalker.ltx
+pri_a16_yar = pripyat\pri_a16_logic_stalker.ltx
 pri_a16_stalker_1 = pripyat\pri_a16_logic_stalker.ltx
 pri_a16_stalker_2 = pripyat\pri_a16_logic_stalker.ltx
 pri_a16_stalker_3 = pripyat\pri_a16_logic_stalker.ltx

@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<string_table>
+	<string id="zone_surge_news_do_blow_news_emission">
+		<text>an emission</text>
+	</string>
+	<string id="zone_surge_news_do_blow_news_psy-storm">
+		<text>a psy-storm</text>
+	</string>
+
+	<string id="zone_surge_news_surgetext_1">
+		<text>trouble's coming</text>
+	</string>
+	<string id="zone_surge_news_surgetext_2">
+		<text>something bad is on its way</text>
+	</string>
+	<string id="zone_surge_news_surgetext_3">
+		<text>expect a disaster</text>
+	</string>
+	<string id="zone_surge_news_surgetext_4">
+		<text>it's curtains for anyone who doesn't hide</text>
+	</string>
+
+	<string id="zone_surge_news_surgetext_emission_1">
+		<text>an emission is coming</text>
+	</string>
+	<string id="zone_surge_news_surgetext_emission_2">
+		<text>an emission will be on its way</text>
+	</string>
+	<string id="zone_surge_news_surgetext_emission_3">
+		<text>there'll be an emission</text>
+	</string>
+	<string id="zone_surge_news_surgetext_emission_4">
+		<text>there's going to be an emission</text>
+	</string>
+
+	<string id="zone_surge_news_surgetext_psystorm_1">
+		<text>a psy-storm will be coming</text>
+	</string>
+	<string id="zone_surge_news_surgetext_psystorm_2">
+		<text>a psy-storm will be on its way</text>
+	</string>
+	<string id="zone_surge_news_surgetext_psystorm_3">
+		<text>there'll be a psy-storm</text>
+	</string>
+	<string id="zone_surge_news_surgetext_psystorm_4">
+		<text>there's going to be a psy-storm</text>
+	</string>
+
+	<string id="zone_surge_news_day_1">
+		<text>today.</text>
+	</string>
+	<string id="zone_surge_news_day_2">
+		<text>tomorrow.</text>
+	</string>
+	<string id="zone_surge_news_day_3">
+		<text>in two days.</text>
+	</string>
+	<string id="zone_surge_news_day_4">
+		<text>in three days.</text>
+	</string>
+	<string id="zone_surge_news_day_5">
+		<text>in four days.</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_army_1">
+		<text>Commander's warning us,&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_2">
+		<text>Heard from the scientists that&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_3">
+		<text>HQ's reported that&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_4">
+		<text>Machines are giving off some disturbing info,&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_5">
+		<text>Sensors indicate that&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_6">
+		<text>The commander just reported that&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_7">
+		<text>The platoon commander has reported that&#032;</text>
+	</string>
+	<string id="zone_surge_news_army_snder">
+		<text>Armed Forces of Ukraine:</text>
+	</string>
+
+	<string id="zone_surge_news_bandit_1">
+		<text>Got info from the Garbage,&#032;</text>
+	</string>
+	<string id="zone_surge_news_bandit_2">
+		<text>Heard some shit from the Bar,&#032;</text>
+	</string>
+	<string id="zone_surge_news_bandit_3">
+		<text>One of our guys talked about&#032;</text>
+	</string>
+	<string id="zone_surge_news_bandit_4">
+		<text>Our bros from the north are saying&#032;</text>
+	</string>
+	<string id="zone_surge_news_bandit_5">
+		<text>Our fellas in Jupiter mentioned that&#032;</text>
+	</string>
+	<string id="zone_surge_news_bandit_6">
+		<text>Overheard some chit-chat at the Bar...&#032;</text>
+	</string>
+	<string id="zone_surge_news_bandit_7">
+		<text>Sultan said</text>
+	</string>
+	<string id="zone_surge_news_bandit_snder">
+		<text>Bandits:</text>
+	</string>
+
+	<string id="zone_surge_news_csky_1">
+		<text>Attention! Our sensors have picked up critical information,&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_2">
+		<text>Important information from our main base,&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_3">
+		<text>Information has arrived from the Swamp,&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_4">
+		<text>Our readings have gone wild,&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_5">
+		<text>Readings on our devices are alarming...&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_6">
+		<text>Sensors read that&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_7">
+		<text>To all stalkers, attention! According to our devices,&#032;</text>
+	</string>
+	<string id="zone_surge_news_csky_snder">
+		<text>Clear Sky:</text>
+	</string>
+
+	<string id="zone_surge_news_dolg_1">
+		<text>Important information from Petrenko,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_2">
+		<text>One of our squads has returned from the CNPP with some important intel,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_3">
+		<text>Picked up information from the CNPP,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_4">
+		<text>Readings are off the charts... Heads up,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_5">
+		<text>Received important information from the scientists,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_6">
+		<text>Received information from HQ,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_7">
+		<text>Received information from the Cordon,&#032;</text>
+	</string>
+	<string id="zone_surge_news_dolg_snder">
+		<text>Duty:</text>
+	</string>
+
+	<string id="zone_surge_news_ecolog_1">
+		<text>Attention! Our sensors have picked up important information;&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_2">
+		<text>Attention to all stalkers,&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_3">
+		<text>Important information from Sakharov, who claims that&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_4">
+		<text>Information has arrived from Yantar,&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_5">
+		<text>Our readings have gone wild,&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_6">
+		<text>Readings on our devices are alarming,&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_7">
+		<text>Sensors read that&#032;</text>
+	</string>
+	<string id="zone_surge_news_ecolog_snder">
+		<text>Ecologists:</text>
+	</string>
+
+	<string id="zone_surge_news_freedom_1">
+		<text>Doc stopped by... There's gonna be trouble,&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_2">
+		<text>Got word from the army warehouses,&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_3">
+		<text>Gotten info from reliable sources,&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_4">
+		<text>Lukash just sent a message,&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_5">
+		<text>Our dudes got some news,&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_6">
+		<text>Overheard the Dutyers,&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_7">
+		<text>The Swamp Doctor said that&#032;</text>
+	</string>
+	<string id="zone_surge_news_freedom_snder">
+		<text>Freedom:</text>
+	</string>
+
+	<string id="zone_surge_news_killer_1">
+		<text>Boys, don't screw about,&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_2">
+		<text>Got an important message,&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_3">
+		<text>Got some info,&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_4">
+		<text>Heard from the boss that&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_5">
+		<text>Intercepted some scientist messages,&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_6">
+		<text>Sources say that&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_7">
+		<text>The boss mentioned&#032;</text>
+	</string>
+	<string id="zone_surge_news_killer_snder">
+		<text>Mercenaries</text>
+	</string>
+
+	<string id="zone_surge_news_monolith_1">
+		<text>The C-Consciousness has given the signal,&#032;</text>
+	</string>
+	<string id="zone_surge_news_monolith_2">
+		<text>The Monolith has decided...&#032;</text>
+	</string>
+	<string id="zone_surge_news_monolith_3">
+		<text>The Monolith has spoken,&#032;</text>
+	</string>
+	<string id="zone_surge_news_monolith_4">
+		<text>The scientists of the C-Consciousness have spoken,&#032;</text>
+	</string>
+	<string id="zone_surge_news_monolith_snder">
+		<text>Monolith:</text>
+	</string>
+
+	<string id="zone_surge_news_stalker_1">
+		<text>Forester just gave some info,&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_2">
+		<text>Got word from a few scouts that&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_3">
+		<text>Got word from the scientists at Jupiter that&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_4">
+		<text>Heard over at the Bar that&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_5">
+		<text>Sakharov gave some intel,&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_6">
+		<text>Sidorovich mentioned that&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_7">
+		<text>The Swamp Doctor mentioned that&#032;</text>
+	</string>
+	<string id="zone_surge_news_stalker_snder">
+		<text>General channel:</text>
+	</string>
+
+	<string id="zone_surge_news_zombied_1">
+		<text>Give us the emission</text>
+	</string>
+	<string id="zone_surge_news_zombied_2">
+		<text>O, Monolith, deliver the emission</text>
+	</string>
+	<string id="zone_surge_news_zombied_3">
+		<text>O, Monolith, give us the psy-emission</text>
+	</string>
+	<string id="zone_surge_news_zombied_4">
+		<text>O, Monolith, unleash your fury</text>
+	</string>
+	<string id="zone_surge_news_zombied_snder">
+		<text>Zombies:</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_time_surge_army-dolg_23-04_1">
+		<text>Estimated from 23:00 and 04:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_23-04_2">
+		<text>Hide your teams at 23:00. It'll be safe to emerge by 04:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_23-04_3">
+		<text>Keep your personnel sheltered between 23:00 and 04:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_23-04_4">
+		<text>Standby from 23:00 to 04:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_army-dolg_04-08_1">
+		<text>Estimated from 04:00 and 08:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_04-08_2">
+		<text>Hide your teams at 04:00. It'll be safe to emerge by 08:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_04-08_3">
+		<text>Keep your personnel sheltered between 04:00 and 08:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_04-08_4">
+		<text>Standby from 04:00 to 08:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_army-dolg_08-12_1">
+		<text>Estimated from 08:00 and 12:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_08-12_2">
+		<text>Hide your teams at 08:00. It'll be safe to emerge by 12:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_08-12_3">
+		<text>Keep your personnel sheltered between 08:00 and 12:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_08-12_4">
+		<text>Standby from 08:00 to 12:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_army-dolg_12-16_1">
+		<text>Estimated from 12:00 and 16:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_12-16_2">
+		<text>Hide your teams at 12:00. It'll be safe to emerge by 16:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_12-16_3">
+		<text>Keep your personnel sheltered between 12:00 and 16:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_12-16_4">
+		<text>Standby from 12:00 to 16:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_army-dolg_16-19_1">
+		<text>Estimated from 16:00 and 19:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_16-19_2">
+		<text>Hide your teams at 16:00. It'll be safe to emerge by 19:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_16-19_3">
+		<text>Keep your personnel sheltered between 16:00 and 19:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_16-19_4">
+		<text>Standby from 16:00 to 19:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_army-dolg_19-23_1">
+		<text>Estimated from 19:00 and 23:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_19-23_2">
+		<text>Hide your teams at 19:00. It'll be safe to emerge by 23:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_19-23_3">
+		<text>Keep your personnel sheltered between 19:00 and 23:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_army-dolg_19-23_4">
+		<text>Standby from 19:00 to 23:00.</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_time_surge_bandit_23-04_1">
+		<text>Expecting a fucked-up night.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_23-04_2">
+		<text>Seems like a bad night's coming.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_23-04_3">
+		<text>Wait for the night.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_bandit_04-08_1">
+		<text>As soon as you're awake.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_04-08_2">
+		<text>In the morning, instead of a vodka shot.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_04-08_3">
+		<text>Wake up, and you'll be in the middle of it.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_bandit_08-12_1">
+		<text>It's just before noon.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_08-12_2">
+		<text>Noon is screwed.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_08-12_3">
+		<text>We'll have breakfast, but no dinner for today!</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_bandit_12-16_1">
+		<text>Just after dinner, lay low and pray!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_12-16_2">
+		<text>Shove afternoon sleep up your ass.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_12-16_3">
+		<text>The afternoon's screwed. At least the evening looks fine.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_bandit_16-19_1">
+		<text>It'll heat up by the evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_16-19_2">
+		<text>It's after dinner. Keep your eyes peeled in the evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_16-19_3">
+		<text>Walk all you want before 15, but lay low after.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_bandit_19-23_1">
+		<text>In the evening. Swear.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_19-23_2">
+		<text>It'll fuck us over in the evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_bandit_19-23_3">
+		<text>Just as soon as it gets dark.</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_time_surge_csky-ecolog_23-04_1">
+		<text>Computer forecast: around 23:00 until 04:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_23-04_2">
+		<text>Maximum probability between 23:00 and 04:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_23-04_3">
+		<text>Standby between 23:00 and 04:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_csky-ecolog_04-08_1">
+		<text>Computer forecast: around 04:00 until 08:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_04-08_2">
+		<text>Maximum probability between 04:00 and 08:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_04-08_3">
+		<text>Standby between 04:00 and 08:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_csky-ecolog_08-12_1">
+		<text>Computer forecast: around 08:00. It'll be safe to emerge by 12:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_08-12_2">
+		<text>Maximum probability between 08:00 and 12:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_08-12_3">
+		<text>Standby between 08:00 and 12:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_csky-ecolog_12-16_1">
+		<text>Computer forecast: around 12:00. It'll be safe to emerge by 16:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_12-16_2">
+		<text>Maximum probability between 12:00 and 16:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_12-16_3">
+		<text>Standby between 12:00 and 16:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_csky-ecolog_16-19_1">
+		<text>Computer forecast: around 16:00. It'll be safe to emerge by 19:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_16-19_2">
+		<text>Maximum probability between 16:00 and 19:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_16-19_3">
+		<text>Standby between 16:00 and 19:00.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_csky-ecolog_19-23_1">
+		<text>Computer forecast: around 19:00. It'll be safe to emerge by 23:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_19-23_2">
+		<text>Maximum probability between 19:00 and 23:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_csky-ecolog_19-23_3">
+		<text>Standby between 19:00 and 23:00.</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_23-04_1">
+		<text>It'll be tonight.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_23-04_2">
+		<text>It's gonna get ugly tonight.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_23-04_3">
+		<text>No chance of a good night's sleep.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_23-04_4">
+		<text>Tonight.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_04-08_1">
+		<text>Expect it by dawn.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_04-08_2">
+		<text>It'll happen this morning!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_04-08_3">
+		<text>Keep yourselves sheltered during early hours!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_04-08_4">
+		<text>This is gonna be one hell of a wake-up!</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_08-12_1">
+		<text>Before dinner, surely.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_08-12_2">
+		<text>It'll be curtains for anyone who doesn't hide around noon.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_08-12_3">
+		<text>Short story, you aren't dining today!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_08-12_4">
+		<text>Wait until noon!</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_12-16_1">
+		<text>By afternoon, closer to evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_12-16_2">
+		<text>How about that instead of an afternoon nap!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_12-16_3">
+		<text>In the afternoon.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_12-16_4">
+		<text>No sleeping after dinner!</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_16-19_1">
+		<text>Around evening, certainly.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_16-19_2">
+		<text>But walk freely until 16:00.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_16-19_3">
+		<text>In the afternoon, around evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_16-19_4">
+		<text>Just as the evening kicks in.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_19-23_1">
+		<text>By dusk.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_19-23_2">
+		<text>Closer to midnight.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_19-23_3">
+		<text>It'll start by dusk.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_freedom-killer-stalker_19-23_4">
+		<text>Just as the night kicks in.</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_time_surge_monolith_23-04_1">
+		<text>It shall arrive on this night!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_23-04_2">
+		<text>It shall slay our enemies on this night...</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_23-04_3">
+		<text>Let there be no rest for the infidels on this night, brothers!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_23-04_4">
+		<text>May this night be purified by the will of the Monolith.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_monolith_04-08_1">
+		<text>Expect the cleansing at dawn!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_04-08_2">
+		<text>It shall arrive this morning!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_04-08_3">
+		<text>Let it serve to begin this day!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_04-08_4">
+		<text>The will of the Monolith shall wake up the Zone!</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_monolith_08-12_1">
+		<text>Around the coming noon...</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_08-12_2">
+		<text>Remain prepared until noon, brothers!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_08-12_3">
+		<text>The infidels will be purified!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_08-12_4">
+		<text>The Wave shall arrive by midday.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_monolith_12-16_1">
+		<text>It shall arrive by this afternoon, approaching evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_12-16_2">
+		<text>Prepare yourselves by afternoon, brothers!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_12-16_3">
+		<text>The infidels will be on guard this afternoon!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_12-16_4">
+		<text>This afternoon, we shall reap what we sow.</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_monolith_16-19_1">
+		<text>As the evening makes its way...</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_16-19_2">
+		<text>Its will shall arrive by this evening.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_16-19_3">
+		<text>Let this evening be cleansed of our enemies!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_16-19_4">
+		<text>May the fall of the sun serve as the fall of our enemies!</text>
+	</string>
+
+	<string id="zone_surge_news_time_surge_monolith_19-23_1">
+		<text>As the day eclipses, so shall our enemies!</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_19-23_2">
+		<text>As the evening leaves the Zone.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_19-23_3">
+		<text>Its will shall arrive by dusk.</text>
+	</string>
+	<string id="zone_surge_news_time_surge_monolith_19-23_4">
+		<text>On the approach to midnight...</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_time_surge_zombied_1">
+		<text>Kiii-i-i-l-l-l...</text>
+	</string>
+	<string id="zone_surge_news_time_surge_zombied_2">
+		<text>Mu-u-aaa...</text>
+	</string>
+	<string id="zone_surge_news_time_surge_zombied_3">
+		<text>We were like you, and you will bec-o-ome li-i-ke u-u-us...</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_blowout_templates_1">
+		<text>Expect some havoc, $what $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_2">
+		<text>Expect yourselves a cataclysm, $what is coming $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_3">
+		<text>Find some cover, $what is coming $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_4">
+		<text>Guys, my equipment's already started to go nuts. Most likely signs of $what $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_5">
+		<text>Hermann is telling us that $what $when, so find yourselves some cover.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_6">
+		<text>Hey, $what is gonna be here $when. Stay sharp.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_7">
+		<text>I met the Swamp Doctor... He treated a few of my dog bites, but that's not important. What matters is that he's given a warning... Says that $what is happening $when, so stay hidden!</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_8">
+		<text>I visited the Ecologists at Yantar and according to their measurements, $what will be here $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_9">
+		<text>I've been told that $what will be on its way $when. My sources are reliable, so it's probably no joke; be careful out there.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_10">
+		<text>Sakharov says that his equipment detects $what that'll be here $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_11">
+		<text>Sakharov warned that $when, $what is coming. Find yourselves some cover.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_12">
+		<text>The Zone isn't happy... there'll be $what soon. More accurately, $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_13">
+		<text>Things are going to shit, $what $when.</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_14">
+		<text>We're expecting the worst... There'll be $what $when.</text>
+	</string>
+
+
+
+	<string id="zone_surge_news_blowout_templates_time_2">
+		<text>in an hour or two</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_2-4">
+		<text>in a couple of hours</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_4-8">
+		<text>anywhere between six and seven hours</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_9-11">
+		<text>this morning</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_11-14">
+		<text>by day</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_14-18">
+		<text>afternoon</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_18-22">
+		<text>by evening</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_22-30">
+		<text>at night</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_30-34">
+		<text>tomorrow morning</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_34-38">
+		<text>tomorrow noon</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_38-42">
+		<text>tomorrow afternoon</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_42-46">
+		<text>tomorrow evening</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_46-52">
+		<text>tomorrow night</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_52-72">
+		<text>in two days</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_72-96">
+		<text>in three days</text>
+	</string>
+	<string id="zone_surge_news_blowout_templates_time_96-120">
+		<text>in four days</text>
+	</string>
+</string_table>

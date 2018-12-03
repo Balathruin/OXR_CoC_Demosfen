@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@def
+
+[sr_idle@def]
+;on_info = {-bar_turn_off =is_day_bar_light} sr_idle@day
+;on_info2 = {-bar_turn_on =is_night_bar_light} sr_idle@night
+
+[sr_idle@day]
+;on_info = sr_idle@def %=turn_off_bar_lamps +bar_turn_off -bar_turn_on%
+
+[sr_idle@night]
+;on_info = sr_idle@def %=turn_on_bar_lamps +bar_turn_on -bar_turn_off%

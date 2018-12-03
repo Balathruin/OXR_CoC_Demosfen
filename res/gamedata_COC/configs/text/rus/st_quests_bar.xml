@@ -1,48 +1,204 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+<!--===========================================================
+<
+< TEXT  STRINGS FOR TASKS ON BAR (ROSTOK) MAP
+<	CoC 1.4.22 - DoctorX Questlines 1.24
+<
+<	Modified by: DoctorX
+<	Translated by: av661194
+<	Last revised: February 16, 2017
+<
+<===========================================================-->
+
 <string_table>
-	<!-- DEFEND BAR FROM MUTANTS TASK -->
-	<string id="bar_visitors_barman_stalker_trader_task_1_name">
-		<text>Очистить местность от мутантов</text>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Default Storyline Task -->
+
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_default_task_name">
+		<text>Получить следующее задание</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_1_text">
-		<text>Бармен попросил зачистить местность от мутантов в целях обеспечения безопасности бара, а также сталкеров, которые приходят на Росток. Необходимо уничтожить всех тварей в указанной области. По завершении задания - вернуться за наградой.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_default_task_text">
+		<text>Получите следующее задание.</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_1_about">
-		<text>Мне нужен кто-нибудь достаточно смелый для выполнения одного опасного, но высокооплачиваемого задания. Мутанты обосновались неподалёку от моего бара и нужно срочно их полностью истребить. Место я отмечу на карте в твоём КПК. Если сделаешь это, то заработаешь немного денег. Что скажешь?</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_default_task_about">
+		<text>Кое-кто нуждается в помощи. Найди его и узнай, чего он хочет.</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_1_finish">
-		<text>Спасибо, благодаря тебе мы в безопасности. Вот оплата.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_default_task_finish">
+		<text>Удачи, сталкер.</text>
 	</string>
-	<!-- KILL BANDITS FOR BARMAN TASK -->
-	<string id="bar_visitors_barman_stalker_trader_task_2_name">
-		<text>Уничтожить бандитов</text>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Raid Enemy Camp Storyline Task- -->
+
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_1_name">
+		<text>Рейд против вражеского лагеря</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_2_text">
-		<text>Уничтожить всех бандитов в указанном районе.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_1_text">
+		<text>Долг организует рейд против вражеского лагеря.</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_2_about">
-		<text>Нужна твоя помощь. Одна группа бандитов вызывает много проблем. Нужно избавиться от них.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_1_about">
+		<text>Мы готовим налёт на вражеский лагерь. Мне нужно, чтобы ты возглавил штурм.</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_2_finish">
-		<text>Хорошая работа, сталкер! Вот награда, заслужил.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_1_finish">
+		<text>Отличная работа. Ты прекрасный воин.</text>
 	</string>
-	<!-- FIND ARTEFACT FOR BARMAN TASK -->
-	<string id="bar_visitors_barman_stalker_trader_task_3_name">
-		<text>Найти артефакт %s</text>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Locate Brain Scorcher Equipment Storyline Task -->
+
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_2_name">
+		<text>Запчасть Выжигателя Мозгов</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_3_text">
-		<text>Бармен просил найти для него артефакт %s.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_2_text">
+		<text>Один сталкер снял деталь Выжигателя и спрятал где-то в Зоне. Найти деталь и вернуть Петренко</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_3_about">
-		<text>Сталкер, мне нужна твоя помощь. Надо найти одну вещь, а если точнее - артефакт. Согласен помочь?</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_2_about">
+		<text>У меня есть информация о том, что некоему сталкеру удалось украсть одну деталь Выжигателя Мозгов и спрятать её в Зоне. Мы должны найти эту деталь. Выжигатель - мощное оружие, которое не должно попасть в чужие руки. Есть несколько мест, где эта запчасть может находиться. Я хочу проверить одно из возможных мест. Если найдёшь деталь - неси сюда немедленно.</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_3_fetch_about">
-		<text>Я ищу артефакт %s. Если найдёшь такой и принесёшь мне, я хорошо заплачу.</text>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_2_finish">
+		<text>Ты хорошо поработал. Спасибо.</text>
 	</string>
-	<string id="bar_visitors_barman_stalker_trader_task_3_fetch_finish">
-		<text>Отличная работа. Вот твоё вознаграждение.</text>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Most Wanted Storyline Task -->
+
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_3_name">
+		<text>Месть Петренко</text>
 	</string>
-	<!-- DEFEND TERRITORY FOR DUTY TASK -->
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_3_text">
+		<text>Устранить члена другой группировки.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_3_about">
+		<text>Есть кое-кто, причинивший мне больше проблем, чем кто-либо другой в Зоне. До сих пор никто из моих людей не смог добраться до него. Если ты сможешь убить его - получишь хорошую награду.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_3_finish">
+		<text>Хорошо, ты избавился от этого мудака! Отличная работа. Вот твоя награда.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Search Lab X-19 (Radar) Storyline Task -->
+
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_4_name">
+		<text>Лаборатория X-19</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_4_text">
+		<text>Петренко щедро заплатит за любые документы, найденные в лаборатории Х-19 на Радаре.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_4_about">
+		<text>Мои источники говорят мне, что ты планируешь проникнуть в центр управления Выжигателем Мозгов на Радаре. Я думаю, что ты сошёл с ума, но, если ты действительно собираешься пойти на это, у меня есть предложение. Принеси любую документацию, которую найдёшь там. Получишь щедрую награду.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_task_4_finish">
+		<text>Хорошо, вот и награда.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Mangun (Duty Mechanic) Default Storyline Task -->
+
+	<string id="drx_sl_bar_visitors_stalker_mechanic_default_task_name">
+		<text>Получить следующее задание</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_default_task_text">
+		<text>Получите следующее задание.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_default_task_about">
+		<text>Моему приятелю нужна помощь. Сходи к нему.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_default_task_finish">
+		<text>Удачи, сталкер.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Mangun (Duty Mechanic) Find Replacement Weapon Storyline Task- -->
+
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_1_name">
+		<text>Найти %s для Громова</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_1_text">
+		<text>Громов облажался при ремонте. Надо найти для него %s.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_1_about">
+		<text>Мне нужна помощь, братан. Один долговец принёс мне свою винтовку для ремонта, но я испортил её. Мне нужно найти замену для него, прежде чем он придёт, чтобы забрать оружие.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_1_fetch_about">
+		<text>Найди и принеси для меня %s. У меня немного денег, но есть кое-что, что я могу дать за него.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_1_fetch_finish">
+		<text>Эй, здорово! Благодарю, братан, ты спас мою задницу.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Mangun (Duty Mechanic) Clear Out Mutants Storyline Task -->
+
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_2_name">
+		<text>Убить мутантов для Громова</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_2_text">
+		<text>Громову нужно очистить дорогу из Бара от мутантов.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_2_about">
+		<text>Эй, братан, ты можешь сделать кое-что для меня? Мне надо кое-куда сходить, но я слышал,что на дороге, ведущей из Бара, много мутантов. Я не очень-то хорош в стрельбе. Не мог бы ты убрать их для меня? У меня есть прекрасное оружие, которое я могу дать в награду.</text>
+	</string>
+	<string id="drx_sl_bar_visitors_stalker_mechanic_task_2_finish">
+		<text>Спасибо, брат. Вот оружие, как я и обещал. Надеюсь, тебе повезёт больше, чем его предыдущему владельцу... бедный парень. Хорошо, что он заплатил мне заранее, хо-хо.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- CHANGE FACTIONS TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Payoff Change Factions Task -->
+
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_cf_task_1_name">
+		<text>Новобранец «Долга»</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_cf_task_1_text">
+		<text>Полковник Петренко позволит вам присоединиться к «Долгу» за 12000.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_cf_task_1_about">
+		<text>Мы будем более чем счастливы, если ты присоединишься к «Долгу». Конечно, существует вступительный взнос. Если сможешь принести мне 12000 - я всё устрою.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_cf_task_1_finish">
+		<text>Добро пожаловать в «Долг», сталкер. Гордись этим.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DYNAMIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Petrenko (Duty Trader) Defend Rostok Task -->
+
 	<string id="bar_dolg_general_petrenko_stalker_task_1_name">
 		<text>Захватить территорию</text>
 	</string>
@@ -55,7 +211,7 @@
 	<string id="bar_dolg_general_petrenko_stalker_task_1_finish">
 		<text>Задача выполнена? Отлично.</text>
 	</string>
-	<!-- CAPTURE TERRITORY FOR DUTY TASK -->
+
 	<string id="bar_dolg_general_petrenko_stalker_task_2_name">
 		<text>Отвоевать территорию</text>
 	</string>
@@ -68,7 +224,7 @@
 	<string id="bar_dolg_general_petrenko_stalker_task_2_finish">
 		<text>Миссия выполнена? Отличная работа!</text>
 	</string>
-	<!-- ASSASSINATION FOR DUTY TASK -->
+
 	<string id="bar_dolg_general_petrenko_stalker_task_3_name">
 		<text>Убийство</text>
 	</string>
@@ -81,7 +237,8 @@
 	<string id="bar_dolg_general_petrenko_stalker_task_3_finish">
 		<text>Отлично! Вот обещанная награда:</text>
 	</string>
-	<!-- FIND LEVEL 1 TOOLKIT FOR MANGUN TASK -->
+
+	<!-- bar_visitors_stalker_mechanic -->
 	<string id="bar_visitors_stalker_mechanic_task_1_name">
 		<text>Найти для Громова %s</text>
 	</string>
@@ -92,12 +249,11 @@
 		<text>Знаешь, браток, а я ведь на самом деле неплохой техник. И оружие и броню чинить умею, даже апгрейды какие-никакие делаю! Вернее, делал бы, если бы инструменты были нормальные. Да только где их здесь возьмешь? Может, поможешь раздобыть какой-нибудь простенький набор, а?</text>
 	</string>
 	<string id="bar_visitors_stalker_mechanic_task_1_fetch_about">
-		<text>Знаешь, браток, а я ведь на самом деле неплохой техник. И оружие и броню чинить умею, даже апгрейды какие-никакие делаю!. Вернее, делал бы, если бы инструменты были нормальные. Да только где их здесь возьмешь? Может ты поможешь раздобыть какой-нибудь простенький набор, а? Мне нужен набор инструментов для грубой работы.  В нём должны быть инструменты и масла для работы с оружием. Если сможешь его достать, я буду благодарен, даже заплачу тебе!.. Наверное.</text>
+		<text>Мне нужен набор инструментов для грубой работы. В нём должны быть инструменты и масла для работы с оружием. Если сможешь его достать, я буду благодарен, даже заплачу тебе!.. Наверное.</text>
 	</string>
 	<string id="bar_visitors_stalker_mechanic_task_1_fetch_finish">
 		<text>Отлично, чувак! Ох, прости, мне нечем заплатить. Но я могу дать тебе хорошую скидку!</text>
 	</string>
-	<!-- FIND LEVEL 2 TOOLKIT FOR MANGUN TASK -->
 	<string id="bar_visitors_stalker_mechanic_task_2_name">
 		<text>Найти для Громова %s</text>
 	</string>
@@ -108,12 +264,11 @@
 		<text>Эй, чувак, если ты согласишься достать мне более полный набор, получишь ещё большую скидку. Поможешь, приятель?</text>
 	</string>
 	<string id="bar_visitors_stalker_mechanic_task_2_fetch_about">
-		<text>Эй, чувак, если ты согласишься достать мне более полный набор, получишь ещё большую скидку. Поможешь, приятель? Мне нужны инструменты для тонкой работы. Там должно быть всё, что мне нужно. Ты будешь мне как брат, если достанешь его!</text>
+		<text>Мне нужны инструменты для тонкой работы. Там должно быть всё, что мне нужно. Ты будешь мне как брат, если достанешь его!</text>
 	</string>
 	<string id="bar_visitors_stalker_mechanic_task_2_fetch_finish">
 		<text>Ух ты блин, спасибо, братан! Теперь-то я точно разбогатею. Чёрт возьми, я таки стану успешным!.. Если, конечно, и этот шанс не упущу. Но пока не могу предложить тебе ничего лучше, чем скидка. Извини, приятель.</text>
 	</string>
-	<!-- FIND LEVEL 3 TOOLKIT FOR MANGUN TASK -->
 	<string id="bar_visitors_stalker_mechanic_task_3_name">
 		<text>Найти для Громова %s</text>
 	</string>
@@ -129,4 +284,5 @@
 	<string id="bar_visitors_stalker_mechanic_task_3_fetch_finish">
 		<text>Ни ху...! Блин, спасибо, братан! Теперь-то я точно разбогатею. Чёрт возьми, я таки стану успешным!.. Если, конечно, ещё и этот шанс не упущу. Но пока не могу предложить тебе ничего лучше, чем скидка. Извини, дружище.</text>
 	</string>
+
 </string_table>

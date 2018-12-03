@@ -1,0 +1,281 @@
+[wpn_g36c]:weapon_probability,default_weapon_params
+$npc                                               = on
+$prefetch                                          = 8
+$spawn                                             = "weapons\g36c"
+ammo_class                                         = ammo_5.56x45_ss190, ammo_5.56x45_ap
+ammo_current                                       = 180
+ammo_elapsed                                       = 30
+ammo_limit                                         = 210
+ammo_mag_size                                      = 30
+animation_slot                                     = 2
+bullet_speed                                       = 735
+cam_dispersion                                     = 0.8
+cam_dispersion_frac                                = 1.0
+cam_dispersion_inc                                 = 0.1
+cam_max_angle                                      = 50.0
+cam_max_angle_horz                                 = 50.0
+cam_relax_speed                                    = 10
+cam_relax_speed_ai                                 = 120.75
+cam_return                                         = 0
+cam_step_angle_horz                                = 1.8
+cform                                              = skeleton
+class                                              = WP_AK74
+condition_queue_shot_dec = 0.0005;                 = 0.001
+condition_shot_dec = 0.0003;                        = 0.001
+control_inertion_factor                            = 1.15f
+cost                                               = 62000
+crosshair_inertion                                 = 5.50
+description                                        = st_wpn_g36c_descr
+ef_main_weapon_type                                = 2
+ef_weapon_type                                     = 7
+fire_dispersion_base                     = 0.24
+fire_dispersion_condition_factor         = 2
+fire_distance = 1000;                            = 500
+fire_modes                                         = 1, 3, -1
+fire_point                                         = 0.0, 0.21, 0.8
+fire_point2                                        = 0.0, 0.14, 0.6
+flame_particles                                    = amik\weapons\nato_shoot_00
+grenade_class                                      = ammo_m209
+grenade_flame_particles                            = weapons\generic_weapon01
+grenade_launcher_name                              = wpn_addon_grenade_launcher_ag36
+grenade_launcher_status                            = 0
+grenade_launcher_x                                 = 130
+grenade_launcher_y                                 = 31
+grenade_vel                                        = 76
+GroupControlSection                                = spawn_group
+hand_dependence                                    = 1
+hit_power                                          = 0.52
+hit_probability_gd_master                          = 0.85
+hit_probability_gd_novice                          = 0.55
+hit_probability_gd_stalker                         = 0.65
+hit_probability_gd_veteran                         = 0.75
+hit_type                                           = fire_wound
+holder_fov_modifier                                = 1.00
+holder_range_modifier                              = 1.25
+hud                                                = wpn_g36c_hud
+installed_upgrades                                 = 
+inv_grid_height                                    = 2
+inv_grid_width                                     = 4
+inv_grid_x                                         = 24
+inv_grid_y                                         = 36
+inv_name                                           = st_wpn_g36c
+inv_name_short                                     = st_wpn_g36c
+inv_weight                                         = 2.96
+kill_msg_height                                    = 31
+kill_msg_width                                     = 78
+kill_msg_x                                         = 157
+kill_msg_y                                         = 29
+launch_speed                                       = 76
+light_color                                        = 0.6, 0.5, 0.3
+light_disabled                                     = false
+light_range                                        = 5
+light_time                                         = 0.2
+light_var_color                                    = 0.05
+light_var_range                                    = 0.5
+max_radius                                         = 90
+min_radius                                         = 30
+misfire_end_condition                              = 0.1
+misfire_end_prob                                   = 0.05
+misfire_probability                                = 0.005
+misfire_start_condition                            = 0.6
+misfire_start_prob                                 = 0.004
+orientation                                        = 0, -8 , 0
+parent_section                                     = wpn_g36c
+PDM_disp_accel_factor                              = 2.0
+PDM_disp_base                                      = 0.5
+PDM_disp_crouch                                    = 1.0
+PDM_disp_crouch_no_acc                             = 1.0
+PDM_disp_vel_factor                                = 2.0
+ph_mass                                            = 3
+position                                           = -0.026, -0.132, 0.0
+reload_dof                                         = 0.0, 0.5, 5, 2
+rpm                                                = 750
+rpm_empty_click                                    = 200
+scheduled                                          = off
+scope_name                                         = wpn_addon_scope_susat
+scope_status                                       = 0
+scope_x                                            = 86
+scope_y                                            = -5
+scope_zoom_factor                                  = 1.2
+scopes                                             = ac10632, ac11090, acog, eot, c-more, acog_detector
+shell_dir                                          = 0.0, 0.0, 0.4
+shell_particles                                    = weapons\556x45
+shell_point                                        = 0.0, 0.21, 0.13
+silencer_bullet_speed                              = 735
+silencer_fire_distance = 1000;                             = 400
+silencer_hit_impulse                               = 20
+silencer_hit_power                                 = 0.46
+silencer_light_color                               = 0.6, 0.5, 0.3
+silencer_light_range                               = 0.01
+silencer_light_time                                = 0.2
+silencer_light_var_color                           = 0.05
+silencer_light_var_range                           = 0.5
+silencer_name                                      = sil_nato
+silencer_smoke_particles                           = amik\weapons\smoke_particles\silencer_smoke_particles_00
+silencer_status                                    = 2
+silencer_x                                         = 200
+silencer_y                                         = 17
+single_handed                                      = 0
+slot                                               = 2
+smoke_particles                                    = amik\weapons\nato_smoke_00
+snd_bore                                           = $no_sound
+snd_close                                          = weapons\generic_close
+snd_draw                                           = weapons\g36c\g36c_draw
+snd_empty                                          = weapons\g36c\g36c_empty,	0.8
+snd_holster                                        = weapons\g36c\g36c_holster
+snd_reload                                         = weapons\g36c\g36c_reload
+snd_shoot                                          = wpn_g36c_snd_shoot
+snd_silncer_shot                                   = wpn_g36c_snd_silncer_shot
+startup_ammo                                       = 90
+strap_bone0                                        = bip01_spine2
+strap_bone1                                        = bip01_spine1
+strap_orientation                                  = -15, -9, 110
+strap_position                                     = -0.26, -0.11, 0.25
+time_to_aim                                        = 3.0
+upgr_icon_height = 200;                                   = 100
+upgr_icon_width = 300;                                    = 300
+upgr_icon_x = 0;                                        = 300
+upgr_icon_y = 0;                                        = 900
+upgrade_scheme                                     = upgrade_scheme_sig550
+upgrades                	= up_gr_firstab_sig550, up_gr_seconab_sig550, up_gr_thirdab_sig550, up_gr_fourtab_sig550, up_gr_fifthab_sig550
+use_aim_bullet                                     = false
+visual                                             = dynamics\weapons\wpn_g36c\wpn_g36c.ogf
+weapon_class                                       = assault_rifle
+zoom_cam_dispersion                      = 0.4
+zoom_cam_dispersion_frac                 = 1.0
+zoom_cam_dispersion_inc                  = 0.075
+zoom_cam_max_angle                       = 50.0
+zoom_cam_max_angle_horz                  = 50.0
+zoom_cam_relax_speed                     = 10
+zoom_cam_relax_speed_ai                  = 360
+zoom_cam_step_angle_horz                 = 1.6
+zoom_enabled                             = true
+zoom_rotate_time                                   = 0.25
+
+[wpn_g36c_hud]
+aim_hud_offset_pos                                 = -0.08615,0.05405,-0.09
+aim_hud_offset_pos_16x9                            = -0.08615,0.05405,-0.09
+aim_hud_offset_rot                                 = 0.0604,0.0428,0.0071
+aim_hud_offset_rot_16x9                            = 0.0604,0.0428,0.0071
+anm_bore                                           = g36c_idle_bore
+anm_hide                                           = g36c_holster
+anm_idle                                           = g36c_idle
+anm_idle_aim                                       = g36c_idle_aim
+anm_idle_moving                                    = g36c_idle_move
+anm_idle_sprint                                    = g36c_idle_sprint_2
+anm_reload                                         = g36c_reload
+anm_shots                                          = g36c_shoot
+anm_show                                           = g36c_draw
+attach_place_idx                                   = 0
+fire_bone                                          = wpn_body
+fire_bone2                                         = wpn_body
+fire_point                                         = 0.000000,0.029900,0.565000
+fire_point2                                        = 0.0,-0.017,0.692
+gl_hud_offset_pos                                  = 0,0,0
+gl_hud_offset_pos_16x9                             = 0,0,0
+gl_hud_offset_rot                                  = 0,0,0
+gl_hud_offset_rot_16x9                             = 0,0,0
+hands_orientation                                  = 0.5,4.922498,-5.75
+hands_orientation_16x9                             = 0.5,4.922498,-5.75
+hands_position                                     = -0.01,-0.03,0.205498
+hands_position_16x9                                = -0.01,-0.03,0.205498
+item_orientation                                   = 32.07896,10.50498,357.8676
+item_position                                      = 0.012866,-0.003395,0.01378
+item_visual                                        = dynamics\weapons\wpn_g36c\wpn_g36c_hud.ogf
+lean_hud_offset_pos                                = 0,0,0
+lean_hud_offset_rot                                = 0,0,0
+shell_bone                                         = wpn_body
+shell_dir                                          = 0.0, 1.0, 0.0
+shell_point                                        = 0.021,0.071,0.141
+zoom_hide_crosshair                                = true
+
+[wpn_g36c_ac10632]:wpn_g36c
+$spawn                                             = "weapons\wpn_g36c_ac10632"
+1icon_layer                                        = ac10632
+1icon_layer_x                                      = 95
+1icon_layer_y                                      = -15
+hud                                                = wpn_g36c_ac10632_hud
+inv_weight                                         = 3.075
+scope_zoom_factor                                  = 1.2
+visual                                             = dynamics\weapons\wpn_g36c\wpn_g36c_ac10632.ogf
+
+[wpn_g36c_ac10632_hud]:wpn_g36c_hud
+aim_hud_offset_pos                                 = -0.08665,0.03945,-0.13
+aim_hud_offset_pos_16x9                            = -0.08665,0.03945,-0.13
+aim_hud_offset_rot                                 = 0.06,0.0428,0.0071
+aim_hud_offset_rot_16x9                            = 0.06,0.0428,0.0071
+item_visual                                        = dynamics\weapons\wpn_g36c\wpn_g36c_ac10632_hud.ogf
+
+[wpn_g36c_ac11090]:wpn_g36c
+$spawn                                             = "weapons\wpn_g36c_ac11090"
+1icon_layer                                        = ac11090
+1icon_layer_x                                      = 98
+1icon_layer_y                                      = -11
+hud                                                = wpn_g36c_ac11090_hud
+inv_weight                                         = 3.21
+scope_zoom_factor                                  = 1.3
+visual                                             = dynamics\weapons\wpn_g36c\wpn_g36c_ac11090.ogf
+
+[wpn_g36c_ac11090_hud]:wpn_g36c_hud
+aim_hud_offset_pos                                 = -0.0866,0.03525,-0.14
+aim_hud_offset_pos_16x9                            = -0.0866,0.03525,-0.14
+aim_hud_offset_rot                                 = 0.064,0.0437,0.0071
+aim_hud_offset_rot_16x9                            = 0.064,0.0437,0.0071
+item_visual                                        = dynamics\weapons\wpn_g36c\wpn_g36c_ac11090_hud.ogf
+
+[wpn_g36c_acog]:wpn_g36c
+$spawn                                             = "weapons\wpn_g36c_acog"
+1icon_layer                                        = acog
+1icon_layer_x                                      = 87
+1icon_layer_y                                      = -9
+inv_weight                                         = 3.31
+scope_status                                       = 1
+scope_texture                                      = wpn_crosshair_acog
+scope_zoom_factor                                  = 19
+zoom_rotate_time                                   = 0.25
+
+[wpn_g36c_eot]:wpn_g36c
+$spawn                                             = "weapons\wpn_g36c_eot"
+1icon_layer                                        = eot
+1icon_layer_x                                      = 87
+1icon_layer_y                                      = -6
+hud                                                = wpn_g36c_eot_hud
+inv_weight                                         = 3.27
+scope_zoom_factor                                  = 1.2
+visual                                             = dynamics\weapons\wpn_g36c\wpn_g36c_eot.ogf
+
+[wpn_g36c_eot_hud]:wpn_g36c_hud
+aim_hud_offset_pos                                 = -0.0858,0.0342,-0.1
+aim_hud_offset_pos_16x9                            = -0.0858,0.0342,-0.1
+aim_hud_offset_rot                                 = 0.06,0.043,0.0071
+aim_hud_offset_rot_16x9                            = 0.06,0.043,0.0071
+item_visual                                        = dynamics\weapons\wpn_g36c\wpn_g36c_eot_hud.ogf
+
+[wpn_g36c_c-more]:wpn_g36c
+$spawn                                             = "weapons\g36c_c-more"
+1icon_layer                                        = c-more
+1icon_layer_x                                      = 87
+1icon_layer_y                                      = -11
+hud                                                = wpn_g36c_c-more_hud
+inv_weight                                         = 3.144
+scope_zoom_factor                                  = 1.2
+visual                                             = dynamics\weapons\wpn_g36c\wpn_g36c_c-more.ogf
+
+[wpn_g36c_c-more_hud]:wpn_g36c_hud
+aim_hud_offset_pos                                 = -0.08697,0.034,-0.1
+aim_hud_offset_pos_16x9                            = -0.08697,0.034,-0.1
+aim_hud_offset_rot                                 = 0.064,0.0437,0.0071
+aim_hud_offset_rot_16x9                            = 0.064,0.0437,0.0071
+item_visual                                        = dynamics\weapons\wpn_g36c\wpn_g36c_c-more_hud.ogf
+
+[wpn_g36c_acog_detector]:wpn_g36c
+$spawn                                             = "weapons\wpn_g36c_acog_detector"
+1icon_layer                                        = acog_detector
+1icon_layer_x                                      = 87
+1icon_layer_y                                      = -9
+inv_weight                                         = 3.31
+scope_status                                       = 1
+scope_texture                                      = wpn_crosshair_acog
+scope_zoom_factor                                  = 12
+scope_dynamic_zoom                                 = on
+zoom_rotate_time                                   = 0.25

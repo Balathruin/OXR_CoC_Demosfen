@@ -22,7 +22,7 @@ spawn_phantom 		= m_phantom_tushkano
 can_spawn_phantom 	= false
 
 hit_fraction_monster = 1
-skin_armor = 0.0
+skin_armor = 0.01
 
 ;------------------------------------------------------------------------
 ; Influences
@@ -423,3 +423,108 @@ corpse_visual		 = monsters\tushkano\tushkano_big3_dead
 $spawn				= "monsters\tushkanos\tushkano_strong_"
 visual				 = monsters\tushkano\tushkano_big4
 corpse_visual		 = monsters\tushkano\tushkano_big4_dead
+
+
+;--------------------------
+;  KOMAR
+;---------------------------
+
+[komar]:m_tushkano_e
+$spawn               = "monsters\komar"				; option for Level Editor
+visual				 = monsters\tushkano\komar
+corpse_visual		 = monsters\tushkano\komar
+ph_mass 		     = 20
+
+ImpulseMin			 = 2.0
+ImpulseMax			 = 5.0 
+
+; speed factors			linear | angular_real | angular_path | min |  max
+Velocity_Stand			= 0,		3.5,			3.5,		1,		1
+Velocity_WalkFwdNormal	= 2.0,		7.5,			7.5,		0.02,	1.8	
+Velocity_RunFwdNormal	= 5.0,		6.5,			6.5,		0.3,	1	
+Velocity_WalkFwdDamaged	= 1.0,		4.5,			4.5,		0.2,	1.8	
+Velocity_RunFwdDamaged	= 3.0,  	3.0,			3.0,		0.5,	1
+Velocity_Drag			= 1.0,		3.0,			3.0,		1,		1
+Velocity_Steal			= 1.5,		3.0,			3.0,		1,		1
+
+panic_threshold		= 0.0
+
+ph_skeleton_airr_lin_factor   = 2.0 ;550.0 (изменно из-за того, что убрано домножение коэффициент 0.002 из кода)
+ph_skeleton_airr_ang_factor   = 0.0 ;0.0 (изменно из-за того, что убрано домножение на коэффициент 0.3 из кода (0.0*0.3=0.0))
+ph_skeleton_hinger_factor1    = 1.0 ;1.0 (изменно из-за того, что убрано домножение на коэффициент 5.0 из кода)
+ph_skeleton_ddelay	     	  = 15.0 ;Время изменения значения трения в суставе с момента создания шелла, сек
+
+ph_skel_fatal_impulse_factor  = 6.0
+ph_after_death_velocity_factor= 0.75
+ph_skel_shot_up_factor        = 0.25
+
+
+
+ph_skeleton_skin_friction_start	= 0.0   ;Стартовое значение трения для оболочки
+ph_skeleton_skin_friction_end	= 2.0   ;Финальное значение трения для оболочки
+ph_skeleton_skin_ddelay			= 6.0		;Время изменения значения трения с момента создания шелла, сек.
+ph_skeleton_skin_ddelay_after_wound = 2.0 ;Время изменения значения трения с момента создания шелла, сек.(для персонажа после ранения)
+ph_pelvis_factor_low_pose_detect =0.3	;длинна луча на коллизию с землёй из центра пелвиса
+										;если коллизиться, то персонаж находиться в нижней позе(или ранен)(в этом случае для него задаються другие параметры 
+										;трения и отсутствует домножение импульса для первого хита)
+ph_character_have_wounded_state = false; имеет ли персонаж состояние раненый
+
+
+
+;----------------------------------------------------------------------------------------
+; Sounds
+;----------------------------------------------------------------------------------------
+sound_idle				= monsters\komar\komar   
+sound_eat				= monsters\komar\komar
+sound_aggressive		= monsters\komar\komar 
+sound_attack_hit		= monsters\komar\komar
+sound_take_damage		= monsters\komar\komar
+sound_die				= monsters\komar\komar
+sound_bkgnd				= monsters\komar\komar
+sound_threaten			= monsters\komar\komar   
+sound_landing			= monsters\komar\komar
+sound_steal				= monsters\komar\komar
+sound_panic				= monsters\komar\komar
+sound_growling			= monsters\komar\komar
+sound_die_in_anomaly	= monsters\biting\def_
+sound_threaten_hit		= monsters\komar\komar
+sound_threaten_start	= monsters\komar\komar
+---------------------------------------------------------------------------
+killer_clsids			= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+
+idle_sound_delay		= 80000
+eat_sound_delay			= 4000
+attack_sound_delay		= 8000
+
+sound_distant_idle			= monsters\komar\komar
+distant_idle_sound_delay	= 80000
+distant_idle_sound_range	= 100.0	
+
+SoundThreshold		 = 0.9             ; range [0..1]
+max_hear_dist		 = 50
+
+damage					= komar_damage
+;protections_sect 		= komar_protections
+;immunities_sect			= komar_immunities
+attack_params			= komar_attack_params
+;step_params				= komar_step_params
+
+[komar_damage]
+;bone_name		 = <hit_scale>,-1,<wound_scale>
+;<hit_scale>	- коэфф. изменения хита (уменьшения здоровья) 
+;<wound_scale>	- коэфф. изменения величины открытой раны
+default				= 0.1, -1, 0.1
+bip01_head 			= 7.0, -1, 5.5 
+bip01_spine         = 7.0, -1, 5.5 
+
+[komar_attack_params]
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, bottom, top ) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+stand_attack_0 =	  	0.15,		0.15,		    5,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
+stand_attack_1 =	  	0.35,		0.25,		    5,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,							  1.0
+stand_attack_2 =	  	0.55,		0.35,		    5,        0.0, 1.0, 0.0,		 -1.2, 1.2, -1.6, 1.6,	
+
+
+

@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@insider
+
+[sr_idle@insider]
+on_actor_inside = {+mil_freedom_barman_mlr_task_1_begin} sr_idle@wait_slow_internet %=create_squad(bloodsucker_mil_freedom_barman_mlr_task_1:mil_smart_terrain_4_3) +mil_freedom_barman_mlr_task_1_wait%
+
+[sr_idle@wait_slow_internet]
+on_game_timer = 3600 | sr_idle@reload %+mil_freedom_barman_mlr_task_1_end%
+on_actor_outside = sr_idle@insider %-mil_freedom_barman_mlr_task_1_wait%
+
+[sr_idle@reload]
+on_info = {+mil_freedom_barman_mlr_task_1_reload} sr_idle@insider

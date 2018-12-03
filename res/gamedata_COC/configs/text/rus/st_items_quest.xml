@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+<!--===========================================================
+<
+< QUEST ITEMS TEXT  STRINGS
+<	CoC 1.4.07 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 06, 2016
+<
+<===========================================================-->
+
+
 <string_table>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE QUEST ITEM TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- DRX Storyline Documents Quest Item -->
+
+	<string id="drx_sl_quest_item_1_name">
+		<text>Документы</text>
+	</string>
+	<string id="drx_sl_quest_item_1_desc">
+		<text>Важные документы. За них можно получить награду.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- DRX Storyline Locked Case Quest Item -->
+
+	<string id="drx_sl_quest_item_2_name">
+		<text>Закрытый кейс</text>
+	</string>
+	<string id="drx_sl_quest_item_2_desc">
+		<text>Закрытый кейс. Не знаю, что находится внутри, но он тяжёлый.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- DRX Storyline PDA Quest Item -->
+
+	<string id="drx_sl_quest_item_3_name">
+		<text>ПДА</text>
+	</string>
+	<string id="drx_sl_quest_item_3_desc">
+		<text>Зашифрованный ПДА. Обещали награду за его возвращение.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 
         <string id="bad_psy_helmet_desc">
 		<text>Прототип, разработанный учёными для защиты от пси-излучения. Нуждается в настройке.</text>

@@ -1,0 +1,12 @@
+[logic]
+active = sr_idle@search
+
+[sr_idle@search]
+on_info = {+yan_stalker_sakharov_task_7_begin =actor_in_zone(disgusting_tree_4)} sr_idle@stop %=run_tutorial(disgusting_tree_4_search)%
+on_info2 = {+jup_b6_scientist_nuclear_physicist_task_2_begin =actor_in_zone(disgusting_tree_4)} sr_idle@stop %=run_tutorial(disgusting_tree_4_search)%
+
+[sr_idle@stop]
+on_info = {!actor_in_zone(disgusting_tree_4)} sr_idle@search %=stop_tutorial%
+on_info2 = {+disgusting_tree_search_4} %=stop_tutorial%
+on_info3 = {+yan_stalker_sakharov_task_7_done} sr_idle@search
+on_info4 = {+jup_b6_scientist_nuclear_physicist_task_2_done} sr_idle@search
