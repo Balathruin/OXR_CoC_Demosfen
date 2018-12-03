@@ -8,6 +8,9 @@ OnlineStalkers		= {}
 campfire_by_name	= nil
 campfire_table_by_smart_names = {}
 zone_by_name        = {}
+--mlr
+bridge_by_name		= {}
+--mlr
 script_ids			= {}
 storage             = {}
 actor               = nil
@@ -30,6 +33,19 @@ spawned_vertex_by_id= {}
 dynamic_ltx			= {}
 vehicle				= nil
 actor_inside_zones 	= {}		-- only because some sr have complex shape and this also easier to see what restrictor actor in for debug
+
+--mlr
+function add_bridge(bridge, binder)
+	printf("adding bridge %s",bridge:name())
+	bridge_by_name[bridge:name()] = binder
+	add_obj(bridge)
+end
+
+function del_bridge(bridge)
+	bridge_by_name[bridge:name()] = nil
+	del_obj(bridge)
+end
+--mlr
 
 function add_enemy(obj)
 	local id = obj:id()

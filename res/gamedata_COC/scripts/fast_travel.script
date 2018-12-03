@@ -16,6 +16,12 @@ local function map_spot_menu_add_property(property_ui,id,level_name)
 	end
 end 
 
+--mlr
+	if (axr_main.config:r_value("mm_options","enable_fast_travel_option",1,true) == false) then	
+		return 
+	end
+--mlr
+
 local function map_spot_menu_property_clicked(property_ui,id,level_name,prop)
 	if (prop == game.translate_string("st_pda_fast_travel")) then 
 		local se_obj = alife_object(id)

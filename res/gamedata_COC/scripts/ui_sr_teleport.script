@@ -31,6 +31,28 @@ function msg_box_ui:__init(obj,disable_msg,item) super()
 	self:SetWndRect(Frect():set(0,0,1024,768))
 	self:SetAutoDelete(true)
 	
+	self.name = obj and obj:name()
+	self.disable_msg = disable_msg
+	self.item = item
+
+	if (string.find(self.name,obj:id())) then
+		local story_name = story_objects.get_story_objects_registry():get_story_id(obj:id())
+		self.name = story_name or self.name
+	end
+
+	if (not self.name or not ini:section_exist(self.name)) then
+		printf("sr_teleport_sections.ltx: section doesn't exist %s",obj and obj:name())
+		return
+	end
+	--mlr
+	if (axr_main.config:r_value("mm_options","enable_transitions_closed_disable",1,true) == false) and not ((transitions.show_transition(self.name)) or mlr_utils.load_var('transitions_'..self.name)) then
+		SetHudMsg(game.translate_string('Вы не знаете дороги'),5)
+		self:InitCallBacks()
+		self:OnMsgCancel()
+		return
+	end
+	
+	--mlr
 	self.message_box = CUIMessageBoxEx()
 	self:Register(self.message_box, "msg_box")
 

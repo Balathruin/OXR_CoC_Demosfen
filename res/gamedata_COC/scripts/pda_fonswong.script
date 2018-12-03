@@ -1,0 +1,733 @@
+--######################################################################################################################
+--#	About			:	Расширенный ПДА	со встроенными возможностями чата и плеера										#
+--#	Autor			:	FonSwong												 										#
+--#	Last modified	:	06.03.2016												 										#
+--######################################################################################################################
+local debug_on = false
+other_news = true
+
+local mp3_obj
+local mp3_info=""
+local mp3_mode="default"
+local mp3_add_value=0.1
+local mp3_chosen_list=nil
+local mp3_played_list=nil
+local mp3_player_section=1
+mp3_length_position,mp3_last_position,mp3_plays=0,0,nil
+
+-- Ловчий использования нашего ПДА
+local function actor_on_item_use(itm)
+	if itm:section() == "extension_pda" then
+		run_dynamic_element(extension_pda(),true)
+	end
+end
+-- Специально для любителей запускать на более старых\новых версиях мода, т.к. дополнение затрагивает важные части мода(отключено)
+local function on_game_load()
+	if GAME_VERSION ~= "1.3.12" then
+		local msg = 'Дополнение PDA работает только на версии 0.0.0!\nДля правильной работы игры адаптируйте или удалите файлы дополнения!'
+		abort(msg)
+		error(msg, 2)
+	end
+end
+-- Постоянное обновление для музыки
+local function actor_on_update()
+	music_player_update()
+end
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_item_use",actor_on_item_use)
+	--RegisterScriptCallback("on_game_load",on_game_load)
+	RegisterScriptCallback("actor_on_update",actor_on_update)
+end
+
+--######################################################################################################################
+--#														ГЛАВНОЕ ОКНО ПДА												#
+--######################################################################################################################
+class "extension_pda" (CUIScriptWnd)
+
+function extension_pda:__init() super()
+	self:InitControls()
+	self:InitCallBacks()
+end
+
+function extension_pda:__finalize()
+end
+
+function extension_pda:InitControls()
+	self:SetWndRect(Frect():set(0,0,1024,768))
+	local xml			= CScriptXmlInit()
+	self.xml=xml
+	xml:ParseFile		("ui_pda_fonswong.xml")
+	self.okno			= xml:InitStatic("okno",self)
+	self.caption_title	= xml:InitStatic ("okno:caption_title",self.okno)
+	self.clock_wnd		= xml:InitStatic ("okno:clock_wnd",self.okno)
+	
+	self.repeat_check=xml:InitCheck("okno:check_repeat",self.okno)
+	self.queue_check=xml:InitCheck("okno:check_queue",self.okno)
+	
+	if repeat_check then
+		self.repeat_check:SetCheck			(true)
+	else
+		self.repeat_check:SetCheck			(false)
+	end
+	if queue_check then
+		self.queue_check:SetCheck			(true)
+	else
+		self.queue_check:SetCheck			(false)
+	end
+	
+	self:RegisterBtn(xml, 'btn_track_back')
+	self:RegisterBtn(xml, 'btn_track_play')
+	self:RegisterBtn(xml, 'btn_track_pause')
+	self:RegisterBtn(xml, 'btn_track_next')
+	self:RegisterBtn(xml, 'btn_track_list_down')
+	self:RegisterBtn(xml, 'btn_track_list_up')
+	self:RegisterBtn(xml, 'btn_exit')
+	
+	self.btn_track_list_up:Show	(false)
+	
+	self:create_CUIWindow('okno_general',		true)
+	self:create_CUIWindow('okno_chat',			false)
+	self:create_CUIWindow('okno_about',			false)
+	self:create_CUIWindow('okno_music_player',	false)
+	self:InitControls_general()
+	self:InitControls_chat()
+	self:InitControls_about()
+	self:InitControls_music_player()
+end
+
+function extension_pda:InitCallBacks()
+	self:AddCallback("btn_track_back",		ui_events.BUTTON_CLICKED,			self.OnButton_back_clicked,						self)
+	self:AddCallback("btn_track_play",		ui_events.BUTTON_CLICKED,			self.OnButton_play_clicked,						self)
+	self:AddCallback("btn_track_pause",		ui_events.BUTTON_CLICKED,			self.OnButton_pause_clicked,					self)
+	self:AddCallback("btn_track_next",		ui_events.BUTTON_CLICKED,			self.OnButton_next_clicked,						self)
+	self:AddCallback("btn_track_list_down",	ui_events.BUTTON_CLICKED,			self.OnButton_list_down_clicked,				self)
+	self:AddCallback("btn_track_list_up",	ui_events.BUTTON_CLICKED,			self.OnButton_list_up_clicked,					self)
+	self:AddCallback("mp3_list_window",		ui_events.WINDOW_LBUTTON_DB_CLICK,	self.OnButton_play_clicked,						self)
+	self:AddCallback("btn_exit",			ui_events.BUTTON_CLICKED,			self.OnButton_close_clicked,					self)
+	
+	self:AddCallback("btn_in_chat",			ui_events.BUTTON_CLICKED,			self.OnButton_in_chat_clicked,					self)
+	self:AddCallback("btn_in_player",		ui_events.BUTTON_CLICKED,			self.OnButton_list_down_clicked,				self)
+	self:AddCallback("btn_in_about",		ui_events.BUTTON_CLICKED,			self.OnButton_in_about_clicked,					self)
+	
+	self:AddCallback("btn_vvod",			ui_events.BUTTON_CLICKED,			self.OnButton_vvod_clicked,						self)
+	self:AddCallback("btn_clear",			ui_events.BUTTON_CLICKED,			self.OnButton_clear_clicked,					self)
+end
+-- Обёртка для переключения между окнами
+function extension_pda:proxy_open(okno)
+	if okno == 'okno_general' then
+		self.okno_general:Show				(true)
+		self.okno_chat:Show					(false)
+		self.okno_music_player:Show			(false)
+		self.okno_about:Show				(false)
+elseif okno == 'okno_chat' then
+		self.okno_chat:Show					(true)
+		self.okno_general:Show				(false)
+		self.okno_music_player:Show			(false)
+		self.okno_about:Show				(false)
+elseif okno == 'okno_about' then
+		self.okno_about:Show				(true)
+		self.okno_general:Show				(false)
+		self.okno_chat:Show					(false)
+		self.okno_music_player:Show			(false)
+		
+elseif okno == 'list_down' then
+		local mass_vkladki = {self.okno_general,self.okno_chat,self.okno_about}
+		for k,v in pairs(mass_vkladki) do
+			if v:IsShown() then
+				self.last_vkladka = v
+			end
+		end
+		self.okno_music_player:Show			(true)
+		self.okno_general:Show				(false)
+		self.okno_chat:Show					(false)
+		self.okno_about:Show				(false)
+
+elseif okno == 'list_up' then
+		self.okno_music_player:Show			(false)
+		self.last_vkladka:Show				(true)
+	end
+end
+-- Обёртка для выхода(закрывает не все окна- а только текущее, открывая предыдущее)
+function extension_pda:OnButton_close_clicked()
+	if self.okno_music_player:IsShown() then
+		self.btn_track_list_down:Show	(true)
+		self.btn_track_list_up:Show		(false)
+		self.okno_music_player:Show		(false)
+		if self.last_vkladka~=nil then
+			self.last_vkladka:Show		(true)
+		else
+			self:HideDialog()
+			level.show_weapon			(true)
+		end
+elseif self.okno_chat:IsShown() and not self.okno_music_player:IsShown() then
+		self.okno_chat:Show				(false)
+		self.btn_track_list_down:Show	(true)
+		self.okno_general:Show			(true)
+		self.okno_music_player:Show		(false)
+		self.okno_about:Show			(false)
+		self.btn_track_list_up:Show		(false)
+elseif self.okno_about:IsShown() then
+		self.okno_about:Show			(false)
+		self.btn_track_list_down:Show	(true)
+		self.okno_general:Show			(true)
+		self.okno_chat:Show				(false)
+		self.okno_music_player:Show		(false)
+		self.btn_track_list_up:Show		(false)
+	else
+		self:HideDialog()
+		level.show_weapon				(true)
+	end
+end
+-- Обновление окна
+function extension_pda:Update()
+	CUIScriptWnd.Update(self)
+	-- Обновление конфигурации Плеера
+	if not db.actor:alive() then
+		self:OnButton_close_clicked()
+	end
+	if self.repeat_check:GetCheck() then
+		self.queue_check:Enable				(false)
+	else
+		self.queue_check:Enable				(true)
+	end
+	if self.queue_check:GetCheck() then
+		self.repeat_check:Enable			(false)
+	else
+		self.repeat_check:Enable			(true)
+	end
+	
+	repeat_check	=	self.repeat_check:GetCheck()
+	queue_check		=	self.queue_check:GetCheck()
+	-- Обновление кнопки Плеера "Play/Pause"
+	if mp3_obj~=nil and mp3_obj:playing() then
+		self.btn_track_play:Show			(false)
+		self.btn_track_pause:Show			(true)
+	else
+		self.btn_track_play:Show			(true)
+		self.btn_track_pause:Show			(false)
+	end
+	-- Обновление кнопки Плеера Трек лист "развернуть/свернуть"
+	if self.okno_music_player:IsShown() then
+		self.btn_track_list_down:Show		(false)
+		self.btn_track_list_up:Show			(true)
+	else
+		self.btn_track_list_down:Show		(true)
+		self.btn_track_list_up:Show			(false)
+	end
+	-- Обновление Часов
+	self.clock_wnd:TextControl():SetText(string.format(" %02d:%02d", level.get_time_hours(), level.get_time_minutes()))
+	-- Обновление окна Чата
+	if self.okno_chat:IsShown() and pda_fonswong.chat_update == true then
+		self:Update_chat()
+	end
+end
+-- Предыдущий трек
+function extension_pda:OnButton_back_clicked()
+   if mp3_obj~=nil then
+      if mp3_obj:playing() then
+         mp3_obj:stop()
+      end
+   end
+     if mp3_obj~=nil then
+       if mp3_obj:playing()~=nil then
+          local next_sound,next_title=nil,nil
+          if mp3_played_list~=nil and next_sound==nil then
+             for k,v in pairs(mp3_played_list) do
+                if v.title==mp3_plays then
+                   local next_id=k-1
+                   if next_id<1 then
+                      next_id=pda_utils_fonswong.get_size(mp3_played_list)
+                   end
+                   for a,s in pairs(mp3_played_list) do
+                      if a==next_id then
+					   if s.precond==nil or (s.precond~=nil and has_alife_info(s.precond)) then
+                            next_sound=s.sound
+                            next_title=s.title
+                         else
+                            next_id=next_id-1
+                         end
+                      end
+                   end
+                end
+             end
+          end
+          if next_sound~=nil then
+             mp3_obj=sound_object(next_sound)
+             mp3_plays=next_title
+             -- mp3_info=next_title.." ("..music_player():get_sound_length(mp3_obj)..")"
+          end
+          mp3_obj:play(db.actor,0,sound_object.s2d)
+          mp3_last_position=string.format(math.floor(time_global()/1000))
+          mp3_length_position=string.format(math.floor(time_global()/1000))-mp3_last_position
+          mp3_obj.min_distance,mp3_obj.max_distance=2,6
+       end
+     end
+end
+-- Играть трек
+function extension_pda:OnButton_play_clicked()
+	self:proxy_open('play')
+	self:btn_play()
+end
+-- Остановить играющий трек
+function extension_pda:OnButton_pause_clicked()
+	self:proxy_open('pause')
+	self:btn_stop()
+end
+-- Следующий трек
+function extension_pda:OnButton_next_clicked()
+   if mp3_obj~=nil then
+      if mp3_obj:playing() then
+         mp3_obj:stop()
+      end
+   end
+     if mp3_obj~=nil then
+       if mp3_obj:playing()~=nil then
+          local next_sound,next_title=nil,nil
+          if mp3_played_list~=nil and next_sound==nil then
+             for k,v in pairs(mp3_played_list) do
+                if v.title==mp3_plays then
+                   local next_id=k+1
+                   if next_id>pda_utils_fonswong.get_size(mp3_played_list) then
+                      next_id=1
+                   end
+                   for a,s in pairs(mp3_played_list) do
+                      if a==next_id then
+                         if s.precond==nil or (s.precond~=nil and has_alife_info(s.precond)) then
+                            next_sound=s.sound
+                            next_title=s.title
+                         else
+                            next_id=next_id+1
+                         end
+                      end
+                   end
+                end
+             end
+          end
+          if next_sound~=nil then
+             mp3_obj=sound_object(next_sound)
+             mp3_plays=next_title
+             -- mp3_info=next_title.." ("..music_player():get_sound_length(mp3_obj)..")"
+          end
+          mp3_obj:play(db.actor,0,sound_object.s2d)
+          mp3_last_position=string.format(math.floor(time_global()/1000))
+          mp3_length_position=string.format(math.floor(time_global()/1000))-mp3_last_position
+          mp3_obj.min_distance,mp3_obj.max_distance=2,6
+       end
+     end
+end
+-- Показать список треков
+function extension_pda:OnButton_list_down_clicked()
+	self:FillList()
+	self:proxy_open('list_down')
+end
+-- Свернуть список треков
+function extension_pda:OnButton_list_up_clicked()
+	self:proxy_open('list_up')
+end
+
+function extension_pda:OnKeyboard(dik,keyboard_action)
+	CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then	
+		if dik == DIK_keys.DIK_ESCAPE then self:OnButton_close_clicked()
+	elseif dik == DIK_keys.DIK_RETURN or dik == DIK_keys.DIK_NUMPADENTER then self:OnButton_vvod_clicked() -- Отправка сообщения в Чате
+		end
+	end
+	return true
+end
+
+--######################################################################################################################
+--#												РЕЖИМ Главная страница													#
+--######################################################################################################################
+function extension_pda:InitControls_general()
+	self:RegisterBtn(self.xml, 'btn_in_chat',		'vkladka_general', self.okno_general)
+	self:RegisterBtn(self.xml, 'btn_in_player',	'vkladka_general', self.okno_general)
+	self:RegisterBtn(self.xml, 'btn_in_about',	'vkladka_general', self.okno_general)
+end
+-- Кнопка "В Чат"
+function extension_pda:OnButton_in_chat_clicked()
+	self:proxy_open('okno_chat')
+end
+-- Кнопка "О ПДА"
+function extension_pda:OnButton_in_about_clicked()
+	self:proxy_open('okno_about')
+end
+
+--######################################################################################################################
+--#														РЕЖИМ Чат														#
+--######################################################################################################################
+function extension_pda:InitControls_chat()
+	pda_fonswong.chat_update = true
+	self.chat_scroll		= self.xml:InitScrollView("okno:vkladka_chat:scroll_v", self.okno_chat)
+	self.edit1				= self.xml:InitEditBox("okno:vkladka_chat:edit1", self.okno_chat)
+	self:RegisterBtn 		(self.xml,'btn_vvod','vkladka_chat',self.okno_chat)
+	self:RegisterBtn 		(self.xml,'btn_clear','vkladka_chat',self.okno_chat)
+end
+-- Обновление окна Чата
+function extension_pda:Update_chat()
+	local mass_msg = pda_utils_fonswong.l_v("chat_mass_msg")
+	self.chat_scroll:Clear()
+	if mass_msg~= nil then
+		for id, name in pairs(mass_msg) do
+			self.okno_msg		= self.xml:InitStatic	("okno:vkladka_chat:okno_msg",nil)
+			self.caption		= self.xml:InitStatic	("okno:vkladka_chat:okno_msg:caption",self.okno_msg)
+			self.icon			= self.xml:InitStatic	("okno:vkladka_chat:okno_msg:icon",self.okno_msg)
+			self.caption		: TextControl():SetText	(name.caption)
+			self:create_CUITextWnd('content', name.content, 100, 30, 371, 48)
+			self.okno_msg		: AttachChild(self.content)
+			self.icon			: InitTexture			(name.icon)
+			self.chat_scroll	: AddWindow				(self.okno_msg)
+		end
+		self.chat_scroll:ScrollToEnd()
+	end
+	pda_fonswong.chat_update = false
+end
+-- Нажатие на кнопку Ввод
+function extension_pda:OnButton_vvod_clicked()
+	if not self:IsShown() then return end
+	local text = self.edit1:GetText()
+	if text == nil or text == '' then return end
+	pda_chat_processor_fonswong.process(text)
+	self.edit1:SetText('')
+end
+-- Нажатие на кнопку Очистить
+function extension_pda:OnButton_clear_clicked()
+	pda_utils_fonswong.d_v("chat_mass_msg")
+	pda_fonswong.chat_update = true
+	if debug_on then
+		log('!Массив mass_msg очищен!')
+	end
+end
+
+--######################################################################################################################
+--#													РЕЖИМ Справка														#
+--######################################################################################################################
+function extension_pda:InitControls_about()
+	self.pic			= self.xml:InitStatic("okno:vkladka_about:pic",self.okno_about)
+	self.about_scroll	= self.xml:InitScrollView("okno:vkladka_about:scroll_v", self.okno_about)
+	self:create_CUITextWnd('content_text', [[
+		Автор                  : FonSwong\n \n
+		Описание              : Расширенный ПДА со встроенными возможностями чата и плеера\n \n
+		Для добавления собственной музыки в плеер - достаточно её переконвертировать в формат "*.ogg" и скопировать по пути: "gamedata\sounds\radio".\n \n
+		Для отправки сообщения в чат используйте клавишу "Ввод" в ПДА или клавишу "Enter" на Вашей клавиатуре.\n
+		Увидеть или добавить реакции в чате на ваши отправленные сообщения можно в файле pda_chat_processor.script.\n \n
+		Благодарю dirkavgope и Umrak за дополнительные диалоги в чате, Мятный Джем и stason 174 за дизайн PDA. 
+		]], nil, nil, 300, 0)
+	self.about_scroll:AddWindow(self.content_text)
+end
+
+--######################################################################################################################
+--#														РЕЖИМ Плеер														#
+--######################################################################################################################
+-- Постоянный апдейт для Плеера
+function music_player_update()
+	local temp_mp3_mode = mp3_mode
+	if repeat_check then
+		if mp3_mode~="repeat" then
+			mp3_mode="repeat"
+		end
+elseif queue_check then
+		if mp3_mode~="queue" then
+			mp3_mode="queue"
+		end
+	else
+		if mp3_mode~="default" then
+			mp3_mode="default"
+		end
+	end
+
+	if mp3_mode=="repeat" then
+		if mp3_obj~=nil then
+			if mp3_obj:playing()==false then
+				mp3_obj:play(db.actor,0,sound_object.s2d)
+				mp3_last_position=string.format(math.floor(time_global()/1000))
+				mp3_length_position=string.format(math.floor(time_global()/1000))-mp3_last_position
+				mp3_obj.min_distance,mp3_obj.max_distance=2,6
+			end
+		end
+elseif mp3_mode=="queue" then
+		if mp3_obj~=nil then
+			if mp3_obj:playing()==false then
+				local next_sound,next_title=nil,nil
+				if mp3_played_list~=nil and next_sound==nil then
+					for k,v in pairs(mp3_played_list) do
+						if v.title==mp3_plays then
+							local next_id=k+1
+							if next_id>pda_utils_fonswong.get_size(mp3_played_list) then
+								next_id=1
+							end
+							for a,s in pairs(mp3_played_list) do
+								if a==next_id then
+									if s.precond==nil or (s.precond~=nil and has_alife_info(s.precond)) then
+										next_sound=s.sound
+										next_title=s.title
+									else
+										next_id=next_id+1
+									end
+								end
+							end
+						end
+					end
+				end
+				if next_sound~=nil then
+					mp3_obj=sound_object(next_sound)
+					mp3_plays=next_title
+					-- mp3_info=next_title.." ("..music_player():get_sound_length(mp3_obj)..")"
+				end
+				mp3_obj:play(db.actor,0,sound_object.s2d)
+				mp3_last_position=string.format(math.floor(time_global()/1000))
+				mp3_length_position=string.format(math.floor(time_global()/1000))-mp3_last_position
+				mp3_obj.min_distance,mp3_obj.max_distance=2,6
+			end
+		end
+	else
+		if mp3_obj~=nil and not mp3_obj:playing() then
+			mp3_obj:stop()
+			mp3_obj=nil
+		end
+	--[[if mp3_obj~=nil then
+			if mp3_obj:playing()==false and mp3_info~="" then
+				mp3_info=""
+			end
+			if mp3_obj:playing()==false and mp3_plays~=nil then
+				mp3_plays=nil
+				mp3_length_position,mp3_last_position=0,0
+			end
+		end]]
+	end
+	if db.actor and (not db.actor:object("extension_pda")) then
+-----------------------------------------------------------------------------------------
+--ВНИМЕНИЕ!!! ПДА Заспавнится в при первом запуске игры!!!
+		if pda_utils_fonswong.l_v("spawn extension_pda")==nil then
+			give_object_to_actor("extension_pda")
+			pda_utils_fonswong.s_v("spawn extension_pda",true)
+		end
+--ВНИМЕНИЕ!!! Убрать, если хотите добавить предмет торговцам, или в выдачу через диалог!!!
+-------------------------------------------------------------------------------------------
+		if mp3_obj~=nil then
+			if mp3_obj:playing()==true then
+				mp3_obj:stop()
+				mp3_obj=nil
+				mp3_info=""
+			end
+		end
+		mp3_plays=nil
+		mp3_length_position,mp3_last_position=0,0
+	end
+end
+
+class "music_player_snd" (CUIListBoxItem)
+function music_player_snd:__init(height) super(height)
+	self.title=self:GetTextItem()
+	self:SetTextColor(GetARGB(255,210,210,210))
+	self.title:SetFont(GetFontLetterica18Russian())
+	self.title:SetWndSize(vector2():set(278,height))
+	self.title:SetEllipsis(true)
+end
+
+function extension_pda:InitControls_music_player()
+	self.xml:InitFrame("okno:mp3_list:frame1", self.okno_music_player)
+	self.mp3_list=self.xml:InitListBox("okno:mp3_list",self.okno_music_player)
+	self.mp3_list:ShowSelectedItem(true)
+	self:RegisterBtnLDB("mp3_list_window", self.mp3_list)
+end
+-- Заполнение листа с треками(считывает папку "gamedata\sounds\radio")
+function extension_pda:FillList()
+	self.mp3_list:Clear()
+	local list_music_player = {}
+	local f	= getFS()
+	local flist = f:file_list_open_ex('$radio$',bit_or(FS.FS_ListFiles,FS.FS_ClampExt),"*.ogg")
+	local f_cnt = flist:Size()
+	for	it=0, f_cnt-1 do
+		local file = flist:GetAt(it)
+		local file_name = file:NameShort()
+		table.insert(list_music_player,{sound = [[radio\]]..file_name, title = 'Трек №'..(it+1), autor = file_name})
+	end
+	if debug_on then
+		store_table(list_music_player)
+	end
+	for k,v in pairs(list_music_player) do
+		self:AddItemToList(v.title,v.sound,v.autor)
+	end
+	mp3_chosen_list=list_music_player
+end
+
+function extension_pda:AddItemToList(title,sound,author)
+	local source = music_player_snd(22)
+	source.title:SetText(title)
+	self.mp3_list:AddExistingItem(source)
+	if string.len(author)>34 then
+		author=string.sub(author,1,34)
+	end
+	if author == "-" then
+		source.author=source:AddIconField(0)
+		source.author:SetWndPos(vector2():set(120,6))
+	else
+		source.author=source:AddTextField(author,0)
+		source.author:SetWndPos(vector2():set(120,0))
+	end
+	source.length=source:AddTextField(self:get_sound_length(sound_object(sound)),0)
+	source.length:SetWndPos(vector2():set(430,0))
+end
+
+function extension_pda:get_sound_length(snd_obj,other_length)
+	local length_second=0
+	if snd_obj~=nil and other_length==nil then
+		length_second=math.floor(snd_obj:length()/1000)
+	end
+	if other_length~=nil then
+		length_second=other_length
+	end
+	local currert_minute=math.floor(length_second/60)
+	local data="00:00"
+	if currert_minute<10 then
+		currert_minute="0"..currert_minute
+	end
+	if length_second<60 then
+		if length_second<10 then data=currert_minute..":0"..length_second else data=currert_minute..":"..length_second end
+	elseif length_second<120 then
+		if length_second<70 then data=currert_minute..":0"..length_second-60 else data=currert_minute..":"..length_second-60 end
+	elseif length_second<180 then
+		if length_second<130 then data=currert_minute..":0"..length_second-120 else data=currert_minute..":"..length_second-120 end
+	elseif length_second<240 then
+		if length_second<190 then data=currert_minute..":0"..length_second-180 else data=currert_minute..":"..length_second-180 end
+	elseif length_second<300 then
+		if length_second<250 then data=currert_minute..":0"..length_second-240 else data=currert_minute..":"..length_second-240 end
+	elseif length_second<360 then
+		if length_second<310 then data=currert_minute..":0"..length_second-300 else data=currert_minute..":"..length_second-300 end
+	elseif length_second<420 then
+		if length_second<370 then data=currert_minute..":0"..length_second-360 else data=currert_minute..":"..length_second-360 end
+	elseif length_second<480 then
+		if length_second<430 then data=currert_minute..":0"..length_second-420 else data=currert_minute..":"..length_second-420 end
+	elseif length_second<540 then
+		if length_second<490 then data=currert_minute..":0"..length_second-480 else data=currert_minute..":"..length_second-480 end
+	elseif length_second<600 then
+		if length_second<540 then data=currert_minute..":0"..length_second-540 else data=currert_minute..":"..length_second-540 end
+	elseif length_second<660 then
+		if length_second<610 then data=currert_minute..":0"..length_second-600 else data=currert_minute..":"..length_second-600 end
+	elseif length_second<720 then
+		if length_second<670 then data=currert_minute..":0"..length_second-660 else data=currert_minute..":"..length_second-660 end
+	elseif length_second<780 then
+		if length_second<730 then data=currert_minute..":0"..length_second-720 else data=currert_minute..":"..length_second-720 end
+	elseif length_second<840 then
+		if length_second<790 then data=currert_minute..":0"..length_second-780 else data=currert_minute..":"..length_second-780 end
+	elseif length_second<900 then
+		if length_second<850 then data=currert_minute..":0"..length_second-840 else data=currert_minute..":"..length_second-840 end
+	elseif length_second<960 then
+		if length_second<910 then data=currert_minute..":0"..length_second-900 else data=currert_minute..":"..length_second-900 end
+	elseif length_second<1020 then
+		if length_second<970 then data=currert_minute..":0"..length_second-960 else data=currert_minute..":"..length_second-960 end
+	elseif length_second<1080 then
+		if length_second<1030 then data=currert_minute..":0"..length_second-1020 else data=currert_minute..":"..length_second-1020 end
+	elseif length_second<1140 then
+		if length_second<1090 then data=currert_minute..":0"..length_second-1080 else data=currert_minute..":"..length_second-1080 end
+	elseif length_second<1200 then
+		if length_second<1150 then data=currert_minute..":0"..length_second-1140 else data=currert_minute..":"..length_second-1140 end
+	elseif length_second<1260 then
+		if length_second<1210 then data=currert_minute..":0"..length_second-1200 else data=currert_minute..":"..length_second-1200 end
+	elseif length_second<1320 then
+		if length_second<1270 then data=currert_minute..":0"..length_second-1260 else data=currert_minute..":"..length_second-1260 end
+	end
+	return data
+end
+-- Кнопка "Play"
+function extension_pda:btn_play()
+	if mp3_obj ~= nil then
+		if mp3_obj:playing() == true then
+			mp3_obj:stop()
+			mp3_length_position,mp3_last_position = 0,0
+		end
+	end
+	if self.mp3_list:GetSize() == 0 then return end
+	local item=self.mp3_list:GetSelectedItem()
+	if not item then return end
+	local sound_title=item.title:GetText()
+	local sound_name=""
+	for k,v in pairs(mp3_chosen_list) do
+		if v.title==sound_title then
+		sound_name=v.sound
+		end
+	end
+	mp3_obj=sound_object(sound_name)
+	mp3_obj:play(db.actor,0,sound_object.s2d)
+	mp3_plays=sound_title
+	mp3_last_position=string.format(math.floor(time_global()/1000))
+	mp3_length_position=string.format(math.floor(time_global()/1000))-mp3_last_position
+	mp3_info=sound_title.." ("..self:get_sound_length(mp3_obj)..")"
+	mp3_obj.min_distance,mp3_obj.max_distance=2,6
+	mp3_played_list=mp3_chosen_list
+end
+-- Кнопка "Pause"
+function extension_pda:btn_stop()
+   if mp3_obj~=nil then
+      if mp3_obj:playing()==true then
+         mp3_obj:stop()
+         mp3_obj=nil
+         mp3_info=""
+      end
+   end
+   mp3_plays=nil
+   mp3_length_position,mp3_last_position=0,0
+end
+
+--######################################################################################################################
+--#												Обёртки, всп.функции													#
+--######################################################################################################################
+function extension_pda:create_CUIWindow(name, mode)
+	self[name]		= CUIWindow()
+	self[name]		: SetWndPos(vector2():set(112, 72))
+	self[name]		: SetWndSize(vector2():set(683, 467))
+	self.okno		: AttachChild(self[name])
+	self[name]		: Show(mode)
+end
+-- Для регистрации нажатия на кнопку
+function extension_pda:RegisterBtn(xml, name, vkladka, dialogObj)
+	if vkladka == nil and dialogObj == nil then
+	-- Для регистрации кнопок из основного окна
+		self[name] = xml:Init3tButton("okno:"..name, self.okno)
+		self:Register(self[name], name)
+	else
+	-- Для регистрации кнопок из дочерних окон
+		self[name] = xml:Init3tButton("okno:"..vkladka..":"..name, dialogObj)
+		self:Register(self[name], name)
+	end
+end
+-- Для регистрации двойного нажатия на лист плеера
+function extension_pda:RegisterBtnLDB(name, dialogObj)
+	self:Register(dialogObj,name)
+end
+-- Создаёт текстовый объект(строка, строка, число, число, число, число)
+function extension_pda:create_CUITextWnd(name, text, px, py, sx, sy)
+	self[name]	= CUITextWnd()
+	if px~=nil and py~=nil then
+		self[name]	: SetWndPos(vector2():set(px, py))
+	end
+	if sx~=nil and sy~=nil then
+		self[name]	: SetWndSize(vector2():set(sx, sy))
+	end
+	self[name]	: SetText(text)
+	self[name]	: SetTextComplexMode(true)
+	self[name]	: AdjustHeightToText()
+end
+-- Наполнение массива истории Чата формами(имя, текст, картинка)
+function ins_in_tbl(name,text,ui)
+	-- Ограничение кол-ва сообщений
+	local mass_msg = pda_utils_fonswong.l_v("chat_mass_msg")
+	if mass_msg~=nil then
+		if pda_utils_fonswong.get_size(mass_msg) > 299 then
+			table.remove (mass_msg,1)
+		end
+	else
+		mass_msg = {}
+	end
+	table.insert(mass_msg,{caption = name,content = text,icon = ui})
+	pda_utils_fonswong.s_v("chat_mass_msg", mass_msg)
+	pda_fonswong.chat_update = true
+	if debug_on then
+		log('^Добавление в массив mass_msg: ')
+		log('^'..name..' = '..text..' = '..ui)
+		log('!Сохранение в chat_mass_msg массив mass_msg:')
+		store_table(mass_msg)
+	end
+	mass_msg = nil
+end

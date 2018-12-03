@@ -20,6 +20,12 @@ function Crestrictor_manager:__init(obj)
 	end
 end
 
+
+----------------------------------------------------------------------------------------------------------------------
+-- STALKER restrictions
+----------------------------------------------------------------------------------------------------------------------
+--' Данная функция вычитывает из логики набор рестрикторов, которые нужно проставить персонажу.
+
 local restr_tbl -- scoped because it's used by all online npc frequently and would be Garbage Collector waste
 function Crestrictor_manager:reset_restrictions(st, section)
 	-- OUT RESTRICTIONS

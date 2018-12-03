@@ -1,0 +1,1484 @@
+function start_game()
+   run_dynamic_element(ui_mod_elements.card_game_21_point())
+end
+-------------------------------------------------------
+--		Адаптация игры 21 для Call of Chernobyl		--
+--				FonSwong 23.02.2016
+
+--		Создание диалогов для NPC, а также правка скриптового текста		--
+--				First_Lieutenant_Skelja					--
+-------------------------------------------------------
+	st_21_point_your_card_value = 'Вы:'
+	st_21_point_enemy_card_value = 'Соперник:'
+	st_21_point_rate_field = 'Ваша ставка на выиграш:'
+	st_21_point_infoline_1 = 'В вашем рюкзаке денег:'
+	st_21_point_infoline_2 = 'Минимальная ставка - 50, максимальная ставка -'
+	st_21_point_money = 'рублей.'
+	st_21_point_info_about_your = 'Игрок: ставка'
+	st_21_point_info_about_enemy = ': ставка'
+	st_21_point_web_money = 'электронных рублей.'
+	st_21_point_winner_your_1 = 'Вы выиграли. Выиграш составил -'
+	st_21_point_winner_your_2 = 'рублей. Сумма очков: вы -'
+	st_21_point_winner_your_3 = ', противник -'
+	st_21_point_winner_enemy_1 = 'Вы проиграли. Проиграш составил -'
+	st_21_point_winner_enemy_2 = 'рублей. Сумма очков: вы -'
+	st_21_point_winner_enemy_3 = ', противник -'
+	st_21_point_winner_equally_1 = 'Ничья. Сумма очков: вы -'
+	st_21_point_winner_equally_2 = ', противник -'
+	st_21_point_title = 'Игра: 21 очко'
+	st_21_point_dont_money_to_rate = 'Повышение ставки невозможно: не хватает денег.'
+	st_21_point_dont_take_rate = 'Продолжение игры невозможно: ставки не сделаны.'
+	st_question_game_title = 'Игра: Что? Где? Когда?'
+	st_question_game_reward_advice = 'Заработан совет:'
+	st_question_game_reward_money = 'Получены деньги:'
+	st_in_web_money = 'Получены деньги:'
+
+-------------------------------------------------------
+--                Переменная: таблица                --
+-------------------------------------------------------
+table_mod_data_all={}
+table_mod_data_actor={}
+table_mod_data_actor_cleaner={}
+table_mod_data_object={}
+table_mod_data_object_cleaner={}
+table_mod_utils={}
+table_mod_offline={}
+table_mod_secrets={}
+table_mod_autosaves={}
+table_mod_callbacks={}
+table_mod_schemes={}
+table_mod_teleports={}
+table_mod_mineraps={}
+table_mod_respawn={}
+table_mod_timers={}
+table_level_changes={}
+table_s_skill_hits={}
+table_m_skill_hits={}
+table_m_capture_hits={}
+table_flashlight={}
+table_squad_dm={}
+-------------------------------------------------------
+--             Переменная: false/true                --
+-------------------------------------------------------
+bool_approach_sleep_began=false
+bool_approach_sleep=false
+bool_aura_inactivity_inc=false
+bool_aura_inactivity_dec=false
+bool_aura_inactivity_action=false
+bool_aura_inactivity_need_release=false
+bool_allspawn_auto_print=false
+bool_headshot_s_allower=false
+bool_headshot_s_waiting=false
+bool_headshot_m_allower=false
+bool_headshot_m_waiting=false
+bool_end_of_the_month=false
+bool_enter_level_change=false
+bool_travel_level_change=false
+bool_throw_level_change=false
+bool_snd_end=false
+bool_surge_day_is_present=false
+bool_surge_day_is_critical=false
+bool_surge_day_end=false
+bool_black_day_end=false
+bool_every_night_end=false
+bool_remote_marker=false
+bool_show_restrictors=false
+bool_show_anomalies=false
+bool_show_smarts=false
+bool_cheat_mode_activate=false
+bool_is_ui_disabled=false
+bool_mod_update=true
+bool_data_loaded=false
+-------------------------------------------------------
+--                Переменная: число                  --
+-------------------------------------------------------
+value_bodyguard_release_victim=0
+value_capture_meal_monster_id=0
+value_wpn1_state_bar=0
+value_wpn2_state_bar=0
+value_guidebook_type=1
+value_marauder_outfit_id=0
+value_throw_item_id=0
+value_throw_item_cond=1.0
+value_outfit_flg=0
+value_helm_flg=0
+value_remote_marker=0
+value_last_discount=0.0
+value_rank_counter=0
+value_headshot_counter=0
+value_demo_anim_counter=0
+value_safe_loaded=0
+value_shot_item_ammo=-1
+value_webmoney_course_from=20
+value_webmoney_course_before=80
+value_card_21_max_rate=1000
+value_pstor_factor=0
+------------------------------------------------------------------------------
+--                        Карточная игра: 21 очко                           --
+------------------------------------------------------------------------------
+card_game_21_stage="need_rate"
+card_game_21_take_else="empty_card"
+card_game_21_existing_masks={"kresta","pika","bubna","chirva"}
+card_game_21_existing_names={"6","7","8","9","10","J","Q","K","T"}
+card_game_21_winner="none"
+card_game_21_enemy_name="none"
+card_game_21_info_about_your=""
+card_game_21_info_about_enemy=""
+card_game_21_your_points=0
+card_game_21_enemy_points=0
+card_game_21_rate=0
+card_game_21_show_winner="hide"
+card_game_21_difficulty="easy"
+card_game_21_increasing_rate=50
+class "card_game_21_point" (CUIScriptWnd)
+function card_game_21_point:__init(owner) super()
+   self.owner = owner
+   self:InitControls()
+   self:InitCallBacks()
+end
+function card_game_21_point:__finalize()
+end
+function card_game_21_point:InitControls()
+   self:SetWndRect(Frect():set(0,0,1024,768))
+   xml = CScriptXmlInit()
+   xml:ParseFile("ui_mod_elements.xml")
+   self.card_game_21_point_form=xml:InitStatic("card_game_21_point_form",self)
+   self:start_button(xml,"btn_exit_game")
+   self:start_button(xml,"btn_play_game")
+   self:start_button(xml,"btn_take_else")
+   self:start_button(xml,"btn_send_move")
+   self:start_button(xml,"btn_continue_game")
+   self:start_button(xml,"btn_rate_minus")
+   self:start_button(xml,"btn_rate_plus")
+   self:start_button(xml,"btn_take_rate")
+   self.form_title=xml:InitStatic("card_game_21_point_form:form_title",self.card_game_21_point_form)
+   self.check_save_rate=xml:InitCheck("card_game_21_point_form:check_save_rate",self.card_game_21_point_form)
+   self.check_save_rate:SetCheck(info_get_boolean("card_game_21_save_rate"))
+   self.check_increasing=xml:InitCheck("card_game_21_point_form:check_increasing",self.card_game_21_point_form)
+   self.check_increasing:SetCheck(info_get_boolean("card_game_21_increasing"))
+   self.your_game_info=xml:InitStatic("card_game_21_point_form:your_game_info",self.card_game_21_point_form)
+   self.enemy_game_info=xml:InitStatic("card_game_21_point_form:enemy_game_info",self.card_game_21_point_form)
+   self.your_card_value=xml:InitStatic("card_game_21_point_form:your_card_value",self.card_game_21_point_form)
+   self.enemy_card_value=xml:InitStatic("card_game_21_point_form:enemy_card_value",self.card_game_21_point_form)
+   self.self_card_1=xml:InitStatic("card_game_21_point_form:self_card_1",self.card_game_21_point_form)
+   self.self_card_2=xml:InitStatic("card_game_21_point_form:self_card_2",self.card_game_21_point_form)
+   self.self_card_3=xml:InitStatic("card_game_21_point_form:self_card_3",self.card_game_21_point_form)
+   self.self_card_4=xml:InitStatic("card_game_21_point_form:self_card_4",self.card_game_21_point_form)
+   self.self_card_5=xml:InitStatic("card_game_21_point_form:self_card_5",self.card_game_21_point_form)
+   self.enemy_card_1=xml:InitStatic("card_game_21_point_form:enemy_card_1",self.card_game_21_point_form)
+   self.enemy_card_2=xml:InitStatic("card_game_21_point_form:enemy_card_2",self.card_game_21_point_form)
+   self.enemy_card_3=xml:InitStatic("card_game_21_point_form:enemy_card_3",self.card_game_21_point_form)
+   self.enemy_card_4=xml:InitStatic("card_game_21_point_form:enemy_card_4",self.card_game_21_point_form)
+   self.enemy_card_5=xml:InitStatic("card_game_21_point_form:enemy_card_5",self.card_game_21_point_form)
+   self.rate_field=xml:InitStatic("card_game_21_point_form:rate_field",self.card_game_21_point_form)
+   self.infoline_1=xml:InitStatic("card_game_21_point_form:your_game_info",self.card_game_21_point_form)
+   self.infoline_2=xml:InitStatic("card_game_21_point_form:enemy_game_info",self.card_game_21_point_form)
+   self.r_green_diod=xml:InitStatic("card_game_21_point_form:r_green_diod",self.card_game_21_point_form)
+   self.l_green_diod=xml:InitStatic("card_game_21_point_form:l_green_diod",self.card_game_21_point_form)
+   self.r_yellow_diod=xml:InitStatic("card_game_21_point_form:r_yellow_diod",self.card_game_21_point_form)
+   self.l_yellow_diod=xml:InitStatic("card_game_21_point_form:l_yellow_diod",self.card_game_21_point_form)
+   self.r_red_diod=xml:InitStatic("card_game_21_point_form:r_red_diod",self.card_game_21_point_form)
+   self.l_red_diod=xml:InitStatic("card_game_21_point_form:l_red_diod",self.card_game_21_point_form)
+   self.winner_box=CUIMessageBoxEx()
+   self:Register(self.winner_box,"winner_box")
+end
+function card_game_21_point:InitCallBacks()
+   self:AddCallback("btn_exit_game",ui_events.BUTTON_CLICKED,self.btn_exit_game,self)
+   self:AddCallback("btn_play_game",ui_events.BUTTON_CLICKED,self.btn_play_game,self)
+   self:AddCallback("btn_take_else",ui_events.BUTTON_CLICKED,self.btn_take_else,self)
+   self:AddCallback("btn_send_move",ui_events.BUTTON_CLICKED,self.btn_send_move,self)
+   self:AddCallback("btn_take_rate",ui_events.BUTTON_CLICKED,self.btn_take_rate,self)
+   self:AddCallback("btn_rate_minus",ui_events.BUTTON_CLICKED,self.btn_rate_minus,self)
+   self:AddCallback("btn_rate_plus",ui_events.BUTTON_CLICKED,self.btn_rate_plus,self)
+   self:AddCallback("btn_continue_game",ui_events.BUTTON_CLICKED,self.btn_continue_game,self)
+   self:AddCallback("winner_box",ui_events.MESSAGE_BOX_OK_CLICKED,self.show_game_winner,self)
+   self:AddCallback("winner_box",ui_events.MESSAGE_BOX_YES_CLICKED,self.show_game_winner,self)
+end
+function card_game_21_point:Update()
+   CUIScriptWnd.Update(self)
+   if not object_alive(db.actor) then
+      self:btn_exit_game()
+   else
+      self.form_title:TextControl():SetText(st_21_point_title)
+      if card_game_21_stage=="play_game" or card_game_21_stage=="end_game" then
+         self.your_game_info:TextControl():SetText(card_game_21_info_about_your)
+         self.enemy_game_info:TextControl():SetText(card_game_21_info_about_enemy)
+         self.your_card_value:TextControl():SetText(st_21_point_your_card_value.." "..card_game_21_your_points)
+         self.enemy_card_value:TextControl():SetText(st_21_point_enemy_card_value.." "..card_game_21_enemy_points)
+      else
+         self.your_game_info:TextControl():SetText("")
+         self.enemy_game_info:TextControl():SetText("")
+         self.your_card_value:TextControl():SetText("")
+         self.enemy_card_value:TextControl():SetText("")
+      end
+      if card_game_21_stage=="need_rate" then
+         self.rate_field:TextControl():SetText(st_21_point_rate_field.." "..card_game_21_rate)
+         self.infoline_1:TextControl():SetText(st_21_point_infoline_1.." "..db.actor:money().." "..st_21_point_money)
+         self.infoline_2:TextControl():SetText(st_21_point_infoline_2.." "..value_card_21_max_rate..".")
+      else
+         self.infoline_1:TextControl():SetText("")
+         self.infoline_2:TextControl():SetText("")
+      end
+   end
+   if card_game_21_rate<0 then
+      card_game_21_rate=0
+   elseif card_game_21_rate>value_card_21_max_rate then
+      card_game_21_rate=value_card_21_max_rate
+   end
+   if card_game_21_rate>db.actor:money() then
+      run_choose_box("yes","card_game_21_point",st_21_point_dont_money_to_rate)
+      card_game_21_rate=db.actor:money()
+   end
+   if card_game_21_stage=="need_rate" then
+      self.get_btn_send_move:Show(false)
+      self.get_btn_take_else:Show(false)
+      self.get_btn_play_game:Show(false)
+      self.get_btn_send_move:Enable(false)
+      self.get_btn_take_else:Enable(false)
+      self.get_btn_play_game:Enable(false)
+      self.get_btn_take_rate:Show(true)
+      self.get_btn_take_rate:Enable(true)
+      self.get_btn_rate_minus:Show(true)
+      self.get_btn_rate_plus:Show(true)
+      self.get_btn_continue_game:Show(false)
+      self.get_btn_continue_game:Enable(false)
+      self.get_btn_exit_game:Enable(true)
+      self.check_save_rate:Show(true)
+      self.check_save_rate:Enable(true)
+      self.check_increasing:Show(true)
+      self.check_increasing:Enable(true)
+      self.r_green_diod:Show(false)
+      self.r_green_diod:Enable(false)
+      self.l_green_diod:Show(false)
+      self.l_green_diod:Enable(false)
+      self.r_yellow_diod:Show(false)
+      self.r_yellow_diod:Enable(false)
+      self.l_yellow_diod:Show(false)
+      self.l_yellow_diod:Enable(false)
+      self.r_red_diod:Show(false)
+      self.r_red_diod:Enable(false)
+      self.l_red_diod:Show(false)
+      self.l_red_diod:Enable(false)
+      if card_game_21_rate==0 then
+         self.get_btn_rate_minus:Enable(false)
+      else
+         self.get_btn_rate_minus:Enable(true)
+      end
+      if card_game_21_rate==value_card_21_max_rate then
+         self.get_btn_rate_plus:Enable(false)
+      else
+         self.get_btn_rate_plus:Enable(true)
+      end
+   elseif card_game_21_stage=="taked_rate" then
+      self.get_btn_send_move:Show(true)
+      self.get_btn_take_else:Show(true)
+      self.get_btn_play_game:Show(true)
+      self.get_btn_send_move:Enable(false)
+      self.get_btn_take_else:Enable(false)
+      self.get_btn_play_game:Enable(true)
+      self.get_btn_take_rate:Show(false)
+      self.get_btn_take_rate:Enable(false)
+      self.get_btn_rate_minus:Show(false)
+      self.get_btn_rate_plus:Show(false)
+      self.get_btn_rate_minus:Enable(false)
+      self.get_btn_rate_plus:Enable(false)
+      self.get_btn_continue_game:Show(false)
+      self.get_btn_continue_game:Enable(false)
+      self.get_btn_exit_game:Enable(true)
+      self.check_save_rate:Show(false)
+      self.check_save_rate:Enable(false)
+      self.check_increasing:Show(false)
+      self.check_increasing:Enable(false)
+      self.r_green_diod:Show(false)
+      self.r_green_diod:Enable(false)
+      self.l_green_diod:Show(false)
+      self.l_green_diod:Enable(false)
+      self.r_yellow_diod:Show(false)
+      self.r_yellow_diod:Enable(false)
+      self.l_yellow_diod:Show(false)
+      self.l_yellow_diod:Enable(false)
+      self.r_red_diod:Show(true)
+      self.r_red_diod:Enable(true)
+      self.l_red_diod:Show(true)
+      self.l_red_diod:Enable(true)
+   elseif card_game_21_stage=="play_game" then
+      self.get_btn_send_move:Show(true)
+      self.get_btn_take_else:Show(true)
+      self.get_btn_play_game:Show(true)
+      self.get_btn_send_move:Enable(true)
+      self.get_btn_take_else:Enable(true)
+      self.get_btn_play_game:Enable(false)
+      self.get_btn_take_rate:Show(false)
+      self.get_btn_take_rate:Enable(false)
+      self.get_btn_rate_minus:Show(false)
+      self.get_btn_rate_plus:Show(false)
+      self.get_btn_rate_minus:Enable(false)
+      self.get_btn_rate_plus:Enable(false)
+      self.get_btn_continue_game:Show(false)
+      self.get_btn_continue_game:Enable(false)
+      self.get_btn_exit_game:Enable(false)
+      self.check_save_rate:Show(false)
+      self.check_save_rate:Enable(false)
+      self.check_increasing:Show(false)
+      self.check_increasing:Enable(false)
+      self.r_green_diod:Show(false)
+      self.r_green_diod:Enable(false)
+      self.l_green_diod:Show(false)
+      self.l_green_diod:Enable(false)
+      self.r_yellow_diod:Show(true)
+      self.r_yellow_diod:Enable(true)
+      self.l_yellow_diod:Show(true)
+      self.l_yellow_diod:Enable(true)
+      self.r_red_diod:Show(false)
+      self.r_red_diod:Enable(false)
+      self.l_red_diod:Show(false)
+      self.l_red_diod:Enable(false)
+   elseif card_game_21_stage=="end_game" then
+      self.get_btn_send_move:Show(true)
+      self.get_btn_take_else:Show(true)
+      self.get_btn_play_game:Show(false)
+      self.get_btn_send_move:Enable(false)
+      self.get_btn_take_else:Enable(false)
+      self.get_btn_play_game:Enable(false)
+      self.get_btn_take_rate:Show(false)
+      self.get_btn_take_rate:Enable(false)
+      self.get_btn_rate_minus:Show(false)
+      self.get_btn_rate_plus:Show(false)
+      self.get_btn_rate_minus:Enable(false)
+      self.get_btn_rate_plus:Enable(false)
+      self.get_btn_continue_game:Show(true)
+      self.get_btn_continue_game:Enable(true)
+      self.get_btn_exit_game:Enable(false)
+      self.check_save_rate:Show(false)
+      self.check_save_rate:Enable(false)
+      self.check_increasing:Show(false)
+      self.check_increasing:Enable(false)
+      if card_game_21_winner=="your" then
+         self.r_green_diod:Show(false)
+         self.r_green_diod:Enable(false)
+         self.l_green_diod:Show(true)
+         self.l_green_diod:Enable(true)
+         self.r_yellow_diod:Show(false)
+         self.r_yellow_diod:Enable(false)
+         self.l_yellow_diod:Show(false)
+         self.l_yellow_diod:Enable(false)
+         self.r_red_diod:Show(true)
+         self.r_red_diod:Enable(true)
+         self.l_red_diod:Show(false)
+         self.l_red_diod:Enable(false)
+      elseif card_game_21_winner=="enemy" then
+         self.r_green_diod:Show(true)
+         self.r_green_diod:Enable(true)
+         self.l_green_diod:Show(false)
+         self.l_green_diod:Enable(false)
+         self.r_yellow_diod:Show(false)
+         self.r_yellow_diod:Enable(false)
+         self.l_yellow_diod:Show(false)
+         self.l_yellow_diod:Enable(false)
+         self.r_red_diod:Show(false)
+         self.r_red_diod:Enable(false)
+         self.l_red_diod:Show(true)
+         self.l_red_diod:Enable(true)
+      elseif card_game_21_winner=="equally" then
+         self.r_green_diod:Show(true)
+         self.r_green_diod:Enable(true)
+         self.l_green_diod:Show(true)
+         self.l_green_diod:Enable(true)
+         self.r_yellow_diod:Show(false)
+         self.r_yellow_diod:Enable(false)
+         self.l_yellow_diod:Show(false)
+         self.l_yellow_diod:Enable(false)
+         self.r_red_diod:Show(false)
+         self.r_red_diod:Enable(false)
+         self.l_red_diod:Show(false)
+         self.l_red_diod:Enable(false)
+      end
+   end
+   if card_game_21_show_winner=="end_show" then
+      self:btn_exit_game(false)
+      card_game_21_show_winner="hide"
+      self.get_btn_continue_game:Show(false)
+      self.get_btn_continue_game:Enable(false)
+   end
+   if self.check_increasing:GetCheck()==true and card_game_21_increasing_rate~=200 then
+      card_game_21_increasing_rate=200
+   elseif self.check_increasing:GetCheck()==false and card_game_21_increasing_rate~=50 then
+      card_game_21_increasing_rate=50
+   end
+   info_give_on_boolean(self.check_save_rate:GetCheck(),"card_game_21_save_rate")
+   info_give_on_boolean(self.check_increasing:GetCheck(),"card_game_21_increasing")
+end
+function card_game_21_point:OnKeyboard(dik,keyboard_action)
+   CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
+   if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+      if dik==DIK_keys.DIK_ESCAPE and card_game_21_stage~="play_game" and card_game_21_stage~="end_game" then
+         self:btn_exit_game()
+      end
+   end
+   return true
+end
+function card_game_21_point:start_button(xml,button_name)
+   self["get_"..button_name]=xml:Init3tButton("card_game_21_point_form:"..button_name,self.card_game_21_point_form)
+   self:Register(self["get_"..button_name],button_name)
+end
+function card_game_21_point:ClearGameCards()
+   for i=1,5 do
+      self["self_card_"..i]:InitTexture("ui_mod_card_hide_side")
+      self["enemy_card_"..i]:InitTexture("ui_mod_card_hide_side")
+   end
+end
+function card_game_21_point:FillCardPoint(param,name,mask)
+   local result=0
+   if name=="6" then result=6
+   elseif name=="7" then result=7
+   elseif name=="8" then result=8
+   elseif name=="9" then result=9
+   elseif name=="10" then result=10
+   elseif name=="J" then result=2
+   elseif name=="Q" then result=3
+   elseif name=="K" then result=4
+   elseif name=="T" then result=11
+   end
+   self[param]:InitTexture("ui_mod_card_"..name.."_"..mask)
+   if find_in_string(param,"self_") then
+      card_game_21_your_points=card_game_21_your_points+result
+   else
+      card_game_21_enemy_points=card_game_21_enemy_points+result
+   end
+end
+function card_game_21_point:FillEnemyStep(step_num)
+   local name,mask=get_random_string(card_game_21_existing_names),get_random_string(card_game_21_existing_masks)
+   if card_game_21_difficulty=="hard" and get_rnd(1,2)==1 then
+      if self:GetNearestPoint(card_game_21_enemy_points)==11 then
+         name=get_random_line("T,10")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==9 or self:GetNearestPoint(card_game_21_enemy_points)==10 then
+         name=get_random_line("9,10")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==8 then
+         name=get_random_line("8")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==7 then
+         name=get_random_line("7,8")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==6 then
+         name=get_random_line("6")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==5 or self:GetNearestPoint(card_game_21_enemy_points)==4 then
+         name=get_random_line("K,Q")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==3 then
+         name=get_random_line("Q,J")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==2 then
+         name=get_random_line("J")
+      end
+   elseif card_game_21_difficulty=="normal" and get_rnd(1,4)==1 then
+      if self:GetNearestPoint(card_game_21_enemy_points)==11 then
+         name=get_random_line("T,10")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==9 or self:GetNearestPoint(card_game_21_enemy_points)==10 then
+         name=get_random_line("9,10")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==8 then
+         name=get_random_line("7,8,9")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==7 then
+         name=get_random_line("6,7,8")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==6 then
+         name=get_random_line("6,K")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==5 or self:GetNearestPoint(card_game_21_enemy_points)==4 then
+         name=get_random_line("K,Q")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==3 then
+         name=get_random_line("K,Q,J")
+      elseif self:GetNearestPoint(card_game_21_enemy_points)==2 then
+         name=get_random_line("J")
+      end
+   end
+   self:FillCardPoint("enemy_card_"..step_num,name,mask)
+end
+function card_game_21_point:GetNearestPoint(value)
+   local need_value=21
+   if value<need_value then
+      return need_value-value
+   elseif value>need_value then
+      return value-need_value
+   elseif value==need_value then
+      return 0
+   end
+end
+function card_game_21_point:GetTooManyPoint(value,extra_mode)
+   local need_value=21
+   if value<need_value then
+      return false
+   elseif value>need_value then
+      return true
+   elseif value==need_value then
+      if extra_mode==nil or extra_mode==false then
+         return true
+      else
+         return false
+      end
+   end
+end
+function card_game_21_point:btn_rate_minus()
+   card_game_21_rate=card_game_21_rate-card_game_21_increasing_rate
+end
+function card_game_21_point:btn_rate_plus()
+   card_game_21_rate=card_game_21_rate+card_game_21_increasing_rate
+end
+function card_game_21_point:btn_take_rate()
+   if card_game_21_rate>0 and db.actor:money()>=card_game_21_rate then
+      card_game_21_stage="taked_rate"
+   else
+      run_choose_box("yes","card_game_21_point",st_21_point_dont_take_rate)
+   end
+end
+function card_game_21_point:btn_exit_game(hide)
+   if hide==nil or hide==true then
+      self:HideDialog()
+      set_ui_worked()
+   end
+   card_game_21_stage="need_rate"
+   card_game_21_info_about_your=""
+   card_game_21_info_about_enemy=""
+   card_game_21_enemy_name="none"
+   card_game_21_your_points=0
+   card_game_21_enemy_points=0
+   card_game_21_take_else="empty_card"
+   card_game_21_winner="none"
+   if self.check_save_rate:GetCheck()==false then
+      card_game_21_rate=0
+   end
+   card_game_21_show_winner="hide"
+   self:ClearGameCards()
+end
+function card_game_21_point:btn_play_game()
+   card_game_21_difficulty=get_random_line("easy,normal,hard")
+   if card_game_21_difficulty~="hard" and get_rnd(1,6)==1 then
+   --/card_game_21_difficulty="hard"
+   end
+   card_game_21_stage="play_game"
+   card_game_21_winner="none"
+   card_game_21_info_about_your=st_21_point_info_about_your.." "..card_game_21_rate.." "..st_21_point_money
+   card_game_21_info_about_enemy=card_game_21_enemy_name..st_21_point_info_about_enemy.." "..card_game_21_rate.." "..st_21_point_web_money
+   local name,mask=get_random_string(card_game_21_existing_names),get_random_string(card_game_21_existing_masks)
+   self:FillCardPoint("self_card_1",name,mask)
+   local name,mask=get_random_string(card_game_21_existing_names),get_random_string(card_game_21_existing_masks)
+   self:FillCardPoint("self_card_2",name,mask)
+end
+function card_game_21_point:btn_take_else()
+   local name,mask=get_random_string(card_game_21_existing_names),get_random_string(card_game_21_existing_masks)
+   if card_game_21_take_else=="empty_card" then
+      if self:GetNearestPoint(card_game_21_your_points)<=5 and get_rnd(1,5)==1 then
+         name=get_random_line("T,10,9,8")
+      end
+      self:FillCardPoint("self_card_3",name,mask)
+      card_game_21_take_else="1st_card"
+   elseif card_game_21_take_else=="1st_card" then
+      if self:GetNearestPoint(card_game_21_your_points)<=5 and get_rnd(1,5)==1 then
+         name=get_random_line("T,10,9,8")
+      end
+      self:FillCardPoint("self_card_4",name,mask)
+      card_game_21_take_else="2nd_card"
+   elseif card_game_21_take_else=="2nd_card" then
+      if self:GetNearestPoint(card_game_21_your_points)<=5 and get_rnd(1,5)==1 then
+         name=get_random_line("T,10,9,8")
+      end
+      self:FillCardPoint("self_card_5",name,mask)
+      card_game_21_take_else="3rd_card"
+      self:btn_send_move()
+   end
+end
+function card_game_21_point:btn_send_move()
+   local name,mask=get_random_string(card_game_21_existing_names),get_random_string(card_game_21_existing_masks)
+   self:FillCardPoint("enemy_card_1",name,mask)
+   local name,mask=get_random_string(card_game_21_existing_names),get_random_string(card_game_21_existing_masks)
+   self:FillCardPoint("enemy_card_2",name,mask)
+   local threshold_value=math.random(3,5)
+   if self:GetNearestPoint(card_game_21_enemy_points)>threshold_value and self:GetTooManyPoint(card_game_21_enemy_points)==false then
+      self:enemy_move_add_one()
+   else
+      self:winner_reward()
+   end
+end
+function card_game_21_point:enemy_move_add_one()
+   self:FillEnemyStep(3)
+   local threshold_value=math.random(3,5)
+   if self:GetNearestPoint(card_game_21_enemy_points)>threshold_value and self:GetTooManyPoint(card_game_21_enemy_points)==false then
+      self:enemy_move_add_two()
+   else
+      self:winner_reward()
+   end
+end
+function card_game_21_point:enemy_move_add_two()
+   self:FillEnemyStep(4)
+   local threshold_value=math.random(3,5)
+   if self:GetNearestPoint(card_game_21_enemy_points)>threshold_value and self:GetTooManyPoint(card_game_21_enemy_points)==false then
+      self:enemy_move_add_three()
+   else
+      self:winner_reward()
+   end
+end
+function card_game_21_point:enemy_move_add_three()
+   self:FillEnemyStep(5)
+   self:winner_reward()
+end
+function card_game_21_point:winner_reward()
+   if r_mod_params("bool","card_game_21_rules_default",true)==true then
+      if self:GetTooManyPoint(card_game_21_your_points,true)==false and self:GetTooManyPoint(card_game_21_enemy_points,true)==true then
+         card_game_21_winner="your"
+      elseif self:GetTooManyPoint(card_game_21_your_points,true)==true and self:GetTooManyPoint(card_game_21_enemy_points,true)==false then
+         card_game_21_winner="enemy"
+      else
+         if self:GetNearestPoint(card_game_21_your_points)<self:GetNearestPoint(card_game_21_enemy_points) then
+            card_game_21_winner="your"
+         elseif self:GetNearestPoint(card_game_21_your_points)>self:GetNearestPoint(card_game_21_enemy_points) then
+            card_game_21_winner="enemy"
+         elseif self:GetNearestPoint(card_game_21_your_points)==self:GetNearestPoint(card_game_21_enemy_points) then
+            card_game_21_winner="equally"
+         end
+      end
+   elseif r_mod_params("bool","card_game_21_rules_default",true)==false then
+      if self:GetNearestPoint(card_game_21_your_points)==self:GetNearestPoint(card_game_21_enemy_points) then
+         card_game_21_winner="equally"
+      elseif self:GetNearestPoint(card_game_21_your_points)<self:GetNearestPoint(card_game_21_enemy_points) then
+         card_game_21_winner="your"
+      elseif self:GetNearestPoint(card_game_21_your_points)>self:GetNearestPoint(card_game_21_enemy_points) then
+         card_game_21_winner="enemy"
+      end
+   end
+   card_game_21_stage="end_game"
+end
+function card_game_21_point:btn_continue_game()
+   card_game_21_show_winner="begin_show"
+   self.winner_box:InitMessageBox("message_box_ok")
+   if card_game_21_winner=="your" then
+		dialogs.relocate_money(db.actor,card_game_21_rate,"in")
+		db.actor:give_money(card_game_21_rate)
+		--game_stats.money_quest_update(card_game_21_rate)
+      self.winner_box:SetText(st_21_point_winner_your_1.." "..card_game_21_rate.." "..st_21_point_winner_your_2.." "..card_game_21_your_points..st_21_point_winner_your_3.." "..card_game_21_enemy_points..".")
+   elseif card_game_21_winner=="enemy" then
+      dialogs.relocate_money(db.actor,card_game_21_rate,"out")
+      db.actor:give_money(-card_game_21_rate)
+      --game_stats.money_quest_update(-card_game_21_rate)
+      self.winner_box:SetText(st_21_point_winner_enemy_1.." "..card_game_21_rate.." "..st_21_point_winner_enemy_2.." "..card_game_21_your_points..st_21_point_winner_enemy_3.." "..card_game_21_enemy_points..".")
+   else
+      self.winner_box:SetText(st_21_point_winner_equally_1.." "..card_game_21_your_points..st_21_point_winner_equally_2.." "..card_game_21_enemy_points..".")
+   end
+   self.winner_box:ShowDialog(true)
+end
+function card_game_21_point:show_game_winner()
+   self.winner_box:ShowDialog(false)
+   self.winner_box:HideDialog()
+   card_game_21_show_winner="end_show"
+end
+------------------------------------------------------------------------------
+--              Мини-игра: Зачем? Под кем? Во сколько?                      --
+------------------------------------------------------------------------------
+question_game_correct_answer_descr={"st_question_game_correct_answer_1_text","st_question_game_correct_answer_2_text","st_question_game_correct_answer_3_text","st_question_game_correct_answer_4_text"}
+question_game_wrong_answer_descr={"st_question_game_wrong_answer_1_text","st_question_game_wrong_answer_2_text","st_question_game_wrong_answer_3_text","st_question_game_wrong_answer_4_text"}
+question_game_ini=ini_file("misc\\config_question_game.ltx")
+question_game_q_count=1
+question_game_a_count=1
+question_game_q_available=0
+question_game_a_available=0
+question_game_reward_money=0
+question_game_question_number=1
+question_game_correct_series=0
+question_game_stage="nil"
+question_game_question_descr=""
+question_game_answer_a=""
+question_game_answer_b=""
+question_game_answer_c=""
+question_game_answer_d=""
+question_game_correct=""
+question_game_q_s="nil"
+question_game_q_h_f=false
+question_game_a_s="nil"
+question_game_a_h_f=false
+question_q_table={}
+question_a_table={}
+class "question_game" (CUIScriptWnd)
+function question_game:__init(owner) super()
+   self.owner = owner
+   self:InitControls()
+   self:InitCallBacks()
+end
+function question_game:__finalize()
+end
+function question_game:InitControls()
+   self:SetWndRect(Frect():set(0,0,1024,768))
+   xml = CScriptXmlInit()
+   xml:ParseFile("ui_mod_elements.xml")
+   self.question_game_form=xml:InitStatic("question_game_form",self)
+   self.form_title=xml:InitStatic("question_game_form:form_title",self.question_game_form)
+   self:start_button(xml,"btn_exit_game")
+   self:start_button(xml,"btn_answer_a")
+   self:start_button(xml,"btn_answer_b")
+   self:start_button(xml,"btn_answer_c")
+   self:start_button(xml,"btn_answer_d")
+   self:start_button(xml,"btn_manual")
+   self:start_button(xml,"btn_start_game")
+   self:start_button(xml,"btn_continue_game")
+   self.question_number_field=xml:InitStatic("question_game_form:question_number_field",self.question_game_form)
+   self.correct_series_field=xml:InitStatic("question_game_form:correct_series_field",self.question_game_form)
+   self.question_field=xml:InitStatic("question_game_form:question_field",self.question_game_form)
+   self.answer_a_field=xml:InitStatic("question_game_form:answer_a_field",self.question_game_form)
+   self.answer_b_field=xml:InitStatic("question_game_form:answer_b_field",self.question_game_form)
+   self.answer_c_field=xml:InitStatic("question_game_form:answer_c_field",self.question_game_form)
+   self.answer_d_field=xml:InitStatic("question_game_form:answer_d_field",self.question_game_form)
+   self.result_box=CUIMessageBoxEx()
+   self:Register(self.result_box,"result_box")
+   self.reward_box=CUIMessageBoxEx()
+   self:Register(self.reward_box,"reward_box")
+   self.message_box=CUIMessageBoxEx()
+   self:Register(self.message_box,"message_box")
+   self:parse_questions()
+   self:parse_advices()
+end
+function question_game:InitCallBacks()
+   self:AddCallback("btn_exit_game",ui_events.BUTTON_CLICKED,self.btn_exit_game,self)
+   self:AddCallback("btn_answer_a",ui_events.BUTTON_CLICKED,self.btn_answer_a,self)
+   self:AddCallback("btn_answer_b",ui_events.BUTTON_CLICKED,self.btn_answer_b,self)
+   self:AddCallback("btn_answer_c",ui_events.BUTTON_CLICKED,self.btn_answer_c,self)
+   self:AddCallback("btn_answer_d",ui_events.BUTTON_CLICKED,self.btn_answer_d,self)
+   self:AddCallback("btn_manual",ui_events.BUTTON_CLICKED,self.btn_manual,self)
+   self:AddCallback("btn_start_game",ui_events.BUTTON_CLICKED,self.btn_start_game,self)
+   self:AddCallback("btn_continue_game",ui_events.BUTTON_CLICKED,self.btn_continue_game,self)
+   self:AddCallback("result_box",ui_events.MESSAGE_BOX_OK_CLICKED,self.close_result,self)
+   self:AddCallback("result_box",ui_events.MESSAGE_BOX_YES_CLICKED,self.close_result,self)
+   self:AddCallback("reward_box",ui_events.MESSAGE_BOX_OK_CLICKED,self.close_reward,self)
+   self:AddCallback("reward_box",ui_events.MESSAGE_BOX_YES_CLICKED,self.close_reward,self)
+   self:AddCallback("message_box",ui_events.MESSAGE_BOX_OK_CLICKED,self.close_message,self)
+   self:AddCallback("message_box",ui_events.MESSAGE_BOX_YES_CLICKED,self.close_message,self)
+end
+function question_game:Update()
+   CUIScriptWnd.Update(self)
+   if not object_alive(db.actor) then
+      self:btn_exit_game()
+   else
+   --/self.form_title:TextControl():SetText(st_question_game_title)
+      if question_game_stage~="nil" then
+         self.question_field:TextControl():SetText(game.translate_string(question_game_question_descr))
+         self.answer_a_field:TextControl():SetText("A)"..'Вариант A')
+         self.answer_b_field:TextControl():SetText("B)"..'Вариант B')
+         self.answer_c_field:TextControl():SetText("C)"..'Вариант C')
+         self.answer_d_field:TextControl():SetText("D)"..'Вариант D')
+         self.question_number_field:TextControl():SetText(question_game_question_number)
+         self.correct_series_field:TextControl():SetText(question_game_correct_series)
+      end
+   end
+   if question_game_stage=="begin" or question_game_stage=="next_question" then
+      self.get_btn_answer_a:Show(true)
+      self.get_btn_answer_a:Enable(true)
+      self.get_btn_answer_b:Show(true)
+      self.get_btn_answer_b:Enable(true)
+      self.get_btn_answer_c:Show(true)
+      self.get_btn_answer_c:Enable(true)
+      self.get_btn_answer_d:Show(true)
+      self.get_btn_answer_d:Enable(true)
+      self.get_btn_start_game:Show(false)
+      self.get_btn_start_game:Enable(false)
+      self.get_btn_continue_game:Show(false)
+      self.get_btn_continue_game:Enable(false)
+   elseif question_game_stage=="answer_accepted" then
+      self.get_btn_answer_a:Show(true)
+      self.get_btn_answer_a:Enable(false)
+      self.get_btn_answer_b:Show(true)
+      self.get_btn_answer_b:Enable(false)
+      self.get_btn_answer_c:Show(true)
+      self.get_btn_answer_c:Enable(false)
+      self.get_btn_answer_d:Show(true)
+      self.get_btn_answer_d:Enable(false)
+      self.get_btn_start_game:Show(false)
+      self.get_btn_start_game:Enable(false)
+      self.get_btn_continue_game:Show(true)
+      self.get_btn_continue_game:Enable(true)
+      if question_game_q_h_f==false then
+         self:select_random_question()
+      end
+      if question_game_a_h_f==false then
+         self:select_random_advice()
+      end
+   else
+      self.get_btn_answer_a:Enable(false)
+      self.get_btn_answer_a:Show(false)
+      self.get_btn_answer_b:Show(false)
+      self.get_btn_answer_b:Enable(false)
+      self.get_btn_answer_c:Show(false)
+      self.get_btn_answer_c:Enable(false)
+      self.get_btn_answer_d:Show(false)
+      self.get_btn_answer_d:Enable(false)
+      self.get_btn_start_game:Show(true)
+      self.get_btn_start_game:Enable(true)
+      self.get_btn_continue_game:Show(false)
+      self.get_btn_continue_game:Enable(false)
+      if question_game_q_h_f==false then
+         self:select_random_question()
+      end
+      if question_game_a_h_f==false then
+         self:select_random_advice()
+      end
+   end
+end
+function question_game:OnKeyboard(dik,keyboard_action)
+   CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
+   if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+      if dik==DIK_keys.DIK_ESCAPE then
+         self:btn_exit_game()
+      end
+   end
+   return true
+end
+function question_game:start_button(xml,button_name)
+   self["get_"..button_name]=xml:Init3tButton("question_game_form:"..button_name,self.question_game_form)
+   self:Register(self["get_"..button_name],button_name)
+end
+function question_game:btn_exit_game(hide)
+   self:HideDialog()
+   if question_game_reward_money>0 then
+      dialogs.relocate_money(db.actor,question_game_reward_money,"in")
+   end
+   question_q_table={}
+   question_a_table={}
+   question_game_stage="nil"
+   question_game_question_number=1
+   question_game_correct_series=0
+   question_game_q_available=0
+   question_game_a_available=0
+   question_game_q_s="nil"
+   question_game_a_s="nil"
+   question_game_q_h_f=false
+   question_game_a_h_f=false
+   question_game_reward_money=0
+   set_ui_worked()
+end
+function question_game:close_result()
+   self.result_box:ShowDialog(false)
+   self.result_box:HideDialog()
+   if question_game_correct_series>=5 then
+      if question_game_a_available>0 then
+         self:show_reward(st_question_game_reward_advice.." "..self:get_advice(question_game_a_s,"advice").." "..st_question_game_reward_money.." "..self:get_advice(question_game_a_s,"reward_money"))
+         question_game_reward_money=question_game_reward_money+self:get_advice(question_game_a_s,"reward_money")
+         create_inventory_item(self:get_advice(question_game_a_s,"items"),"zat_informer_hiding",self:get_advice(question_game_a_s,"place_x"),self:get_advice(question_game_a_s,"place_y"),self:get_advice(question_game_a_s,"place_z"),self:get_advice(question_game_a_s,"place_lv"),self:get_advice(question_game_a_s,"place_gv"))
+         give_info(question_game_a_s)
+         question_game_a_available=question_game_a_available-1
+         question_game_a_h_f=false
+      end
+      question_game_correct_series=0
+   end
+end
+function question_game:close_reward()
+   self.reward_box:ShowDialog(false)
+   self.reward_box:HideDialog()
+end
+function question_game:close_message()
+   self.message_box:ShowDialog(false)
+   self.message_box:HideDialog()
+end
+function question_game:show_result(text)
+   self.result_box:InitMessageBox("message_box_ok")
+   self.result_box:SetText(game.translate_string(text))
+   self.result_box:ShowDialog(true)
+end
+function question_game:show_reward(text)
+   self.reward_box:InitMessageBox("message_box_ok")
+   self.reward_box:SetText(game.translate_string(text))
+   self.reward_box:ShowDialog(true)
+end
+function question_game:show_message(text)
+   self.message_box:InitMessageBox("message_box_ok")
+   self.message_box:SetText(game.translate_string(text))
+   self.message_box:ShowDialog(true)
+end
+function question_game:setup_result(type)
+   give_info(question_game_q_s)
+   question_game_q_available=question_game_q_available-1
+   question_game_stage="answer_accepted"
+   if type=="correct" then
+      self:show_result(game.translate_string(get_random_string(question_game_correct_answer_descr)))
+      question_game_correct_series=question_game_correct_series+1
+   elseif type=="wrong" then
+      self:show_result(game.translate_string(get_random_string(question_game_wrong_answer_descr)))
+      question_game_correct_series=0
+   end
+end
+function question_game:issue_reward_money()
+   question_game_reward_money=question_game_reward_money+self:get_question(question_game_q_s,"cost")
+end
+function question_game:btn_answer_a()
+   if question_game_correct=="a" then
+      self:setup_result("correct")
+      self:issue_reward_money()
+   else
+      self:setup_result("wrong")
+   end
+end
+function question_game:btn_answer_b()
+   if question_game_correct=="b" then
+      self:setup_result("correct")
+      self:issue_reward_money()
+   else
+      self:setup_result("wrong")
+   end
+end
+function question_game:btn_answer_c()
+   if question_game_correct=="c" then
+      self:setup_result("correct")
+      self:issue_reward_money()
+   else
+      self:setup_result("wrong")
+   end
+end
+function question_game:btn_answer_d()
+   if question_game_correct=="d" then
+      self:setup_result("correct")
+      self:issue_reward_money()
+   else
+      self:setup_result("wrong")
+   end
+end
+function question_game:select_random_question()
+   local min_q,max_q=1,question_game_q_count
+   local rnd_q="q_"..string.sub(level.name(),1,1).."_cell_"..math.random(min_q,max_q)
+   for k,v in pairs(question_q_table) do
+      if k~=nil and k==rnd_q and dont_has_alife_info(k) then
+         question_game_q_s=k
+         question_game_q_h_f=true
+      end
+   end
+   if question_game_q_h_f==false then
+      if question_game_q_available>0 and to_string(check_section_condlist(question_game_ini,rnd_q,"cond","true"))=="false" then
+         self:select_random_question()
+      end
+   end
+end
+function question_game:select_random_advice()
+   local min_a,max_a=1,question_game_a_count
+   local rnd_a="a_"..string.sub(level.name(),1,1).."_cell_"..math.random(min_a,max_a)
+   for k,v in pairs(question_a_table) do
+      if k~=nil and k==rnd_a and dont_has_alife_info(k) then
+         question_game_a_s=k
+         question_game_a_h_f=true
+      end
+   end
+   if question_game_a_h_f==false then
+      if question_game_a_available>0 and to_string(check_section_condlist(question_game_ini,rnd_a,"cond","true"))=="false" then
+         self:select_random_advice()
+      end
+   end
+end
+function question_game:btn_start_game()
+   if question_game_q_available>0 then
+      question_game_stage="begin"
+      question_game_question_descr=self:get_question(question_game_q_s,"question")
+      question_game_answer_a=self:get_question(question_game_q_s,"var_a")
+      question_game_answer_b=self:get_question(question_game_q_s,"var_b")
+      question_game_answer_c=self:get_question(question_game_q_s,"var_c")
+      question_game_answer_d=self:get_question(question_game_q_s,"var_d")
+      question_game_correct=self:get_question(question_game_q_s,"correct")
+      question_game_q_h_f=false
+   else
+      self:show_message("st_question_game_less_available_text")
+   end
+end
+function question_game:btn_continue_game()
+   if question_game_q_available>0 then
+      question_game_question_number=question_game_question_number+1
+      question_game_stage="next_question"
+      question_game_question_descr=self:get_question(question_game_q_s,"question")
+      question_game_answer_a=self:get_question(question_game_q_s,"var_a")
+      question_game_answer_b=self:get_question(question_game_q_s,"var_b")
+      question_game_answer_c=self:get_question(question_game_q_s,"var_c")
+      question_game_answer_d=self:get_question(question_game_q_s,"var_d")
+      question_game_correct=self:get_question(question_game_q_s,"correct")
+      question_game_q_h_f=false
+   else
+      self:show_message("st_question_game_less_available_text")
+   end
+end
+function question_game:parse_questions()
+   local par_cond="true"
+   local par_question=""
+   local par_var_a=""
+   local par_var_b=""
+   local par_var_c=""
+   local par_var_d=""
+   local par_correct=""
+   local par_cost=-1
+   local n = question_game_ini:line_count("questions_"..level.name())
+   question_game_q_count=n
+   for i=0,n-1 do
+      local result, id, value = question_game_ini:r_line("questions_"..level.name(),i,"","")
+      if question_game_ini:section_exist(id) then
+         local items_count = question_game_ini:line_count(id)
+         local item_section = ""
+         for i=0,items_count-1 do
+            result, item_section, str = question_game_ini:r_line(id,i,"","")
+            if item_section=="cond" then
+               par_cond=to_string(check_section_condlist(question_game_ini,id,"cond","false"))
+            elseif item_section=="question" then
+               par_question=game.translate_string(str)
+            elseif item_section=="var_a" then
+               par_var_a=game.translate_string(str)
+            elseif item_section=="var_b" then
+               par_var_b=game.translate_string(str)
+            elseif item_section=="var_c" then
+               par_var_c=game.translate_string(str)
+            elseif item_section=="var_d" then
+               par_var_d=game.translate_string(str)
+            elseif item_section=="correct" then
+               par_correct=str
+            elseif item_section=="cost" then
+               par_cost=to_number(check_section_condlist(question_game_ini,id,"cost",10))
+            end
+         end
+         if par_cond=="true" and ((question_q_table[id]==nil or question_q_table[id].question==nil) or (question_q_table[id]~=nil and question_q_table[id].question==nil)) then
+            question_q_table[id]={}
+            if par_question=="" then
+               question_q_table[id].question=game.translate_string("st_"..id.."_descr")
+            else
+               question_q_table[id].question=par_question
+            end
+            if par_var_a=="" then
+               question_q_table[id].var_a=game.translate_string("st_"..id.."_a")
+            else
+               question_q_table[id].var_a=par_var_a
+            end
+            if par_var_b=="" then
+               question_q_table[id].var_b=game.translate_string("st_"..id.."_b")
+            else
+               question_q_table[id].var_b=par_var_b
+            end
+            if par_var_c=="" then
+               question_q_table[id].var_c=game.translate_string("st_"..id.."_c")
+            else
+               question_q_table[id].var_c=par_var_c
+            end
+            if par_var_d=="" then
+               question_q_table[id].var_d=game.translate_string("st_"..id.."_d")
+            else
+               question_q_table[id].var_d=par_var_d
+            end
+            if par_correct=="" then
+               question_q_table[id].correct="a"
+            else
+               question_q_table[id].correct=par_correct
+            end
+            if par_cost==-1 then
+               question_q_table[id].cost=10
+            else
+               question_q_table[id].cost=par_cost
+            end
+         end
+      end
+   end
+   self:consider_available_questions()
+end
+function question_game:consider_available_questions()
+   for k,v in pairs(question_q_table) do
+      if k~=nil and dont_has_alife_info(k) then
+         question_game_q_available=question_game_q_available+1
+      end
+   end
+end
+function question_game:parse_advices()
+   local par_cond="true"
+   local par_advice=""
+   local par_items=nil
+   local par_reward_money=-1
+   local n = question_game_ini:line_count("advices_"..level.name())
+   question_game_a_count=n
+   for i=0,n-1 do
+      local result, id, value = question_game_ini:r_line("advices_"..level.name(),i,"","")
+      if question_game_ini:section_exist(id) then
+         local items_count = question_game_ini:line_count(id)
+         local item_section = ""
+         for i=0,items_count-1 do
+            result, item_section, str = question_game_ini:r_line(id,i,"","")
+            if item_section=="cond" then
+               par_cond=to_string(check_section_condlist(question_game_ini,id,"cond","false"))
+            elseif item_section=="advice" then
+               par_advice=game.translate_string(str)
+            elseif item_section=="reward_money" then
+               par_reward_money=to_number(check_section_condlist(question_game_ini,id,"reward_money",500))
+            elseif item_section=="items" then
+               par_items=str
+            end
+         end
+         if par_cond=="true" and ((question_a_table[id]==nil or question_a_table[id].advice==nil) or (question_a_table[id]~=nil and question_a_table[id].advice==nil)) then
+            question_a_table[id]={}
+            if par_advice=="" then
+               question_a_table[id].advice=game.translate_string("st_"..id.."_descr")
+            else
+               question_a_table[id].advice=par_advice
+            end
+            if par_reward_money==-1 then
+               question_a_table[id].reward_money=500
+            else
+               question_a_table[id].reward_money=par_reward_money
+            end
+            local place_param=check_section_comma(question_game_ini,id,"place",nil,5)
+            question_a_table[id].place_x=tonumber(place_param[1])
+            question_a_table[id].place_y=tonumber(place_param[2])
+            question_a_table[id].place_z=tonumber(place_param[3])
+            question_a_table[id].place_lv=tonumber(place_param[4])
+            question_a_table[id].place_gv=tonumber(place_param[5])
+            question_a_table[id].items=par_items
+         end
+      end
+   end
+   self:consider_available_advices()
+end
+function question_game:consider_available_advices()
+   for k,v in pairs(question_a_table) do
+      if k~=nil and dont_has_alife_info(k) then
+         question_game_a_available=question_game_a_available+1
+      end
+   end
+end
+function question_game:get_question(section_id,param)
+   if question_q_table[section_id]~=nil and question_q_table[section_id][param]~=nil then
+      return question_q_table[section_id][param]
+   end
+   return "nil"
+end
+function question_game:get_advice(section_id,param)
+   if question_a_table[section_id]~=nil and question_a_table[section_id][param]~=nil then
+      return question_a_table[section_id][param]
+   end
+   return "nil"
+end
+function question_game:btn_manual()
+   self:show_message("st_question_game_manual_text")
+end
+------------------------------------------------------------------------------
+--                       Загрузчик информационных блоков                    --
+------------------------------------------------------------------------------
+local information_control = nil
+class "information_block" (CUIScriptWnd)
+function information_block:__init() super()
+   self:SetWndRect(Frect():set(0,0,1024,768))
+   self.information_mb=CUIMessageBoxEx()
+   self:Register(self.information_mb,"information_mb")
+   self:AddCallback("information_mb",ui_events.MESSAGE_BOX_OK_CLICKED,self.OnMsgOk,self)
+   self:AddCallback("information_mb",ui_events.MESSAGE_BOX_YES_CLICKED,self.OnMsgYes,self)
+   self:AddCallback("information_mb",ui_events.MESSAGE_BOX_NO_CLICKED,self.OnMsgNo,self)
+end
+function information_block:Show(mb_type,reason_type,text,extra_value)
+   if mb_type=="yes_or_no" or mb_type=="no_or_yes" then
+      self.information_mb:InitMessageBox("message_box_yes_no")
+   else
+      self.information_mb:InitMessageBox("message_box_ok")
+   end
+   self.information_mb:SetText(text)
+   self.information_mb:ShowDialog(true)
+   self.reason_type=reason_type
+   if extra_value~=nil then
+      self.extra_value=extra_value
+   end
+   if reason_type=="level_change" then
+      set_ui_disabled()
+   end
+end
+function information_block:OnMsgOk()
+   if self.reason_type=="level_change" then
+      set_ui_worked()
+      bool_travel_level_change=false
+      bool_throw_level_change=true
+   end
+   if self.reason_type=="remove_bad_outfit" then
+      remove_item_from_slot(db.actor,7)
+   end
+   self:block_select()
+end
+function information_block:OnMsgYes()
+   if self.reason_type=="level_change" then
+      set_ui_worked()
+      bool_travel_level_change=true
+   end
+   if self.reason_type=="remove_bad_outfit" then
+      remove_item_from_slot(db.actor,7)
+   end
+   self:block_select()
+end
+function information_block:OnMsgNo()
+   if self.reason_type=="level_change" then
+      set_ui_worked()
+      bool_travel_level_change=false
+      bool_throw_level_change=true
+   end
+   self:block_select()
+end
+function information_block:block_select()
+end
+function information_block_show(mb_type,reason_type,text,extra_value)
+   if information_control==nil then
+      information_control=ui_mod_elements.information_block()
+   end
+   information_control:Show(mb_type,reason_type,text,extra_value)
+end
+
+--------------------------------------------------------------------------------------------------------
+
+-- 'Обьект живой.
+function object_alive(victim)
+   if victim:alive()==true then 
+      return true 
+   end
+   return false
+end
+-- 'Обьект живой.
+function object_exists(obj,is_live)
+   return level.present() and obj~=nil and (is_live==false or ((is_live==nil or is_live==true) and obj:alive()==true))
+end
+-- 'Установка отсутствия UI.
+function set_ui_disabled()
+   bool_is_ui_disabled=true
+end
+-- 'Установка присутствия UI.
+function set_ui_worked()
+   bool_is_ui_disabled=false
+end
+-- 'Запуск окошка, в котором нужно нажимать кнопки Да:Нет:Ок.
+function run_choose_box(type,reason,text,extra_value)
+   if object_exists(db.actor) and device().precache_frame==0 and (not db.actor:is_talking()) then
+      ui_mod_elements.information_block_show(type,reason,text,extra_value)
+   end
+end
+-- 'Удалить предмет обьекта, из слота.
+function remove_item_from_slot(victim,slot_number)
+   if victim:item_in_slot(tonumber(slot_number))~=nil then
+      remove_object_by_id(victim:item_in_slot(tonumber(slot_number)):id())
+   end
+end
+-- 'Случайный выбор значения из переменной.
+function get_random_line(line)
+    line_table=parse_general_names(line)
+    return get_random_string(line_table)
+end
+-- 'Парсинг значений разделённых запятыми в таблицу. 
+function parse_general_names(s)
+   local t = {}
+   for name in string.gfind(s,"([%w_\\]+)%p*") do
+      local w_name=parse_codicil(name)
+      if avail_codicil(name)==true then table.insert(t,w_name) end
+   end
+   return t
+end
+function parse_codicil(name)
+   if find_out_string(name,"silencer") then
+      if find_in_string(name,"45x39_") or find_in_string(name,"56x45_") or find_in_string(name,"7x28_") then
+         return "ammo_5."..name
+      elseif find_in_string(name,"62x54_") or find_in_string(name,"62x51_") then
+         return "ammo_7."..name
+      elseif find_in_string(name,"43x23_") then
+         return "ammo_11."..name
+      elseif find_in_string(name,"7x99_") then
+         return "ammo_12."..name
+      end
+   else
+      if find_in_string(name,"45x39") or find_in_string(name,"56x45") then
+         return "wpn_addon_silencer_5."..name
+      elseif find_in_string(name,"43x23") then
+         return "wpn_addon_silencer_11."..name
+      end
+   end
+   if find_in_string(name,"7b") then
+      return "ammo_og-"..name
+   elseif find_in_string(name,"6") and find_out_string(name,"_") then
+      return "wpn_rg-"..name
+   elseif find_in_string(name,"05_lighting") then
+      return "grenade_gd-"..name
+   elseif find_in_string(name,"05_double") then
+      return "grenade_gd-"..name
+   elseif find_in_string(name,"05") and find_out_string(name,"_") then
+      return "grenade_gd-"..name
+   elseif find_in_string(name,"25") and find_out_string(name,"_") then
+      return "ammo_vog-"..name
+   end
+   return name
+end
+-- 'Присутствие в названии строки.
+function find_in_string(where,what)
+   if where~=nil and what~=nil and string.find(where,what) then 
+      return true
+   elseif where==nil or what==nil then 
+      return nil
+   end
+   return false
+end
+-- 'Случайный выбор строки из таблицы.
+function get_random_string(tbl)
+    return tbl[math.random(table.getn(tbl))]
+end
+-- 'Отсутствие в названии строки.
+function find_out_string(where,what)
+   if where~=nil and what~=nil and string.find(where,what) then 
+      return false
+   elseif where==nil or what==nil then 
+      return nil
+   end
+   return true
+end
+-- 'Пропуск функции parse_general_names через фильтр, потому как эта функция считывает точку как запятую.
+function avail_codicil(name)
+   if (find_in_string(name,"ammo_5") or find_in_string(name,"ammo_7") or find_in_string(name,"ammo_11") or find_in_string(name,"ammo_12") or find_in_string(name,"grenade_gd") or find_in_string(name,"ammo_og") or find_in_string(name,"ammo_vog") or (find_in_string(name,"wpn_rg") and find_out_string(name,"rgd"))) and find_out_string(name,"12x7") then 
+      return false
+   end
+   return true
+end
+-- 'Случайное число
+function get_rnd(v1,v2)
+   if v1==nil and v2==nil then v1,v2=1,2 end
+   local rnd_value=math.random(v1,v2)
+   return rnd_value
+end
+-- 'Считывать главные опции.
+function r_mod_params(val_type,target_string,default_value,use_action)
+   return get_params_by_section("mod_parameters\\mod_params.ltx","mod_params",val_type,target_string,default_value,use_action)
+end
+-- 'Фунция чтения параметров с конфигов.
+function get_params_by_section(ini_name,section,val_type,target_string,default_value,use_action)
+   local ini,line=ini_file(ini_name),section
+   if val_type=="number" then
+      if ini:line_exist(line,target_string) then
+         if use_action==nil or use_action=="nil" then
+            return ini:r_float(line,target_string)
+         elseif use_action=="floor" then
+            return ini:r_float(line,target_string)/100
+         elseif use_action=="multiply" then
+            return ini:r_float(line,target_string)*100
+         end
+      else
+         if use_action==nil or use_action=="nil" then
+            return default_value
+         elseif use_action=="floor" then
+            return default_value/100
+         elseif use_action=="multiply" then
+            return default_value*100
+         end
+      end
+   elseif val_type=="string" then
+      if ini:line_exist(line,target_string) then
+         if use_action==nil or use_action=="nil" then
+            return ini:r_string(line,target_string)
+         elseif use_action=="floor" then
+            return ini:r_string(line,target_string)/100
+         elseif use_action=="multiply" then
+            return ini:r_string(line,target_string)*100
+         end
+      else
+         if use_action==nil or use_action=="nil" then
+            return default_value
+         elseif use_action=="floor" then
+            return default_value/100
+         elseif use_action=="multiply" then
+            return default_value*100
+         end
+      end
+   elseif val_type=="bool" then
+      if ini:line_exist(line,target_string) then
+         if use_action==nil or use_action=="nil" then
+            return ini:r_bool(line,target_string)
+         elseif use_action=="floor" then
+            return ini:r_bool(line,target_string)/100
+         elseif use_action=="multiply" then
+            return ini:r_bool(line,target_string)*100
+         end
+      else
+         if use_action==nil or use_action=="nil" then
+            return default_value
+         elseif use_action=="floor" then
+            return default_value/100
+         elseif use_action=="multiply" then
+            return default_value*100
+         end
+      end
+   else
+      return 0
+   end
+end
+-- 'Работа с электронными деньгами.
+function relocate_web_money(num,type,with_news,show_time)
+   local web_money=read_mod_param("actor_web_money")
+   if web_money==nil then web_money=0 end
+   if db.actor then
+      if type == "in" then
+         write_mod_param("actor_web_money",web_money+num)
+      elseif type == "out" then
+         write_mod_param("actor_web_money",web_money-num)
+      end
+      if with_news==nil or with_news==true then
+         news_relocate_web_money(db.actor,type,num,show_time)
+      end
+   end
+end
+-- 'Чтение глобальной переменной.
+function read_mod_param(variable_name,safe)
+   if table_mod_data_actor[variable_name]~=nil then
+      return table_mod_data_actor[variable_name]
+   elseif safe==true then
+      return 0
+   else
+      return nil
+   end
+end
+function info_get_boolean(info,inversion)
+   if info~=nil then
+      if has_alife_info(info) then
+         if inversion==true then
+            result=false
+         else
+            result=true
+         end
+      else
+         if inversion==true then
+            result=true
+         else
+            result=false
+         end
+      end
+   end
+   return result
+end
+function info_give_on_boolean(value,info,inversion)
+   if value~=nil and info~=nil then
+      if value==true then
+         if inversion==true then
+            disable_info(info)
+         else
+            give_info(info)
+         end
+      else
+         if inversion==true then
+            give_info(info)
+         else
+            disable_info(info)
+         end
+      end
+   end
+end
+-- 'Запись глобальной переменной в таблицу, из которой эти данные потом перекочуют в файл.
+function write_mod_param(variable_name,variable_value)
+   table_mod_data_actor[variable_name]=variable_value
+end
+function news_relocate_web_money(actor,type,amount,show_time)
+        local show_value=3000
+        if exists(show_time) then
+           show_value=show_time
+        end
+	if db.actor == nil then return false end
+	if type == "in" then
+		local news_caption = st_in_web_money
+		local news_text = game.translate_string(tostring(amount))
+		if db.actor:is_talking() then
+			db.actor:give_talk_message2(news_caption, news_text, "ui_inGame2_Dengi_polucheni", "iconed_answer_item")
+		else
+			db.actor:give_game_news(news_caption, news_text, "ui_inGame2_Dengi_polucheni", 0, show_value)
+		end
+	elseif type == "out" then
+		local news_caption = game.translate_string("st_out_web_money")
+		local news_text = game.translate_string(tostring(amount))
+		if db.actor:is_talking() then
+			db.actor:give_talk_message2(news_caption, news_text, "ui_inGame2_Dengi_otdani", "iconed_answer_item")
+		else
+			db.actor:give_game_news(news_caption, news_text, "ui_inGame2_Dengi_otdani", 0, show_value)
+		end
+	end
+end
+-- 'Проверка на адекватность значения.
+function exists(val)
+   return val~=nil and val~="nil"
+end

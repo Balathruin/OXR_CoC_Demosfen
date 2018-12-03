@@ -1,0 +1,144 @@
+local item_fx = actor_effects_data.item_fx
+-- Играем звук в голове ГГ
+function play_sound(snd)
+	if snd then
+		local snd_obj = xr_sound.get_safe_sound_object(snd)
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+	end
+end
+-- Чтение actor переменной
+function read_variable(params_name)
+	return pstor_retrieve(db.actor, params_name)
+end
+
+function eatmatches()
+	local item = db.actor:object("matches")
+	db.actor:eat(item)
+end
+-- Запись actor переменной
+function write_variable(params_name, value)
+	if not value then
+		pstor_clear(db.actor, params_name)
+	else
+		pstor_store(db.actor, params_name, value)
+	end
+end
+-- Инициализация actor переменной
+function set_safe_variable(variable_name, val)
+	if not read_variable(variable_name) then
+		if not val then
+			write_variable(variable_name, 0)
+		else
+			write_variable(variable_name, val)
+		end
+	end
+end
+
+-- Системные функции
+function actor_on_item_use(item)
+	local actor = db.actor
+	local actor_faction = character_community(actor)
+	
+	if item:section() == 'drug_anabiotic'
+	and surge_manager.is_started()
+	and surge_manager.get_surge_manager().actor_in_cover then
+	if level.name() == 'l08_yantar' 
+	or level.name() == 'l10_radar' then
+			if actor_faction == "actor_zombied"
+			or actor_faction == "actor_monolith" then
+				actor:set_character_community("actor_stalker", 0, 0)	-- сменить группировку на сталкера
+				news_manager.send_tip(db.actor, "%c[0,255,64,0]Обратный процесс зомбирования прошел успешно", nil, nil, nil, nil)
+				xr_sound.set_sound_play(db.actor:id(), "pda_news")
+				game_relations.set_community_goodwill_for_faction("actor_stalker")
+			end
+		end
+	end
+end
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_item_use",actor_on_item_use) 
+	RegisterScriptCallback("actor_on_update",actor_on_update)
+end
+ 
+function actor_on_update()	
+	local actor = db.actor
+	local actor_faction = character_community(actor)
+	local actor_reputation = actor:character_reputation()
+	local tg = time_global()
+	local last_update
+	
+	if not last_update then last_update = tg + 1000 end
+	
+	if last_update < tg then return end 
+	
+	last_update = tg + 1000
+	
+	if(actor_faction == "actor_stalker" and actor_reputation <= -2500) or
+	   (actor_faction == "actor_ecolog" and actor_reputation <= -2500) or
+	   (actor_faction == "actor_dolg" and actor_reputation <= -2500) or
+	   (actor_faction == "actor_freedom" and actor_reputation <= -2500) or
+	   (actor_faction == "actor_csky" and actor_reputation <= -2500) or
+	   (actor_faction == "actor_killer" and actor_reputation <= -2500) or
+	   (actor_faction == "actor_ecolog" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_bandit", 0, 0)	-- сменить группировку на бандита
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из своей группировки!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из своей группировки!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_bandit")
+	end
+--[[**************************************************************************************************************
+	if(actor_faction == "actor_ecolog" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_bandit", 0, 0)	-- сменить группировку на бандита
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из клана 'экологов!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из клана экологов!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_bandit")
+		return
+	end
+--**************************************************************************************************************
+	if(actor_faction == "actor_bandit" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_stalker", 0, 0)	-- сменить группировку на одиночек
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из клана бандитов!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из клана бандитов!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_stalker")
+		return
+	end
+--**************************************************************************************************************
+	if(actor_faction == "actor_dolg" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_freedom", 0, 0)	-- сменить группировку на свободу
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из клана долга!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из клана долга!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_freedom")
+		return
+	end
+--**************************************************************************************************************
+	if(actor_faction == "actor_freedom" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_dolg", 0, 0)	-- сменить группировку на долг
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из клана свободы!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из клана свободы!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_dolg")
+		return
+	end
+--**************************************************************************************************************
+	if(actor_faction == "actor_killer" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_stalker", 0, 0)	-- сменить группировку на одиночек
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из клана наёмников!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из клана наёмников!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_stalker")
+		return
+	end
+--**************************************************************************************************************
+	if(actor_faction == "actor_csky" and actor_reputation <= -2500) then
+		actor:set_character_community("actor_bandit", 0, 0)	-- сменить группировку на бандита
+		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из клана чистого неба!", nil, nil, nil, nil)
+		SetHudMsg(game.translate_string("Вы выгнаны из клана чистого неба!"),5)
+		xr_sound.set_sound_play(db.actor:id(), "pda_news")
+		game_relations.set_community_goodwill_for_faction("actor_bandit")
+		return
+	end
+--**************************************************************************************************************]]
+end

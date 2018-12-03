@@ -932,7 +932,124 @@ animations = {
 										out		= nil,
 										idle	= nil,
 										rnd		= nil},
+	prisyad	= {
+		prop	= {maxidle = 1, sumidle = 1, rnd = 100, moving = true },
+		into	= nil,
+		out		= nil,
+		idle	= {	[0]	= "prisyad" },
+		rnd		= nil 
+	},
+	
+	otzhiman	= {
+		prop	= {maxidle = 1, sumidle = 1, rnd = 100, moving = true },
+		into	= {[0]	= {"otzhim_in"}},
+		out		= {[0]	= {"otzhim_out"}},
+		idle	= {[0]	= "otzhim" },
+		rnd		= nil
+	},	
+	
+	animpoint_stay_bar_0 = {	
+		prop = { maxidle = 1, sumidle = 1, rnd = 100, moving = true },
+		into	= { [0] = { "bar_0_idle_in" },
+					[1] = { "bar_0_idle_in" }},
+		out		= { [0] = { "bar_0_idle_out" },
+					[1] = { "bar_0_idle_out" }},
+		idle	= { [0]	= "bar_0_idle_0",
+					[1]	= "bar_0_idle_0" },
+		rnd		= {{[0]	= "bar_0_idle_1"},
+				   {[1]	= "bar_0_idle_2"},
+				   {[2]	= "bar_0_idle_3"}}},
+		
+	animpoint_stay_bar_2 = {	
+		prop = { maxidle = 1, sumidle = 1, rnd = 100, moving = true },
+		into	= { [0] = { "bar_2_idle_in" },
+					[1] = { "bar_2_idle_in" }},
+		out		= { [0] = { "bar_2_idle_out" },
+					[1] = { "bar_2_idle_out" }},
+		idle	= { [0]	= "bar_2_idle_0",
+					[1]	= "bar_2_idle_0" },
+		rnd		= nil},	
+		
+	stay_smirno	= {
+		prop	= { maxidle = 1, sumidle = 1, rnd = 100, moving = true },
+		into	= {	[0]	= {"chest_0_idle_0"}},
+		out		= {	[0]	= {"chest_0_idle_1"}},
+		idle	= {	[0]	= "chest_0_idle_3" },
+		rnd		= nil
+	},		
+	
+	smoking_stand = {
+		prop	= { maxidle = 3, sumidle = 3, rnd = 80 },
+		into	=  {[0]	= {"stoya_kurit_in1",  {a="sigaret_for_nps"}, "stoya_kurit_in2"}},
+		out 	=  {[0]	= {"stoya_kurit_out1", {d="sigaret_for_nps"}, "stoya_kurit_out2"}},
+		idle	=  {[0]	= "stoya_kurit_idle"},
+		rnd		=  {[0]	= {"stoya_kurit_1", "stoya_kurit_2"}}
+	},
+	
+	use_pda	= {
+		prop	= { maxidle = 3, sumidle = 3, rnd = 80 },
+		into	=  {[0]	= {"item_5_draw_1_0", {a="pda_for_nps"}, "item_5_draw_1_1"}},
+		out		=  {[0]	= {"item_5_holster_1_0", {d="pda_for_nps"}, "item_5_holster_1_1"}},
+		idle	=  {[0]	= "item_5_aim_1_0" },
+		rnd		=  {[0]	= {"item_5_prepare_1_0", "item_5_attack_1_0"}}
+	},
+	
+	drunk_behindwall = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into = {[0] = {"drink_idle_5_0"}}, 
+		out = nil, 
+		idle = {[0] = "drink_idle_5_0"},
+		rnd = nil
+	},	
+	
+	drunk_walkeasy = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into = {[0] = {"drunk_walk_0"}}, 
+		out = nil, 
+		idle = nil,
+		rnd = nil
+	},
+	
+	ispug = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into	= {[0]	= {"ispug_0"}},
+		out		= {[0]	= {"ispug_3"}},
+		idle	= {[0]	= "ispug_1"},
+		rnd		= {[0]	= {"ispug_2" }},	
+	},	
+	
+	drunk_walkhard = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into = nil, 
+		out = nil, 
+		idle = {[0]	= "drunk"},
+		rnd = nil
+	},	
+	
+	drunk_stand_table_2 = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into = {[0]	= {"drink_idle_3_0"}}, 
+		out =  nil, 
+		idle = {[0]	= "drink_idle_3_1"},
+		rnd = nil
+	},	
+	
+	smeh = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into = {[0]	= {"smeh"}}, 
+		out = nil, 
+		idle = nil,
+		rnd = nil
+	},	
+	
+	drink_vodka_stand = {
+		prop = {maxidle = 3, sumidle = 3, rnd = 100}, 
+		into = {[0]	= {"stoya_flyachka_in"}}, 
+		out = {[0]	= {"stoya_flyachka_out"}}, 
+		idle = {[0]	= "stoya_flyachka_idle"},
+		rnd = nil
 	}
+}
 
 utils.copy_table(animations, state_mgr_animation_list_animpoint.add_animation_list())
 utils.copy_table(animations, state_mgr_scenario.add_animation_list())

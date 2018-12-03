@@ -111,18 +111,34 @@ function generic_object_binder:update(delta)
 	SendScriptCallback("monster_on_update",self.object,self.st)
 	-- End [Alundaio]
 
+--mlr and Romann
+
 	if not (self.object:alive()) then
+		local function is_equipped()	
+			if (db.actor) then
+				local obj = db.actor:active_item()
+				if (obj) then
+					return(string.match(tostring(obj:section()),"knife"))
+				end
+			end
+			return false
+		end
 		local looted = utils.se_obj_load_var(self.object:id(),self.object:name(),"looted")
-		if not (looted) then
+		if not looted and is_equipped() then
 			self.object:set_callback(callback.use_object, self.use_callback, self)
 			self.object:set_tip_text("st_screen_field_dress")
+		elseif not looted and not is_equipped() then
+			self.object:set_tip_text(game.translate_string("st_dont_has_knife"))
+			self.object:set_callback(callback.use_object, nil)
 		else
 			self.object:set_callback(callback.use_object, nil)
 			self.object:set_tip_text("")
 		end
 		return
 	end
-	
+--mlr and Romann
+
+
 	local id = self.object:id()
 	local sim = alife()
 	local se_obj = sim:object(id)
@@ -149,6 +165,11 @@ function generic_object_binder:update(delta)
 
 	local enemy = self.object:get_enemy()
 	if (cls == clsid.controller_s) then
+		self:psy_influence_radius(enemy)
+	end
+		
+	local enemy = self.object:get_enemy()
+	if (cls == clsid.oasis_s) then
 		self:psy_influence_radius(enemy)
 	end
 		
@@ -285,7 +306,7 @@ function generic_object_binder:death_callback(victim, who)
 	victim:set_callback(callback.hit,nil)
 	victim:set_callback(callback.sound,nil)
 	
-	if (victim:clsid() == clsid.poltergeist_s) then
+	if (victim:clsid() == clsid.poltergeist_s) or (victim:section() == "komar") then
 		local se_obj = alife_object(id)
 		if (se_obj) then
 			--alife():release(se_obj, true)
@@ -312,7 +333,7 @@ function generic_object_binder:hit_callback(obj, amount, local_direction, who, b
 	end
 	-- Romann
 	if (amount > 0) or (db.gwr~=nil) and (db.gwr["meatgrinder_monsters"]==true) then
-		printf("HIT_CALLBACK: %s amount=%s bone=%s who:id() = [%s] actor:id() = [%s]", obj:name(), amount, tostring(bone_index), who:id(), db.actor:id())
+--		printf("HIT_CALLBACK: %s amount=%s bone=%s who:id() = [%s] actor:id() = [%s]", obj:name(), amount, tostring(bone_index), who:id(), db.actor:id())
 			gwr_meatgrinder.main("monster", amount, local_direction, who, 1, obj) 
 	end
 	-- Romann
@@ -360,7 +381,7 @@ function generic_object_binder:net_spawn(se_abstract)
 	
 	db.add_obj(self.object)
 	if not self.object:alive() then
-		if (self.object:clsid() == clsid.poltergeist_s) then
+		if (self.object:clsid() == clsid.poltergeist_s) or (self.object:section() == "komar") then
 			safe_release_manager.release(se_obj)
 			return true
 		end

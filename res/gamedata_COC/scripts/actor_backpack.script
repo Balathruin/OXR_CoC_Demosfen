@@ -13,8 +13,21 @@ function on_key_release(key)
 		if not (backpack) then 
 			return 
 		end
-		
-		local se_obj = alife():create("inv_actor_backpack",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id())
+-------------------------------sinaps start
+		local backpacks = {
+		["equ_backpack"]      = "inv_backpack",
+		["equ_small_pack"]    = "inv_backpack_small",
+		["equ_military_pack"] = "inv_backpack_military",
+		["equ_tourist_pack"]  = "inv_backpack_tourist",
+		["equ_dolg_pack"]     = "inv_backpack_dolg",
+		["equ_free_pack"]     = "inv_backpack_free",
+		["equ_csky_pack"]     = "inv_backpack_csky",
+		["equ_merc_pack"]     = "inv_backpack_merc",
+		}
+
+		local sec = backpacks[backpack:section()]
+-------------------------------sinaps end
+		local se_obj = alife():create(sec,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id())
 		if (se_obj) then
 			local txt = strformat(game.translate_string("st_itm_stash_of_character"), db.actor:character_name())
 			level.map_add_object_spot_ser(se_obj.id, "treasure_player", txt)
@@ -167,7 +180,21 @@ function actor_backpack_ui:InitCallBacks()
 end
 
 function actor_backpack_ui:OnAccept()
-	local se_obj = alife():create("inv_actor_backpack",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id())
+-------------------------------sinaps start
+		local backpacks = {
+		["equ_backpack"]      = "inv_backpack",
+		["equ_small_pack"]    = "inv_backpack_small",
+		["equ_military_pack"] = "inv_backpack_military",
+		["equ_tourist_pack"]  = "inv_backpack_tourist",
+		["equ_dolg_pack"]     = "inv_backpack_dolg",
+		["equ_free_pack"]     = "inv_backpack_free",
+		["equ_csky_pack"]     = "inv_backpack_csky",
+		["equ_merc_pack"]     = "inv_backpack_merc",
+		}
+
+	local sec = backpacks[self.section]
+-------------------------------sinaps end
+	local se_obj = alife():create(sec,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id())
 	if (se_obj) then
 		local txt = self.input:GetText()
 		txt = txt ~= "" and txt or strformat(game.translate_string("st_itm_stash_of_character"), db.actor:character_name())
@@ -178,7 +205,7 @@ function actor_backpack_ui:OnAccept()
 		if not (m_data.player_created_stashes) then 
 			m_data.player_created_stashes = {}
 		end
-		
+
 		m_data.player_created_stashes[se_obj.id] = self.section
 		
 		local se_backpack = alife_object(self.id)

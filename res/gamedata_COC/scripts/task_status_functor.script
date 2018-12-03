@@ -1,3 +1,158 @@
+--mlr
+function special_steps_for_mlr_tasks(tsk,task_id)
+	if not (db.actor) then 
+		return 
+	end
+	if (task_id == "baraholka_trader_task_1") then 
+		if not has_alife_info("baraholka_trader_task_1_done") then 
+			tsk.stage = 0
+		elseif has_alife_info("baraholka_trader_task_1_done") then
+			tsk.stage = 1			
+		end
+	end 	
+	if (task_id == "job_guide_main_task") then 
+		local squad = alife_object(jg_guider.curr_guid.squad_id) 
+		local dist = jg_guider.curr_guid.target_level == level.name() and squad.position:distance_to(alife_object(jg_guider.curr_guid.id_smart).position)
+		if dist and dist >= 50 then 
+			tsk.stage = 0 
+		elseif dist and dist <= 49 then 
+		tsk.stage = 1
+		end 
+	end
+	if (task_id == "mil_freedom_barman_mlr_task_1") then 
+		if not has_alife_info("mil_freedom_barman_mlr_task_1_wait") then 
+			tsk.stage = 0
+		elseif has_alife_info("mil_freedom_barman_mlr_task_1_wait") and not has_alife_info("mil_freedom_barman_mlr_task_1_wait_1") then
+		give_info("mil_freedom_barman_mlr_task_1_wait_1")
+			tsk.stage = 1	
+		elseif has_alife_info("mil_freedom_barman_mlr_task_1_end") then	
+			tsk.stage = 2			
+		end
+	end 	
+	if (task_id == "esc_3_16_military_trader_task_3") then 
+		if not has_alife_info("pseudodog_esc_3_16_military_trader_task_3_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("pseudodog_esc_3_16_military_trader_task_3_death") then
+			tsk.stage = 1
+		end
+	end 	
+	if (task_id == "mar_smart_terrain_base_stalker_leader_marsh_task_3") then 
+		if not has_alife_info("special_chimera_task_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("special_chimera_task_squad_dead") then
+			tsk.stage = 1
+		end
+	end 
+	if (task_id == "zat_b18_noah_task_2") then 
+		if not has_alife_info("simulation_south_snork_task_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("simulation_south_snork_task_death") then
+			tsk.stage = 1
+		end
+	end 
+	if (task_id == "hunter_gar_trader_task_3") then 
+		if not has_alife_info("burer_firelovers_task_squad_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("burer_firelovers_task_squad_death") then
+			tsk.stage = 1
+		end
+	end 
+	if (task_id == "hunter_gar_trader_task_4") then 
+		if not has_alife_info("zombies_hunter_gar_trader_task_4_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("zombies_hunter_gar_trader_task_4_death") then
+			tsk.stage = 1
+		end
+	end 	
+	if (task_id == "esc_factory_smart_terrain_10_bandit_trader_task_1") then 
+		if not has_alife_info("esc_factory_smart_terrain_10_bandit_trader_task_1_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("esc_factory_smart_terrain_10_bandit_trader_task_1_squad_dead") then
+			tsk.stage = 1
+		end
+	end 		
+	if (task_id == "yan_stalker_sakharov_task_7") then 
+		if not has_alife_info("disgusting_tree_search_1") and not has_alife_info("disgusting_tree_search_2") and not has_alife_info("disgusting_tree_search_3") and not has_alife_info("disgusting_tree_search_4") then 
+			tsk.stage = 0
+		elseif has_alife_info("disgusting_tree_search_1") and has_alife_info("disgusting_tree_search_2") and has_alife_info("disgusting_tree_search_3") and has_alife_info("disgusting_tree_search_4") then
+			tsk.stage = 1
+		end
+	end 
+	if (task_id == "jup_b6_scientist_nuclear_physicist_task_2") then 
+		if not has_alife_info("disgusting_tree_search_1") and not has_alife_info("disgusting_tree_search_2") and not has_alife_info("disgusting_tree_search_3") and not has_alife_info("disgusting_tree_search_4") then 
+			tsk.stage = 0
+		elseif has_alife_info("disgusting_tree_search_1") and has_alife_info("disgusting_tree_search_2") and has_alife_info("disgusting_tree_search_3") and has_alife_info("disgusting_tree_search_4") then
+			tsk.stage = 1
+		end
+	end
+    if (task_id == "bar_visitors_sad_veteran_task_1") then
+        if not has_alife_info("bar_visitors_sad_veteran_friends_use") then
+            tsk.stage = 0   -- труп ещё не лапали
+        elseif has_alife_info("bar_visitors_sad_veteran_friends_use") and not has_alife_info("spawn_controller_task_mlr_trc") then
+            tsk.stage = 1   -- полапали труп, значит заспавнили контрика
+            xr_effects.spawn_object(nil,nil,{"controller_task_mlr_trc","trc_sim_10_controller_spawn_point"})    
+            give_info("spawn_controller_task_mlr_trc")
+        elseif has_alife_info("bar_visitors_sad_veteran_task_controller_death") and has_alife_info("bar_visitors_sad_veteran_friend_2_use") and has_alife_info("bar_visitors_sad_veteran_friend_1_use")then
+            tsk.stage = 2   -- убили и полапали 2-ой труп
+        end
+    end
+	if (task_id == "mil_smart_terrain_7_7_freedom_leader_stalker_task_6") then 
+		if not has_alife_info("freedom_leader_stalker_task_6_duty_squad_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("freedom_leader_stalker_task_6_duty_squad_death") then
+			tsk.stage = 1
+		end
+	end 
+    if (task_id == "border_freedom_keeper_max_task_1") then
+        if not has_alife_info("mil_smart_terrain_4_8_monolith_attackers_squad_wave_1_death") then
+            tsk.stage = 0		
+        elseif has_alife_info("mil_smart_terrain_4_8_monolith_attackers_squad_wave_1_death") and not has_alife_info("spawn_mil_smart_terrain_4_8_monolith_attackers_squad_wave_2") then
+            tsk.stage = 1
+            xr_effects.create_squad(nil,nil,{"mil_smart_terrain_4_8_monolith_attackers_squad_wave_2","mil_smart_terrain_3_8_monolith_side"})    
+            give_info("spawn_mil_smart_terrain_4_8_monolith_attackers_squad_wave_2")
+        elseif has_alife_info("mil_smart_terrain_4_8_monolith_attackers_squad_wave_2_death") and not has_alife_info("spawn_mil_smart_terrain_4_8_monolith_attackers_squad_wave_3") then
+            tsk.stage = 2
+            xr_effects.create_squad(nil,nil,{"mil_smart_terrain_4_8_monolith_attackers_squad_wave_3","mil_smart_terrain_3_8_monolith_side"})    
+            give_info("spawn_mil_smart_terrain_4_8_monolith_attackers_squad_wave_3")
+        elseif has_alife_info("mil_smart_terrain_4_8_monolith_attackers_squad_wave_3_death") then
+            tsk.stage = 3			
+        end
+    end	
+	if (task_id == "zat_b7_bandit_boss_sultan_task_2") then 
+		if not has_alife_info("boss_sultan_task_2_stalkers_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("boss_sultan_task_2_stalkers_death") then
+			tsk.stage = 1
+		end
+	end 	
+	if (task_id == "zat_b7_bandit_boss_sultan_task_3") then 
+		local money = db.actor:money()
+		if not has_alife_info("zat_b7_bandit_boss_sultan_task_3_trader_day_1") and not has_alife_info("zat_b7_bandit_boss_sultan_task_3_trader_night_1") and (money <= 49999) then 
+			tsk.stage = 0
+		elseif has_alife_info("zat_b7_bandit_boss_sultan_task_3_trader_day_1") and has_alife_info("zat_b7_bandit_boss_sultan_task_3_trader_night_1") and (money >= 50000) then 
+			tsk.stage = 1
+		elseif (money <= 49999) then 
+			tsk.stage = 0			
+		end
+	end 	
+	if (task_id == "pri_monolith_teacher_mlr_task_3") then 
+		if not has_alife_info("pri_smart_neutral_stalker1_attackers_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("pri_smart_neutral_stalker1_attackers_squad_dead") then
+			tsk.stage = 1
+		end
+	end 	
+	if (task_id == "gar_smart_terrain_5_4_main_dolg_soldier_task_1") then 
+		if not has_alife_info("gar_smart_terrain_5_4_main_dolg_soldier_task_1_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("gar_smart_terrain_5_4_main_dolg_soldier_task_1_squad_dead") then
+			tsk.stage = 1
+		end
+	end	
+end
+--mlr
+
+
 ------------------------------------
 -- HELPERS
 ------------------------------------

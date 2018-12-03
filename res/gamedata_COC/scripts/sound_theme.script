@@ -203,7 +203,7 @@ function npc_sound:play(npc_id, faction, point)
 	end
 
 	npc:play_sound(npc_data.id, self.delay_sound+0.06, self.delay_sound+0.05, 1, 0, self.played_id)
-	
+
 	local table_id = self.played_id + 1
 	local snd = self.sound_path[npc_id][table_id]
 	if not (snd) then 

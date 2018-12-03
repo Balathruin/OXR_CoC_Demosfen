@@ -10,12 +10,12 @@ local function angle_to_direction(oangle)
 	local pitch = oangle.x
 	return vector():setHP(yaw,pitch):normalize()
 end
-
+--mlr
 local assoc_tbl = 	{
-						idle = {director = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep"}},
-						harmonica = {director = {"_harmonica"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep"}},
-						guitar = {director = {"_guitar"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep"}},
-						story = {director = {"", "_weapon"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep"}},
+						idle = {director = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep", "_use_pda"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep", "_use_pda"}},
+						harmonica = {director = {"_harmonica"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep", "_use_pda"}},
+						guitar = {director = {"_guitar"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep", "_use_pda"}},
+						story = {director = {"", "_weapon"}, listener = {"", "_eat_bread", "_eat_kolbasa", "_drink_vodka", "_drink_energy", "_weapon", "_roast_kolbasa", "_roast_kolbasa_bred", "_roast_bred", "_sleep", "_use_pda"}},
 					}
 --------------------------------------------------------------------------------
 -- Animated Point

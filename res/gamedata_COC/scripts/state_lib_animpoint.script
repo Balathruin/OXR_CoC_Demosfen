@@ -6,7 +6,26 @@
 function add_state_lib()
 	return {
 
-
+--mlr
+	animpoint_sit_ass_use_pda = {
+		weapon = "strapped",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = "animpoint_sit_ass",
+		animation = "use_pda",
+		direction = CSightParams.eSightTypeAnimationDirection
+	},
+	animpoint_sit_ass_smoking_sit = {
+		weapon = "strapped",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = "animpoint_sit_ass",
+		animation = "smoking_sit",
+		direction = CSightParams.eSightTypeAnimationDirection
+	},			
+--mlr
 	animpoint_sit_ass_roast_kolbasa	= {	weapon = "strapped",
 				movement = move.stand,
 				mental = anim.free,

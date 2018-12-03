@@ -1,0 +1,2027 @@
+function inf_trader_sell_stashes_funct()
+	coc_treasure_manager.create_random_stash(nil,nil)
+end
+
+function give_main_monolith_mlr_task_5_1()
+	mlr_utils.give_task('main_monolith_mlr_task_5_1')
+end
+
+function give_rookie_pole_task_3()
+	mlr_utils.give_task('rookie_pole_task_3')
+end
+
+function bandit_barman_dar_mlr_find_number_shot_kill()
+	db.actor:kill(db.actor)
+end
+
+function bandit_barman_dar_mlr_find_number_shot()
+	xr_sound.set_sound_play(db.actor:id(), "bandit_barman_dar_mlr_find_number_shot_snd")
+end
+
+function bandit_barman_dar_mlr_find_number_no_shot()
+	xr_sound.set_sound_play(db.actor:id(), "bandit_barman_dar_mlr_find_number_no_shot_snd")
+end
+
+function give_main_monolith_mlr_task_4()
+	mlr_utils.give_task('main_monolith_mlr_task_4')
+end
+
+function give_main_monolith_mlr_task_3_3()
+	mlr_utils.give_task('main_monolith_mlr_task_3_3')
+end
+
+function give_main_monolith_mlr_task_3_2()
+	mlr_utils.give_task('main_monolith_mlr_task_3_2')
+end
+
+function give_main_monolith_mlr_task_3_1()
+	mlr_utils.give_task('main_monolith_mlr_task_3_1')
+end
+
+function give_main_monolith_mlr_task_2()
+	mlr_utils.give_task('main_monolith_mlr_task_2')
+end
+
+function give_rookie_pole_task_2()
+	mlr_utils.give_task('rookie_pole_task_2')
+end
+
+function give_rookie_pole_task_1()
+	mlr_utils.give_task('rookie_pole_task_1')
+end
+
+function give_job_guide_main_task()
+	mlr_utils.give_task('job_guide_main_task')
+end
+
+function total_battle_1_random()
+	give_info(random_choice("total_fight_1_1", "total_fight_1_2", "total_fight_1_3", "total_fight_1_4", "total_fight_1_5"))
+end
+function total_battle_3_random()
+	give_info(random_choice("total_fight_3_1", "total_fight_3_2", "total_fight_3_3", "total_fight_3_4", "total_fight_3_5"))
+end
+function total_battle_4_random()
+	give_info(random_choice("total_fight_4_1", "total_fight_4_2", "total_fight_4_3", "total_fight_4_4", "total_fight_4_5"))
+end
+function total_battle_5_random()
+	give_info(random_choice("total_fight_5_1", "total_fight_5_2", "total_fight_5_3"))
+end
+function total_battle_6_random()
+	give_info(random_choice("total_fight_6_1", "total_fight_6_2", "total_fight_6_3"))
+end
+function total_battle_7_random()
+	give_info(random_choice("total_fight_7_1", "total_fight_7_2", "total_fight_7_3"))
+end
+function total_battle_9_random()
+	give_info(random_choice("total_fight_9_1", "total_fight_9_2", "total_fight_9_3"))
+end
+
+function request_to_fly(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "professional" or rank == "veteran" or rank == "expert" or rank == "master" or rank == "legend")
+end
+
+function request_to_trade(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "experienced" or rank == "professional" or rank == "veteran" or rank == "expert" or rank == "master" or rank == "legend")
+end
+
+function request_to_no_trade(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "novice" or rank == "trainee")
+end
+
+--[[
+function check_novice(first_speaker, second_speaker)
+local actor = dialogs.who_is_actor(first_speaker, second_speaker)
+local npc = dialogs.who_is_npc(first_speaker, second_speaker)
+local rank = ranks.get_obj_rank_name(npc)
+return (rank == "novice" or rank == "trainee" or rank == "experienced")
+end
+--]]
+
+-- Всё, что касается группировок
+
+function check_monolith(first_speaker, second_speaker)
+	return mlr_utils.check_comm('actor_monolith')
+end
+function check_no_monolith()
+	return not mlr_utils.check_comm('actor_monolith')
+end
+function check_dolg()
+	return mlr_utils.check_comm('actor_dolg')
+end
+function check_no_dolg()
+	return not mlr_utils.check_comm('actor_dolg')
+end
+function check_neutral()
+	return mlr_utils.check_comm('actor_stalker')
+end
+function check_no_neutral()
+	return not mlr_utils.check_comm('actor_stalker')
+end
+function check_freedom()
+	return mlr_utils.check_comm('actor_freedom')
+end
+function check_no_freedom()
+	return not mlr_utils.check_comm('actor_freedom')
+end
+function check_csky()
+	return mlr_utils.check_comm('actor_csky')
+end
+function check_no_csky()
+	return not mlr_utils.check_comm('actor_csky')
+end
+function check_ecolog()
+	return mlr_utils.check_comm('actor_ecolog')
+end
+function check_no_ecolog()
+	return not mlr_utils.check_comm('actor_ecolog')
+end
+function check_army()
+	return mlr_utils.check_comm('actor_army')
+end
+function check_no_army()
+	return not mlr_utils.check_comm('actor_army')
+end
+function check_bandit()
+	return mlr_utils.check_comm('actor_bandit')
+end
+function check_no_bandit()
+	return not mlr_utils.check_comm('actor_bandit')
+end
+function check_zombied()
+	return mlr_utils.check_comm('actor_zombied')
+end
+function check_no_zombied()
+	return not mlr_utils.check_comm('actor_zombied')
+end
+function check_killer()
+	return mlr_utils.check_comm('actor_killer')
+end
+function check_no_killer()
+	return not mlr_utils.check_comm('actor_killer')
+end
+
+
+-- Начало Change Level
+function gar_smart_terrain_5_2(actor,npc,p)
+	mlr_utils.ch_lvl('gar_smart_terrain_5_2')
+end
+function esc_factory_bandit(actor,npc,p)
+	mlr_utils.ch_lvl('esc_factory_bandit')
+end
+function ds_soviet_store(actor,npc,p)
+	mlr_utils.ch_lvl('ds_soviet_store')
+end
+function zat_trash_station(actor,npc,p)
+	mlr_utils.ch_lvl('zat_trash_station')
+end
+function mil_to_yant_on_heli(actor,npc,p)
+	mlr_utils.ch_lvl('mil_to_yant_on_heli')
+end
+function jup_guid_bandit_cont(actor,npc,p)
+	mlr_utils.ch_lvl('jup_guid_bandit_cont')
+end
+function red_forest_guid_mon(actor,npc,p)
+	mlr_utils.ch_lvl('red_forest_guid_mon')
+end
+function l11_pripyat_guid_mon(actor,npc,p)
+	mlr_utils.ch_lvl('l11_pripyat_guid_mon')
+end
+function mar_smart_terrain_base(actor,npc,p)
+	mlr_utils.ch_lvl('mar_smart_terrain_base')
+end
+function pripyat_guid_mon(actor,npc,p)
+	mlr_utils.ch_lvl('pripyat_guid_mon')
+end
+function jupiter_guid_mon(actor,npc,p)
+	mlr_utils.ch_lvl('jupiter_guid_mon')
+end
+function agroprom_guid_military(actor,npc,p)
+	mlr_utils.ch_lvl('agroprom_guid_military')
+end
+function escape_guid_military(actor,npc,p)
+	mlr_utils.ch_lvl('escape_guid_military')
+end
+function darkscape_guid_military(actor,npc,p)
+	mlr_utils.ch_lvl('darkscape_guid_military')
+end
+function agroprom_guid(actor,npc,p)
+	mlr_utils.ch_lvl('agroprom_guid')
+end
+function marsh_guid(actor,npc,p)
+	mlr_utils.ch_lvl('marsh_guid')
+end
+function escape_village_guid(actor,npc,p)
+	mlr_utils.ch_lvl('escape_village_guid')
+end
+function trucks_cemetery_guid(actor,npc,p)
+	mlr_utils.ch_lvl('trucks_cemetery_guid')
+end
+function stancia_guid(actor,npc,p)
+	mlr_utils.ch_lvl('stancia_guid')
+end
+function pripyat_2_guid(actor,npc,p)
+	mlr_utils.ch_lvl('pripyat_2_guid')
+end
+function radar_guid(actor,npc,p)
+	mlr_utils.ch_lvl('radar_guid')
+end
+function zaton_guid(actor,npc,p)
+	mlr_utils.ch_lvl('zaton_guid')
+end
+function pripyat_guid(actor,npc,p)
+	mlr_utils.ch_lvl('pripyat_guid')
+end
+function l11_pripyat_guid(actor,npc,p)
+	mlr_utils.ch_lvl('l11_pripyat_guid')
+end
+function red_forest_guid(actor,npc,p)
+	mlr_utils.ch_lvl('red_forest_guid')
+end
+function l05_bar_guid(actor,npc,p)
+	mlr_utils.ch_lvl('l05_bar_guid')
+end
+function yantar_guid(actor,npc,p)
+	mlr_utils.ch_lvl('yantar_guid')
+end
+function military_guid(actor,npc,p)
+	mlr_utils.ch_lvl('military_guid')
+end
+function garbage_guid(actor,npc,p)
+	mlr_utils.ch_lvl('garbage_guid')
+end
+function escape_guid(actor,npc,p)
+	mlr_utils.ch_lvl('escape_guid')
+end
+function jupiter_guid(actor,npc,p)
+	mlr_utils.ch_lvl('jupiter_guid')
+end
+function yantar_guid_from_freedom_base(actor,npc,p)
+	mlr_utils.ch_lvl('yantar_guid_from_freedom_base')
+end
+
+
+-- Начало прекондишнов на бабло
+function bandit_barman_dar_mlr_find_number_has_100()
+	return mlr_utils.act_h_m(100)
+end
+function totaliz_1()
+	return mlr_utils.act_h_m(1000)
+end
+function totaliz_2()
+	return mlr_utils.act_h_m(2500)
+end
+function totaliz_5()
+	return mlr_utils.act_h_m(5000)
+end
+function inf_trader_buy_transitions1()
+	return mlr_utils.act_h_m(25000)
+end
+function inf_trader_buy_transitions2()
+	return mlr_utils.act_h_m(37500)
+end
+function inf_trader_buy_transitions3()
+	return mlr_utils.act_h_m(50000)
+end
+function inf_trader_buy_transitions4()
+	return mlr_utils.act_h_m(100000)
+end
+function inf_trader_buy_transitions5()
+	return mlr_utils.act_h_m(150000)
+end
+function inf_trader_buy_transitions6()
+	return mlr_utils.act_h_m(175000)
+end
+function have_money_to_tech_yard_guid_marsh()
+	return mlr_utils.act_h_m(800)
+end
+function have_money_to_marsh_post_guid_marsh()
+	return mlr_utils.act_h_m(300)
+end
+function have_money_to_marsh_pump_water_guid_marsh()
+	return mlr_utils.act_h_m(500)
+end
+function have_money_to_garbage_guid_bar()
+	return mlr_utils.act_h_m(700)
+end
+function have_money_to_military_guid_bar()
+	return mlr_utils.act_h_m(1000)
+end
+function have_money_to_jupiter_underground_guid_jup()
+	return mlr_utils.act_h_m(1500)
+end
+function have_money_to_zaton_guid_jup()
+	return mlr_utils.act_h_m(2000)
+end
+function have_money_to_red_forest_guid_jup()
+	return mlr_utils.act_h_m(2500)
+end
+function have_money_darkscape_guid_military()
+	return mlr_utils.act_h_m(3000)
+end
+function have_money_to_escape_guid_bar()
+	return mlr_utils.act_h_m(3000)
+end
+function have_money_to_yantar_guid_bar()
+	return mlr_utils.act_h_m(3500)
+end
+function have_money_to_pripyat_guid_jup()
+	return mlr_utils.act_h_m(4000)
+end
+function have_money_to_escp_guid_mil()
+	return mlr_utils.act_h_m(4500)
+end
+function have_money_agroprom_guid_military()
+	return mlr_utils.act_h_m(5000)
+end
+function have_money_to_pripyat_guid_zat()
+	return mlr_utils.act_h_m(5000)
+end
+function have_money_to_jupiter_guid_bar()
+	return mlr_utils.act_h_m(6000)
+end
+function have_pri_special_trader_mlr_2()
+	return mlr_utils.act_h_m(6500)
+end
+function have_mil_to_yant_on_heli2()
+	return mlr_utils.act_h_m(7000)
+end
+function have_pri_special_trader_mlr_3()
+	return mlr_utils.act_h_m(7000)
+end
+function have_money_to_radar_guid_pri()
+	return mlr_utils.act_h_m(8000)
+end
+function have_pri_special_trader_mlr_1()
+	return mlr_utils.act_h_m(8000)
+end
+function have_pri_special_trader_mlr_4()
+	return mlr_utils.act_h_m(9500)
+end
+function have_mil_to_yant_on_heli()
+	return mlr_utils.act_h_m(10000)
+end
+function have_pri_special_trader_mlr_5()
+	return mlr_utils.act_h_m(11000)
+end
+function have_pri_special_trader_mlr_8()
+	return mlr_utils.act_h_m(14000)
+end
+function have_pri_special_trader_mlr_6()
+	return mlr_utils.act_h_m(17000)
+end
+function have_pri_special_trader_mlr_9()
+	return mlr_utils.act_h_m(17000)
+end
+function have_pri_special_trader_mlr_12()
+	return mlr_utils.act_h_m(18000)
+end
+function have_pri_special_trader_mlr_7()
+	return mlr_utils.act_h_m(19000)
+end
+function have_pri_special_trader_mlr_10()
+	return mlr_utils.act_h_m(20000)
+end
+function have_pri_special_trader_mlr_11()
+	return mlr_utils.act_h_m(24000)
+end
+function have_money_to_stancia_guid_pri()
+	return mlr_utils.act_h_m(12000)
+end
+function have_pri_special_trader_mlr_17()
+	return mlr_utils.act_h_m(50000)
+end
+function have_pri_special_trader_mlr_15()
+	return mlr_utils.act_h_m(65000)
+end
+function have_pri_special_trader_mlr_16()
+	return mlr_utils.act_h_m(70000)
+end
+function have_pri_special_trader_mlr_14()
+	return mlr_utils.act_h_m(75000)
+end
+function have_pri_special_trader_mlr_13()
+	return mlr_utils.act_h_m(100000)
+end
+function have_pri_special_trader_mlr_18()
+	return mlr_utils.act_h_m(150000)
+end
+function have_money_povars_ammo_pkm_100()
+	return mlr_utils.act_h_m(7000)
+end
+function have_information_about_stash_barmen()
+	return mlr_utils.act_h_m(15000)
+end
+
+-- Начало прекондишнов на наличие предметов
+function has_sar_crystal_pda_mlr(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('sar_crystal_pda_mlr', 1)
+end 
+function has_sar_crystal_pda_mlr_1(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('sar_crystal_pda_mlr_1', 1)
+end 
+function has_sar_crystal_pda_mlr_2(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('sar_crystal_pda_mlr_2', 1)
+end 
+function has_sar_crystal_pda_mlr_3(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('sar_crystal_pda_mlr_3', 1)
+end 
+function has_sar_crystal_pda_mlr_4(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('sar_crystal_pda_mlr_4', 1)
+end 
+function has_sar_crystal_pda_mlr_5(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('sar_crystal_pda_mlr_5', 1)
+end 
+function has_esc_2_12_medic_mlr_medbag(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('esc_2_12_medic_mlr_medbag', 1)
+end 
+function has_pole_factory_documents(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('pole_factory_doc_1', 1) and mlr_utils.act_h_s('pole_factory_doc_2', 1) and mlr_utils.act_h_s('pole_factory_doc_3', 1) and mlr_utils.act_h_s('pole_factory_doc_4', 1)	 
+end 
+function has_wpn_saiga_rookie_pole(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('wpn_saiga_rookie_pole', 1)
+end 
+function has_1_11_af_medusa_kmb(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('af_medusa', 1)
+end 
+function have_blackbox_mlr(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('blackbox_mlr', 1)
+end 
+function have_pri_a18_barter_9_19(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('ammo_9x19_fmj', 200)
+end 
+function have_pri_a18_barter_5_56(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('ammo_5.56x45_ss190', 300)
+end 
+function have_pri_a18_barter_f1(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('grenade_f1', 20)
+end 
+function have_pri_a18_barter_rgd5(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('grenade_rgd5', 10)
+end 
+function have_duty_patch_15(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('duty_patch', 15)
+end 
+function have_duty_patch_20(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('duty_patch', 20)
+end
+function have_duty_patch_50(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('duty_patch', 50)
+end 
+function have_duty_patch_65(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('duty_patch', 65)
+end 
+function have_duty_patch_100(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('duty_patch', 100)
+end 
+function have_csky_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('csky_patch', 10)
+end 
+function have_merc_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('merc_patch', 10)
+end 
+function have_freedom_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('freedom_patch', 10)
+end 
+function have_stalker_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('stalker_patch', 10)
+end 
+function have_ecolog_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('ecolog_patch', 10)
+end 
+function have_bandit_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('bandit_patch', 10)
+end 
+function have_duty_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('duty_patch', 10)
+end 
+function have_monolith_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('monolith_patch', 10)
+end 
+function have_army_patch_for_lottery_10(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('army_patch', 10)
+end 
+function have_freedom_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('freedom_patch', 50)
+end 
+function have_csky_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('csky_patch', 50)
+end 
+function have_merc_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('merc_patch', 50)
+end 
+function have_stalker_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('stalker_patch', 50)
+end 
+function have_ecolog_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('ecolog_patch', 50)
+end 
+function have_bandit_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('bandit_patch', 50)
+end 
+function have_duty_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('duty_patch', 50)
+end 
+function have_monolith_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('monolith_patch', 50)
+end 
+function have_army_patch_for_lottery_50(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('army_patch', 50)
+end
+function have_vodka5(first_speaker, second_speaker)
+	return mlr_utils.act_h_s('vodka', 5) 
+end 
+function have_vodka10(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('vodka', 10) 
+end 
+function have_vodka20(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('vodka', 20) 
+end
+function have_vodka15(first_speaker, second_speaker) 
+	return mlr_utils.act_h_s('vodka', 15) 
+end
+function has_mlr_x8_documents()
+	return mlr_utils.act_h_s('mlr_x8_documents')
+end
+function has_mlr_x8_copybook()
+	return mlr_utils.act_h_s('mlr_x8_copybook')
+end
+function has_mlr_x8_copybook_2()
+	return mlr_utils.act_h_s('mlr_x8_copybook_2')
+end
+function has_controller_brain()
+	return mlr_utils.act_h_s('mutant_part_controller_glass')
+end
+function has_mlr_x8_documents()
+	return mlr_utils.act_h_s('mlr_x8_documents')
+end
+function has_af_electra_flash()
+	return mlr_utils.act_h_s('af_electra_flash')
+end
+function has_af_electra_moonlight()
+	return mlr_utils.act_h_s('af_electra_moonlight')
+end
+function has_af_soul()
+	return mlr_utils.act_h_s('af_soul')
+end
+function has_af_vyvert()
+	return mlr_utils.act_h_s('af_vyvert')
+end
+
+
+-- Начало отбирания предметов у актора
+function give_sar_crystal_pdas_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sar_crystal_pda_mlr",1)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sar_crystal_pda_mlr_1",1)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sar_crystal_pda_mlr_2",1)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sar_crystal_pda_mlr_3",1)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sar_crystal_pda_mlr_4",1)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sar_crystal_pda_mlr_5",1)	
+end
+function give_af_electra_flash(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_electra_flash",1)
+end
+function take_esc_2_12_medic_mlr_bag(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "esc_2_12_medic_mlr_medbag",1)
+end
+function take_pole_factory_documents(first_speaker, second_speaker)
+	dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "pole_factory_doc_1",1)
+	dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "pole_factory_doc_2",1)
+	dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "pole_factory_doc_3",1)
+	dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "pole_factory_doc_4",1)
+end 
+function take_wpn_saiga_rookie_pole(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "wpn_saiga_rookie_pole",1)
+end
+function take_af_electra_flash(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_electra_flash",1)
+end
+function take_af_electra_moonlight(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_electra_moonlight",1)
+end
+function take_af_soul(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_soul",1)
+end
+function take_af_vyvert(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_vyvert",1)
+end
+function take_blackbox_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "blackbox_mlr",1)
+end
+function take_pri_a18_barter_9_19(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "ammo_9x19_fmj",200)
+end
+function take_pri_a18_barter_5_56(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "ammo_5.56x45_ss190",300)
+end
+function take_pri_a18_barter_f1(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "grenade_f1",20)
+end
+function take_pri_a18_barter_rgd5(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "grenade_rgd5",10)
+end
+function take_mlr_x8_documents(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "mlr_x8_documents")
+end
+function take_mlr_x8_copybook(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "mlr_x8_copybook")
+end
+function take_mlr_x8_copybook_2(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "mlr_x8_copybook_2")
+end
+function take_duty_patch_15(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",15)
+end
+function take_duty_patch_20(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",20)
+end
+function take_duty_patch_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",50)
+end
+function take_duty_patch_65(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",65)
+end
+function take_duty_patch_100(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",100)
+end
+function take_part_controller_glass(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "mutant_part_controller_glass")
+end
+function take_vodka5(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "vodka",5)
+end
+function take_vodka10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "vodka",10)
+end
+function take_vodka20(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "vodka",20)
+end
+function take_vodka15(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "vodka",15)
+end
+function take_freedom_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "freedom_patch",10)
+end
+function take_csky_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "csky_patch",10)
+end
+function take_duty_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",10)
+end
+function take_merc_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "merc_patch",10)
+end
+function take_stalker_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "stalker_patch",10)
+end
+function take_ecolog_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "ecolog_patch",10)
+end
+function take_bandit_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "bandit_patch",10)
+end
+function take_monolith_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "monolith_patch",10)
+end
+function take_army_patch_for_lottery_10(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "army_patch",10)
+end
+function take_csky_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "csky_patch",50)
+end
+function take_duty_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "duty_patch",50)
+end
+function take_merc_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "merc_patch",50)
+end
+function take_stalker_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "stalker_patch",50)
+end
+function take_ecolog_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "ecolog_patch",50)
+end
+function take_bandit_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "bandit_patch",50)
+end
+function take_monolith_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "monolith_patch",50)
+end
+function take_army_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "army_patch",50)
+end
+function take_freedom_patch_for_lottery_50(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "freedom_patch",50)
+end
+
+-- Начало relocate_item_section
+function take_af_electra_flash(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_electra_flash", "in",1)
+end
+function take_pole_factory_documents_grab_present(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "wpn_saiga", "in",1)
+end
+function main_monolith_mlr_task_3_2_present(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "wpn_saiga_kobra", "in",1)
+end
+function give_vodka_from_bandit_barman_dar_mlr(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "vodka", "in",1)
+end
+function give_abakan_from_wings(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "wpn_abakan", "in",1)
+end
+function give_suit_from_wings(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "monolith_outfit_wings", "in",1)
+end
+function main_monolith_mlr_task_3_give_present(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "grenade_f1", "in",10)
+end
+function give_pri_a18_barter_9_19(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_9x18_pmm", "in",200)
+end
+function give_pri_a18_barter_5_56(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.45x39_fmj", "in",300)
+end
+function give_pri_a18_barter_f1(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_m209", "in",20)
+end
+function give_pri_a18_barter_rgd5(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_og-7b", "in",3)
+end
+function give_svd_ammo_from_ashot_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_7.62x54_7h1", "in",5)
+end
+function give_ammo_nato_from_ashot_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ss190", "in",7)
+end
+function give_ammo_m209_from_ashot_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "ammo_m209", "in",20)
+end
+function give_army_grugs(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "medkit_army", "in",10)
+end
+function give_ecolog_grugs(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "medkit_scientic", "in",10)
+end
+function give_veles(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "detector_elite", "in",1)
+end
+function give_anabionic_drug(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "drug_anabiotic", "in",3)
+end
+
+
+-- Деньги актору
+function bandit_barman_dar_mlr_find_number_won(first_speaker, second_speaker)
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 5000) 
+end
+
+function zat_b7_bandit_boss_sultan_task_3_trader_reward(first_speaker, second_speaker)
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 25000) 
+end
+
+function total_reward_1000(actor,npc,p)
+	dialogs.relocate_money(db.actor,math.random(tonumber(2000),tonumber(4000)),"in")
+end
+function total_reward_2500(actor,npc,p)
+	dialogs.relocate_money(db.actor,math.random(tonumber(3500),tonumber(6000)),"in")
+end
+function total_reward_5000(actor,npc,p)
+	dialogs.relocate_money(db.actor,math.random(tonumber(7000),tonumber(15000)),"in")
+end
+
+function take_money_from_army_blackbox(first_speaker, second_speaker) 
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 5000) 
+end
+function take_money_from_haron_blackbox(first_speaker, second_speaker) 
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 5000) 
+end
+function take_money_from_owl_blackbox(first_speaker, second_speaker) 
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 7500) 
+end
+function take_money_from_lidership_blackbox(first_speaker, second_speaker) 
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 10000) 
+end
+
+function goodwill_for_blackbox_monolith_reward(a,b)
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"monolith", 100})
+end
+function goodwill_for_blackbox_army_reward(a,b)
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"army", 100})
+end
+function goodwill_for_blackbox_csky_reward(a,b)
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"csky", 100})
+end
+function goodwill_for_blackbox_freedom_reward(a,b)
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"freedom", 100})
+end
+function goodwill_for_blackbox_killer_reward(a,b)
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"killer", 100})
+end
+
+function reward_for_blackbox_army()
+--	xr_statistic.inc_actor_reputation(150)
+	dxr_statistics.increment_reputation(150)
+end
+
+
+-- Начало отбирания денег у актора
+function bandit_barman_dar_mlr_find_number_loose(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 100) 
+end
+function take_totaliz_1(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 1000) 
+end
+function take_totaliz_2(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 2500) 
+end
+function take_totaliz_5(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 5000) 
+end
+function inf_trader_buy_transitions11(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 25000) 
+end
+function inf_trader_buy_transitions22(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 37500) 
+end
+function inf_trader_buy_transitions33(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 50000) 
+end
+function inf_trader_buy_transitions44(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 100000) 
+end
+function inf_trader_buy_transitions55(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 150000) 
+end
+function inf_trader_buy_transitions66(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 175000) 
+end
+function give_money_to_jupiter_guid_bar(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 6000) 
+end
+function sell_money_to_tech_yard_guid_marsh(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 800) 
+end
+function give_information_about_stash_barmen(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 15000) 
+end
+function sell_money_povars_ammo_pkm_100(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 7000)
+end
+function give_pri_special_trader_mlr_1(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 8000) 
+end
+function give_pri_special_trader_mlr_2(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 6500) 
+end
+function give_pri_special_trader_mlr_3(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 7000) 
+end
+function give_pri_special_trader_mlr_4(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 9500) 
+end
+function give_pri_special_trader_mlr_5(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 11000) 
+end
+function give_pri_special_trader_mlr_6(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 17000) 
+end
+function give_pri_special_trader_mlr_7(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 19000) 
+end
+function give_pri_special_trader_mlr_8(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 14000) 
+end
+function give_pri_special_trader_mlr_9(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 17000) 
+end
+function give_pri_special_trader_mlr_10(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 20000) 
+end
+function give_pri_special_trader_mlr_11(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 24000) 
+end
+function give_pri_special_trader_mlr_12(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 18000) 
+end
+function give_pri_special_trader_mlr_13(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 100000) 
+end
+function give_pri_special_trader_mlr_14(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 75000) 
+end
+function give_pri_special_trader_mlr_15(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 65000) 
+end
+function give_pri_special_trader_mlr_16(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 70000) 
+end
+function give_pri_special_trader_mlr_17(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 50000) 
+end
+function sell_money_darkscape_guid_military(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 3000)
+end
+function give_pri_special_trader_mlr_18(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 150000) 
+end
+function sell_money_agroprom_guid_military(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 5000)
+end
+function give_mil_to_yant_on_heli2(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 7000) 
+end
+function give_mil_to_yant_on_heli(first_speaker, second_speaker) 
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 10000) 
+end
+function sell_money_to_marsh_pump_water_guid_marsh(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 500)
+end
+function sell_money_to_marsh_post_guid_marsh(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 300)
+end
+function sell_money_to_radar_guid_pri(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 8000)
+end
+function sell_money_to_pripyat_guid_zat(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 5000)
+end
+function sell_money_to_stancia_guid_pri(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 12000)
+end
+function sell_money_to_zaton_guid_jup(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 2000)
+end
+function sell_money_to_pripyat_guid_jup(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 4000)
+end
+function sell_money_to_red_forest_guid_jup(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 2500)
+end
+function sell_money_to_jupiter_underground_guid_jup(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 1500)
+end
+function sell_money_to_yantar_guid_bar(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 3500)
+end
+function sell_money_to_military_guid_bar(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 1000)
+end
+function sell_money_to_garbage_guid_bar(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 700)
+end
+function sell_money_to_escape_guid_bar(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 3000)
+end
+function sell_money_to_escp_guid_mil(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 4500)
+end
+function sell_money_to_jupiter_guid_bar(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 6000)
+end
+function sell_money_povars_ammo_pkm_100(first_speaker, second_speaker)
+	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 7000)
+end
+
+
+-- Начало дарим актору секцию
+function give_medkit_from_esc_2_12_medic_mlr(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "medkit")  
+end
+function baraholka_trader_task_sapsan_talk(first_speaker, second_speaker) 
+	local rnd = math.random(1,5)
+		if rnd == 1 then
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_night_star")
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_fireball")			
+        elseif rnd == 2 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_soul")	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_electra_moonlight")			
+        elseif rnd == 3 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_mincer_meat")	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_electra_moonlight")			
+        elseif rnd == 4 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_vyvert")	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_mincer_meat")			
+        elseif rnd == 5 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_soul")
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_dummy_glassbeads")			
+		end		
+end
+function zat_b7_bandit_boss_sultan_task_3_random_af(first_speaker, second_speaker) 
+	local rnd = math.random(1,10)
+		if rnd == 1 then
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_drops")
+        elseif rnd == 2 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_ameba_slime")		
+        elseif rnd == 3 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_ameba_slug")		
+        elseif rnd == 4 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_ameba_mica")		
+        elseif rnd == 5 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_dummy_spring")		
+        elseif rnd == 6 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_dummy_pellicle")		
+        elseif rnd == 7 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_rusty_thorn")		
+        elseif rnd == 8 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_rusty_kristall")		
+        elseif rnd == 9 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_rusty_sea")		
+        elseif rnd == 10 then	
+			dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_medusa")		
+		end		
+end
+function give_staff_about_dog_marsh_part_two(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "bread", 3) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "conserva", 2) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "vodka", 2)  
+end
+function give_antirad_from_fanat(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "antirad")  
+end
+function give_freedom_set_mlr(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "svoboda_light_outfit")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_ak74u_pso") 
+end
+function give_det_adva_from_fanat(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "detector_advanced")  
+end
+function give_sso_from_ashot_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "svoboda_scientific_outfit")
+end
+function give_wpn_svd_from_ashot_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_svd_nimble")
+end
+function give_seo_from_ashot_mlr(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "svoboda_exo_outfit")
+end
+function lottery_present_low_1(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_drops")  
+end
+function lottery_present_low_2(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_ameba_slime")  
+end
+function lottery_present_low_3(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_dummy_pellicle")  
+end
+function lottery_present_low_4(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_rusty_sea")  
+end
+function lottery_present_low_5(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_medusa") 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_1")		
+end
+function lottery_present_low_6(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_cristall")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_dummy_spring")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_1")	
+end
+function lottery_present_medium_1(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_night_star")  
+end
+function lottery_present_medium_2(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_vyvert")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_2")	
+end
+function lottery_present_medium_3(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_dummy_glassbeads")  
+end
+function lottery_present_medium_4(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_soul")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_glass")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_2")	
+end
+function lottery_present_medium_5(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_electra_moonlight")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_m16") 
+	dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ap", "in",3)  
+	dialogs.relocate_item_section(second_speaker, "ammo_9x39_pab9", "in",3) 
+end
+function lottery_present_medium_6(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_gravi") 
+	dialogs.relocate_item_section(second_speaker, "medkit_scientic", "in",5)  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_colt1911")  
+end
+function lottery_present_medium_7(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_vyvert")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "detector_elite") 
+	dialogs.relocate_item_section(second_speaker, "drug_anabiotic", "in",2)   
+end
+function lottery_present_hight_1(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_gold_fish") 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_3")	
+end
+function lottery_present_hight_2(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_fire")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_galil")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_3")	
+end
+function lottery_present_hight_3(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_baloon")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_ice")
+end
+function lottery_present_hight_4(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_svd")
+	dialogs.relocate_item_section(second_speaker, "ammo_7.62x54_7h1", "in",6)  
+end
+function lottery_present_hight_5(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "merc_scientific_outfit")
+	dialogs.relocate_item_section(second_speaker, "drug_anabiotic", "in",2)
+	dialogs.relocate_item_section(second_speaker, "medkit_scientic", "in",5)
+end
+
+-- Для бандитов
+
+function lottery_present_medium_bandit_5(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_electra_moonlight")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_ak74") 
+	dialogs.relocate_item_section(second_speaker, "ammo_5.56x45_ap", "in",5)  
+end
+function lottery_present_medium_bandit_6(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_gravi")   
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_bm16")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "banditmerc_outfit")  
+	dialogs.relocate_item_section(second_speaker, "ammo_12x70_buck", "in",5)  	
+end
+function lottery_present_medium_bandit_7(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_vyvert")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "detector_advanced") 
+	dialogs.relocate_item_section(second_speaker, "drug_anabiotic", "in",1)   
+end
+function lottery_present_hight_bandit_1(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_gold_fish") 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_3")	
+end
+function lottery_present_hight_bandit_2(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_fire")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_abakan")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "itm_repairkit_tier_3")	
+end
+function lottery_present_hight_bandit_3(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_baloon")  
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_ice")
+end
+function lottery_present_hight_bandit_4(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_rpg7")
+	dialogs.relocate_item_section(second_speaker, "ammo_og-7b", "in",3)  
+end
+function lottery_present_hight_bandit_5(first_speaker, second_speaker) 
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "trenchcoat_outfit")
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_wincheaster1300")	
+	dialogs.relocate_item_section(second_speaker, "ammo_12x70_buck", "in",5)
+end
+
+-- Начало спавн
+
+function spawn_1_11_af_medusa_kmb(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_1_11_af_medusa_kmb')
+end
+function spawn_povars_12_70(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_12_70')
+end
+function spawn_povars_ammo_pkm_100(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_ammo_pkm_100')
+end
+function spawn_povars_9_18_6(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_9_18_6')
+end
+function spawn_povars_5_45_3(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_5_45_3')
+end
+function spawn_povars_5_45_6(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_5_45_6')
+end
+function spawn_povars_7_62(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_7_62')
+end
+function spawn_povars_berill(first_speaker, second_speaker)
+	mlr_utils.aditional_spawn('spawn_povars_berill')
+end
+
+
+--Перелёт через проводника по локации
+function rookie_village_guid_daresc(actor,npc,p)
+	level.add_pp_effector ("fade_in.ppe", 200, false)
+	mlr_utils.ch_lvl('escape_guid')
+end
+function tuzla_tonnel_guid_marsh(actor,npc,p)
+	level.add_pp_effector ("fade_in.ppe", 200, false)
+	mlr_utils.ch_lvl('tuzla_tonnel_guid_marsh')
+end
+function marsh_post_guid(actor,npc,p)
+	level.add_pp_effector ("fade_in.ppe", 200, false)
+	mlr_utils.ch_lvl('marsh_post_guid')
+end 
+function marsh_pump_water_guid(actor,npc,p)
+	level.add_pp_effector ("fade_in.ppe", 200, false)
+	mlr_utils.ch_lvl('marsh_pump_water_guid')
+end 
+function marsh_old_church_guid(actor,npc,p)
+	level.add_pp_effector ("fade_in.ppe", 200, false)
+	mlr_utils.ch_lvl('marsh_old_church_guid')
+end 
+function marsh_tech_yard_guid(actor,npc,p)
+	level.add_pp_effector ("fade_in.ppe", 200, false)
+	mlr_utils.ch_lvl('marsh_tech_yard_guid')
+end 
+
+
+-- Отключение инфопоршней
+
+function disable_pri_special_trader_mlr_1(first_speaker, second_speaker)
+	db.actor:disable_info_portion("pri_special_trader_mlr_order_in_process")
+	db.actor:disable_info_portion("pri_special_trader_mlr_order_is_ready")
+	db.actor:disable_info_portion("order_pri_mlr_is_done")
+	db.actor:disable_info_portion("cancel_new_orders_pri_mlr")
+end
+
+
+-- Ёбаные закупки оптом
+
+function have_to_buy_opt(section, count)
+	return mlr_utils.act_h_m(get_cost_sect(section, count))
+end
+
+function sell_to_buy_opt(first_speaker, second_speaker, section, count)
+    local cost = get_cost_sect(section, count)
+    if mlr_utils.act_h_m(cost) then
+        dialogs.relocate_money_from_actor(first_speaker, second_speaker, cost)
+        dialogs.relocate_item_section(second_speaker, section, "in", count)		
+    end
+end
+
+function get_phrase_buy_opt(section, count)
+	return game.translate_string('st_'..section..'_opt')..' %c[255,238,153,26]['..get_cost_sect(section, count)..']'
+end
+
+
+-- Медикаменты [прекондишны]
+
+function have_to_buy_opt_bandage()
+	return have_to_buy_opt('bandage', 20)
+end
+function have_to_buy_opt_medkit()
+	return have_to_buy_opt('medkit', 20)
+end
+function have_to_buy_opt_antirad()
+	return have_to_buy_opt('antirad', 10)
+end
+function have_to_buy_opt_medkit_army()
+	return have_to_buy_opt('medkit_army', 20)
+end
+function have_to_buy_opt_medkit_scientic()
+	return have_to_buy_opt('medkit_scientic', 20)
+end
+
+
+-- Деньги и товар
+
+function sell_to_buy_opt_bandage(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'bandage', 20)
+end 
+function sell_to_buy_opt_medkit(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'medkit', 20)
+end
+function sell_to_buy_opt_antirad(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'antirad', 10)
+end
+function sell_to_buy_opt_medkit_army(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'medkit_army', 20)
+end
+function sell_to_buy_opt_medkit_scientic(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'medkit_scientic', 20)
+end
+
+-- Провизия [прекондишны]
+
+function have_to_buy_opt_bread()
+	return have_to_buy_opt('bread', 20)
+end
+function have_to_buy_opt_kolbasa()
+	return have_to_buy_opt('kolbasa', 20)
+end
+function have_to_buy_opt_conserva()
+	return have_to_buy_opt('conserva', 20)
+end
+function have_to_buy_opt_vodka()
+	return have_to_buy_opt('vodka', 20)
+end
+function have_to_buy_opt_energy_drink()
+	return have_to_buy_opt('energy_drink', 20)
+end
+
+
+-- Деньги и товар
+
+function sell_to_buy_opt_bread(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'bread', 20)
+end
+function sell_to_buy_opt_kolbasa(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'kolbasa', 20)
+end
+function sell_to_buy_opt_conserva(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'conserva', 20)
+end
+function sell_to_buy_opt_vodka(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'vodka', 15)
+end
+function sell_to_buy_opt_energy_drink(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'energy_drink', 15)
+end
+
+-- Боеприпасы [прекондишны]
+
+function have_to_buy_opt_9_18_fmj()
+	return have_to_buy_opt('ammo_9x18_fmj', 6)
+end
+function have_to_buy_opt_9_18_pmm()
+	return have_to_buy_opt('ammo_9x18_pmm', 5)
+end
+function have_to_buy_opt_9_19_fmj()
+	return have_to_buy_opt('ammo_9x19_fmj', 6)
+end
+function have_to_buy_opt_9_19_pbp()
+	return have_to_buy_opt('ammo_9x19_pbp', 5)
+end
+function have_to_buy_opt_ammo_7_62x25_p()
+	return have_to_buy_opt('ammo_7.62x25_p', 6)
+end
+function have_to_buy_opt_ammo_7_62x25_ps()
+	return have_to_buy_opt('ammo_7.62x25_ps', 5)
+end
+function have_to_buy_opt_12_70_buck()
+	return have_to_buy_opt('ammo_12x70_buck', 15)
+end
+function have_to_buy_opt_12_76_zhekan()
+	return have_to_buy_opt('ammo_12x76_zhekan', 15)
+end
+function have_to_buy_opt_ammo_5_45_39_fmj()
+	return have_to_buy_opt('ammo_5.45x39_fmj', 8)
+end
+function have_to_buy_opt_ammo_5_45_39_ap()
+	return have_to_buy_opt('ammo_5.45x39_ap', 5)
+end
+function have_to_buy_opt_ammo_5_56_45_fmj()
+	return have_to_buy_opt('ammo_5.56x45_ss190', 8)
+end
+function have_to_buy_opt_ammo_5_56_45_ap()
+	return have_to_buy_opt('ammo_5.56x45_ap', 5)
+end
+function have_to_buy_opt_ammo_7_62x39_fmj()
+	return have_to_buy_opt('ammo_7.62x39_fmj', 8)
+end
+function have_to_buy_opt_ammo_7_62x39_ap()
+	return have_to_buy_opt('ammo_7.62x39_ap', 5)
+end
+function have_to_buy_opt_7_62_54_7h1()
+	return have_to_buy_opt('ammo_7.62x54_7h1', 10)
+end
+function have_to_buy_opt_grenade_rgd5()
+	return have_to_buy_opt('grenade_rgd5', 10)
+end
+function have_to_buy_opt_grenade_f1()
+	return have_to_buy_opt('grenade_f1', 10)
+end
+function have_to_buy_opt_ammo_vog_25()
+	return have_to_buy_opt('ammo_vog-25', 20)
+end
+
+
+-- Деньги и товар
+
+function sell_to_buy_opt_9_18_fmj(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_9x18_fmj', 6)
+end
+function sell_to_buy_opt_9_18_pmm(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_9x18_pmm', 5)
+end
+function sell_to_buy_opt_9_19_fmj(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_9x19_fmj', 6)
+end
+function sell_to_buy_opt_9_19_pbp(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_9x19_pbp', 5)
+end
+function sell_to_buy_opt_ammo_7_62x25_p(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_7.62x25_p', 6)
+end
+function sell_to_buy_opt_ammo_7_62x25_ps(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_7.62x25_ps', 5)
+end
+function sell_to_buy_opt_12_70_buck(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_12x70_buck', 15)
+end
+function sell_to_buy_opt_12_76_zhekan(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_12x76_zhekan', 15)
+end
+function sell_to_buy_opt_ammo_5_45_39_fmj(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_5.45x39_fmj', 8)
+end
+function sell_to_buy_opt_ammo_5_45_39_ap(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_5.45x39_ap', 5)
+end
+function sell_to_buy_opt_ammo_5_56_45_fmj(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_5.56x45_ss190', 8)
+end
+function sell_to_buy_opt_ammo_5_56_45_ap(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_5.56x45_ap', 5)
+end
+function sell_to_buy_opt_ammo_7_62x39_fmj(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_7.62x39_fmj', 8)
+end
+function sell_to_buy_opt_ammo_7_62x39_ap(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_7.62x39_ap', 5)
+end
+function sell_to_buy_opt_7_62_54_7h1(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_7.62x54_7h1', 10)
+end
+function sell_to_buy_opt_grenade_rgd5(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'grenade_rgd5', 10)
+end
+function sell_to_buy_opt_grenade_f1(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'grenade_f1', 10)
+end
+function sell_to_buy_opt_ammo_vog_25(first_speaker, second_speaker)
+	sell_to_buy_opt(first_speaker, second_speaker, 'ammo_vog-25', 10)
+end
+
+function get_phrase_buy_opt_bandage()
+	return get_phrase_buy_opt('bandage', 20)
+end
+function get_phrase_buy_opt_medkit()
+	return get_phrase_buy_opt('medkit', 20)
+end
+function get_phrase_buy_opt_antirad()
+	return get_phrase_buy_opt('antirad', 10)
+end
+function get_phrase_buy_opt_medkit_army()
+	return get_phrase_buy_opt('medkit_army', 20)
+end
+function get_phrase_buy_opt_medkit_scientic()
+	return get_phrase_buy_opt('medkit_scientic', 20)
+end
+function get_phrase_buy_opt_bread()
+	return get_phrase_buy_opt('bread', 20)
+end
+function get_phrase_buy_opt_kolbasa()
+	return get_phrase_buy_opt('kolbasa', 20)
+end
+function get_phrase_buy_opt_conserva()
+	return get_phrase_buy_opt('conserva', 20)
+end
+function get_phrase_buy_opt_vodka()
+	return get_phrase_buy_opt('vodka', 15)
+end
+function get_phrase_buy_opt_energy_drink()
+	return get_phrase_buy_opt('energy_drink', 15)
+end
+function get_phrase_buy_opt_ammo_9_18_fmj()
+	return get_phrase_buy_opt('ammo_9x18_fmj', 6)
+end
+function get_phrase_buy_opt_ammo_9_18_pmm()
+	return get_phrase_buy_opt('ammo_9x18_pmm', 5)
+end
+function get_phrase_buy_opt_ammo_9_19_fmj()
+	return get_phrase_buy_opt('ammo_9x19_fmj', 6)
+end
+function get_phrase_buy_opt_ammo_9_19_pbp()
+	return get_phrase_buy_opt('ammo_9x19_pbp', 5)
+end
+function get_phrase_buy_opt_ammo_7_62x25_p()
+	return get_phrase_buy_opt('ammo_7.62x25_p', 6)
+end
+function get_phrase_buy_opt_ammo_7_62x25_ps()
+	return get_phrase_buy_opt('ammo_7.62x25_ps', 5)
+end
+function get_phrase_buy_opt_ammo_12_70_buck()
+	return get_phrase_buy_opt('ammo_12x70_buck', 15)
+end
+function get_phrase_buy_opt_ammo_12_76_zhekan()
+	return get_phrase_buy_opt('ammo_12x76_zhekan', 15)
+end
+function get_phrase_buy_opt_ammo_5_45_39_fmj()
+	return get_phrase_buy_opt('ammo_5.45x39_fmj', 8)
+end
+function get_phrase_buy_opt_ammo_5_45_39_ap()
+	return get_phrase_buy_opt('ammo_5.45x39_ap', 5)
+end
+function get_phrase_buy_opt_ammo_5_56_45_ss190()
+	return get_phrase_buy_opt('ammo_5.56x45_ss190', 8)
+end
+function get_phrase_buy_opt_ammo_5_56_45_ap()
+	return get_phrase_buy_opt('ammo_5.56x45_ap', 5)
+end
+function get_phrase_buy_opt_ammo_7_62x39_fmj()
+	return get_phrase_buy_opt('ammo_7.62x39_fmj', 8)
+end
+function get_phrase_buy_opt_ammo_7_62x39_ap()
+	return get_phrase_buy_opt('ammo_7.62x39_ap', 5)
+end
+function get_phrase_buy_opt_ammo_7_62_54_7h1()
+	return get_phrase_buy_opt('ammo_7.62x54_7h1', 10)
+end
+function get_phrase_buy_opt_grenade_rgd5()
+	return get_phrase_buy_opt('grenade_rgd5', 10)
+end
+function get_phrase_buy_opt_grenade_f1()
+	return get_phrase_buy_opt('grenade_f1', 10)
+end
+function get_phrase_buy_opt_ammo_vog_25()
+	return get_phrase_buy_opt('ammo_vog-25', 20)
+end
+
+-- Прочее в плане геймплея
+
+local community = {
+	["stalker"] = "сталкеров",
+	["monolith"] = "монолитовцев",
+	["csky"] = "чистонебовцев",
+	["army"] = "военных",
+	["bandit"] = "бандитов",
+	["killer"] = "наемников",
+	["ecolog"] = "учёных",
+	["dolg"] = "долговцев",
+	["freedom"] = "свободовцев",
+	["zombied"] = "зомбированных",
+	["trader"] = "торговцев"
+}
+
+function show_rep_change_message(tsk_giver_npc_id)
+	local tsk_giver_npc = level.object_by_id(tsk_giver_npc_id)
+	if (axr_main.config:r_value("mm_options","enable_show_tip_reputation_option",1,true)) and tsk_giver_npc ~= nil and tsk_giver_npc:character_community() ~= nil then
+		local rep_message = "Ваша репутация среди "..community[tsk_giver_npc:character_community()].." теперь "..tostring(relation_registry.community_goodwill(tsk_giver_npc:character_community(), db.actor:id()))..""
+		rep_message = game.translate_string(rep_message)
+		local rep_message_title = "Изменение репутации у группировки"
+		rep_message_title = game.translate_string(rep_message_title)
+		db.actor:give_game_news(rep_message_title, rep_message, "ui_inGame2_PD_storonnik_ravnovesiya", 5000, 10000)
+	end
+end
+
+function teleport_for_totaliz(first_speaker, second_speaker) 
+	local box = get_story_object("bar_arena_inventory_box")
+	if (box) then
+		local function transfer_object_item(item)
+			db.actor:transfer_item(item, box)
+		end
+		db.actor:inventory_for_each(transfer_object_item)
+		level.add_pp_effector ("fade_in.ppe", 200, false)
+	    db.actor:set_actor_position(vector():set(139.61517333984,-13.390427589417,100.86038208008),37564,1710)	
+	end
+	if has_alife_info("totaliz_money_has_gone") then
+		alife():create('wpn_binoc', db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())		
+	end
+end
+
+function good_psi_helmet_protect_from_psi(h,bone_id,return_flag)
+	if h.type == 4 and db.actor:object("good_psy_helmet") ~= nil then 
+        return_flag.ret_value = false
+	end 
+end
+
+function get_cost_sect(section, count)
+    local cost = system_ini():r_s32(section, 'cost')
+    return cost and cost * (count or 1)
+end
+
+function actor_on_before_hit(h,bone_id,return_flag)
+    if h.type == 4 then
+		if db.actor:character_community() == "actor_zombied" then
+			return_flag.ret_value = false
+		end
+	end
+    if h.type == 3 and db.actor:character_community() == "actor_zombied" then
+        return_flag.ret_value = false
+    end
+end
+
+function hands_use_item()
+	if (db.actor) then
+		local obj = db.actor:active_item()
+		if (obj) then
+			return(string.match(tostring(obj:section()),"wpn"))	or (string.match(tostring(obj:section()),"knife")) or (string.match(tostring(obj:section()),"detector")) or (string.match(tostring(obj:section()),"grenade"))		
+		end
+	end
+end
+
+function hands_off(dik, keyboard_action)
+	if (key_bindings.kINVENTORY) and (hands_use_item()) then
+		get_console():execute("unbind inventory")
+	end
+	if dik == DIK_keys.DIK_I and (hands_use_item()) then
+		SetHudMsg(game.translate_string('Руки заняты'),2)
+	end
+	if (key_bindings.kINVENTORY) and not (hands_use_item()) then
+		get_console():execute("bind inventory kI")
+	end
+end
+
+function auto_hide()
+	if db.actor:has_info("ui_pda") and (hands_use_item()) then
+		db.actor:hide_weapon()
+	end
+end
+	
+function add_mapspots()
+local obj_id = get_story_object_id("bar_visitors_sad_veteran")
+level.map_add_object_spot_ser(obj_id, "ui_pda2_quest_npc_location", "Ветеран") 
+end
+	
+function on_game_start()
+--[[if (axr_main.config:r_value("mm_options","enable_mlr_kirkor_option",1,true)) then
+	RegisterScriptCallback("on_key_press",hands_off)
+	RegisterScriptCallback("actor_on_update",auto_hide)
+end--]]
+    RegisterScriptCallback("actor_on_before_hit",actor_on_before_hit)
+    RegisterScriptCallback("actor_on_item_use",excange_a_torch_and_other_pre)	
+    RegisterScriptCallback("actor_on_item_use",open_way_to_agr)	
+    RegisterScriptCallback("on_key_press",take_achiev_cheater)		
+end
+
+function death_heli(obj, enemy_id)
+	--if db.actor:id() == enemy_id and math.random(100) < 80 then
+		local heli_pos = obj:position()
+		local heli_id = obj:id()
+		local drop = alife():create('blackbox_mlr',heli_pos,obj:level_vertex_id(),obj:game_vertex_id())
+	--end
+end
+
+function take_achiev_cheater()
+	if (get_console():get_bool("g_god")) or (get_console():get_bool("g_unlimitedammo")) then
+		if db.actor~=nil then 
+			give_info("then_you_take_achiev_cheater")
+		elseif db.actor==nil then
+			return
+		end	
+	end	
+end
+
+
+-- Квесты
+
+
+function give_task_fanat_kmb_1()
+	mlr_utils.give_task('task_fanat_kmb_1')
+end
+function give_task_fanat_kmb_2()
+	mlr_utils.give_task('task_fanat_kmb_2')
+end
+function give_task_fanat_kmb_3()
+	mlr_utils.give_task('task_fanat_kmb_3')
+end
+
+function give_task_devushka_1()
+	mlr_utils.give_task('devushka_1_give')
+end
+
+function give_task_devushka_3()
+	mlr_utils.give_task('devushka_3_give')
+end
+
+function give_task_devushka_4()
+	mlr_utils.give_task('devushka_4_give')
+end
+
+function give_task_devushka_5()
+	mlr_utils.give_task('devushka_5_give')
+end
+
+function give_task_devushka_help_1()
+	mlr_utils.give_task('devushka_help_1_give')
+end
+
+function give_task_devushka_help_2()
+	mlr_utils.give_task('devushka_help_2_give')
+end
+
+function devushka_1_has()
+    if db.actor:object("wpn_toz34_sk2") then
+        return true
+    end
+    return false
+end
+function devushka_1_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "wpn_toz34_sk2")
+end
+
+function devushka_2_has()
+    if db.actor:object("ammo_12x70_buck") then
+        return true
+    end
+    return false
+end
+
+function devushka_2_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "ammo_12x70_buck")
+end
+
+function devushka_31_has()
+    if db.actor:object("af_vyvert") then
+        return true
+    end
+    return false
+end
+function devushka_32_has()
+    if db.actor:object("af_fireball") then
+        return true
+    end
+    return false
+end
+function devushka_33_has()
+    if db.actor:object("af_electra_moonlight") then
+        return true
+    end
+    return false
+end
+
+function devushka_31_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_vyvert")
+end
+
+function devushka_32_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_fireball")
+end
+
+function devushka_33_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "af_electra_moonlight")
+end
+
+function devushka_3_done_money(first_speaker, second_speaker) 
+ 	dialogs.relocate_money_from_actor(first_speaker, second_speaker, 10000)
+end
+
+function devushka_1_info()
+    news_manager.send_tip(db.actor, "Отведи меня в деревню новичков, к костру, пожалуйста.", 3, "hip", 11000, 1)
+	news_manager.send_tip(db.actor, "Отведи меня в деревню новичков, к костру, пожалуйста.", 10, "hip", 11000, 1)
+end
+
+function devushka_2_info()
+    news_manager.send_tip(db.actor, "Погиб сталкер: Юрий Семецкий. Причина смерти: аномалия мясорубка. Локация: Тёмная долина.", 3, "deth", 11000, 1)
+	news_manager.send_tip(db.actor, "О, Семецкий копыта откинул, на удачу, не иначе.", 10, "hip", 11000, 1)
+end
+
+function devushka_3_info()
+    news_manager.send_tip(db.actor, "Привет, это Бармен. Я связался с Миклухой и он уже наказал этих отморозков, больше Хип никто преследовать не будет.", 3, "barman", 11000, 1)
+	news_manager.send_tip(db.actor, "Наконец-то эти мудаки получили по заслугам.", 10, "hip", 11000, 1)
+end
+
+function devushka_4_info()
+    news_manager.send_tip(db.actor, "Здорово, мэн, это Миклуха. Нашёл я этих придурков, не переживай, вставил им по полной. Больше Хип никто преследовать не будет.", 3, "freedom2", 11000, 1)
+	news_manager.send_tip(db.actor, "Наконец-то эти мудаки получили по заслугам.", 10, "hip", 11000, 1)
+end
+
+function devushka_4_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "beer_1", "in")
+end
+
+function devushka_5_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section(second_speaker, "cuban", "in")
+end
+
+function give_hip_tushonka(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "conserva")
+end
+
+function give_devushka_medved(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "detector_advanced")
+end
+
+function actor_has_tushonka()
+    if db.actor:object("conserva") then
+        return true
+    end
+    return false
+end
+
+function actor_has_medved()
+    if db.actor:object("detector_advanced") then
+        return true
+    end
+    return false
+end
+
+
+function poluchit_po_litsu(actor, npc)                                            
+    npc:force_set_goodwill(-5000, actor)
+end
+
+function devushka_3_has_money(first_speaker, second_speaker)
+    return first_speaker:money() >= 10000
+end
+
+function devushka_help_1_has(first_speaker, second_speaker)
+	local item_sections = {
+		["artefact_container"] = 3}
+ 
+	local function calc(temp, item)
+		local sect = item:section()
+		if item_sections[sect] and item_sections[sect]>0 then
+			if item_sections[sect]==1 then
+				item_sections[sect] = nil
+			else
+				item_sections[sect] = item_sections[sect] - 1
+			end
+		end
+	end
+ 
+	db.actor:iterate_inventory(calc, db.actor)
+	return next(item_sections)==nil
+end 
+
+function devushka_help_2_has(first_speaker, second_speaker)
+	local item_sections = {
+		["bag_medkit_4"] = 2}
+ 
+	local function calc(temp, item)
+		local sect = item:section()
+		if item_sections[sect] and item_sections[sect]>0 then
+			if item_sections[sect]==1 then
+				item_sections[sect] = nil
+			else
+				item_sections[sect] = item_sections[sect] - 1
+			end
+		end
+	end
+ 
+	db.actor:iterate_inventory(calc, db.actor)
+	return next(item_sections)==nil
+end 
+
+function hip_moovie_1(npc, actor)
+	npc:stop_talk()
+	actor:stop_talk()
+	xr_effects.enable_ui(db.actor, db.actor)	  
+	game.start_tutorial("hip_1")
+end
+
+function barmen_give_container(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "artefact_container", "in", 3) 
+end
+
+function devushka_give_present(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "af_gold_fish", "in", 1) 
+end
+
+function mikluha_give_medkit_bags(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "bag_medkit_4", "in", 2) 
+end
+
+function devushka_help_1_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "artefact_container", 3)
+end
+
+function devushka_help_2_done(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "bag_medkit_4", 2)
+end
+
+function ecolog_companion_task_mlr_1_complete(a,b)
+	return xr_conditions.has_task_target_anomaly() ~= true and xr_conditions.check_nearest_smart_dist_le(nil,nil,{40,"yan_smart_terrain_6_4"}) or false
+end
+
+function ecolog_companion_task_mlr_1_not_complete(a,b)
+	return not ecolog_companion_task_mlr_1_complete(a,b)
+end 
+
+function ecolog_companion_task_mlr_1_complete_task(a,b)
+	task_manager.get_task_manager():set_task_completed("yan_stalker_sakharov_task_6")
+	a:stop_talk()
+	b:stop_talk()
+end
+
+function ecolog_companion_task_mlr_1_give_reward(a,b)
+	dialogs.relocate_money(db.actor,math.random(5000,6000),"in")
+	if ((math.random(1,100)/100) <= 0.5) then
+		coc_treasure_manager.create_random_stash()
+	end
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"ecolog", 50})
+end
+
+function ecolog_companion_task_mlr_2_complete(a,b)
+	return xr_conditions.has_task_target_anomaly() ~= true and xr_conditions.check_nearest_smart_dist_le(nil,nil,{40,"gar_smart_terrain_3_5"}) or false
+end
+
+function ecolog_companion_task_mlr_2_not_complete(a,b)
+	return not ecolog_companion_task_mlr_2_complete(a,b)
+end 
+
+function ecolog_companion_task_mlr_2_complete_task(a,b)
+	task_manager.get_task_manager():set_task_completed("hunter_gar_trader_task_5")
+	a:stop_talk()
+	b:stop_talk()
+end
+
+function ecolog_companion_task_mlr_2_give_reward(a,b)
+	dialogs.relocate_money(db.actor,math.random(3000,5000),"in")
+	if ((math.random(1,100)/100) <= 0.5) then
+		coc_treasure_manager.create_random_stash()
+	end
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"dolg", 50})
+end
+
+function stalker_companion_task_mlr_1_complete(a,b)
+	local squad = get_story_squad("stalker_companion_task_mlr_1")
+	if not (squad) then 
+		return false
+	end
+	
+	local id = squad:commander_id()
+	local npc = db.storage[id] and db.storage[id].object
+	if not (npc) then 
+		return false
+	end
+	
+	local total_loot_count = 0
+	for k in squad:squad_members() do
+		local npc = db.storage[k.id] and db.storage[k.id].object
+		if (npc) then 
+			total_loot_count = total_loot_count + (utils.load_var(npc,"s_loot_count") or 0)
+		end
+	end
+	
+	if (total_loot_count >= 5) then 
+		return true
+	end
+	
+	return false
+end
+
+function stalker_companion_task_mlr_1_not_complete(a,b)
+	return not stalker_companion_task_mlr_1_complete(a,b)
+end 
+
+function stalker_companion_task_mlr_1_complete_task(a,b)
+	task_manager.get_task_manager():set_task_completed("esc_m_trader_task_6")
+	a:stop_talk()
+	b:stop_talk()
+end
+
+function stalker_companion_task_mlr_1_give_reward(a,b)
+	dialogs.relocate_money(db.actor,math.random(2500,4000),"in")
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"stalker", 50})
+end
+
+function control()
+	local chance = 0.5
+	if (math.random() < chance) then
+		--if (not has_alife_info("completionist") and not has_alife_info("sim_stalker_help_harder")) then
+			if (db.actor:money() >= 500) then
+				message_robbery()
+			end
+		--end
+	end
+end
+
+function message_robbery()
+	local amount = math.floor(db.actor:money()*math.random(25,50)/100)
+	db.actor:give_money(-amount)
+	db.actor:give_game_news("Из кармана пропало:", game.translate_string(tostring(amount)), "ui_inGame2_Dengi_otdani", 0, 3000)
+end
+
+-- Смена фонариков
+function excange_a_torch_and_other_pre(item)
+	if item:section() == 'device_torch_low_use' or
+	item:section() == 'device_torch_normal_use' or
+	item:section() == 'dev_torch_light_better_use' or
+	item:section() == 'dev_torch_light_better_1_use' then
+		excange_a_torch_and_other(item)
+	end
+end
+
+function excange_a_torch_and_other(item)
+	local section
+	if db.actor:object("device_torch") ~= nil then
+		section = "device_torch"
+	elseif db.actor:object("device_torch_low") ~= nil then
+		section = "device_torch_low"
+		alife():create("device_torch_low_use",db.actor:position(),0,0,0)		
+	elseif db.actor:object("device_torch_normal") ~= nil then
+		section = "device_torch_normal"
+		alife():create("device_torch_normal_use",db.actor:position(),0,0,0)			
+	elseif db.actor:object("dev_torch_light_better") ~= nil then
+		section = "dev_torch_light_better"
+		alife():create("dev_torch_light_better_use",db.actor:position(),0,0,0)			
+	elseif db.actor:object("dev_torch_light_better_1") ~= nil then
+		section = "dev_torch_light_better_1"
+		alife():create("dev_torch_light_better_1_use",db.actor:position(),0,0,0)			
+	end	
+	
+	if item:section() == 'device_torch_low_use'  then				
+		alife():release(alife_object(db.actor:object(section):id()), true)		
+		alife():create("device_torch_low",db.actor:position(),0,0,0)		
+	elseif item:section() == 'device_torch_normal_use'  then	
+		alife():release(alife_object(db.actor:object(section):id()), true)	
+		alife():create("device_torch_normal",db.actor:position(),0,0,0)
+	elseif item:section() == 'dev_torch_light_better_use'  then	
+		alife():release(alife_object(db.actor:object(section):id()), true)	
+		alife():create("dev_torch_light_better",db.actor:position(),0,0,0)
+	elseif item:section() == 'dev_torch_light_better_1_use'  then	
+		alife():release(alife_object(db.actor:object(section):id()), true)	
+		alife():create("dev_torch_light_better_1",db.actor:position(),0,0,0)		
+	end	
+end
+
+function open_way_to_agr(item)
+	if item:section() == 'mlr_strelok_item_01'  then
+		transitions.open_transition('val_space_restrictor_to_labx18')	
+	end	
+end

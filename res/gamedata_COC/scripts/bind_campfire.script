@@ -29,7 +29,14 @@ function use_campfire(actor,zone,p)
 			if (pos:distance_to_sqr(binder.object:position()) <= 2.5) then
 				if (binder.campfire:is_on()) then 
 					binder.campfire:turn_off()
-				else 
+				else
+					local item = db.actor:object("matches")	
+        				if item == nil then 
+       					get_hud():HidePdaMenu() 
+       					SetHudMsg(game.translate_string("Необходим набор для розжига"),4) 
+        				return 
+     					end
+					demosfen.eatmatches()
 					binder.campfire:turn_on()
 				end
 			end

@@ -1,0 +1,877 @@
+--=============================================================
+--
+-- Dynamic Anomaly Generator (drx_da_main.script)
+--	CoC 1.5b r4 - DoctorX Dynamic Anomalies 2.1
+--
+--	- Generates randomly placed anomalies on specified smart terrains
+--	- Setting file: configs\drx\drx_da_config.ltx
+--
+--	Created by: DoctorX
+--	Last revised: April 02, 2018
+--
+--=============================================================
+
+
+-- ________________________________________________________________________________________________
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- Settings File
+--
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	September 12, 2017
+--
+-- ------------------------------------------------------------------------------------------------
+
+-- Location of the settings file:
+local ini = ini_file( "drx\\drx_da_config.ltx" )
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ________________________________________________________________________________________________
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_update_dynamic_anomalies function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Updates dynamic anomalies
+--
+--	Usage:
+--		drx_da_update_dynamic_anomalies( )
+--
+--	Parameters:
+--		none
+--
+--	Persistent storage:
+--		drx_da_anomalies_spawned_{level name} (type: bool)
+--			Flag indicating whether or not dynamic anomalies are currently spawned
+--		drx_da_anoms_need_refresh (type: bool)
+--			Flag indicating whether or not dynamic anomalies need to be refreshed
+--		drx_da_last_surge_time (type: ctime)
+--			Timestamp of the end of the last blowout
+--
+--	Return value (type: bool):
+--		Returns true on success
+--		Returns false on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified February 22, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Update dynamic anomalies:
+function drx_da_update_dynamic_anomalies( )
+
+	-- Verify db.actor is available:
+	if ( not db.actor ) then
+		printf( "DRX DA Error: Cannot update anomalies, db.actor not available" )
+		return false
+	end
+
+	-- Get surge manager:
+	local surgeman = surge_manager.get_surge_manager( )
+	if ( not surgeman ) then
+		printf( "DRX DA Error: Cannot update anomalies, surge manager not available" )
+		return false
+	end
+
+	-- Get current surge end time:
+	local surge_end_time = surgeman.last_surge_time
+	if ( not surge_end_time ) then
+		surge_end_time = game.get_game_time( )
+	end
+
+	-- If current surge is a new surge then randomize anomalies:
+	local last_surge_time = utils.load_ctime( db.actor, "drx_da_last_surge_time", nil )
+	if ( (not last_surge_time) or (surge_end_time:diffSec( last_surge_time ) > 0) ) then
+		drx_da_randomize_anomalies( )
+		utils.save_ctime( db.actor, "drx_da_last_surge_time", surge_end_time )
+	end
+
+	-- Get the current level name:
+	local level_name = level.name( )
+	if ( (not level_name) or (level_name == "") ) then
+		printf( "DRX DA: Cannot update anomalies, actor not on a level" )
+		return false
+	end
+
+	-- Check if anomalies are spawned on the current level:
+	if ( utils.load_var( db.actor, strformat( "drx_da_anomalies_spawned_%s", level_name ), false ) == false ) then
+		drx_da_spawn_anomalies_current_level( )
+
+	-- Check if existing anomalies need to be refreshed:
+	elseif ( utils.load_var( db.actor, "drx_da_anoms_need_refresh", false ) == true ) then
+		drx_da_refresh_anomalies( )
+
+	end
+
+	-- Set return value:
+	return true
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_spawn_anomalies_current_level function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Spawns dynamic anomalies on the current level
+--
+--	Usage:
+--		drx_da_spawn_anomalies_current_level( )
+--
+--	Parameters:
+--		none
+--
+--	Persistent storage:
+--		drx_da_anomalies_spawned_{level name} (type: bool)
+--			Flag indicating whether or not dynamic anomalies are currently spawned
+--
+--	Return value (type: bool):
+--		Returns true on success
+--		Returns false on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified March 18, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Spawn dynamic anomalies on the current level:
+function drx_da_spawn_anomalies_current_level( )
+
+	-- Verify db.actor is available:
+	if ( not db.actor ) then
+		printf( "DRX DA Error: db.actor not available" )
+		return false
+	end
+
+	-- Get the current level name:
+	local level_name = level.name( )
+	if ( (not level_name) or (level_name == "") ) then
+		return false
+	end
+
+	-- Build a list of allowable smart terrains:
+	local smart_list = alun_utils.collect_section( ini, level_name )
+	if ( (not smart_list) or (#smart_list < 1) ) then
+		return false
+	end
+
+	-- Spawn max anomalies at each smart terrain:
+	for i, smart_name in pairs( smart_list ) do
+		drx_da_spawn_anomaly_field_at_smart( smart_name )
+	end
+
+	-- Set the anomalies spawned flag and send update to the console:
+	utils.save_var( db.actor, strformat( "drx_da_anomalies_spawned_%s", level_name ), true )
+	printf( "DRX DA: Dynamic anomalies generated for %s", level_name )
+
+	-- Set return value:
+	return true
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_spawn_anomaly_field_at_smart function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Spawns an anomaly field at the specified smart terrain
+--
+--	Usage:
+--		drx_da_spawn_anomaly_field_at_smart( smart_name )
+--
+--	Parameters:
+--		smart_name (type: string, smart terrain name)
+--			- Name of the smart terrain
+--
+--	Persistent storage:
+--		drx_da_anom_id_{smart_name}_{anom_number} (type: object id)
+--			Id of each anomaly spawned
+--
+--	Ini requirements:
+--		drx\drx_da_config.ltx
+--			[field_properties]
+--				anomaly_max_number (type: int)
+--					- Maximum number of anomalies in each anomaly field (default = 0)
+--			[anomaly_types]
+--				{anomaly type name} (type: string, anomaly name)
+--					- List of potential anomalies to spawn
+--
+--	Return value (type: bool):
+--		Returns true and creates the anomaly field
+--		Returns false on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified January 31, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Spawn an anomaly field:
+function drx_da_spawn_anomaly_field_at_smart( smart_name )
+
+	-- Verify db.actor is available:
+	if ( not db.actor ) then
+		printf( "DRX DA Error: db.actor not available" )
+		return false
+	end
+
+	-- Get the smart terrain:
+	local smart = SIMBOARD.smarts_by_names[smart_name]
+	if ( not smart ) then
+		printf( "DRX DA Error: Unable to create dynamic anomaly field for %s, the specified smart location does not exist", smart_name )
+		return false
+	end
+
+	-- Choose an anomaly type to spawn:
+	local anomaly_list = alun_utils.collect_section( ini, "anomaly_types" )
+	if ( (not anomaly_list) or (#anomaly_list < 1) ) then
+		printf( "DRX DA: No dynamic anomaly types specified" )
+		return false
+	end
+	local anom_type = anomaly_list[math.random( #anomaly_list )]
+
+	-- Determine the maximum amount of anomalies to spawn in each anomaly field:
+	local anomaly_max_number = (ini:r_float_ex( "field_properties", "anomaly_max_number" ) or 0)
+	if ( (not anomaly_max_number) or (anomaly_max_number < 1) ) then
+		printf( "DRX DA: Dynamic anomalies not spawned, max anomaly count is 0" )
+		return false
+	end
+
+	-- Generate each anomaly in the field:
+	for i = 1, ( anomaly_max_number ) do
+
+		-- Select a location for the current anomaly:
+		local pos = drx_da_generate_position( smart_name )
+		if ( pos ) then
+
+			-- Get the new level vertex id for the generated position:
+			local lvid = level.vertex_id( pos )
+
+			-- Spawn the anomaly:
+			local anom_id = drx_da_spawn_anomaly( anom_type, pos, lvid, smart.m_game_vertex_id )
+
+			-- Store the anomaly id:
+			if ( anom_id ) then
+				utils.save_var( db.actor, strformat( "drx_da_anom_id_%s_%s", smart_name, i ), anom_id )
+
+			end
+
+		end
+
+	end
+
+	-- Send update to the console:
+	printf( "DRX DA: Dynamic anomaly field %s spawned at %s", anom_type, smart_name )
+
+	-- Set return value:
+	return true
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_spawn_anomaly function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Spawns an anomaly at the specified location
+--
+--	Usage:
+--		drx_da_spawn_anomaly( anom_type, pos, lvid, gvid )
+--
+--	Parameters:
+--		anom_type (type: string, anomaly type name)
+--			- Type of anomaly to spawn
+--		pos (type: vector)
+--			- Positional data for the anomaly
+--		lvid (type: int, level vertex id)
+--			- Level vertex id
+--		gvid (type: int, game vertex id)
+--			- Game vertex id
+--
+--	Return value (type: object id):
+--		Returns the id of the spawned anomaly
+--		Returns nil on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified March 02, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Spawn a single anomaly:
+function drx_da_spawn_anomaly( anom_type, pos, lvid, gvid )
+
+	-- Spawn the anomaly:
+	local se_obj = alife( ):create( anom_type, pos, lvid, gvid )
+	if ( not se_obj ) then
+		printf( "DRX DA Error: Unable to spawn dynamic anomaly" )
+		return
+	end
+
+	-- Set anomaly properties:
+	local data = stpk_utils.get_anom_zone_data( se_obj )
+	if ( not data ) then
+		printf( "DRX DA Error: Unable to set dynamic anomaly properties" )
+		return
+	end
+	data.shapes[1] = {}
+	data.shapes[1].shtype = 0
+	data.shapes[1].offset = vector( ):set( 0, 0, 0 )  -- Leave for compatibility with CoC 1.4.22, delete later
+	data.shapes[1].center = vector( ):set( 0, 0, 0 )
+	data.shapes[1].radius = 3
+	stpk_utils.set_anom_zone_data( data, se_obj )
+
+	-- Return the anomaly id:
+	return se_obj.id
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_generate_position function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Generates a random position vector on the ground within a smart terrain location
+--
+--	Usage:
+--		drx_da_generate_position( smart_name )
+--
+--	Parameters:
+--		smart_name (type: string, smart terrain name)
+--			- Name of the smart terrain
+--
+--	Ini requirements:
+--		drx\drx_da_config.ltx
+--			[location_offset]
+--				max_offset_x (type: float, meters)
+--					- Magnitude of maximum offset from smart terrain center in x (north-south) direction
+--				max_offset_y (type: float, meters)
+--					- Magnitude of maximum offset from smart terrain center in y (up-down) direction
+--				max_offset_z (type: float, meters)
+--					- Magnitude of maximum offset from smart terrain center in z (east-west) direction
+--				max_tries (type: int)
+--					- Maximum number of iterations to try generating a spawn position before aborting
+--
+--	Return value (type: vector):
+--		Returns the generated positional data
+--		Returns nil on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX, (modification of method suggested by Alundaio)
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified January 31, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Generate positional data:
+function drx_da_generate_position( smart_name )
+
+	-- Get the smart terrain:
+	local smart = SIMBOARD.smarts_by_names[smart_name]
+	if ( not smart ) then
+		printf( "DRX DA Error: Unable to generate positional data, specified smart location does not exist" )
+		return
+	end
+
+	-- Get maximum offset values:
+	local max_offset_x = (ini:r_float_ex( "location_offset", "max_offset_x" ) or 0)
+	local max_offset_y = (ini:r_float_ex( "location_offset", "max_offset_y" ) or 0)
+	local max_offset_z = (ini:r_float_ex( "location_offset", "max_offset_z" ) or 0)
+	local num_tries = (ini:r_float_ex( "location_offset", "max_offset_z" ) or 1)
+
+	-- Try to generate valid positional data on the ground:
+	local pos = vector( ):set( 0, 0, 0 )
+	local valid_lvid = false
+	while ( (valid_lvid ~= true) and (num_tries > 0) ) do
+
+		-- Randomly offset anomaly x-position from center of smart terrain:
+		local offset_x = (max_offset_x * math.random( ))
+		if (math.random( ) <= 0.5) then
+			offset_x = -(offset_x)
+		end
+		local pos_x = (smart.position.x + offset_x)
+
+		-- Randomly offset anomaly y-position from center of smart terrain:
+		local offset_y = (max_offset_y * math.random( ))
+		if (math.random( ) <= 0.5) then
+			offset_y = -(offset_y)
+		end
+		local pos_y = (smart.position.y + offset_y)
+
+		-- Randomly offset anomaly z-position from center of smart terrain:
+		local offset_z = (max_offset_z * math.random( ))
+		if (math.random( ) <= 0.5) then
+			offset_z = -(offset_z)
+		end
+		local pos_z = (smart.position.z + offset_z)
+
+		-- Set anomaly position at location vertex and check if valid:
+		pos = vector( ):set( pos_x, pos_y, pos_z )
+		local lvid = level.vertex_id( pos )
+		if ( lvid < 4294967295 ) then
+			pos = level.vertex_position( lvid )
+			valid_lvid = true
+		end
+
+		-- Decrement the number of tries left:
+		num_tries = (num_tries - 1)
+		if ( (num_tries <= 0) and (valid_lvid ~= true) ) then
+			printf( "DRX DA Error: Unable to generate valid lvid pos, aborting" )
+			return
+		end
+
+	end
+
+	-- Return the position vector:
+	return pos
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_randomize_anomalies function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Determines which anomalies should be activated or de-activated
+--
+--	Usage:
+--		drx_da_randomize_anomalies( )
+--
+--	Parameters:
+--		none
+--
+--	Persistent storage:
+--		drx_da_anom_active_{smart_name}_{anom_number} (type: bool)
+--			Flag indicating whether or not the specified anomaly is active
+--		drx_da_anom_id_{smart_name}_{anom_number} (type: object id)
+--			Id of each anomaly spawned
+--
+--	Ini requirements:
+--		drx\drx_da_config.ltx
+--			[field_properties]
+--				spawn_percent (type: int)
+--					- Percent chance an anomaly field will be spawned at a specific smart
+--				anomaly_max_active (type: int)
+--					- Maximum number of active anomalies in each anomaly field
+--				anomaly_max_number (type: int)
+--					- Maximum number of anomalies spawned in each anomaly field
+--			[anomaly_levels] (type: string, level names)
+--				- List of allowable levels to spawn dynamic anomalies on
+--			[{level name}]
+--				{smart terrain name} (type: string, smart terrain name)
+--					- List of allowable smart terrain names for each level for anomaly fields to spawn
+--
+--	Return value (type: bool):
+--		Returns true on success
+--		Returns false on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified February 01, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Randomize dynamic anomalies:
+function drx_da_randomize_anomalies( )
+
+	-- Verify db.actor is available:
+	if ( not db.actor ) then
+		printf( "DRX DA Error: db.actor not available" )
+		return false
+	end
+
+	-- Get list of allowable levels:
+	local level_list = alun_utils.collect_section( ini, "anomaly_levels" )
+	if ( (not level_list) or (#level_list < 1) ) then
+		printf( "DRX DA: Could not randomize anomalies, no levels specified for dynamic anomalies" )
+		return false
+	end
+
+	-- Determine the maximum amount of anomalies spawned in each anomaly field:
+	local anomaly_max_number = (ini:r_float_ex( "field_properties", "anomaly_max_number" ) or 0)
+	if ( (not anomaly_max_number) or (anomaly_max_number < 1) ) then
+		printf( "DRX DA: Could not refresh anomalies, max anomaly count is 0" )
+		return false
+	end
+
+	-- Determine the maximum amount of anomalies active in each anomaly field:
+	local anomaly_max_active = (ini:r_float_ex( "field_properties", "anomaly_max_active" ) or 0)
+	if ( (not anomaly_max_active) or (anomaly_max_active < 1) ) then
+		printf( "DRX DA: Could not refresh anomalies, max active count is 0" )
+		return false
+	end
+
+	-- Get the percent chance for anomalies to spawn:
+	local spawn_percent = (ini:r_float_ex( "field_properties", "spawn_percent" ) or 0)
+	if ( (not spawn_percent) or (spawn_percent == 0) ) then
+		printf( "DRX DA: Dynamic anomalies not spawned, spawn chance is 0" )
+		return false
+	end
+
+	-- Randomize dynamic anomalies on each level:
+	for k, level_name in pairs( level_list ) do
+
+		-- Build a list of available smart terrains:
+		local smart_list = alun_utils.collect_section( ini, level_name )
+
+		-- Set active switches for each anomaly on the current level:
+		if ( (smart_list) and (#smart_list > 0) ) then
+			for i, smart_name in pairs( smart_list ) do
+
+				-- Determine if anomalies should not be active on the current smart:
+				if ( math.random( ) > spawn_percent ) then
+					for j = 1, ( anomaly_max_number ) do
+						utils.save_var( db.actor, strformat( "drx_da_anom_active_%s_%s", smart_name, j ), false )
+					end
+
+				-- Determine anomalies to be active on the current smart:
+				else
+
+					-- Build a list of all spawned anomalies on the current smart:
+					local anoms_list = {}
+					for k = 1, ( anomaly_max_number ) do
+						table.insert( anoms_list, string.format( "drx_da_anom_id_%s_%s", smart_name, k ) )
+					end
+
+					-- Build a list of anomalies to activate on the current smart:
+					local anoms_to_activate = {}
+					local num_active = math.random( 1, anomaly_max_active )
+					for m = 1, ( num_active ) do
+						if ( #anoms_list < 1 ) then
+							break
+						end
+						local random_number = math.random( 1, #anoms_list )
+						table.insert( anoms_to_activate, string.format( "drx_da_anom_id_%s_%s", smart_name, random_number ) )
+						table.remove( anoms_list, random_number )
+					end
+
+					-- Set active flags for all anomalies on current smart:
+					for p = 1, ( anomaly_max_number ) do
+						local current_anom = string.format( "drx_da_anom_id_%s_%s", smart_name, p )
+						local active = false
+						for n = 1, ( #anoms_to_activate ) do
+							if ( current_anom == anoms_to_activate[n] ) then
+								active = true
+								break
+							end
+						end
+						utils.save_var( db.actor, strformat( "drx_da_anom_active_%s_%s", smart_name, p ), active )
+					end
+
+				end
+
+			end
+		end
+
+		-- Send update to the console:
+		printf( "DRX DA: Dynamic anomalies randomized for %s", level_name )
+
+	end
+
+	-- Set the refresh anomalies flag:
+	drx_da_set_refresh_flag( true )
+
+	-- Set return value:
+	return true
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_refresh_anomalies function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Refreshes dynamic anomalies on the current level
+--
+--	Usage:
+--		drx_da_refresh_anomalies( )
+--
+--	Parameters:
+--		none
+--
+--	Persistent storage:
+--		drx_da_anom_id_{smart_name}_{anom_number} (type: object id)
+--			Id of each anomaly spawned
+--		drx_da_anom_active_{smart_name}_{anom_number} (type: bool)
+--			Flag indicating whether or not the specified anomaly should be active
+--		drx_da_anoms_need_refresh (type: bool)
+--			Flag indicating whether or not dynamic anomalies need to be refreshed
+--
+--	Ini requirements:
+--		drx\drx_da_config.ltx
+--			[field_properties]
+--				anomaly_max_number (type: int)
+--					- Maximum number of anomalies spawned in each anomaly field (default = 0)
+--			[{level name}]
+--				{smart terrain name} (type: string, smart terrain name)
+--					- List of allowable smart terrain names for each level for anomaly fields to spawn
+--
+--	Return value (type: bool):
+--		Returns true on success
+--		Returns false on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.1
+--	Last modified April 02, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Refresh dynamic anomalies:
+function drx_da_refresh_anomalies( )
+
+	-- Verify db.actor is available:
+	if ( not db.actor ) then
+		printf( "DRX DA Error: db.actor not available" )
+		return false
+	end
+
+	-- Get the current level name:
+	local level_name = level.name( )
+	if ( (not level_name) or (level_name == "") ) then
+		return false
+	end
+
+	-- Build a list of available smart terrains:
+	local smart_list = alun_utils.collect_section( ini, level_name )
+	if ( (not smart_list) or (#smart_list < 1) ) then
+		return false
+	end
+
+	-- Determine the maximum amount of anomalies spawned in each anomaly field:
+	local anomaly_max_number = (ini:r_float_ex( "field_properties", "anomaly_max_number" ) or 0)
+	if ( (not anomaly_max_number) or (anomaly_max_number < 1) ) then
+		printf( "DRX DA: Could not refresh anomalies, max anomaly count is 0" )
+		return false
+	end
+
+	-- Switch each anomaly on the current level on then off if needed:
+	for i, smart_name in pairs( smart_list ) do
+		local anoms_active_on_smart = false
+		for j = 1, ( anomaly_max_number ) do
+			local anom_id = utils.load_var( db.actor, strformat( "drx_da_anom_id_%s_%s", smart_name, j ), nil )
+			if ( anom_id ) then
+				local anom_obj = level.object_by_id( anom_id )
+				if ( anom_obj ) then
+					anom_obj:enable_anomaly( )
+					if ( utils.load_var( db.actor, strformat( "drx_da_anom_active_%s_%s", smart_name, j ), false ) == false ) then
+						anom_obj:disable_anomaly( )
+					else
+						anoms_active_on_smart = true
+					end
+				end
+			end
+		end
+		if ( anoms_active_on_smart ) then
+			printf( "DRX DA: Dynamic anomalies active on %s", smart_name )
+		end
+	end
+
+	-- Reset the anoms need refresh flag and send update to the console:
+	utils.save_var( db.actor, "drx_da_anoms_need_refresh", false )
+	printf( "DRX DA: Dynamic anomalies refreshed for %s", level_name )
+
+	-- Set return value:
+	return true
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_set_refresh_flag function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Sets the status of the refresh anomalies flag
+--
+--	Usage:
+--		drx_da_set_refresh_flag( flag_status )
+--
+--	Parameters:
+--		flag_status (type: bool)
+--			- State to set the refresh anomalies flag to (true = needs refresh, false = does not need refresh)
+--
+--	Persistent storage:
+--		drx_da_anoms_need_refresh (type: bool)
+--			Flag indicating whether or not dynamic anomalies need to be refreshed
+--
+--	Return value (type: bool):
+--		Returns true on success
+--		Returns false on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified January 31, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Refresh dynamic anomalies:
+function drx_da_set_refresh_flag( flag_status )
+
+	-- Verify db.actor is available:
+	if ( not db.actor ) then
+		printf( "DRX DA Error: Unable to set refresh anomalies flag, db.actor not available" )
+		return false
+	end
+
+	-- Set the refresh anomalies flag:
+	utils.save_var( db.actor, "drx_da_anoms_need_refresh", flag_status )
+
+	-- Set return value:
+	return true
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ________________________________________________________________________________________________
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_actor_on_update_callback function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Scripts to run on actor update
+--
+--	Usage:
+--		(called on actor update)
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: nil):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified January 31, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Scripts to run when the game loads:
+local function drx_da_actor_on_update_callback( )
+
+	-- Update dynamic anomalies:
+	drx_da_update_dynamic_anomalies( )
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_on_game_load_callback function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Scripts to run when a game loads or level change occurs
+--
+--	Usage:
+--		(called when a game loads or level change occurs)
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: nil):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified January 31, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Scripts to run when the game loads:
+local function drx_da_on_game_load_callback( )
+
+	-- Set flag to refresh dynamic anomalies:
+	drx_da_set_refresh_flag( true )
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ________________________________________________________________________________________________
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- on_game_start function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Registers callback scripts
+--
+--	Usage:
+--		(called when a game session begins)
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: nil):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 2.0
+--	Last modified January 31, 2018
+-- ------------------------------------------------------------------------------------------------
+
+-- Register callback scripts:
+function on_game_start( )
+	RegisterScriptCallback( "actor_on_update", drx_da_actor_on_update_callback )
+	RegisterScriptCallback( "on_game_load", drx_da_on_game_load_callback )
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

@@ -1,7 +1,8 @@
 --'******************************************************
--- Edited by Alundaio
+-- Edited by Alundaio, EGZOdaw
 --
 -- edited 1/14/2016: Added ability to create squad npcs without specifying a smart
+-- edited 12/18/2017: Added feature: Now you see squads on PDA map - EGZOdaw
 --'******************************************************
 
 -- Current Action: 0 - Reach Target | 1 - Stay Point
@@ -62,7 +63,7 @@ function sim_squad_scripted:init_squad()
 	self.idle_time			= sys_ini:r_float_ex(settings_id,"idle_time") or math.random(STAY_POINT_IDLE_MIN,STAY_POINT_IDLE_MAX)	
 	
 	self.sympathy			= sys_ini:r_float_ex(settings_id,"sympathy")
-
+	self.show_spot			= sys_ini:r_bool_ex(settings_id,"show_spot",false)
 	self.always_arrived		= sys_ini:r_bool_ex(settings_id,"always_arrived",false)
 	self:set_location_types_section("squad_terrain")
 	self:set_location_types_section("stalker_terrain")
@@ -200,7 +201,7 @@ function sim_squad_scripted:specific_update(script_target_id)
 	end
 	
 	if (self.current_action) then
-	
+
 		-- in such case assigned is changed (such as get_help_target_id) but current action is 1 (reached)
 		if (self.current_action == 1 and self.assigned_target_id ~= self.current_target_id) then 
 			self.current_action = 0
@@ -1015,7 +1016,7 @@ function sim_squad_scripted:can_switch_online()
 		return false
 	end
 	
-	if (self.forced_online_status == false) then 
+	if (self.forced_online_status == false) then
 		return false
 	end
 	
@@ -1083,6 +1084,21 @@ function sim_squad_scripted:show()
 		else
 			spot = "storyline_task_location"
 		end
+-------------------------------------av661194--start---------------
+             if (axr_main.config:r_value("mm_options","enable_show_enemy_health",1,false) == true) then
+                if not(is_squad_monster[self.player_id])  then
+		local relation = self:get_squad_relation()
+		   if (relation=="friends") then
+			spot = "alife_presentation_squad_friend_1"
+		   elseif (relation=="neutral") then
+			spot = "alife_presentation_squad_neutral_1"
+		   else 
+            spot = "alife_presentation_squad_enemy_1"
+                   end
+	       else
+            spot = "alife_presentation_squad_monster_1"
+                end
+
 	elseif not(is_squad_monster[self.player_id]) then
 		local relation = game_relations.get_squad_relation_to_actor_by_id(self)
 		if (relation=="friends") then
@@ -1090,6 +1106,30 @@ function sim_squad_scripted:show()
 		elseif(relation=="neutral") then
 			spot = "alife_presentation_squad_neutral"
 		end
+	end
+
+	elseif (axr_main.config:r_value("mm_options","enable_show_enemy_health",1,false) == true) then
+                if not(is_squad_monster[self.player_id])  then
+		local relation = self:get_squad_relation()
+		   if (relation=="friends") then
+			spot = "alife_presentation_squad_friend_1"
+		   elseif (relation=="neutral") then
+			spot = "alife_presentation_squad_neutral_1"
+		   else
+            spot = "alife_presentation_squad_enemy_1"
+                end
+	       else
+            spot = "alife_presentation_squad_monster_1"
+           end
+
+        elseif not(is_squad_monster[self.player_id]) then
+		local relation = game_relations.get_squad_relation_to_actor_by_id(self)
+		if(relation=="friends") then
+			spot = "alife_presentation_squad_friend"
+		elseif(relation=="neutral") then
+			spot = "alife_presentation_squad_neutral"
+		end
+-------------------------------------av661194--end---------------
 	end
 
 	if (spot~="") then
@@ -1135,7 +1175,20 @@ function sim_squad_scripted:get_squad_props()
 
 		return t
 	else
-		return game.translate_string(self.player_id)
+-------------------------------------av661194--start---------------
+		local t = game.translate_string(self.player_id) .. "\\nЧисленность " .. self:npc_count()
+
+		local assigned_target = self.assigned_target_id and alife_object(self.assigned_target_id)
+		local assigned_target_name = (self.assigned_target_id == 0 and "actor") or (assigned_target and assigned_target:name())
+		local current_target = self.current_target_id and alife_object(self.current_target_id)
+		local current_target_name = (self.current_target_id == 0 and "actor") or (current_target and current_target:name())
+
+		if assigned_target_name and (assigned_target_name ~= current_target_name) then
+		t = t .. "\\nВ пути к цели - \\n" .. game.translate_string("st_"..assigned_target_name.."_name_full")
+		end
+		return t
+
+-------------------------------------av661194--end---------------
 	end
 end
 
@@ -1228,3 +1281,42 @@ end
 function sim_squad_scripted:evaluate_prior(squad)
 	return simulation_objects.evaluate_prior(self, squad)
 end
+--xrSanya-----------------------------------------------
+
+function sim_squad_scripted:get_squad_relation()
+    local squad = alife_object(self.id)
+    local goodwill = 0
+    local npc_count = 0
+    for k in squad:squad_members() do
+  local object = db.storage[k.id] and db.storage[k.id].object
+        if object and db.actor then
+            goodwill = goodwill + object:general_goodwill(db.actor)
+            npc_count = npc_count + 1
+        end
+    end
+    if npc_count ~= 0 then
+        local delta = goodwill/npc_count
+        if delta <= -1000 then
+            return "enemy"
+        elseif delta >= 1000 then
+            return "friends"
+        elseif delta < 1000 and delta > -1000 then
+            return "neutral"
+        end
+    end   
+    local relation = 0
+    if db.actor then
+  relation = db.actor:community_goodwill(self.player_id)+game_relations.get_factions_community(self.player_id, alife():actor():community())
+    else
+  relation = game_relations.get_factions_community(self.player_id, alife():actor():community())
+    end
+    
+    if relation >= 1000 then
+  return "friends"
+    elseif relation <= -1000 then
+  return "enemy"
+    else
+  return "neutral"
+    end
+end
+--xrSanya-----------------------------------------------

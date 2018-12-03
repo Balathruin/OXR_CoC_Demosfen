@@ -1,0 +1,61 @@
+--######################################################################################################################
+--#	About			:	—лужебные функции																				#
+--#	Autor			:	FonSwong												 										#
+--#	Last modified	:	03.03.2016												 										#
+--######################################################################################################################
+
+-- перевод больших букв в маленькие
+function string_lower(s)
+	local res=""
+	local l=[[йцукенгшщзхъфывапролджэ€чсмитьбю]]
+	local u=[[…÷” ≈Ќ√Ўў«’Џ‘џ¬јѕ–ќЋƒ∆Ёя„—ћ»“№Ѕё]]
+	local ss=string.sub
+	for i=1,#s do
+	local ch=ss(s,i,i)
+		for j=1,#u do
+			if ch==ss(u,j,j) then ch = ss(l,j,j) break end
+		end
+		res = res .. ch
+	end
+	return res
+end
+
+function s_v(name,val)
+	local m_data = alife_storage_manager.get_state()
+	check_storage()
+	m_data.fonswong[name] = val
+end
+
+function l_v(name,def)
+	local m_data = alife_storage_manager.get_state()
+	check_storage()
+	if m_data.fonswong[name] then
+		-- printf('load_var | name = [%s] value = [NIL] Default = [%s]',name,def)
+		return m_data.fonswong[name] or def
+	end
+	return def
+end
+
+function d_v(name)
+	local m_data = alife_storage_manager.get_state()
+	check_storage()
+	if m_data.fonswong[name] then
+		m_data.fonswong[name] = nil
+	end
+end
+
+function check_storage()
+	local m_data = alife_storage_manager.get_state()
+	m_data.fonswong = m_data.fonswong or {}
+end
+
+ -- дл€ получени€ размера таблицы (или массива)
+function get_size(table)
+	local size = 0
+	for key, value in pairs(table) do
+    	if key ~= nil and value ~= nil then
+			size = size + 1
+		end
+	end
+	return size
+end

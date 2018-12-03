@@ -7,7 +7,7 @@ function npc_is_trader(a,b)
 		npc:start_trade(db.actor)
 	end
 end
- 
+
 function npc_is_tech(a,b)
     local npc = who_is_npc(a,b)
 	local hud = get_hud()
@@ -22,19 +22,19 @@ function rescue_hostage(a,b)
 	b:stop_talk()
 	local npc = who_is_npc(a,b)
 	local squad = get_object_squad(npc)
-	if (squad) then 
+	if (squad) then
 		for k in squad:squad_members() do
 			utils.se_obj_save_var(k.id,k.object:name(),"companion_cannot_teleport",nil)
 			axr_task_manager.hostages_by_id[k.id] = nil
 		end
-	else 
+	else
 		local se_npc = alife_object(npc:id())
 		if (se_npc) then
 			utils.se_obj_save_var(se_npc.id,se_npc:name(),"companion_cannot_teleport",nil)
 			axr_task_manager.hostages_by_id[se_npc.id] = nil
 		end
 	end
-end 
+end
 
 -- Dynamic Ordered Task dialog
 -- AVAILABLE TASKS
@@ -50,7 +50,7 @@ function sim_generate_available_tasks(a,b)
 	--printf("sim_generate_available_tasks %s",axr_task_manager.available_tasks[npc:id()] and #axr_task_manager.available_tasks[npc:id()])
 end
 
-function text_npc_has_task(a,b) 
+function text_npc_has_task(a,b)
 	local npc = who_is_npc(a, b)
 	local task_id = axr_task_manager.available_tasks[npc:id()] and axr_task_manager.available_tasks[npc:id()][1] 
 	--printf("text_npc_has_task %s",task_id)
@@ -70,11 +70,11 @@ function text_npc_has_task(a,b)
 		axr_task_manager.trigger_fetch_func(task_id)
 		return strformat(game.translate_string(fetch),_FETCH_TEXT or "")
 	end
-	 
+
 	return game.translate_string(task_id and task_manager.task_ini:r_string_ex(task_id,"job_descr") or "st_no_available_task")
 end
 
-function npc_has_task(a,b) 
+function npc_has_task(a,b)
 	local npc = who_is_npc(a, b)
 	--printf("npc_has_task %s",axr_task_manager.available_tasks[npc:id()] and axr_task_manager.available_tasks[npc:id()][1] ~= nil)
 	return axr_task_manager.available_tasks[npc:id()] and axr_task_manager.available_tasks[npc:id()][1] ~= nil
@@ -100,30 +100,30 @@ end
 -- FINISHED TASK TURN-IN DIALOG
 function actor_has_finished_task(a,b)
 	local npc = who_is_npc(a, b)
-	
+
 	axr_task_manager.generate_finished_tasks(npc,nil)
-	
+
 	--printf("actor_has_finished_task %s",axr_task_manager.finished_tasks[npc:id()] and axr_task_manager.finished_tasks[npc:id()][1] ~= nil)
 	return axr_task_manager.finished_tasks[npc:id()] and axr_task_manager.finished_tasks[npc:id()][1] ~= nil
 end
 
 function sim_actor_has_finished_task(a,b)
 	local npc = who_is_npc(a, b)
-	
+
 	axr_task_manager.generate_finished_tasks(npc,true)
-	
+
 	--printf("sim_actor_has_finished_task %s",axr_task_manager.finished_tasks[npc:id()] and axr_task_manager.finished_tasks[npc:id()][1] ~= nil)
 	return axr_task_manager.finished_tasks[npc:id()] and axr_task_manager.finished_tasks[npc:id()][1] ~= nil
 end
 
-function text_npc_task_finish(a,b) 
+function text_npc_task_finish(a,b)
 	local npc = who_is_npc(a, b)
 	local task_id = axr_task_manager.finished_tasks[npc:id()] and axr_task_manager.finished_tasks[npc:id()][1] 
 	--printf("text_npc_task_finish %s",task_id)
 	return game.translate_string(task_id and task_manager.task_ini:r_string_ex(task_id,"task_complete_descr") or "st_default_task_finished_"..math.random(1,3))
 end
 
-function text_npc_task_finish(a,b) 
+function text_npc_task_finish(a,b)
 	local npc = who_is_npc(a, b)
 	local task_id = axr_task_manager.finished_tasks[npc:id()] and axr_task_manager.finished_tasks[npc:id()][1] 
 	--printf("text_npc_task_finish %s",task_id)
@@ -144,24 +144,24 @@ function actor_has_ongoing_task(a,b)
 	local npc = who_is_npc(a, b)
 	axr_task_manager.generate_ongoing_tasks(npc,nil)
 	return axr_task_manager.ongoing_tasks[npc:id()] and axr_task_manager.ongoing_tasks[npc:id()][1] ~= nil
-end 
+end
 
 function sim_actor_has_ongoing_task(a,b)
 	local npc = who_is_npc(a, b)
 	axr_task_manager.generate_ongoing_tasks(npc,true)
 	return axr_task_manager.ongoing_tasks[npc:id()] and axr_task_manager.ongoing_tasks[npc:id()][1] ~= nil
-end 
+end
 
-function text_npc_has_cancel_task(a,b) 
+function text_npc_has_cancel_task(a,b)
 	local npc = who_is_npc(a, b)
 	local task_id = axr_task_manager.ongoing_tasks[npc:id()] and axr_task_manager.ongoing_tasks[npc:id()][1] 
 	--printf("text_npc_has_cancel_task %s",task_id)
-	
+
 	local text = task_id and game.translate_string(task_manager.task_ini:r_string_ex(task_id, "title"))
-	if not (text) then 
+	if not (text) then
 		return game.translate_string("st_task_none_active")
-	end 
-	
+	end
+
 	local fetch = task_id and task_manager.task_ini:r_string_ex(task_id,"fetch_descr")
 	if (fetch) then
         local sec = utils.load_var(db.actor,task_id.."_fetch")
@@ -170,12 +170,12 @@ function text_npc_has_cancel_task(a,b)
         end
 		local name = game.translate_string(system_ini():r_string_ex(sec,"inv_name") or "")
 		return strformat(text,name or "")
-	end	 
-	
+	end
+
 	return text
 end
 
-function npc_has_cancel_task(a,b) 
+function npc_has_cancel_task(a,b)
 	local npc = who_is_npc(a, b)
 	--printf("npc_has_cancel_task %s",axr_task_manager.ongoing_tasks[npc:id()] and axr_task_manager.ongoing_tasks[npc:id()][1] ~= nil)
 	return axr_task_manager.ongoing_tasks[npc:id()] and axr_task_manager.ongoing_tasks[npc:id()][1] ~= nil
@@ -236,7 +236,7 @@ function condition_actor_has_valuable_item(a,b)
 	
 	local items = { 
 		["itm_pda_common"] = true,
-		["itm_pda_uncommon"] = true, 
+		["itm_pda_uncommon"] = true,
 		["itm_pda_rare"] = true,
 		["main_story_1_quest_case"] = story_done,
 		["main_story_2_lab_x18_documents"] = story_done,
@@ -246,13 +246,13 @@ function condition_actor_has_valuable_item(a,b)
 		["main_story_6_jup_ug_documents"] = story_done,
 		["main_story_7_mon_con_documents"] = story_done
 	}
-	
-	for k,v in pairs(items) do 
+
+	for k,v in pairs(items) do
 		if (v == true and db.actor:object(k)) then
-			return true 
+			return true
 		end
 	end
-	
+
 	return false
 end
 
@@ -270,9 +270,9 @@ function text_actor_has_valuable_item(a,b)
 		["main_story_6_jup_ug_documents"] = story_done,
 		["main_story_7_mon_con_documents"] = story_done
 	}
-	
-	for k,v in pairs(valuable) do 
-		if (v == true and db.actor:object(k)) then 
+
+	for k,v in pairs(valuable) do
+		if (v == true and db.actor:object(k)) then
 			return game.translate_string("st_broker_query_valuable")
 		end
 	end
@@ -307,10 +307,10 @@ function text_trade_npc_pda(a,b)
 		["main_story_6_jup_ug_documents"] = story_done,
 		["main_story_7_mon_con_documents"] = story_done
 	}
-	
-	for k,v in pairs(valuable) do 
+
+	for k,v in pairs(valuable) do
 		local item = v == true and db.actor:object(k)
-		if (item) then 
+		if (item) then
 			db.actor:transfer_item(item,npc)
 			news_manager.relocate_item(db.actor, "out", item:section())
 			relocate_money(npc, random_choice(10000,15000,20000,25000) , "in")
@@ -318,7 +318,7 @@ function text_trade_npc_pda(a,b)
 			return strformat(game.translate_string("st_broker_trade_valuable"),name)
 		end
 	end
-	
+
     local tbl = { common = 0, uncommon = 0, rare = 0}
     local function itr(actor,itm)
         local chk, pda_t = itm:section():match("(itm_pda_)([%l]+)")
@@ -681,6 +681,31 @@ function transfer_medkit(first_speaker, second_speaker)
 	end
 
 	dxr_statistics.increment_statistic("wounded_helped")
+end
+
+function transfer_medkit_to_hip(first_speaker, second_speaker)
+	local npc = who_is_npc(first_speaker, second_speaker)
+
+	xr_wounded.unlock_medkit(npc)
+
+	if not (npc:object("medkit_script")) then
+		alife():create("medkit_script", npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
+	end
+
+	local t = {"medkit","medkit_army","medkit_scientic"}
+	for i=1,#t do
+		if (db.actor:object(t[i])) then
+			dialogs.relocate_item_section(npc,t[i],"out")
+			break
+		end
+	end
+
+	if (npc:relation(db.actor) >= game_object.enemy) then
+		npc:set_relation(game_object.neutral,db.actor)
+	else
+		npc:set_relation(game_object.friend,db.actor)
+	end
+
 end
 
 function give_medkit_no_transfer(a,b)
@@ -1569,6 +1594,14 @@ function medic_magic_potion(first_speaker, second_speaker)
 	db.actor.power = 1
 	db.actor.radiation = -1
 	db.actor.bleeding = 1
+end
+
+function give_hip_medic_potion(first_speaker, second_speaker)
+	local npc = who_is_npc(first_speaker, second_speaker)
+	npc.health = 1
+	npc.power = 1
+	npc.radiation = -1
+	npc.bleeding = 1
 end
 
 function actor_needs_bless(first_speaker, second_speaker)

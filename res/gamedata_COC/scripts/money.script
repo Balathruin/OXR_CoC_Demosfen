@@ -1,0 +1,213 @@
+function update(binder,delta)
+use_money_10()
+use_money_100()
+use_money_1000()
+use_money_50()
+use_money_500()
+use_money_5000()
+use_cash()
+have_cash()
+end
+
+function drop_update(binder,item)
+drop_money_10(item)
+drop_money_100(item)
+drop_money_1000(item)
+drop_money_50(item)
+drop_money_500(item)
+drop_money_5000(item)
+drop_cash(item)
+end
+
+function have_cash()
+if not db.actor:object("cash") then
+alife():create("cash", vector(), 0, 0, db.actor:id())
+end
+end
+
+local eat = nil
+
+function use_cash()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+ if db.actor:money() >= 10000 then
+  alife():create("money_5000", vector(), 0, 0, db.actor:id())
+  db.actor:give_money(-5000)
+  elseif
+  db.actor:money() >=5000 and db.actor:money() <=10000 then
+  alife():create("money_1000", vector(), 0, 0, db.actor:id())
+  db.actor:give_money(-1000)
+  elseif
+  db.actor:money() >=1000 and db.actor:money() <=5000 then
+  alife():create("money_500", vector(), 0, 0, db.actor:id())
+  db.actor:give_money(-500)
+  elseif
+  db.actor:money() >=500 and db.actor:money() <=1000 then
+  alife():create("money_100", vector(), 0, 0, db.actor:id())
+  db.actor:give_money(-100)
+  elseif
+  db.actor:money() >=100 and db.actor:money() <=500 then
+  alife():create("money_50", vector(), 0, 0, db.actor:id())
+  db.actor:give_money(-50)
+  elseif
+  db.actor:money() >=20 and db.actor:money() <=100 then 
+  alife():create("money_10", vector(), 0, 0, db.actor:id())
+  db.actor:give_money(-10)
+  elseif
+  db.actor:money() <=20 then 
+  db.actor:give_money(0)
+ end
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_cash(item)
+if item:section() == "cash" then
+eat = item
+end
+end
+
+local eat = nil
+
+function use_money_10()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+db.actor:give_money(10)
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_money_10(item)
+if item:section() == "money_10" then
+eat = item
+end
+end
+
+local eat = nil
+
+function use_money_100()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+db.actor:give_money(100)
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_money_100(item)
+if item:section() == "money_100" then
+eat = item
+end
+end
+
+local eat = nil
+
+function use_money_1000()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+db.actor:give_money(1000)
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_money_1000(item)
+if item:section() == "money_1000" then
+eat = item
+end
+end
+
+local eat = nil
+
+function use_money_50()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+db.actor:give_money(50)
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_money_50(item)
+if item:section() == "money_50" then
+eat = item
+end
+end
+
+local eat = nil
+
+function use_money_500()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+db.actor:give_money(500)
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_money_500(item)
+if item:section() == "money_500" then
+eat = item
+end
+end
+
+local eat = nil
+
+function use_money_5000()
+if eat and type(eat) == 'number' then
+if not level.object_by_id( eat ) then
+db.actor:give_money(5000)
+end
+eat = nil
+end
+
+if eat and type(eat) == 'userdata' then
+eat = eat:id()
+else
+eat = nil
+end
+end
+
+function drop_money_5000(item)
+if item:section() == "money_5000" then
+eat = item
+end
+end

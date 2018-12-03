@@ -23,6 +23,7 @@ actor_achievements = {
 	["tourist"]				=	{	unlocked = false,	rank = 25,	rept = 0	},
 	["well_dressed"]		=	{	unlocked = false,	rank = 25,	rept = 0	},
 	["wishful_thinking"]	=	{	unlocked = false,	rank = 25,	rept = 0	},
+	["cheater"]	            =	{	unlocked = false,	rank = 25,	rept = 0	},
 }
 
 -- Artefacts found and detected.
@@ -70,6 +71,7 @@ actor_statistics = {
 	["tasks_completed"]		=	{	count = 0,		rank = 50,		rept = 25	},
 	["tasks_failed"]		=	{	count = 0,		rank = 0,		rept = -25	},
 	["wounded_helped"]		=	{	count = 0,		rank = 10,		rept = 10	},
+	["cheater"]	            =	{	count = 0,  	rank = 0,	    rept = 0	},
 }
 
 -- Levels visited.
@@ -106,6 +108,7 @@ actor_visited_levels = {
 	["labx8"]					= false,
 	["pripyat"]					= false,
 	["zaton"]					= false,
+	["way_in_zone"]				= false,
 }
 
 -- Smart terrains visited.

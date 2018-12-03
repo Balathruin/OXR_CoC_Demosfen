@@ -24,6 +24,7 @@ function get_object_data(sobj)
 		["SM_CAT_S"] = this.get_monster_data,
 		["SM_CHIMS"] = this.get_monster_data,
 		["SM_CONTR"] = this.get_monster_data,
+		["SM_OASIS"] = this.get_monster_data,
 		["AI_CROW"]  = this.get_abstract_data, -- could be wrong
 		["SM_DOG_S"] = this.get_monster_data,
 		["SM_FLESH"] = this.get_monster_data,
@@ -178,6 +179,7 @@ function set_object_data(t,sobj)
 		["SM_CAT_S"] = this.set_monster_data,
 		["SM_CHIMS"] = this.set_monster_data,
 		["SM_CONTR"] = this.set_monster_data,
+		["SM_OASIS"] = this.set_monster_data,
 		["AI_CROW"]  = this.set_abstract_data, -- could be wrong
 		["SM_DOG_S"] = this.set_monster_data,
 		["SM_FLESH"] = this.set_monster_data,

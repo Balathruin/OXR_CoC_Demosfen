@@ -64,6 +64,7 @@ function get_spawn_table(name)
 		["SM_CAT_S"] = "NPC (Mutant)",
 		["SM_CHIMS"] = "NPC (Mutant)",
 		["SM_CONTR"] = "NPC (Mutant)",
+		["SM_OASIS"] = "NPC (Mutant)",
 		["SM_DOG_S"] = "NPC (Mutant)",
 		["SM_FLESH"] = "NPC (Mutant)",
 		["SM_IZLOM"] = "NPC (Mutant)",
@@ -108,7 +109,6 @@ function get_spawn_table(name)
 		["DET_ELIT"] = "Items (Misc.)",
 		["DET_SCIE"] = "Items (Misc.)",
 		["D_FLALIT"] = "Items (Misc.)",
-		["TORCH_S"] = "Items (Misc.)",
 
 		["E_STLK"]   = "Outfits",
 		["E_HLMET"]  = "Outfits",

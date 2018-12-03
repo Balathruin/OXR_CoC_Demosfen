@@ -80,6 +80,7 @@ local function can_cause_panic(npc,cls)
 			[clsid.burer_s] 				= true,
 			[clsid.chimera_s] 				= true,
 			[clsid.controller_s] 			= true,
+			[clsid.oasis_s] 		    	= true,
 			[clsid.fracture_s] 				= true,
 			[clsid.poltergeist_s] 			= true,
 			[clsid.gigant_s] 				= true,
@@ -93,6 +94,7 @@ local function can_cause_panic(npc,cls)
 			[clsid.burer_s] 				= true,
 			[clsid.chimera_s] 				= true,
 			[clsid.controller_s] 			= true,
+			[clsid.oasis_s] 	    		= true,
 			[clsid.poltergeist_s] 			= true,
 			[clsid.gigant_s] 				= true,
 		}

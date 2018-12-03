@@ -1,0 +1,191 @@
+local helmet_active,item_fx
+feature_is_active = nil
+
+function activate()
+	if enhanced_animations.feature_is_active then
+--		axr_main.config:w_value("mm_options","enable_item_animation",false)
+		return
+	end
+	if (feature_is_active) then
+		return 
+	end
+	feature_is_active = true
+
+	item_fx = {					--	!!!IMPORTANT!!! - for ppe and anm effect, use id > 8000
+		medkit = "level.add_cam_effector('camera_effects\\\\pripyat_horror.anm',8010,false,'item_animations.extend_med')",
+                medkit_elite = "level.add_cam_effector('camera_effects\\\\pripyat_horror.anm',8010,false,'item_animations.extend_med')",
+		medkit_army = "level.add_cam_effector('camera_effects\\\\pripyat_horror.anm',8010,false,'item_animations.extend_med')",
+		medkit_scientic = "level.add_cam_effector('camera_effects\\\\pripyat_horror.anm',8010,false,'item_animations.extend_med')",
+		bandage = "level.add_cam_effector('camera_effects\\\\actor_move\\\\go_front.anm',8010,false,'item_animations.extend_band')",
+		drug_booster = "level.add_cam_effector('camera_effects\\\\hit_right.anm',8010,false,'item_animations.extend_drug')",
+		drug_coagulant = "level.add_cam_effector('camera_effects\\\\hit_right.anm',8010,false,'item_animations.extend_drug')",
+		drug_psy_blockade = "level.add_cam_effector('camera_effects\\\\hit_right.anm',8010,false,'item_animations.extend_drug')",
+		drug_antidot = "level.add_cam_effector('camera_effects\\\\hit_right.anm',8010,false,'item_animations.extend_drug')",
+		drug_radioprotector = "level.add_cam_effector('camera_effects\\\\hit_right.anm',8010,false,'item_animations.extend_drug')",
+		antirad = "level.add_cam_effector('camera_effects\\\\hit_right.anm',8010,false,'item_animations.extend_drug')",
+		bread = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		conserva = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		energy_drink = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		kolbasa = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		vodka = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_general_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_flesh_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_boar_chop = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_dog_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_psevdodog_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_krovosos_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_chimera_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		mutant_part_tushkano_meat = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+	}
+
+--	helmet_hidden = 0
+--	weapon_hidden = 0
+	RegisterScriptCallback("actor_on_item_use", on_use)
+end
+
+function deactivate()
+	if not (feature_is_active) then
+		return 
+	end
+	feature_is_active = false
+	UnregisterScriptCallback("actor_on_item_use", on_use)
+--	weapon_hidden = nil
+--	helmet_hidden = nil
+	snd_obj = nil
+end
+------------------------------------------
+-- consumable_callbacks
+------------------------------------------
+local helmet_hidden = 0
+local weapon_hidden = 0
+function use_helmet(f)
+	helmet_hidden = helmet_hidden + f * 2 - 1
+	if mask_hud and mask_hud.feature_is_active == true then
+		mask_hud.helmet_active = (helmet_hidden == 0)
+	end
+end
+
+function use_weapon(f)
+	local hidden = weapon_hidden
+	weapon_hidden = weapon_hidden + f * 2 - 1
+	if weapon_hidden == 0 then
+		db.actor:restore_weapon()
+	elseif hidden == 0 then
+		db.actor:hide_weapon()
+	end
+end
+
+function use_item(section)
+	if item_fx[section] then
+		assert(loadstring(item_fx[section]))()
+	end
+end
+
+function restore_hud()
+	xr_effects.enable_ui(db.actor, nil)
+	use_helmet(1)
+	use_weapon(1)
+end
+
+function restore_hud_band()
+	xr_effects.enable_ui(db.actor, nil)
+	use_weapon(1)
+end
+
+function extend_med()
+	level.add_cam_effector("camera_effects\\fatigue.anm")
+	level.add_cam_effector("camera_effects\\empty.anm", 8010, false, "item_animations.restore_hud")
+--	level.add_pp_effector("surge_fade.ppe", 11, false)
+end
+
+function extend_food()
+	level.add_cam_effector("camera_effects\\actor_move\\move_back_off.anm", 8010, false, "item_animations.restore_hud")
+end
+
+function extend_drug()
+	level.add_cam_effector("camera_effects\\fatigue.anm")
+	level.add_cam_effector("camera_effects\\empty.anm", 8010, false, "item_animations.restore_hud")
+end
+
+function extend_band()
+	level.add_cam_effector("camera_effects\\actor_move\\go_front.anm", 8010, false, "item_animations.restore_hud_band")
+end
+
+function on_use(item)
+	local sec = item:section()
+	if not(item_fx[sec]) then return end
+	use_weapon(0)
+	if (sec ~= "bandage") then use_helmet(0) end          
+	xr_effects.disable_ui_only(db.actor, nil)
+	use_item(sec)
+end
+-----------------------------------------
+function on_game_start()
+	if (axr_main.config:r_value("mm_options","consumable_animation",0,"none") ~= "simple") then return end
+	local function actor_on_first_update()
+		if enhanced_animations.feature_is_active then
+			enhanced_animations.deactivate()
+		end
+		activate()
+	end
+	RegisterScriptCallback("actor_on_first_update",actor_on_first_update)
+end
+--[[		sample of, and code for, multiple timed events associated with item use
+local item_fx = {
+	medkit = {[0] = "item_animations.use_weapon(0)",
+			[500] = "item_animations.use_helmet(0)",
+			[3990] = "xr_effects.disable_ui_only(db.actor, nil)",
+			[4000] = "level.add_cam_effector('camera_effects\\\\pripyat_horror.anm',8010,false,'item_animations.extend_med')",
+		},
+	conserva = {[0] = "item_animations.use_weapon(0)",
+			[500] = "item_animations.use_helmet(0)",
+			[3990] = "xr_effects.disable_ui_only(db.actor, nil)",
+			[4000] = "level.add_cam_effector('camera_effects\\\\actor_move\\\\move_back_off.anm',8010,false,'item_animations.extend_food')",
+		},
+	bandage = {[500] = "item_animations.use_weapon(0)",
+			[3990] = "xr_effects.disable_ui_only(db.actor, nil)",
+			[4000] ="level.add_cam_effector('camera_effects\\\\actor_move\\\\go_front.anm',8010,false,'item_animations.extend_band')"
+		},
+}
+local item_in_use = {}
+local item_not_in_use = true
+RegisterScriptCallback("actor_on_update",use_item_update)
+
+function use_item(name)
+--db.actor:give_game_news(tostring(name), " ", "ui_iconsTotal_grouping", 0, 5000, 0)
+	if item_fx[name] then
+		local t = tostring(time_global())
+		item_not_in_use = false
+		item_in_use[t] = {}
+		for k, v in pairs(item_fx[name]) do
+			item_in_use[t][k] = v
+		end
+	end
+end
+
+function use_item_update()
+	if item_not_in_use then
+		return
+	end
+
+	local in_use = 0
+	for k, t in pairs(item_in_use) do
+		in_use = in_use+1
+		local remove = true
+		local tg = time_global()-tonumber(k)
+		for milli, action in pairs(t) do
+			remove = false
+			if tg > milli then
+				assert(loadstring(action))()
+--db.actor:give_game_news(tostring(tg), action, "ui_iconsTotal_grouping", 0, 5000, 0)
+				item_in_use[k][milli] = nil
+			end
+		end
+		if remove then
+			in_use = in_use-1
+			item_in_use[k] = nil
+		end
+	end
+	item_not_in_use = (in_use==0)
+end
+--]]

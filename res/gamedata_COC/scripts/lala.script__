@@ -1,0 +1,367 @@
+-- ______ _            _      _____                     
+-- | ___ \ |          | |    /  ___|                    
+-- | |_/ / | __ _  ___| | __ \ `--.__      ____ _ _ __  
+-- | ___ \ |/ _` |/ __| |/ /  `--. \ \ /\ / / _` | '_ \ 
+-- | |_/ / | (_| | (__|   <  /\__/ /\ V  V / (_| | | | |
+-- \____/|_|\__,_|\___|_|\_\ \____/  \_/\_/ \__,_|_| |_|
+--
+-- ver 1.0 by Debrovski(vk.com/id441704769)                                         
+-- «Black Swan» is part of «Demosfen's Assembly» by MNP Team(vk.com/mnp_team)
+-- Ave Demosfen!
+local SINGLETON = nil
+local chatPlugin
+function get_ui()
+	SINGLETON = SINGLETON or ChatBox()
+	return SINGLETON
+end
+
+local mapFacIcons={
+["actor_stalker"]="stalker_icon",
+["actor_bandit"]="bandit_icon",
+["actor_dolg"]="dolg_icon",
+["actor_freedom"]="freedom_icon",
+["actor_csky"]="csky_icon",
+["actor_ecolog"]="ecolog_icon",
+["actor_killer"]="killer_icon",
+["actor_army"]="army_icon",
+["actor_monolith"]="monolith_icon"
+}
+
+function on_game_start()
+	RegisterScriptCallback("on_game_load",on_game_load)
+end
+	
+function on_game_load()
+	if not alife_storage_manager.get_state().blackswan then
+		local blackswan = {}
+		blackswan.notif_chk = true
+		blackswan.sound_chk = true
+		alife_storage_manager.get_state().blackswan = blackswan
+	end
+	blackswan.Start()
+end
+
+	
+class "ChatBox" (CUIScriptWnd)
+function ChatBox:__init() super()
+    local xml             = CScriptXmlInit()
+	self:SetWndRect(Frect():set(0, 0, 1024, 768))
+	xml:ParseFile("demosfen_chat.xml")
+	self.status           = 0 
+	self.errmsg           = CUIMessageBoxEx()
+	self.errmsg:InitMessageBox("message_box_ok")
+	self.isNeededToLogOut   = false --сигнал о необходимости разлогиниться
+	
+	-------------------------------------------------------------
+	--Регистрация декоративной хрени
+	xml:InitFrame("frame1", self)
+	xml:InitFrame("frame2", self)
+	xml:InitStatic("frame1:caption", self)
+	xml:InitFrame("blackswan", self)
+	
+	-------------------------------------------------------------
+	--Регистрация чекбоксов
+	self.notif_chk        = xml:InitCheck("notification_checkbox", self) -- чекбокс о уведомлениях в игровых новостях
+	self.sound_chk        = xml:InitCheck("sound_checkbox", self)        -- чекбокс о проигрывании звука
+	self:Register(self.notif_chk, "notif_chk")
+	self:Register(self.sound_chk, "sound_chk")
+	self:AddCallback("notif_chk", ui_events.BUTTON_CLICKED, self.SaveCheckBoxSettings, self)
+	self:AddCallback("sound_chk", ui_events.BUTTON_CLICKED, self.SaveCheckBoxSettings, self)
+	self.notif_chk:SetCheck(alife_storage_manager.get_state().blackswan.notif_chk) --вытаскиваем из сохранения состояния чекбоксов
+	self.sound_chk:SetCheck(alife_storage_manager.get_state().blackswan.sound_chk)
+	-------------------------------------------------------------
+	-- Регистрация кнопок
+	self.loginBtn         = xml:Init3tButton("button_login", self) -- кнопка "Вход"
+	self.exitBtn          = xml:Init3tButton("button_exit", self)  -- кнопка "Выход"
+	self.sendBtn          = xml:Init3tButton("button_send", self)  -- кнопка "Отправить"
+	self:Register(self.loginBtn, "button_login")
+	self:Register(self.exitBtn,  "button_exit")
+	self:Register(self.sendBtn,  "button_send")
+	self:AddCallback("button_login", ui_events.BUTTON_CLICKED, self.Login, self)
+	self:AddCallback("button_exit",  ui_events.BUTTON_CLICKED, self.Exit, self)
+	self:AddCallback("button_send",  ui_events.BUTTON_CLICKED, self.Send, self)
+	-------------------------------------------------------------
+	-- Регистрация полей для ввода текста
+	self.loginBox         = xml:InitEditBox("login_box", self)
+	self.msgBox           = xml:InitEditBox("msg_box", self)
+	-------------------------------------------------------------
+	-- Регистрация лампочек
+	self.noCon_active     = xml:InitStatic("noCon_active", self)   -- красная/вкл
+	self.noCon_inactive   = xml:InitStatic("noCon_inactive", self) -- красная/выкл
+	self.yesCon_active    = xml:InitStatic("yesCon_active", self)  -- зел/вкл
+	self.yesCon_inactive  = xml:InitStatic("yesCon_inactive", self)-- зел/выкл
+	-------------------------------------------------------------
+	--Регистрация листа с сообщениями
+	self.msgs_list = xml:InitListBox("msgs_list", self)
+	self:Register(self.msgs_list, "msgs_list")
+	-------------------------------------------------------------
+	--Регистрация надписей
+	self.currNickLabel    = xml:InitTextWnd("nick_label",self) -- поле где отображается ник
+	self.currNickLabel:SetFont(GetFontGraffiti19Russian())
+	self.currNickLabel:SetTextColor(GetARGB(255,0,170,0))
+	xml:InitTextWnd("notification_label",self) -- надпись к чекбоксу notif_chk
+	xml:InitTextWnd("sound_label",self)        -- надпись к чекбоксу sound_chk
+	xml:InitTextWnd("server_label",self)       -- надпись к лампочкам
+	-------------------------------------------------------------
+	--Регистрация прочих элементов
+	
+	self:AttachChild(self.errmsg)
+	-------------------------------------------------------------
+	
+	
+	self:SetStateUnconnected()
+	CreateTimeEvent("chatDemosfen","update",0,self.Upd,self) -- запускаем обновление
+end
+
+function ChatBox:__finalize()
+
+end
+
+function ChatBox:SaveCheckBoxSettings() --сохраняет(в файл сохранения) состояния чекбоксов
+	local blackswan = {}
+	blackswan.notif_chk = self.notif_chk:GetCheck()
+	blackswan.sound_chk = self.sound_chk:GetCheck()
+	alife_storage_manager.get_state().blackswan = blackswan
+end
+
+function ChatBox:PostNewMessage(msgType,data, isFresh)
+	log("START")
+	local newItem     = CUIListBoxItem()
+	local newItemIcon = CUIStatic()
+	local newFacIcon  = CUIStatic()
+	local newItemNick = CUITextWnd()
+	local newItemText = CUITextWnd()
+	local newItemInfo = CUITextWnd()
+	local nextValue   = string.gmatch(data, "[^\t]+")
+	if(msgType==1) then --простое сообщение
+		local text      = nextValue() or "ERROR"
+		local community = nextValue() or "ERROR"
+		local level     = nextValue() or "ERROR"
+		local icon      = nextValue() or "ERROR"
+		local author    = nextValue() or "ERROR"
+		
+		newItemIcon:SetWndSize(vector2():set(63,63))
+		if(is_ui_texture_exist(icon)) then
+			icon = "ui\\ui_blackswan_unknown"
+		end
+		newItemIcon:InitTexture(icon)
+		newItemIcon:SetTextureColor(GetARGB(170,255,255,255))
+		newItemIcon:SetStretchTexture(true)
+		
+		newFacIcon:SetWndSize(vector2():set(28,27))
+		newFacIcon:SetWndPos(vector2():set(35,36))
+		newFacIcon:InitTexture(mapFacIcons[community] or "")
+		newFacIcon:SetTextureColor(GetARGB(128,255,255,255))
+		newFacIcon:SetStretchTexture(true)
+
+		newItemNick:SetText(author)
+		newItemNick:SetFont(GetFontGraffiti22Russian())
+		newItemNick:SetTextColor(GetARGB(255,170,170,170))
+		newItemNick:SetWndPos(vector2():set(newItemIcon:GetWidth(), 0))
+		newItemNick:AdjustWidthToText()
+		newItemNick:AdjustHeightToText()
+		
+		newItemInfo:SetText(game.translate_string(level))
+		newItemInfo:SetTextColor(GetARGB(255,143,143,170))
+		newItemInfo:SetFont(GetFontLetterica16Russian())
+		newItemInfo:SetWndPos(vector2():set(newItemIcon:GetWidth()+newItemNick:GetWidth() + 5, 5))
+		newItemInfo:AdjustHeightToText()
+
+		newItemText:SetText(text)
+		newItemText:SetTextColor(GetARGB(255,170,170,170))
+		newItemText:SetFont(GetFontLetterica18Russian())
+		newItemText:SetTextComplexMode(true)
+		newItemText:SetWndSize(vector2():set(300,0))
+		newItemText:SetWndPos(vector2():set(newItemIcon:GetWidth(),newItemNick:GetHeight()))
+		newItemText:AdjustHeightToText()
+		
+		newItem:AttachChild(newItemText)
+		newItem:AttachChild(newItemNick)
+		newItem:AttachChild(newItemInfo)
+		newItem:AttachChild(newItemIcon)
+		newItem:AttachChild(newFacIcon)
+		self.msgs_list:AddExistingItem(newItem)
+		newItem:SetHeight(68)
+		if(self.notif_chk:GetCheck() and isFresh) then
+			db.actor:give_game_news(author.." – "..game.translate_string("st_blackswan_blackswan"), text, icon, 0, 5000)
+		end
+	elseif(msgType==-1) then --сообщение о новом участнике
+		local newMemberNick = nextValue() or "ERROR"
+		newItemText:SetText(newMemberNick.." "..game.translate_string("st_blackswan_newMember"))
+		newItemText:SetTextColor(GetARGB(255,170,170,170))
+		newItemText:SetFont(GetFontLetterica18Russian())
+		newItemText:SetWndSize(vector2():set(300,0))
+		newItemText:AdjustHeightToText()
+		newItem:AttachChild(newItemText)
+		self.msgs_list:AddExistingItem(newItem)
+		newItem:SetHeight(20)
+		if(self.notif_chk:GetCheck() and isFresh) then
+			db.actor:give_game_news(game.translate_string("st_blackswan_blackswan"), game.translate_string("st_blackswan_newMember_inGame").." "..newMemberNick, "ui_blackswan_min", 0, 5000)
+		end
+	elseif(msgType==-2) then --сообщение о отключении игрока
+		local leftMemberNick = nextValue() or "ERROR"
+		newItemText:SetText(leftMemberNick.." "..game.translate_string("st_blackswan_disconnectMember"))
+		newItemText:SetTextColor(GetARGB(255,170,170,170))
+		newItemText:SetFont(GetFontLetterica18Russian())
+		newItemText:SetWndSize(vector2():set(300,0))
+		newItemText:AdjustHeightToText()
+		newItem:AttachChild(newItemText)
+		self.msgs_list:AddExistingItem(newItem)
+		newItem:SetHeight(20)
+		if(self.notif_chk:GetCheck()) then
+			db.actor:give_game_news(game.translate_string("st_blackswan_blackswan"), game.translate_string("st_blackswan_disconnectMember_inGame").." "..leftMemberNick, "ui_blackswan_min", 0, 5000)
+		end
+	end
+	
+	self.msgs_list:ScrollToEnd()
+	if(self.sound_chk:GetCheck() and isFresh) then
+		xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+	end
+end
+
+function ChatBox:Login()
+	local requestedNick = self.loginBox:GetText()
+	if(#requestedNick>0) then
+		self.tryToLogInAs = requestedNick
+	end
+end
+
+
+function ChatBox:Send()
+	self.msgNeededToSend = self.msgBox:GetText()
+	self.msgBox:SetText("")
+end
+
+function ChatBox:Exit()
+	self.isNeededToLogOut = true
+end
+
+
+function ChatBox:Upd() --функция вызывается бесконечно, обновляет всё и вся
+	if(blackswan.claimOwnershipOfTheMutex()==false) then
+		log("TRYED")
+		return false
+	end
+	local returnedStatus = blackswan.getStatus()
+	
+	if(self.status ~= returnedStatus) then
+		if(self.status==2 and returnedStatus==1) then -- если логинились, но не залогинились - значит сервер послал на хер
+			self.errmsg:SetText(game.translate_string("st_demosfen_errLogin"))
+			self.errmsg:ShowDialog(true)
+		end
+		if(self.status>0 and returnedStatus==0) then -- если потеряна связь
+			db.actor:give_game_news(game.translate_string("st_blackswan_blackswan"), game.translate_string("st_blackswan_disconnected"), "dummy", 0, 5000)
+		end
+		if(self.status==0 and returnedStatus>0) then -- если установлена связь
+			db.actor:give_game_news(game.translate_string("st_blackswan_blackswan"), game.translate_string("st_blackswan_connected"), "dummy", 0, 5000)
+
+		end
+		self.status = returnedStatus
+		if(returnedStatus == 0) then -- если состояние "НЕТ СВЯЗИ"
+			self:SetStateUnconnected()
+		elseif(returnedStatus == 1) then -- если состояние "ЕСТЬ СВЯЗЬ"
+			self:SetStateConnected()
+		elseif(returnedStatus == 2) then -- если состояние "ЕСТЬ СВЯЗЬ И ИДЕТ АВТОРИЗАЦИЯ"
+			self:SetStateConnectedAuthInProcess()
+		elseif(returnedStatus == 3) then -- если состояние "ЕСТЬ СВЯЗЬ И АВТОРИЗАЦИЯ"
+			self:SetStateConnectedAuthOK()
+			self.currNickLabel:SetText(blackswan.getNick())
+		end
+	end
+	
+	if(returnedStatus ~= 0) then
+		while true  do
+			local msg    = blackswan.receiveMessage()
+			local msgType = msg.msgType
+			if(msgType==0) then -- msgType==0 -> индикатор того, что новых сообщений пока нет
+				break
+			end
+			local data = msg.data
+			local isFresh = msg.isFresh
+			self:PostNewMessage(msgType,data,isFresh)
+		end
+	end
+	
+	if(returnedStatus == 1) then
+		if(self.tryToLogInAs) then
+			blackswan.tryToLogin(self.tryToLogInAs)
+			self.tryToLogInAs=nil
+		end
+	elseif(returnedStatus == 3) then
+		if(self.msgNeededToSend) then
+			blackswan.sendMessage(self.msgNeededToSend, db.actor:character_community(),level.name(),db.actor_binder.character_icon)
+			self.msgNeededToSend=nil
+		end
+		if(self.isNeededToLogOut) then
+			blackswan.logOut()
+			self.isNeededToLogOut=false
+		end
+	end
+	blackswan.releaseOwnershipOfTheMutex()
+	return false
+end
+
+function ChatBox:SetStateUnconnected()
+	self:Turn(false)
+	
+	self.loginBox:Enable(false)
+	self.loginBtn:Enable(false)
+	self.exitBtn:Enable(false)
+	self.msgBox:Enable(false)
+	self.msgBox:SetText("")
+	self.sendBtn:Enable(false)
+	self.currNickLabel:SetText("")
+	self.msgNeededToSend  = nil
+	self.tryToLogInAs     = nil
+	self.msgs_list:Clear()
+	self.loginBox:SetText("")
+end
+
+
+function ChatBox:SetStateConnected()
+	self:Turn(true)
+	self.currNickLabel:SetText("")
+	self.loginBox:Enable(true)
+	self.loginBtn:Enable(true)
+	self.exitBtn:Enable(false)
+	self.msgBox:Enable(false)
+	self.msgBox:SetText("")
+	self.sendBtn:Enable(false)
+	self.msgNeededToSend  = nil
+	self.tryToLogInAs     = nil
+	self.loginBox:SetText("")
+end
+
+
+function ChatBox:SetStateConnectedAuthInProcess()
+	self:Turn(true)
+	self.currNickLabel:SetText("")
+	self.loginBox:Enable(false)
+	self.loginBtn:Enable(false)
+	self.exitBtn:Enable(false)
+	self.msgBox:Enable(false)
+	self.msgBox:SetText("")
+	self.sendBtn:Enable(false)
+	self.msgNeededToSend  = nil
+	self.tryToLogInAs     = nil
+end
+
+function ChatBox:SetStateConnectedAuthOK()
+	self:Turn(true)
+	self.msgBox:Enable(true)
+	self.sendBtn:Enable(true)
+	self.loginBox:Enable(false)
+	self.loginBox:CaptureFocus(false)
+	self.loginBtn:Enable(false)
+	self.exitBtn:Enable(true)
+	self.loginBox:SetText("")
+	self.msgBox:SetText("")
+end
+
+
+function ChatBox:Turn(flag) --управление лампочками
+	self.noCon_active:Show(not flag)
+	self.noCon_inactive:Show(flag)
+	self.yesCon_active:Show(flag)
+	self.yesCon_inactive:Show(not flag)
+end

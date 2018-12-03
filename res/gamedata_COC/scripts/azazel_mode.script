@@ -64,6 +64,13 @@ function actor_on_before_death(whoID,flags)
 	db.actor:set_health_ex(1)
 
 	local ignore_list = {
+--mlr
+		["extension_pda"] = true,
+		["device_torch_low"] = true,
+		["device_torch_normal"] = true,
+		["dev_torch_light_better"] = true,
+		["dev_torch_light_better_1"] = true,
+--mlr		
 		["bolt"] = true,
 		["device_torch"] = true,
 		["device_pda"] = true,
@@ -198,7 +205,7 @@ function actor_on_before_death(whoID,flags)
 			["bandit"] = "bandit_exo_outfit",
 			["csky"] = "cs_heavy_outfit",
 			["killer"] = "merc_scientific_outfit",
-			["army"] = "commander_outfit",
+			["army"] = "specops_outfit",
 			["dolg"] = "dolg_scientific_outfit",
 			["freedom"] = "svoboda_heavy_outfit",
 			["ecolog"] = "ecolog_outfit_orange",
@@ -211,7 +218,7 @@ function actor_on_before_death(whoID,flags)
 			["bandit"] = "trenchcoat_outfit",
 			["csky"] = "cs_light_outfit",
 			["killer"] = "merc_outfit",
-			["army"] = "specops_outfit",
+			["army"] = "military_outfit",
 			["dolg"] = "dolg_outfit",
 			["freedom"] = "svoboda_light_outfit",
 			["ecolog"] = "ecolog_outfit_green",

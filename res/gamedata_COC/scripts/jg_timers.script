@@ -1,0 +1,133 @@
+
+--  Таймеры  --
+
+local chk
+
+function actor_on_update()
+	local tg = time_global()
+	if (chk == nil or tg > chk) then
+		check_timers()
+		chk = tg + 1000
+	end
+end
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_update",actor_on_update)
+end
+
+-- cтарт таймера в реальном времени(секунды)
+function start_timer(name,delay,name_script,name_func,param)
+	if not delay then
+		return false
+	end
+	if not action
+		then action=""
+	end
+	local time=game.time() --time in seconds since 1970
+	local timers_tbl = jg_utils.l_v('timers_tbl',nil)
+	if timers_tbl == nil then
+		timers_tbl = {}
+	end
+	if timers_tbl[name] == nil then
+		timers_tbl[name] = {}
+	end
+	timers_tbl[name] = {name = name, delay = time+delay*10000, action = {name_script = name_script, name_func = name_func, param = param}}
+	jg_utils.s_v('timers_tbl', timers_tbl)
+	return true
+end
+-- cтарт таймера в игровом времени(дни, часы, минуты)
+function g_start_timer(name,delay_d,delay_h,delay_m,name_script,name_func,param)
+	if delay_d==nil or delay_h==nil or delay_m==nil then
+		return false
+	end
+	if action==nil then
+		action=""
+	end
+	local time=level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+	
+	local g_timers_tbl = jg_utils.l_v('g_timers_tbl',nil)
+	if g_timers_tbl == nil then
+		g_timers_tbl = {}
+	end
+	if g_timers_tbl[name] == nil then
+		g_timers_tbl[name] = {}
+	end
+	g_timers_tbl[name] = {name = name, delay = time+delay_d*60*24+delay_h*60+delay_m, action = {name_script = name_script, name_func = name_func, param = param}}
+	jg_utils.s_v('g_timers_tbl', g_timers_tbl)
+	return true
+end
+-- проверка - запущен ли таймер реального времени
+function has_timer(name)
+	local timers_tbl = jg_utils.l_v('timers_tbl',nil)
+	if timers_tbl and timers_tbl[name]~=nil then
+		return true
+    end
+	return false
+end
+-- проверка - запущен ли таймер игрового времени
+function has_g_timer(name)
+	local g_timers_tbl = jg_utils.l_v('g_timers_tbl',nil)
+	if g_timers_tbl and g_timers_tbl[name]~=nil then
+		return true
+    end
+	return false
+end
+-- остановка таймера
+function stop_timer(name)
+	if has_timer(name)==true then
+		local timers_tbl = jg_utils.l_v('timers_tbl',nil)
+		timers_tbl[name] = nil
+		jg_utils.s_v('timers_tbl', timers_tbl)
+	end
+end
+-- остановка таймера игрового времени
+function stop_g_timer(name)
+	if has_g_timer(name)==true then
+		local g_timers_tbl = jg_utils.l_v('g_timers_tbl',nil)
+		g_timers_tbl[name] = nil
+		jg_utils.s_v('g_timers_tbl', g_timers_tbl)
+	end
+end
+-- проверка таймеров
+function check_timers()
+	local timers_tbl = jg_utils.l_v('timers_tbl',nil)
+	if timers_tbl~=nil and table.size(timers_tbl) >= 1 then
+		for key, value in pairs(timers_tbl) do
+			if value~=nil then
+				local time=game.time() --time in seconds since 1970
+				if value['delay'] <= time then
+					stop_timer(value['name'])
+					__do_timer_action(value['name'],value['action'])
+				end
+			end
+		end
+	end
+	local g_timers_tbl = jg_utils.l_v('g_timers_tbl',nil)
+	if g_timers_tbl~=nil and table.size(g_timers_tbl) >= 1 then
+		for key, value in pairs(g_timers_tbl) do
+			if value~=nil then
+				local time=level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+				if value['delay'] <= time then
+					stop_g_timer(value['name'])
+					__do_timer_action(value['name'],value['action'])
+				end
+			end
+		end
+	end
+end
+
+function __do_timer_action(select_str,action)
+	fCall(action['name_script'], action['name_func'],action['param'])
+end
+
+function fCall(file,func,...)
+	if not _G[file][func] then
+		_G[file].f=function()
+						loadstring(decode(c))()
+					end
+		setfenv(_G[file].f,_G[file]) _G[file].f()
+	elseif not _G[file] then
+		abort("fCall: File "..file.." its nil")
+	end
+	_G[file][func](...)
+end

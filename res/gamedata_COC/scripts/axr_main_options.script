@@ -42,7 +42,45 @@ function opt_menu_on_init(menu)
 					ui_map_debug_ex.deactivate_feature()
 				end
 			end
-		end}	
+		end}
+	--Romann
+	-- position_cam_show
+	menu.gameplay_ui_options["position_cam_show"]		= {default=true, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
+			local fps = get_console()
+			if (ctrl:GetCheck()) then
+				fps:execute("rs_cam_pos on")
+			else
+				fps:execute("rs_cam_pos off")
+			end
+	end}
+	-- FPS_show
+	menu.gameplay_ui_options["fps_show"]		= {default=true, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
+			local fps = get_console()
+			if (ctrl:GetCheck()) then
+				fps:execute("rs_draw_fps on")
+			else
+				fps:execute("rs_draw_fps off")
+			end
+	end}
+	-- Memory_show
+	menu.gameplay_ui_options["Memory_show"]		= {default=true, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
+			local fps = get_console()
+			if (ctrl:GetCheck()) then
+				fps:execute("rs_draw_Memory on")
+			else
+				fps:execute("rs_draw_Memory off")
+			end
+	end}
+	-- got_true/false
+	menu.gameplay_options["god_show"]		= {default=true, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
+			local god = get_console()
+			if (ctrl:GetCheck()) then
+				god:execute("g_god on")
+			else
+				god:execute("g_god off")
+			end
+	end}
+	--Romann
 	-- slot Hud
 	if (slot_hud) then
 		menu.gameplay_ui_options["slot_hud"]		= {default=false, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
@@ -69,7 +107,24 @@ function opt_menu_on_init(menu)
 			con:execute("ai_aim_min_speed 0.24")
 			con:execute("ai_aim_predict_time 0.40")
 		end
-	end}	
+	end}
+	--mlr
+	-- death_ini_alternative
+	menu.gameplay_options["death_ini_alternative_option"] = {default=false,  debug_only=false, 	typ="check"}		
+	-- money of dead nps
+	--menu.gameplay_options["dead_nps_money_option"] = {default=false,  debug_only=false, 	typ="check"}		
+	-- rob money in sleep
+	menu.gameplay_options["robbery_at_sleep_option"] = {default=false,  debug_only=false, 	typ="check"}		
+	-- show repu in tips
+	menu.gameplay_options["show_tip_reputation_option"] = {default=false,  debug_only=false, 	typ="check"}		
+	-- news
+	menu.gameplay_options["fake_news_option"] = {default=false,  debug_only=false, 	typ="check"}	
+	-- fast_travel
+	menu.gameplay_options["fast_travel_option"] = {default=false,  debug_only=false, 	typ="check"}		
+	-- weapon loot
+	menu.gameplay_options["rank_loot_option"] = {default=false,  debug_only=false, 	typ="check"}	
+	-- open all transitions
+	menu.gameplay_options["transitions_closed_disable"]	= {default=false, 	debug_only=false, 	typ="check"}	
 	-- release dropped items 
 	menu.gameplay_options["release_dropped_items"]	= {default=true, 	debug_only=false, 	typ="check"}
 	-- show_enemy_health
@@ -82,6 +137,19 @@ function opt_menu_on_init(menu)
 	menu.gameplay_options["heli_engine_sound"]		= {default=true, 	debug_only=false, 	typ="check"}
 	-- heli_spawn
 	menu.gameplay_options["heli_spawn"]				= {default=true, 	debug_only=false, 	typ="check"}
+	-- weapon recoil effects
+	if (wpn_effects) then
+		menu.gameplay_ui_options["shot_effects"]	= {default=false, 	debug_only=false, 	typ="check",
+			on_accept = function(handler,optMgr,ctrl)
+				if (level.present() and wpn_effects) then
+					if (ctrl:GetCheck()) then
+						wpn_effects.activate()
+					else
+						wpn_effects.deactivate()
+					end
+				end
+			end
+		}end
 	-- dynamic_news
 	menu.gameplay_ui_options["dynamic_news"]		= {default=true, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
 		if (level.present() and dynamic_news_manager) then 
@@ -92,6 +160,147 @@ function opt_menu_on_init(menu)
 			end
 		end	
 	end}
+	-- Smurth’s Dynamic HUD
+	if inventory_radiation then
+		-- daytime radiation 
+		menu.gameplay_ui_options["day_radiation"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present()) then
+					if (ctrl:GetCheck()) then
+						inventory_radiation.activate()
+					else
+						inventory_radiation.deactivate()
+					end
+				end
+			end}
+			-- Inventory artifact radiation
+		menu.gameplay_ui_options["inventory_radiation"]	= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present()) then
+					if (ctrl:GetCheck()) then
+						inventory_radiation.activate()
+					else
+						inventory_radiation.deactivate()
+					end
+				end
+			end}
+	end
+	-- mask hud
+	if (mask_hud) then
+		menu.gameplay_ui_options["mask_hud"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and mask_hud) then
+					if (ctrl:GetCheck()) then
+						mask_hud.activate_hud()
+					else
+						mask_hud.deactivate_hud()
+					end
+				end
+			end}
+	end
+	--	Consumable_Animations
+	if (item_animations and enhanced_animations) then
+		menu.gameplay_ui_options["consumable_animation"]={default="full",debug_only=false,typ="list",list={"none","simple","full"},
+			on_accept=function(handler,optMgr,ctrl)
+				local choice = axr_main.config:r_value("mm_options","consumable_animation",0,"none")
+				if choice == "full" then
+					if item_animations.feature_is_active then
+						item_animations.deactivate()
+					end
+					enhanced_animations.activate()
+				elseif choice == "simple" then
+					if enhanced_animations.feature_is_active then
+						enhanced_animations.deactivate()
+					end
+					item_animations.activate()
+				else
+					if enhanced_animations.feature_is_active then
+						enhanced_animations.deactivate()
+					end
+					if item_animations.feature_is_active then
+						item_animations.deactivate()
+					end
+				end
+			end}
+	end	
+	-- slot Hud
+	if (slot_hud) then
+		menu.gameplay_ui_options["slot_hud"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and slot_hud) then
+					if (ctrl:GetCheck()) then
+						slot_hud.activate_hud()
+					else
+						slot_hud.deactivate_hud()
+					end
+				end
+			end}
+	end
+	-- weapon overheating
+	if (weapon_heat) then
+		menu.gameplay_ui_options["weapon_heat"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and weapon_heat) then
+					if (ctrl:GetCheck()) then
+						weapon_heat.get_heat()
+					else
+						weapon_heat.stop_heat()
+					end
+				end
+			end}
+		menu.gameplay_ui_options["weapon_heat_ui"]	= {default=true, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and weapon_heat) then
+					weapon_heat.UI_BAR = ctrl:GetCheck()
+				end
+			end
+		}
+	end
+	-- use magazined weapons
+	if (mag_sys) then
+		menu.gameplay_ui_options["weapon_mags"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and mag_sys) then
+					if (ctrl:GetCheck()) then
+						mag_sys.activate_feature()
+					else
+						mag_sys.deactivate_feature()
+					end
+				end
+			end
+		}
+	end
+	--[[ use hide weapons on item use
+	if (dfz_hide_wpn) then
+		menu.gameplay_options["weapon_hide"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and dfz_hide_wpn) then
+					if (ctrl:GetCheck()) then
+						dfz_hide_wpn.activate_feature()
+					else
+						dfz_hide_wpn.deactivate_feature()
+					end
+				end
+			end
+		}
+	end
+	-- food irradiation
+	if (rad_items) then
+		menu.gameplay_options["food_irradiate"]		= {default=false, 	debug_only=false, 	typ="check",
+			on_accept=function(handler,optMgr,ctrl)
+				if (level.present() and rad_items) then
+					if (ctrl:GetCheck()) then
+						rad_items.activate_feature()
+					else
+						rad_items.deactivate_feature()
+					end
+				end
+			end
+		}
+	end
+	--]]
+	-- End of Smurth’s Dynamic HUD
+
 	-- sleep_deprived
 	menu.gameplay_options["sleep_deprived"]			= {default=false, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
 		if (level.present() and sleep_dep) then
@@ -224,7 +433,7 @@ function write_default_config(tab_table)
 			end
 		end
     end
-	if (need_save) then 
+	if (need_save) then
 		axr_main.config:save()
 	end
 end
@@ -234,7 +443,7 @@ function on_accept(tab_table,menu,optMgr,console)
 		if (v.default ~= nil) then
 			if (v.typ=="check") then
 				axr_main.config:w_value("mm_options","enable_"..name,v.ctrl:GetCheck())
-			elseif (v.typ=="list") then 
+			elseif (v.typ=="list") then
 				if (type(v.default) == "boolean") then
 					axr_main.config:w_value("mm_options",name,v.ctrl:GetText()=="true" or false)
 				elseif (type(v.default) == "number") then 
@@ -245,7 +454,7 @@ function on_accept(tab_table,menu,optMgr,console)
 				end
 			end
 			
-			if (v.on_accept) then 
+			if (v.on_accept) then
 				v.on_accept(menu,optMgr,v.ctrl)
 			end
 		end

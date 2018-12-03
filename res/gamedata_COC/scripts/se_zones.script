@@ -87,9 +87,14 @@ function se_restrictor:on_register()
 	local id = self.id
 	local name = self:name()
 	if (sr_teleport_ini:section_exist(name)) then
-		local enable = sr_teleport_ini:line_exist(name,"enable") and sr_teleport_ini:r_string_ex(name,"enable")
+--mlr
+	--[[local enable = sr_teleport_ini:line_exist(name,"enable") and sr_teleport_ini:r_string_ex(name,"enable")
 		enable = enable and xr_logic.pick_section_from_condlist(db.actor,self,xr_logic.parse_condlist(self,"enable",name,enable))
-		if (enable == "true") then
+		if (enable == "true") then]]
+		if transitions.show_transition(name) or
+		mlr_utils.load_var('transitions_'..name) or
+        (axr_main.config:r_value("mm_options","enable_transitions_closed_disable",1,true)) then
+--mlr
 			local spot = sr_teleport_ini:line_exist(name,"spot") and sr_teleport_ini:r_string_ex(name,"spot")
 			if (spot and level.map_has_object_spot(id,spot) == 0) then
 				local str = sr_teleport_ini:line_exist(name,"hint") and sr_teleport_ini:r_string_ex(name,"hint")

@@ -671,7 +671,7 @@ function get_clsid(obj)
 	return obj:clsid()
 end
 
---Tvчисляет yaw в радианах
+--Вычисляет yaw в радианах
 function yaw( v1, v2 )
 	return  math.acos( ( (v1.x*v2.x) + (v1.z*v2.z ) ) / ( math.sqrt(v1.x*v1.x + v1.z*v1.z ) * math.sqrt(v2.x*v2.x + v2.z*v2.z ) ) )
 end
@@ -929,6 +929,7 @@ function IsMonster(o,c)
 		[clsid.cat_s] 					= true,
 		[clsid.chimera_s] 				= true,
 		[clsid.controller_s] 			= true,
+		[clsid.oasis_s] 	    		= true,
 		[clsid.dog_s] 					= true,
 		[clsid.flesh_s] 				= true,
 		[clsid.fracture_s] 				= true,
@@ -942,7 +943,7 @@ function IsMonster(o,c)
 		[clsid.rat_s]					= true,
 		[clsid.snork_s] 				= true,
 		[clsid.tushkano_s] 				= true,
-		[clsid.zombie_s] 				= true		
+		[clsid.zombie_s] 				= true
 		}
 	end
 	return c and monster_classes[c] or false

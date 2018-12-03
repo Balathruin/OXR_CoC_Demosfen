@@ -1,0 +1,201 @@
+--/-------------------------------------------------------------------
+--/ Открывающиеся переходы
+--/ SadBlackFox
+--/ 04.02.2017
+--/-------------------------------------------------------------------
+--[[
+Открытие переданного перехода
+open_transition(sr_name, one)
+При передаче второго параметра "true", откроется ТОЛЬКО переданный(без связки)
+
+Открытие рандомного перехода
+ОБЯЗАТЕЛЬНО СНАЧАЛА ВЫЗЫВАТЬ ПРОВЕРКУ check_rnd_transitions()
+И ТОЛЬКО ЕСЛИ ОНА ВЕРНЁТ "TRUE", ВЫЗЫВАТЬ rnd_open_transition()
+]]
+
+function show_transition(sr_name)
+	for k1,v1 in pairs(transitions_list.sr_always_open[mlr_utils.load_var('transitions_faction')] or transitions_list.sr_always_open['general']) do
+		for k2,v2 in pairs(v1) do
+			if v2 == sr_name then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+function open_transition(sr_name)
+	for k1,v1 in pairs(transitions_list.sr_transitions) do
+		for k2,v2 in pairs(v1) do
+			if v2 == sr_name then
+				for k3, v3 in pairs(v1) do
+					enable_transition(v3)
+					send_mess(v3)
+				end
+				return
+			end
+		end
+	end
+	callstack()
+	abort('Неправильное имя перехода: %s', sr_name)
+end
+-- Вернёт true, если в списке рандом переходов, есть не выданная связка переходов
+function check_rnd_transitions()
+	for k1,v1 in pairs(transitions_list.sr_random) do
+		for k2,v2 in pairs(v1) do
+			if check_spot(ret_id_spot_hint(v2)) == false then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+function check_rnd_transitions_rookie()
+	for k1,v1 in pairs(transitions_list.sr_random_easy_ways) do
+		for k2,v2 in pairs(v1) do
+			if check_spot(ret_id_spot_hint(v2)) == false then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+function check_rnd_transitions_winrar()
+	for k1,v1 in pairs(transitions_list.sr_random_hard_ways) do
+		for k2,v2 in pairs(v1) do
+			if check_spot(ret_id_spot_hint(v2)) == false then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+-- Открывает рандом связку переходов
+function rnd_open_transition()
+	local r = math.random(table.size(transitions_list.sr_random))
+	local tbl = transitions_list.sr_random[r]
+	for k,v in pairs(tbl) do
+		if check_spot(ret_id_spot_hint(v)) == false then
+			enable_transition(v)
+			send_mess(v)
+		else
+			return rnd_open_transition()
+		end
+	end
+end
+
+-- Для новичков
+function rnd_open_transition_rookie()
+	local r = math.random(table.size(transitions_list.sr_random_easy_ways))
+	local tbl = transitions_list.sr_random_easy_ways[r]
+	for k,v in pairs(tbl) do
+		if check_spot(ret_id_spot_hint(v)) == false then
+			enable_transition(v)
+			send_mess(v)
+		else
+			return rnd_open_transition_rookie()
+		end
+	end
+end
+
+-- Для ветеранов
+function rnd_open_transition_winrar()
+	local r = math.random(table.size(transitions_list.sr_random_hard_ways))
+	local tbl = transitions_list.sr_random_hard_ways[r]
+	for k,v in pairs(tbl) do
+		if check_spot(ret_id_spot_hint(v)) == false then
+			enable_transition(v)
+			send_mess(v)
+		else
+			return rnd_open_transition_winrar()
+		end
+	end
+end
+
+function check_spot(id, spot)
+	if (spot and level.map_has_object_spot(id,spot) ~= 0) then
+		return true
+	end
+	return false
+end
+
+function ret_id_spot_hint(sr_name)
+	local sr_teleport_ini = ini_file("sr_teleport_sections.ltx")
+	local id = get_object_story_id(sr_name)
+	local spot = sr_teleport_ini:line_exist(sr_name,"spot") and sr_teleport_ini:r_string_ex(sr_name,"spot")
+	local hint = sr_teleport_ini:line_exist(sr_name,"hint") and sr_teleport_ini:r_string_ex(sr_name,"hint")
+	return id, spot, hint
+end
+
+function enable_transition(sr_name)
+	local id, spot, hint = ret_id_spot_hint(sr_name)
+	if check_spot(id, spot) == true then
+		return
+	end
+	hint = hint and game.translate_string(hint)
+	level.map_add_object_spot_ser(id, spot ,hint)
+	mlr_utils.save_var('transitions_'..sr_name, true)
+end
+
+function send_mess(sr_name)
+	local id, spot, hint = ret_id_spot_hint(sr_name)
+	news_manager.send_tip(db.actor,[[Открыт новый путь: "]]..game.translate_string(hint)..[["]],0,"tourist",5000,nil)
+end
+
+function open_agr_up_doctor_mlr() 
+	open_transition('mar_space_restrictor_to_agroprom_1')
+	open_transition('agr_space_restrictor_to_agr_ug_1')	
+end
+
+function open_x16_saharov_mlr() 
+	open_transition('yan_space_restrictor_to_x16') 
+end
+
+function open_gar_4_2_zombie_mlr_squad() 
+	open_transition('gar_space_restrictor_to_rostok_1') 
+end
+
+function open_kmb_fanat_way_mlr() 
+	open_transition('esc_space_restrictor_to_garbage_2') 
+end
+
+--for information trader
+
+function open_mil_space_restrictor_to_radar_1() 
+	open_transition('mil_space_restrictor_to_radar_1') 
+end
+
+function open_rad_space_restrictor_to_bunker() 
+	open_transition('rad_space_restrictor_to_bunker') 
+end
+
+function open_rad_space_restrictor_to_pripyat_01() 
+	open_transition('rad_space_restrictor_to_pripyat_01') 
+end
+
+function open_pri_space_restrictor_to_cop_pripyat() 
+	open_transition('pri_space_restrictor_to_cop_pripyat') 
+end
+
+function open_pri_space_restrictor_to_stancia() 
+	open_transition('pri_space_restrictor_to_stancia') 
+end
+
+function open_aes_space_restrictor_to_aes2() 
+	open_transition('aes_space_restrictor_to_aes2') 
+end
+
+function open_mil_space_restrictor_to_red_1() 
+	open_transition('mil_space_restrictor_to_red_1') 
+end
+
+function open_lim_space_restrictor_to_red_forest() 
+	open_transition('lim_space_restrictor_to_red_forest') 
+end
+
+function mon_task_4_to_bun_radar() 
+	open_transition('rad_space_restrictor_to_bunker') 
+end

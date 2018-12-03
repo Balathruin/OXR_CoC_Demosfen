@@ -340,6 +340,8 @@ function CSurgeManager:end_surge(manual)
 		v:stop_light()
 		v:stop()
 	end
+	self:respawn_artefacts_and_replace_anomaly_zone()
+	self:toggle_level_artefact_respawns()							
 end
 
 function CSurgeManager:toggle_level_artefact_respawns()
@@ -406,7 +408,7 @@ function CSurgeManager:calculate_best_surge_cover()
 	for name,condlist in pairs(self.covers) do
 		local zone = db.zone_by_name[name]
 		if (zone) then
-			local valid = xr_logic.pick_section_from_condlist(db.actor, nil, condlist) == "true"
+			local valid = type(condlist) == "boolean" or xr_logic.pick_section_from_condlist(db.actor, nil, condlist) ~= "false"
 			if (valid) then
 				dist = zone:position():distance_to_sqr(db.actor:position())
 				if (near_dist == nil or dist < near_dist) then 
@@ -467,6 +469,12 @@ function CSurgeManager:update()
 		if (self.condlist and xr_logic.pick_section_from_condlist(db.actor, nil, self.condlist) == "false") then
 			return
 		end
+		
+		for i = 0, #halt_alife_info do
+			if (has_alife_info(halt_alife_info[i])) then return end
+		end
+		
+		
 		self:start()
 		return
 	end
@@ -642,6 +650,7 @@ function CSurgeManager:update()
 			if(diff_sec>=120) and (self.stages['1stwave']==nil)  then
 				self:start_wave(1,diff_game_sec)
 				self.stages['1stwave']=true
+
 				--self.debugMessages[2]:SetText("1st wave at: "..tostring(diff_sec))
 			end
 			-- 2nd wave sound -----------------------------------------------------------------------------------------------------------------------------------------
@@ -1004,7 +1013,7 @@ function CSurgeManager:start_wave(num,inited_time)
 		inited_time=prev_game_sec
 	end
 	local actor_pos=db.actor:position()
-	local effect=particles_object("crommcruac\\blowout_wave_blend")
+	local effect=particles_object("crommcruac\\blowout_wave_red_blend")
 	local inited_pos= vector():set(actor_pos.x, actor_pos.y/2, actor_pos.z+250)
 	self.blowout_waves[num]={effect=effect,inited_time=inited_time,inited_pos=inited_pos}
 	self.blowout_waves[num].effect:play_at_pos(inited_pos)
@@ -1703,6 +1712,10 @@ end
 
 function is_loaded()
 	return get_surge_manager()._state_loaded == true
+end
+
+function resurrect_skip_message()
+	get_surge_manager().skip_message = false
 end
 
 function sound_started()

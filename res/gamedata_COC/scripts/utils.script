@@ -954,3 +954,17 @@ function shuffle(array)
         counter = counter - 1
     end
 end
+
+--***************** EXTRA FUNCTIONS *************************
+
+function get_day_in_zone()
+	if not db.actor then return 0 end
+	local s_time = level.get_start_time()
+	local seconds = tonumber(game.get_game_time():diffSec(s_time))
+	local days = math.floor(seconds/60/60/24)
+	return days
+end
+
+function get_week_in_zone()
+	return get_day_in_zone()/7
+end

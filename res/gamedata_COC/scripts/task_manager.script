@@ -183,6 +183,10 @@ function task_callback(tsk, state)
 		return 
 	end 
 	
+	--mlr
+	local giver_npc_id = rtask.task_giver_id
+	--mlr	
+	
 	--printf("task_callback %s state=%s",id,state == task.fail and "fail" or state == task.completed and "complete" or state)
 	if (state == task.fail) then
 		news_manager.send_task(db.actor, "fail", tsk)
@@ -194,11 +198,21 @@ function task_callback(tsk, state)
 			if (rtask.on_cancel) then
 				xr_logic.pick_section_from_condlist(db.actor, db.actor, rtask.on_cancel)
 			end
+		--mlr
+			if	giver_npc_id ~= nil then
+				dialogs_mlr.show_rep_change_message(giver_npc_id)
+			end
+		--mlr
 		else
 			dxr_statistics.increment_statistic("tasks_failed")
 			if (rtask.on_fail) then
 				xr_logic.pick_section_from_condlist(db.actor, db.actor, rtask.on_fail)
 			end
+			--mlr
+				if	giver_npc_id ~= nil then
+					dialogs_mlr.show_rep_change_message(giver_npc_id)
+				end
+			--mlr
 		end
 		
 		if (rtask.repeat_timeout) then
@@ -217,6 +231,11 @@ function task_callback(tsk, state)
 		rtask:give_reward()
 		rtask.status = "completed"
 		dxr_statistics.increment_statistic("tasks_completed")
+		--mlr
+			if	giver_npc_id ~= nil then
+				dialogs_mlr.show_rep_change_message(giver_npc_id)
+			end
+		--mlr
 		
 		if (rtask.repeat_timeout) then
 			rtask.cancelled_by_actor = nil

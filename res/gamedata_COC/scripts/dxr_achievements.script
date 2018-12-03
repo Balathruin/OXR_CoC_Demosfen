@@ -3,6 +3,26 @@
 --------------------------------
 
 -------------------------
+----- Cheater -----
+-------------------------
+
+function cheater_functor()
+	-- Check if it can be unlocked.
+	if (not can_unlock()) then
+		return false
+	end
+	-- Check if it is already unlocked.
+	if (has_achievement("cheater")) then
+		return true
+	end
+	-- Unlock the achievement.
+	if (cheater_requirements()) then
+		cheater_rewards()
+		return true
+	end
+end
+
+-------------------------
 ----- Miscellaneous -----
 -------------------------
 
@@ -317,6 +337,14 @@ end
 ----- Requirements -----
 ------------------------
 
+-- Cheater.
+-- Use consol or spawn menu.
+function cheater_requirements()
+	return (
+		 (has_alife_info("then_you_take_achiev_cheater"))
+		)
+end
+
 -- Bookworm Food
 -- Requires all encyclopedia articles be unlocked.
 function bookworm_food_requirements()
@@ -458,6 +486,13 @@ end
 -------------------
 ----- Rewards -----
 -------------------
+
+-- Cheater
+function cheater_rewards()
+	SendScriptCallback("on_achievement_earned","cheater","st_achievement_cheater_unlock")
+	dxr_statistics.increment_rank(-1000)
+	dxr_statistics.increment_reputation(-1000)
+end
 
 -- Bookworm Food.
 -- Future memory sticks become rare PDAs.

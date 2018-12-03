@@ -10,7 +10,7 @@ local items,force,start_blur,itn_mul,pwr_rate,rng_factor,caff_max,last_warning,d
 feature_is_active = nil
 
 local function main_loop()
-		
+
 	if not (db.actor) then
 		return false
 	end 
@@ -56,7 +56,7 @@ function activate_feature()
 		return 
 	end
 	feature_is_active = true
-	
+
 	items = {}
 	local ini = ini_file("plugins\\sleep_deprivation.ltx")
 	if (ini and ini:section_exist("items")) then

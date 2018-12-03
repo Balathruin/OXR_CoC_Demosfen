@@ -60,6 +60,12 @@ function actor_on_net_spawn()
 			sim:release(se_obj,true)
 		end
 	end
+
+	if (axr_main.config:r_value("mm_options","enable_heli_spawn",1,true) == false) then 
+		for k,v in pairs(se_heli.se_helicopters) do 
+			alife():release(v,true)
+		end
+	end
 	
 	SendScriptCallback("on_game_load",binder)
 end
@@ -112,6 +118,7 @@ function actor_on_update(binder,delta)
 	end
 	--]]
 	SendScriptCallback("actor_on_update",binder,delta)
+	money.update(binder,delta)
 end
 
 -------------------
@@ -164,6 +171,7 @@ end
 -------------------
 function actor_on_item_drop(binder,item)
 	SendScriptCallback("actor_on_item_drop",item)
+	money.drop_update(binder,item)
 end 
 
 -------------------

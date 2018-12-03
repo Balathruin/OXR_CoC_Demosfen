@@ -1,0 +1,85 @@
+--[[
+Drag and drop disassemble script
+By Alundaio, who was pestered by Axebeard who doesn't know how to script
+--]]
+function on_game_start()
+    RegisterScriptCallback("CUIActorMenu_OnItemDropped",OnItemDropped)
+end
+ 
+function OnItemDropped(itm_from,itm_to,slot_from,slot_to)
+    --printf("from=%s to=%s slot_from=%s slot_to=%s  (%s)",itm_from:name(),itm_to:name(),slot_from,slot_to,EDDListType.iActorBag)
+    -- only work if draggin item in actor's bag to another item in actor's bag
+    if not (slot_from == EDDListType.iActorBag and slot_to == EDDListType.iActorBag) then
+        return
+    end
+	
+    local itm_dis
+    local itm_craft_tool
+    local sys_ini = system_ini()
+   
+    if (sys_ini:r_bool_ex(itm_from:section(),"can_disassemble",false) == true) then
+        itm_craft_tool = itm_from
+        itm_dis = itm_to
+    elseif (sys_ini:r_bool_ex(itm_to:section(),"can_disassemble",false) == true) then
+        itm_craft_tool = itm_to
+        itm_dis = itm_from
+    end
+   
+    if not (itm_craft_tool) then
+        return -- item being dragged from or to is not craftitem
+    end
+   
+    local craft_tool_sec = itm_craft_tool:section()
+    local disassemble_categories = sys_ini:r_string_ex(craft_tool_sec,"disassemble_categories","")
+    if (disassemble_categories == "") then
+        return
+    end
+   
+    disassemble_categories = alun_utils.str_explode(disassemble_categories,",")
+    if (#disassemble_categories <= 0) then
+        return
+    end
+   
+    local itm_dis_sec = itm_dis:section()
+    local cond = itm_dis:condition()
+   
+    for _,dis_sec in ipairs(disassemble_categories) do
+        local result, sec, value = nil, nil, nil
+        local line_count = sys_ini:line_count(dis_sec)-1
+        for i=0,line_count do
+            result, sec, value = sys_ini:r_line(dis_sec,i,"","")
+            if (sec and sec ~= "" and sec ~= "random_parts" and sys_ini:section_exist(sec)) then  
+                if (sec == itm_dis_sec) then
+                    --gives player Spare Parts item
+                    local random_parts = sys_ini:r_string_ex(dis_sec,"random_parts")
+                    if (random_parts ~= "") then
+						alife():create("spareparts", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+                       
+                        local se_obj = alife():object(itm_dis:id())
+                        if (se_obj) then
+                            alife():release(se_obj)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+ 
+--[[ EXAMPLE
+ 
+[itm_hammer]
+can_disassemble = true
+disassemble_categories = dis_cat_1, dis_cat_2
+ 
+ 
+[dis_cat_1]
+wpn_pm
+wpn_ak74
+random_parts = spareparts
+ 
+[dis_cat_2]
+wpn_knife
+wpn_binoc
+random_parts = spareparts
+--]]

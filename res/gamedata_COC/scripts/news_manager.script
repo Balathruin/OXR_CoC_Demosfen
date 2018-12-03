@@ -22,7 +22,50 @@ tips_icons = {
 }
 ]]
 
-tips_icons = {}
+tips_icons = {
+	-- Achievements
+	completionist			= "ui_inGame2_PD_Drug_Stalkerov",
+	down_to_earth			= "ui_inGame2_PD_DownToEarth",
+	duga_free				= "ui_inGame2_PD_Pervootkrivatel",
+	geologist				= "ui_inGame2_PD_Opitniy_stalker",
+	heavy_pockets			= "ui_inGame2_PD_Sostoyatelniy_klient",
+	infopreneur				= "ui_inGame2_PD_Torgovets_informatsiey",
+	mechanized_warfare		= "ui_inGame2_PD_master_boevih_sistem",
+	patriarch				= "ui_inGame2_PD_Lider",
+	radiotherapy			= "ui_inGame2_PD_Otmecheniy_zonoy",
+	rag_and_bone			= "ui_inGame2_PD_RagAndBone",
+	scholar					= "ui_inGame2_PD_Hranitel_tayn",
+	silver_or_lead			= "ui_inGame2_PD_Avtoritet",
+	tourist					= "ui_inGame2_PD_Tourist",
+	well_dressed			= "ui_inGame2_PD_Ohotnik_na_mutantov",
+	wishful_thinking		= "ui_inGame2_PD_WishfulThinking",
+
+	got_artefact			= "ui_inGame2_D_gonets_pravosudiya",
+	got_ammo				= "ui_inGame2_D_Ohotnik_na_mutantov",
+	got_medicine			= "ui_inGame2_D_Sisshik",
+	got_duty_light_armor	= "ui_inGame2_D_Vipolnil_2_zadaniya_dlya_Dolga",
+	got_duty_heavy_armor	= "ui_inGame2_D_Vipolnil_4_zadaniya_dlya_Dolga",
+	got_freedom_light_armor	= "ui_inGame2_D_Vipolnil_2_zadaniya_dlya_Swobodi",
+	got_freedom_heavy_armor	= "ui_inGame2_D_Vipolnil_4_zadaniya_dlya_Swobodi",
+
+	can_resupply			= "ui_inGame2_Pered_zadaniyami_voennih",
+	guide_unlock			= "ui_inGame2_Poslednie_razrabotki",
+	rank_change				= "ui_inGame2_V_poiskah_Soroki",
+	rep_change				= "ui_inGame2_PD_storonnik_ravnovesiya",
+	recent_surge			= "ui_inGame2_V_zone_nedavno_proshel_vibros",
+	
+	-- Story
+	saharov  				= "ui_iconsNpc_ucheniy_2",
+	ecolog					= "ui_iconsNpc_ecolog",
+	trader					= "ui_iconsNpc_trader",
+	army					= "ui_iconsNpc_stalker_neytral_balon_6",
+	barman					= "ui_iconsNpc_barman",
+	wolf					= "ui_iconsNpc_stalker_neytral_balon_1",
+	hip						= "ui\\devushka_icon",
+	freedom2  				= "ui_icon_news_news_svoboda",
+	deth	 				= "ui_icon_news_deth"
+}
+
 function on_game_start()
 	local ini = ini_file("plugins\\news_tips_icons.ltx")
 	local line_count = ini:line_count("news_tips_icons") or 0
@@ -89,7 +132,11 @@ function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 	local news_text = game.translate_string(news_id)
 --	actor:give_game_news(news_caption, news_text, texture, timeout*1000, showtime)
 	actor:give_game_news(news_caption, news_text, texture, timeout*1000, showtime, 0)
-
+--FonSwong--
+	if pda_fonswong.other_news==true then
+		pda_fonswong.ins_in_tbl(news_caption,news_text,texture)
+	end
+--FonSwong--
 	return true
 end
 

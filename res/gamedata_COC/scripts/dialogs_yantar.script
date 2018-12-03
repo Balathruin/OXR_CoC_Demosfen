@@ -35,15 +35,17 @@ function give_player_good_psi_helmet(a,b)
 	news_manager.relocate_item(db.actor, "in", "good_psy_helmet")
 	local tm = task_manager.get_task_manager()
 	local task_info = tm.task_info
-	if (task_info and task_info["yan_stalker_sakharov_psi_helmet_upgrade"]) then 
+	if (task_info and task_info["yan_stalker_sakharov_psi_helmet_upgrade"]) then
 		task_manager.get_task_manager():set_task_completed("yan_stalker_sakharov_psi_helmet_upgrade")
 	end
+	task_manager.get_task_manager( ):give_task( "turn_off_brain_machine" )
+
 end
 
 function actor_has_psi_helmet(a,b)
 	if (db.actor:object("bad_psy_helmet") ~= nil or db.actor:object("good_psy_helmet") ~= nil) then 
-		return true 
-	end 
+		return true
+	end
 	return false
 end
 

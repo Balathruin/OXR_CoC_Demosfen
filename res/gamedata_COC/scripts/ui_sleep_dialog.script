@@ -118,7 +118,50 @@ function sleep_dialog:TestAndShow()
 		end
 		return
 	end
+--[[
+-- mlr sleep only surge_hide restrictors
+			local actor_hide
+			local zone
+			local t = {"mlr_task_water_tower_sooo_faar_from_ground","pol_smart_terrain_2_1_surge_hide_a1","pol_smart_terrain_1_3_surge_hide_a1","pol_smart_terrain_2_2_surge_hide_a1","pol_smart_terrain_2_2_surge_hide_a2","pol_smart_terrain_2_2_surge_hide_a3","pol_smart_terrain_2_2_surge_hide_a4","pol_smart_terrain_2_3_surge_hide_a1","pol_smart_terrain_1_1_surge_hide_a1","pol_smart_terrain_1_1_surge_hide_a2","pol_smart_terrain_1_1_surge_hide_a3","pol_smart_terrain_1_1_surge_hide_a4","pol_smart_terrain_1_1_surge_hide_a5","pol_smart_terrain_1_1_surge_hide_a6","pol_smart_terrain_1_1_surge_hide_a7","pol_smart_terrain_1_1_surge_hide_a8","pol_smart_terrain_1_1_surge_hide_a9","pol_smart_terrain_1_1_surge_hide_a10","pol_smart_terrain_1_1_surge_hide_a11","pol_smart_terrain_1_1_surge_hide_a12","pol_smart_terrain_1_1_surge_hide_a13",
+			"mar_base_surge_hide_a1","mar_base_surge_hide_a2","mar_base_surge_hide_a3","mar_base_surge_hide_a4","mar_base_surge_hide_a5","mar_base_surge_hide_a6","mar_base_surge_hide_a7","mar_smart_terrain_7_3_surge_hide_a1","mar_smart_terrain_5_12_surge_hide_a1","mar_smart_terrain_10_5_surge_hide_a1","mar_smart_terrain_12_2_surge_hide_a1","mar_smart_terrain_4_5_surge_hide_a1","mar_smart_terrain_3_3_surge_hide_a1","mar_smart_terrain_5_8_surge_hide_a1","mar_smart_terrain_8_11_surge_hide_a1","mar_smart_terrain_11_11_surge_hide_a1","mar_smart_terrain_11_11_surge_hide_a2","mar_smart_terrain_11_11_surge_hide_a3","mar_smart_terrain_11_11_surge_hide_a4","mar_smart_terrain_doc_surge_hide","mar_smart_terrain_doc_2_surge_hide",
+			"esc_tunnel_surge_hide_a5","esc_tunnel_surge_hide_a6","esc_tunnel_surge_hide_a7","esc_tunnel_surge_hide_a1","esc_tunnel_surge_hide_a2", "esc_tunnel_surge_hide_a3", "esc_tunnel_surge_hide_a4", "esc_sawmill_surge_hide_a1", "esc_sawmill_surge_hide_a2", "esc_smart_terrain_2_12_surge_hide_a1","esc_smart_terrain_2_12_surge_hide_a2","esc_smart_terrain_2_12_surge_hide_a3","esc_smart_terrain_2_12_surge_hide_a4","esc_smart_terrain_2_12_surge_hide_a5","esc_smart_terrain_2_12_surge_hide_a6","esc_smart_terrain_2_12_surge_hide_a7","esc_smart_terrain_2_12_surge_hide_a8","esc_smart_terrain_2_14_surge_hide_a1","esc_smart_terrain_7_11_surge_hide_a1","esc_smart_terrain_5_7_surge_hide_a1","esc_smart_terrain_5_7_surge_hide_a2","esc_smart_terrain_4_8_9_surge_hide_a1","esc_smart_terrain_3_16_surge_hide_a1","esc_smart_terrain_3_16_surge_hide_a2","esc_smart_terrain_3_16_surge_hide_a3","esc_smart_terrain_6_8_surge_hide_a1","esc_smart_terrain_6_6_surge_hide_a1","esc_smart_terrain_5_2_surge_hide_a1",
+			"gar_smart_terrain_2_4_surge_hide_a1","gar_smart_terrain_3_5_surge_hide_a1","gar_smart_terrain_3_5_surge_hide_a2","gar_smart_terrain_3_5_surge_hide_a3","gar_smart_terrain_3_7_surge_hide_a1","gar_smart_terrain_3_7_surge_hide_a2","gar_smart_terrain_5_6_surge_hide_a1","gar_smart_terrain_5_2_surge_hide_a1","gar_smart_terrain_5_2_surge_hide_a2","gar_smart_terrain_6_1_surge_hide_a1","gar_smart_terrain_4_2_surge_hide_a1","gar_smart_terrain_4_2_surge_hide_a2","gar_smart_terrain_5_4_surge_hide_a1",
+			"agr_smart_terrain_1_6_surge_hide_a1","agr_smart_terrain_1_6_surge_hide_a2","agr_smart_terrain_1_6_surge_hide_a3","agr_smart_terrain_1_6_surge_hide_a4","agr_smart_terrain_1_6_surge_hide_a5","agr_smart_terrain_1_6_surge_hide_a6","agr_smart_terrain_1_6_surge_hide_a7","agr_smart_terrain_1_6_surge_hide_a8","agr_smart_terrain_4_4_surge_hide_a1","agr_smart_terrain_4_4_surge_hide_a2","agr_smart_terrain_4_4_near_2_surge_hide_a1","agr_smart_terrain_6_4_surge_hide_a1","agr_surge_hide_actor",
+			"val_smart_terrain_7_3_surge_hide_a1","val_smart_terrain_7_3_surge_hide_a2","val_smart_terrain_7_3_surge_hide_a3","val_smart_terrain_7_3_surge_hide_a4","val_smart_terrain_7_3_surge_hide_a5","val_smart_terrain_1_2_surge_hide_a1","val_smart_terrain_9_6_surge_hide_a1","val_smart_terrain_4_0_surge_hide_a1","val_smart_terrain_4_0_surge_hide_a2","val_smart_terrain_9_4_surge_hide_a1",
+			"bar_zastava_surge_hide_a1","bar_visitors_surge_hide_a1","bar_visitors_surge_hide_a2","bar_visitors_surge_hide_a3","bar_visitors_surge_hide_a4","bar_visitors_surge_hide_a5","bar_visitors_surge_hide_a6","bar_arena_surge_hide_a1","bar_arena_ug_surge_hide_a1","bar_100rad_surge_hide_a1","bar_dolg_general_surge_hide_a1","bar_dolg_general_surge_hide_a2","bar_dolg_general_surge_hide_a3",
+			"ros_smart_snork1_surge_hide_a1","ros_smart_bloodsucker1_surge_hide_a1","ros_smart_monster5_surge_hide_a1","ros_smart_stalker_bandits1_surge_hide_a1","ros_tunnel_to_yantar_surge_hide_a1","ros_closed_house_surge_hide","ros_smart_stalker1_surge_hide_a1","ros_smart_stalker1_surge_hide_a2",
+			"yan_smart_terrain_6_4_surge_hide_a1","yan_smart_terrain_5_5_surge_hide_a1","yan_smart_terrain_2_4_surge_hide_a1","yan_smart_terrain_2_4_surge_hide_a2","yantar_tunnel_surge_hide","yantar_tunnel_surge_hide_2",
+			"mil_smart_terrain_4_3_surge_hide_a1","mil_smart_terrain_4_3_surge_hide_a2","mil_smart_terrain_4_3_surge_hide_a3","mil_smart_terrain_4_3_surge_hide_a4","mil_smart_terrain_4_3_surge_hide_a5","mil_smart_terrain_4_2_surge_hide_a1","mil_smart_terrain_4_2_surge_hide_a2","mil_smart_terrain_7_4_surge_hide_a1","mil_smart_terrain_2_4_surge_hide_a1","mil_smart_terrain_4_8_surge_hide_a1","mil_smart_terrain_7_12_surge_hide_a1","mil_smart_terrain_7_12_surge_hide_a2","mil_smart_terrain_7_7_surge_hide_a1","mil_smart_terrain_7_7_surge_hide_a2","mil_smart_terrain_2_10_surge_hide_a1",
+			"red_smart_terrain_4_2_surge_hide_a1","red_smart_terrain_4_2_surge_hide_a2","red_smart_terrain_6_3_surge_hide_a1","red_smart_terrain_3_2_surge_hide_a1","red_smart_terrain_bridge_surge_hide_a1","red_smart_terrain_bridge_surge_hide_a2","red_bridge_bandit_smart_surge_hide_a1",
+			"lim_smart_terrain_1_surge_hide_a1","lim_smart_terrain_2_surge_hide_a1","lim_smart_terrain_3_surge_hide_actor_only","lim_smart_terrain_4_surge_hide_a1","lim_smart_terrain_5_surge_hide_a1","lim_smart_terrain_6_surge_hide_a1","lim_smart_terrain_9_surge_hide_a1","lim_smart_terrain_10_surge_hide_a1","lim_smart_terrain_3_surge_hide_npc_only",
+			"hospital_surge_hide",
+			"cit_killers_surge_hide_a1","cit_killers_surge_hide_a2","cit_bandits_surge_hide_a1",
+			"rad2_prip_teleport_surge_hide_a1","rad_antenna_camper_surge_hide_a1","rad_antenna_monolith_surge_hide_a1","rad_antenna_patrol_surge_hide_a1","rad_antenna_patrol_surge_hide_a2","rad_entrance_surge_hide_a1","rad_entrance_surge_hide_a2","rad_entrance_surge_hide_a3","rad_prip_road_surge_hide_a1","rad_prip_road_surge_hide_a2","rad_sleep_room_psy_activity",
+			"pri_depot_surge_hide_a1","pri_hotel_surge_hide_a1","pri_monolith_surge_hide_a1","pri_smart_bloodsucker_lair1_surge_hide_a1","pri_smart_controler_lair1_surge_hide_a1","pri_smart_giant_lair1_surge_hide_a1","pri_smart_monolith_stalker6_surge_hide_a1","pri_smart_snork_lair1_surge_hide_a1","pri_monolith_surge_hide_a2","pri_underground_garage_surge_hide","pri_post_surge_hide","pri_milicia_surge_hide",
+			"aes_surge_hide","aes2_surge_hide",
+			"gen_underground_surge_hide","gen_lab_entrance_surge_hide","gen_wood_house_surge_hide","gen_brick_house_surge_hide","gen_small_outpost_surge_hide","gen_tube_surge_hide",
+			"trc_sim_20_surge_hide_1","trc_sim_20_surge_hide_2","trc_sim_20_surge_hide_3","trc_sim_20_surge_hide_4","trc_sim_6_surge_hide_1","trc_sim_6_surge_hide_2","trc_sim_6_surge_hide_3","trc_sim_2_surge_hide_1","trc_sim_2_surge_hide_2","trc_sim_2_surge_hide_3","trc_sim_2_surge_hide_4","trc_sim_2_surge_hide_5","trc_sim_2_surge_hide_6","trc_sim_2_surge_hide_7","trc_sim_1_surge_hide_1",
+			"zat_surge_hide_a2","zat_surge_hide_b42","zat_surge_hide_b44","zat_surge_hide_b7","zat_surge_hide_b18","zat_surge_hide_b101","zat_surge_hide_b38","zat_surge_hide_b33","zat_b33_surge_hide_2","zat_surge_hide_b40","zat_surge_hide_a23","zat_surge_hide_b100","zat_surge_hide_b28","zat_surge_hide_b5","zat_surge_hide_b400","zat_b22_stalker_medic_identified","zat_surge_hide_b103","zat_b103_surge_hide_2","zat_surge_hide_b38_down","zat_surge_hide_b38_side","zat_b14_surge_hide_1","zat_b14_surge_hide_2","zat_b14_surge_hide_3",
+			"jup_surge_hide_a10","jup_surge_hide_a12","jup_surge_hide_a6","jup_b15_sr_light","jup_surge_hide_b1","jup_surge_hide_b1_2","jup_surge_hide_b16","jup_surge_hide_b200","jup_b200_surge_hide_2","jup_b200_surge_hide_3","jup_b200_surge_hide_4","jup_b200_surge_hide_5","jup_surge_hide_b202","jup_surge_hide_b203","jup_surge_hide_b205","jup_surge_hide_b205_a1","jup_surge_hide_b205_a2","jup_surge_hide_b207","jup_surge_hide_b208","jup_surge_hide_b208_2","jup_surge_hide_b214","jup_surge_hide_b219","jup_surge_hide_b41","jup_surge_hide_b47","jup_a9_surge_hide","jup_surge_hide_b8","jup_surge_hide_b9",
+			"pri_surge_hide_a15","pri_surge_hide_a16","pri_surge_hide_b304","pri_surge_hide_b304_2","pri_surge_hide_b35","pri_b35_mercs_surge_hide_1","pri_b35_mercs_surge_hide_2","pri_b35_mercs_surge_hide_3","pri_b35_mercs_surge_hide_4","pri_b35_military_surge_hide_1","pri_surge_hide_a18","pri_surge_hide_a18_2","pri_surge_hide_a21","pri_surge_hide_b306","pri_surge_hide_b301","pri_surge_hide_b303","pri_surge_hide_a28","pri_surge_hide_a28_2","pri_surge_hide_a17","pri_surge_hide_b36",
+			"level_bar_zone_trader","bar_100rad_surge_hide_a0","bar_100rad_surge_hide_sleep","bar_space_restrictor_podzemka_ukritie"}
+			for i=1,#t do
+--				zone = db.zone_by_name[t[i]]
+--[[				if (zone and zone:inside(db.actor:position())) then
+					actor_hide = true
+					break
+				end
+			end	
 	
+	-- Prevent sleep if an emission or psi-storm currently ongoing.
+	--if (xr_conditions.surge_started() or psi_storm_manager.is_started()) then
+		if not (actor_hide) then
+			SetHudMsg(game.translate_string("st_cant_sleep_find_shelter_mlr"),4)
+			return
+		end
+	--end	
+--mlr]]
+
 	-- Prevent sleep if an emission or psi-storm currently ongoing.
 	if (xr_conditions.surge_started() or psi_storm_manager.is_started()) then
 		if not (surge_manager.actor_in_cover()) then
@@ -223,6 +266,11 @@ function dream_callback2()
 	disable_info("tutorial_sleep")
 	disable_info("actor_is_sleeping")
 	disable_info("sleep_active")
+	--mlr
+--	if (axr_main.config:r_value("mm_options","enable_robbery_at_sleep_option",1,true) == true) then
+ --   	dialogs_mlr.control()
+--	end
+	--mlr
 end
 
 function sleep()

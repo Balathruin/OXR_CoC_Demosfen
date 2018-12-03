@@ -1,0 +1,682 @@
+--------------------------------------------------------------------------------
+--Dinamic HUD from ABC Inferno and AMK
+--by Rulix aka Bak
+--------------------------------------------------------------------------------
+local dh_ini = ini_file("plugins\\dinamic_hud.ltx")
+local suithud_enable = alun_utils.read_from_ini(dh_ini,"main","suithud_enable",true,0) -- худ шлема
+local zoom_enable = alun_utils.read_from_ini(dh_ini,"main","zoom_enable",true,0) -- смещение худа
+local blurs_enable = alun_utils.read_from_ini(dh_ini,"main","blurs_enable",true,0) -- эффект запотевания
+local blood_enable = alun_utils.read_from_ini(dh_ini,"main","blood_enable",true,0) -- эффект ранения
+local bleed_enable = alun_utils.read_from_ini(dh_ini,"main","bleed_enable",true,0) -- эффект плохого самочувствия
+local hit_enable = alun_utils.read_from_ini(dh_ini,"main","hit_enable",true,0) -- эффект попадания по игроку
+local brnv_enable = alun_utils.read_from_ini(dh_ini,"main","brnv_enable",true,0) -- сломанный ПНВ
+local shoot_enable = alun_utils.read_from_ini(dh_ini,"main","shoot_enable",true,0) -- эффект стрельбы
+ui_disabled = nil
+local helm_hidden = false
+local helm_mask = false
+
+--------------------------------------------------------------------------------
+local helmets = {
+                helm_respirator		= {hud = "hud_gas",breakable = true,blurs = 4},
+				helm_respirator_joker		= {hud = "hud_gas",breakable = true,blurs = 3.5},
+				helm_respirator_2		= {hud = "hud_gas",breakable = true,blurs = 4},
+				helm_m40			= {hud = "hud_kill",breakable = true,blurs = 3.5},
+				helm_rp_metro_gp7			= {hud = "hud_kill",breakable = true,blurs = 3.5},
+				helm_respirator_gp5			= {hud = "hud_kill",breakable = true,blurs = 3.5},
+				nbc_outfit      	   	= {hud = "hud_gas",breakable = true,blurs = 3.5},
+				cs_nbc_outfit      	   	= {hud = "hud_gas",breakable = true,blurs = 3.5},
+				monolith_nbc_outfit      	   	= {hud = "hud_gas",breakable = true,blurs = 3.5},
+				helm_hardhat			= {hud = "hud_mil",breakable = true,blurs = 2.5},
+				helm_hardhat_snag		= {hud = "hud_mil",breakable = true,blurs = 2.2},
+				helm_protective			= {hud = "hud_sci",breakable = true,blurs = 1.5},
+				helm_tactic			= {hud = "hud_kill",breakable = true,blurs = 3},
+				helm_battle			= {hud = "hud_kill",breakable = true,blurs = 3},
+				helm_rp_metro_ranger			= {hud = "hud_kill",breakable = true,blurs = 3},
+				helm_tactic_2			= {hud = "hud_mil",breakable = true,blurs = 3},
+				scientific_outfit		= {hud = "hud_sci",breakable = true,blurs = 1},
+				dolg_scientific_outfit		= {hud = "hud_sci",breakable = true,blurs = 1},
+				svoboda_scientific_outfit	= {hud = "hud_sci",breakable = true,blurs = 1},
+				merc_scientific_outfit		= {hud = "hud_sci",breakable = true,blurs = 1},
+				ecolog_outfit_green		= {hud = "hud_sci",breakable = true,blurs = 1},
+				ecolog_outfit_orange		= {hud = "hud_sci",breakable = true,blurs = 1},
+				monolith_scientific_outfit	= {hud = "hud_sci",breakable = true,blurs = 1},	
+				scientific_heavy_outfit	= {hud = "hud_sci",breakable = true,blurs = 1},
+				ecolog_outfit_white	= {hud = "hud_sci",breakable = true,blurs = 1},
+				ecolog_outfit_blue	= {hud = "hud_sci",breakable = true,blurs = 1},
+				cs_scientific_outfit	= {hud = "hud_sci",breakable = true,blurs = 1},	
+                isg_scientific_outfit	= {hud = "hud_sci",breakable = true,blurs = 1},
+				exo_proto_outfit			= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				exo_outfit			= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				dolg_exo_outfit			= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				merc_exo_outfit			= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				radiation_outfit      	   	= {hud = "hud_exo",breakable = true,blurs = 3.3},				
+				dolg_radiation_outfit      	   	= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				svoboda_radiation_outfit      	   	= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				merc_radiation_outfit      	   	= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				monolith_radiation_outfit      	   	= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				cs_exo_outfit      	   	= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				monolith_exo_outfit		= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				military_exo_outfit		= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				bandit_exo_outfit		= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				svoboda_exo_outfit		= {hud = "hud_exo",breakable = true,blurs = 3.3},
+				elite_heavy_outfit			= {hud = "hud_mil",breakable = true,blurs = 3},
+				stalker_expert_outfit			= {hud = "hud_mil",breakable = true,blurs = 3.5},
+				freedom_vanguard_outfit			= {hud = "hud_kill",breakable = true,blurs = 3.5},
+				dolg_elite_outfit			= {hud = "hud_mil",breakable = true,blurs = 2.5},
+				explorer_outfit	    = {hud = "hud_sci",breakable = true,blurs = 1},
+				zonewalker_outfit		= {hud = "hud_gas",breakable = true,blurs = 4}}
+				
+local no_drop_items = {bolt = true,wpn_knife = true}
+--------------------------------------------------------------------------------
+local seldom_upd_time,often_upd_time
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_update",update)
+	RegisterScriptCallback("actor_on_before_death",clear_hud)
+end
+
+
+function update()
+	if db.actor then
+		local tg = time_global()
+		if tg > (seldom_upd_time or 100) then
+			seldom_upd_time = tg+400
+			bleedcondition()
+		end
+		init_blurs()
+		if tg > (often_upd_time or 50) then
+			often_upd_time = tg+120
+			blood()
+			helmet_hud()
+		end
+		
+		hit_effect()
+		broken_nv()
+		zoom_hud()
+		shoot_effect()
+	end
+end
+--------------------------------------------------------------------------------
+
+local wpn_tbl = {}
+local ammon = 0
+local shotc = 1
+local curwpn
+local shott
+local function parse_anims(sec)
+	local hud = alun_utils.read_from_ini(nil,sec,"hud","o_O",1)
+	local anim = alun_utils.read_from_ini(nil,hud,"shoot_effect",nil,1) or alun_utils.read_from_ini(dh_ini,hud,"shoot_effect",nil,1)
+	if not anim then
+		alun_utils.read_from_ini(dh_ini,alun_utils.read_from_ini(nil,sec,"class","O_o",1),"shoot_effect",nil,1)
+	end
+	if anim and dh_ini:section_exist(anim) then
+--		rx_ai.printf("parse %s for %s",anim,sec)
+		local tbl = {}
+		tbl.s = alun_utils.parse_list(dh_ini,anim,"strength")
+		tbl.r = alun_utils.read_from_ini(dh_ini,anim,"strength_rnd",1)
+		tbl.e = {}
+		for i=0,5 do
+			tbl.e[i] = alun_utils.parse_list(dh_ini,anim,tostring(i))
+			for k,v in pairs(tbl.e[i]) do
+				tbl.e[i][k] = v and tonumber(v)
+			end
+		end
+		tbl.p = {}
+		tbl.c = {}
+		local n = dh_ini:line_count(anim)
+		if n > 8 then
+			for i=6,n-1 do
+				local r,id,val = dh_ini:r_line(anim,i,"","")
+				val = alun_utils.str_explode(",",val,true)
+				local shr = "ppe"
+				if val[2] then
+					shr = val[2]
+				end
+				local ex
+				if getFS():exist("$game_anims$",string.format("shoot\\%s.%s",id,shr)) then
+					ex = false
+				elseif getFS():exist("$game_anims$",string.format("shoot\\%s_s1.%s",id,shr)) then
+					ex = true
+				end
+				val[1] = tonumber(val[1])
+				if ex ~= nil and val[1] and val[1] ~= 0 then
+					if shr == "ppe" then
+--						rx_ai.printf("ppe %s = %s",id,val[1])
+						tbl.p[id] = {f = val[1],s = ex}
+					else
+--						rx_ai.printf("anm %s = %s",id,val[1])
+						tbl.c[id] = {f = val[1],s = ex}
+					end
+				end
+			end
+		end
+		wpn_tbl[sec] = tbl
+	else
+		wpn_tbl[sec] = true
+	end
+end
+
+function shoot_effect()
+	if not shoot_enable then
+		return
+	end
+	if shott and shott < time_global() then
+		shotc = 1
+		shott = nil
+	end
+	local wpn = db.actor:active_item()
+--	rx_ai.printf("%s %s",tostring(db.actor:dont_has_info("ui_inventory")),tostring(db.actor:dont_has_info("ui_car_body")))
+	if (IsWeapon(wpn)) then
+		local sect = wpn:section()
+		if not wpn_tbl[sect] then
+			parse_anims(sect)
+		end
+		if wpn_tbl[sect] ~= true then
+			if wpn:name() == curwpn then
+				local aminmag = wpn:get_ammo_in_magazine()
+				if (aminmag == 0 and aminmag == ammon-1) or (aminmag ~= 0 and aminmag < ammon) then
+					shoot_anim(sect)
+				end
+				ammon = aminmag
+			else
+				curwpn = wpn:name()
+				ammon = wpn:get_ammo_in_magazine()
+			end
+		else
+			curwpn = nil
+		end
+	else
+		curwpn = nil
+	end
+end
+
+function shoot_anim(sect)
+	local anims = {}
+	local s = wpn_tbl[sect].s
+	if #s > 1 then
+		if wpn_tbl[sect].r == 1 then
+			s = s[math.random(#s)]
+		elseif wpn_tbl[sect].r == 2 then
+			if shotc == 1 then
+				s = shotc
+			else
+				s = s[math.random(2,#s)]
+			end
+		else
+			local sc = #s
+			sc = shotc <= sc and shotc or (sc > 2 and math.random(sc-1,sc)) or sc
+			s = s[sc]
+		end
+	else
+		s = s[1]
+	end
+	for i,v in pairs(wpn_tbl[sect].e) do
+		local cnt,r = math.modf(v[1])
+		if r ~= 0 and cnt > 4 then --fmb
+			cnt = cnt-cnt*math.random(0,r*100)/100 --fmb
+			cnt,r = math.modf(cnt)
+		end
+		if r ~= 0 and math.random() < r then
+			cnt = cnt+1
+		end
+		if cnt > 0 then
+			local dir = v[2]
+			if not dir then
+				dir = math.random(0,1)
+			end
+			table.insert(anims,{e = i,d = dir,c = cnt})
+		end
+	end
+	for i,a in ipairs(anims) do
+		local n = string.format([[shoot\s%s_e%s_%s.anm]],s,a.e,a.d)
+		for ii=1,a.c do
+			level.add_cam_effector(n,math.random(5000,8000),false,"")
+		end
+	end
+	for k,v in pairs(wpn_tbl[sect].c) do
+		local cnt,r = math.modf(v.f)
+		if r ~= 0 and cnt > 4 then
+			cnt = cnt-cnt*math.random(0,r*100)/100
+			cnt,r = math.modf(cnt)
+		end
+		if r ~= 0 and math.random() < r then
+			cnt = cnt+1
+		end
+		local n = v.s and string.format([[shoot\%s_s%s.anm]],k,s) or string.format([[shoot\%s.anm]],k)
+		for i=1,cnt do
+			level.add_cam_effector(n,math.random(8000,9000),false,"")
+		end
+	end
+	for k,v in pairs(wpn_tbl[sect].p) do
+		local n = v.s and string.format([[shoot\%s_s%s.ppe]],k,s) or string.format([[shoot\%s.ppe]],k)
+		local cnt,f = math.modf(v.f)
+		if f > 0 then
+			cnt = cnt+1
+		end
+		for i=1,cnt do
+			local eid = math.random(5000,8000)
+			level.add_pp_effector(n,eid,false)
+			if i == 1 then
+				level.set_pp_effector_factor(eid,f)
+			end
+		end
+	end
+	shotc = shotc+1
+	shott = time_global()+300
+end
+
+
+local current_suithud
+local helmet_condition
+local pre_hud_type = ""
+local current_helmet
+local hud_blurs = 0
+
+function helmet_switch()
+	helm_hidden = not helm_hidden
+end
+
+function ismask()
+	return helm_mask
+end
+
+function ishud()
+	return current_suithud
+end
+
+function helmet_hud()
+	if (axr_main.config:r_value("mm_options","enable_mask_hud",1,false) == false) then
+		setmysuithud(false,false)
+		return
+	end
+	local hud_type,helmet_name
+	local helmet = db.actor:alive() and (db.actor:item_in_slot(12) or db.actor:get_current_outfit())
+	if helmet then
+		local sect = helmet:section()
+		if helmets[sect] then
+			helmet_condition = "blue"
+			if helmets[sect].breakable == true then
+				local cond = helmet:condition()
+				if cond > 0.86 then helmet_condition = "blue"
+				elseif cond > 0.67 then helmet_condition = "green"
+				elseif cond > 0.52 then helmet_condition = "yellow"
+				elseif cond > 0.40 then helmet_condition = "red"
+				elseif cond > 0.25 then helmet_condition = "red2"
+				else helmet_condition = "red3" end
+			end
+			hud_blurs = helmets[sect].blurs
+			hud_type = helmets[sect].hud.."_"..helmet_condition
+			pre_hud_type = helmets[sect].hud
+			helmet_name = helmet:name()
+		end
+	end
+	
+	if not helm_hidden then
+		setmysuithud(hud_type,helmet_name)
+	else
+		setmysuithud(false,false)
+	end
+end
+
+local suitfirstrun = true
+function setmysuithud(hudtype,helmet)
+	local hud = get_hud()
+	local actor_pos = db.actor:bone_position("bip01_head")
+	if (not hudtype) or (ui_disabled) or (actor_pos:distance_to_sqr(device().cam_pos) > 4) then
+		local wchud = hud:GetCustomStatic(current_suithud)
+		if wchud then
+			hud:RemoveCustomStatic(current_suithud)
+		end
+		current_suithud = nil
+		suitfirstrun = true
+		helm_mask = false
+	elseif hudtype ~= current_suithud then
+		if current_suithud then
+			hud:RemoveCustomStatic(current_suithud)
+		end
+		hud:AddCustomStatic(hudtype)
+		if string.find(hudtype,pre_hud_type) then
+			if suitfirstrun == false and helmet_condition ~= "green" and helmet_condition ~= "blue" and helmet == current_helmet then
+				local snd_obj = sound_object("material\\glass\\glass_fall03hl")
+				snd_obj:play(db.actor,0,sound_object.s2d)
+			end
+			if suitfirstrun == true then
+				suitfirstrun = false
+			end
+		end
+		current_helmet = helmet
+		current_suithud = hudtype
+		
+		printf(helmet)
+		
+		if (not string.match(helmet,"helm_hardhat")) then
+			helm_mask = true
+		end
+	end
+end
+
+local pre_fov = 0
+local precf = 0
+local ztime = time_global()
+local zbias = Frect():set(0,0,1024,1024)
+local zenc
+
+function get_zoom()
+	return zbias
+end
+
+function zoom_hud()
+	if not zoom_enable then
+		return
+	end
+	if current_suithud then
+		local hud = get_hud():GetCustomStatic(current_suithud)
+		if hud then
+			local cf = precf
+			local fov = math.floor((device().fov+0.02)*10)
+			local delta = time_global()-ztime
+			ztime = time_global()
+			if not zenc or fov > 35*10 and pre_fov < fov then
+				zenc = nil
+				if cf > 0 then
+					cf = cf-(delta/400)
+					if cf < 0 then
+						cf = 0
+					end
+				end
+			end
+			if zenc or fov < 53*10 and pre_fov > fov then
+				zenc = true
+				if cf < 1 then
+					cf = cf+(delta/400)
+					if cf > 1 then
+						cf = 1
+					end
+				end
+			end
+			if cf ~= precf then
+				local wpn = db.actor:active_item()
+				if wpn then
+					if wpn:section() == "wpn_binoc" then
+						zbias:set(100*cf,100*cf,1024-100*cf,1024-100*cf)
+					elseif alun_utils.addon_attached(wpn,"sc") then
+						zbias:set(350*cf,175*cf,1024,1024-175*cf)
+					else
+						zbias:set(200*cf,100*cf,1024,1024-100*cf)
+					end
+					hud:wnd():SetTextureRect(zbias)
+				elseif precf ~= 0 then
+					zbias:set(0,0,1024,1024)
+					hud:wnd():SetTextureRect(zbias)
+				end
+				precf = cf
+			end
+			pre_fov = fov
+		end
+	end
+end
+
+local nv_enabled = false
+function broken_nv()
+	if not brnv_enable then
+		return
+	end
+	if current_suithud then
+		local rnd = math.random(1000)
+		if helmet_condition == "red" then
+			if rnd == 1 then
+				enable_nv(true)
+			elseif rnd < 5 then
+				enable_nv(false)
+			end
+		elseif  helmet_condition == "red2" then
+			if nv_enabled then
+				if rnd < 4 then
+					nv_enabled = false
+				end
+			else
+				if rnd < 3 then
+					nv_enabled = true
+				end
+			end
+			enable_nv(nv_enabled)
+		elseif  helmet_condition == "red3" then
+			enable_nv(false)
+		end
+	end
+end
+
+function enable_nv(enable)
+	local nv = db.actor:object("device_torch")
+	if nv and nv:night_vision_enabled() ~= enable then
+		nv:enable_night_vision(enable)
+	end
+end
+
+function init_blurs()
+	if not blurs_enable then
+		return
+	end
+	if current_suithud and hud_blurs > 0 and not string.find(current_suithud,"_red3") then
+		local stretchy = 0.65/(math.floor(device().height/device().width*1000)/1000)
+		if stretchy < 1 then
+			stretchy = 1
+		end
+		local rect = {x = 0,y = -(stretchy-1)*300,w = 1024,h = 768*stretchy}
+		set_blurs(true,rect)
+	else
+		set_blurs(false)
+	end
+end
+
+local blurs
+local blurval = 0 -- уровень запотевания от 0 до 1
+local blurlt = 0 -- время последнего обновления
+local blurcyctime = 0 -- время начала последнего цикла дыхания (выдох)
+local blurlastphase = 0
+function set_blurs(enabled,rect)
+	local hud = get_hud()
+	if not blurs then
+		blurs = {}
+		for i=1,4 do
+			local pht = {}
+			for ii = 1,10 do
+				local static = "hud_blur"..i.."_"..ii
+				hud:AddCustomStatic(static)
+				pht[ii] = hud:GetCustomStatic(static):wnd()
+			end
+			blurs[i] = pht
+		end
+	end
+	if not enabled then
+		for i,t in ipairs(blurs) do
+			for ii,st in ipairs(t) do
+				st:SetWndRect(Frect():set(0,0,0,0))
+			end
+		end
+		blurval = 0
+		blurcyctime = time_global()
+		blurlastphase = 0
+		return
+	end
+-- Циклы в зависимости от силы дыхания: 0->1->0 0->1->2->4->5->0 0->1->2->3->4->5->0 5->4->3->4->5 4->3->4
+	local power = db.actor.power
+	local period = 1.0+power*power*1.0 -- текущая частота дыхания от 30 до 120 циклов в минуту
+	local expirt = 0.3
+	local delta = (time_global()-blurlt)/1000 -- дельта в секундах
+	local phase = (time_global()-blurcyctime)/1000 -- фаза дыхательного цикла в сек.
+	blurlt = time_global()
+	if phase > period then
+		phase = phase%period
+		blurcyctime = blurlt-phase*1000
+	end
+	if blurlastphase > phase then
+		blurlastphase = 0
+	end
+	local blurdelta = delta*-0.7 -- работа вентилляции
+	if blurlastphase < expirt and phase < expirt then
+		blurdelta = blurdelta+(phase-blurlastphase)*hud_blurs
+	elseif blurlastphase < expirt then
+		blurdelta = blurdelta+(expirt-blurlastphase)*hud_blurs
+	end
+	blurlastphase = phase
+	blurval = blurval+blurdelta
+	if blurval > 0.999 then
+		blurval = 0.999
+	elseif blurval < 0 then
+		blurval = 0
+	end
+	local tm = math.floor(blurval*3)
+	local tmn = (tm+1)
+	local v = blurval*3-math.floor(blurval*3)
+	v = 1-v
+	local v1 = 1-v
+	local n1 = math.ceil(v*10)
+	local n2 = math.ceil(v1*10)
+	for i=1,4 do
+		for ii=1,10 do
+			if (i == tm and ii == n1) then
+				blurs[tm][n1]:SetWndRect(Frect():set(rect.x,rect.y,rect.w,rect.h))
+				blurs[tm][n1]:SetTextureRect(Frect():set(zbias.x1/4,zbias.y1/4,zbias.x2/4,zbias.y2/4))
+			elseif (i == tmn and ii == n2) then
+				blurs[tmn][n2]:SetWndRect(Frect():set(rect.x,rect.y,rect.w,rect.h))
+				blurs[tmn][n2]:SetTextureRect(Frect():set(zbias.x1/4,zbias.y1/4,zbias.x2/4,zbias.y2/4))
+			else
+				blurs[i][ii]:SetWndRect(Frect():set(0,0,0,0))
+			end
+		end
+	end
+end
+
+local prev_health = 0
+function hit_effect()
+	if not hit_enable then
+		return
+	end
+	if prev_health > db.actor.health+0.05 then
+		level.add_pp_effector("amk_shoot.ppe",2011,false)
+		level.set_pp_effector_factor(2011,(prev_health-db.actor.health)*100)
+		if prev_health > db.actor.health+0.2 then
+			local cameffs,sounds
+			if prev_health > db.actor.health+0.5 then
+				level.add_pp_effector("total_recall.ppe",2016,false)
+				level.set_pp_effector_factor(2016,(prev_health-db.actor.health)*100)
+				cameffs = {"head_shot","fusker"}
+				sounds = {"pain_4","pain_1","hit_5","hit_6"}
+			else
+				cameffs = {"shell_shock","hit_front","hit_right","hit_back","hit_left","hit_front_left","hit_back_left","hit_front_right","hit_back_right"}
+				sounds = {"pain_2","pain_3","pain_5","pain_6","pain_7","pain_8"}
+			end
+			if not shott then
+				level.add_cam_effector("camera_effects\\"..cameffs[math.random(#cameffs)]..".anm",999,false,"")
+			end
+			local snd_obj = sound_object("actor\\"..sounds[math.random(#sounds)])
+			snd_obj:play(db.actor,0,sound_object.s2d)
+			if math.random() < (prev_health-db.actor.health)/2.5 then
+				local active_item = db.actor:active_item()
+				if active_item and not no_drop_items[active_item:section()] then
+					db.actor:drop_item(active_item)
+				end
+			end
+		end
+	end
+	prev_health = db.actor.health
+end
+
+local actor_last_health = 0
+local bloodtime = 0
+local bloodtimeb = 0
+local isbleeding = "no"
+local countblood = 0
+function blood()
+	if not blood_enable then
+		return
+	end
+	local hud = get_hud()
+	if db.actor:alive() and not ui_disabled then
+		local current_health = math.floor(db.actor.health*100)
+		local tg = time_global()
+		if tg > bloodtime then
+			if isbleeding == "stopit" then
+				if hud:GetCustomStatic("hud_blood"..countblood) then
+					hud:RemoveCustomStatic("hud_blood"..countblood)
+				end
+				countblood = countblood-1
+				if countblood == 0 then
+					isbleeding = "no"
+				end
+				bloodtime = time_global()+110
+			else
+				if actor_last_health ~= 0 and actor_last_health > current_health and db.actor.radiation < 0.12 then
+					if current_health < math.random(100) then
+						isbleeding = "yes"
+					end
+					level.add_pp_effector("bloody.ppe",2010,false)
+				end
+				if isbleeding == "yes" then
+					bloodtime = time_global()+math.random(500,2000)
+				else
+					bloodtime = time_global()+math.random(2000,5000)
+				end
+				actor_last_health = current_health
+			end
+		end			
+		if tg > bloodtimeb and isbleeding == "yes" then
+			bloodtimeb = time_global()+130
+			countblood = countblood+1
+			hud:AddCustomStatic("hud_blood"..countblood)
+			if countblood == 4 then
+				isbleeding = "stopit"
+			end
+		end
+	else
+		for i=1,4 do
+			if hud:GetCustomStatic("hud_blood"..i) then
+				hud:RemoveCustomStatic("hud_blood"..i)
+			end
+		end
+	end
+end
+
+local isactcondset = false
+local radeffect = false
+local ble1 = 0
+local ble2 = false
+function bleedcondition()
+	if not bleed_enable then
+		return
+	end
+	if db.actor.health < 0.31 and isactcondset ~= true then
+		level.add_pp_effector("alcohol.ppe",2012,true)
+		isactcondset = true
+	end
+	if db.actor.health > 0.30 and isactcondset ~= false then
+		level.remove_pp_effector(2012)
+		isactcondset = false
+	end
+	if db.actor.radiation > 0.3 and radeffect ~= true then
+		level.add_pp_effector("alcohol.ppe",2013,true)
+		radeffect = true
+	end
+	if db.actor.radiation == 0 and radeffect ~= false then
+		level.remove_pp_effector(2013)
+		radeffect = false
+	end
+	if db.actor.bleeding > 0.5 and db.actor.health < 0.4 and ble1 < time_global() then
+		level.add_pp_effector("deimos1.ppe",2014,false)
+		ble1 = time_global()+math.random(4000,10000)
+	end
+	if db.actor.bleeding > 0.4 and db.actor.power < 0.35 and ble2 ~= true then
+		level.add_cam_effector("camera_effects\\pripyat_horror.anm",1001,false,"")
+		level.add_pp_effector("snd_shock.ppe",2015,true)
+		ble2 = true
+	end
+	if db.actor.bleeding < 0.2 or db.actor.power > 0.7 and ble2 ~= false then
+		level.remove_pp_effector(2015)
+		ble2 = false
+	end
+end
+
+function clear_hud()
+	setmysuithud(false,false)
+end

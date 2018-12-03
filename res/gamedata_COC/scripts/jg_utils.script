@@ -1,0 +1,136 @@
+--------------------------------------------------
+--** Утилитарные функции
+--** Автор - SadBlackFox
+--------------------------------------------------
+-- callstack()
+--------------------------------------------------
+
+function change_money(num, type)
+	if db.actor then
+		if type == "in" then
+			db.actor:give_money(num)
+		elseif type == "out" then
+			db.actor:give_money(-num)
+		end
+		news_manager.relocate_money(db.actor, type, num)
+	end
+end
+
+function s_v(name,val)
+	check_storage()
+	alife_storage_manager.get_state().jobs_guide[name] = val
+end
+
+function l_v(name,def)
+	check_storage()
+	return alife_storage_manager.get_state().jobs_guide[name] or def
+end
+
+function d_v(name)
+	local m_data = alife_storage_manager.get_state()
+	check_storage()
+	if m_data.jobs_guide[name] then
+		m_data.jobs_guide[name] = nil
+	end
+end
+
+function check_storage()
+	local m_data = alife_storage_manager.get_state()
+	m_data.jobs_guide = m_data.jobs_guide or {}
+end
+
+-- Для ассоциированных массивов. Для обычных использовать table.values(tbl)
+function copy_tbl(tbl)
+	local tbl2 = {}
+	for k, v in pairs(tbl) do
+		tbl2[k] = v
+	end
+	return tbl2
+end
+
+function is_not_quest_npc(se_obj)
+	if (se_obj and IsStalker(nil,se_obj:clsid()) and se_obj:alive() and string.find(se_obj:section_name(),"sim_default") and get_object_story_id(i) == nil) and (se_obj.group_id == nil or se_obj.group_id == 65535 or get_object_story_id(se_obj.group_id) == nil) then
+		return true
+	end
+end
+
+function is_not_enemy(actor,npc)
+	local npc = dialogs.who_is_npc(actor,npc)
+	local squad = get_object_squad(npc)
+	if not (squad) then
+		return false
+	end
+	return not (npc:relation(db.actor) == game_object.enemy)
+end
+--[[
+function squad_switcher(npc_id,func,param2,param3)
+	local flag_off_on
+	local snpc = alife():object(npc_id)
+	local squad = get_object_squad(snpc)
+	if not squad then return log('СКВАД НЕ СУЩЕСТВУЕТ ИЛИ МЁРТВ!!!') end
+	if not squad.online then
+		alife():set_switch_offline (squad.id, false)
+		alife():set_switch_online (squad.id, true) -- Вывести онлайн (вернее поставить флаги для вывода)
+		flag_off_on = "OFF"
+		log('Первоначально: '..flag_off_on)
+	else
+		flag_off_on = "ON"
+		log('Первоначально: '..flag_off_on)
+	end
+	local wait_online = function()
+							if squad.online then
+								return true
+							end
+						end 
+	local do_online = 	function()
+							log('Сквад в онлайне')
+							--------
+							-- Действия с онлайн объектом
+							log('check flag= '..flag_off_on)
+							func(npc_id,param2,param3)
+							--------
+							if flag_off_on == "OFF" then
+								alife():set_switch_offline (squad.id, true) -- Вернуть в оффлайн
+								alife():set_switch_online (squad.id, true)
+								log('Возвращаем в оффлайн')
+							else
+								log('Возвращение в оффлайн не требуется')
+							end
+						end
+	level.add_call( wait_online, do_online )
+end
+
+function npc_switcher(npc_id,func,param2,param3)
+	local flag_off_on
+	local snpc = alife():object(npc_id)
+	if not snpc:alive() then return log('НПС НЕ СУЩЕСТВУЕТ ИЛИ МЁРТВ!!!') end
+	if not snpc.online then
+		snpc:switch_online() -- Вывести онлайн (вернее поставить флаги для вывода)
+		flag_off_on = "OFF"
+		log('Первоначально: '..flag_off_on)
+	else
+		flag_off_on = "ON"
+		log('Первоначально: '..flag_off_on)
+	end
+	local wait_online = function()
+							if snpc.online then
+								return true
+							end
+						end 
+	local do_online = 	function()
+							log('НПС в онлайне')
+							--------
+							-- Действия с онлайн объектом
+							log('check flag= '..flag_off_on)
+							func(npc_id,param2,param3)
+							--------
+							if flag_off_on == "OFF" then
+								snpc:switch_offline() -- Вернуть в оффлайн
+								log('Возвращаем в оффлайн')
+							else
+								log('Возвращение в оффлайн не требуется')
+							end
+						end
+	level.add_call( wait_online, do_online )
+end
+]]

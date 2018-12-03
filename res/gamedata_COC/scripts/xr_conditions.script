@@ -1,3 +1,95 @@
+--mlr
+function is_night_special_pole(actor, npc)
+	return db.actor ~= nil and (level.get_time_hours() >= 24 or level.get_time_hours() < 01)
+end
+
+function if_actor_legend(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "legend")
+end
+
+function if_actor_master(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "master")
+end
+
+function if_actor_expert(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "expert")
+end
+
+function if_actor_veteran(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "veteran")
+end
+
+function if_actor_professional(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "professional")
+end
+
+function if_actor_experienced(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "experienced")
+end
+
+function job_guide_main_task_friends_dead()
+	local squad_id = jg_guider.curr_guid.squad_id
+	local squad = squad_id and alife_object(squad_id)
+	if squad and squad:npc_count() > 0 then
+		return false
+	elseif squad and squad:npc_count() > 1 then
+		return false	
+	elseif squad and squad:npc_count() > 2 then
+		return false	
+	elseif squad and squad:npc_count() > 3 then
+		return false	
+	elseif squad and squad:npc_count() > 4 then
+		return false	
+	elseif squad and squad:npc_count() > 5 then
+		return false	
+	elseif squad and squad:npc_count() > 6 then
+		return false	
+	elseif squad and squad:npc_count() > 7 then
+		return false			
+	else
+		return true
+	end	
+end
+
+function request_to_escort_task(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "professional" or rank == "veteran" or rank == "expert" or rank == "master" or rank == "legend")
+end
+
+function if_actor_great(actor, npc)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "veteran" or rank == "expert" or rank == "master" or rank == "legend")
+end
+
+function if_actor_powerful(actor, npc)
+	return ((actor:character_reputation()) >= 999)
+end
+
+function if_actor_not_powerful(actor, npc)
+	return ((actor:character_reputation()) <= 999)
+end
+--mlr
+
+
+--g0dl1ke
+function if_hip_veteran(actor, npc)
+	local rank = ranks.get_obj_rank_name(npc)
+	return (rank == "veteran" or rank == "expert" or rank == "master" or rank == "legend")
+end
+
+function request_to_hip_task(actor)
+	local rank = ranks.get_obj_rank_name(actor)
+	return (rank == "experienced" or rank == "professional" or rank == "veteran" or rank == "expert" or rank == "master" or rank == "legend")
+end
+
+--g0dl1ke
+
 --[[
 	modified by Alundaio (original: ???? GSC)
 -]]
@@ -1682,6 +1774,10 @@ end
 
 function is_monster_controller(actor, npc)
 	return npc:clsid() == clsid.controller_s
+end
+
+function is_monster_oasis(actor, npc)
+	return npc:clsid() == clsid.oasis_s
 end
 
 function is_monster_flesh(actor, npc)

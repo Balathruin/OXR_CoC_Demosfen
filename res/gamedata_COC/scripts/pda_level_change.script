@@ -1,0 +1,107 @@
+------------------------------------------
+-- PDA Level Change (CoC 1.4.22 / 1.5 R6)
+-- scriptversion 6
+-- author: sLoPpYdOtBiGhOlE
+------------------------------------------
+local ini = ini_file("sr_teleport_sections.ltx")
+
+local function map_spot_menu_add_property(property_ui,id,level_name)
+	local se_obj = alife_object(id)
+	if not (se_obj) then
+		return
+	end
+	if (ini:section_exist(se_obj:name())) then
+		property_ui:AddItem("Переход с локации «"..game.translate_string(level_name).."»")
+		property_ui:AddItem(game.translate_string(ini:r_string_ex(se_obj:name(),"hint")))
+	end
+end
+
+local function spot_dir(sr_name)
+	local spot = ini:r_string_ex(sr_name,"spot")
+	local dir = 0
+	if (spot == "level_changer_up") then
+		dir = 3.1
+	elseif (spot == "level_changer_up_right") then
+		dir = -2.2
+	elseif (spot == "level_changer_right") then
+		dir = -1.6
+	elseif (spot == "level_changer_right_down") then
+		dir = -0.7
+	elseif (spot == "level_changer_down_left") then
+		dir = 0.7
+	elseif (spot == "level_changer_left") then
+		dir = 1.6
+	elseif (spot == "level_changer_left_up") then
+		dir = 2.2
+	end
+	return dir
+end
+
+local function map_spot_menu_property_clicked(property_ui,id,level_name,prop)
+	local se_obj = alife_object(id)
+	if not (se_obj) then
+		return
+	end
+	if not (ini:section_exist(se_obj:name())) then
+		return
+	end
+	local path,point,pos,lvid,gvid,dir, ln
+	if (prop == "Переход с локации «"..game.translate_string(level_name).."»") then
+		path = ini:r_string_ex(se_obj:name(),"reject_path")
+		lvid = se_obj.m_level_vertex_id
+		gvid = se_obj.m_game_vertex_id
+		dir = spot_dir(se_obj:name())
+		ln = level_name
+	elseif (prop == (game.translate_string("plc_travel").." "..game.translate_string(ini:r_string_ex(se_obj:name(),"hint")))) then
+		local pini = ini_file("plugins\\pda_level_change.ltx")
+		local to_name = pini:r_string_ex("sr_to_name",se_obj:name())
+		if (to_name and to_name ~= "") then
+			local sim = alife()
+			for i=1,65534 do
+				local sr = sim:object(i)
+				if (sr and sr:name() == to_name) then
+					path = ini:r_string_ex(to_name,"reject_path")
+					lvid = sr.m_level_vertex_id
+					gvid = sr.m_game_vertex_id
+					dir = spot_dir(to_name)
+					ln = alife():level_name(sr and game_graph():vertex(gvid):level_id())
+					break
+				end
+			end
+		else
+			local data
+			if (string.find(GAME_VERSION,"1.5")) then
+				data = pini:r_string_ex(se_obj:name(),"data_15")
+			elseif (string.find(GAME_VERSION,"1.4")) then
+				data = pini:r_string_ex(se_obj:name(),"data_14")
+			end
+			if not (data) then
+				return
+			end
+			local p = alun_utils.str_explode(data,",")
+			pos = vector():set(tonumber(p[1]),tonumber(p[2]),tonumber(p[3]))
+			lvid = tonumber(p[4])
+			gvid = tonumber(p[5])
+			dir = tonumber(p[6])
+			ln = p[7]
+		end
+	else
+		return
+	end
+	point = path and patrol(path)
+	if not (pos or point) then
+		return
+	end
+	if (ln == level.name()) then
+		db.actor:set_actor_position(pos or point and point:point(0))
+		db.actor:set_actor_direction(dir)
+		get_hud():HidePdaMenu()
+	else
+		ChangeLevel(pos or point and point:point(0),lvid,gvid,vector():set(0,-dir,0))
+	end
+end
+
+function on_game_start()
+	RegisterScriptCallback("map_spot_menu_add_property",map_spot_menu_add_property)
+	RegisterScriptCallback("map_spot_menu_property_clicked",map_spot_menu_property_clicked)
+end

@@ -1,3 +1,322 @@
+--mlr
+function task_targets_mlr_all(task_id,field,p,tsk)
+	if (field == "target") and (task_id == "job_guide_main_task") then
+	if (tsk.stage == 1) then
+		return jg_guider.curr_guid.squad_id
+	end		
+		return jg_guider.curr_guid.id_smart
+	end
+	if (field == "target") and (task_id == "dasc_trade_mlr_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["esc_smart_terrain_11_2"]
+		local target_id = db.actor and utils.load_var(db.actor,"esc_smart_terrain_11_2_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end		
+	if (field == "target") and (task_id == "baraholka_trader_task_1") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["yan_smart_terrain_6_4"]
+		local target_id = db.actor and utils.load_var(db.actor,"yan_smart_terrain_6_4_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end
+	if (field == "target") and (task_id == "esc_factory_smart_terrain_10_bandit_trader_task_1") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["esc_smart_terrain_5_7"]
+		local target_id = db.actor and utils.load_var(db.actor,"esc_smart_terrain_5_7_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end
+	if (field == "target") and (task_id == "gar_smart_terrain_5_4_main_dolg_soldier_task_1") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["gar_smart_terrain_4_2"]
+		local target_id = db.actor and utils.load_var(db.actor,"gar_smart_terrain_4_2_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end
+	if (field == "target") and (task_id == "pri_monolith_teacher_mlr_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["pri_smart_neutral_stalker1"]
+		local target_id = db.actor and utils.load_var(db.actor,"pri_smart_neutral_stalker1_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end
+	if (field == "target") and (task_id == "mil_freedom_barman_mlr_task_1") then
+		if (tsk.stage == 2) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["mil_smart_terrain_4_3"]
+		local target_id = db.actor and utils.load_var(db.actor,"mil_smart_terrain_4_3_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end		
+	if (field == "target") and (task_id == "zat_b7_bandit_boss_sultan_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["gar_smart_terrain_3_5"]
+		local target_id = db.actor and utils.load_var(db.actor,"gar_smart_terrain_3_5_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end		
+	if (field == "target") and (task_id == "zat_b7_bandit_boss_sultan_task_2") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["val_smart_terrain_4_0"]
+		local target_id = db.actor and utils.load_var(db.actor,"val_smart_terrain_4_0_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end			
+	if (task_id == "esc_m_trader_task_6") then
+		local squad = get_story_squad("stalker_companion_task_mlr_1")
+		if not (squad) then 
+			return false
+		elseif (squad and squad.dist_to_actor and squad.dist_to_actor > 60) then
+			return squad.id	
+		end
+	
+		local id = squad:commander_id()
+		local npc = db.storage[id] and db.storage[id].object
+		if not (npc) then 
+			return false
+		end
+	
+		local total_loot_count = 0
+		for k in squad:squad_members() do
+			local npc = db.storage[k.id] and db.storage[k.id].object
+			if (npc) then 
+				total_loot_count = total_loot_count + (utils.load_var(npc,"s_loot_count") or 0)
+			end
+		end
+	
+		if (total_loot_count >= 5) then 
+			return squad.id
+		end
+	end
+	if (field == "target") and (task_id == "mil_smart_terrain_7_7_freedom_leader_stalker_task_6") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["mil_smart_terrain_7_4"]
+		local target_id = db.actor and utils.load_var(db.actor,"mil_smart_terrain_7_4_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (field == "target") and (task_id == "border_freedom_keeper_max_task_1") then
+		if (tsk.stage == 3) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["mil_smart_terrain_3_8"]
+		local target_id = db.actor and utils.load_var(db.actor,"mil_smart_terrain_3_8_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end		
+	if (field == "target") and (task_id == "esc_3_16_military_trader_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["esc_smart_terrain_4_11"]
+		local target_id = db.actor and utils.load_var(db.actor,"esc_smart_terrain_4_11_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end		
+	if (field == "target") and (task_id == "bar_visitors_sad_veteran_task_1") then
+		if (tsk.stage == 2) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["trc_sim_10"]
+		local target_id = db.actor and utils.load_var(db.actor,"trc_sim_10_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (field == "target") and (task_id == "hunter_gar_trader_task_4") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["gar_smart_terrain_5_5"]
+		local target_id = db.actor and utils.load_var(db.actor,"gar_smart_terrain_5_5_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (field == "target") then
+		if (task_id == "yan_stalker_sakharov_task_7") or (task_id == "jup_b6_scientist_nuclear_physicist_task_2") then
+			if (tsk.stage == 1) then
+				return tsk.task_giver_id
+			end
+
+			local smart = SIMBOARD.smarts_by_names["red_smart_terrain_6_3"]
+			local target_id = db.actor and utils.load_var(db.actor,"red_smart_terrain_6_3_target_id")
+			local se_target = target_id and alife_object(target_id)
+
+			if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+				return target_id
+			end
+
+			return smart and smart.id or nil
+		end
+	end	
+	if (field == "target") and (task_id == "hunter_gar_trader_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["gar_smart_terrain_3_7"]
+		local target_id = db.actor and utils.load_var(db.actor,"gar_smart_terrain_3_7_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (field == "target") and (task_id == "mar_smart_terrain_base_stalker_leader_marsh_task_1") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["mar_smart_terrain_3_3"]
+		local target_id = db.actor and utils.load_var(db.actor,"mar_smart_terrain_3_3_target_id")
+		local se_target = target_id and alife_object(target_id)
+
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (field == "target") and (task_id == "mar_smart_terrain_base_stalker_leader_marsh_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["mar_smart_terrain_doc_2"]
+		local target_id = db.actor and utils.load_var(db.actor,"mar_smart_terrain_doc_2_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end
+	if (field == "target") and (task_id == "zat_b18_noah_task_2") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["zat_b28"]
+		local target_id = db.actor and utils.load_var(db.actor,"zat_b28_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (field == "target") and (task_id == "merc_pri_a16_tesak_mlr_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["pri_b304_monsters_smart_terrain"]
+		local target_id = db.actor and utils.load_var(db.actor,"pri_b304_monsters_smart_terrain_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end	
+	if (task_id == "yan_stalker_sakharov_task_6") then
+		local squad = get_story_squad("ecolog_companion_task_mlr_1")
+		if (db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50) then
+			return squad.id
+		end
+		local n = db.actor and utils.load_var(db.actor,"task_target_anomaly")
+		if (n) then
+			local anomaly = db.anomaly_by_name[n]
+			if (anomaly and anomaly.object) then
+				return anomaly.object:id()
+			end
+		else
+			local smart = SIMBOARD.smarts_by_names["yan_smart_terrain_6_4"]
+			if (smart) then
+				return smart.id
+			end
+		end
+	end
+	if (task_id == "hunter_gar_trader_task_5") then
+		local squad = get_story_squad("ecolog_companion_task_mlr_2")
+		if (db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50) then
+			return squad.id
+		end
+		local n = db.actor and utils.load_var(db.actor,"task_target_anomaly")
+		if (n) then
+			local anomaly = db.anomaly_by_name[n]
+			if (anomaly and anomaly.object) then
+				return anomaly.object:id()
+			end
+		else
+			local smart = SIMBOARD.smarts_by_names["gar_smart_terrain_3_5"]
+			if (smart) then
+				return smart.id
+			end
+		end
+	end		
+	if (field == "target") and (task_id == "esc_2_12_stalker_fanat_task_3") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+		local smart = SIMBOARD.smarts_by_names["esc_smart_terrain_7_11"]
+		local target_id = db.actor and utils.load_var(db.actor,"esc_smart_terrain_7_11_target_id")
+		local se_target = target_id and alife_object(target_id)
+		if (se_target and smart.position:distance_to_sqr(se_target.position) > 2500) then
+			return target_id
+		end
+		return smart and smart.id or nil
+	end		
+end
+--mlr
+
 --'*************************************************************************************
 --' Функторы тайтла и описания квеста (должны возвращать строку)
 --'*************************************************************************************
@@ -249,6 +568,189 @@ function val_smart_terrain_7_4_bandit_trader_stalker_task_target(task_id,field,p
 		local squad = get_story_squad("bandit_companion_task_1")
 		if (squad and squad.dist_to_actor and squad.dist_to_actor > 60) then
 			return squad.id
+		end
+	end
+end
+
+function agr_smart_terrain_1_6_army_trader_stalker_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "agr_smart_terrain_1_6_army_trader_stalker_task_4") then 
+		local squad = get_story_squad("army_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function mil_smart_terrain_7_7_freedom_leader_stalker_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "mil_smart_terrain_7_7_freedom_leader_stalker_task_6") then 
+		local squad = get_story_squad("freedom_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function bar_dolg_general_petrenko_stalker_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "bar_dolg_general_petrenko_stalker_task_4") then 
+		local squad = get_story_squad("dolg_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function bar_dolg_general_petrenko_stalker_task_target_1(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "bar_dolg_general_petrenko_stalker_task_9") then 
+		local squad = get_story_squad("dolg_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+
+function cit_killers_merc_trader_stalker_task_target(task_id,field,p,task)
+	if not (db.actor) then
+		return 
+	end
+	
+	if (task_id == "cit_killers_merc_trader_stalker_task_3") then 
+		local squad = get_story_squad("killer_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function esc_2_12_stalker_wolf_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "esc_2_12_stalker_wolf_task_2") then 
+		local squad = get_story_squad("stalker_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function zat_a2_stalker_barmen_task_9_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "zat_a2_stalker_barmen_task_9") then 
+		local squad = get_story_squad("stalker_companion_task_2")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function mar_base_stalker_barmen_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "mar_base_stalker_barmen_task_4") then 
+		local squad = get_story_squad("csky_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+function pri_monolith_monolith_trader_stalker_task_target(task_id,field,p,task)
+	if not (db.actor) then 
+		return 
+	end
+	
+	if (task_id == "pri_monolith_monolith_trader_stalker_task_7") then 
+		local squad = get_story_squad("monolith_companion_task_1")
+		if (squad and squad.dist_to_actor and squad.dist_to_actor > 50) then 
+			return squad.id
+		end
+	end
+end
+
+
+function yan_stalker_sakharov_task_target(task_id,field,p)
+	if (task_id == "yan_stalker_sakharov_task_2") then
+		local squad = get_story_squad("ecolog_companion_task_3")
+		if (db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50) then
+			return squad.id
+		end
+		local n = db.actor and alun_utils.load_var(db.actor,"task_target_anomaly")
+		if (n) then
+			local anomaly = db.anomaly_by_name[n]
+			if (anomaly and anomaly.object) then
+				return anomaly.object:id()
+			end
+		else
+			local smart = SIMBOARD.smarts_by_names["yan_smart_terrain_6_4"]
+			if (smart) then
+				return smart.id
+			end
+		end
+	end
+end
+
+function yan_stalker_sakharov_task_target_1(task_id,field,p)
+	if (task_id == "yan_stalker_sakharov_task_9") then
+		local squad = get_story_squad("ecolog_companion_task_3")
+		if (db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50) then
+			return squad.id
+		end
+		local n = db.actor and alun_utils.load_var(db.actor,"task_target_anomaly")
+		if (n) then
+			local anomaly = db.anomaly_by_name[n]
+			if (anomaly and anomaly.object) then
+				return anomaly.object:id()
+			end
+		else
+			local smart = SIMBOARD.smarts_by_names["yan_smart_terrain_6_4"]
+			if (smart) then
+				return smart.id
+			end
+		end
+	end
+end
+
+
+function zat_a2_stalker_barmen_task_10_target(task_id,field,p)
+	if (task_id == "zat_a2_stalker_barmen_task_10") then
+		local squad = get_story_squad("stalker_companion_task_3")
+		if (db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50) then
+			return squad.id
+		end
+		local n = db.actor and alun_utils.load_var(db.actor,"task_target_anomaly")
+		if (n) then
+			local anomaly = db.anomaly_by_name[n]
+			if (anomaly and anomaly.object) then
+				return anomaly.object:id()
+			end
+		else
+			local smart = SIMBOARD.smarts_by_names["zat_stalker_base_smart"]
+			if (smart) then
+				return smart.id
+			end
 		end
 	end
 end

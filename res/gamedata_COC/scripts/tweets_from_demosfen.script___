@@ -1,0 +1,58 @@
+--Tweets from Demosfen
+-------------------------------------
+local ffi
+local tweetsPlugin
+
+function on_game_start()
+	RegisterScriptCallback("on_game_load",on_game_load)
+end
+
+function on_game_load()
+	ffi = require("ffi")
+	tweetsPlugin = ffi.load("twitter")
+	ffi.cdef[[
+	int    getStatus();
+	int    getNumOfTweets();
+	char*  getTweet(int newsOrder);
+	void   startDownloading();
+	]]
+	tweetsPlugin.startDownloading();
+	CreateTimeEvent("tweetsFromDemosfen","updateTime",120,update) --Загрузилась карта. Надо через 120 секунд проверить обновления
+	if(alife_storage_manager.get_state().addon_tweets_from_demosfen_last==nil) then
+		alife_storage_manager.get_state().addon_tweets_from_demosfen_last="NONE";
+	end
+		
+end
+
+function update()
+	local status = tweetsPlugin.getStatus()
+	if(status==0) then     
+		set_timer(5)       -- Плагин еще грузит твиты. Надо через 5 секунд проверить снова
+	elseif(status==1) then 
+		local lastKnownTweetPos
+		for i=0,tweetsPlugin.getNumOfTweets() do --Плагин твиты загрузил. Но надо проверить, с какого твита начинаются те, которые еще не показывали ранее
+			lastKnownTweetPos=i
+			if(ffi.string(tweetsPlugin.getTweet(i))==alife_storage_manager.get_state().addon_tweets_from_demosfen_last) then
+				break
+			elseif(lastKnownTweetPos==tweetsPlugin.getNumOfTweets()) then
+				lastKnownTweetPos=lastKnownTweetPos + 1
+				break
+			end
+		end
+		for i=lastKnownTweetPos-1,1,-1 do  --Показываем все твиты начиная(но не включительно) с того последнего твита, который ранее был показан
+			news_manager.send_tip(db.actor, "%c[250, 255, 255, 0]".."Твиты от Demosfena: ".."%c[250, 0, 255, 0]"..ffi.string(tweetsPlugin.getTweet(i)), nil, "tourist", nil, nil)
+		end
+		alife_storage_manager.get_state().addon_tweets_from_demosfen_last=ffi.string(tweetsPlugin.getTweet(1))
+		tweetsPlugin.startDownloading();
+		set_timer(1000)  --Через 1000 секунд проверим обновления снова
+	elseif(status==2) then 
+			news_manager.send_tip(db.actor, "%c[250, 255, 255, 0]".."Твиты от Demosfena: ".."%c[250, 255, 0, 0]".."Ошибка подключения к источнику, повторная попытка будет произведена позже", nil, "tourist", nil, nil)
+			tweetsPlugin.startDownloading()
+			set_timer(2000) --Какая-то ошибка случилась. Через 2000 секунд попробуем еще раз
+	end
+
+end
+
+function set_timer(delay)
+	ResetTimeEvent("tweetsFromDemosfen","updateTime",delay)
+end

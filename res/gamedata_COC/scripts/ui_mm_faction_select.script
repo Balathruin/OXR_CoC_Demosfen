@@ -69,7 +69,7 @@ local function on_game_load(binder)
 		need_save = true
 		
 		new_character_name = new_character_name:gsub("_"," ")
-		
+
 		se_actor:set_character_name(new_character_name)
 	end
 	
@@ -90,7 +90,7 @@ local function on_game_load(binder)
 	
 	-- NEW FACTION
 	local faction = config:r_value("character_creation","new_game_faction",3) or ""
-	
+
 	if (faction and faction ~= "") then
 		config:w_value("character_creation","new_game_faction")
 		need_save = true
@@ -183,6 +183,11 @@ local function on_game_load(binder)
 		if (money_max) then
 			db.actor:give_money(-db.actor:money()+money_max)
 		end 
+		-- mlr
+		if not mlr_utils.load_var('transitions_faction') then
+			mlr_utils.save_var('transitions_faction', faction)
+		end
+		-- mlr
 	end
 	
 	-- Loading economy values from save file
@@ -337,7 +342,7 @@ function faction_ui:InitControls(f)
 	self.character_name = xml:InitEditBox("main_dialog:input_character_name",self.dialog)
 	self:Register(self.character_name,"input_character_name")
 	-- Set Default Name
-	self.character_name:SetText(game.translate_string("pri_b305_strelok_name"))
+	self.character_name:SetText(game.translate_string("no_name_name"))
 	
 	-- Faction select menu
 	xml:InitStatic("main_dialog:cap_faction_name", self.dialog)
@@ -358,7 +363,7 @@ function faction_ui:InitControls(f)
 	-- Icon
 	self.char_icon_base = xml:InitStatic("main_dialog:description:templ_item",nil)
 	self.char_icon = xml:InitStatic("main_dialog:description:char_icon",self.char_icon_base)
-	self.char_icon:InitTexture("ui_inGame2_Strelok")
+	self.char_icon:InitTexture("no_data_anim")
 	self.scroll_v:AddWindow(self.char_icon_base, true)
 	self.char_icon_base:SetAutoDelete(false)
 	
@@ -555,7 +560,7 @@ end
 
 function faction_ui:load_icon_list()
 	local ini = ini_file("plugins\\player_portraits.ltx")
-	local def_icon = "ui_inGame2_Strelok"
+	local def_icon = "no_data_anim"
 	
 	self.icon_list:ClearList()
 	self.icon_list:AddItem(def_icon, 1)

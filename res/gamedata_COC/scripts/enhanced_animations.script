@@ -1,0 +1,365 @@
+local active_slot,anims,item_tbl,start_time,time_to_relax,keep_helm,ini,use_snd,act_anm_id,chrg
+feature_is_active, parts = nil, nil
+
+function activate()
+	if item_animations.feature_is_active then
+		return
+	end
+	if (feature_is_active) then
+		return
+	end
+	feature_is_active = true
+	item_tbl = {bread = {snd = "interface\\inv_nosound", anm = "anm_bread",tm = 2300},
+				-- conserva = {snd = "interface\\inv_nosound", anm = "anm_conserva",tm = 5000},
+				conserva = {snd = "interface\\inv_nosound", anm = "anm_tushka",tm = 7000},
+				kolbasa = {snd = "interface\\inv_nosound", anm = "anm_kolbasa",tm = 3000},
+				energy_drink = {snd = "interface\\inv_nosound", anm = "anm_energy_drink",tm = 3500},
+				vodka = {snd = "interface\\inv_nosound", anm = "anm_vodka",tm = 4000},
+				antirad = {snd = "interface\\inv_nosound", anm = "anm_antirad",tm = 3800, helm = true},
+
+				mutant_part_general_meat = {snd = "interface\\inv_nosound", anm = "anm_monster1",tm = 2500},
+				mutant_part_flesh_meat = {snd = "interface\\inv_nosound", anm = "anm_monster2",tm = 2500},
+				mutant_part_boar_chop = {snd = "interface\\inv_nosound", anm = "anm_monster3",tm = 2500},
+				mutant_part_dog_meat = {snd = "interface\\inv_nosound", anm = "anm_monster4",tm = 2500},
+				mutant_part_psevdodog_meat = {snd = "interface\\inv_nosound", anm = "anm_monster5",tm = 2500},
+				mutant_part_krovosos_meat = {snd = "interface\\inv_nosound", anm = "anm_monster6",tm = 2500},
+				mutant_part_chimera_meat = {snd = "interface\\inv_nosound", anm = "anm_monster7",tm = 2500},
+				mutant_part_tushkano_meat = {snd = "interface\\inv_nosound", anm = "anm_monster8",tm = 2500},
+				nuts = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				sardina = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				olivki = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				cheese = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				galet = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				shokolad = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				batonchik = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				jerky = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				chips = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				hash = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				cpcb = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				beer = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				juice = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				wild_drink = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				psy_complex = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				bio_bandage = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500, helm = true},
+				drug_engine = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				drug_cat_eye = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				medo = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				mbk = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 2500},
+				medkit_elite = {snd = "interface\\inv_nosound", anm = "anm_medkit_elite",tm = 4000, helm = true},
+				bag_medkit_1 = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 4000, helm = true},
+				bag_medkit_2 = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 4000, helm = true},
+				bag_medkit_3 = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 4000, helm = true},
+				bag_medkit_4 = {snd = "interface\\inv_nosound", anm = "anm_voda",tm = 4000, helm = true},
+				drug_booster = {snd = "interface\\inv_nosound", anm = "anm_drug_booster",tm = 2500},
+				drug_antidot = {snd = "interface\\inv_nosound", anm = "anm_drugs",tm = 2500},
+				drug_coagulant = {snd = "interface\\inv_nosound", anm = "anm_drugs",tm = 2500},
+				drug_psy_blockade = {snd = "interface\\inv_nosound", anm = "anm_drugs",tm = 2500},
+				drug_radioprotector = {snd = "interface\\inv_nosound", anm = "anm_drugs",tm = 2500},
+
+				medkit = {snd = "interface\\inv_nosound", anm = "anm_medkit",tm = 4000, helm = true},
+				medkit_army = {snd = "interface\\inv_nosound", anm = "anm_medkit_army",tm = 4000, helm = true},
+				medkit_scientic = {snd = "interface\\inv_nosound", anm = "anm_medkit_scientic",tm = 4000, helm = true},
+
+				bandage = {snd = "interface\\inv_nosound", anm = "anm_bandage",tm = 3500, helm = true},
+
+				["hit"] = {snd = "actor\\hit_7",anm = "anm_hit",tm = 6000, helm = true},
+				explosive_charge = {anm = "anm_explosive_charge"},
+				anm_explosive_control = {anm = "anm_explosive_control"}
+	}
+	ini = system_ini()
+	RegisterScriptCallback("save_state",save_state)
+	RegisterScriptCallback("actor_on_update",update)
+	RegisterScriptCallback("actor_on_item_use",use_item)
+	RegisterScriptCallback("actor_on_weapon_no_ammo",weapon_no_ammo)
+	RegisterScriptCallback("actor_on_hit_callback",on_hit)
+	RegisterScriptCallback("monster_on_actor_use_callback",monster_on_actor_use)
+	RegisterScriptCallback("on_level_changing",on_level_changing)
+end
+
+function deactivate()
+	if not (feature_is_active) then
+		return
+	end
+	feature_is_active = false
+	item_tbl = nil
+	anims = nil
+	active_slot = nil
+	start_time = nil
+	time_to_relax = nil
+	keep_helm = nil
+	ini = nil
+	use_snd = nil
+	act_anm_id = nil
+	chrg = nil
+--	parts = nil
+	UnregisterScriptCallback("save_state",save_state)
+	UnregisterScriptCallback("load_state",load_state)
+	UnregisterScriptCallback("actor_on_update",update)
+	UnregisterScriptCallback("actor_on_item_use",use_item)
+	UnregisterScriptCallback("actor_on_weapon_no_ammo",weapon_no_ammo)
+	UnregisterScriptCallback("actor_on_hit_callback",on_hit)
+	UnregisterScriptCallback("monster_on_actor_use_callback",monster_on_actor_use)
+	UnregisterScriptCallback("on_level_changing",on_level_changing)
+end
+
+function on_game_start()
+	if (axr_main.config:r_value("mm_options","consumable_animation",0,"none") ~= "full") then return end
+	local function actor_on_first_update()
+		if item_animations.feature_is_active then
+			item_animations.deactivate()
+		end
+		activate()
+	end
+--	RegisterScriptCallback("load_state",load_state)
+	RegisterScriptCallback("actor_on_first_update",actor_on_first_update)
+end
+
+function save_state(m_data)
+	m_data.explosives = chrg and table.size(chrg) > 0 and chrg or nil
+end
+
+function load_state(m_data)
+	chrg = m_data.explosives or chrg or {}
+end
+
+function on_level_changing()
+	if act_anm_id then
+		db.actor:activate_slot(active_slot or 0)
+		local se_anm_obj = alife_object(act_anm_id)
+		if (se_anm_obj) then
+			alife():release(se_anm_obj)
+		end
+		act_anm_id = nil
+	end
+end
+
+function use_item(obj,item)
+	local temp = item_tbl[item] and item_tbl[item].anm or ini:r_string_ex(item,"anim")
+	if temp and not anims then
+		if item_tbl[item].DisableUiInput then level.disable_input() end
+		local inventory = ActorMenu.get_actor_menu()
+		if (inventory and inventory:IsShown()) then
+			inventory:HideDialog()
+		end
+		temp = alun_utils.str_explode(temp,",")
+		anims = table.remove(temp)
+		active_slot = db.actor:active_slot() or 0
+		if db.actor_binder.weapon_hide == true then
+			db.actor:restore_weapon()
+		end
+		keep_helm = item_tbl[item].helm or ini:r_bool_ex(anims,"keep_helm") or false
+		keep_helm = keep_helm or mask_hud.keep_helm
+		if not keep_helm then item_animations.use_helmet(0) end
+		act_anm_id = alife():create(anims,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id()).id
+		use_snd = sound_object(item_tbl[item].snd or ini:r_string_ex(anims,"anim_sound") or ini:r_string_ex(item,"use_sound") or "interface\\inv_nosound")
+		use_snd:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
+		local tmr = (item_tbl[item].tm or ini:r_float_ex(anims,"anim_length")) or use_snd:length()
+		start_time = time_global() + tmr
+		anims = #temp > 0 and temp or anims
+	end
+end
+
+function monster_on_actor_use(obj,who)
+	local id = obj:id()
+--	if id == nil or parts == nil or parts[id] == nil then
+--		return
+--	end
+--	parts[id] = nil
+
+	local harvest = {
+		[clsid.bloodsucker_s]	= {"anm_harv1", "anm_harv2", "long"},
+		[clsid.boar_s]			= {"anm_harv1", "anm_harv2", "medium"},
+		[clsid.chimera_s]		= {"anm_harv1", "anm_harv2", "short"},
+		[clsid.dog_s]			= {"anm_harv1", "anm_harv2", "long"},
+		[clsid.flesh_s]			= {"anm_harv1", "anm_harv2", "medium"},
+		[clsid.psy_dog_s]		= {"anm_harv1", "anm_harv2", "long"},
+		[clsid.pseudodog_s]		= {"anm_harv1", "anm_harv2", "long"},
+		[clsid.tushkano_s]		= {"anm_harv1", "anm_harv5", "long"},
+
+		[clsid.burer_s]			= {"anm_harv1", "anm_harv4", "short"},
+		[clsid.gigant_s]		= {"anm_harv1", "anm_harv4", "short"},
+		[clsid.controller_s]	= {"anm_harv1", "anm_harv4", "long"},
+
+		[clsid.snork_s]			= {"anm_harv1", "anm_harv4", "long"},
+		[clsid.fracture_s]		= {"anm_harv1", "anm_harv4", "long"},
+		[clsid.cat_s]			= {"anm_harv1", "anm_harv4", "long"},
+		[clsid.zombie_s]		= {"anm_harv1", "anm_harv4", "long"},
+		[clsid.rat_s]			= {"anm_harv1", "anm_harv5", "long"}
+		}
+
+	local cls = obj and obj:clsid()
+	if not (cls and harvest[cls]) then
+		return
+	end
+
+	local m_ini = ini_file("plugins\\itms_manager.ltx")
+	if not (m_ini:r_bool_ex("mutant_loot_mod","enable",true)) then
+		return
+	end
+	local st = db.storage[id]
+	if st and st.death_time and game.get_game_time():diffSec(st.death_time) > (m_ini:r_float_ex("mutant_loot_mod","decay_time") or 7200) then
+		return
+	end
+
+	if not anims then
+		-- level.disable_input()
+		local temp = {}
+		for i = #harvest[cls]-1, 1, -1 do
+			table.insert(temp,harvest[cls][i])
+		end
+		anims = temp[#temp]
+		active_slot = db.actor:active_slot() or 0
+		if db.actor_binder.weapon_hide == true then
+			db.actor:restore_weapon()
+		end
+		keep_helm = true
+		level.add_cam_effector("camera_effects\\actor_move\\crouch_forward_"..harvest[cls][#harvest[cls]]..".anm",8010,false,"")
+		act_anm_id = alife():create(anims,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id()).id
+		use_snd = sound_object(ini:r_string_ex(anims,"anim_sound") or "interface\\inv_nosound")
+		use_snd:play(db.actor, 0, sound_object.s2d) --play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
+		local tmr = ini:r_float_ex(anims,"anim_length") or use_snd:length()
+		start_time = time_global() + tmr
+		anims = temp
+	end
+end
+--
+function on_hit()
+	if db.actor.health < 0.3 and not has_alife_info("gg_hit") and not anims then
+		active_slot = db.actor:active_slot() or 0
+		if db.actor_binder.weapon_hide == true then
+			db.actor:restore_weapon()
+		end
+		anims = "anm_hit"
+		keep_helm = true
+		act_anm_id = alife():create(anims,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id()).id
+		level.add_pp_effector("fire_hit.ppe", 2011, false)
+		if not mask_hud.feature_is_active then
+			level.add_cam_effector("camera_effects\\fusker.anm", 999, false, "")
+		end
+		db.actor:give_info_portion("gg_hit")
+		use_snd = sound_object(item_tbl["hit"].snd or ini:r_string_ex(anims,"anim_sound") or "interface\\inv_nosound")
+		use_snd:play(db.actor, 0, sound_object.s2d) --play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
+		local tmr = (item_tbl["hit"].tm or ini:r_float_ex(anims,"anim_length")) or use_snd:length()
+		start_time = time_global() + tmr
+	elseif db.actor.health >= 0.3 and has_alife_info("gg_hit") then
+		db.actor:disable_info_portion("gg_hit")
+	end
+end
+
+function update()
+--  printf("start = %s time_relax = %s anims = %s keep_helm = %s active_slot = %s",start_time,time_to_relax,anims,keep_helm,active_slot)
+	if not anims then return end
+	if use_snd and use_snd:playing() and (db.actor:active_slot() ~= 14) then
+		use_snd:stop()
+		use_snd = nil
+	end
+
+	local tg = time_global()
+
+	if not time_to_relax then
+		db.actor:activate_slot(14)
+		if not start_time or (start_time - tg <= 0) then
+			if type(anims) ~= "table" then
+				-- level.enable_input()
+				time_to_relax = tg + 1000
+				if anims == "anm_explosive_charge" then
+					time_to_relax = tg + 3500
+					create_explosive_on_level("remote_charge")
+					-- alife():release(alife_object(act_anm_id))
+				elseif anims == "anm_explosive_control" then
+					level.enable_input()
+					detonate_explosive(table.remove(chrg))
+					db.actor:active_item():switch_state(2)
+				else
+					level.enable_input()
+					db.actor:activate_slot(active_slot)
+					if db.actor_binder.weapon_hide == true then
+						db.actor:hide_weapon()
+					end
+				end
+			else
+				alife():release(alife_object(act_anm_id))
+				table.remove(anims)
+				act_anm_id = alife():create(anims[#anims],db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id()).id
+				use_snd = sound_object(ini:r_string_ex(anims[#anims],"anim_sound") or "interface\\inv_nosound")
+				use_snd:play(db.actor, 0, sound_object.s2d) --play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
+				local tmr = (ini:r_float_ex(anims[#anims],"anim_length")) or use_snd:length()
+				start_time = tg + tmr
+				anims = #anims > 1 and anims or anims[1]
+			end
+		end
+	elseif (time_to_relax - tg) <= 0 then
+		if (anims == "anm_explosive_charge") then
+			level.enable_input()
+ alife():create("anm_explosive_control",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+--          ActorMenu.get_actor_menu():ToSlot(db.actor:object("anm_explosive_control"),true,active_slot)
+		else
+			local se_anm_obj = alife_object(db.actor:object(anims):id())
+			if (se_anm_obj) then
+				alife():release(se_anm_obj)
+			end
+			if (anims == "anm_explosive_control") then
+				db.actor:activate_slot(active_slot)
+				if db.actor_binder.weapon_hide == true then
+					db.actor:hide_weapon()
+				end
+			end
+			if not keep_helm then item_animations.use_helmet(1) end
+		end
+		time_to_relax = nil
+		anims = nil
+		act_anm_id = nil
+		start_time = nil
+		keep_helm = nil
+	end
+end
+------------------------------------// explosives //----------------------------------------------
+function weapon_no_ammo(item)
+	sec = item:section()
+	active_slot = db.actor:active_slot() or 0
+	if sec == "explosive_charge" then
+		keep_helm = true
+		anims = item_tbl[sec].anm or "anm_"..sec
+		level.add_cam_effector("camera_effects\\actor_move\\go_down_4s.anm",8010,false,"")
+		db.actor:active_item():switch_state(2)
+		-- db.actor:active_item():play_hud_motion(anm_reload,false,3)
+		use_snd = sound_object(item_tbl[sec].snd or ini:r_string_ex(sec,"anim_sound") or ini:r_string_ex(sec,"use_sound") or "interface\\inv_nosound")
+		use_snd:play(db.actor, 0, sound_object.s2d)
+		local tmr = (item_tbl[sec].tm or ini:r_float_ex(sec,"anim_length")) or use_snd:length()
+		start_time = time_global() + tmr
+		level.disable_input()
+	elseif sec == "anm_explosive_control" then
+		keep_helm = true
+		anims = item_tbl[sec].anm or sec
+		db.actor:active_item():switch_state(7)
+		use_snd = sound_object(item_tbl[sec].snd or ini:r_string_ex(sec,"anim_sound") or ini:r_string_ex(sec,"use_sound") or "interface\\inv_nosound")
+		use_snd:play(db.actor, 0, sound_object.s2d)
+		local tmr = (item_tbl[sec].tm or ini:r_float_ex(sec,"anim_length")) or use_snd:length()
+		start_time = time_global() + tmr
+	end
+end
+
+function create_explosive_on_level(sec)
+	local actor_pos=db.actor:position()
+	actor_pos = vector():set(actor_pos.x,actor_pos.y-0.5,actor_pos.z+0.02)
+	-- local lv_id = db.actor:level_vertex_id()
+	local obj=alife():create(sec,actor_pos,db.actor:level_vertex_id(),db.actor:game_vertex_id())
+	-- local obj=alife():create(sec,level.vertex_position(lv_id),lv_id,db.actor:game_vertex_id())
+	if obj then
+		if not chrg then chrg = {} end
+		table.insert(chrg,obj.id)
+		level.map_add_object_spot(obj.id,"explo_location","charge"..math.floor(time_global()/1000))
+		local se_anm_obj = alife_object(db.actor:active_item():id())
+		if (se_anm_obj) then
+			alife():release(se_anm_obj)
+		end
+	end
+	return obj
+end
+
+function detonate_explosive(obj_id)
+	if obj_id and level.object_by_id(obj_id) then
+		level.object_by_id(obj_id):explode(0)
+		level.map_remove_object_spot(obj_id, "explo_location")
+	end
+end

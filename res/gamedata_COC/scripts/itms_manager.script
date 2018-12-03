@@ -30,6 +30,17 @@ local ini = ini_file("plugins\\itms_manager.ltx")
 	local MutantLootEnableUI = ini:r_bool_ex("mutant_loot_mod","enable_ui",false)
 	local MutantLootDecayTime = ini:r_float_ex("mutant_loot_mod","decay_time") or 7200
 
+	-- Cooking mod
+	local CookingModEnable = ini:r_bool_ex("cooking_mod","enable")
+	local CookingTools = CookingModEnable and alun_utils.collect_section(ini,"cooking_mod_tools",true)
+	
+	-- Campfire Cooking
+	local CampCookingTools = alun_utils.collect_section(ini,"camp_cooking_tool",true)
+	
+	-- Flashlight mod
+	local FlashlightModEnable = ini:r_bool_ex("flashlight_mod","enable",false)
+	local FlashlightSections = FlashlightModEnable and alun_utils.collect_section(ini,"flashlight_sections",true)
+
 -- Static Message
 ShowMessage = nil
 ShowMessageInit = nil
@@ -46,6 +57,27 @@ function on_game_start()
 	RegisterScriptCallback("CUIActorMenu_OnItemDropped",on_item_drag_dropped)
 	RegisterScriptCallback("CUIActorMenu_OnItemFocusReceive",on_item_focus)
 end
+
+function campfire_cook()
+	for i=1,65535 do
+		local zx = alife():object(i)
+		if zx then
+			local zn = level.object_by_id(zx.id)
+			if zn then
+				local cfm = zn:get_campfire()
+				if cfm and zn:position():distance_to(db.actor:position()) < 1.5 then
+					if (cfm:is_on()) then 
+						return true
+					else
+						return false
+					end
+					return false
+				end
+			end
+		end
+	end
+end
+
 
 function on_item_focus(itm)
 	local section = itm:section()
@@ -242,6 +274,32 @@ function actor_on_item_use(obj)
 	if (db.actor:has_info("actor_made_wish_for_riches")) then
 		return 
 	end
+---A.R.E.A.(Romann)
+	-- Next Use Items
+	local sys_ini = system_ini()
+	local sec = obj:section()
+	if (RepairModEnable and RepairTools[sec]) and (RepairUI) then
+
+	else
+		local uses = (sys_ini:r_bool_ex(sec,"use_condition",false) and obj:get_remaining_uses()) or 1
+		if (uses == 1) and (sys_ini:r_bool_ex(sec,"remove_after_use",true)) and sys_ini:line_exist(sec,"next_use_item") then
+			local next_items = alun_utils.parse_list(sys_ini,sec,"next_use_item")
+			if (#next_items > 0) then
+				local se_obj = alife_object(obj:id())
+				if (se_obj) then
+					alife():release(se_obj,true)
+				end
+				if next_items[#next_items] == "random" then
+					alife():create(next_items[math.random(#next_items-1)], db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+				else
+					for i=1, #next_items do
+						alife():create(next_items[i], db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+					end
+				end
+			end
+		end
+	end
+---A.R.E.A.(Romann)
 
 	-- Sleeping bag
 	if (SleepBagEnable and SleepBagSections[obj:section()]) then
@@ -281,11 +339,56 @@ function actor_on_item_use(obj)
 		end
 	end
 
+	-- Cooking mod
+	if (CookingModEnable and CookingTools[obj:section()]) then
+		local hud = get_hud()
+		hud:HideActorMenu()
+		local ui = ui_itm_cooking and ui_itm_cooking.cooking_ui(hud,obj:section())
+		if (ui) then
+			ui:ShowDialog(true)
+			ui:FillList()
+		end
+	end
+	
+	if (obj:section() == "army_bowler") then
+		if (CookingModEnable and CampCookingTools[obj:section()] and campfire_cook()) then
+			local hud = get_hud()
+			--hud:HideActorMenu()
+			local ui = ui_itm_camp_cooking and ui_itm_camp_cooking.cooking_ui(hud,obj:section())
+			if (ui) then
+				ui:ShowDialog(true)	
+				ui:FillPartsList()
+			end
+		else
+			alife():create("army_bowler",db.actor:position(),0,0,0)
+			local text = game.translate_string("st_cfm")
+			SetHudMsg(text,3)
+		end
+	end
+
+	-- Dummy Torch for Flashlight
+	if (FlashlightModEnable and obj:section() == "device_torch_dummy") then
+		local torch = db.actor:object("device_torch")
+		if not (has_alife_info("enable_device_torch")) then
+			give_info("enable_device_torch")
+			if not (torch) then
+				alife():create("device_torch",db.actor:position(),0,0,0)
+			end
+			SetHudMsg(game.translate_string("st_lamp_equipped"),4)
+		end
+	end
+	
 	-- Deployable mgun
 	if (obj:section() == "itm_deployable_mgun") then
 		local pos = vector():set(device().cam_pos)
 		pos:add( vector():set(device().cam_dir):mul(3) )
 		alife():create("deployable_mgun",pos,level.vertex_id(pos),db.actor:game_vertex_id())
+	end
+	
+	-- Geiger
+	if (obj:section() == "geiger_dead") then
+		local text = game.translate_string("st_rad_level")..": "..math.floor(db.actor.radiation*10000*0.387).." "..game.translate_string("st_msv")
+		SetHudMsg(text,3)
 	end
 end
 
@@ -300,7 +403,21 @@ function actor_on_item_take_from_box(box,obj)
 	end
 
 	-- Backpack section
-	if (BackPackStashEnable and box:section() == "inv_backpack") then
+-------------------------------sinaps start
+		local backpacks = {
+		["inv_backpack"] = "equ_backpack",
+		["inv_backpack_small"]    = "equ_small_pack",
+		["inv_backpack_military"] = "equ_military_pack",
+		["inv_backpack_tourist"]  = "equ_tourist_pack",
+		["inv_backpack_dolg"]     = "equ_dolg_pack",
+		["inv_backpack_free"]     = "equ_free_pack",
+		["inv_backpack_csky"]     = "equ_csky_pack",
+		["inv_backpack_merc"]     = "equ_merc_pack",
+		}
+
+	local sec = backpacks[box:section()]
+	if (BackPackStashEnable and sec) then
+-------------------------------sinaps end
 		if (box:is_inv_box_empty()) then
 			local hud = get_hud()
 			if (hud) then
@@ -308,8 +425,9 @@ function actor_on_item_take_from_box(box,obj)
 			end
 
 			level.map_remove_object_spot(box:id(), BackPackStashSpot)
-			alife():create("itm_backpack",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
-
+-------------------------------sinaps start
+			alife():create(sec,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),db.actor:id())
+-------------------------------sinaps end
 			alife():release( alife_object(box:id()) ,true)
 		end
 	end
@@ -363,6 +481,7 @@ function loot_mutant(obj,cls,t,npc)
 		[clsid.cat_s]			= "cat",
 		[clsid.chimera_s]		= "chimera",
 		[clsid.controller_s]	= "controller",
+		[clsid.oasis_s]     	= "oasis",
 		[clsid.crow]			= "crow",
 		[clsid.dog_s]			= "dog",
 		[clsid.flesh_s]			= "flesh",
@@ -376,11 +495,11 @@ function loot_mutant(obj,cls,t,npc)
 		[clsid.rat_s]			= "rat",
 		[clsid.snork_s]			= "snork",
 		[clsid.tushkano_s]		= "tushkano",
-		[clsid.zombie_s]		= "zombie"	
+		[clsid.zombie_s]		= "zombie"
 	}
 
 	local loot_table = alun_utils.collect_section(ini,clsid_to_section[cls])
-	
+
 	-- Unlock relevant mutant article in guide.
 	if not npc then
 		dxr_encyclopedia.detect_mutant_interaction(clsid_to_section[cls])

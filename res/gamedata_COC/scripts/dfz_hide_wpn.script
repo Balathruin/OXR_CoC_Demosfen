@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+--\\ File        : dfz_hide_wpn.script                                     //--
+--\\ Author      : Tris (Modify by Nuor)                                                    //--
+--\\ Description : Убор оружия при юзании предметов.                       //--
+--\\ Last edit   : 07.06.2012 22:35                                        //--
+--\\ Version     : 0.7                                                     //--
+-------------------------------------------------------------------------------
+
+function on_game_start()
+        RegisterScriptCallback("actor_on_item_use",actor_on_item_use)
+        RegisterScriptCallback("actor_on_update",actor_on_update)
+end
+ 
+local timer_wpn_hide = nil
+function actor_on_update(delta)
+        if timer_wpn_hide and timer_wpn_hide < time_global() then
+                timer_wpn_hide = nil
+                db.actor:disable_info_portion("wpn_hide_porshein")
+                db.actor:restore_weapon()
+        end
+end    
+ 
+function actor_on_item_use(item, sect)
+        local hide_timer = set_pr_from_config(sect,"hide_time_wpn")
+        if hide_timer == 0 then return end
+        random_time(hide_timer)
+end
+ 
+function random_time(timer)
+        local tg = time_global()
+        local timer_active = timer_wpn_hide and timer_wpn_hide - tg or 0
+        if timer_active < 0 then timer_active = 0 end
+        timer_wpn_hide = timer_active + tg + (timer)*1000
+        if not (db.actor:has_info("wpn_hide_porshein")) then
+                db.actor:give_info_portion("wpn_hide_porshein")
+                db.actor:hide_weapon()
+        end
+end
+ 
+function set_pr_from_config(section,pr)
+        local ltx = system_ini()
+        local pr_s = 0
+        if ltx:line_exist(section,pr) then
+                pr_s = ltx:r_float(section,pr)
+        end
+        return pr_s
+end
+
+-------------------------------------------------------------------------------
+--\\ Не удаляйте копирайды, указывайте настоящего автора(ов)               --//
+--\\ и не выдавайте чужие идеи и их реализацию за свои.                    --//
+--\\ Ведь это элементарная этика модостроителей! Спасибо за понимание.     --//
+--\\                                © Tris (Modify by Nuor)                                --// 
+-------------------------------------------------------------------------------

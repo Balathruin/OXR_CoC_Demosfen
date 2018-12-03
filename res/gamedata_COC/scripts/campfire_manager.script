@@ -1,0 +1,103 @@
+local timer = time_global()
+local use_cooking = false
+local item = nil
+local pre_timer = nil
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_item_use",item_use)
+end
+
+
+function item_use(obj)
+	if (obj:section() == "matches") then
+		obj:set_remaining_uses(obj:get_remaining_uses()+1)
+		campfire_on(obj)
+	end
+end
+
+-- Chance
+function rainy_is()
+	local rain = level.rain_factor()
+	if (rain ~= nil) and (rain > 0 and rain < 0.5) then
+		local chance = math.random(1,2)
+		return chance
+	elseif (rain > 0.5) then
+		local chance = math.random(1,3)	-- Chance of turning on 1\3
+		return chance
+	else
+		local chance = 1
+		return chance
+	end
+end
+
+
+function a_timer()
+    pre_timer = nil
+end
+ 
+function s_timer()
+	pre_timer = 1
+    local iTimer = time_global() + 30000	-- timer for save-scam blocking
+
+    local function chk_timer()
+		return time_global() > iTimer
+    end
+ 
+    level.add_call(chk_timer, a_timer)
+end
+	
+
+function campfire_on(matches)
+	for i=1,65534 do
+		local s = alife():object(i)
+		if s then
+			local o = level.object_by_id(s.id)
+			if o  then
+				local cf = o:get_campfire()
+				if cf and o:position():distance_to(db.actor:position()) < 1.5 then
+				
+					local flist = getFS():file_list_open_ex("$game_saves$",	bit_or(FS.FS_ListFiles,FS.FS_RootOnly),"*".. ui_load_dialog.saved_game_extension)
+					local f_cnt = flist and flist:Size() or 0
+   
+					local inc = 0
+					if (f_cnt > 0) then
+						flist:Sort(FS.FS_sort_by_modif_down)
+		
+						for it=0, f_cnt-1 do
+							local file_name = flist:GetAt(it):NameFull():sub(0,-6):lower()
+				
+							-- grab last modified quicksave increment count
+							local d = tonumber( string.match(file_name,"campfire_autosave(%d+)") )
+							if (d) then
+								inc = d
+								break 
+							end
+						end
+					end
+	
+					inc = inc >= axr_main.config:r_value("mm_options","quicksave_cnt",2,5) and 1 or inc + 1
+					if (pre_timer == nil) then
+						get_console():execute("save campfire_autosave"..inc)
+						s_timer()
+					end
+					
+					if not (cf:is_on()) then
+						if (rainy_is() == 1) then
+							local snd_obj = sound_object("interface\\inv_matches")
+							snd_obj:play(db.actor,0,sound_object.s2d)
+							xr_sound.set_sound_play(db.actor:id(),"inv_matches")
+							matches:set_remaining_uses(matches:get_remaining_uses()-1)
+							cf:turn_on()
+							level.change_game_time(0,0,5)
+							break
+						else
+							matches:set_remaining_uses(matches:get_remaining_uses()-1)
+							local text = game.translate_string("st_fail")
+							SetHudMsg(text,3)
+						end 
+					end
+				end
+			end
+		end
+	end
+end

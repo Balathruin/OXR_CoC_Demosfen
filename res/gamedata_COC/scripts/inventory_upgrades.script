@@ -503,6 +503,60 @@ function property_functor_c( param1, name )
 	return issue_property( param1, name )
 end
 
+--/////////// function added by Tronex to cover the new proprties //////////////
+function property_functor_t(param1, name) 				
+	local section_table = utils.parse_names(param1)
+	if (#section_table == 0) then 
+		return ""
+	end
+	
+	local prop_name = system_ini():r_string_ex(name, "name")
+	local sysini = system_ini()
+	local sum = 0
+	local val
+	
+	for i=1,#section_table do
+		if (name == "prop_trx_nightvision") then
+			if (system_ini():line_exist(section_table[i],"scope_nightvision")) then
+				val = system_ini():r_float_ex(section_table[i], "value")
+				if (val) then
+					if (val > sum) then 
+						sum = val 
+					end
+				end
+			end
+		elseif (name == "prop_trx_zoom") then
+			sum = system_ini():r_float_ex(section_table[i],"value",0)
+		elseif (name == "prop_trx_power") then
+			sum = sum + (system_ini():r_float_ex(section_table[i],"power_restore_speed",0)/sysini:r_float_ex("actor_condition","max_power_restore_speed",0.01)*100)
+		elseif (name == "prop_trx_carry") then
+			sum = sum + system_ini():r_float_ex(section_table[i],"additional_inventory_weight",0)
+		end
+	end
+	
+	local val_s
+	if (sum > 0) then
+		val_s = "+" .. utils.round(sum)
+	else 
+		val_s = utils.round(sum)
+	end 
+	
+	if (name == "prop_trx_nightvision") then
+		if (sum == 1) then
+			return "High-Contrast"
+		else
+			return game.translate_string(prop_name) .. " Tier " .. (sum - 1)
+		end
+	elseif (name == "prop_trx_zoom") then
+		return game.translate_string(prop_name) .. " x" .. sum
+	elseif(name == "prop_trx_carry") then
+		return string.format("%s %5.2f %s", game.translate_string(prop_name), sum, game.translate_string("st_kg"))
+	elseif(name == "prop_trx_power") then
+		return game.translate_string(prop_name) .. " " .. val_s .. "%"
+	end
+end
+--/////////// Ends here //////////////
+
 function issue_property( param1, name )
 	local prorerty_name = system_ini():r_string_ex(name, "name")
 	local t_prorerty_name = game.translate_string(prorerty_name)

@@ -107,7 +107,7 @@ function opt_video_adv:InitControls(x, y, xml, handler)
 	xml:InitStatic("video_adv:cap_r2_sun", _st)
 	ctl = xml:InitCheck("video_adv:check_r2_sun", _st)
 	table.insert(handler.m_preconditions, {func=mode_ge_2, control=_st})
-	
+
 	-- Grass shadow 
 	_st = xml:InitStatic("video_adv:templ_item", nil)
 	xml:InitStatic("video_adv:cap_r__enable_grass_shadow", _st)
@@ -217,25 +217,25 @@ function opt_video_adv:InitControls(x, y, xml, handler)
 	xml:InitStatic("video_adv:cap_r3_volumetric_smoke", _st)
 	ctl = xml:InitCheck("video_adv:check_r3_volumetric_smoke", _st)
 	table.insert(handler.m_preconditions, {func=mode_ge_3, control=_st})
-	
+
 -- r3 DirectX 10.1
 	_st = xml:InitStatic("video_adv:templ_item", nil)
 	xml:InitStatic("video_adv:cap_r3_msaa_opt", _st)
 	ctl = xml:InitCheck("video_adv:check_r3_msaa_opt", _st)
 	table.insert(handler.m_preconditions, {func=mode_ge_3, control=_st})
 
+-- r4_enable_tessellation		only r4
 	_st = xml:InitStatic("video_adv:templ_item", nil)
 	xml:InitStatic("video_adv:cap_r3_msaa_alphatest", _st)
 	ctl = xml:InitComboBox("video_adv:combo_r3_msaa_alphatest", _st)
 	handler.combo_r3_msaa_alphatest = ctl
 	table.insert(handler.m_preconditions, {func=mode_ge_3, control=_st})
 
--- r4_enable_tessellation		only r4
 	_st = xml:InitStatic("video_adv:templ_item", nil)
 	xml:InitStatic("video_adv:cap_r4_tessellation", _st)
 	ctl = xml:InitCheck("video_adv:check_r4_tessellation", _st)
 	table.insert(handler.m_preconditions, {func=mode_4, control=_st})
----------
+
 	_st = xml:InitStatic("video_adv:templ_item", nil)
 	xml:InitStatic("video_adv:cap_vsync", _st)
 	xml:InitCheck("video_adv:check_vsync", _st)

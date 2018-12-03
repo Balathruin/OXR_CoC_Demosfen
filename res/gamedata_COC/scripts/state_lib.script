@@ -127,7 +127,7 @@ states = {
 	raid = {	weapon = "unstrapped",
 				movement = move.walk,
 				mental = anim.danger,
-				special_danger_move = true,
+--				special_danger_move = true,
 				bodystate = move.standing,
 				animstate = nil,
 				animation = nil
@@ -994,7 +994,145 @@ states = {
 --				animstate = "stand",
 				animstate = nil,
 				animation = "oso_flying"
-			}
+			},
+	minigunner = {	weapon = "none",
+				movement = move.stand,
+				mental = anim.free,
+				bodystate = move.standing,
+				animstate = nil,
+				animation = "minigunner"
+			},
+	barricade = {
+			weapon = "unstrapped",
+			movement = move.stand,
+			mental = anim.danger,
+			bodystate = move.crouch,
+			animstate = nil,
+			animation = "barricade"
+			},
+	barricade_look = {
+			weapon = "unstrapped",
+			movement = move.run,
+			mental = anim.danger,
+			bodystate = move.crouch,
+			direction = CSightParams.eSightTypeAnimationDirection,
+			animstate = nil,
+			animation = "barricade_look"
+			},
+	prisyad = {
+		weapon = "none",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = nil,
+		animation = "prisyad"
+	},	
+	otzhiman = {
+		weapon = "none",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = nil,	
+		direction = CSightParams.eSightTypeAnimationDirection,		
+		animation = "otzhiman"
+	},		
+	stay_smirno = {
+		weapon = "none",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = nil,		
+		animation = "stay_smirno"
+	},				
+	animpoint_stay_bar_0 = {	
+		weapon = "none",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = nil,
+		direction = CSightParams.eSightTypeAnimationDirection,					
+		animation = "animpoint_stay_bar_0"
+	},	
+	animpoint_stay_bar_2 = {	
+		weapon = "none",
+		movement = move.stand,
+		mental = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "animpoint_stay_bar_2"
+	},		
+	smoking_stand = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "smoking_stand"
+	},	
+	use_pda = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = "sit_ass",					
+		animation = "use_pda"
+	},
+	drunk_behindwall = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "drunk_behindwall"
+	},	
+	drunk_walkeasy = {	
+		weapon = "strapped",
+		movement  = move.walk,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "drunk_walkeasy"
+	},	
+	ispug = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "ispug"
+	},	
+	drunk_walkhard = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "drunk_walkhard"
+	},	
+	drunk_stand_table_2 = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "drunk_stand_table_2"
+	},			
+	smeh = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "smeh"
+	},	
+	drink_vodka_stand = {	
+		weapon = "strapped",
+		movement  = move.stand,
+		mental    = anim.free,
+		bodystate = move.standing,
+		animstate = nil,					
+		animation = "drink_vodka_stand"
+	}
 }
 
 utils.copy_table(states, state_lib_animpoint.add_state_lib())

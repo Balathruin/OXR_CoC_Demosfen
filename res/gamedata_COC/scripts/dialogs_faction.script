@@ -1,0 +1,233 @@
+function actor_in_freedom(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "freedom" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_freedom(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "freedom" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_freedom(actor, npc)
+   db.actor:set_character_community("actor_freedom",0,0)
+   faction_functions.write_variable("stat_community","actor_freedom")
+   db.actor:give_info_portion("actor_in_freedom")
+   db.actor:give_info_portion("actor_in_actor_freedom")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_freedom"))
+end
+
+function actor_in_dolg(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "dolg" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_dolg(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "dolg" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_dolg(actor, npc)
+   db.actor:set_character_community("actor_dolg",0,0)
+   faction_functions.write_variable("stat_community","actor_dolg")
+   db.actor:give_info_portion("actor_in_dolg")
+   db.actor:give_info_portion("actor_in_actor_dolg")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_dolg"))
+end
+
+function actor_in_killer(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "killer" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_killer(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "killer" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_killer(actor, npc)
+   db.actor:set_character_community("actor_killer",0,0)
+   faction_functions.write_variable("stat_community","actor_killer")
+   db.actor:give_info_portion("actor_in_killer")
+   db.actor:give_info_portion("actor_in_actor_killer")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_killer"))
+end
+
+function actor_in_stalker(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "stalker" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_stalker(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "stalker" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_stalker(actor, npc)
+   db.actor:set_character_community("actor_stalker",0,0)
+   faction_functions.write_variable("stat_community","actor_stalker")
+   db.actor:give_info_portion("actor_in_stalker")
+   db.actor:give_info_portion("actor_in_actor_stalker")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_stalker"))
+end
+
+function actor_in_bandit(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "bandit" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_bandit(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "bandit" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_bandit(actor, npc)
+   db.actor:set_character_community("actor_bandit",0,0)
+   faction_functions.write_variable("stat_community","actor_bandit")
+   db.actor:give_info_portion("actor_in_bandit")
+   db.actor:give_info_portion("actor_in_actor_bandit")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_bandit"))
+end
+
+function actor_in_csky(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "csky" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_csky(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "csky" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_csky(actor, npc)
+   db.actor:set_character_community("actor_csky",0,0)
+   faction_functions.write_variable("stat_community","actor_csky")
+   db.actor:give_info_portion("actor_in_csky")
+   db.actor:give_info_portion("actor_in_actor_csky")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_csky"))
+end
+
+function actor_in_ecolog(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "ecolog" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_ecolog(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "ecolog" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_ecolog(actor, npc)
+   db.actor:set_character_community("actor_ecolog",0,0)
+   faction_functions.write_variable("stat_community","actor_ecolog")
+   db.actor:give_info_portion("actor_in_ecolog")
+   db.actor:give_info_portion("actor_in_actor_ecolog")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_ecolog"))
+end
+
+function actor_in_army(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "army" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_army(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "army" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_army(actor, npc)
+   db.actor:set_character_community("actor_army",0,0)
+   faction_functions.write_variable("stat_community","actor_army")
+   db.actor:give_info_portion("actor_in_army")
+   db.actor:give_info_portion("actor_in_actor_army")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_army"))
+end
+
+function actor_in_monolith(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "monolith" then
+			return true
+		end
+	end
+	return false
+end
+
+function actor_not_in_monolith(actor, npc)
+	for k,v in pairs(sim_board.get_sim_board().players) do
+		if v.community_player == true and v.player_name == "monolith" then
+			return false
+		end
+	end
+	return true
+end
+
+function actor_set_monolith(actor, npc)
+   db.actor:set_character_community("actor_monolith",0,0)
+   faction_functions.write_variable("stat_community","actor_monolith")
+   db.actor:give_info_portion("actor_in_monolith")
+   db.actor:give_info_portion("actor_in_actor_monolith")
+   news_manager.send_tip(db.actor, game.translate_string("st_actor_in_monolith"))
+end

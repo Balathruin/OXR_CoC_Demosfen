@@ -55,7 +55,14 @@ function main_menu:InitControls()
 	local _ver = xml:InitStatic		("static_version",self)
 	local mm						= _G.main_menu.get_main_menu()
 	_ver:TextControl():SetText		("Call of Chernobyl ver. " .. (_G.GAME_VERSION))
-	
+	_ver:TextControl():SetTextColor (GetARGB(250, 255, 255, 0))
+	local _vers = xml:InitStatic	("static_version_2",self)
+	_vers:TextControl():SetText		(" + Assenbly by Demosfen [dev.1.0] 03.12.18")
+	_vers:TextControl():SetTextColor (GetARGB(250, 0, 255, 0))
+--	local _verss = xml:InitStatic	("static_version_3",self)
+--	_verss:TextControl():SetText		(" + Patch_0.1 [30.11.17]")
+--	_verss:TextControl():SetTextColor (GetARGB(250, 255, 0, 0))
+
 	-- Message Window 
 	self.msg_wnd = xml:InitFrame("msg_wnd:background",self)
 	self.msg_wnd:SetAutoDelete(false)
@@ -137,6 +144,15 @@ function main_menu:LoadLastSave()
 end
 
 function main_menu:OnButton_last_save()
+	if (axr_main.config:r_value("mm_options","enable_only_campfire",1,false) == true) and (db.actor) then
+		if (db.actor.health > 0) then
+			self.message_box:InitMessageBox("message_box_error")
+			self.message_box:SetText("st_only_campfire_load")
+			self.message_box:ShowDialog(true)
+			return
+		end
+	end
+
     if ( alife() == nil) then
         local flist = getFS():file_list_open_ex("$game_saves$",bit_or(FS.FS_ListFiles,FS.FS_RootOnly),"*"..".scop")
         flist:Sort(FS.FS_sort_by_modif_down)
@@ -172,6 +188,15 @@ function main_menu:OnButton_quit_clicked()
 end
 
 function main_menu:OnButton_disconnect_clicked()
+	if (axr_main.config:r_value("mm_options","enable_only_campfire",1,false) == true) and (db.actor) then
+		if (db.actor.health > 0) then
+			self.message_box:InitMessageBox("message_box_error")
+			self.message_box:SetText("st_only_campfire_quit")
+			self.message_box:ShowDialog(true)
+			return
+		end
+	end
+
 	self.message_box:InitMessageBox("message_box_quit_game")
 
 	if (level.game_id() ~= 1) then
@@ -267,6 +292,14 @@ function main_menu:OnButton_load_spawn()
 end
 
 function main_menu:OnButton_save_clicked()
+
+	if (axr_main.config:r_value("mm_options","enable_only_campfire",1,false) == true) then
+		self.message_box:InitMessageBox("message_box_error")
+		self.message_box:SetText("st_only_campfire_save")
+		self.message_box:ShowDialog(true)
+		return
+	end
+
 	if (alife_storage_manager.get_state().enable_campfire_mode) then
 		if not (_G.ALLOW_SAVING) then
 			SetHudMsg("st_you_cant_save",4)
@@ -312,6 +345,15 @@ function main_menu:OnButton_af_options_clicked()
 end
 -- End AtmosFear options dialog
 function main_menu:OnButton_load_clicked()
+	if (axr_main.config:r_value("mm_options","enable_only_campfire",1,false) == true) and (db.actor) then
+		if (db.actor.health > 0) then
+			self.message_box:InitMessageBox("message_box_error")
+			self.message_box:SetText("st_only_campfire_load")
+			self.message_box:ShowDialog(true)
+			return
+		end
+	end
+
 	if self.load_dlg ==nil then
 		self.load_dlg = ui_load_dialog.load_dialog()
 		self.load_dlg.owner = self
@@ -353,14 +395,30 @@ function main_menu:OnKeyboard(dik, keyboard_action)  --virtual function
 			end
 		end
 
+        if dik == DIK_keys.DIK_L then
+            console:execute("main_menu 0")
+            console:execute("main_menu 1")
+        end
+		
 		if (dik == DIK_keys.DIK_Q) then
 			self:OnMessageQuitWin()
+               elseif db.actor~=nil and dik==DIK_keys.DIK_F6 then 
+                local dir = db.actor:direction() 
+                local pos = db.actor:position() 
+                pos = pos:add(dir:mul(5))
+                db.actor:set_actor_position(pos)
 		elseif (dik == DIK_keys.DIK_NUMPAD0) then
 			if (reload_system_ini) then
 				reload_system_ini()
 				printf("system_ini_reload = success!")
 			end
 		end
+
+		--mlr
+		if (dik == DIK_keys.DIK_S and db.actor~=nil) then		
+			give_info("then_you_take_achiev_cheater")			
+		end	
+		--mlr
 	end
 
 	return true

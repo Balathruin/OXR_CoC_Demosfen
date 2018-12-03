@@ -46,6 +46,14 @@ function actor_binder:net_spawn(se_abstract)
 		level.enable_input()
 	end
 
+	--mlr
+	if (axr_main.config:r_value("mm_options","enable_death_ini_alternative_option",1,true) == false) then
+		death_manager.init_drop_settings()
+	elseif (axr_main.config:r_value("mm_options","enable_death_ini_alternative_option",1,true) == true) then
+		death_manager.init_drop_settings_alt()	
+	end
+	--mlr
+	
 	death_manager.init_drop_settings()
 	self.spawn_frame = device().frame
 	self.already_jumped = false
@@ -199,7 +207,7 @@ end
 function actor_binder:update(delta)
 	object_binder.update(self, delta)
 	--alun_utils.debug_write("actor update START")
-	
+
 	bind_stalker_ext.actor_on_update(self,delta)
 	
 	if not (db.actor:alive()) then
@@ -269,14 +277,31 @@ function actor_binder:update(delta)
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:update(delta)
 	end
-
+	
 	--------------------------GWR Mod Updates-------------------------------------------------------------------------
 	if db.gwr == nil then
 		gwr_maindb.creategwr()
 	end
 	--------------------------GWR Mod Updates-------------------------------------------------------------------------
+--[[	------A.R.E.A---- dinamic_hud----- Romann---
+--	if dinamic_hud then
+--	dinamic_hud.update()
+--	end
+	
+	local upd_time = 0
+	if db.actor then
+		local tg = time_global()
+		if tg > upd_time then
+			upd_time = tg+180
+			actor_condition()
+		end
+		
+--		use_item_update()
+--		outfit_update()
+	end
+		------A.R.E.A---- dinamic_hud----- Romann---
 
-	--alun_utils.debug_write("actor update END 2")
+	--alun_utils.debug_write("actor update END 2")]]
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:save(packet)
@@ -297,7 +322,7 @@ function actor_binder:save(packet)
 	if (utils.level_changing()) then
 		utils.save_var(db.actor,"heli_enemy_flag",nil)
 	end
-	
+
 	--alundaio
 	alun_utils.w_stpk(packet,"u8",level.get_game_difficulty(), "game difficulty")
 	alun_utils.w_stpk(packet,"CTime",self.st.disable_input_time, "disable input time")
@@ -442,5 +467,125 @@ function actor_binder:load_state(m_data)
 	
 	state.actor_binder = nil
 	--alun_utils.debug_write("actor_binder:load_state after")
-end 
+end
+
+function actor_binder:use_inventory_item(obj)
+	if(obj) then
+		local s_obj = alife():object(obj:id())
+		if(s_obj) and (s_obj:section_name()=="drug_anabiotic") then
+			xr_effects.disable_ui_only(db.actor, nil)
+			level.add_cam_effector("camera_effects\\surge_02.anm", 10, false, "bind_stalker.anabiotic_callback")
+			level.add_pp_effector("surge_fade.ppe", 11, false)
+			give_info("anabiotic_in_process")
+			_G.mus_vol = get_console():get_float("snd_volume_music")
+			_G.amb_vol = get_console():get_float("snd_volume_eff")
+			get_console():execute("snd_volume_music 0")
+			get_console():execute("snd_volume_eff 0")
+		end
+    end
+end
+
+
+--[[		------A.R.E.A---- dinamic_hud----- Romann---
+local opt = actor_effects_data.options
+local health_play = 0
+local gas_play = 0
+local run_play = 0
+local snd_tg = 0
+local actor_speed = {x=0, y=0, z=0}
+local actor_speed_time = 0
+
+
+function actor_condition()
+	local tg = time_global()
+	local radiation = db.actor.radiation
+	local cam_dist = db.actor:bone_position("bip01_head"):distance_to_sqr(device().cam_pos)
+	local pos = db.actor:position()
+	local speed = (pos.x - actor_speed.x)^2+(pos.y - actor_speed.y)^2+(pos.z - actor_speed.z)^2
+	actor_speed.x = pos.x
+	actor_speed.y = pos.y
+	actor_speed.z = pos.z
+	if radiation > 0 then
+		if radiation > opt.radiation_ppe_threshold then
+			level.add_pp_effector("radiation.ppe", 2020, true)
+		else
+			level.remove_pp_effector(2020)
+		end
+		level.set_pp_effector_factor(2020, radiation)
+		if math.random()<radiation then
+			radiation = radiation>0.5 and math.random()<radiation/1.3 and "click3" or math.random(8)
+			local snd = sound_object("detectors\\geiger_"..radiation)
+			snd:play(db.actor,0,sound_object.s2d)
+		end
+	end
+
+	if speed > opt.speed.mini then
+		actor_speed_time = actor_speed_time + opt.speed.inc
+	elseif actor_speed_time > opt.speed.dec then
+		actor_speed_time = actor_speed_time - opt.speed.dec
+	end
+	actor_speed_time = math.min(32, actor_speed_time + db.actor.bleeding*opt.speed.k_bleed)
+
+	if (axr_main.config:r_value("mm_options","enable_mask_hud",1,false) == true) then
+		breath_mask()
+	else
+		breath_nomask(actor_speed_time)
+	end
+end
+
+function breath_mask()
+	local tg = time_global()
+	if tg>snd_tg then
+		gas_play = gas_play+1
+		if gas_play > 8 then gas_play = 1 end
+		local snd = sound_object("actor\\gas_breath_"..tostring((db.actor.health > 0.2) and math.ceil((1.01-db.actor.power)*3+actor_speed_time/8) or 8).."_"..gas_play)
+		snd_tg = tg+snd:length()*1.25
+		snd:play(db.actor,0,sound_object.s2d)
+	end
+end
+
+function breath_nomask(actor_speed_time)
+	local tg = time_global()
+	local health = db.actor.health
+
+	if tg < snd_tg or health < 0 then return end
+
+	if health > opt.health.level2 then
+		if actor_speed_time > opt.speed.time_mini  or db.actor.power < opt.speed.stamina or run_play == 1 then
+			run_play = run_play+1
+			if run_play > 2 then run_play = 1 end
+			local snd = sound_object("actor\\run_"..math.ceil(3*actor_speed_time/44).."_"..run_play)
+			snd:play(db.actor,0,sound_object.s2d)
+			snd_tg = tg+snd:length()*1.15
+		else
+			run_play = 2
+		end
+		return
+	end
+
+	if health <= opt.health.level1 then
+		health = 1
+		if math.random()<0.1 then
+			health_play = 0
+		else
+			health_play = health_play+1
+			if health_play > 4 then health_play = 1 end
+		end
+	else
+		health = 2
+		health_play = health_play+1
+		if health_play > 4 then health_play = 1 end
+	end
+	
+	snd_tg = tg+opt.health.injury_snd["_"..health.."_"..health_play]
+	local snd = sound_object("actor\\health_"..health.."_"..health_play)
+	snd:play(db.actor,0,sound_object.s2d)
+end
+
+
+function use_helmet()
+	dinamic_hud.helmet_switch()
+end
+
+		------A.R.E.A---- dinamic_hud----- Romann---]]
 

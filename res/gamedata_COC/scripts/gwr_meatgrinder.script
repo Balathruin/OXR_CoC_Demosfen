@@ -50,7 +50,7 @@ function main(type_obj, amount, dir, who, bone, object)
 								local section="meat_default"
 								if type_obj == "monster" then
 									section="meat_default_monster"
-									--part = "body" // Ğ”ĞµĞ»Ğ°Ñ‚ÑŒ Ğ±ĞµÑÑĞ¼Ñ‹ÑĞ»ĞµĞ½Ğ½Ğ¾, Ñ‚.Ğº. Ğ´Ğ»Ñ Ğ¼Ğ¾Ğ½ÑÑ‚Ñ€Ğ° Ğ¼Ñ‹ Ğ²ÑĞµĞ³Ğ´Ğ° Ğ²ÑĞµĞ³Ğ´Ğ° Ğ¾Ñ‚Ğ¿Ñ€Ğ°Ğ²Ğ»ÑĞµĞ¼ ĞºĞ¾ÑÑ‚ÑŒ Ñ Ğ½Ğ¾Ğ¼ĞµÑ€Ğ¾Ğ¼ 1
+									--part = "body" // Äåëàòü áåññìûñëåííî, ò.ê. äëÿ ìîíñòğà ìû âñåãäà âñåãäà îòïğàâëÿåì êîñòü ñ íîìåğîì 1
 --									log("Monster found!")
 								end
 								if ini:section_exist("meat_"..object:section()) then
@@ -94,7 +94,7 @@ function main(type_obj, amount, dir, who, bone, object)
 						end
 				end
 			end			
-			log(tostring(bone).."==>"..part)
+--			log(tostring(bone).."==>"..part)
 		end
 	return false
 end

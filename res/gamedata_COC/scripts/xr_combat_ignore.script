@@ -11,8 +11,11 @@ local ignored_zone = {
 	--"bar_mutant_exile_zone",
 	"esc_smart_terrain_2_12_sr_no_assault",
 	"esc_lager_guard_kill_zone",
-	"zat_a2_sr_no_assault",
-	"jup_a6_sr_no_assault",
+	--mlr
+	--"zat_a2_sr_no_assault",
+	--"jup_a6_sr_no_assault",
+	"pri_space_restrictor_killing_place",	
+	--mlr
 	"jup_b41_sr_no_assault"
 }
 
@@ -88,6 +91,11 @@ function is_enemy(obj,enemy,no_memory,is_danger_check)
 	elseif (psy_influenced_npc[id] and psy_influenced_npc[id][1] == ene_id) then 
 		return false
 	elseif (obj:clsid() == clsid.controller_s and enemy:clsid() == clsid.script_stalker) then 
+		local state = state_mgr.get_state(enemy)
+		if (state == "psy_shoot") then 
+			return false 
+		end
+	elseif (obj:clsid() == clsid.oasis_s and enemy:clsid() == clsid.script_stalker) then 
 		local state = state_mgr.get_state(enemy)
 		if (state == "psy_shoot") then 
 			return false 
