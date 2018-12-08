@@ -221,4 +221,7 @@
   <string id="space_restrictor_to_lab_desc">
 		<text>В Тоннель лаба x1</text>
   </string>
+  <string id="space_restrictor_to_rein_desc">
+		<text>На "Мёртвую Реку"</text>
+  </string>
 </string_table>

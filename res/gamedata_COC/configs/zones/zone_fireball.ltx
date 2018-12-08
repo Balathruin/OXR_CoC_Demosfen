@@ -109,3 +109,28 @@ hit_type					= chemical_burn
 light_color		    		= 1.1,1.7,1.4
 
 idle_light_anim				= light_green_00
+;*****************************Новые летающие аномалии********************************
+[fireball_gravitational_zone]:fireball_zone
+$spawn						= "zones\fireball_gravitational"
+postprocess					= postprocess_gravi_mine
+
+idle_particles				= anomaly2\heat_02_electra
+blowout_particles			= anomaly2\heat_03_electra
+
+hit_small_particles			= anomaly2\electra_entrance_small
+hit_big_particles			= anomaly2\electra_damage_02_smoke
+idle_small_particles		= anomaly2\electra_damage_01_smoke
+idle_big_particles			= anomaly2\electra_damage_02_smoke
+entrance_small_particles	= anomaly2\electra_entrance_small
+entrance_big_particles		= anomaly2\emi_entrance_big_00
+
+idle_sound					= anomaly\electra_idle1
+blowout_sound				= anomaly\electra_blast1
+hit_sound					= anomaly\electra_hit
+entrance_sound				= anomaly\electra_hit
+
+hit_type					= shock
+
+light_color		    		= 0.8,0.9,1
+
+idle_light_anim				= koster_01_electra

@@ -864,6 +864,10 @@ function level_pripyat(first_speaker, second_speaker)
 	return level.name() == "pripyat"
 end
 
+function level_rein(first_speaker, second_speaker)
+	return level.name() == "rein"
+end
+
 function not_level_zaton(first_speaker, second_speaker)
 	return level.name() ~= "zaton"
 end
@@ -874,6 +878,10 @@ end
 
 function not_level_pripyat(first_speaker, second_speaker)
 	return level.name() ~= "pripyat"
+end
+
+function not_level_rein(first_speaker, second_speaker)
+	return level.name() ~= "rein"
 end
 
 -----------------------------------------------------------------------------------

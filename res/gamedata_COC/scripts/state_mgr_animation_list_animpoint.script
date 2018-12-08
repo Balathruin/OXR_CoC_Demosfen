@@ -627,6 +627,19 @@ function add_animation_list()
 									[1] = {"animpoint_sit_low_guitar_idle_rnd_2" }
 									}},
 
+		animpoint_sit_ass_guitar	= {	prop	= { maxidle = 3,
+									sumidle = 3,
+									rnd = 80 },
+						into	= { [0]	= {"sit_1_guitar_0_0", {a="guitar_a"}, {f=sr_camp.start_guitar}, "sit_1_guitar_0_1"},
+						            [1]	= {"sit_1_guitar_0_0", {a="guitar_a"}, {f=sr_camp.start_guitar}, "sit_1_guitar_0_1"} },
+						out		= { [0]	= {"guitar_0_sit_1_0", {d="guitar_a"}, "guitar_0_sit_1_1"},
+									[1]	= {"guitar_0_sit_1_0", {d="guitar_a"}, "guitar_0_sit_1_1"} },
+						idle	= { [0]	= "guitar_0",
+									[1]	= "guitar_0" },
+						rnd		= nil },
+
+
+
 		animpoint_stay_wall_harmonica		= {	prop	= { maxidle = 5,
 									sumidle = 3,
 									rnd = 80,

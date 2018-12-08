@@ -1604,4 +1604,171 @@
 	</character>
 
     <!------------------ Anya ----------------->
+
+	<!-------REIN------>
+<!---------наёмники на заслоне------->
+	<character id="rein_zaslon_merc_09">
+		<class>rein_zaslon_merc_09</class>
+	</character>
+	<character id="rein_zaslon_merc_08">
+		<class>rein_zaslon_merc_08</class>
+	</character>
+	<character id="rein_zaslon_merc_07">
+		<class>rein_zaslon_merc_07</class>
+	</character>
+	<character id="rein_zaslon_merc_06">
+		<class>rein_zaslon_merc_06</class>
+	</character>
+	<character id="rein_zaslon_merc_05">
+		<class>rein_zaslon_merc_05</class>
+	</character>
+	<character id="rein_zaslon_merc_04">
+		<class>rein_zaslon_merc_04</class>
+	</character>
+	<character id="rein_zaslon_merc_03">
+		<class>rein_zaslon_merc_03</class>
+	</character>
+	<character id="rein_zaslon_merc_02">
+		<class>rein_zaslon_merc_02</class>
+	</character>
+	<character id="rein_zaslon_merc_01">
+		<class>rein_zaslon_merc_01</class>
+	</character>
+	<character id="rein_zaslon_merc_sniper_01">
+		<class>rein_zaslon_merc_sniper_01</class>
+	</character>
+	<character id="rein_zaslon_merc_sniper_02">
+		<class>rein_zaslon_merc_sniper_02</class>
+	</character>
+	<character id="rein_zaslon_merc_leader">
+		<class>rein_zaslon_merc_leader</class>
+	</character>
+<!------------монолит-------------->	
+	<character id="rein_vahta_monolith_01">
+		<class>rein_vahta_monolith_01</class>
+	</character>
+	<character id="rein_vahta_monolith_02">
+		<class>rein_vahta_monolith_02</class>
+	</character>
+	<character id="rein_vahta_monolith_03">
+		<class>rein_vahta_monolith_03</class>
+	</character>
+	<character id="rein_vahta_monolith_04">
+		<class>rein_vahta_monolith_04</class>
+	</character>
+	<character id="rein_vahta_monolith_05">
+		<class>rein_vahta_monolith_05</class>
+	</character>
+	<character id="rein_vahta_monolith_ucheniy_01">
+		<class>rein_vahta_monolith_ucheniy_01</class>
+	</character>
+	<character id="rein_vahta_monolith_ucheniy_02">
+		<class>rein_vahta_monolith_ucheniy_02</class>
+	</character>
+	<character id="rein_vahta_monolith_leader">
+		<class>rein_vahta_monolith_leader</class>
+	</character>
+<!-------рудник монолита-------------->
+	<character id="rein_rudnik_monolith_trader">
+		<class>rein_rudnik_monolith_trader</class>
+	</character>
+	<character id="rein_rudnik_monolith_tehnik">
+		<class>rein_rudnik_monolith_tehnik</class>
+	</character>
+	<character id="rein_rudnik_monolith_01">
+		<class>rein_rudnik_monolith_01</class>
+	</character>
+	<character id="rein_rudnik_monolith_02">
+		<class>rein_rudnik_monolith_02</class>
+	</character>
+<!--------------Арена------------>
+	<character id="rein_bandit_1_guard">
+		<class>rein_bandit_1_guard</class>
+	</character>
+	<character id="rein_bandit_2_guard">
+		<class>rein_bandit_2_guard</class>
+	</character>
+	<character id="rein_bandit_arena_trader">
+		<class>rein_bandit_arena_trader</class>
+	</character>
+	<character id="rein_bandit_arena_barmen">
+		<class>rein_bandit_arena_barmen</class>
+	</character>
+	<character id="rein_bandit_arena_medic">
+		<class>rein_bandit_arena_medic</class>
+	</character>
+	<character id="rein_bandit_arena_boss_sultan">
+		<class>rein_bandit_arena_boss_sultan</class>
+	</character>
+	<character id="rein_bandit_arena_leader">
+		<class>rein_bandit_arena_leader</class>
+	</character>
+	<character id="rein_bandit_arena_totolizator">
+		<class>rein_bandit_arena_totolizator</class>
+	</character>
+<!--------------База СБУ------------>
+	<character id="rein_soldier_01">
+		<class>rein_soldier_01</class>
+	</character>
+	<character id="rein_soldier_02">
+		<class>rein_soldier_02</class>
+	</character>
+	<character id="rein_soldier_03">
+		<class>rein_soldier_03</class>
+	</character>
+	<character id="rein_soldier_04">
+		<class>rein_soldier_04</class>
+	</character>
+	<character id="rein_soldier_sniper">
+		<class>rein_soldier_sniper</class>
+	</character>
+	<character id="rein_soldier_trader">
+		<class>rein_soldier_trader</class>
+	</character>
+	<character id="rein_soldier_medic">
+		<class>rein_soldier_medic</class>
+	</character>
+	<character id="rein_soldier_tehnik">
+		<class>rein_soldier_tehnik</class>
+	</character>
+	<character id="rein_general">
+		<class>rein_general</class>
+	</character>
+	<character id="rein_captain_tarasov">
+		<class>rein_captain_tarasov</class>
+	</character>
+	<character id="rein_strelok">
+		<class>rein_strelok</class>
+	</character>
+	<character id="rein_zulus">
+		<class>rein_zulus</class>
+	</character>
+	<character id="rein_kovalski">
+		<class>rein_kovalski</class>
+	</character>
+	<character id="rein_komendant">
+		<class>rein_komendant</class>
+	</character>
+	<character id="rein_vano">
+		<class>rein_vano</class>
+	</character>
+	<character id="rein_soldier_barmen">
+		<class>rein_soldier_barmen</class>
+	</character>
+<!--------------Арена легендарные сталкеры------------>
+	<character id="rein_stalker_01">
+		<class>rein_stalker_01</class>
+	</character>
+	<character id="rein_stalker_02">
+		<class>rein_stalker_02</class>
+	</character>
+	<character id="rein_stalker_03">
+		<class>rein_stalker_03</class>
+	</character>
+	<character id="rein_stalker_leader">
+		<class>rein_stalker_leader</class>
+	</character>
+
+	<!-------REIN------>
+
 </xml>

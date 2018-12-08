@@ -974,12 +974,6 @@ hint = space_restrictor_to_collector_desc
 path = bar_space_restrictor_to_collector_drop
 reject_path = bar_level_changer_to_collector_reject_way
 autosave = true
-;level_changer - bar_level_changer_to_collector
-;граф - col_graph_point_actor_spawn_1
-;граф - bar_col_actor_spawn
-;граф - bar_graph_point_to_collector
-;граф ту - col_graph_point_to_bar
-
 
 ;//Коллектор
 ;//В Бар
@@ -992,9 +986,6 @@ path = col_space_restrictor_to_bar_drop
 reject_path = col_level_changer_to_bar_reject_way
 autosave = true
 
-
-
-
 ;//Коллектор
 ;//На Черту
 [col_space_restrictor_to_wiz]
@@ -1005,7 +996,6 @@ hint = space_restrictor_to_wiz_desc
 path = col_space_restrictor_to_wiz_drop
 reject_path = col_level_changer_to_wiz_reject_way
 autosave = true
-
 
 ;//Черта
 ;//В Коллектор
@@ -1034,7 +1024,7 @@ spot = level_changer_up_right
 text = st_level_changer_descr
 hint = space_restrictor_to_wiz_desc
 path = lab_space_restrictor_to_wiz_drop
-reject_path = lab_space_restrictor_to_wiz_reject_way
+reject_path = lab_level_changer_to_wiz_reject_way
 autosave = true
 
 ;level_changer - lab_level_changer_to_wiz
@@ -1052,8 +1042,43 @@ spot = level_changer_down_left
 text = st_level_changer_descr
 hint = space_restrictor_to_lab_desc
 path = wiz_space_restrictor_to_lab_drop
-reject_path = wiz_space_restrictor_to_lab_reject_way
+reject_path = wiz_level_changer_to_lab_reject_way
 autosave = true
+
+;level_changer - wiz_level_changer_to_lab
+;граф - lab_graph_point_actor_spawn_1
+;граф - wiz_lab_actor_spawn
+;граф - lab_graph_point_to_wiz
+;граф ту - wiz_graph_point_to_lab
+
+;;;Мёртвая Река
+
+;;Река на Агропром
+[rein_space_restrictor_to_agro]
+enable = true
+spot = level_changer_right
+text = st_level_changer_descr
+hint = mar_space_restrictor_to_agroprom_descr
+path = rein_space_restrictor_to_agro_drop
+reject_path = rein_level_changer_to_agro_reject_way
+autosave = true
+
+;level_changer - rein_level_changer_to_agro
+;граф на фгро - agro_rein_actor_spawn
+;граф на реке - rein_agro_actor_spawn
+;граф связи на агро - agro_graph_point_to_rein
+;граф ту на реке - rein_graph_point_to_agro
+
+;;Агропром на Реку
+[agro_space_restrictor_to_rein]
+enable = true
+spot = level_changer_left
+text = st_level_changer_descr
+hint = space_restrictor_to_rein_desc
+path = agro_space_restrictor_to_rein_drop
+reject_path = agro_level_changer_to_rein_reject_way
+autosave = true
+
 
 ;level_changer - wiz_level_changer_to_lab
 ;граф - lab_graph_point_actor_spawn_1

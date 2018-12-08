@@ -4741,11 +4741,15 @@ function sleep(actor, npc)
 						"yan_bunker_sleep_restrictor",
 						"zat_a2_sr_sleep",
 						--mlr
-						"pol_secret_sleep",	
+						"pol_secret_sleep",
 						"baraholka_sleep",
 						--Romann
-						"bar_sr_sleep_2",	
-						"wiz_sr_sleep_1"
+						"bar_sr_sleep_2",
+						"wiz_sr_sleep_1",
+						"rein_rudnik_sr_sleep",
+						"rein_baza_sr_sleep",
+						"rein_arena_sr_sleep",
+						"rein_leg_sr_sleep"
 					}
 
 	for k,v in pairs(sleep_zones) do

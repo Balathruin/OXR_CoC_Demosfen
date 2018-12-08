@@ -347,7 +347,20 @@ local primary_objects_tbl =
 		{target="pri_b304_spot",			hint="st_pri_bath_name"},
 		{target="pri_a18_spot",				hint="st_pri_a18_name"},
 		{target="pri_anomal_vulkan_spot",	hint="st_pri_b307_name"},
-		{target="pri_anomal_loza_spot",		hint="st_pri_b302_name"}
+		{target="pri_anomal_loza_spot",		hint="st_pri_b302_name"},
+	
+---------------------------REIN-----------------------------------------
+	{target="rein_baza_spot",		hint="rein_baza_spot_name"},
+	{target="rein_vahta_spot",		hint="rein_vahta_spot_name"},
+	{target="rein_b1_spot",			hint="rein_b1_spot_name"},
+	{target="rein_sim_11_spot",		hint="rein_sim_11_spot_name"},
+	{target="rein_ozero_spot",		hint="rein_ozero_spot_name"},
+	{target="rein_jr_spot",			hint="rein_jr_spot_name"},
+	{target="rein_b4_spot",			hint="rein_b4_spot_name"},
+	{target="rein_zaslon_spot",		hint="rein_zaslon_spo_name"},
+	{target="rein_arena_spot",		hint="rein_arena_spot_name"},
+	{target="rein_hutor_spot",		hint="rein_hutor_spot_name"},
+	{target="rein_b3_spot",			hint="rein_b3_spot_name"}
 	}
 function fill_primary_objects()
 	if not primary_objects_tbl then
@@ -590,7 +603,8 @@ function check_and_found_pda_areas()
 					zaton				= 30,
 					y04_pole			= 30,
 					jupiter				= 30,
-					way_in_zone			= 30
+					way_in_zone			= 30,
+					rein    			= 30
 				}
 				if db.storage[obj_id].object:position():distance_to(db.actor:position()) <= (level_dist[level.name()] or 100) then
 					give_info(v.target)

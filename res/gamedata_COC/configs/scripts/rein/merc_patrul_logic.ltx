@@ -1,0 +1,120 @@
+[walker@zaslon_animp_gen]
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+combat_ignore = combat_ignore
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = default_meet
+out_restr = rein_zaslon_in_restrictor
+;************************************************
+[logic@merc_01]
+suitable = {=check_npc_name(merc_01)}
+active = walker@merc_01
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_01]:walker@zaslon_animp_gen
+path_walk = merc_01_walk
+path_look = merc_01_look
+;************************************************
+[logic@merc_02]
+suitable = {=check_npc_name(merc_02)}
+active = walker@merc_02
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_02]:walker@zaslon_animp_gen
+path_walk = merc_02_walk
+path_look = merc_02_look
+;************************************************
+[logic@merc_03]
+suitable = {=check_npc_name(merc_03)}
+active = walker@merc_03
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_03]:walker@zaslon_animp_gen
+path_walk = merc_03_walk
+path_look = merc_03_look
+;************************************************
+[logic@merc_04]
+suitable = {=check_npc_name(merc_04)}
+active = walker@merc_04
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_04]:walker@zaslon_animp_gen
+path_walk = merc_04_walk
+path_look = merc_04_look
+;************************************************
+[logic@merc_05]
+suitable = {=check_npc_name(merc_05)}
+active = walker@merc_05
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_05]:walker@zaslon_animp_gen
+path_walk = merc_05_walk
+path_look = merc_05_look
+;************************************************
+[logic@merc_06]
+suitable = {=check_npc_name(merc_06)}
+active = walker@merc_06
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_06]:walker@zaslon_animp_gen
+path_walk = merc_06_walk
+path_look = merc_06_look
+;************************************************
+[logic@merc_07]
+suitable = {=check_npc_name(merc_07)}
+active = walker@merc_07
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_07]:walker@zaslon_animp_gen
+path_walk = merc_07_walk
+path_look = merc_07_look
+;************************************************
+[logic@merc_08]
+suitable = {=check_npc_name(merc_08)}
+active = walker@merc_08
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_08]:walker@zaslon_animp_gen
+path_walk = merc_08_walk
+path_look = merc_08_look
+;************************************************
+[logic@merc_09]
+suitable = {=check_npc_name(merc_09)}
+active = walker@merc_09
+on_hit = hit
+prior = 100
+post_combat_time = 0,0
+
+
+[walker@merc_09]:walker@zaslon_animp_gen
+path_walk = merc_09_walk
+path_look = merc_09_look
+
+[hit]
+on_info = %+alert%

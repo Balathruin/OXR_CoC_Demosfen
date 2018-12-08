@@ -1,0 +1,17 @@
+[logic@bandit_01]
+suitable = {=check_npc_name(rein_bandit_1_guard)} true
+active = walker@bandit_guard_01
+
+[walker@bandit_guard_01]
+path_walk = bandit_01_walk
+path_look = bandit_01_look
+;out_restr = rein_arena_sr_def_restr
+;************************************************
+[logic@bandit_02]
+suitable = {=check_npc_name(rein_bandit_2_guard)} true
+active = walker@bandit_guard_02
+
+[walker@bandit_guard_02]
+path_walk = bandit_02_walk
+path_look = bandit_02_look
+;out_restr = rein_arena_sr_def_restr

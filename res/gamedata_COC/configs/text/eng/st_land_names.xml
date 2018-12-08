@@ -444,4 +444,43 @@
 	<string id="st_pri_b307_name">
 		<text>"Volcano" anomaly</text>
 	</string>
+
+	<!-------REIN------>
+
+	<string id="rein_baza_spot_name">
+		<text>База СБУ</text>
+	</string>
+	<string id="rein_vahta_spot_name">
+		<text>Вахтовый посёлок</text>
+	</string>
+	<string id="rein_b1_spot_name">
+		<text>Смерч</text>
+	</string>
+	<string id="rein_sim_11_spot_name">
+		<text>Туман</text>
+	</string>
+	<string id="rein_ozero_spot_name">
+		<text>Болото</text>
+	</string>
+	<string id="rein_jr_spot_name">
+		<text>Яр</text>
+	</string>
+	<string id="rein_b4_spot_name">
+		<text>Горводоканал</text>
+	</string>
+	<string id="rein_zaslon_spo_name">
+		<text>Заслон</text>
+	</string>
+	<string id="rein_arena_spot_name">
+		<text>Арена</text>
+	</string>
+	<string id="rein_hutor_spot_name">
+		<text>Рыбацкий посёлок</text>
+	</string>
+	<string id="rein_b3_spot_name">
+		<text>Перекрёсток</text>
+	</string>
+
+
+	<!-------REIN------>
 </string_table>

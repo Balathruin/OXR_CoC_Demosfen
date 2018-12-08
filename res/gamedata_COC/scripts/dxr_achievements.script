@@ -490,8 +490,8 @@ end
 -- Cheater
 function cheater_rewards()
 	SendScriptCallback("on_achievement_earned","cheater","st_achievement_cheater_unlock")
-	dxr_statistics.increment_rank(-1000)
-	dxr_statistics.increment_reputation(-1000)
+	dxr_statistics.increment_rank(1000)
+	dxr_statistics.increment_reputation(1000)
 end
 
 -- Bookworm Food.

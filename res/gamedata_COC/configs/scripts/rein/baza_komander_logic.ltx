@@ -1,0 +1,31 @@
+[walker@baza_animp_gen]
+use_camp = false
+meet = default_meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+out_restr = rein_geniral_sr
+;----------------------------------------------
+[logic@soldier_tehnik]
+active = animpoint@soldier_tehnik
+suitable = {=check_npc_name(rein_soldier_tehnik)} true
+
+[animpoint@soldier_tehnik]:walker@baza_animp_gen
+cover_name = rein_tehnik_baza_animpoint
+avail_animations = animpoint_stay_table
+;----------------------------------------------
+[logic@general]
+active = animpoint@general
+suitable = {=check_npc_name(rein_general)} true
+
+[animpoint@general]:walker@baza_animp_gen
+cover_name = rein_general_animpoint
+avail_animations = animpoint_sit_normal
+;----------------------------------------------
+[logic@rein_kovalski]
+active = animpoint@rein_kovalski
+suitable = {=check_npc_name(rein_kovalski)} true
+
+[animpoint@rein_kovalski]:walker@baza_animp_gen
+cover_name = rein_kovalskiy_animpoint
+avail_animations = animpoint_sit_normal

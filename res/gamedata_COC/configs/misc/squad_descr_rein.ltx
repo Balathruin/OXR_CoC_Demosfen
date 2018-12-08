@@ -1,0 +1,106 @@
+; Здесь содержатся дескрипшены сквадов, которые потом можно создавать используя спец функции.
+;--------------База СБУ------------
+[rein_baza_general_squad]:online_offline_group
+faction = stalker
+sympathy = 1
+npc = rein_general, rein_soldier_tehnik, rein_kovalski
+target_smart = rein_baza
+spawn_point = general_baza_spawn_point
+story_id = rein_baza_general_squad
+
+[rein_baza_leader_squad]:online_offline_group
+faction = stalker
+sympathy = 1
+npc = rein_captain_tarasov, rein_komendant, rein_strelok, rein_zulus, rein_vano, rein_soldier_barmen, rein_soldier_medic, rein_soldier_trader
+target_smart = rein_baza
+spawn_point = rein_baza_spawn_point
+story_id = rein_baza_leader_squad
+
+[rein_baza_squad]:online_offline_group
+faction = stalker
+sympathy = 1
+npc = rein_soldier_01, rein_soldier_02, rein_soldier_03, rein_soldier_04, rein_soldier_sniper
+target_smart = rein_baza
+spawn_point = rein_baza_spawn_point
+story_id = rein_baza_squad
+
+[rein_baza_solder_squad]:online_offline_group
+faction = stalker
+sympathy = 1
+npc = solder_baza_01, solder_baza_02, solder_baza_03, solder_baza_04, solder_baza_05
+target_smart = rein_baza
+spawn_point = rein_baza_spawn_point
+story_id = rein_baza_solder_squad
+
+;--------------Арена------------
+[rein_leader_squad]:online_offline_group
+relationship = neutral
+faction = bandit
+npc = rein_bandit_arena_trader, rein_bandit_arena_medic, rein_bandit_arena_leader, rein_bandit_arena_barmen, rein_bandit_arena_totolizator, rein_bandit_arena_boss_sultan
+target_smart = rein_arena
+spawn_point = rein_arena_spawn_point
+story_id = rein_leader_squad
+
+[arena_ohrana_squad]:online_offline_group
+relationship = neutral
+faction = bandit
+npc = rein_bandit_1_guard, rein_bandit_2_guard
+target_smart = rein_arena
+story_id = arena_ohrana_squad
+
+
+;---------наёмники на заслоне-------
+
+[rein_merc_squad]:online_offline_group
+faction = killer
+npc = rein_zaslon_merc_01, rein_zaslon_merc_02, rein_zaslon_merc_03, rein_zaslon_merc_04, rein_zaslon_merc_05, rein_zaslon_merc_06, rein_zaslon_merc_07, rein_zaslon_merc_08, rein_zaslon_merc_09
+target_smart = rein_zaslon
+spawn_point = rein_zaslon_spawn_point
+story_id = rein_merc_squad
+
+[rein_merc_leader_squad]:online_offline_group
+faction = killer
+npc = rein_zaslon_merc_leader, rein_zaslon_merc_grom
+target_smart = rein_zaslon
+spawn_point = rein_zaslon_spawn_point
+story_id = rein_merc_leader_squad
+
+;------------монолит--------------
+[rein_monolith_squad]:online_offline_group
+faction = monolith
+npc = rein_vahta_monolith_01, rein_vahta_monolith_02, rein_vahta_monolith_03, rein_vahta_monolith_04, rein_vahta_monolith_05
+spawn_point = rein_monolit_vahta_spawn_point
+target_smart = rein_monolit_vahta
+story_id = rein_monolith_squad
+
+[rein_monolith_leader_squad]:online_offline_group
+faction = monolith
+npc = rein_vahta_monolith_ucheniy_01, rein_vahta_monolith_ucheniy_02, rein_vahta_monolith_leader
+spawn_point = rein_monolit_vahta_spawn_point
+target_smart = rein_monolit_vahta
+story_id = rein_monolith_leader_squad
+
+;------------рудник монолита--------------
+[rein_monolith_rudnik_squad]:online_offline_group
+faction = monolith
+npc = rein_rudnik_monolith_trader, rein_rudnik_monolith_tehnik, rein_rudnik_monolith_01, rein_rudnik_monolith_02
+spawn_point = rein_rudnik_spawn_point
+target_smart = rein_rudnik
+story_id = rein_monolith_rudnik_squad
+
+;------------Группа захвата--------------
+[monolith_zahvat_squad]:online_offline_group
+faction = monolith
+npc = monolith_zahvat_01, monolith_zahvat_02, monolith_zahvat_03, monolith_zahvat_04, monolith_zahvat_05, monolith_zahvat_06, monolith_zahvat_07, monolith_zahvat_leader
+spawn_point = rein_b3_spawn_point
+target_smart = rein_b3
+story_id = monolith_zahvat_squad
+;------------Блок пост--------------
+[rein_post_solder_squad]:online_offline_group
+faction = stalker
+sympathy = 1
+npc = solder_baza_01, solder_baza_02, solder_baza_03, solder_baza_04, solder_baza_05
+target_smart = rein_b5
+spawn_point = rein_b5_spawn_point
+story_id = rein_post_solder_squad
+

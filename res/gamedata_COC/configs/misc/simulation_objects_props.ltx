@@ -683,15 +683,18 @@ sim_avail = false
 
 [bar_zastava_dogs_friend_dolg_lair]:default
 sim_avail 	= {=target_squad_name(simulation_dog_friend_dolg)} true
-dog_friend_dolg	= 4
+dog_friend_dolg	= 2
+territory	= 0
 
 [bar_zastava_dogs_friend_dolg_lair_2]:default
 sim_avail 	= {=target_squad_name(simulation_dog_friend_dolg_2)} true
-dog_friend_dolg	= 4
+dog_friend_dolg	= 2
+territory	= 0
 
 [bar_cat_friend_dolg_lair]:default
 sim_avail 	= {=target_squad_name(simulation_cat_friend_dolg)} true
-cat_friend_dolg	= 3
+cat_friend_dolg	= 2
+territory	= 0
 
 [bar_anya]:default
 sim_avail 	= {=target_squad_name(bar_anya_squad)} true
@@ -699,34 +702,35 @@ sim_avail 	= {=target_squad_name(bar_anya_squad)} true
 [bar_smart_komar_1]:default
 sim_avail 	= {=target_squad_name(simulation_bar_komar)} true
 komar	= 10
+territory	= 0
 
 [wiz_deathclaw_lair]:default
 sim_avail 	= {=target_squad_name(simulation_deathclaw)} true
 deathclaw_weak	= 1
-deathclaw_normal	= 1
-deathclaw_strong	= 1
 
 [wiz_smart_komar_1]:default
 sim_avail 	= {=target_squad_name(simulation_wiz1_komar)} true
 komar	= 10
+territory	= 0
 
 
 [wiz_smart_komar_2]:default
 sim_avail 	= {=target_squad_name(simulation_wiz2_komar)} true
 komar	= 10
+territory	= 0
 
 
 [wiz_oazis]:default
 sim_avail 	= {=target_squad_name(simulation_oasis)} true
-m_controller_act	= 3
+m_controller_act	= 2
 
 ;= Коллектор
 
 [labx7_coll22_1_koster]:default
 sim_avail 	= true
-surge		= 5
-stalker 	= 2 
-dolg		= 2
+surge		= 8
+stalker 	= 5 
+dolg		= 3
 
 
 
@@ -2749,3 +2753,134 @@ stalker		= 1
 
 [esc_smart_terrain_11_5]:default_lair
 sim_avail 	= true
+
+; ---------------------------REIN-----------------------------------------
+; --------------------------------------------------------------------------
+
+;--------simulation--------
+[rein_sim_1]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_2]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_3]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_4]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_5]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_6]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_7]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_8]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_9]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_10]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_11]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_12]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_13]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_14]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_15]:default
+territory 	= 1
+sim_avail =  true
+
+[rein_sim_16]:default
+territory 	= 1
+sim_avail =  true
+
+;---------REIN UNIQUE SQUADS--------
+[rein_baza]:default
+surge = 1
+territory = 1
+sim_avail = true
+
+[rein_arena]:default
+surge = 1
+territory = 1
+sim_avail = true
+
+[rein_zaslon]:default
+surge = 1
+territory = 1
+sim_avail = true
+
+[rein_monolit_vahta]:default_squad
+sim_avail = true
+
+[rein_rudnik]:default
+surge = 1
+territory = 1
+sim_avail = true
+
+[rein_hutor]:default_squad
+sim_avail = true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;bandit
+[rein_b2]:default_squad
+sim_avail = true
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;monolith
+[rein_a1]:default_squad
+sim_avail = true
+
+[rein_a2]:default_squad
+sim_avail = true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[rein_b1]:default_squad
+sim_avail = true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Zahvat
+[rein_b3]:default_squad
+sim_avail = true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Dolg
+[rein_b4]:default_squad
+sim_avail = true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Stalkeri
+[rein_b5]:default_squad
+sim_avail = true
+
+[rein_unik]:default_squad
+sim_avail = true
+
