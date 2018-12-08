@@ -469,12 +469,6 @@ function CSurgeManager:update()
 		if (self.condlist and xr_logic.pick_section_from_condlist(db.actor, nil, self.condlist) == "false") then
 			return
 		end
-		
-		for i = 0, #halt_alife_info do
-			if (has_alife_info(halt_alife_info[i])) then return end
-		end
-		
-		
 		self:start()
 		return
 	end
@@ -650,7 +644,6 @@ function CSurgeManager:update()
 			if(diff_sec>=120) and (self.stages['1stwave']==nil)  then
 				self:start_wave(1,diff_game_sec)
 				self.stages['1stwave']=true
-
 				--self.debugMessages[2]:SetText("1st wave at: "..tostring(diff_sec))
 			end
 			-- 2nd wave sound -----------------------------------------------------------------------------------------------------------------------------------------
