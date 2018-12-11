@@ -355,13 +355,6 @@ glow_texture    					= glow\glow_tactical_torch					; glow texture name     (req
 glow_radius     					= 0.25									; glow radius           <in meters>
 guide_bone      					= light_bone_2								; guid bone name        (required)
 
-[inv_backpack]:inventory_box
-visual                                   = dynamics\devices\dev_rukzak\dev_rukzak.ogf
-custom_data                              = scripts\treasure_inventory_box.ltx
-radius                                   = 1
-
-[inv_actor_backpack]:inv_backpack
-
 [inventory_box]
 GroupControlSection                      = spawn_group
 discovery_dependency                     =
@@ -372,3 +365,10 @@ visual                                   = dynamics\equipment_cache\equipment_bo
 script_binding                           = bind_physic_object.init
 
 [hidden_box]:inventory_box
+
+[inv_backpack]:inventory_box
+visual                                   = dynamics\devices\dev_rukzak\dev_rukzak.ogf
+custom_data                              = scripts\treasure_inventory_box.ltx
+radius                                   = 1
+
+[inv_actor_backpack]:inv_backpack
