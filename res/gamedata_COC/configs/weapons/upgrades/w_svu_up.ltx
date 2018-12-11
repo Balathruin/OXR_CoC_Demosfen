@@ -69,14 +69,13 @@ condition_shot_dec					= -0.001 ;0.0011	;увеличение изношености при одиночном вы
 misfire_start_prob	 				= -0.001			;шанс осечки при изношености больше чем misfireStartCondition
 misfire_end_prob				 	= -0.01 ;0.03		;шанс осечки при изношености больше чем misfireEndCondition
 
-[up_sect_secone_svu]
+[up_sect_secone_svu]:wpn_svu_up_sounds
 ;Интегрированный глушитель
 ;---------------
 cost								= 2700
 value								= +1
 
 silencer_status						= 1
-snd_silncer_shot					= weapons\w_ak74_shot1
 
 silencer_name						= wpn_addon_silencer 
 silencer_x							= 224
@@ -118,7 +117,7 @@ PDM_disp_accel_factor 				= -0.3
 ;------------
 cost								= 2000
 
-scope_zoom_factor					= -3
+scope_zoom_factor       = +2
 
 [up_sect_fourtc_svu]
 ;Контрастный прицел

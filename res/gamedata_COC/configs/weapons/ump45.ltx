@@ -1,0 +1,325 @@
+; Универсальный пистолет-пулемет HK UMP
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 				11.43х23 мм
+; длина ствола 				200 мм
+; магазин				25
+; вес с пустым магазином		2.47 кг
+; максимальная дальность стрельбы	700 м
+; эффективная дальность стрельбы	100 м
+; прицельная дальность			100 м
+; дульная скорость пули			273 м/с
+; темп стрельбы				600 в/м
+;---------------------------------------------------
+[wpn_ump45]:default_weapon_params,wpn_ump45_sounds
+GroupControlSection 			= spawn_group
+$spawn					= "weapons\ump45"
+$npc					= on
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_LR300
+description 				= st_wpn_ump45_descr
+
+scopes 					= ac10632, ac11090, acog, eot, c-more
+parent_section  			= wpn_ump45
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+inv_name				= st_wpn_ump45
+inv_name_short				= st_wpn_ump45
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 4
+inv_grid_x                                         = 26
+inv_grid_y                                         = 11
+
+upgr_icon_x				= 900
+upgr_icon_y				= 800
+upgr_icon_width				= 250
+upgr_icon_height 			= 100
+
+kill_msg_x				= 72
+kill_msg_y				= 82
+kill_msg_width				= 56
+kill_msg_height				= 23
+
+cost					= 5000
+weapon_class				= assault_rifle
+inv_weight				= 2.47
+hud					= wpn_ump45_hud
+visual					= dynamics\weapons\wpn_ump45\wpn_ump45.ogf
+
+upgrades				= up_gr_firstab_sig550, up_gr_seconab_sig550, up_gr_thirdab_sig550, up_gr_fourtab_sig550, up_gr_fifthab_sig550
+installed_upgrades			=
+upgrade_scheme				= upgrade_scheme_sig550
+
+ph_mass					= 3
+
+ammo_class				= ammo_11.43x23_fmj, ammo_11.43x23_hydro
+
+startup_ammo				= 90
+ammo_current		 		= 180
+ammo_elapsed		 		= 25
+ammo_limit		 		= 210
+ammo_mag_size		 		= 25
+
+fire_modes				= 1, 2, -1
+
+grenade_class				= ammo_vog-25
+
+launch_speed				= 0
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power				= 0.21
+;hit_impulse				= 10
+hit_type				= fire_wound
+fire_distance				= 700
+bullet_speed				= 273
+rpm					= 600
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 3.0
+misfire_probability			= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 		= 0.004
+misfire_end_prob	 		= 0.057
+condition_shot_dec 			= 0.000125
+condition_queue_shot_dec			= 0.0002
+
+zoom_dof					= 0.5, 1.0, 180
+reload_dof					= 0.0, 0.5, 5, 2
+
+fire_dispersion_base				= 0.28
+fire_dispersion_condition_factor		= 2.5
+control_inertion_factor				= 1.1f
+crosshair_inertion 				= 4.25
+
+cam_return				= 0
+cam_relax_speed				= 5
+cam_relax_speed_ai				= 120.75
+cam_dispersion				= 0.5
+cam_dispersion_inc				= 0.25
+cam_dispersion_frac				= 1.0
+cam_max_angle				= 50.0
+cam_max_angle_horz				= 50.0
+cam_step_angle_horz				= 1.5
+
+zoom_cam_relax_speed			= 10
+zoom_cam_relax_speed_ai			= 120.75
+zoom_cam_dispersion			= 0.5
+zoom_cam_dispersion_inc			= 0.25
+zoom_cam_dispersion_frac			= 1.0
+zoom_cam_max_angle			= 50
+zoom_cam_max_angle_horz			= 50
+zoom_cam_step_angle_horz			= 1.5
+
+PDM_disp_base 				= 0.5
+PDM_disp_vel_factor 			= 1.5
+PDM_disp_accel_factor 			= 1.5
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 			= 1.0
+
+min_radius				= 30
+max_radius				= 40
+
+holder_range_modifier			= 1.00
+holder_fov_modifier				= 1.00
+
+slot					= 2
+animation_slot				= 8
+
+position					= -0.026, -0.125, -0.03
+orientation					= 0, -10, 0
+
+fire_point					= 0.0, 0.188, 0.392
+fire_point2					= 0.0, 0.188, 0.392
+
+flame_particles				= weapons\generic_weapon05
+smoke_particles        			 	= amik\weapons\smoke_particles\smoke_particles_00
+	
+shell_point					= 0.0, 0.188, 0.082
+shell_dir					= 0.0, 1.0, 0.0
+shell_particles	 			= weapons\45acp
+
+strap_position 				= -0.16, -0.36, 0.15
+strap_orientation 				= -10, -5, 10
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= false
+light_color				= 0.6, 0.5, 0.3
+light_range				= 5
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time				= 0.2
+
+scope_status				= 0
+silencer_status				= 2
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.2
+scope_zoom_factor                        = 1.25
+
+scopes_sect				= scope_susat_ump45, scope_susat_x1.6_ump45, scope_susat_custom_ump45, scope_susat_dusk_ump45, scope_susat_night_ump45
+
+silencer_name				= sil_nato
+silencer_x                  		= 171
+silencer_y                  		= 12
+
+grenade_launcher_name			= 
+grenade_launcher_x			= 
+grenade_launcher_y			= 
+
+silencer_hit_power 			= 0.2
+silencer_hit_impulse			= 20
+silencer_fire_distance 			= 700
+silencer_bullet_speed	 		= 273
+
+silencer_smoke_particles 		= amik\weapons\smoke_particles\silencer_smoke_particles_02
+
+silencer_light_color			= 0.6, 0.5, 0.3
+silencer_light_range			= 0.01
+silencer_light_var_color		= 0.05
+silencer_light_var_range		= 0.5
+silencer_light_time			= 0.2
+
+[wpn_ump45_hud]
+zoom_hide_crosshair     		= true
+
+attach_place_idx        		= 0
+item_visual            	 		= dynamics\weapons\wpn_ump45\wpn_ump45_hud.ogf
+
+hands_position				= -0.044,-0.2,0.14
+hands_orientation			= 2,2,0
+
+hands_position_16x9			= -0.044,-0.2,0.14
+hands_orientation_16x9			= 2,2,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos			= -0.11195,0.05915,-0.1
+aim_hud_offset_rot			= 0.0226,0.03425,0
+
+aim_hud_offset_pos_16x9			= -0.11195,0.05915,-0.1
+aim_hud_offset_rot_16x9			= 0.0226,0.03425,0
+
+shell_point				= 0,0,0
+shell_dir       			= 0,1,0
+shell_bone				= gilza
+
+fire_point				= 0,0,0
+fire_bone      				= muzzle
+fire_point2				= 0,0,0
+fire_bone2				= wpn_body
+
+anm_show               	 		= ump45_draw
+anm_hide                		= ump45_holster
+anm_idle                		= ump45_idle
+anm_idle_sprint         		= ump45_idle_sprint
+anm_idle_moving         		= ump45_idle_moving
+anm_idle_moving_crouch			= ump45_idle_crouch
+anm_shots               		= ump45_shoot, shoot
+anm_reload              		= ump45_reload_empty, reload_empty ;ump45_reload, reload
+anm_reload_empty			= ump45_reload_empty, reload_empty
+anm_idle_aim            		= ump45_idle_aim
+anm_bore                		= ump45_idle_aim
+
+gl_hud_offset_pos       		= 0,0,0
+gl_hud_offset_rot       		= 0,0,0
+
+gl_hud_offset_pos_16x9    		= 0,0,0
+gl_hud_offset_rot_16x9    		= 0,0,0
+
+lean_hud_offset_pos        		= 0,0,0
+lean_hud_offset_rot        		= 0,0,0
+;-----------------------------------------------------------------------------
+; јддоны
+;-----------------------------------------------------------------------------
+[wpn_ump45_ac10632]:wpn_ump45
+$spawn             			= "weapons\ump45_ac10632"
+visual					= dynamics\weapons\wpn_ump45\wpn_ump45_ac10632.ogf
+hud					= wpn_ump45_ac10632_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 85
+scope_y					= -9
+
+[wpn_ump45_ac10632_hud]:wpn_ump45_hud
+item_visual            	 		= dynamics\weapons\wpn_ump45\wpn_ump45_ac10632_hud.ogf
+
+aim_hud_offset_pos			= -0.11225,0.0404,-0.1
+aim_hud_offset_pos_16x9			= -0.11225,0.0404,-0.1
+
+[wpn_ump45_ac11090]:wpn_ump45
+$spawn             			= "weapons\ump45_ac11090"
+visual					= dynamics\weapons\wpn_ump45\wpn_ump45_ac11090.ogf
+hud					= wpn_ump45_ac11090_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 85
+scope_y					= -9
+
+[wpn_ump45_ac11090_hud]:wpn_ump45_hud
+item_visual            	 		= dynamics\weapons\wpn_ump45\wpn_ump45_ac11090_hud.ogf
+
+aim_hud_offset_pos			= -0.11185,0.03565,-0.1
+aim_hud_offset_rot	 		= 0.025,0.0345,0
+
+aim_hud_offset_pos_16x9 		= -0.11185,0.03565,-0.1
+aim_hud_offset_rot_16x9 		= 0.025,0.0345,0
+
+[wpn_ump45_acog]:wpn_ump45
+$spawn					= "weapons\ump45_acog"
+hud					= wpn_ump45_acog_hud
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_acog
+scope_zoom_factor       = 4
+zoom_rotate_time			= 0.25
+scope_x					= 85
+scope_y					= -9
+
+[wpn_ump45_acog_hud]:wpn_ump45_ac11090_hud
+item_visual            	 		= dynamics\weapons\wpn_ump45\wpn_ump45_hud.ogf
+
+[wpn_ump45_eot]:wpn_ump45
+$spawn					= "weapons\ump45_eot"
+visual					= dynamics\weapons\wpn_ump45\wpn_ump45_eot.ogf
+hud					= wpn_ump45_eot_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 85
+scope_y					= -9
+
+[wpn_ump45_eot_hud]:wpn_ump45_hud
+item_visual            	 		= dynamics\weapons\wpn_ump45\wpn_ump45_eot_hud.ogf
+
+aim_hud_offset_pos			= -0.1119,0.0327,-0.05
+aim_hud_offset_rot			= 0.022,0.0345,0
+	
+aim_hud_offset_pos_16x9			= -0.1119,0.0327,-0.05
+aim_hud_offset_rot_16x9			= 0.022,0.0345,0
+
+[wpn_ump45_c-more]:wpn_ump45
+$spawn					= "weapons\ump45_c-more"
+visual					= dynamics\weapons\wpn_ump45\wpn_ump45_c-more.ogf
+hud					= wpn_ump45_c-more_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 85
+scope_y					= -9
+
+[wpn_ump45_c-more_hud]:wpn_ump45_hud
+item_visual				= dynamics\weapons\wpn_ump45\wpn_ump45_c-more_hud.ogf
+
+aim_hud_offset_pos	 		= -0.1125,0.05,-0.1
+aim_hud_offset_rot			= 0.034,0.034,0
+
+aim_hud_offset_pos_16x9 		= -0.1125,0.05,-0.1
+aim_hud_offset_rot_16x9 		= 0.034,0.034,0

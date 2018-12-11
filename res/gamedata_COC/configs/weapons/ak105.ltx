@@ -1,0 +1,306 @@
+; Автомат Калашникова «сотой серии»
+;-(TrickSR)-----------------------------------------
+; калибр					5.45х39
+; длина ствола 				314 мм
+; магазин					20/30/45
+; вес с пустым магазином				3.20 кг
+; максимальная дальность стрельбы		3000 м
+; эффективная дальность стрельбы		400 м
+; прицельная дальность			500 м
+; дульная скорость пули			840 м/с
+; темп стрельбы				600 в/м
+;---------------------------------------------------
+[wpn_ak105]:default_weapon_params,wpn_ak105_sounds
+GroupControlSection			= spawn_group
+$spawn 					= "weapons\ak-105"
+$npc 					= on
+$prefetch					= 8
+scheduled					= off
+cform					= skeleton
+class					= WP_AK74
+description				= st_wpn_ak105_descr
+
+scopes 					= 1p29, 1p78, kobra, pso, ekp
+parent_section  				= wpn_ak105
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+inv_name 					= st_wpn_ak105
+inv_name_short				= st_wpn_ak105
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 30
+inv_grid_y                                         = 12
+
+upgr_icon_x				= 0
+upgr_icon_y				= 900
+upgr_icon_width				= 300
+upgr_icon_height 				= 100
+
+kill_msg_x					= 0
+kill_msg_y				= 123
+kill_msg_width				= 69
+kill_msg_height				= 30
+
+cost 					= 4000
+weapon_class				= assault_rifle
+inv_weight				= 3.2
+hud					= wpn_ak105_hud
+visual					= dynamics\weapons\wpn_ak105\wpn_ak105.ogf
+
+upgrades                				= up_gr_firstab_abakan, up_gr_seconab_abakan, up_gr_thirdab_abakan, up_gr_fourtab_abakan, up_gr_fifthab_abakan
+installed_upgrades      			=
+upgrade_scheme          			= upgrade_scheme_abakan
+
+ph_mass					= 3
+
+ammo_class 				= ammo_5.45x39_fmj, ammo_5.45x39_ap
+
+startup_ammo				= 90
+ammo_current				= 180
+ammo_elapsed				= 30
+ammo_limit				= 210
+ammo_mag_size 				= 30
+
+fire_modes 				= 1, -1
+	
+grenade_class				= ammo_vog-25, ammo_vog-25p
+
+grenade_vel 				= 76
+launch_speed				= 76
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power 				= 0.25
+;hit_impulse 				= 10
+hit_type 					= fire_wound
+fire_distance				= 1000
+bullet_speed				= 840
+rpm					= 600
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 1.0
+
+misfire_probability				= 0.005
+misfire_start_condition				= 0.6
+misfire_end_condition				= 0.1
+misfire_start_prob	 			= 0.003
+misfire_end_prob		 		= 0.043
+condition_shot_dec 				= 0.0001
+condition_queue_shot_dec			= 0.0002
+
+zoom_dof					= 0.5, 1.0, 180
+reload_dof					= 0.0, 0.5, 5, 2
+
+fire_dispersion_base				= 0.35
+fire_dispersion_condition_factor		= 2
+control_inertion_factor				= 1.2f
+crosshair_inertion				= 5.75
+
+cam_return					= 0
+cam_relax_speed				= 13
+cam_relax_speed_ai 				= 120.75
+cam_dispersion				= 1.02
+cam_dispersion_inc				= 0.55
+cam_dispersion_frac				= 1.0
+cam_max_angle				= 50.0
+cam_max_angle_horz				= 5.0
+cam_step_angle_horz				= 0.5
+
+zoom_cam_relax_speed			= 14
+zoom_cam_relax_speed_ai			= 120.75
+zoom_cam_dispersion				= 0.92
+zoom_cam_dispersion_inc			= 0.5
+zoom_cam_dispersion_frac			= 0.8
+zoom_cam_max_angle				= 50.0
+zoom_cam_max_angle_horz			= 5.0
+zoom_cam_step_angle_horz			= 0.4
+
+PDM_disp_base 				= 0.5
+PDM_disp_vel_factor 				= 2.0
+PDM_disp_accel_factor 			= 2.0
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 			= 1.0
+
+min_radius					= 30
+max_radius					= 40
+
+holder_range_modifier				= 1.0
+holder_fov_modifier				= 1.0
+
+slot					= 2
+animation_slot				= 8
+
+position					= -0.026, -0.175, 0.0
+orientation					= 0, 0, 0
+
+fire_point					= 0, 0.218, 0.656
+fire_point2					= 0, 0.161, 0.583
+
+flame_particles				= amik\weapons\ak_shoot_00
+smoke_particles				= amik\weapons\smoke_particles\smoke_particles_01
+grenade_flame_particles 			= amik\weapons\grenade_flame_particles\grenade_flame_particles_00
+
+shell_point		 			= 0.02,0.04,0.5
+shell_dir					= 0.0, 0.0, 0.4
+shell_particles				= weapons\545x39
+
+strap_position 				= -0.18, -0.45, 0.2
+strap_orientation 				= -10, -5, 10
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= false
+light_color					= 0.6, 0.5, 0.3
+light_range					= 5
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time					= 0.2
+
+scope_status				= 0
+silencer_status				= 2
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.2
+scope_zoom_factor                        = 1.25
+
+grenade_launcher_name			= wpn_addon_grenade_launcher
+grenade_launcher_x			= 112
+grenade_launcher_y			= 19
+
+silencer_name				= sil_tgp-a
+silencer_x                  		= 206
+silencer_y                  		= 18
+
+silencer_hit_power 			= 0.25
+silencer_hit_impulse	 		= 20
+silencer_fire_distance 			= 1000
+silencer_bullet_speed	 		= 840
+
+silencer_smoke_particles 		= amik\weapons\smoke_particles\silencer_smoke_particles_00
+
+silencer_light_color			= 0.6, 0.5, 0.3
+silencer_light_range			= 0.01
+silencer_light_var_color		= 0.05
+silencer_light_var_range		= 0.5
+silencer_light_time			= 0.2
+
+[wpn_ak105_hud]
+zoom_hide_crosshair        		= true
+attach_place_idx        		= 0
+item_visual                		= dynamics\weapons\wpn_ak105\wpn_ak105_hud.ogf
+
+hands_position 				= 0.0305,-0.02,0.2
+hands_orientation 			= 0,2.3,-0.7298
+
+hands_position_16x9 			= 0.0305,-0.02,0.2
+hands_orientation_16x9 			= 0,2.3,-0.7298
+
+item_position 				= -0.008889,0.016527,0.003094
+item_orientation 			= 0.1,0,0.7
+
+aim_hud_offset_pos 			= -0.0942,0.0541,-0.05
+aim_hud_offset_rot 			= 0.0428,-0.0037,-0.0158
+
+aim_hud_offset_pos_16x9 		= -0.0942,0.0541,-0.05
+aim_hud_offset_rot_16x9 		= 0.0428,-0.0037,-0.0158
+
+shell_point                		= 0.018,0.06,0.188
+shell_dir               		= 0,1,0
+shell_bone                		= wpn_body
+
+fire_point				= 0,0.048,0.466
+fire_bone                            	= wpn_body
+fire_point2                        	= 0,-0.011,0.553
+fire_bone2                		= wpn_body
+
+anm_show				= ak_105_draw
+anm_hide                		= ak_105_holster
+anm_idle                		= ak_105_idle
+anm_idle_sprint         		= ak_105_idle_sprint
+anm_idle_moving         		= ak_105_idle_move
+anm_shots               		= ak_105_shoot
+anm_reload              		= ak_105_reload
+anm_idle_aim            		= ak_105_idle_aim
+anm_bore                		= ak_105_idle_bore
+
+gl_hud_offset_pos              	 	= 0,0,0
+gl_hud_offset_rot               	= 0,0,0
+
+gl_hud_offset_pos_16x9          	= 0,0,0
+gl_hud_offset_rot_16x9            	= 0,0,0
+
+lean_hud_offset_pos        		= 0,0,0
+lean_hud_offset_rot        		= 0,0,0
+;-----------------------------------------------------------------------------
+; Аддоны
+;-----------------------------------------------------------------------------
+[wpn_ak105_1p29]:wpn_ak105
+$spawn             			= "weapons\wpn_ak105_1p29"
+hud					= wpn_ak105_1p29_hud
+visual					= dynamics\weapons\wpn_ak105\wpn_ak105_1p29.ogf
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_1p29
+scope_zoom_factor       = 4
+zoom_rotate_time			= 0.25
+scope_x                     		= 69
+scope_y                     		= 10
+
+[wpn_ak105_1p29_hud]:wpn_ak105_hud
+item_visual                		= dynamics\weapons\wpn_ak105\wpn_ak105_1p29_hud.ogf
+
+[wpn_ak105_ekp]:wpn_ak105
+$spawn             			= "weapons\wpn_ak105_ekp"
+hud					= wpn_ak105_ekp_hud
+visual					= dynamics\weapons\wpn_ak105\wpn_ak105_ekp.ogf
+
+scope_zoom_factor                        = 1.25
+scope_x                     		= 76
+scope_y                     		= 9
+
+[wpn_ak105_ekp_hud]:wpn_ak105_hud
+item_visual                		= dynamics\weapons\wpn_ak105\wpn_ak105_ekp_hud.ogf
+
+aim_hud_offset_pos			= -0.09415,0.02265,-0.05
+aim_hud_offset_rot			= 0.0414,-0.0052,-0.0158
+
+aim_hud_offset_pos_16x9 		= -0.09415,0.02265,-0.05
+aim_hud_offset_rot_16x9 		= 0.0414,-0.0052,-0.0158
+
+[wpn_ak105_kobra]:wpn_ak105
+$spawn             			= "weapons\wpn_ak105_kobra"
+hud					= wpn_ak105_kobra_hud
+visual					= dynamics\weapons\wpn_ak105\wpn_ak105_kobra.ogf
+
+scope_zoom_factor                        = 1.25
+scope_x                     		= 78
+scope_y                     		= 13
+
+[wpn_ak105_kobra_hud]:wpn_ak105_hud
+item_visual                		= dynamics\weapons\wpn_ak105\wpn_ak105_kobra_hud.ogf
+
+aim_hud_offset_pos			= -0.09405,0.02345,-0.05
+aim_hud_offset_rot			= 0.025,-0.0015,-0.0158
+
+aim_hud_offset_pos_16x9 		= -0.09405,0.02345,-0.05
+aim_hud_offset_rot_16x9 		= 0.025,-0.0015,-0.0158
+
+[wpn_ak105_pso]:wpn_ak105
+$spawn             			= "weapons\wpn_ak105_pso"
+hud					= wpn_ak105_pso_hud
+
+scope_status				= 1
+scope_texture				= wpn_crosshair
+scope_zoom_factor       = 4
+zoom_rotate_time			= 0.25
+scope_x                     		= 59
+scope_y                     		= 9
+
+[wpn_ak105_pso_hud]:wpn_ak105_hud
+hands_position	 			= 0.0305,-0.02,0.25
+hands_position_16x9 			= 0.0305,-0.02,0.25
