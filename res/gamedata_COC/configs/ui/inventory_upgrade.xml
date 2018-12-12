@@ -77,7 +77,6 @@
 	            <cell x="100" y="24" point_x="150" point_y="185"/>
 	            <cell x="100" y="102" point_x="170" point_y="195"/>
 	            <cell x="100" y="151" point_x="200" point_y="195"/>
-	            <cell x="100" y="228" point_x="160" point_y="225"/>
 	        </column>
 	        <column>
 		        <cell x="200" y="24" point_x="175" point_y="230"/>
@@ -320,10 +319,10 @@
 	    </template>
 	    <template name="upgrade_scheme_rad_outfit">
 	        <column>
-	            <cell x="0" y="24" point_x="141" point_y="225"/>
-	            <cell x="0" y="126" point_x="104" point_y="208"/>
-	            <cell x="0" y="228" point_x="135" point_y="191"/>
-				<cell x="0" y="311" point_x="197" point_y="215"/>
+	            <cell x="0" y="24" point_x="94" point_y="205"/>
+	            <cell x="0" y="126" point_x="213" point_y="201"/>
+	            <cell x="0" y="228" point_x="129" point_y="216"/>
+	            <cell x="0" y="330" point_x="177" point_y="179"/>
 	        </column>
 	        <column>
 	            <cell x="100" y="0" point_x="196" point_y="192"/>
@@ -333,16 +332,16 @@
 	            <cell x="100" y="204" point_x="130" point_y="277"/>
 	            <cell x="100" y="253" point_x="50" point_y="208"/>
 	            <cell x="100" y="306" point_x="161" point_y="136"/>
-	            <cell x="100" y="355" point_x="154" point_y="157"/>
+	            <cell x="100" y="354" point_x="154" point_y="157"/>
 	        </column>
 	        <column>
 	            <cell x="200" y="0" point_x="162" point_y="221"/>
 	            <cell x="200" y="49" point_x="185" point_y="207"/>
 	            <cell x="200" y="102" point_x="161" point_y="192"/>
 	            <cell x="200" y="151" point_x="161" point_y="192"/>
-	            <cell x="200" y="228" point_x="130" point_y="277"/>
-	            <cell x="200" y="306" point_x="204" point_y="173"/>
-	            <cell x="200" y="355"  point_x="161" point_y="148"/>
+	            <cell x="200" y="204" point_x="130" point_y="277"/>
+	            <cell x="200" y="253" point_x="204" point_y="173"/>
+	            <cell x="200" y="330"  point_x="161" point_y="148"/>
 	        </column>
 	    </template>
 <!-- helm upgrade schemes -->
