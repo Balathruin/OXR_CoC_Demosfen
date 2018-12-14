@@ -241,32 +241,34 @@ lean_hud_offset_rot			= 0,0,0
 ; ”никальные
 ;-----------------------------------------------------------------------------
 [wpn_pkm_zulus]:wpn_pkm
-$spawn					= "weapons\pkm_zulus"
+$spawn						= "weapons\pkm_zulus"
 
-description				= st_wpn_pkp_descr
+description					= st_wpn_pkp_descr
 
-scopes 					= none
+scopes 						= none
 parent_section  			= wpn_pkm_zulus
 
-inv_name				= st_wpn_pkp
+inv_name					= st_wpn_pkp
 inv_name_short				= st_wpn_pkp
 
-inv_grid_x					= 41
-inv_grid_y				= 38
+inv_grid_width 				= 6
+inv_grid_height				= 2
+inv_grid_x     				= 40
+inv_grid_y     				= 6
 
-upgr_icon_x				= 1450
-upgr_icon_y				= 1750
+upgr_icon_x					= 1450
+upgr_icon_y					= 1750
 
-cost					= 90000
+cost						= 90000
 weapon_class				= heavy_weapon
-inv_weight				= 8.8
-hud					= wpn_pkp_hud
-visual					= dynamics\weapons\wpn_pkm\wpn_pkp.ogf
+inv_weight					= 8.8
+hud							= wpn_pkp_hud
+visual						= dynamics\weapons\wpn_pkm\wpn_pkp.ogf
 
-hit_power				= 0.69
+hit_power					= 0.69
 fire_distance				= 1000
 
-fire_dispersion_base			= 0.3
+fire_dispersion_base		= 0.3
 
 [wpn_pkp_hud]:wpn_pkm_hud
 item_visual             		= dynamics\weapons\wpn_pkm\wpn_pkp_hud.ogf
