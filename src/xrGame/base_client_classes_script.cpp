@@ -99,16 +99,6 @@ SCRIPT_EXPORT(CBlend, (), {
 });
 // clang-format on
 
-#pragma todo("Тут нужно когда-нибудь сделать рефакторинг @Debrovski")
-
-LPCSTR CPatrolPoint::getName(CPatrolPoint *pp) const {
-	return pp->m_name.c_str();
-}
-
-void CPatrolPoint::setName(CPatrolPoint *pp, LPCSTR str) {
-	pp->m_name = shared_str(str);
-}
-
 SCRIPT_EXPORT(CPatrolPoint, (), {
     module(luaState)[
 		class_<CPatrolPoint>("CPatrolPoint")
@@ -117,7 +107,7 @@ SCRIPT_EXPORT(CPatrolPoint, (), {
 			.def_readwrite("m_flags", &CPatrolPoint::m_flags)
 			.def_readwrite("m_level_vertex_id", &CPatrolPoint::m_level_vertex_id)
 			.def_readwrite("m_game_vertex_id", &CPatrolPoint::m_game_vertex_id)
-			.property("m_name", &CPatrolPoint::getName, &CPatrolPoint::setName)
+            .def_readwrite("m_name", &CPatrolPoint::m_name)
 			.def("position", (CPatrolPoint& (CPatrolPoint::*) (Fvector)) (&CPatrolPoint::position))
 	];
 });
