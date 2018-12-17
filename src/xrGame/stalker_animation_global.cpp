@@ -53,7 +53,8 @@ MotionID CStalkerAnimationManager::global_critical_hit()
     VERIFY2(weapon, make_string("current active item: %s", object().inventory().ActiveItem() ?
                             *object().inventory().ActiveItem()->object().cName() :
                             "no active item"));
-
+    if (!weapon)
+        return (MotionID());
     u32 animation_slot = weapon->animation_slot();
     VERIFY(animation_slot >= 1);
     VERIFY(animation_slot <= 3);
