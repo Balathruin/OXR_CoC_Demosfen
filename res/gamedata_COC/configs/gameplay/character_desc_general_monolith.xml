@@ -7,7 +7,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1428</rank>
-    <reputation>-1640</reputation>
+    <reputation>1640</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -49,7 +49,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>2830</rank>
-    <reputation>-346</reputation>
+    <reputation>346</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -70,7 +70,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1264</rank>
-    <reputation>-210</reputation>
+    <reputation>210</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -175,7 +175,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>9866</rank>
-    <reputation>-1906</reputation>
+    <reputation>1906</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -196,7 +196,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>6068</rank>
-    <reputation>-2381</reputation>
+    <reputation>2381</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -259,7 +259,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1082</rank>
-    <reputation>-2319</reputation>
+    <reputation>2319</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -385,7 +385,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>9988</rank>
-    <reputation>-435</reputation>
+    <reputation>435</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -448,7 +448,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>10774</rank>
-    <reputation>-144</reputation>
+    <reputation>144</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -469,7 +469,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>12474</rank>
-    <reputation>-242</reputation>
+    <reputation>242</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2a_old</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -490,7 +490,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>10748</rank>
-    <reputation>-633</reputation>
+    <reputation>633</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2b_old</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -511,7 +511,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>7534</rank>
-    <reputation>-2218</reputation>
+    <reputation>2218</reputation>
     <visual>actors\stalker_monolith\stalker_monolith0_gp5</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -553,7 +553,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>7800</rank>
-    <reputation>-367</reputation>
+    <reputation>367</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -595,7 +595,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1738</rank>
-    <reputation>-2484</reputation>
+    <reputation>2484</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -616,7 +616,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1512</rank>
-    <reputation>-169</reputation>
+    <reputation>169</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -700,7 +700,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>2896</rank>
-    <reputation>-2233</reputation>
+    <reputation>2233</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -742,7 +742,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>1740</rank>
-    <reputation>-73</reputation>
+    <reputation>73</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -788,7 +788,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>15182</rank>
-    <reputation>-2310</reputation>
+    <reputation>2310</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -811,7 +811,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>12258</rank>
-    <reputation>-505</reputation>
+    <reputation>505</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -834,7 +834,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>20580</rank>
-    <reputation>-1355</reputation>
+    <reputation>1355</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3a</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -857,7 +857,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>20452</rank>
-    <reputation>-1852</reputation>
+    <reputation>1852</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3b</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -903,7 +903,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>21900</rank>
-    <reputation>-1235</reputation>
+    <reputation>1235</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_4</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -926,7 +926,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>26854</rank>
-    <reputation>-2252</reputation>
+    <reputation>2252</reputation>
     <visual>actors\stalker_monolith\stalker_monolith4a</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -949,7 +949,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>23846</rank>
-    <reputation>-2245</reputation>
+    <reputation>2245</reputation>
     <visual>actors\stalker_monolith\stalker_monolith4b</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"
@@ -1040,7 +1040,7 @@
     <class>sim_monolith_sniper</class>
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>1772</rank>
-    <reputation>-1799</reputation>
+    <reputation>1799</reputation>
     <panic_threshold>0.0</panic_threshold>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -1103,7 +1103,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>2984</rank>
-    <reputation>-293</reputation>
+    <reputation>293</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
 #include "gameplay\loadouts\monolith_base.ltx"

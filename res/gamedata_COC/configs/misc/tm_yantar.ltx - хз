@@ -1,0 +1,267 @@
+;==============================================================
+;
+; TASKS PROVIDED ON YANTAR MAP
+;	CoC 1.4.14 - DoctorX Questlines 1.9
+;
+;	Main Faction: ECOLOGIST
+;	Strings file: st_quests_yantar.xml
+;	Modified by: DoctorX
+;	Last revised: October 29, 2016
+;
+;==============================================================
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; STORYLINE TASKS
+;
+;	Modified by DoctorX
+;	for DoctorX Questlines 1.6
+;	October 29, 2016
+;
+;--------------------------------------------------------------------------------------------------
+
+;------------------------------------------------
+; Sakharov (Ecologist Trader) Default Storyline Task (no task, just send to next honcho)-
+
+[drx_sl_yan_stalker_sakharov_default_task]
+
+icon = ui_inGame2_Mesta_evakuatsii
+storyline = true
+prior = 193
+
+title = drx_sl_yan_stalker_sakharov_default_task_name
+descr = drx_sl_yan_stalker_sakharov_default_task_text
+job_descr = drx_sl_yan_stalker_sakharov_default_task_about
+task_complete_descr = drx_sl_yan_stalker_sakharov_default_task_finish
+
+condlist_0 = {-drx_sl_dummy_info} complete
+condlist_1 = {!task_giver_alive(drx_sl_yan_stalker_sakharov_default_task)} fail
+condlist_2 = {=drx_sl_is_enemy(ecolog)} fail
+
+on_complete = %=drx_sl_meet_random_honcho() =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_default_task)%
+on_fail = %=drx_sl_meet_random_honcho() =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_default_task)%
+
+;------------------------------------------------
+; Sakharov (Ecologist Trader) Research Documents Storyline Task-
+
+[drx_sl_yan_stalker_sakharov_task_1]
+
+icon = ui_inGame2_Poslednie_razrabotki
+storyline = true
+prior = 129
+repeat_timeout = 0
+precondition = {=random_chance(100) -drx_sl_quest_item_task_1_started} true, false
+
+title = drx_sl_yan_stalker_sakharov_task_1_name
+descr = drx_sl_yan_stalker_sakharov_task_1_text
+job_descr = drx_sl_yan_stalker_sakharov_task_1_about
+task_complete_descr = drx_sl_yan_stalker_sakharov_task_1_finish
+
+stage_complete = 1
+target_functor = drx_sl_quest_item_task_1_target
+status_functor = drx_sl_quest_item_task_1_status
+condlist_0 = {!task_giver_alive(drx_sl_yan_stalker_sakharov_task_1)} fail
+condlist_1 = {=drx_sl_is_enemy(ecolog)} fail
+
+on_init = %=drx_sl_create_quest_stash_1() +drx_sl_quest_item_task_1_started%
+on_complete = %=reward_random_money(11500:12000) =reward_stash(true) =complete_task_inc_goodwill(50:ecolog) =remove_item(drx_sl_quest_item_1) =inc_task_stage(drx_sl_yan_stalker_sakharov_task_1) =pstor_reset(drx_sl_quest_stash_1_id) -drx_sl_quest_item_task_1_started =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_task_1)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =drx_sl_meet_random_honcho() =pstor_reset(drx_sl_quest_stash_1_id) -drx_sl_quest_item_task_1_started =drx_sl_decrease_sl_tasks_count() =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_task_1)%
+
+;------------------------------------------------
+; Sakharov (Ecologist Trader) Find Artefact Sample Storyline Task-
+
+[drx_sl_yan_stalker_sakharov_task_2]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = true
+prior = 115
+repeat_timeout = 0
+precondition = {=random_chance(100)} true, false
+
+title = drx_sl_yan_stalker_sakharov_task_2_name
+title_functor = general_fetch_task
+descr = drx_sl_yan_stalker_sakharov_task_2_text
+descr_functor = general_fetch_task
+job_descr = drx_sl_yan_stalker_sakharov_task_2_about
+fetch_descr = drx_sl_yan_stalker_sakharov_task_2_fetch_about
+task_complete_descr = drx_sl_yan_stalker_sakharov_task_2_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(drx_sl_yan_stalker_sakharov_task_2)} fail
+condlist_1 = {=drx_sl_is_enemy(ecolog)} fail
+
+fetch_func = %=drx_sl_setup_fetch_artefact(drx_sl_yan_stalker_sakharov_task_2_fetch:1:1)%
+on_complete = %=drx_sl_fetch_reward_money(drx_sl_yan_stalker_sakharov_task_2_fetch:1.2) =reward_stash(true) =complete_task_inc_goodwill(50:ecolog) =inc_task_stage(drx_sl_yan_stalker_sakharov_task_2) =pstor_reset(drx_sl_yan_stalker_sakharov_task_2_fetch) =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_task_2)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =drx_sl_meet_random_honcho() =pstor_reset(drx_sl_yan_stalker_sakharov_task_2_fetch) =drx_sl_decrease_sl_tasks_count() =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_task_2)%
+
+;------------------------------------------------
+; Sakharov (Ecologist Trader) Search Lab X-18 (Dark Valley) Storyline Task-
+
+[drx_sl_yan_stalker_sakharov_task_3]
+
+icon = ui_inGame2_Laboratoriya_X8
+storyline = true
+prior = 165
+repeat_timeout = 0
+precondition = {=random_chance(100) -main_2_search_labx18_task_done} true, false
+
+title = drx_sl_yan_stalker_sakharov_task_3_name
+descr = drx_sl_yan_stalker_sakharov_task_3_text
+job_descr = drx_sl_yan_stalker_sakharov_task_3_about
+task_complete_descr = drx_sl_yan_stalker_sakharov_task_3_finish
+
+stage_complete = 1
+target = {!actor_has_item(main_story_2_lab_x18_documents)} val_space_restrictor_to_labx18, {=actor_has_item(main_story_2_lab_x18_documents)} yan_stalker_sakharov
+status_functor = drx_sl_retrieve_item_task_status
+status_functor_params = main_story_2_lab_x18_documents
+condlist_0 = {!task_giver_alive(drx_sl_yan_stalker_sakharov_task_3)} fail
+condlist_1 = {=drx_sl_is_enemy(ecolog)} fail
+
+on_complete = %+main_2_search_labx18_task_done =reward_random_money(18500:19000) =reward_stash(true) =complete_task_inc_goodwill(50:ecolog) =inc_task_stage(drx_sl_yan_stalker_sakharov_task_3) =remove_item(main_story_2_lab_x18_documents) =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_task_3)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =drx_sl_meet_random_honcho() =drx_sl_decrease_sl_tasks_count =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_task_3)%
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; CHANGE FACTIONS TASKS
+;
+;	Modified by DoctorX
+;	for DoctorX Questlines 1.6
+;	October 06, 2016
+;
+;--------------------------------------------------------------------------------------------------
+
+; ------------------------------------------------
+; Sakharov (Ecologist Trader) Payoff Change Factions Task-
+[drx_sl_yan_stalker_sakharov_cf_task_1]
+
+icon = ui_inGame2_Sdelka
+storyline = true
+prior = 197
+repeat_timeout = 0
+precondition = {=random_chance(100)} true, false
+
+title = drx_sl_yan_stalker_sakharov_cf_task_1_name
+descr = drx_sl_yan_stalker_sakharov_cf_task_1_text
+job_descr = drx_sl_yan_stalker_sakharov_cf_task_1_about
+task_complete_descr = drx_sl_yan_stalker_sakharov_cf_task_1_finish
+
+stage_complete = 1
+target_functor = drx_sl_money_task_target
+status_functor = drx_sl_money_task_status
+condlist_0 = {!task_giver_alive(drx_sl_yan_stalker_sakharov_cf_task_1)} fail
+condlist_1 = {=drx_sl_is_enemy(ecolog)} fail
+
+on_init = %=pstor_set(drx_sl_yan_stalker_sakharov_cf_task_1_fetch:17000) +drx_sl_on_cf_task%
+on_complete = %=drx_sl_money_task_payment(drx_sl_yan_stalker_sakharov_cf_task_1_fetch) =drx_sl_change_factions(ecolog) =inc_task_stage(drx_sl_yan_stalker_sakharov_cf_task_1) =pstor_reset(drx_sl_yan_stalker_sakharov_cf_task_1_fetch) =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_cf_task_1) -drx_sl_on_cf_task%
+on_fail = %=pstor_reset(drx_sl_yan_stalker_sakharov_cf_task_1_fetch) =drx_sl_unregister_task_giver(drx_sl_yan_stalker_sakharov_cf_task_1) -drx_sl_on_cf_task%
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+;//////////////////////////////////////////////////////////////////////////////////////////////////
+;
+; DYNAMIC TASKS
+;
+;	Modified by DoctorX
+;	for DoctorX Questlines 1.6
+;	October 06, 2016
+;
+;--------------------------------------------------------------------------------------------------
+
+;------------------------------------------------
+; Semenov (Ecog Honcho) Research Hunt Task-
+
+[yan_ecolog_semenov_task_1]
+
+icon = ui_inGame2_Ohota_na_Himeru
+storyline = false
+prior = 92
+repeat_timeout = 259200
+precondition = {=random_chance(100)} true, false
+
+title = yan_ecolog_semenov_task_1_name
+descr = yan_ecolog_semenov_task_1_text
+job_descr = yan_ecolog_semenov_task_1_about
+target_functor = yan_ecolog_semenov_task_target_1
+status_functor = task_type_ecolog_gathered_tissue_samples
+task_complete_descr = yan_ecolog_semenov_task_1_finish
+
+stage_complete = 2
+condlist_0 = {!squad_exist(yan_ecolog_semenov_squad)} fail
+condlist_1 = {=check_task_stage(yan_ecolog_semenov_task_1:1)} %+yan_ecolog_semenov_task_1_completed =inc_task_stage(yan_ecolog_semenov_task_1) =remove_task_companion(yan_ecolog_semenov_squad)%
+condlist_2 = {=drx_sl_is_enemy(ecolog)} fail
+
+on_init = %=pstor_set(yan_ecolog_semenov_task_1_tissue_need:5) =add_task_companion(yan_ecolog_semenov_squad) +yan_ecolog_semenov_task_1_started -yan_ecolog_semenov_task_1_completed%
+on_complete = %=reward_random_money(4000:4500) =reward_stash(true) =complete_task_inc_goodwill(50:ecolog) =inc_task_stage(yan_ecolog_semenov_task_1) =pstor_reset(yan_ecolog_semenov_task_1_tissue_need) =pstor_reset(yan_ecolog_semenov_task_1_tissue_count) -yan_ecolog_semenov_task_1_started -yan_ecolog_semenov_task_1_completed =drx_sl_unregister_task_giver(yan_ecolog_semenov_task_1) =drx_sl_reset_stored_task(yan_ecolog_semenov_task_1)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =remove_task_companion(yan_ecolog_semenov_squad) =pstor_reset(yan_ecolog_semenov_task_1_tissue_need) =pstor_reset(yan_ecolog_semenov_task_1_tissue_count) -yan_ecolog_semenov_task_1_started -yan_ecolog_semenov_task_1_completed =drx_sl_unregister_task_giver(yan_ecolog_semenov_task_1) =drx_sl_reset_stored_task(yan_ecolog_semenov_task_1)%
+
+;------------------------------------------------
+; Sakharov (Ecog Trader) Tissue Sample Task-
+
+[yan_stalker_sakharov_task_1]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+repeat_timeout = 259200
+precondition = {=random_chance(100)} true, false
+
+title = yan_stalker_sakharov_task_1_name
+title_functor = general_fetch_task
+descr = yan_stalker_sakharov_task_1_text
+descr_functor = general_fetch_task
+job_descr = yan_stalker_sakharov_task_1_about
+fetch_descr = yan_stalker_sakharov_task_1_fetch_about
+task_complete_descr = yan_stalker_sakharov_task_1_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(yan_stalker_sakharov_task_1)} fail
+condlist_1 = {=drx_sl_is_enemy(ecolog)} fail
+
+fetch_func = %=drx_sl_setup_fetch_mutant_parts(yan_stalker_sakharov_task_1_fetch:1:1)%
+on_complete = %=reward_random_money(4000:4500) =reward_stash(true) =complete_task_inc_goodwill(50:ecolog) =remove_fetch_item(yan_stalker_sakharov_task_1_fetch) =inc_task_stage(yan_stalker_sakharov_task_1) =pstor_reset(yan_stalker_sakharov_task_1_fetch) =drx_sl_unregister_task_giver(yan_stalker_sakharov_task_1) =drx_sl_reset_stored_task(yan_stalker_sakharov_task_1)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =pstor_reset(yan_stalker_sakharov_task_1_fetch) =drx_sl_unregister_task_giver(yan_stalker_sakharov_task_1) =drx_sl_reset_stored_task(yan_stalker_sakharov_task_1)%
+
+;------------------------------------------------
+; Sakharov (Ecog Trader) Wait for Psi Helmet Calibration Task-
+
+[yan_stalker_sakharov_psi_helmet_upgrade]
+
+icon = ui_inGame2_Peremennoe_psi_izluchenie
+storyline = false
+prior = 14
+
+title = yan_stalker_sakharov_psi_helmet_upgrade_name
+descr = yan_stalker_sakharov_psi_helmet_upgrade_text
+
+target = yan_stalker_sakharov
+status_functor = check_if_enough_time_passed
+status_functor_params = 86400  ; 2 days
+
+on_init = %+yan_stalker_sakharov_psi_helmet_upgrade%
+on_complete = %=erase_pstor_ctime(yan_stalker_sakharov_psi_helmet_upgrade) -yan_stalker_sakharov_psi_helmet_upgrade%
+
+;------------------------------------------------
+; Turn Off Miracle Machine Task-
+
+[turn_off_brain_machine]
+
+icon = ui_iconsTotal_yan_kill_brain_task
+storyline = false
+prior = 197
+
+title = brain_machine_deactivate_name
+descr = brain_machine_deactivate_text
+
+target = yan_space_restrictor_to_x16
+condlist_0 = {+yan_labx16_switcher_primary_off} complete
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

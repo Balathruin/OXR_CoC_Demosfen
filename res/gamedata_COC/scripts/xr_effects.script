@@ -5390,7 +5390,14 @@ function make_a_wish(actor,npc,p)
 		return
 	end
 
-	ui_dyn_msg_box.multi_choice(action_list,"st_wish_1","st_wish_2","st_wish_3","st_wish_4","st_wish_5","st_wish_99")
+	-- Hide and disable the immortality wish if actor is in Zombified or Monolith factions.
+	if (character_community(db.actor) == "actor_zombied" or character_community(db.actor) == "actor_monolith") then
+		action_list[5] = nil
+		ui_dyn_msg_box.multi_choice(action_list,"st_wish_1","st_wish_2","st_wish_3","st_wish_4","st_wish_99")
+	else
+		ui_dyn_msg_box.multi_choice(action_list,"st_wish_1","st_wish_2","st_wish_3","st_wish_4","st_wish_5","st_wish_99")
+	end
+
 end
 
 function clear_logic(actor,npc,p)

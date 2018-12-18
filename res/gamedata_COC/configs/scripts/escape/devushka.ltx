@@ -10,7 +10,7 @@ path_look = guard_2_look
 on_info = {=surge_started} walker@surge
 on_info2 = {=is_night} walker@sleeper_1
 on_info3 = {=is_rain} walker@rain
-combat_ignore_cond = {=is_enemy_actor_or_companion} false, false
+combat_ignore_cond = {=actor_enemy =check_enemy_name(actor)} false, false
 combat_ignore_keep_when_attacked = true
 reach_distance = 10
 gather_items_enabled = false

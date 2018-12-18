@@ -1126,6 +1126,9 @@
 		<text>south east of</text>
 	</string>
 	<!-- level description -->
+	<string id="st_dyn_news_rein">
+		<text>in Dead Rein</text>
+	</string>
 	<string id="st_dyn_news_jupiter">
 		<text>in Jupiter,</text>
 	</string>

@@ -1128,6 +1128,9 @@
 		<text>к юго-востоку от</text>
 	</string>
 	<!-- level description -->
+	<string id="st_dyn_news_rein">
+		<text>на Мёртвой Реке</text>
+	</string>
 	<string id="st_dyn_news_jupiter">
 		<text>в окрестностях «Юпитера»,</text>
 	</string>

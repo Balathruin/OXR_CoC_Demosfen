@@ -7,7 +7,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>8</rank>
-    <reputation>-1960</reputation>
+    <reputation>1960</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -122,7 +122,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>3564</rank>
-    <reputation>-1231</reputation>
+    <reputation>1231</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -169,7 +169,7 @@
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>9232</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2076</reputation>
+    <reputation>2076</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_gp5</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -192,7 +192,7 @@
     <snd_config>characters_voice\human_02\csky\</snd_config>
     <rank>3906</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-667</reputation>
+    <reputation>667</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -237,7 +237,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>5134</rank>
-    <reputation>-1690</reputation>
+    <reputation>1690</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_a</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -260,7 +260,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>3244</rank>
-    <reputation>-1673</reputation>
+    <reputation>1673</reputation>
     <visual>actors\stalker_nebo\stalker_neboa2</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -307,7 +307,7 @@
     <snd_config>characters_voice\human_02\csky\</snd_config>
     <rank>64</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1718</reputation>
+    <reputation>1718</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -353,7 +353,7 @@
     <snd_config>characters_voice\human_02\csky\</snd_config>
     <rank>3966</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1702</reputation>
+    <reputation>1702</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -376,7 +376,7 @@
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>12290</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1482</reputation>
+    <reputation>1482</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_old</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -399,7 +399,7 @@
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>12010</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-463</reputation>
+    <reputation>463</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_merc</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -421,7 +421,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>4592</rank>
-    <reputation>-1641</reputation>
+    <reputation>1641</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -444,7 +444,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>5628</rank>
-    <reputation>-153</reputation>
+    <reputation>153</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_a</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -468,7 +468,7 @@
     <snd_config>characters_voice\human_02\csky\</snd_config>
     <rank>3838</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1746</reputation>
+    <reputation>1746</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -491,7 +491,7 @@
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>14606</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-979</reputation>
+    <reputation>979</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_old</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -514,7 +514,7 @@
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>12888</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1546</reputation>
+    <reputation>1546</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_merc</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -560,7 +560,7 @@
     <snd_config>characters_voice\human_02\csky\</snd_config>
     <rank>3932</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1636</reputation>
+    <reputation>1636</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -583,7 +583,7 @@
     <snd_config>characters_voice\human_02\csky\</snd_config>
     <rank>3608</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1313</reputation>
+    <reputation>1313</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -605,7 +605,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>4014</rank>
-    <reputation>-108</reputation>
+    <reputation>108</reputation>
     <visual>actors\stalker_nebo\stalker_neboa2</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -653,7 +653,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>19406</rank>
-    <reputation>-667</reputation>
+    <reputation>667</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2a</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -676,7 +676,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>17934</rank>
-    <reputation>-147</reputation>
+    <reputation>147</reputation>
     <visual>actors\stalker_nebo\stalker_nebob2</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -768,7 +768,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>15664</rank>
-    <reputation>-291</reputation>
+    <reputation>291</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_2</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -791,7 +791,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>3354</rank>
-    <reputation>-1991</reputation>
+    <reputation>1991</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -860,7 +860,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>20124</rank>
-    <reputation>-2173</reputation>
+    <reputation>2173</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2b</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -975,7 +975,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\csky\</snd_config>
     <rank>20180</rank>
-    <reputation>-173</reputation>
+    <reputation>173</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_b</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -1090,7 +1090,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>11674</rank>
-    <reputation>-1642</reputation>
+    <reputation>1642</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_1</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -1113,7 +1113,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>10166</rank>
-    <reputation>-1183</reputation>
+    <reputation>1183</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -1136,7 +1136,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>12888</rank>
-    <reputation>-1403</reputation>
+    <reputation>1403</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -1159,7 +1159,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>27166</rank>
-    <reputation>-1481</reputation>
+    <reputation>1481</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_exo_1</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"
@@ -1182,7 +1182,7 @@
     <community>csky</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\csky\</snd_config>
     <rank>19498</rank>
-    <reputation>-1601</reputation>
+    <reputation>1601</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_b</visual>
     <supplies>
 #include "gameplay\loadouts\csky_base.ltx"

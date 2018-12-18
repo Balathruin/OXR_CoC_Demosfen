@@ -25,7 +25,9 @@ local tbl_way = {
 	jupiter				= {'l10_red_forest','l11_pripyat',		'zaton'},
 	l11_pripyat			= {"l10_radar",		'jupiter',			'pripyat'},
 	pripyat				= {'l11_pripyat'},
-	zaton				= {'jupiter'}
+	zaton				= {'jupiter'},
+	way_in_zone	    	= {'l02_garbage',	'l04_darkvalley',   'l05_bar'},
+	rein	        	= {'l09_deadcity',	'l07_military',     'l06_rostok',   		'l10_red_forest'}
 }
 
 local tbl_ignore_Locations = {

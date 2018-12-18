@@ -22,12 +22,13 @@
 	<string id="ui_st_car_park">
 		<text>Кордон. АТП</text>
 	</string>
+
 	<string id="ui_st_construction_site">
-		<text>Стройка (ДТ)</text>
+		<text>Стройка (Дикая территория)</text>
 	</string>
 
 	<string id="ui_st_container_warehouse">
-		<text>Склад контейнеров (Юпитер)</text>
+		<text>Склад контейнеров (Окрестности Юпитера)</text>
 	</string>
 
 	<string id="ui_st_cultural_center">
@@ -50,7 +51,7 @@
 	</string>
 
 	<string id="ui_st_kopachy_village">
-		<text>Копачи (Юпитер)</text>
+		<text>Копачи (Окрестности Юпитера)</text>
 	</string>
 
 	<string id="ui_st_lodging_house">
@@ -66,11 +67,11 @@
 	</string>
 
 	<string id="ui_st_military_base">
-		<text>База свободы (Милитари)</text>
+		<text>База свободы (Армейские склады)</text>
 	</string>
 
 	<string id="ui_st_northern_factory">
-		<text>База бандитов (ТД)</text>
+		<text>База бандитов (Темная долина)</text>
 	</string>
 	<string id="ui_st_processing_station">
 		<text>Станция переработки отходов (Затон)</text>
@@ -113,7 +114,7 @@
 	</string>
 
 	<string id="ui_st_sports_center">
-		<text>Торговый кооператив (МГ)</text>
+		<text>Торговый кооператив (Мертвый город)</text>
 	</string>
 
 	<string id="ui_st_train_hangar">
@@ -135,7 +136,7 @@
 	</string>
 
 	<string id="ui_st_yanov_station">
-		<text>Станция «Янов» (Юпитер)</text>
+		<text>Станция «Янов» (Окрестности Юпитера)</text>
 	</string>
 	
 	<string id="ui_st_pole_bandit_base">
@@ -159,7 +160,7 @@
 	</string>
 	
 	<string id="ui_st_yanov_depo_monolith">
-		<text>Железнодорожное депо (Юпитер)</text>
+		<text>Железнодорожное депо (Окрестности Юпитера)</text>
 	</string>
 	
 	<string id="ui_st_esc_factory_bandit">
@@ -180,6 +181,10 @@
 	
 	<string id="ui_st_dasc_base">
 		<text>Лесопилка (Тёмная лощина)</text>
-	</string>	
+	</string>
+
+	<string id="ui_st_kpp_jovian">
+		<text>КПП (Окрестности Юпитера)</text>
+	</string>
 	
 </string_table>
