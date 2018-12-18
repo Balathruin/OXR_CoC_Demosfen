@@ -18,27 +18,38 @@ function main(type_obj, amount, dir, who, bone, object)
 			elseif (bone>7) and (bone<11) then
 				part = "r_foot"
 			end
-			local weapon = db.actor:active_item()
-			if  weapon and IsBabah(weapon) or IsExplosive(weapon) then
---[[			if (who) then
-		  			if(who:section() == "explosive_fuelcan")						or
-						(who:section() == "explosive_gaz_balon")					or
-						(who:section() == "explosive_tank")							or
-						(who:section() == "explosive_barrel_low")					or
-						(who:section() == "explosive_grenade")						or
-						(who:section() == "pri_a25_enter_door_explosive_grenade")	or
-						(who:section() == "pri_a25_antenna_grenade")				or
-						(who:section() == "explosive_hide")							or
-						(who:section() == "explosive_particle")						or
-						(who:section() == "explosive_barrel")						or
-						(who:section() == "explosive_mobiltank")					or
-						(who:section() == "explosive_dinamit")						or
-						(who:section() == "wpn_mine")								or
-						(who:section() == "mine_actor")								or
-						(who:section() == "mine_proximity")							or
+			if (who ~= nil) then
+			  if(who:section() == "explosive_fuelcan")						or
+				(who:section() == "ammo_og-7b")								or
+				(who:section() == "explosive_gaz_balon")					or
+				(who:section() == "explosive_tank")							or
+				(who:section() == "explosive_barrel_low")					or
+				(who:section() == "explosive_grenade")						or
+				(who:section() == "pri_a25_enter_door_explosive_grenade")	or
+				(who:section() == "pri_a25_antenna_grenade")				or
+				(who:section() == "explosive_hide")							or
+				(who:section() == "explosive_particle")						or
+				(who:section() == "explosive_barrel")						or
+				(who:section() == "explosive_mobiltank")					or
+				(who:section() == "explosive_dinamit")						or
+				(who:section() == "wpn_mine")								or
+				(who:section() == "mine_actor")								or
+				(who:section() == "mine_proximity")							or
 				
-						(who:section() == "remote_charge")							or
-						(who:section() == "ammo_explosive_charge") then]]
+				(who:section() == "ammo_vog-25")							or
+				(who:section() == "ammo_vog-25p")							or
+				(who:section() == "ammo_m209")								or
+				
+				(who:section() == "remote_charge")							or
+				(who:section() == "ammo_explosive_charge")					or
+				(who:section() == "grenade_f1")								or
+				(who:section() == "grenade_rgd5")							or
+				
+--				(who:active_slot() == 4)									or
+				((who:active_item()~=nil)									and
+				(who:active_item():section() == "wpn_rpg7"))				or
+				((who:active_item()~=nil)									and
+				(who:active_item():section() == "wpn_rg-6"))  then
 						if amount>0.999 then
 							if object~= nil then
 								local section="meat_default"
@@ -80,15 +91,15 @@ function main(type_obj, amount, dir, who, bone, object)
 									end
 									particle_meat:play_at_pos(p_posit)
 								end
-								local se_obj = alife_object(object:id())
- 								if se_obj then safe_release_manager.release(se_obj) else alife():release(se_obj, true) end
+								local sobj = alife():object(object:id())
+								if sobj then alife():release(sobj, true) end
+--								alife():release(alife():object(object:id()), true)
 								return true
 							end
 						end
-					--end
-				--end
-			end
---		log(tostring(bone).."==>"..part)
+				end
+			end			
+--			log(tostring(bone).."==>"..part)
 		end
 	return false
 end
@@ -112,11 +123,15 @@ class "gwr_meatbinder" (object_binder)
 function gwr_meatbinder:update(delta)
 	if db.gwr_meattable[self.object:id()]~= nil then
 		if device():time_global() - 20000 > db.gwr_meattable[self.object:id()] then
-			alife():release(alife():object(self.object:id()), true)
+			local sobj = alife():object(self.object:id())
+			if sobj then alife():release(sobj, true) end
+--			alife():release(alife():object(self.object:id()), true)
 			db.gwr_meattable[self.object:id()] = nil
 		end
 	else
-			alife():release(alife():object(self.object:id()), true)
+			local sobj = alife():object(self.object:id())
+			if sobj then alife():release(sobj, true) end
+--			alife():release(alife():object(self.object:id()), true)
 	end
     object_binder.update(self, delta)
 end
@@ -148,7 +163,9 @@ end
 function gwr_meatbinder:net_destroy()
 	if db.gwr_meattable[self.object:id()]~= nil then
 		db.gwr_meattable[self.object:id()]=nil
-		alife():release(alife():object(self.object:id()), true)
+		local sobj = alife():object(self.object:id())
+		if sobj then alife():release(sobj, true) end
+--		alife():release(alife():object(self.object:id()), true)
 	end
     object_binder.net_destroy(self)
 end

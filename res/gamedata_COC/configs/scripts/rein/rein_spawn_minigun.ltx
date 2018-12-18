@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle@spawn_minigun
+
+[sr_idle@spawn_minigun]
+on_info = sr_idle@wait_for_actor %=spawn_object(yantar_deployable_mgun:rein_deployable_mgun_spawn_point)%
+
+[sr_idle@wait_for_actor]
+on_actor_inside = sr_idle@check_conditions, sr_idle@nil
+
+[sr_idle@check_conditions]
+on_info = {=get_start_time_elapsed_ge(172800) =is_day -actor_is_sleeping !is_faction_enemy_to_actor(killer)} sr_idle@decide
+on_actor_outside = sr_idle@wait_for_actor
+
+[sr_idle@decide]
+on_info = {~50} sr_idle@timer
+
+[sr_idle@timer]
+on_game_timer = 86400 | sr_idle@wait_for_actor
+
+[sr_idle@nil]

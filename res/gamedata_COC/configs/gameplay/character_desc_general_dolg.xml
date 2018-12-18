@@ -30,7 +30,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>2946</rank>
-    <reputation>-1521</reputation>
+    <reputation>1521</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a</visual>
     <supplies>
@@ -76,7 +76,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>4500</rank>
-    <reputation>-593</reputation>
+    <reputation>593</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas4</visual>
     <supplies>
@@ -145,7 +145,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>4082</rank>
-    <reputation>-1182</reputation>
+    <reputation>1182</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas2</visual>
     <supplies>
@@ -214,7 +214,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>10190</rank>
-    <reputation>-465</reputation>
+    <reputation>465</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_old</visual>
     <supplies>
@@ -237,7 +237,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>3980</rank>
-    <reputation>-386</reputation>
+    <reputation>386</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas2</visual>
     <supplies>
@@ -260,7 +260,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>3866</rank>
-    <reputation>-2493</reputation>
+    <reputation>2493</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas2</visual>
     <supplies>
@@ -283,7 +283,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1418</rank>
-    <reputation>-1511</reputation>
+    <reputation>1511</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2</visual>
     <supplies>
@@ -329,7 +329,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>5784</rank>
-    <reputation>-283</reputation>
+    <reputation>283</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas2</visual>
     <supplies>
@@ -352,7 +352,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>4492</rank>
-    <reputation>-448</reputation>
+    <reputation>448</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas3</visual>
     <supplies>
@@ -375,7 +375,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>3934</rank>
-    <reputation>-1660</reputation>
+    <reputation>1660</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas4</visual>
     <supplies>
@@ -421,7 +421,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>3414</rank>
-    <reputation>-1114</reputation>
+    <reputation>1114</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas2</visual>
     <supplies>
@@ -467,7 +467,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1730</rank>
-    <reputation>-1782</reputation>
+    <reputation>1782</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolggas_2</visual>
     <supplies>
@@ -513,7 +513,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>11278</rank>
-    <reputation>-2415</reputation>
+    <reputation>2415</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_old</visual>
     <supplies>
@@ -536,7 +536,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>14962</rank>
-    <reputation>-2328</reputation>
+    <reputation>2328</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_old</visual>
     <supplies>
@@ -582,7 +582,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>774</rank>
-    <reputation>-291</reputation>
+    <reputation>291</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_0</visual>
     <supplies>
@@ -652,7 +652,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>12342</rank>
-    <reputation>-266</reputation>
+    <reputation>266</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_old</visual>
     <supplies>
@@ -699,7 +699,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>14902</rank>
-    <reputation>-356</reputation>
+    <reputation>356</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg1d</visual>
     <supplies>
@@ -723,7 +723,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>30</rank>
-    <reputation>-1980</reputation>
+    <reputation>1980</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_0</visual>
     <supplies>
@@ -771,7 +771,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>4010</rank>
-    <reputation>-1970</reputation>
+    <reputation>1970</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas4</visual>
     <supplies>
@@ -890,7 +890,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1360</rank>
-    <reputation>-2057</reputation>
+    <reputation>2057</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolggas2a</visual>
     <supplies>
@@ -986,7 +986,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>13082</rank>
-    <reputation>-879</reputation>
+    <reputation>879</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg1c</visual>
     <supplies>
@@ -1085,7 +1085,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>10120</rank>
-    <reputation>-893</reputation>
+    <reputation>893</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_3</visual>
     <supplies>
@@ -1110,7 +1110,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>10432</rank>
-    <reputation>-2496</reputation>
+    <reputation>2496</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg3a</visual>
     <supplies>
@@ -1135,7 +1135,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>11234</rank>
-    <reputation>-1934</reputation>
+    <reputation>1934</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg3b</visual>
     <supplies>
@@ -1160,7 +1160,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>16634</rank>
-    <reputation>-393</reputation>
+    <reputation>393</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo_4</visual>
     <supplies>
@@ -1185,7 +1185,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>19078</rank>
-    <reputation>-513</reputation>
+    <reputation>513</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo4a</visual>
     <supplies>
@@ -1235,7 +1235,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>20850</rank>
-    <reputation>-1249</reputation>
+    <reputation>1249</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo4c</visual>
     <supplies>
@@ -1260,7 +1260,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>27136</rank>
-    <reputation>-1520</reputation>
+    <reputation>1520</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_4</visual>
     <supplies>
@@ -1285,7 +1285,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>23144</rank>
-    <reputation>-716</reputation>
+    <reputation>716</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg4a</visual>
     <supplies>
@@ -1310,7 +1310,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>26788</rank>
-    <reputation>-751</reputation>
+    <reputation>751</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg4b</visual>
     <supplies>
@@ -1335,7 +1335,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>26670</rank>
-    <reputation>-438</reputation>
+    <reputation>438</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg4c</visual>
     <supplies>
@@ -1360,7 +1360,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>20474</rank>
-    <reputation>-805</reputation>
+    <reputation>805</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo_4</visual>
     <supplies>
@@ -1385,7 +1385,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>17264</rank>
-    <reputation>-1119</reputation>
+    <reputation>1119</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo4a</visual>
     <supplies>

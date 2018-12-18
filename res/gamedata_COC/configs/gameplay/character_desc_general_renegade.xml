@@ -10,7 +10,7 @@
 		<snd_config>characters_voice\human_01\bandit\</snd_config>
 
 		<rank>299</rank>
-		<reputation>-81</reputation>
+		<reputation>81</reputation>
 
 		<money min="250" max="1750" infinitive="0"/>
 
@@ -38,7 +38,7 @@
 		<snd_config>characters_voice\human_02\bandit\</snd_config>
 
 		<rank>335</rank>
-		<reputation>-1046</reputation>
+		<reputation>1046</reputation>
 
 		<money min="250" max="1750" infinitive="0"/>
 

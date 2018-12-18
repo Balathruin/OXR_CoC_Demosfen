@@ -10,7 +10,7 @@
     <map_icon x="1" y="0"/>
     <terrain_sect>stalker_terrain</terrain_sect>
     <rank>15322</rank>
-    <reputation>-818</reputation>
+    <reputation>818</reputation>
     <money min="1000000" max="1000000" infinitive="1"/>
     <visual>actors\mnp_npc_remeik\merc_dushman</visual>
     <snd_config>characters_voice\human_03\killer\</snd_config>

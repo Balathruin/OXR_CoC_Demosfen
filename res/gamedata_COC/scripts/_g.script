@@ -1106,6 +1106,48 @@ function IsInvbox(o,c)
 	return c and (c == clsid.inventory_box_s or c == clsid.inventory_box)
 end
 -------------------------------------------------------------
+-- 					FROM gwr_meatgrinder [Romann]
+-------------------------------------------------------------
+function IsBabah(o,c)
+	if not (c) then
+		c = o and o:clsid()
+	end
+	if not (babah_classes) then
+		babah_classes = {
+				[clsid.wpn_grenade_f1_s] 		= true,
+				[clsid.wpn_grenade_f1]			= true,
+				[clsid.wpn_grenade_rgd5_s] 		= true,
+				[clsid.wpn_grenade_rgd5] 		= true,
+				[clsid.wpn_grenade_launcher_s] 	= true,
+				[clsid.wpn_grenade_launcher] 	= true,
+				[clsid.wpn_grenade_fake] 		= true,
+				[clsid.wpn_grenade_rpg7]		= true,
+				
+				[clsid.wpn_rg6_s]				= true,
+				[clsid.wpn_rg6]					= true,
+				[clsid.wpn_rpg7_s]				= true,
+				[clsid.wpn_rpg7]				= true,
+				
+				[clsid.obj_explosive_s]			= true,
+				[clsid.obj_explosive]			= true,
+				
+				[clsid.wpn_ammo_vog25_s]		= true,
+				[clsid.wpn_ammo_vog25]			= true,
+				[clsid.wpn_ammo_og7b_s]			= true,
+				[clsid.wpn_ammo_og7b]			= true,
+				[clsid.wpn_ammo_m209_s]			= true,
+				[clsid.wpn_ammo_m209]			= true
+		}
+	end
+	return c and babah_classes[c] or false
+end
+-------------------------------------------------------------
+-- 					FROM gwr_meatgrinder [Romann]
+-------------------------------------------------------------
+
+
+
+-------------------------------------------------------------
 -- 					SQUAD BEHAVIOR TESTING
 -------------------------------------------------------------
 is_squad_monster = {

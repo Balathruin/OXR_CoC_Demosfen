@@ -30,7 +30,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>1690</rank>
-    <reputation>-2030</reputation>
+    <reputation>2030</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom1a</visual>
     <supplies>
@@ -53,7 +53,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>5918</rank>
-    <reputation>-939</reputation>
+    <reputation>939</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_mas4</visual>
     <supplies>
@@ -145,7 +145,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>3186</rank>
-    <reputation>-2242</reputation>
+    <reputation>2242</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_mask</visual>
     <supplies>
@@ -168,7 +168,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>5174</rank>
-    <reputation>-1151</reputation>
+    <reputation>1151</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mask</visual>
     <supplies>
@@ -191,7 +191,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>4070</rank>
-    <reputation>-164</reputation>
+    <reputation>164</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b_mask</visual>
     <supplies>
@@ -214,7 +214,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>1116</rank>
-    <reputation>-642</reputation>
+    <reputation>642</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom1a</visual>
     <supplies>
@@ -260,7 +260,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>5506</rank>
-    <reputation>-329</reputation>
+    <reputation>329</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mas2</visual>
     <supplies>
@@ -283,7 +283,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>3070</rank>
-    <reputation>-415</reputation>
+    <reputation>415</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b_mask</visual>
     <supplies>
@@ -421,7 +421,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>5530</rank>
-    <reputation>-1030</reputation>
+    <reputation>1030</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mas2</visual>
     <supplies>
@@ -444,7 +444,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>4896</rank>
-    <reputation>-549</reputation>
+    <reputation>549</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mas3</visual>
     <supplies>
@@ -490,7 +490,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>4070</rank>
-    <reputation>-1655</reputation>
+    <reputation>1655</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b_mask</visual>
     <supplies>
@@ -605,7 +605,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>3888</rank>
-    <reputation>-1526</reputation>
+    <reputation>1526</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mask</visual>
     <supplies>
@@ -651,7 +651,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>1186</rank>
-    <reputation>-864</reputation>
+    <reputation>864</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a</visual>
     <supplies>
@@ -674,7 +674,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>1622</rank>
-    <reputation>-930</reputation>
+    <reputation>930</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b</visual>
     <supplies>
@@ -743,7 +743,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>11330</rank>
-    <reputation>-303</reputation>
+    <reputation>303</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_old</visual>
     <supplies>
@@ -884,7 +884,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>3852</rank>
-    <reputation>-1171</reputation>
+    <reputation>1171</reputation>
     <money min="1500" max="2500" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_mas4</visual>
     <supplies>
@@ -979,7 +979,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>1444</rank>
-    <reputation>-1729</reputation>
+    <reputation>1729</reputation>
     <money min="1500" max="2500" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2</visual>
     <supplies>
@@ -1048,7 +1048,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>12458</rank>
-    <reputation>-1705</reputation>
+    <reputation>1705</reputation>
     <money min="1500" max="2500" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_free0a</visual>
     <supplies>
@@ -1167,7 +1167,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>19404</rank>
-    <reputation>-2168</reputation>
+    <reputation>2168</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom5a</visual>
     <supplies>
@@ -1317,7 +1317,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>13816</rank>
-    <reputation>-495</reputation>
+    <reputation>495</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_3</visual>
     <supplies>
@@ -1367,7 +1367,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>23366</rank>
-    <reputation>-1485</reputation>
+    <reputation>1485</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_4</visual>
     <supplies>
@@ -1417,7 +1417,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>27532</rank>
-    <reputation>-1877</reputation>
+    <reputation>1877</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom4b</visual>
     <supplies>
@@ -1467,7 +1467,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>13650</rank>
-    <reputation>-1242</reputation>
+    <reputation>1242</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_free0a</visual>
     <supplies>
@@ -1492,7 +1492,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>19938</rank>
-    <reputation>-634</reputation>
+    <reputation>634</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom5a</visual>
     <supplies>
@@ -1542,7 +1542,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>11028</rank>
-    <reputation>-153</reputation>
+    <reputation>153</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom3a</visual>
     <supplies>
@@ -1567,7 +1567,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>5616</rank>
-    <reputation>-382</reputation>
+    <reputation>382</reputation>
     <visual>actors\stalker_freedom\stalker_freedom_2_mask</visual>
     <supplies>
 #include "gameplay\loadouts\freedom_base.ltx"

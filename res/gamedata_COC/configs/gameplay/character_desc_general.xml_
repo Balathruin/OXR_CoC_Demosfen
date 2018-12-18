@@ -234,7 +234,7 @@
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>42</rank>
-    <reputation>-2133</reputation>
+    <reputation>2133</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -302,7 +302,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>2808</rank>
-    <reputation>-382</reputation>
+    <reputation>382</reputation>
     <visual>actors\stalker_freedom\stalker_freedom_2_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -373,7 +373,7 @@
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>8304</rank>
-    <reputation>-1004</reputation>
+    <reputation>1004</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -410,7 +410,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1492</rank>
-    <reputation>-293</reputation>
+    <reputation>293</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -484,7 +484,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1473</rank>
-    <reputation>-1521</reputation>
+    <reputation>1521</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a</visual>
     <supplies>
@@ -593,7 +593,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>2041</rank>
-    <reputation>-1182</reputation>
+    <reputation>1182</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas2</visual>
     <supplies>
@@ -701,7 +701,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>5095</rank>
-    <reputation>-465</reputation>
+    <reputation>465</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_old</visual>
     <supplies>
@@ -736,7 +736,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1990</rank>
-    <reputation>-386</reputation>
+    <reputation>386</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas2</visual>
     <supplies>
@@ -773,7 +773,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1933</rank>
-    <reputation>-2493</reputation>
+    <reputation>2493</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas2</visual>
     <supplies>
@@ -842,7 +842,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>2250</rank>
-    <reputation>-593</reputation>
+    <reputation>593</reputation>
     <money min="500" max="1500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas4</visual>
     <supplies>
@@ -879,7 +879,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>709</rank>
-    <reputation>-1511</reputation>
+    <reputation>1511</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2</visual>
     <supplies>
@@ -952,7 +952,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1707</rank>
-    <reputation>-1114</reputation>
+    <reputation>1114</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas2</visual>
     <supplies>
@@ -1022,7 +1022,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>865</rank>
-    <reputation>-1782</reputation>
+    <reputation>1782</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolggas_2</visual>
     <supplies>
@@ -1095,7 +1095,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>5639</rank>
-    <reputation>-2415</reputation>
+    <reputation>2415</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_old</visual>
     <supplies>
@@ -1130,7 +1130,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>7481</rank>
-    <reputation>-2328</reputation>
+    <reputation>2328</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_old</visual>
     <supplies>
@@ -1201,7 +1201,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>387</rank>
-    <reputation>-291</reputation>
+    <reputation>291</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_0</visual>
     <supplies>
@@ -1236,7 +1236,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>2892</rank>
-    <reputation>-283</reputation>
+    <reputation>283</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas2</visual>
     <supplies>
@@ -1273,7 +1273,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>2246</rank>
-    <reputation>-448</reputation>
+    <reputation>448</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg2a_mas3</visual>
     <supplies>
@@ -1310,7 +1310,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>1967</rank>
-    <reputation>-1660</reputation>
+    <reputation>1660</reputation>
     <money min="1000" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas4</visual>
     <supplies>
@@ -1557,7 +1557,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>680</rank>
-    <reputation>-2057</reputation>
+    <reputation>2057</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolggas2a</visual>
     <supplies>
@@ -1704,7 +1704,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>6541</rank>
-    <reputation>-879</reputation>
+    <reputation>879</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg1c</visual>
     <supplies>
@@ -1742,7 +1742,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>6171</rank>
-    <reputation>-266</reputation>
+    <reputation>266</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_old</visual>
     <supplies>
@@ -1813,7 +1813,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>7451</rank>
-    <reputation>-356</reputation>
+    <reputation>356</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg1d</visual>
     <supplies>
@@ -1851,7 +1851,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>15</rank>
-    <reputation>-1980</reputation>
+    <reputation>1980</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_0</visual>
     <supplies>
@@ -1924,7 +1924,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>2005</rank>
-    <reputation>-1970</reputation>
+    <reputation>1970</reputation>
     <money min="1500" max="3500" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2_mas4</visual>
     <supplies>
@@ -2114,7 +2114,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>5060</rank>
-    <reputation>-893</reputation>
+    <reputation>893</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_3</visual>
     <supplies>
@@ -2151,7 +2151,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>5216</rank>
-    <reputation>-2496</reputation>
+    <reputation>2496</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg3a</visual>
     <supplies>
@@ -2190,7 +2190,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <rank>5617</rank>
-    <reputation>-1934</reputation>
+    <reputation>1934</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg3b</visual>
     <supplies>
@@ -2229,7 +2229,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>8317</rank>
-    <reputation>-393</reputation>
+    <reputation>393</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo_4</visual>
     <supplies>
@@ -2267,7 +2267,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>9539</rank>
-    <reputation>-513</reputation>
+    <reputation>513</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo4a</visual>
     <supplies>
@@ -2342,7 +2342,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>10425</rank>
-    <reputation>-1249</reputation>
+    <reputation>1249</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo4c</visual>
     <supplies>
@@ -2381,7 +2381,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>13568</rank>
-    <reputation>-1520</reputation>
+    <reputation>1520</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_4</visual>
     <supplies>
@@ -2418,7 +2418,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>11572</rank>
-    <reputation>-716</reputation>
+    <reputation>716</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg4a</visual>
     <supplies>
@@ -2455,7 +2455,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>13394</rank>
-    <reputation>-751</reputation>
+    <reputation>751</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg4b</visual>
     <supplies>
@@ -2493,7 +2493,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>13335</rank>
-    <reputation>-438</reputation>
+    <reputation>438</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg4c</visual>
     <supplies>
@@ -2533,7 +2533,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>10237</rank>
-    <reputation>-805</reputation>
+    <reputation>805</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo_4</visual>
     <supplies>
@@ -2571,7 +2571,7 @@
     <community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\dolg\</snd_config>
     <rank>8632</rank>
-    <reputation>-1119</reputation>
+    <reputation>1119</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolgexo4a</visual>
     <supplies>
@@ -2725,7 +2725,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>845</rank>
-    <reputation>-2030</reputation>
+    <reputation>2030</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom1a</visual>
     <supplies>
@@ -2797,7 +2797,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>1593</rank>
-    <reputation>-2242</reputation>
+    <reputation>2242</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_mask</visual>
     <supplies>
@@ -2834,7 +2834,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2587</rank>
-    <reputation>-1151</reputation>
+    <reputation>1151</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mask</visual>
     <supplies>
@@ -2870,7 +2870,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2035</rank>
-    <reputation>-164</reputation>
+    <reputation>164</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b_mask</visual>
     <supplies>
@@ -2907,7 +2907,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>558</rank>
-    <reputation>-642</reputation>
+    <reputation>642</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom1a</visual>
     <supplies>
@@ -2977,7 +2977,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2753</rank>
-    <reputation>-329</reputation>
+    <reputation>329</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mas2</visual>
     <supplies>
@@ -3011,7 +3011,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>1535</rank>
-    <reputation>-415</reputation>
+    <reputation>415</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b_mas2</visual>
     <supplies>
@@ -3046,7 +3046,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2959</rank>
-    <reputation>-939</reputation>
+    <reputation>939</reputation>
     <money min="500" max="1000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_mas4</visual>
     <supplies>
@@ -3258,7 +3258,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>1944</rank>
-    <reputation>-1526</reputation>
+    <reputation>1526</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mask</visual>
     <supplies>
@@ -3328,7 +3328,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>593</rank>
-    <reputation>-864</reputation>
+    <reputation>864</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a</visual>
     <supplies>
@@ -3364,7 +3364,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>811</rank>
-    <reputation>-930</reputation>
+    <reputation>930</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b</visual>
     <supplies>
@@ -3469,7 +3469,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>5665</rank>
-    <reputation>-303</reputation>
+    <reputation>303</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_old</visual>
     <supplies>
@@ -3617,7 +3617,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2765</rank>
-    <reputation>-1030</reputation>
+    <reputation>1030</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mas2</visual>
     <supplies>
@@ -3652,7 +3652,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2448</rank>
-    <reputation>-549</reputation>
+    <reputation>549</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2a_mas3</visual>
     <supplies>
@@ -3723,7 +3723,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>2035</rank>
-    <reputation>-1655</reputation>
+    <reputation>1655</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom2b_mas3</visual>
     <supplies>
@@ -3979,7 +3979,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>722</rank>
-    <reputation>-1729</reputation>
+    <reputation>1729</reputation>
     <money min="1500" max="2500" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2</visual>
     <supplies>
@@ -4087,7 +4087,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>6229</rank>
-    <reputation>-1705</reputation>
+    <reputation>1705</reputation>
     <money min="1500" max="2500" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_free0a</visual>
     <supplies>
@@ -4339,7 +4339,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\freedom\</snd_config>
     <rank>1926</rank>
-    <reputation>-1171</reputation>
+    <reputation>1171</reputation>
     <money min="1500" max="2500" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_2_mas4</visual>
     <supplies>
@@ -4488,7 +4488,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>9702</rank>
-    <reputation>-2168</reputation>
+    <reputation>2168</reputation>
     <money min="2500" max="5000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom5a</visual>
     <supplies>
@@ -4718,7 +4718,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>6908</rank>
-    <reputation>-495</reputation>
+    <reputation>495</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_3</visual>
     <supplies>
@@ -4794,7 +4794,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>11683</rank>
-    <reputation>-1485</reputation>
+    <reputation>1485</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom_4</visual>
     <supplies>
@@ -4871,7 +4871,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>13766</rank>
-    <reputation>-1877</reputation>
+    <reputation>1877</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom4b</visual>
     <supplies>
@@ -4946,7 +4946,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>6825</rank>
-    <reputation>-1242</reputation>
+    <reputation>1242</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_free0a</visual>
     <supplies>
@@ -4984,7 +4984,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>9969</rank>
-    <reputation>-634</reputation>
+    <reputation>634</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom5a</visual>
     <supplies>
@@ -5060,7 +5060,7 @@
     <community>freedom</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\freedom\</snd_config>
     <rank>5514</rank>
-    <reputation>-153</reputation>
+    <reputation>153</reputation>
     <money min="5000" max="10000" infinitive="0"/>
     <visual>actors\stalker_freedom\stalker_freedom3a</visual>
     <supplies>
@@ -5104,7 +5104,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>485</rank>
-    <reputation>-681</reputation>
+    <reputation>681</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1</visual>
     <supplies>
@@ -5212,7 +5212,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>380</rank>
-    <reputation>-2060</reputation>
+    <reputation>2060</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c</visual>
     <supplies>
@@ -5390,7 +5390,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>326</rank>
-    <reputation>-829</reputation>
+    <reputation>829</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_a</visual>
     <supplies>
@@ -5425,7 +5425,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>62</rank>
-    <reputation>-1505</reputation>
+    <reputation>1505</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandita1</visual>
     <supplies>
@@ -5530,7 +5530,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>1328</rank>
-    <reputation>-938</reputation>
+    <reputation>938</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1_gas</visual>
     <supplies>
@@ -5603,7 +5603,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>709</rank>
-    <reputation>-1484</reputation>
+    <reputation>1484</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1b_gas</visual>
     <supplies>
@@ -5639,7 +5639,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>988</rank>
-    <reputation>-345</reputation>
+    <reputation>345</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c_gas</visual>
     <supplies>
@@ -5923,7 +5923,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>312</rank>
-    <reputation>-1022</reputation>
+    <reputation>1022</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c</visual>
     <supplies>
@@ -6067,7 +6067,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>129</rank>
-    <reputation>-1267</reputation>
+    <reputation>1267</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c_mask</visual>
     <supplies>
@@ -6104,7 +6104,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>677</rank>
-    <reputation>-508</reputation>
+    <reputation>508</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_4</visual>
     <supplies>
@@ -6244,7 +6244,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>6604</rank>
-    <reputation>-2</reputation>
+    <reputation>2</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_band_2_mask</visual>
     <supplies>
@@ -6316,7 +6316,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>890</rank>
-    <reputation>-835</reputation>
+    <reputation>835</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4b</visual>
     <supplies>
@@ -6424,7 +6424,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>1997</rank>
-    <reputation>-2072</reputation>
+    <reputation>2072</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_mask</visual>
     <supplies>
@@ -6460,7 +6460,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>1443</rank>
-    <reputation>-25</reputation>
+    <reputation>25</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -6494,7 +6494,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>1139</rank>
-    <reputation>-353</reputation>
+    <reputation>353</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -6529,7 +6529,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>1016</rank>
-    <reputation>-524</reputation>
+    <reputation>524</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5a</visual>
     <supplies>
@@ -6603,7 +6603,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>980</rank>
-    <reputation>-357</reputation>
+    <reputation>357</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5c</visual>
     <supplies>
@@ -6709,7 +6709,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>5701</rank>
-    <reputation>-213</reputation>
+    <reputation>213</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
     <supplies>
@@ -6817,7 +6817,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>7378</rank>
-    <reputation>-2037</reputation>
+    <reputation>2037</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6b</visual>
     <supplies>
@@ -6924,7 +6924,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>6577</rank>
-    <reputation>-1887</reputation>
+    <reputation>1887</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6e</visual>
     <supplies>
@@ -6997,7 +6997,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>6324</rank>
-    <reputation>-1710</reputation>
+    <reputation>1710</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6g</visual>
     <supplies>
@@ -7144,7 +7144,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>1263</rank>
-    <reputation>-144</reputation>
+    <reputation>144</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_4</visual>
     <supplies>
@@ -7401,7 +7401,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>1044</rank>
-    <reputation>-262</reputation>
+    <reputation>262</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -7513,7 +7513,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>659</rank>
-    <reputation>-2481</reputation>
+    <reputation>2481</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5c</visual>
     <supplies>
@@ -7588,7 +7588,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>5613</rank>
-    <reputation>-545</reputation>
+    <reputation>545</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
     <supplies>
@@ -7625,7 +7625,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>7471</rank>
-    <reputation>-2209</reputation>
+    <reputation>2209</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
     <supplies>
@@ -7697,7 +7697,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>7331</rank>
-    <reputation>-300</reputation>
+    <reputation>300</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6a</visual>
     <supplies>
@@ -7733,7 +7733,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>5151</rank>
-    <reputation>-574</reputation>
+    <reputation>574</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6b</visual>
     <supplies>
@@ -8031,7 +8031,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>11762</rank>
-    <reputation>-48</reputation>
+    <reputation>48</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
     <supplies>
@@ -8069,7 +8069,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>13719</rank>
-    <reputation>-2404</reputation>
+    <reputation>2404</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
     <supplies>
@@ -8179,7 +8179,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>5385</rank>
-    <reputation>-996</reputation>
+    <reputation>996</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_band_2_mask</visual>
     <supplies>
@@ -8216,7 +8216,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>923</rank>
-    <reputation>-1306</reputation>
+    <reputation>1306</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -8253,7 +8253,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>5460</rank>
-    <reputation>-1108</reputation>
+    <reputation>1108</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
     <supplies>
@@ -8292,7 +8292,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>5160</rank>
-    <reputation>-12</reputation>
+    <reputation>12</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
     <supplies>
@@ -8331,7 +8331,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>4122</rank>
-    <reputation>-875</reputation>
+    <reputation>875</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_gp5</visual>
     <supplies>
@@ -8445,7 +8445,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <rank>5108</rank>
-    <reputation>-2155</reputation>
+    <reputation>2155</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6c</visual>
     <supplies>
@@ -8562,7 +8562,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5692</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-752</reputation>
+    <reputation>752</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -8671,7 +8671,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>2683</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-839</reputation>
+    <reputation>839</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -8740,7 +8740,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>1966</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1056</reputation>
+    <reputation>1056</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -8955,7 +8955,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5661</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-67</reputation>
+    <reputation>67</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -8992,7 +8992,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>6283</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-1168</reputation>
+    <reputation>1168</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9065,7 +9065,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>2758</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-568</reputation>
+    <reputation>568</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9100,7 +9100,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>2588</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-2470</reputation>
+    <reputation>2470</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9137,7 +9137,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>2869</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-2294</reputation>
+    <reputation>2294</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9172,7 +9172,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>1648</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-974</reputation>
+    <reputation>974</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9280,7 +9280,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>7208</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-1785</reputation>
+    <reputation>1785</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9570,7 +9570,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>1885</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>-1704</reputation>
+    <reputation>1704</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9677,7 +9677,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5682</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>-2404</reputation>
+    <reputation>2404</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9751,7 +9751,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>6753</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-163</reputation>
+    <reputation>163</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9865,7 +9865,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>13856</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1438</reputation>
+    <reputation>1438</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
         [spawn_loadout] \n
@@ -9902,7 +9902,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>13782</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1276</reputation>
+    <reputation>1276</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10016,7 +10016,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>12193</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-1079</reputation>
+    <reputation>1079</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10056,7 +10056,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>10731</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-715</reputation>
+    <reputation>715</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10136,7 +10136,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>10437</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-635</reputation>
+    <reputation>635</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10358,7 +10358,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>459</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1687</reputation>
+    <reputation>1687</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10393,7 +10393,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>187</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-2201</reputation>
+    <reputation>2201</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10466,7 +10466,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>300</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-2449</reputation>
+    <reputation>2449</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10502,7 +10502,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>130</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-421</reputation>
+    <reputation>421</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10537,7 +10537,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>333</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-791</reputation>
+    <reputation>791</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10572,7 +10572,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>423</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-135</reputation>
+    <reputation>135</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10643,7 +10643,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>332</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1087</reputation>
+    <reputation>1087</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10787,7 +10787,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>32</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1175</reputation>
+    <reputation>1175</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10931,7 +10931,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1306</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1372</reputation>
+    <reputation>1372</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_gas</visual>
     <supplies>
         [spawn_loadout] \n
@@ -10968,7 +10968,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1343</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1383</reputation>
+    <reputation>1383</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_gas</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11005,7 +11005,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>863</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-18</reputation>
+    <reputation>18</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_gas</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11043,7 +11043,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>831</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-853</reputation>
+    <reputation>853</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_gas</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11111,7 +11111,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>528</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1500</reputation>
+    <reputation>1500</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_gas</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11146,7 +11146,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>956</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-2226</reputation>
+    <reputation>2226</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_gas</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11180,7 +11180,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>99</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-2156</reputation>
+    <reputation>2156</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11215,7 +11215,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>488</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1559</reputation>
+    <reputation>1559</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11285,7 +11285,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>464</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-2310</reputation>
+    <reputation>2310</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11321,7 +11321,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>227</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-2097</reputation>
+    <reputation>2097</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11358,7 +11358,7 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>386</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1258</reputation>
+    <reputation>1258</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11506,7 +11506,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1953</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-256</reputation>
+    <reputation>256</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11713,7 +11713,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1063</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2460</reputation>
+    <reputation>2460</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11749,7 +11749,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1400</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2332</reputation>
+    <reputation>2332</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11784,7 +11784,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2478</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2455</reputation>
+    <reputation>2455</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11819,7 +11819,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1890</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-388</reputation>
+    <reputation>388</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -11965,7 +11965,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2340</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1005</reputation>
+    <reputation>1005</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12073,7 +12073,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1909</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1105</reputation>
+    <reputation>1105</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12109,7 +12109,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1997</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-374</reputation>
+    <reputation>374</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12290,7 +12290,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2296</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-214</reputation>
+    <reputation>214</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12361,7 +12361,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1745</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-499</reputation>
+    <reputation>499</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12396,7 +12396,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1250</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2228</reputation>
+    <reputation>2228</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12431,7 +12431,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>863</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1622</reputation>
+    <reputation>1622</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12466,7 +12466,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2713</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2306</reputation>
+    <reputation>2306</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12571,7 +12571,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2134</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2467</reputation>
+    <reputation>2467</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12716,7 +12716,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5756</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2372</reputation>
+    <reputation>2372</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12787,7 +12787,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5061</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2489</reputation>
+    <reputation>2489</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -12821,7 +12821,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6194</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-270</reputation>
+    <reputation>270</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13001,7 +13001,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7012</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-719</reputation>
+    <reputation>719</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13071,7 +13071,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5308</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1571</reputation>
+    <reputation>1571</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13106,7 +13106,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7448</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-419</reputation>
+    <reputation>419</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13141,7 +13141,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5491</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1286</reputation>
+    <reputation>1286</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13282,7 +13282,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>3920</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1002</reputation>
+    <reputation>1002</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13316,7 +13316,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>3301</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1029</reputation>
+    <reputation>1029</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13351,7 +13351,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>3064</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-801</reputation>
+    <reputation>801</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13387,7 +13387,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>4483</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1717</reputation>
+    <reputation>1717</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13423,7 +13423,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>568</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2273</reputation>
+    <reputation>2273</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13534,7 +13534,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7280</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1914</reputation>
+    <reputation>1914</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13604,7 +13604,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2372</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1555</reputation>
+    <reputation>1555</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13640,7 +13640,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2400</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-2050</reputation>
+    <reputation>2050</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13747,7 +13747,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2918</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1461</reputation>
+    <reputation>1461</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13815,7 +13815,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2320</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-726</reputation>
+    <reputation>726</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -13850,7 +13850,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2666</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-128</reputation>
+    <reputation>128</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14063,7 +14063,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1745</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1995</reputation>
+    <reputation>1995</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14136,7 +14136,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2757</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-163</reputation>
+    <reputation>163</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14173,7 +14173,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1601</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-1701</reputation>
+    <reputation>1701</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14209,7 +14209,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2987</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>-182</reputation>
+    <reputation>182</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14317,7 +14317,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2448</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1333</reputation>
+    <reputation>1333</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mask</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14423,7 +14423,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1323</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1116</reputation>
+    <reputation>1116</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14459,7 +14459,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>957</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1694</reputation>
+    <reputation>1694</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14529,7 +14529,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1327</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1437</reputation>
+    <reputation>1437</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14565,7 +14565,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>644</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-630</reputation>
+    <reputation>630</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14637,7 +14637,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1998</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-179</reputation>
+    <reputation>179</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14672,7 +14672,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2477</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1054</reputation>
+    <reputation>1054</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14707,7 +14707,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2051</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-234</reputation>
+    <reputation>234</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14886,7 +14886,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2134</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-210</reputation>
+    <reputation>210</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -14992,7 +14992,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2346</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-738</reputation>
+    <reputation>738</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15028,7 +15028,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1530</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-2063</reputation>
+    <reputation>2063</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15098,7 +15098,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1560</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-2407</reputation>
+    <reputation>2407</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15240,7 +15240,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>977</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1351</reputation>
+    <reputation>1351</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15278,7 +15278,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2854</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-993</reputation>
+    <reputation>993</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15349,7 +15349,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1925</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1324</reputation>
+    <reputation>1324</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15384,7 +15384,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2947</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-802</reputation>
+    <reputation>802</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15562,7 +15562,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5506</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-2431</reputation>
+    <reputation>2431</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15598,7 +15598,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6905</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-421</reputation>
+    <reputation>421</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15671,7 +15671,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7264</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1642</reputation>
+    <reputation>1642</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15744,7 +15744,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5232</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-469</reputation>
+    <reputation>469</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15780,7 +15780,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5214</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-312</reputation>
+    <reputation>312</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15815,7 +15815,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7104</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1003</reputation>
+    <reputation>1003</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15885,7 +15885,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5312</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-2109</reputation>
+    <reputation>2109</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -15993,7 +15993,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>4845</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-1159</reputation>
+    <reputation>1159</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16421,7 +16421,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>1953</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-2353</reputation>
+    <reputation>2353</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16492,7 +16492,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1784</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-427</reputation>
+    <reputation>427</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16527,7 +16527,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2961</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-571</reputation>
+    <reputation>571</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16634,7 +16634,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2804</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-830</reputation>
+    <reputation>830</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16669,7 +16669,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2979</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-313</reputation>
+    <reputation>313</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16704,7 +16704,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2090</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-509</reputation>
+    <reputation>509</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16774,7 +16774,7 @@
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <rank>2888</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>-107</reputation>
+    <reputation>107</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16810,7 +16810,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2182</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2029</reputation>
+    <reputation>2029</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16847,7 +16847,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2083</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-566</reputation>
+    <reputation>566</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16884,7 +16884,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1801</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1217</reputation>
+    <reputation>1217</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -16922,7 +16922,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7130</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1692</reputation>
+    <reputation>1692</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17001,7 +17001,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>2544</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-478</reputation>
+    <reputation>478</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17075,7 +17075,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>8681</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-20</reputation>
+    <reputation>20</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17112,7 +17112,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6664</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-352</reputation>
+    <reputation>352</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17302,7 +17302,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1476</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-929</reputation>
+    <reputation>929</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17527,7 +17527,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6302</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1960</reputation>
+    <reputation>1960</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17565,7 +17565,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6108</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2394</reputation>
+    <reputation>2394</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17604,7 +17604,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6718</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-555</reputation>
+    <reputation>555</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17679,7 +17679,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6194</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-750</reputation>
+    <reputation>750</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17716,7 +17716,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5194</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1993</reputation>
+    <reputation>1993</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17753,7 +17753,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6909</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2071</reputation>
+    <reputation>2071</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17790,7 +17790,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6887</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-32</reputation>
+    <reputation>32</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17828,7 +17828,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6327</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2200</reputation>
+    <reputation>2200</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17866,7 +17866,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>4228</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2433</reputation>
+    <reputation>2433</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -17941,7 +17941,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>4700</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1838</reputation>
+    <reputation>1838</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18056,7 +18056,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>3914</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2493</reputation>
+    <reputation>2493</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18169,7 +18169,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>9735</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2147</reputation>
+    <reputation>2147</reputation>
     <visual>actors\stalker_neutral\stalker_neutral3b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18207,7 +18207,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>524</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-313</reputation>
+    <reputation>313</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18245,7 +18245,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1470</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1123</reputation>
+    <reputation>1123</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18322,7 +18322,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>582</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-402</reputation>
+    <reputation>402</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18401,7 +18401,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>3236</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-505</reputation>
+    <reputation>505</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18439,7 +18439,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7169</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1184</reputation>
+    <reputation>1184</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18477,7 +18477,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6811</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-2020</reputation>
+    <reputation>2020</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18551,7 +18551,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>1563</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1694</reputation>
+    <reputation>1694</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18589,7 +18589,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7185</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-427</reputation>
+    <reputation>427</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18665,7 +18665,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5158</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-458</reputation>
+    <reputation>458</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18703,7 +18703,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6223</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-641</reputation>
+    <reputation>641</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18741,7 +18741,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7296</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-989</reputation>
+    <reputation>989</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18928,7 +18928,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>11514</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-88</reputation>
+    <reputation>88</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_4</visual>
     <supplies>
         [spawn_loadout] \n
@@ -18967,7 +18967,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>13719</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-838</reputation>
+    <reputation>838</reputation>
     <visual>actors\stalker_neutral\stalker_neutral4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19005,7 +19005,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>13163</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-140</reputation>
+    <reputation>140</reputation>
     <visual>actors\stalker_neutral\stalker_neutral4b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19045,7 +19045,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5068</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-2286</reputation>
+    <reputation>2286</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19083,7 +19083,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>6129</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-2399</reputation>
+    <reputation>2399</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19160,7 +19160,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>5510</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-1231</reputation>
+    <reputation>1231</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni4</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19204,7 +19204,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
     <rank>2521</rank>
-    <reputation>-2421</reputation>
+    <reputation>2421</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19341,7 +19341,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
     <rank>2876</rank>
-    <reputation>-1333</reputation>
+    <reputation>1333</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1d</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19408,7 +19408,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
     <rank>1839</rank>
-    <reputation>-2370</reputation>
+    <reputation>2370</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1f</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19442,7 +19442,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
     <rank>2088</rank>
-    <reputation>-1355</reputation>
+    <reputation>1355</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1g</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19512,7 +19512,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3597</rank>
-    <reputation>-1786</reputation>
+    <reputation>1786</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19654,7 +19654,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3395</rank>
-    <reputation>-968</reputation>
+    <reputation>968</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19827,7 +19827,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3296</rank>
-    <reputation>-1734</reputation>
+    <reputation>1734</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3e_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19861,7 +19861,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>6294</rank>
-    <reputation>-153</reputation>
+    <reputation>153</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19894,7 +19894,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3184</rank>
-    <reputation>-754</reputation>
+    <reputation>754</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3f_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -19929,7 +19929,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>4223</rank>
-    <reputation>-562</reputation>
+    <reputation>562</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3g_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20103,7 +20103,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>4434</rank>
-    <reputation>-2307</reputation>
+    <reputation>2307</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_5_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20138,7 +20138,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>2752</rank>
-    <reputation>-2284</reputation>
+    <reputation>2284</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5a_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20174,7 +20174,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3394</rank>
-    <reputation>-351</reputation>
+    <reputation>351</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5b_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20242,7 +20242,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>4136</rank>
-    <reputation>-2346</reputation>
+    <reputation>2346</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5d_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20276,7 +20276,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>4721</rank>
-    <reputation>-1151</reputation>
+    <reputation>1151</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5d_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20310,7 +20310,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3191</rank>
-    <reputation>-2322</reputation>
+    <reputation>2322</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5f_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20415,7 +20415,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>3677</rank>
-    <reputation>-483</reputation>
+    <reputation>483</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5i_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20450,7 +20450,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>4850</rank>
-    <reputation>-1534</reputation>
+    <reputation>1534</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5j_beret</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20630,7 +20630,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>8572</rank>
-    <reputation>-183</reputation>
+    <reputation>183</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20666,7 +20666,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>10175</rank>
-    <reputation>-1226</reputation>
+    <reputation>1226</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20701,7 +20701,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>11121</rank>
-    <reputation>-1301</reputation>
+    <reputation>1301</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20736,7 +20736,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>6324</rank>
-    <reputation>-1003</reputation>
+    <reputation>1003</reputation>
     <visual>actors\stalker_soldier\stalker_soldier4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20770,7 +20770,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>7212</rank>
-    <reputation>-1801</reputation>
+    <reputation>1801</reputation>
     <visual>actors\stalker_soldier\stalker_soldier4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20807,7 +20807,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>12200</rank>
-    <reputation>-1138</reputation>
+    <reputation>1138</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20877,7 +20877,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>7940</rank>
-    <reputation>-2469</reputation>
+    <reputation>2469</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20912,7 +20912,7 @@
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
     <rank>10977</rank>
-    <reputation>-2191</reputation>
+    <reputation>2191</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
         [spawn_loadout] \n
@@ -20986,7 +20986,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>714</rank>
-    <reputation>-1640</reputation>
+    <reputation>1640</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21056,7 +21056,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1415</rank>
-    <reputation>-346</reputation>
+    <reputation>346</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21091,7 +21091,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>632</rank>
-    <reputation>-210</reputation>
+    <reputation>210</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21268,7 +21268,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>4933</rank>
-    <reputation>-1906</reputation>
+    <reputation>1906</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21302,7 +21302,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>3034</rank>
-    <reputation>-2381</reputation>
+    <reputation>2381</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21407,7 +21407,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>541</rank>
-    <reputation>-2319</reputation>
+    <reputation>2319</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21611,7 +21611,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>4994</rank>
-    <reputation>-435</reputation>
+    <reputation>435</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21715,7 +21715,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>5387</rank>
-    <reputation>-144</reputation>
+    <reputation>144</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21781,7 +21781,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>869</rank>
-    <reputation>-2484</reputation>
+    <reputation>2484</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21814,7 +21814,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>756</rank>
-    <reputation>-169</reputation>
+    <reputation>169</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -21951,7 +21951,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>1448</rank>
-    <reputation>-2233</reputation>
+    <reputation>2233</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22020,7 +22020,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>6237</rank>
-    <reputation>-242</reputation>
+    <reputation>242</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2a_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22054,7 +22054,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>5374</rank>
-    <reputation>-633</reputation>
+    <reputation>633</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2b_old</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22090,7 +22090,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>3767</rank>
-    <reputation>-2218</reputation>
+    <reputation>2218</reputation>
     <visual>actors\stalker_monolith\stalker_monolith0_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22157,7 +22157,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\monolith\</snd_config>
     <rank>3900</rank>
-    <reputation>-367</reputation>
+    <reputation>367</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22191,7 +22191,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>870</rank>
-    <reputation>-73</reputation>
+    <reputation>73</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22263,7 +22263,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>7591</rank>
-    <reputation>-2310</reputation>
+    <reputation>2310</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22299,7 +22299,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>6129</rank>
-    <reputation>-505</reputation>
+    <reputation>505</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22336,7 +22336,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>10290</rank>
-    <reputation>-1355</reputation>
+    <reputation>1355</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22373,7 +22373,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>10226</rank>
-    <reputation>-1852</reputation>
+    <reputation>1852</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22446,7 +22446,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>10950</rank>
-    <reputation>-1235</reputation>
+    <reputation>1235</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_4</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22484,7 +22484,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>13427</rank>
-    <reputation>-2252</reputation>
+    <reputation>2252</reputation>
     <visual>actors\stalker_monolith\stalker_monolith4a</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22520,7 +22520,7 @@
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <rank>11923</rank>
-    <reputation>-2245</reputation>
+    <reputation>2245</reputation>
     <visual>actors\stalker_monolith\stalker_monolith4b</visual>
     <supplies>
         [spawn_loadout] \n
@@ -22675,7 +22675,7 @@
     <class>sim_monolith_sniper</class>
     <community>monolith</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>886</rank>
-    <reputation>-1799</reputation>
+    <reputation>1799</reputation>
     <panic_threshold>0.0</panic_threshold>
     <snd_config>characters_voice\human_02\monolith\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -22818,7 +22818,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>265</rank>
-    <reputation>-1485</reputation>
+    <reputation>1485</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1a</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -22963,7 +22963,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>442</rank>
-    <reputation>-1752</reputation>
+    <reputation>1752</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1e</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23035,7 +23035,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>467</rank>
-    <reputation>-588</reputation>
+    <reputation>588</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1g</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23107,7 +23107,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>404</rank>
-    <reputation>-1271</reputation>
+    <reputation>1271</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1i</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23142,7 +23142,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>380</rank>
-    <reputation>-1631</reputation>
+    <reputation>1631</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1j</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23180,7 +23180,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>277</rank>
-    <reputation>-1703</reputation>
+    <reputation>1703</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_1_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23254,7 +23254,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>165</rank>
-    <reputation>-2191</reputation>
+    <reputation>2191</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1b_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23365,7 +23365,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>226</rank>
-    <reputation>-2126</reputation>
+    <reputation>2126</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1e_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23514,7 +23514,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>119</rank>
-    <reputation>-1934</reputation>
+    <reputation>1934</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1i_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23698,7 +23698,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>475</rank>
-    <reputation>-315</reputation>
+    <reputation>315</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1c_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23734,7 +23734,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>68</rank>
-    <reputation>-266</reputation>
+    <reputation>266</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1d_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23842,7 +23842,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>405</rank>
-    <reputation>-1330</reputation>
+    <reputation>1330</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1g_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23879,7 +23879,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>457</rank>
-    <reputation>-106</reputation>
+    <reputation>106</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1h_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23916,7 +23916,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>149</rank>
-    <reputation>-286</reputation>
+    <reputation>286</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1i_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -23952,7 +23952,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>457</rank>
-    <reputation>-1189</reputation>
+    <reputation>1189</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1j_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24027,7 +24027,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2223</rank>
-    <reputation>-1235</reputation>
+    <reputation>1235</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2a</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24136,7 +24136,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1549</rank>
-    <reputation>-199</reputation>
+    <reputation>199</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2d</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24320,7 +24320,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1664</rank>
-    <reputation>-1547</reputation>
+    <reputation>1547</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2i</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24357,7 +24357,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1608</rank>
-    <reputation>-1333</reputation>
+    <reputation>1333</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2j</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24393,7 +24393,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2055</rank>
-    <reputation>-837</reputation>
+    <reputation>837</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_2_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24430,7 +24430,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2548</rank>
-    <reputation>-2328</reputation>
+    <reputation>2328</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24505,7 +24505,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2157</rank>
-    <reputation>-36</reputation>
+    <reputation>36</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2c_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24540,7 +24540,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1787</rank>
-    <reputation>-2104</reputation>
+    <reputation>2104</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2d_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24650,7 +24650,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2920</rank>
-    <reputation>-2054</reputation>
+    <reputation>2054</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2g_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24685,7 +24685,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2042</rank>
-    <reputation>-148</reputation>
+    <reputation>148</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2h_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24759,7 +24759,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2852</rank>
-    <reputation>-92</reputation>
+    <reputation>92</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2j_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24796,7 +24796,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2886</rank>
-    <reputation>-2369</reputation>
+    <reputation>2369</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_2_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24906,7 +24906,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2606</rank>
-    <reputation>-2131</reputation>
+    <reputation>2131</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2c_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24942,7 +24942,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2733</rank>
-    <reputation>-1861</reputation>
+    <reputation>1861</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2d_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -24977,7 +24977,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1958</rank>
-    <reputation>-2072</reputation>
+    <reputation>2072</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2e_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25086,7 +25086,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2983</rank>
-    <reputation>-2084</reputation>
+    <reputation>2084</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2h_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25159,7 +25159,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1693</rank>
-    <reputation>-2121</reputation>
+    <reputation>2121</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2j_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25196,7 +25196,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2636</rank>
-    <reputation>-789</reputation>
+    <reputation>789</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2k</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25232,7 +25232,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1888</rank>
-    <reputation>-2055</reputation>
+    <reputation>2055</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2k_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25303,7 +25303,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>2867</rank>
-    <reputation>-960</reputation>
+    <reputation>960</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2l</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25340,7 +25340,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>1588</rank>
-    <reputation>-832</reputation>
+    <reputation>832</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2l_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25491,7 +25491,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3276</rank>
-    <reputation>-459</reputation>
+    <reputation>459</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary_2_face3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25528,7 +25528,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3426</rank>
-    <reputation>-2015</reputation>
+    <reputation>2015</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25565,7 +25565,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>4110</rank>
-    <reputation>-356</reputation>
+    <reputation>356</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2a_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25637,7 +25637,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3565</rank>
-    <reputation>-752</reputation>
+    <reputation>752</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2b_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25673,7 +25673,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3636</rank>
-    <reputation>-376</reputation>
+    <reputation>376</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2b_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25784,7 +25784,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3091</rank>
-    <reputation>-521</reputation>
+    <reputation>521</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2c_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25859,7 +25859,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>4405</rank>
-    <reputation>-1311</reputation>
+    <reputation>1311</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_bandit_2_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -25898,7 +25898,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3362</rank>
-    <reputation>-1952</reputation>
+    <reputation>1952</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_bandit_2_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26081,7 +26081,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6666</rank>
-    <reputation>-521</reputation>
+    <reputation>521</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26156,7 +26156,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>7108</rank>
-    <reputation>-266</reputation>
+    <reputation>266</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26193,7 +26193,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5820</rank>
-    <reputation>-869</reputation>
+    <reputation>869</reputation>
     <visual>actors\stalker_zombied\stalker_zombied3a</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26230,7 +26230,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6391</rank>
-    <reputation>-2492</reputation>
+    <reputation>2492</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26344,7 +26344,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6558</rank>
-    <reputation>-1072</reputation>
+    <reputation>1072</reputation>
     <visual>actors\stalker_zombied\stalker_zombied3a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26383,7 +26383,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6492</rank>
-    <reputation>-51</reputation>
+    <reputation>51</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26419,7 +26419,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>7316</rank>
-    <reputation>-1345</reputation>
+    <reputation>1345</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26641,7 +26641,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5139</rank>
-    <reputation>-600</reputation>
+    <reputation>600</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26680,7 +26680,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>12499</rank>
-    <reputation>-2070</reputation>
+    <reputation>2070</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_4</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26757,7 +26757,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>11184</rank>
-    <reputation>-2089</reputation>
+    <reputation>2089</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4b</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26832,7 +26832,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13822</rank>
-    <reputation>-2365</reputation>
+    <reputation>2365</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4d</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26868,7 +26868,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13656</rank>
-    <reputation>-989</reputation>
+    <reputation>989</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4e</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26904,7 +26904,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>10745</rank>
-    <reputation>-2129</reputation>
+    <reputation>2129</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4f</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -26940,7 +26940,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>12558</rank>
-    <reputation>-2045</reputation>
+    <reputation>2045</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4g</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27014,7 +27014,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>12524</rank>
-    <reputation>-595</reputation>
+    <reputation>595</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27088,7 +27088,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13835</rank>
-    <reputation>-611</reputation>
+    <reputation>611</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4c_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27201,7 +27201,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>12055</rank>
-    <reputation>-1806</reputation>
+    <reputation>1806</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4f_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27238,7 +27238,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>10659</rank>
-    <reputation>-442</reputation>
+    <reputation>442</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4g_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27460,7 +27460,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>11006</rank>
-    <reputation>-1931</reputation>
+    <reputation>1931</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4e_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27498,7 +27498,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13044</rank>
-    <reputation>-1891</reputation>
+    <reputation>1891</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4f_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27535,7 +27535,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>10916</rank>
-    <reputation>-226</reputation>
+    <reputation>226</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4g_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27611,7 +27611,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>10857</rank>
-    <reputation>-41</reputation>
+    <reputation>41</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4h_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27648,7 +27648,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13766</rank>
-    <reputation>-1818</reputation>
+    <reputation>1818</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4h_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27725,7 +27725,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13019</rank>
-    <reputation>-2329</reputation>
+    <reputation>2329</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4i_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -27762,7 +27762,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>11651</rank>
-    <reputation>-85</reputation>
+    <reputation>85</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4i_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>

@@ -1086,6 +1086,116 @@ autosave = true
 ;граф - lab_graph_point_to_wiz
 ;граф ту - wiz_graph_point_to_lab
 
+;****************************************************************
+;;Река в Мёртвый Город
+[rein_space_restrictor_to_deadcity]
+enable = true
+spot = level_changer_left
+text = st_level_changer_descr
+hint = space_restrictor_to_deadcity_desc
+path = rein_space_restrictor_to_deadcity_drop
+reject_path = rein_level_changer_to_deadcity_reject_way
+autosave = true
+
+;level_changer - rein_level_changer_to_agro
+;граф на deadcity - deadcity_rein_actor_spawn
+;граф на реке - rein_deadcity_actor_spawn
+;граф связи на deadcity - deadcity_graph_point_to_rein
+;граф ту на реке - rein_graph_point_to_deadcity
+
+;;Мёртвый Город на Реку
+[deadcity_space_restrictor_to_rein]
+enable = true
+spot = level_changer_right
+text = st_level_changer_descr
+hint = space_restrictor_to_rein_desc
+path = deadcity_space_restrictor_to_rein_drop
+reject_path = deadcity_level_changer_to_rein_reject_way
+autosave = true
+
+;****************************************************************
+;;Река на Армейские Склады
+[rein_space_restrictor_to_mil]
+enable = true
+spot = level_changer_up_right
+text = st_level_changer_descr
+hint = space_restrictor_to_military_desc
+path = rein_space_restrictor_to_mil_drop
+reject_path = rein_level_changer_to_mil_reject_way
+autosave = true
+
+;level_changer - rein_level_changer_to_mil
+;граф на deadcity - mil_rein_actor_spawn
+;граф на реке - rein_mil_actor_spawn
+;граф связи на deadcity - mil_graph_point_to_rein
+;граф ту на реке - rein_graph_point_to_mil
+
+;;Армейские Склады на Реку
+[mil_space_restrictor_to_rein]
+enable = true
+spot = level_changer_down_left
+text = st_level_changer_descr
+hint = space_restrictor_to_rein_desc
+path = mil_space_restrictor_to_rein_drop
+reject_path = mil_level_changer_to_rein_reject_way
+autosave = true
+
+;****************************************************************
+;;Река на Дикую Территорию
+[rein_space_restrictor_to_ros]
+enable = true
+spot = level_changer_right_down
+text = st_level_changer_descr
+hint = space_restrictor_to_rostok_desc
+path = rein_space_restrictor_to_ros_drop
+reject_path = rein_level_changer_to_ros_reject_way
+autosave = true
+
+;level_changer - rein_level_changer_to_ros
+;граф на ростке - ros_rein_actor_spawn
+;граф на реке - rein_ros_actor_spawn
+;граф связи на ростке - ros_graph_point_to_rein
+;граф ту на реке - rein_graph_point_to_ros
+
+;;Дикая Территория на Реку
+[ros_space_restrictor_to_rein]
+enable = true
+spot = level_changer_left_up
+text = st_level_changer_descr
+hint = space_restrictor_to_rein_desc
+path = ros_space_restrictor_to_rein_drop
+reject_path = ros_level_changer_to_rein_reject_way
+autosave = true
+
+;****************************************************************
+;;Река в Рыжий Лес
+[rein_space_restrictor_to_forest]
+enable = true
+spot = level_changer_left_up
+text = st_level_changer_descr
+hint = mil_space_restrictor_to_red_1_descr
+path = rein_space_restrictor_to_forest_drop
+reject_path = rein_level_changer_to_forest_reject_way
+autosave = true
+
+;level_changer - rein_level_changer_to_forest
+;граф на ростке - forest_rein_actor_spawn
+;граф на реке - rein_forest_actor_spawn
+;граф связи на ростке - forest_graph_point_to_rein
+;граф ту на реке - rein_graph_point_to_forest
+
+;;Рыжий Лес на Реку
+[forest_space_restrictor_to_rein]
+enable = true
+spot = level_changer_right_down
+text = st_level_changer_descr
+hint = space_restrictor_to_rein_desc
+path = forest_space_restrictor_to_rein_drop
+reject_path = forest_level_changer_to_rein_reject_way
+autosave = true
+
+
+
 
 
 ;//Romann

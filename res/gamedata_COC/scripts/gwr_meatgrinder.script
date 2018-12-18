@@ -18,83 +18,56 @@ function main(type_obj, amount, dir, who, bone, object)
 			elseif (bone>7) and (bone<11) then
 				part = "r_foot"
 			end
-			if (who ~= nil) then
-			  if(who:section() == "explosive_fuelcan")						or
-				(who:section() == "ammo_og-7b")								or
-				(who:section() == "explosive_gaz_balon")					or
-				(who:section() == "explosive_tank")							or
-				(who:section() == "explosive_barrel_low")					or
-				(who:section() == "explosive_grenade")						or
-				(who:section() == "pri_a25_enter_door_explosive_grenade")	or
-				(who:section() == "pri_a25_antenna_grenade")				or
-				(who:section() == "explosive_hide")							or
-				(who:section() == "explosive_particle")						or
-				(who:section() == "explosive_barrel")						or
-				(who:section() == "explosive_mobiltank")					or
-				(who:section() == "explosive_dinamit")						or
-				(who:section() == "wpn_mine")								or
-				(who:section() == "mine_actor")								or
-				(who:section() == "mine_proximity")							or
-				
-				(who:section() == "ammo_vog-25")							or
-				(who:section() == "ammo_vog-25p")							or
-				(who:section() == "ammo_m209")								or
-				
-				(who:active_slot() == 4)									or
-				((who:active_item()~=nil)									and
-				(who:active_item():section() == "wpn_rpg7"))				or
-				((who:active_item()~=nil)									and
-				(who:active_item():section() == "wpn_rg-6"))  then
-						if amount>0.999 then
-							if object~= nil then
-								local section="meat_default"
-								if type_obj == "monster" then
-									section="meat_default_monster"
-									--part = "body" // Äåëàòü áåññìûñëåííî, ò.ê. äëÿ ìîíñòðà ìû âñåãäà âñåãäà îòïðàâëÿåì êîñòü ñ íîìåðîì 1
---									log("Monster found!")
-								end
-								if ini:section_exist("meat_"..object:section()) then
-									section = "meat_"..object:section()
-								end
-								local model_parts = ""
-								if ini:line_exist(section,part) then
-									model_parts = ini:r_string(section,part)
-								end
-								if model_parts == "" then
-									return false
-								end
-								if object:active_item()~= nil then
-									object:drop_item(object:active_item())
-								end
-								local newpart = ""
-								for i=1, string.len(model_parts),1 do
-									local s = string.sub(model_parts, i,i)
-									if s==" " then
-									elseif s == "," then
-										spawn_part(newpart, object)
-										newpart = ""
-									else
-										newpart=newpart..s
-									end
-								end
+			local weapon = db.actor:active_item()
+			if  weapon and IsBabah(weapon) or IsExplosive(weapon) then
+				if amount>0.999 then
+					if object~= nil then
+						local section="meat_default"
+						if type_obj == "monster" then
+							section="meat_default_monster"
+							--part = "body" // Ð”ÐµÐ»Ð°Ñ‚ÑŒ Ð±ÐµÑÑÐ¼Ñ‹ÑÐ»ÐµÐ½Ð½Ð¾, Ñ‚.Ðº. Ð´Ð»Ñ Ð¼Ð¾Ð½ÑÑ‚Ñ€Ð° Ð¼Ñ‹ Ð²ÑÐµÐ³Ð´Ð° Ð²ÑÐµÐ³Ð´Ð° Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÑÐµÐ¼ ÐºÐ¾ÑÑ‚ÑŒ Ñ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð¼ 1
+--							log("Monster found!")
+						end
+						if ini:section_exist("meat_"..object:section()) then
+							section = "meat_"..object:section()
+						end
+						local model_parts = ""
+						if ini:line_exist(section,part) then
+							model_parts = ini:r_string(section,part)
+						end
+						if model_parts == "" then
+							return false
+						end
+						if object:active_item()~= nil then
+							object:drop_item(object:active_item())
+						end
+						local newpart = ""
+						for i=1, string.len(model_parts),1 do
+							local s = string.sub(model_parts, i,i)
+							if s==" " then
+							elseif s == "," then
 								spawn_part(newpart, object)
-								if ini:line_exist(section,"particle") then
-									local particle_meat = particles_object(ini:r_string(section,"particle"))
-									local p_posit = vector():set(object:position())
-									if ini:line_exist(section,"particle_height") then
-										p_posit.y = p_posit.y+ini:r_s32(section,"particle_height")
-									end
-									particle_meat:play_at_pos(p_posit)
-								end
-								local sobj = alife():object(object:id())
-								if sobj then alife():release(sobj, true) end
---								alife():release(alife():object(object:id()), true)
-								return true
+								newpart = ""
+							else
+								newpart=newpart..s
 							end
 						end
+						spawn_part(newpart, object)
+						if ini:line_exist(section,"particle") then
+							local particle_meat = particles_object(ini:r_string(section,"particle"))
+							local p_posit = vector():set(object:position())
+							if ini:line_exist(section,"particle_height") then
+								p_posit.y = p_posit.y+ini:r_s32(section,"particle_height")
+							end
+							particle_meat:play_at_pos(p_posit)
+						end
+						local se_obj = alife_object(object:id())
+ 						if se_obj then safe_release_manager.release(se_obj) else alife():release(se_obj, true) end
+						return true
+					end
 				end
-			end			
---			log(tostring(bone).."==>"..part)
+			end
+--		log(tostring(bone).."==>"..part)
 		end
 	return false
 end
@@ -118,15 +91,11 @@ class "gwr_meatbinder" (object_binder)
 function gwr_meatbinder:update(delta)
 	if db.gwr_meattable[self.object:id()]~= nil then
 		if device():time_global() - 20000 > db.gwr_meattable[self.object:id()] then
-			local sobj = alife():object(self.object:id())
-			if sobj then alife():release(sobj, true) end
---			alife():release(alife():object(self.object:id()), true)
+			alife():release(alife():object(self.object:id()), true)
 			db.gwr_meattable[self.object:id()] = nil
 		end
 	else
-			local sobj = alife():object(self.object:id())
-			if sobj then alife():release(sobj, true) end
---			alife():release(alife():object(self.object:id()), true)
+			alife():release(alife():object(self.object:id()), true)
 	end
     object_binder.update(self, delta)
 end
@@ -158,9 +127,7 @@ end
 function gwr_meatbinder:net_destroy()
 	if db.gwr_meattable[self.object:id()]~= nil then
 		db.gwr_meattable[self.object:id()]=nil
-		local sobj = alife():object(self.object:id())
-		if sobj then alife():release(sobj, true) end
---		alife():release(alife():object(self.object:id()), true)
+		alife():release(alife():object(self.object:id()), true)
 	end
     object_binder.net_destroy(self)
 end

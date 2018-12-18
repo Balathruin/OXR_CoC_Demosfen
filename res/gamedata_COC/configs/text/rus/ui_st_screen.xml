@@ -67,7 +67,7 @@
 		<text>Оружие заклинило. Нужно перезарядить.</text>
 	</string>
 	<string id="inventory_box_use">
-		<text>Обыскать ящик ($$ACTION_USE$$)</text>
+		<text>Обыскать($$ACTION_USE$$)</text>
 	</string>
 	<string id="inventory_item_use">
 		<text>Поднять предмет ($$ACTION_USE$$)</text>

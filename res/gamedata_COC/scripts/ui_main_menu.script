@@ -57,7 +57,7 @@ function main_menu:InitControls()
 	_ver:TextControl():SetText		("Call of Chernobyl ver. " .. (_G.GAME_VERSION))
 	_ver:TextControl():SetTextColor (GetARGB(250, 255, 255, 0))
 	local _vers = xml:InitStatic	("static_version_2",self)
-	_vers:TextControl():SetText		(" + Assenbly by Demosfen [dev.1.0] 07.12.18")
+	_vers:TextControl():SetText		(" + Assenbly by Demosfen [dev.1.0] 18.12.18")
 	_vers:TextControl():SetTextColor (GetARGB(250, 0, 255, 0))
 --	local _verss = xml:InitStatic	("static_version_3",self)
 --	_verss:TextControl():SetText		(" + Patch_0.1 [30.11.17]")
@@ -410,6 +410,7 @@ function main_menu:OnKeyboard(dik, keyboard_action)  --virtual function
 		elseif (dik == DIK_keys.DIK_NUMPAD0) then
 			if (reload_system_ini) then
 				reload_system_ini()
+				clear_ini_cache(system_ini())
 				printf("system_ini_reload = success!")
 			end
 		end

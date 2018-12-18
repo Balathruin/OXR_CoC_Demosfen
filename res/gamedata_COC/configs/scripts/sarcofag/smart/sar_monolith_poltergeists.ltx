@@ -2,7 +2,7 @@
 squad_id = 3
 max_population = 3
 respawn_params = respawn@sar_monolith_poltergeists
-respawn_idle = 86400
+respawn_idle = 45000
 respawn_radius = 300
 
 [respawn@sar_monolith_poltergeists]
@@ -10,4 +10,4 @@ spawn_ghosts
 
 [spawn_ghosts]
 spawn_squads = simulation_poltergeist_tele
-spawn_num = 3
+spawn_num = {+sar_secret_door_find} 3, 0

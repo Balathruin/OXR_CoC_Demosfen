@@ -2,15 +2,15 @@
 squad_id = 2
 max_population = 5
 respawn_params = respawn@sar_monolith_sklad
-respawn_idle = 86400
+respawn_idle = 30000
 respawn_radius = 300
 
 [respawn@sar_monolith_sklad]
-spawn_controller
+spawn_rats
 
-[spawn_controller]
-spawn_squads = simulation_controller
-spawn_num = 2
+[spawn_rats]
+spawn_squads = simulation_rats
+spawn_num = {+sar_secret_door_find} 5, 0
 
 [exclusive]
 sar_monolith_sklad_patrol1 = sarcofag\sar_monolith_sklad_logic.ltx

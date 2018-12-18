@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
 	<!-- Level Names -->
-	
-	
+
 	<!-- Level NeW Romann -->
   <string id="way_in_zone">
     <text>Черта</text>
   </string>
-  
+
   <string id="labx7_coll22_1">
     <text>Коллектор</text>
   </string>
-  
+
   <string id="tunnel_lab_1">
     <text>Тоннель лаба x1</text>
   </string>
-  
-  
+
+  <string id="rein">
+    <text>Мёртвая Река</text>
+  </string>
+
+
 	<!-- Level NeW Romann -->
   <string id="l03_agroprom">
     <text>Агропром</text>

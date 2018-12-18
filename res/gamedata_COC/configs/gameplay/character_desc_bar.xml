@@ -186,7 +186,7 @@
     <terrain_sect>stalker_terrain</terrain_sect>
     <money min="200" max="600" infinitive="0"></money>
     <rank>14168</rank>
-    <reputation>-2060</reputation>
+    <reputation>2060</reputation>
     <visual>actors\stalker_dolg\stalker_dolg_3</visual>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
     <crouch_type>0</crouch_type>
@@ -342,7 +342,7 @@
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <money min="2000" max="5000" infinitive="0"></money>
     <rank>27850</rank>
-    <reputation>-1269</reputation>
+    <reputation>1269</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_4</visual>
     <snd_config>characters_voice\human_03\zombied\</snd_config>
     <crouch_type>0</crouch_type>
@@ -411,7 +411,7 @@
     <class>bar_arena_stalker_3_1</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>5034</rank>
-    <reputation>-253</reputation>
+    <reputation>253</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas3</visual>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -432,7 +432,7 @@
     <class>bar_arena_stalker_3_2</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>3936</rank>
-    <reputation>-1138</reputation>
+    <reputation>1138</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mask</visual>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -476,7 +476,7 @@
     <class>bar_arena_stalker_4_2</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>3810</rank>
-    <reputation>-377</reputation>
+    <reputation>377</reputation>
     <visual>actors\stalker_bandit\stalker_bandit_2</visual>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -497,7 +497,7 @@
     <class>bar_arena_stalker_4_3</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>14674</rank>
-    <reputation>-2143</reputation>
+    <reputation>2143</reputation>
     <visual>actors\stalker_bandit\stalker_bandit1b</visual>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -519,7 +519,7 @@
     <class>bar_arena_stalker_4_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>24756</rank>
-    <reputation>-911</reputation>
+    <reputation>911</reputation>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <crouch_type>-1</crouch_type>
     <visual>actors\stalker_neutral\stalker_neutral1a</visual>
@@ -589,7 +589,7 @@
     <snd_config>characters_voice\human_03\military\</snd_config>
     <crouch_type>-1</crouch_type>
     <rank>12948</rank>
-    <reputation>-23</reputation>
+    <reputation>23</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
         [spawn] \n
@@ -650,7 +650,7 @@
     <class>bar_arena_stalker_6_3</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>2352</rank>
-    <reputation>-928</reputation>
+    <reputation>928</reputation>
     <visual>actors\stalker_bandit\stalker_bandit_4</visual>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -692,7 +692,7 @@
     <class>bar_arena_stalker_6_5</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>21894</rank>
-    <reputation>-918</reputation>
+    <reputation>918</reputation>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <crouch_type>-1</crouch_type>
@@ -779,7 +779,7 @@
     <class>bar_arena_stalker_8_2</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>23830</rank>
-    <reputation>-2205</reputation>
+    <reputation>2205</reputation>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <crouch_type>0</crouch_type>
     <visual>actors\stalker_neutral\stalker_neutral_4</visual>
@@ -821,7 +821,7 @@
     <class>bar_arena_stalker_8_4</class>
     <community>arena_enemy</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>24382</rank>
-    <reputation>-433</reputation>
+    <reputation>433</reputation>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
     <crouch_type>0</crouch_type>
     <visual>actors\stalker_neutral\stalker_neutral_4</visual>

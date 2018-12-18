@@ -30,7 +30,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>11384</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-752</reputation>
+    <reputation>752</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -118,7 +118,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5366</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-839</reputation>
+    <reputation>839</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -162,7 +162,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>3932</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>-1056</reputation>
+    <reputation>1056</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -272,7 +272,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>11322</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-67</reputation>
+    <reputation>67</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -294,7 +294,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>14416</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-1785</reputation>
+    <reputation>1785</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -316,7 +316,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>12566</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-1168</reputation>
+    <reputation>1168</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -360,7 +360,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5516</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-568</reputation>
+    <reputation>568</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -382,7 +382,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5176</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-2470</reputation>
+    <reputation>2470</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -404,7 +404,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>5738</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-2294</reputation>
+    <reputation>2294</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -426,7 +426,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>3296</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>-974</reputation>
+    <reputation>974</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -536,7 +536,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>11364</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>-2404</reputation>
+    <reputation>2404</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -668,7 +668,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>3770</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>-1704</reputation>
+    <reputation>1704</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -758,7 +758,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>13506</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-163</reputation>
+    <reputation>163</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -830,7 +830,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>24386</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-1079</reputation>
+    <reputation>1079</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -854,7 +854,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>21462</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-715</reputation>
+    <reputation>715</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -902,7 +902,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>20874</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>-635</reputation>
+    <reputation>635</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -926,7 +926,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>27712</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1438</reputation>
+    <reputation>1438</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -950,7 +950,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>27564</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>-1276</reputation>
+    <reputation>1276</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"

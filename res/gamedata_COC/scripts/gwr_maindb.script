@@ -1,8 +1,8 @@
 --gwr_maindb.script
---Description: создаёт рабочую таблицу мода
+--Description: СЃРѕР·РґР°С‘С‚ СЂР°Р±РѕС‡СѓСЋ С‚Р°Р±Р»РёС†Сѓ РјРѕРґР°
 --Creator: Sin!
 --Date: 27 Aug 2011
---Адаптация  к "CoC 1.5b r7" - Romann
+--РђРґР°РїС‚Р°С†РёСЏ  Рє "CoC 1.5b r7" - Romann
 local ini = system_ini()
 local fs = getFS()
 --local ini_gwr = ini_file(fs:update_path("$app_data_root$", "gwr.ltx"))
@@ -17,7 +17,7 @@ function creategwr()
 		gwrf:close()
 	end
 	
-	--дефаултовые процедуры
+	--РґРµС„Р°СѓР»С‚РѕРІС‹Рµ РїСЂРѕС†РµРґСѓСЂС‹
 	db.gwr = {}
 
 	if ini:line_exist("gwr_game_settings", "meatgrinder_stalkers") then
