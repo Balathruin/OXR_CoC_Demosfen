@@ -270,16 +270,17 @@ function motivator_binder:hit_callback(obj, amount, local_direction, who, bone_i
 	--alun_utils.debug_write(strformat("START motivator_binder:hit_callback %s",obj and obj:name()))
 	if (amount <= 0 or who == nil) then
 		--alun_utils.debug_write(strformat("END motivator_binder:hit_callback %s",obj and obj:name()))
-		return 
+		return
+	-- Romann
+	elseif (amount>0) or (db.gwr~=nil) and (db.gwr["meatgrinder_stalkers"]==true) then
+--		printf("HIT_CALLBACK: %s amount=%s bone=%s who:id() = [%s] actor:id() = [%s]", obj:name(), amount, tostring(bone_index), who:id(), db.actor:id())
+		gwr_meatgrinder.main("stalker", amount*0.01, local_direction, who, bone_index, obj)
+	-- Romann
 	end
 	
 	bone_index = tonumber(bone_index)
 	if (bone_index==nil) then bone_index = 1 end
 	
-	if (amount>0) or (db.gwr~=nil) and (db.gwr["meatgrinder_stalkers"]==true) then
---		printf("HIT_CALLBACK: %s amount=%s bone=%s who:id() = [%s] actor:id() = [%s]", obj:name(), amount, tostring(bone_index), who:id(), db.actor:id())
-				gwr_meatgrinder.main("stalker", amount*0.01, local_direction, who, bone_index, obj)
-	end
 	
 	-- Only wound the stalker from powerful attacks if not a head hit and not already wounded
 	if ( (obj:has_info("npcx_is_companion") or bone_index ~= 15) and amount > 15 and amount >= obj.health*100 and not IsWounded(obj)) then
