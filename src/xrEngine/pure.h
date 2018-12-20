@@ -8,18 +8,18 @@
 #define REG_PRIORITY_CAPTURE 0x7ffffffful
 #define REG_PRIORITY_INVALID 0xfffffffful
 
-struct IPure
-{
-    virtual ~IPure() = default;
-    virtual void OnPure() = 0;
-};
+//struct IPure
+//{
+//    virtual ~IPure() = default;
+//    virtual void OnPure() = 0;
+//};
 
 #define DECLARE_MESSAGE(name)\
-struct pure##name : IPure\
+struct pure##name\
 {\
     virtual void On##name() = 0;\
-private:\
-    void OnPure() override { On##name(); }\
+    virtual ~pure##name()=default;\
+    void OnPure(){ On##name(); }\
 };
 
 DECLARE_MESSAGE(Frame); // XXX: rename to FrameStart
@@ -32,15 +32,16 @@ DECLARE_MESSAGE(AppEnd);
 DECLARE_MESSAGE(DeviceReset);
 DECLARE_MESSAGE(ScreenResolutionChanged);
 
-struct MessageObject
-{
-    IPure* Object;
-    int Prio;
-};
+
 
 template<class T>
 class MessageRegistry
 {
+    struct MessageObject
+    {
+        T* Object;
+        int Prio;
+    };
     bool changed, inProcess;
     xr_vector<MessageObject> messages;
 
