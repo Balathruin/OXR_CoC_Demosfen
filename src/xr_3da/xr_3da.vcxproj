@@ -136,11 +136,24 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release_COC|Win32'">None</DebugInformationFormat>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">None</DebugInformationFormat>
+      <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</SDLCheck>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">Speed</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">true</OmitFramePointers>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</BufferSecurityCheck>
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</RuntimeTypeInfo>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</UseFullPaths>
+      <ControlFlowGuard Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</ControlFlowGuard>
     </ClCompile>
     <Link>
       <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release_COC|Win32'">false</GenerateDebugInformation>
       <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">false</GenerateDebugInformation>
+      <OptimizeReferences Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">true</OptimizeReferences>
+      <EnableCOMDATFolding Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TreatLinkerWarningAsErrors Condition="'$(Configuration)|$(Platform)'=='Release_COC|x64'">true</TreatLinkerWarningAsErrors>
     </Link>
     <Manifest>
       <AdditionalManifestFiles>as-invoker-manifest-part.xml %(AdditionalManifestFiles)</AdditionalManifestFiles>
