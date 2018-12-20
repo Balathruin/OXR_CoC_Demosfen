@@ -1,0 +1,67 @@
+--==============================================================================--
+-- Created by Tronex
+-- Added: 2018/3/19
+-- Last visit: 2018/3/19
+-- Agony mode manager
+-- Allow/Prevent player on saving based on the conditions
+----------------------------------------------------------------------------------
+ -- Disable save menu while in combat, if bleeding and/or irradiated or if an emission or psi-storm currently ongoing
+ 
+function check_and_apply (text)
+	local str, pass
+	if (alife_storage_manager.get_state().enable_conditions_mode) and (db.actor) and (db.actor:alive()) and (level.present()) then
+		-- Prevent saving while injured (health below 50%)
+		if (db.actor.health < 0.50) then
+			if (db.actor.health > 0.40) then
+				str = strformat(game.translate_string("st_ui_no_save_injury_1"),game.translate_string(text))
+			elseif (db.actor.health < 0.40 and db.actor.health > 0.25) then
+				str = strformat(game.translate_string("st_ui_no_save_injury_2"),game.translate_string(text))
+			elseif (db.actor.health < 0.25 and db.actor.health > 0.10) then
+				str = strformat(game.translate_string("st_ui_no_save_injury_3"),game.translate_string(text))
+			elseif (db.actor.health < 0.10) then
+				str = strformat(game.translate_string("st_ui_no_save_injury_4"),game.translate_string(text))
+			end
+			pass = true
+		end
+		
+		-- Prevent saving if bleeding and/or irradiated.
+		local bleeding = db.actor.bleeding > 0
+		local radiation = db.actor.radiation > 0.04 -- ~100 msv
+		if (bleeding or radiation) then
+			if (bleeding and radiation) then
+				str = strformat(game.translate_string("st_ui_no_save_bleed_radiation"),game.translate_string(text))
+			elseif (bleeding) then
+				str = strformat(game.translate_string("st_ui_no_save_bleed"),game.translate_string(text))
+			elseif (radiation) then
+				str = strformat(game.translate_string("st_ui_no_save_radiation"),game.translate_string(text))
+			end
+			pass = true
+		end
+		
+		-- Prevent saving during an emission or psi-storm.
+		if (xr_conditions.surge_started() or psi_storm_manager.is_started()) then
+			str = strformat(game.translate_string("st_ui_no_save_surge"),game.translate_string(text))
+			pass = true
+		end
+		
+		-- Prevent saving during combat.
+		if not (is_empty(xr_combat_ignore.fighting_with_actor_npcs)) then 
+			str = strformat(game.translate_string("st_ui_no_save_combat"),game.translate_string(text))
+			pass = true
+		end 
+		
+		-- Campfire save mode check.
+		if (alife_storage_manager.get_state().enable_campfire_mode) and (level_weathers.valid_levels[level.name()]) then
+			str = strformat(game.translate_string("st_ui_no_save_campfire"),game.translate_string(text))
+			pass = true
+		end
+	end
+	
+	if pass then
+		SetHudMsg(str,4)
+		get_console():execute("main_menu off")
+		return true
+	end
+	
+	return false
+end

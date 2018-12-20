@@ -194,7 +194,7 @@
 		<text>Настройка клавиатуры</text>
 	</string>
 	<string id="ui_mm_last_save">
-		<text>Посл. безопасное место</text>
+		<text>Последняя игра</text>
 	</string>
 	<string id="ui_mm_light_distance">
 		<text>Дальность освещения</text>
@@ -203,7 +203,7 @@
 		<text>В путь</text>
 	</string>
 	<string id="ui_mm_load_game">
-		<text>Вспомнить ходку</text>
+		<text>Загрузить игру</text>
 	</string>
 	<string id="ui_mm_logout">
 		<text>Выйти из профиля</text>
@@ -245,7 +245,7 @@
 		<text>Сетевая игра</text>
 	</string>
 	<string id="ui_mm_newgame">
-		<text>Отправиться в ходку</text>
+		<text>Новая игра</text>
 	</string>
 	<string id="ui_mm_novice">
 		<text>Сталкер</text>
@@ -254,13 +254,13 @@
 		<text>Свет фонариков NPC</text>
 	</string>
 	<string id="ui_mm_options">
-		<text>Снаряга</text>
+		<text>Опции</text>
 	</string>
 	<string id="ui_mm_options_n">
-		<text>Снаряга</text>
+		<text>Опции</text>
 	</string>
 	<string id="ui_mm_weather_options">
-		<text>Прогноз Погоды</text>
+		<text>Atmosfear 3</text>
 	</string>
 	<string id="ui_mm_particles_distance">
 		<text>Дальность частиц</text>
@@ -269,16 +269,16 @@
 		<text>Установки качества</text>
 	</string>
 	<string id="ui_mm_quit2windows">
-		<text>Выбраться за перриметр</text>
+		<text>Выйти</text>
 	</string>
 	<string id="ui_mm_quit_game">
-		<text>Завершить ходку</text>
+		<text>Завершить игру</text>
 	</string>
 	<string id="ui_mm_quit_game_message">
-		<text>Вы действительно хотите завершить ходку?</text>
+		<text>Вы действительно хотите завершить игру?</text>
 	</string>
 	<string id="ui_mm_quit_windows_message">
-		<text>Вы действительно хотите выбраться за перриметр?</text>
+		<text>Вы действительно хотите выйти?</text>
 	</string>
 	<string id="ui_mm_r2_detail_bump">
 		<text>Детальный рельеф</text>
@@ -332,13 +332,13 @@
 		<text>Насыщенность</text>
 	</string>
 	<string id="ui_mm_return_game">
-		<text>Продолжить ходку</text>
+		<text>Продолжить</text>
 	</string>
 	<string id="ui_mm_save">
 		<text>Сохранить</text>
 	</string>
 	<string id="ui_mm_save_game">
-		<text>Сохранить безопасное место</text>
+		<text>Сохранить игру</text>
 	</string>
 	<string id="ui_mm_show_crosshair">
 		<text>Показывать прицел</text>

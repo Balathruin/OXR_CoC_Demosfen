@@ -1,0 +1,70 @@
+-- =======================================================================================
+-- Created by Tronex
+-- Last modification: 2018/5/23
+-- This script grants new lives for ironman playthroughs with enabled life cycle
+-- =======================================================================================
+
+local time_factor = 1
+local granted_lives = 0 
+local sleep_hrs = 0
+local life_cycle = 120
+local life_feature = false
+
+function set_sleep_hrs(hrs) -- called by (ui_sleep_dialog.script)
+	sleep_hrs = sleep_hrs + hrs
+end
+
+function ironman_timer()
+	
+	ResetTimeEvent(0,"IronManTimer",5*time_factor) -- reset every 5 minutes
+	
+	if (not db.actor) or (not USE_MARSHAL)then 
+		return true 
+	end
+	
+	local s_time = level.get_start_time()
+	local seconds = tonumber(game.get_game_time():diffSec(s_time))
+	local hours = math.floor(seconds/60/60)
+	local true_hrs = hours - sleep_hrs
+	local fc = math.floor(true_hrs/life_cycle)
+	if (granted_lives < fc) then
+		local death_count = alife_storage_manager.get_state().death_count or 0
+		alife_storage_manager.get_state().death_count = death_count - 1
+		granted_lives = granted_lives + 1
+		--printf(">>> Tronex: New life granted! new lives so far: " .. granted_lives)
+	end
+	--printf(">>> Tronex: fc: " .. fc .. " | true hrs: " .. true_hrs .. " | hours: " .. hours .. " | death_count: " .. tostring(alife_storage_manager.get_state().death_count) .. " | deeath_limit: " .. tostring(alife_storage_manager.get_state().death_limit) .. " | life_feature: " .. tostring(life_feature) .. " | life_cycle: " .. tostring(life_cycle))
+	
+	return false
+end
+
+--========================================< Callbacks >========================================--
+local function save_state(m_data)
+	m_data.ironman_sleep_hrs = sleep_hrs
+	m_data.ironman_granted_lives = granted_lives
+end
+
+local function load_state(m_data)
+	sleep_hrs = m_data.ironman_sleep_hrs
+	granted_lives = m_data.ironman_granted_lives
+	life_cycle = m_data.ironman_life_cycle
+	life_feature = m_data.ironman_life_feature
+	--printf(">>> Tronex: load_state | sleep_hrs: " .. tostring(sleep_hrs) .. " | granted_lives: " .. tostring(granted_lives) .. " | life_cycle: " .. tostring(life_cycle) .. " | life_feature: " .. tostring(life_feature))
+end
+
+function on_game_start()
+
+	local function on_game_load()
+		local uuid = alife_storage_manager.get_state().uuid
+		if (not uuid) or (not life_feature) then
+			return
+		end
+		if _G.GAME_VERSION == "1.4.16" then
+			time_factor = level.get_time_factor()
+		end
+		CreateTimeEvent(0,"IronManTimer",10*time_factor,ironman_timer)
+	end
+	RegisterScriptCallback("save_state",save_state)
+	RegisterScriptCallback("load_state",load_state)
+	RegisterScriptCallback("on_game_load",on_game_load)
+end

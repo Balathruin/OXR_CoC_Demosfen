@@ -1,11 +1,11 @@
 
---============== Настройки быстрых сохранений =====================
+--============== РќР°СЃС‚СЂРѕР№РєРё Р±С‹СЃС‚СЂС‹С… СЃРѕС…СЂР°РЅРµРЅРёР№ =====================
 
--- Клавиша быстрого сохранения "Имя_локации-Дата-Время" (сейчас - F8):
+-- РљР»Р°РІРёС€Р° Р±С‹СЃС‚СЂРѕРіРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ "РРјСЏ_Р»РѕРєР°С†РёРё-Р”Р°С‚Р°-Р’СЂРµРјСЏ" (СЃРµР№С‡Р°СЃ - F8):
 
 	local long_save_btn = "F8"
 
---============== Настройка завершена =====================
+--============== РќР°СЃС‚СЂРѕР№РєР° Р·Р°РІРµСЂС€РµРЅР° =====================
 
 
 
@@ -16,31 +16,58 @@ local level_name = "quicksave"
 local show_load_dialog
 
 
------------сохранения-------------
+-----------СЃРѕС…СЂР°РЅРµРЅРёСЏ-------------
 
 local function only_save(save_name)
-get_console():execute(save_name)
+
+	-- Campfire save mode check
+	if (alife_storage_manager.get_state().enable_campfire_mode) and (level_weathers.valid_levels[level.name()]) then
+		if not (_G.ALLOW_SAVING) then
+			local str = strformat(game.translate_string("st_ui_no_save_campfire"),game.translate_string("st_ui_save"))
+			SetHudMsg(str,4)
+			get_console():execute("main_menu off")
+			return true -- return true to override the engine
+		end
+	end
+
+	-- Agony save mode check
+	if savegame_conditions.check_and_apply("st_ui_save") then
+		return true
+	end
+	-- Timer save mode check
+	if savegame_timer.check_and_apply("st_ui_save") then
+		return true
+	end
+
+	get_console():execute(save_name)
+
+	if (alife_storage_manager.get_state().enable_timer_mode) then
+		savegame_timer.timer_reset() -- reset timer
+	end
 end
 
 local function short_save()
 	local flist = getFS():file_list_open_ex("$game_saves$",	bit_or(FS.FS_ListFiles,FS.FS_RootOnly),"*.scop")
 	local f_cnt = flist and flist:Size() or 0
+
 	local inc = 0
 	if (f_cnt > 0) then
-	flist:Sort(FS.FS_sort_by_modif_down)	
+		flist:Sort(FS.FS_sort_by_modif_down)	
+		
 		for it=0, f_cnt-1 do
-		local file_name = flist:GetAt(it):NameFull():sub(0,-6)
-		local suff = string.sub(file_name, -2, -1)
+			local file_name = flist:GetAt(it):NameFull():sub(0,-6)
+			local suff = string.sub(file_name, -2, -1)
 			if string.format("%s_%s", level_name, suff) == file_name then
 			local d = tonumber(suff)
 				if (d) then
-				inc = d
-				break 
+					inc = d
+					break 
 				end
 			end
 	   	end
 	end	
-inc =(inc >= axr_main.config:r_value("mm_options","quicksave_cnt",2,5) and 1) or (inc + 1)
+	inc =(inc >= axr_main.config:r_value("mm_options","quicksave_cnt",2,5) and 1) or (inc + 1)
+
 	return string.format("save %s_%02d", level_name, inc)
 end
 
@@ -53,7 +80,7 @@ end
 
 function action_quick_save()
 	if not (db.actor and db.actor:alive()) then
-		return
+		return false
 	end
 	only_save(short_save())
 	return true
@@ -61,6 +88,16 @@ end
 
 
 function action_long_save()
+	
+	-- Agony save mode check
+	if savegame_conditions.check_and_apply("st_ui_save") then
+		return false
+	end
+	-- Timer save mode check
+	if savegame_timer.check_and_apply("st_ui_save") then
+		return false
+	end
+
 	if not (db.actor and db.actor:alive()) then
 		return
 	end
@@ -68,7 +105,7 @@ function action_long_save()
 end
 
 
--------------загрузка сохранений
+-------------Р·Р°РіСЂСѓР·РєР° СЃРѕС…СЂР°РЅРµРЅРёР№
 
 local function load_last_save()
 	local console = get_console()
@@ -133,13 +170,13 @@ function action_toggle_pda_tab(str)
 	end
 end
 
------------колбэки------------
+-----------РєРѕР»Р±СЌРєРё------------
 
 local function on_game_load()
 	long_save_btn = DIK_keys['DIK_' .. long_save_btn]
 	level_name = game.translate_string(level.name()):lower()
 	level_name = string.gsub(level_name,"%p","")
-show_load_dialog = axr_main.config:r_value("mm_options","enable_show_load_dialog",1,true)
+	show_load_dialog = axr_main.config:r_value("mm_options","enable_show_load_dialog",1,true)
 end
 
  
@@ -152,14 +189,15 @@ local function accept(handler,optMgr,ctrl)
 end
 
 local function opt_menu_on_init(menu)
-menu.gameplay_options["show_load_dialog"] = {
+	menu.gameplay_options["show_load_dialog"] = 
+	{
 		default = true,
 		debug_only = false,
 		typ = "check",
 		on_accept = function(handler,optMgr,ctrl)
 			accept(handler,optMgr,ctrl)
 		end
-		}
+	}
 end
 
 
@@ -173,16 +211,16 @@ end
 
 local function on_key_press(key)
 	if (key == long_save_btn) and level.present() then
-	action_long_save()
+		action_long_save()
 	end
 end
 
 
 function on_game_start()
-RegisterScriptCallback("on_key_press",on_key_press)
-RegisterScriptCallback("opt_menu_on_init",opt_menu_on_init)
-RegisterScriptCallback("on_game_load",on_game_load)
-RegisterScriptCallback("main_menu_on_keyboard",main_menu_on_keyboard)
+	RegisterScriptCallback("on_key_press",on_key_press)
+	RegisterScriptCallback("opt_menu_on_init",opt_menu_on_init)
+	RegisterScriptCallback("on_game_load",on_game_load)
+	RegisterScriptCallback("main_menu_on_keyboard",main_menu_on_keyboard)
 end
 
 --================ Window ============ quick_load_dlg ==
@@ -205,9 +243,9 @@ function quick_load_dlg:InitControls()
 end
 
 function quick_load_dlg:InitCallBacks()
-self:AddCallback("msg_box", ui_events.MESSAGE_BOX_OK_CLICKED, self.OnMsgYes, self)
-self:AddCallback("msg_box", ui_events.MESSAGE_BOX_YES_CLICKED, self.OnMsgYes, self)
-self:AddCallback("msg_box", ui_events.MESSAGE_BOX_NO_CLICKED, self.OnMsgNo, self)
+	self:AddCallback("msg_box", ui_events.MESSAGE_BOX_OK_CLICKED, self.OnMsgYes, self)
+	self:AddCallback("msg_box", ui_events.MESSAGE_BOX_YES_CLICKED, self.OnMsgYes, self)
+	self:AddCallback("msg_box", ui_events.MESSAGE_BOX_NO_CLICKED, self.OnMsgNo, self)
 	self:Register(self, "self")
 end
 
@@ -217,7 +255,7 @@ function quick_load_dlg:OnMsgYes()
 end
 
 function quick_load_dlg:OnMsgNo()
-self.mbox_mode = 0
+	self.mbox_mode = 0
 end
 
 function quick_load_dlg:OnButton_last_save() 
@@ -225,7 +263,7 @@ function quick_load_dlg:OnButton_last_save()
 	load_last_save()
         return
     end
-self.mbox_mode = 1
-self.message_box:InitMessageBox ("message_box_confirm_load_save")
-self.message_box:ShowDialog(true)
+	self.mbox_mode = 1
+	self.message_box:InitMessageBox ("message_box_confirm_load_save")
+	self.message_box:ShowDialog(true)
 end

@@ -1,0 +1,51 @@
+--==============================================================================--
+-- Created by Tronex
+-- Added: 2018/3/19
+-- Last visit: 2018/3/19
+-- Timer mode manager
+-- you can save once the timer is finished, saving again will reset the timer and you will wait till the next cycle.
+--==============================================================================--
+
+local val, duration, saved, is_active
+
+function on_game_start() -- callback
+	local function on_game_load()
+		val = alife_storage_manager.get_state().enable_timer_mode
+		if val and (type(val) == "number") then
+			duration = val*60 -- mins
+			CreateTimeEvent(0,"HardcoreTimer",level.get_time_factor()+1,timer_check)
+		else
+			RemoveTimeEvent(0,"HardcoreTimer")
+		end
+	end
+	
+	RegisterScriptCallback("on_game_load",on_game_load)
+end
+
+function timer_reset() -- get called from other scripts to reset the timer
+	saved = true
+end
+
+function timer_check() -- TimeEvent function
+	is_active = false
+	if (saved) then
+		ResetTimeEvent(0,"HardcoreTimer",level.get_time_factor() * duration)
+		saved = false
+		is_active = true
+	end
+end
+
+
+--====================< Condition check >====================--
+function check_and_apply (text) -- Disable save menu while the timer is active
+	if (alife_storage_manager.get_state().enable_timer_mode) and (is_active) and (db.actor) and (db.actor:alive()) and (level.present()) then
+		if (text) then
+			local str = strformat(game.translate_string("st_ui_no_save_timer"),game.translate_string(text))
+			SetHudMsg(str,4)
+		end
+		get_console():execute("main_menu off")
+		return true
+	else
+		return false
+	end
+end

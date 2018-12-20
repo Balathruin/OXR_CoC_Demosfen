@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="st_ui_save">
+		<text>save</text>
+	</string>
+	
+	<string id="st_ui_no_save_timer">
+		<text>The timer is active, you cannot %s yet.</text>
+	</string>
+	
+	<string id="st_ui_no_save_campfire">
+		<text>You can only %s near campfires.</text>
+	</string>
+	
+	<string id="st_ui_no_save_combat">
+		<text>You cannot %s during combat.</text>
+	</string>
+	
+	<string id="st_ui_no_save_surge">
+		<text>You cannot %s during an emission or psi-storm.</text>
+	</string>
+	
+	<string id="st_ui_no_save_bleed">
+		<text>You cannot %s while bleeding.</text>
+	</string>
+	
+	<string id="st_ui_no_save_radiation">
+		<text>You cannot %s while being irradiated.</text>
+	</string>
+	
+	<string id="st_ui_no_save_bleed_radiation">
+		<text>You cannot %s while bleeding or being irradiated.</text>
+	</string>
+	
+	<string id="st_ui_no_save_injury_1">
+		<text>You cannot %s while suffering from moderate injuries.</text>
+	</string>
+	
+	<string id="st_ui_no_save_injury_2">
+		<text>You cannot %s while suffering from serious injuries.</text>
+	</string>
+	
+	<string id="st_ui_no_save_injury_3">
+		<text>You cannot %s while suffering from severe injuries.</text>
+	</string>
+	
+	<string id="st_ui_no_save_injury_4">
+		<text>You cannot %s while suffering from critical injuries.</text>
+	</string>
+	
+</string_table>

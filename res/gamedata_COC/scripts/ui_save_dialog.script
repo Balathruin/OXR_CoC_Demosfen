@@ -251,4 +251,8 @@ function save_dialog:SaveFile(fileName)
 		local console = get_console()
 		console:execute("save " .. fileName)
 	end
+	
+	if (alife_storage_manager.get_state().enable_timer_mode) then
+		savegame_timer.timer_reset() -- reset timer
+	end
 end

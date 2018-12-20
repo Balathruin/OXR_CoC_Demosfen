@@ -169,6 +169,9 @@
   <string id="pri_b305_strelok_name">
     <text>Strelok</text>
   </string>
+	<string id="no_name_name">
+		<text>No name</text>
+	</string>
   <string id="pri_b306_envoy_name">
     <text>Durad Vidic</text>
   </string>

@@ -1,3 +1,4 @@
+
 -- File:        UI_MAIN_MENU.SCRIPT
 -- Description: Load Dialog for STALKER
 -- Created:     28.10.2004
@@ -5,7 +6,11 @@
 -- Copyright:   2004 GSC Game World
 -- Author:      Serhiy Vynnychenko (narrator@gsc-game.kiev.ua)
 -- Version:     0.9
-
+-- =======================================================================================
+-- Modified by Tronex
+-- Last modification: 2018/7/17
+-- Prevent saving when hardcore save modes are active
+-- =======================================================================================
 
 
 local SKIP_FACTION_SELECTION = false -- TRUE to disable faction selection menu and start normally
@@ -179,7 +184,10 @@ function main_menu:OnButton_last_save()
 end
 
 function main_menu:OnButton_credits_clicked()
-	game.start_tutorial("credits_seq")
+	--game.start_tutorial("credits_seq")
+	local console = get_console()
+	console:execute("g_game_difficulty gd_stalker")
+	self:ShowFactionUI()
 end
 
 function main_menu:OnButton_quit_clicked()
@@ -300,12 +308,24 @@ function main_menu:OnButton_save_clicked()
 		return
 	end
 
-	if (alife_storage_manager.get_state().enable_campfire_mode) then
+	-- Campfire save mode check
+	if (alife_storage_manager.get_state().enable_campfire_mode) and (level_weathers.valid_levels[level.name()]) then
 		if not (_G.ALLOW_SAVING) then
-			SetHudMsg("st_you_cant_save",4)
+			local str = strformat(game.translate_string("st_ui_no_save_campfire"),game.translate_string("st_ui_save"))
+			SetHudMsg(str,4)
 			get_console():execute("main_menu off")
 			return
 		end
+	end
+	
+	-- Agony save mode check
+	if savegame_conditions.check_and_apply("st_ui_save") then
+		return
+	end
+	
+	-- Timer save mode check
+	if savegame_timer.check_and_apply("st_ui_save") then
+		return
 	end
 
 	if self.save_dlg == nil then
