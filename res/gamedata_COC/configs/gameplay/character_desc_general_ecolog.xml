@@ -10,8 +10,6 @@
         <reputation>321</reputation>
         <visual>actors\stalker_hero\stalker_hero_1</visual>
         <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_1.ltx"
         [spawn] \n
         device_torch = 1 \n
         hand_radio = 1 \n
@@ -35,8 +33,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -56,8 +52,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_blue</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -77,8 +71,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_brown</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -98,8 +90,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -119,8 +109,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_white</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -140,8 +128,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_yellow</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -161,8 +147,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -182,8 +166,6 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -204,8 +186,6 @@
     <reputation>542</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -227,8 +207,6 @@
     <reputation>1485</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -250,8 +228,6 @@
     <reputation>795</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -272,8 +248,6 @@
     <reputation>2018</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -294,8 +268,6 @@
     <reputation>811</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -316,8 +288,6 @@
     <reputation>1960</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
-#include "gameplay\loadouts\ecolog_base.ltx"
-#include "gameplay\loadouts\ecolog_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
