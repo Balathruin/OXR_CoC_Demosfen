@@ -6,9 +6,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11894</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>1178</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
  
@@ -27,9 +27,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11384</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>752</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
  
@@ -48,9 +48,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>14294</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>1927</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
  
@@ -69,9 +69,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11386</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>1951</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
  
@@ -90,9 +90,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>10668</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>1140</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
  
@@ -111,9 +111,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5366</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>839</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
  
@@ -132,7 +132,7 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5078</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
     <reputation>74</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
@@ -153,9 +153,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>3932</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>1056</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
  
@@ -174,9 +174,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>4292</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>1400</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
  
@@ -195,9 +195,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>1840</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>623</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
  
@@ -216,9 +216,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>10390</rank>
+    <rank>0</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>2462</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
  
@@ -237,9 +237,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12828</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>1012</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
  
@@ -258,7 +258,7 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11322</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
     <reputation>67</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
@@ -279,9 +279,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>14416</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>1785</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
  
@@ -300,9 +300,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12566</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>1168</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
  
@@ -321,9 +321,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>14724</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>1341</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
  
@@ -342,9 +342,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5516</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>568</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
  
@@ -363,9 +363,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5176</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>2470</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
  
@@ -384,9 +384,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5738</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>2294</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
  
@@ -405,9 +405,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>3296</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>974</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
  
@@ -426,9 +426,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>1508</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>1594</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
  
@@ -447,9 +447,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11270</rank>
+    <rank>0</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>2380</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
  
@@ -468,7 +468,7 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11550</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
     <reputation>319</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
@@ -489,9 +489,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12234</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>1215</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
  
@@ -510,9 +510,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11364</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>2404</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
  
@@ -531,9 +531,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>10008</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>2219</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
  
@@ -552,9 +552,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12884</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>2139</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
  
@@ -573,9 +573,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5090</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>471</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
  
@@ -594,9 +594,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>4926</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>1128</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
  
@@ -615,9 +615,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>5496</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>1985</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
  
@@ -636,9 +636,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>3770</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>1704</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
  
@@ -657,7 +657,7 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>2494</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
     <reputation>21</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
@@ -678,9 +678,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>11632</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>849</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
  
@@ -699,9 +699,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12266</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>1108</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercenary3</visual>
     <supplies>
  
@@ -722,7 +722,7 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>13506</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>163</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
@@ -745,9 +745,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12624</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>1441</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercenary3</visual>
     <supplies>
  
@@ -768,9 +768,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>12930</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>527</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
     <supplies>
  
@@ -791,9 +791,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>24386</rank>
+    <rank>0</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>1079</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
  
@@ -814,9 +814,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>21462</rank>
+    <rank>0</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>715</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
  
@@ -837,9 +837,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>17622</rank>
+    <rank>0</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>743</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercexo_4</visual>
     <supplies>
  
@@ -860,9 +860,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>20874</rank>
+    <rank>0</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>635</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
     <supplies>
  
@@ -883,9 +883,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>27712</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>1438</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
  
@@ -906,9 +906,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>27564</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>1276</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
  
@@ -929,9 +929,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>15410</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>2071</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercexo_4</visual>
     <supplies>
  
@@ -952,7 +952,7 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>18248</rank>
+    <rank>0</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>147</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
@@ -975,9 +975,9 @@
     <class>test_killer</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>13938</rank>
+    <rank>0</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>488</reputation>
+    <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
  
@@ -994,8 +994,8 @@
     <class>test_silencer_character</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>14794</rank>
-    <reputation>2407</reputation>
+    <rank>0</rank>
+    <reputation>0</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
