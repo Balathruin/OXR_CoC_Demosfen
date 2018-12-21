@@ -1,380 +1,315 @@
 #include "profiles\profiles.ltx"
 
 [trader]
-buy_condition                                      = buy_condition_petrenko
-buy_item_condition_factor                          = 0.3
-buy_supplies                                       = {=actor_community(actor_dolg) =heavy_pockets_functor} supplies_heavy_pockets, supplies_generic
-discounts                                          = {=actor_goodwill_ge(dolg:2000)} discount_10, {=actor_goodwill_ge(dolg:1800)} discount_9, {=actor_goodwill_ge(dolg:1600)} discount_8, {=actor_goodwill_ge(dolg:1400)} discount_7, {=actor_goodwill_ge(dolg:1200)} discount_6, {=actor_goodwill_ge(dolg:1000)} discount_5, {=actor_goodwill_ge(dolg:800)} discount_4, {=actor_goodwill_ge(dolg:600)} discount_3, {=actor_goodwill_ge(dolg:400)} discount_2, {=actor_goodwill_ge(dolg:200)} discount_1, discount_0
-sell_condition                                     = sell_condition_generic
-
-[supplies_heavy_pockets]
-1p29                                               = 3, 0.85
-9x39scope                                          = 2, 0.69
-ac10632                                            = 4, 0.77
-ac11090                                            = 4, 0.69
-acog                                               = 3, 0.75
-ammo_11.43x23_fmj                                  = 1, 0.70
-ammo_11.43x23_hydro                                = 4, 0.96
-ammo_12.7x55_fmj                                   = 4, 0.89
-ammo_12x70_buck                                    = 4, 0.76
-ammo_12x76_zhekan                                  = 2, 0.69
-ammo_338_lapua                                     = 2, 0.55
-ammo_5.45x39_ap                                    = 3, 0.92
-ammo_5.45x39_fmj                                   = 3, 0.62
-ammo_5.56x45_ap                                    = 1, 0.58
-ammo_5.56x45_ss190                                 = 1, 0.86
-ammo_5.7x28_ap                                     = 3, 0.93
-ammo_5.7x28_fmj                                    = 2, 0.82
-ammo_50bmg                                         = 3, 0.79
-ammo_7.62x25_p                                     = 3, 0.57
-ammo_7.62x25_ps                                    = 4, 0.94
-ammo_7.62x39_ap                                    = 1, 0.98
-ammo_7.62x39_fmj                                   = 2, 0.62
-ammo_7.62x51_ap                                    = 4, 0.90
-ammo_7.62x51_fmj                                   = 4, 0.78
-ammo_7.62x54_7h1                                   = 3, 0.72
-ammo_7.62x54_7h14                                  = 1, 0.70
-ammo_7.62x54_ap                                    = 3, 0.65
-ammo_9x18_fmj                                      = 3, 0.90
-ammo_9x18_pmm                                      = 1, 0.70
-ammo_9x19_fmj                                      = 3, 0.60
-ammo_9x19_pbp                                      = 2, 0.90
-ammo_9x39_ap                                       = 3, 0.78
-ammo_9x39_sp5                                      = 3, 0.66
-ammo_9x39_pab9                                     = 3, 0.62
-ammo_gauss_cardan                                  = 2, 0.88
-ammo_m209                                          = 2, 0.59
-ammo_og-7b                                         = 2, 0.82
-ammo_pkm_100                                       = 4, 0.92
-ammo_vog-25                                        = 4, 0.63
-ammo_vog-25p                                       = 4, 0.53
-c-more                                             = 4, 0.97
-detector_simple                                    = 1,	0.75
-docter_sight                                       = 1, 0.62
-docter_sight                                       = 2, 0.53
-dolg_exo_outfit                                    =1, 0.8
-dolg_heavy_outfit                                  =2, 0.9
-dolg_novice_outfit                                 =2, 0.95
-dolg_outfit                                        =2, 0.95
-dolg_scientific_outfit                             =1, 0.8
-ekp                                                = 2, 0.87
-eot                                                = 4, 0.96
-grenade_f1                                         = 3, 0.86
-grenade_gd-05                                      = 4, 0.51
-grenade_rgd5                                       = 1, 0.61
-helm_battle                                        =1, 0.7
-helm_hardhat                                       =1, 0.7
-helm_m40                                           =1, 0.7
-helm_protective                                    =1, 0.7
-helm_respirator                                    =1, 0.7
-helm_tactic                                        =1, 0.7
-
-equ_backpack          = 3, 0.8
-equ_small_pack        = 3, 0.8
-equ_military_pack     = 3, 0.8
-equ_tourist_pack      = 3, 0.8
-
-equ_dolg_pack         = 3, 0.8
-equ_free_pack         = 3, 0.8
-equ_csky_pack         = 3, 0.8
-equ_merc_pack         = 3, 0.8
-
-itm_gunsmith_toolkit                               = 2, 0.35
-itm_outfit_toolkit                                 = 2, 0.35
-itm_repairkit_tier_1                               = 1, 0.25
-itm_repairkit_tier_2                               = 1, 0.10
-itm_repairkit_tier_3                               = 1, 0.03
-kobra                                              = 1, 0.68
-kobra                                              = 2, 0.78
-medkit_army                                        = 4, 0.45
-po4x34                                             = 2, 0.60
-pso                                                = 4, 0.52
-sil_45                                             = 2, 0.85
-sil_57                                             = 1, 0.67
-sil_6p9                                            = 1, 0.68
-sil_9a91                                           = 3, 0.98
-sil_atg                                            = 3, 0.52
-sil_gemtech                                        = 3, 0.69
-sil_kzrzp                                          = 4, 0.59
-sil_nato                                           = 4, 0.96
-sil_pbs-4                                          = 4, 0.59
-sil_pbs1                                           = 3, 0.98
-sil_sr25                                           = 3, 0.55
-sil_tgp-a                                          = 4, 0.54
-sil_vihr                                           = 3, 0.62
-wpn_abakan                                         = 1, 0.47
-wpn_addon_grenade_launcher                         = 2, 0.64
-wpn_addon_grenade_launcher_ag36                    = 4, 0.59
-wpn_addon_grenade_launcher_m203                    = 1, 0.95
-wpn_addon_silencer                                 = 2, 0.81
-wpn_aek971                                         = 2, 0.60
-wpn_ak                                             = 2, 0.51
-wpn_ak101                                          = 2, 0.51
-wpn_ak102                                          = 1, 0.53
-wpn_ak103                                          = 1, 0.72
-wpn_ak104                                          = 2, 0.56
-wpn_ak105                                          = 2, 0.64
-wpn_ak12                                           = 2, 0.73
-wpn_ak74                                           = 1, 0.64
-wpn_ak74_sk1                                       = 2, 0.49
-wpn_ak74_sk2                                       = 2, 0.73
-wpn_ak74_sk3                                       = 2, 0.78
-wpn_ak74m                                          = 1, 0.53
-wpn_ak74m_sk1                                      = 1, 0.53
-wpn_ak74m_sk2                                      = 1, 0.77
-wpn_ak74u                                          = 2, 0.69
-wpn_ak74u_sk1                                      = 1, 0.70
-wpn_ak74u_sk2                                      = 1, 0.54
-wpn_ak74u_sk3                                      = 2, 0.59
-wpn_akm                                            = 1, 0.71
-wpn_akms                                           = 1, 0.65
-wpn_aks                                            = 1, 0.59
-wpn_aks74                                          = 1, 0.59
-wpn_aps                                            = 2, 0.70
-wpn_bizon                                          = 1, 0.50
-wpn_fort                                           = 1, 0.47
-wpn_groza                                          = 2, 0.74
-wpn_knife                                          = 2, 0.64
-wpn_knife_colt                                     = 1, 0.75
-wpn_knife_extrema                                  = 1, 0.58
-wpn_knife_hunting                                  = 1, 0.78
-wpn_knife_spetsnaz                                 = 2, 0.69
-wpn_knife_survival                                 = 2, 0.60
-wpn_knife_tanto                                    = 1, 0.77
-wpn_mine                                           = 2, 0.82
-wpn_mp133                                          = 1, 0.56
-wpn_mp153                                          = 1, 0.44
-wpn_oc33                                           = 2, 0.65
-wpn_oc33_sk1                                       = 2, 0.45
-wpn_pb                                             = 1, 0.69
-wpn_pb_sk1                                         = 1, 0.53
-wpn_pkm                                            = 1, 0.75
-wpn_pm                                             = 1, 0.69
-wpn_pm_sk1                                         = 2, 0.66
-wpn_pmm                                            = 1, 0.78
-wpn_remington870                                   = 2, 0.47
-wpn_rpd                                            = 1, 0.72
-wpn_rpk                                            = 1, 0.76
-wpn_rpk74                                          = 2, 0.44
-wpn_saiga                                          = 1, 0.64
-wpn_spas12                                         = 1, 0.43
-wpn_svt40                                          = 2, 0.69
-wpn_toz194                                         = 2, 0.62
-wpn_tt33                                           = 1, 0.52
-wpn_tt33_sk1                                       = 2, 0.42
-wpn_vepr                                           = 2, 0.61
-wpn_wincheaster1300                                = 2, 0.53
-dolg_radiation_outfit=1, 0.8
-helm_tactic_2=1, 0.7
-helm_respirator_2=1, 0.7
-helm_respirator_gp5=1, 0.7
-helm_respirator_half=1, 0.7
-
-solvent_2=2, 0.6
-armor_repair_fa_2=2, 0.6
-steel_wool=5, 0.6
-paperscrap=5, 0.6
-grease=6, 0.6
-textile_patch_m=6, 0.6
-textile_patch_b=10, 0.6
-textile_patch_e=4, 0.6
+buy_condition										= buy_condition_petrenko
+buy_item_condition_factor							= 0.3
+buy_supplies										= {=actor_community(actor_dolg) =heavy_pockets_functor} supplies_heavy_pockets, supplies_generic
+discounts											= {=actor_goodwill_ge(dolg:2000)} discount_10, {=actor_goodwill_ge(dolg:1800)} discount_9, {=actor_goodwill_ge(dolg:1600)} discount_8, {=actor_goodwill_ge(dolg:1400)} discount_7, {=actor_goodwill_ge(dolg:1200)} discount_6, {=actor_goodwill_ge(dolg:1000)} discount_5, {=actor_goodwill_ge(dolg:800)} discount_4, {=actor_goodwill_ge(dolg:600)} discount_3, {=actor_goodwill_ge(dolg:400)} discount_2, {=actor_goodwill_ge(dolg:200)} discount_1, discount_0
+sell_condition										= sell_condition_generic
 
 [supplies_generic]
-pu = 1, 1
-wpn_mn91 = 1, 0.3
-wpn_groza1 = 1, 0.3
-wpn_groza2 = 1, 0.3
-wpn_vintorez1 = 1, 0.3
-wpn_sks = 1, 0.3
-wpn_ak12_762 = 1, 0.3
-wpn_vityaz = 1, 0.3
-wpn_ppsh41 = 1, 0.3
-wpn_toz34_sk2 = 1, 0.3
-wpn_mp7 = 1, 0.3
-wpn_mp412 = 1, 0.3
-wpn_aek973 = 1, 0.3
-1p29                                               = 2, 0.27
-9x39scope                                          = 3, 0.35
-ac10632                                            = 4, 0.42
-ac11090                                            = 3, 0.39
-acog                                               = 1, 0.32
-ammo_11.43x23_fmj                                  = 5, 0.5 ;2, 0.31
-ammo_11.43x23_hydro                                = 5, 0.5 ;1, 0.38
-ammo_12.7x55_fmj                                   = 5, 0.5 ;3, 0.45
-ammo_12x70_buck                                    = 5, 0.5 ;1, 0.29
-ammo_12x76_zhekan                                  = 5, 0.5 ;4, 0.43
-ammo_338_lapua                                     = 5, 0.5 ;3, 0.46
-ammo_5.45x39_ap                                    = 5, 0.5 ;4, 0.46
-ammo_5.45x39_fmj                                   = 5, 0.5 ;3, 0.35
-ammo_5.56x45_ap                                    = 5, 0.5 ;1, 0.44
-ammo_5.56x45_ss190                                 = 5, 0.5 ;2, 0.32
-ammo_5.7x28_ap                                     = 5, 0.5 ;2, 0.42
-ammo_5.7x28_fmj                                    = 5, 0.5 ;4, 0.32
-ammo_50bmg                                         = 5, 0.5 ;3, 0.27
-ammo_7.62x25_p                                     = 5, 0.5 ;1, 0.45
-ammo_7.62x25_ps                                    = 5, 0.5 ;2, 0.44
-ammo_7.62x39_ap                                    = 5, 0.5 ;4, 0.45
-ammo_7.62x39_fmj                                   = 5, 0.5 ;1, 0.38
-ammo_7.62x51_ap                                    = 5, 0.5 ;3, 0.44
-ammo_7.62x51_fmj                                   = 5, 0.5 ;4, 0.37
-ammo_7.62x54_7h1                                   = 5, 0.5 ;1, 0.37
-ammo_7.62x54_7h14                                  = 5, 0.5 ;1, 0.28
-ammo_7.62x54_ap                                    = 5, 0.5 ;2, 0.43
-ammo_9x18_fmj                                      = 5, 0.5 ;2, 0.30
-ammo_9x18_pmm                                      = 5, 0.5 ;4, 0.43
-ammo_9x19_fmj                                      = 5, 0.5 ;2, 0.42
-ammo_9x19_pbp                                      = 5, 0.5 ;2, 0.36
-ammo_9x39_ap                                       = 5, 0.5 ;1, 0.29
-ammo_9x39_sp5                                      = 5, 0.5 ;1, 0.29
-ammo_9x39_pab9                                     = 5, 0.5 ;4, 0.49
-ammo_gauss                                         = 5, 0.5 ;4, 0.41
-ammo_m209                                          = 5, 0.5 ;3, 0.33
-ammo_og-7b                                         = 5, 0.5 ;4, 0.36
-ammo_pkm_100                                       = 5, 0.5 ;1, 0.42
-ammo_vog-25                                        = 5, 0.5 ;4, 0.37
-ammo_vog-25p                                       = 5, 0.5 ;4, 0.35
-c-more                                             = 3, 0.41
-detector_simple                                    = 1,	0.75
-docter_sight                                       = 2, 0.45
-dolg_exo_outfit                                    =1, 0.55
-dolg_heavy_outfit                                  =2, 0.70
-dolg_novice_outfit                                 =2, 0.95
-dolg_outfit                                        =2, 0.95
-dolg_scientific_outfit                             =1, 0.70
-ekp                                                = 1, 0.28
-eot                                                = 4, 0.41
-grenade_f1                                         = 1, 0.38
-grenade_gd-05                                      = 3, 0.44
-grenade_rgd5                                       = 4, 0.26
-helm_battle                                        = 1, 0.4
-helm_hardhat                                       =1, 0.7
-helm_m40                                           =1, 0.4
-helm_protective                                    = 1, 0.4
-helm_respirator                                    =1, 0.7
-helm_tactic                                        = 1, 0.4
+;Weapons
+wpn_ak74											= 1, 0.25
+wpn_ak74u											= 1, 0.35
+wpn_ak												= 1, 0.45
+wpn_sks												= 1, 0.55
+wpn_binoc											= 1, 0.2
+wpn_fort											= 1, 0.8
+wpn_knife											= 1, 0.3
+wpn_mine											= 4, 0.4
+wpn_pb												= 1, 0.8
+wpn_pm												= 1, 0.9
 
-equ_backpack          = 3, 0.8
-equ_small_pack        = 3, 0.8
-equ_military_pack     = 3, 0.8
-equ_tourist_pack      = 3, 0.8
+;Weapon Addons
 
-equ_dolg_pack         = 3, 0.8
-equ_free_pack         = 3, 0.8
-equ_csky_pack         = 3, 0.8
-equ_merc_pack         = 3, 0.8
+ekp													= 1, 0.1
+1p29												= 1, 0.01
 
-itm_gunsmith_toolkit                               = 2, 0.35
-itm_outfit_toolkit                                 = 2, 0.35
-itm_repairkit_tier_1                               = 1, 0.25
-itm_repairkit_tier_2                               = 1, 0.10
-itm_repairkit_tier_3                               = 1, 0.03
-kobra                                              = 3, 0.49
-po4x34                                             = 3, 0.41
-pso                                                = 3, 0.36
-sil_45                                             = 4, 0.40
-sil_57                                             = 3, 0.36
-sil_6p9                                            = 4, 0.40
-sil_9a91                                           = 4, 0.48
-sil_atg                                            = 4, 0.49
-sil_gemtech                                        = 2, 0.41
-sil_kzrzp                                          = 4, 0.43
-sil_nato                                           = 4, 0.39
-sil_pbs-4                                          = 3, 0.30
-sil_pbs1                                           = 1, 0.41
-sil_sr25                                           = 4, 0.43
-sil_tgp-a                                          = 3, 0.47
-sil_vihr                                           = 1, 0.33
-wpn_abakan                                         = 2, 0.30
-wpn_addon_grenade_launcher                         = 4, 0.41
-wpn_addon_grenade_launcher_ag36                    = 3, 0.43
-wpn_addon_grenade_launcher_m203                    = 3, 0.45
-wpn_addon_silencer                                 = 1, 0.30
-wpn_aek971                                         = 1, 0.34
-wpn_ak                                             = 1, 0.30
-wpn_ak101                                          = 1, 0.36
-wpn_ak102                                          = 2, 0.28
-wpn_ak103                                          = 1, 0.28
-wpn_ak104                                          = 2, 0.32
-wpn_ak105                                          = 1, 0.24
-wpn_ak12                                           = 2, 0.31
-wpn_ak74                                           = 1, 0.27
-wpn_ak74_sk1                                       = 1, 0.30
-wpn_ak74_sk2                                       = 1, 0.37
-wpn_ak74_sk3                                       = 2, 0.30
-wpn_ak74m                                          = 1, 0.20
-wpn_ak74m_sk1                                      = 2, 0.34
-wpn_ak74m_sk2                                      = 2, 0.20
-wpn_ak74u                                          = 1, 0.32
-wpn_ak74u_sk1                                      = 2, 0.35
-wpn_ak74u_sk2                                      = 1, 0.25
-wpn_ak74u_sk3                                      = 1, 0.36
-wpn_akm                                            = 1, 0.30
-wpn_akms                                           = 1, 0.23
-wpn_aks                                            = 1, 0.23
-wpn_aks74                                          = 1, 0.30
-wpn_aps                                            = 1, 0.36
-wpn_bizon                                          = 2, 0.22
-wpn_fort                                           = 2, 0.35
-wpn_groza                                          = 2, 0.28
-wpn_knife                                          = 2, 0.30
-wpn_knife_colt                                     = 1, 0.31
-wpn_knife_extrema                                  = 1, 0.30
-wpn_knife_hunting                                  = 2, 0.20
-wpn_knife_spetsnaz                                 = 1, 0.29
-wpn_knife_survival                                 = 2, 0.30
-wpn_knife_tanto                                    = 1, 0.32
-wpn_mine                                           = 1, 0.27
-wpn_mp133                                          = 1, 0.28
-wpn_mp153                                          = 2, 0.29
-wpn_oc33                                           = 1, 0.36
-wpn_oc33_sk1                                       = 1, 0.25
-wpn_pb                                             = 2, 0.33
-wpn_pb_sk1                                         = 1, 0.33
-wpn_pkm                                            = 2, 0.37
-wpn_pm                                             = 1, 0.31
-wpn_pm_sk1                                         = 2, 0.33
-wpn_pmm                                            = 1, 0.24
-wpn_remington870                                   = 1, 0.23
-wpn_rpd                                            = 1, 0.34
-wpn_rpk                                            = 1, 0.23
-wpn_rpk74                                          = 1, 0.36
-wpn_saiga                                          = 1, 0.22
-wpn_spas12                                         = 1, 0.38
-wpn_svt40                                          = 1, 0.39
-wpn_toz194                                         = 2, 0.27
-wpn_tt33                                           = 2, 0.39
-dolg_radiation_outfit=1, 0.65
-helm_tactic_2=1, 0.4
-helm_respirator_2=1, 0.7
-helm_respirator_gp5=1, 0.7
-helm_respirator_half=1, 0.7
+;Ammo
+ammo_5.45x39_ap										= 1, 0.15
+ammo_5.45x39_fmj									= 4, 0.7
+ammo_9x18_fmj										= 5, 0.8
+ammo_9x18_pmm										= 3, 0.25
+ammo_9x39_pab9										= 1, 0.2
 
-gun_oil_3=2, 0.6
-gun_oil_ru_2=2, 0.6
-gun_oil_ru_d_2=2, 0.6
-glue_a_2=2, 0.6
-glue_b_2=2, 0.6
-glue_e_2=2, 0.6
-solvent_2=2, 0.6
-armor_repair_fa_2=2, 0.6
-steel_wool=5, 0.6
-paperscrap=5, 0.6
-grease=6, 0.6
-textile_patch_m=6, 0.6
-textile_patch_b=10, 0.6
-textile_patch_e=4, 0.6
+;Grenades
+grenade_f1											= 1, 0.3
+grenade_rgd5										= 2, 0.4
+grenade_gd-05										= 3, 0.3
 
-1p29_detector                                       = 2.0, 2.0
-9x39scope_detector                                 = 2.0, 2.0
-acog_detector                                       = 2.0, 2.0
-pso_detector                                      = 2.0, 2.0
-como_voeni_outfit_n                          = 1, 0.3
-commander_outfit                                   = 1, 0.3
-item_tent                                = 1, 1
-cev_plastin_1	  = 2.0, 2.0
-cev_plastin_2	  = 2.0, 2.0
-cev_plastin_3	  = 2.0, 2.0
-cev_plastin_4	  = 2.0, 2.0	
-cev_plastin_5	  = 2.0, 2.0
-wpn_binoc_1 = 1, 1
-wpn_binoc_2= 1, 1
+;Medical
+medkit												= 4, 0.4
+medkit_army											= 2, 0.5
+antirad												= 1, 0.6
+bandage												= 4, 0.6
+
+item_tent											= 1, 0.1
+
+;Misc
+itm_gunsmith_toolkit								= 1, 0.2
+itm_outfit_toolkit									= 1, 0.3
+equ_backpack										= 3, 0.3
+equ_military_pack									= 1, 0.02
+equ_small_pack										= 1, 0.5
+
+;Outfits
+dolg_novice_outfit									= 1, 0.8
+dolg_outfit											= 1, 0.5
+specops_outfit										= 1, 0.25
+
+;Helmets
+helm_facemask										= 1, 0.7
+helm_hardhat										= 1, 0.5
+helm_respirator										= 1, 0.3
+helm_respirator_2									= 1, 0.5
+helm_respirator_half								= 1, 0.4
+
+[supplies_friend]:supplies_generic
+;Weapons
+wpn_ak74											= 1, 0.45
+wpn_ak74u											= 1, 0.55
+wpn_ak												= 1, 0.55
+wpn_sks												= 1, 0.65
+wpn_ak104											= 1, 0.2
+wpn_aks												= 1, 0.3
+wpn_ak74m											= 1, 0.4
+wpn_aks74											= 1, 0.4
+wpn_binoc											= 1, 0.3
+wpn_fort											= 1, 0.9
+wpn_knife											= 1, 0.4
+wpn_mine											= 5, 0.4
+wpn_pb												= 1, 0.9
+wpn_pm												= 1, 0.9
+wpn_pmm												= 1, 0.2
+wpn_aps												= 1, 0.1
+wpn_oc33											= 1, 0.01
+wpn_mp443											= 1, 0.1
+wpn_gsh18											= 1, 0.1
+
+wpn_abakan											= 1, 0.15
+wpn_groza											= 1, 0.25
+wpn_pkm												= 1, 0.07
+wpn_svd												= 1, 0.07
+wpn_svu												= 1, 0.12
+wpn_val												= 1, 0.2
+wpn_vsk94											= 1, 0.2
+wpn_vintorez										= 1, 0.15
+
+wpn_vepr											= 1, 0.2
+
+wpn_rpk												= 1, 0.2
+
+;Weapon Addons
+wpn_addon_grenade_launcher							= 1, 0.15
+
+ekp													= 1, 0.2
+1p29												= 1, 0.1
+pso													= 1, 0.01
+pu													= 1, 0.01
+
+sil_6p9												= 1, 0.1
+sil_atg												= 1, 0.1
+sil_pbs-4											= 1, 0.1
+sil_pbs1											= 1, 0.1
+sil_tgp-a											= 1, 0.1
+
+;Ammo
+ammo_7.62x39_ap										= 3, 0.5
+ammo_7.62x39_fmj									= 3, 0.5
+ammo_9x19_fmj										= 2, 0.2
+ammo_9x19_pbp										= 2, 0.2
+ammo_5.45x39_ap										= 1, 0.4
+ammo_5.45x39_fmj									= 4, 0.8
+ammo_7.62x54_7h1									= 2, 0.25
+ammo_9x18_fmj										= 5, 0.8
+ammo_9x18_pmm										= 3, 0.4
+ammo_9x39_ap										= 1, 0.4
+ammo_9x39_sp5										= 5, 0.4
+ammo_9x39_pab9										= 2, 0.5
+ammo_pkm_100										= 1, 0.35
+ammo_vog-25											= 2, 0.3
+ammo_vog-25p										= 2, 0.3
+
+;Grenades
+grenade_f1											= 1, 0.5
+grenade_rgd5										= 2, 0.6
+grenade_gd-05										= 3, 0.4
+
+;Medical
+medkit												= 4, 0.5
+medkit_army											= 3, 0.5
+antirad												= 2, 0.6
+bandage												= 6, 0.6
+
+item_tent											= 1, 0.4
+
+;Misc
+itm_gunsmith_toolkit								= 1, 0.4
+itm_outfit_toolkit									= 1, 0.5
+equ_backpack										= 3, 0.5
+equ_military_pack									= 1, 0.03
+equ_dolg_pack										= 1, 0.01
+
+;Outfits
+dolg_novice_outfit									= 1, 0.9
+dolg_outfit											= 1, 0.7
+dolg_scientific_outfit								= 1, 0.2
+specops_outfit										= 1, 0.4
+
+;Helmets
+helm_hardhat										= 1, 0.6
+helm_protective										= 1, 0.1
+helm_respirator										= 1, 0.4
+helm_respirator_2									= 1, 0.6
+helm_respirator_half								= 1, 0.5
+helm_tactic											= 1, 0.15
+
+solvent_2											= 2, 0.3
+armor_repair_fa_2									= 2, 0.3
+steel_wool											= 5, 0.3
+paperscrap											= 5, 0.3
+grease												= 6, 0.3
+textile_patch_m										= 6, 0.3
+textile_patch_b										= 9, 0.3
+textile_patch_e										= 4, 0.3
+
+[supplies_special]:supplies_friend
+;Weapons
+wpn_ak74											= 1, 0.6
+wpn_ak74u											= 1, 0.7
+wpn_ak74m											= 1, 0.6
+wpn_aks74											= 1, 0.6
+wpn_ak103											= 1, 0.2
+wpn_akm												= 1, 0.4
+wpn_akms											= 1, 0.3
+wpn_binoc											= 1, 0.4
+wpn_fort											= 1, 0.9
+wpn_knife											= 1, 0.5
+wpn_mine											= 6, 0.4
+wpn_pb												= 1, 0.9
+wpn_pm												= 1, 0.9
+wpn_pmm												= 1, 0.6
+wpn_aps												= 1, 0.4
+wpn_oc33											= 1, 0.3
+wpn_mp443											= 1, 0.2
+wpn_gsh18											= 1, 0.3
+
+wpn_abakan											= 1, 0.25
+wpn_groza											= 1, 0.35
+wpn_pkm												= 1, 0.12
+wpn_svd												= 1, 0.12
+wpn_svu												= 1, 0.18
+wpn_val												= 1, 0.3
+wpn_vsk94											= 1, 0.3
+wpn_vintorez										= 1, 0.25
+
+wpn_vepr											= 1, 0.4
+wpn_saiga											= 1, 0.2
+wpn_spas12											= 1, 0.01
+
+wpn_rpd												= 1, 0.1
+
+
+wpn_rg-6											= 1, 0.15
+
+;Weapon Addons
+wpn_addon_grenade_launcher							= 1, 0.4
+
+ekp													= 1, 0.3
+kobra												= 1, 0.2
+1p29												= 1, 0.2
+pso													= 1, 0.1
+wpn_addon_scope										= 1, 0.1
+9x39scope											= 1, 0.1
+pu													= 1, 0.1
+
+sil_6p9												= 1, 0.2
+sil_9a91											= 1, 0.2
+sil_atg												= 1, 0.2
+sil_kzrzp											= 1, 0.2
+sil_pbs-4											= 1, 0.2
+sil_pbs1											= 1, 0.2
+sil_tgp-a											= 1, 0.2
+
+;Ammo
+ammo_7.62x39_ap										= 8, 1
+ammo_7.62x39_fmj									= 8, 1
+ammo_9x19_fmj										= 5, 0.5
+ammo_9x19_pbp										= 5, 0.5
+ammo_5.45x39_ap										= 2, 0.6
+ammo_5.45x39_fmj									= 5, 0.9
+ammo_7.62x54_7h1									= 3, 0.35
+ammo_7.62x54_7h14									= 5, 0.2
+ammo_7.62x54_ap										= 5, 0.1
+ammo_9x18_fmj										= 6, 0.9
+ammo_9x18_pmm										= 3, 0.7
+ammo_9x39_ap										= 2, 0.6
+ammo_9x39_sp5										= 5, 0.5
+ammo_9x39_pab9										= 4, 0.9
+ammo_pkm_100										= 2, 0.35
+ammo_12.7x55_fmj									= 5, 0.01
+ammo_og-7b											= 5, 0.1
+ammo_vog-25											= 3, 0.3
+ammo_vog-25p										= 3, 0.3
+
+;Grenades
+grenade_f1											= 2, 0.5
+grenade_rgd5										= 3, 0.6
+grenade_gd-05										= 3, 0.4
+
+;Medical
+medkit												= 4, 0.6
+medkit_army											= 4, 0.5
+medkit_scientic										= 2, 0.5
+antirad												= 3, 0.6
+bandage												= 8, 0.6
+
+item_tent											= 1, 1
+
+;Misc
+itm_gunsmith_toolkit								= 1, 0.6
+itm_outfit_toolkit									= 1, 0.8
+equ_backpack										= 4, 0.5
+equ_military_pack									= 1, 0.04
+equ_dolg_pack										= 1, 0.1
+
+;Outfits
+dolg_exo_outfit										= 1, 0.2
+dolg_heavy_outfit									= 1, 0.4
+dolg_novice_outfit									= 1, 0.9
+dolg_outfit											= 1, 0.8
+dolg_radiation_outfit								= 1, 0.3
+dolg_scientific_outfit								= 1, 0.4
+specops_outfit										= 1, 0.6
+commander_outfit									= 1, 0.3
+como_voeni_outfit_n									= 1, 0.1
+
+;Helmets
+helm_battle											= 1, 0.25
+helm_hardhat										= 1, 0.8
+helm_protective										= 1, 0.2
+helm_respirator										= 1, 0.6
+helm_respirator_2									= 1, 0.8
+helm_respirator_half								= 1, 0.7
+helm_tactic											= 1, 0.35
+helm_tactic_2										= 1, 0.1
+helm_respirator_gp5									= 1, 0.1
+
+itm_repairkit_tier_1								= 1, 0.01
+itm_repairkit_tier_2								= 1, 0.01
+itm_repairkit_tier_3								= 1, 0.01
+
+gun_oil_3											= 2, 0.3
+gun_oil_ru_2										= 2, 0.3
+gun_oil_ru_d_2										= 2, 0.3
+glue_a_2											= 2, 0.3
+glue_b_2											= 2, 0.3
+glue_e_2											= 2, 0.3
+
+cev_plastin_1										= 1, 0.5
+cev_plastin_2										= 1, 0.4
+cev_plastin_3										= 1, 0.3
+cev_plastin_4										= 1, 0.2
+cev_plastin_5										= 1, 0.1
+
+detector_simple										= 1, 0.1
