@@ -6,6 +6,9 @@ local enabled = false 			-- change under settings in plugins\quick_travel.ltx
 quick_travel_smarts = nil
 
 local function map_spot_menu_add_property(property_ui,id,level_name)
+	if (axr_main.config:r_value("mm_options","enable_fast_travel_option",1,true) == false) then	
+		return 
+	end
 	local se_obj = alife_object(id)
 	if not (se_obj) then 
 		return 
@@ -15,12 +18,6 @@ local function map_spot_menu_add_property(property_ui,id,level_name)
 		property_ui:AddItem(game.translate_string("st_pda_fast_travel"))
 	end
 end 
-
---mlr
-	if (axr_main.config:r_value("mm_options","enable_fast_travel_option",1,true) == false) then	
-		return 
-	end
---mlr
 
 local function map_spot_menu_property_clicked(property_ui,id,level_name,prop)
 	if (prop == game.translate_string("st_pda_fast_travel")) then 
