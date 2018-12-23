@@ -374,9 +374,25 @@ void xrDebug::Fail(bool& ignoreAlways, const ErrorLocation& loc, const char* exp
     lock.Enter();
     ErrorAfterDialog = true;
     bool needTerminate = false;
-
+    // clang-format off
+    constexpr char managedFail[] =""
+"___  ___                                 _______    _ _ \r\n"
+"|  \\/  |                                | |  ___|  (_) |\r\n"
+"| .  . | __ _ _ __   __ _  __ _  ___  __| | |_ __ _ _| |\r\n"
+"| |\\/| |/ _` | '_ \\ / _` |/ _` |/ _ \\/ _` |  _/ _` | | |\r\n"
+"| |  | | (_| | | | | (_| | (_| |  __/ (_| | || (_| | | |\r\n"
+"\\_|  |_/\\__,_|_| |_|\\__,_|\\__, |\\___|\\__,_\\_| \\__,_|_|_|\r\n"
+"                           __/ |                        \r\n"
+"                         |___/                         \r\n";
+    // clang-format on
+    Log(managedFail);
+    if (OnCrash)
+    {
+        OnCrash();
+    }
     string4096 assertionInfo;
     GatherInfo(assertionInfo, loc, expr, desc, arg1, arg2);
+
 #ifdef USE_OWN_ERROR_MESSAGE_WINDOW
     strcat(assertionInfo,
         "\r\n"
