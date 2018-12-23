@@ -827,10 +827,9 @@ target_functor = general_fetch_task
 task_complete_descr = simulation_task_35_fetch_finish
 precondition = {=random_chance(60)} true, false
 repeat_timeout = 16400
-on_complete = %=remove_fetch_item(simulation_task_35_fetch) =reward_stash(true) =inc_task_stage(simulation_task_35)%
+on_complete = %=reward_random_money(1800:3000) =remove_fetch_item(simulation_task_35_fetch) =reward_stash(true) =inc_task_stage(simulation_task_35)%
 on_fail = %=fail_task_dec_goodwill(25:monolith)%
 condlist_0 = {!task_giver_alive(simulation_task_35)} fail
-reward_random_money(1800:3000)
 
 ;--------------------------------------------------------------------------------------------------
 ; Íàéòè ñòâîë ó÷¸íîìó
@@ -875,11 +874,10 @@ status_functor = bounty_task
 target_functor = general_bounty_task
 stage_complete = 1
 on_init = %=on_init_bounty_hunt(simulation_task_37:dolg)%
-on_complete = %=inc_task_stage(simulation_task_37) =reward_stash(true) =complete_task_inc_goodwill(50:freedom)%
+on_complete = %=inc_task_stage(simulation_task_37) =reward_stash(true) =complete_task_inc_goodwill(50:freedom) =reward_random_money(1500:3000)%
 on_fail = %=fail_task_dec_goodwill(25:freedom)%
 condlist_0 = {!task_giver_alive(simulation_task_37)} fail
 reward_item = wpn_walther:vodka:vodka:ammo_9x19_fmj
-reward_random_money(1500:3000)
 
 ;--------------------------------------------------------------------------------------------------
 ; Óáèòü ÌÎÍÎËÈÒÎÂÖÀ
@@ -899,11 +897,10 @@ status_functor = bounty_task
 target_functor = general_bounty_task
 stage_complete = 1
 on_init = %=on_init_bounty_hunt(simulation_task_38:monolith)%
-on_complete = %=inc_task_stage(simulation_task_38) =reward_stash(true) =complete_task_inc_goodwill(50:freedom)%
+on_complete = %=inc_task_stage(simulation_task_38) =reward_stash(true) =complete_task_inc_goodwill(50:freedom) =reward_random_money(5000:5500) %
 on_fail = %=fail_task_dec_goodwill(25:freedom)%
 condlist_0 = {!task_giver_alive(simulation_task_38)} fail
 reward_item = wpn_g36:ammo_5.56x45_ap:ammo_5.56x45_ap
-reward_random_money(5000:5200)
 
 ;--------------------------------------------------------------------------------------------------
 ; Óáèòü ÑÂÎÁÎÄÎÂÖÀ
@@ -923,10 +920,9 @@ status_functor = bounty_task
 target_functor = general_bounty_task
 stage_complete = 1
 on_init = %=on_init_bounty_hunt(simulation_task_39:freedom)%
-on_complete = %=inc_task_stage(simulation_task_39) =reward_stash(true) =complete_task_inc_goodwill(50:dolg)%
+on_complete = %=inc_task_stage(simulation_task_39) =reward_stash(true) =complete_task_inc_goodwill(50:dolg) =reward_random_money(1800:3000) %
 on_fail = %=fail_task_dec_goodwill(25:dolg)%
 condlist_0 = {!task_giver_alive(simulation_task_39)} fail
-reward_random_money(1800:3000)
 
 ;--------------------------------------------------------------------------------------------------
 ; Óáèòü ÍÀ¨ÌÍÈÊÀ-ÊÈËËÅĞÀ
@@ -946,10 +942,9 @@ status_functor = bounty_task
 target_functor = general_bounty_task
 stage_complete = 1
 on_init = %=on_init_bounty_hunt(simulation_task_40:killer)%
-on_complete = %=inc_task_stage(simulation_task_40) =reward_stash(true) =complete_task_inc_goodwill(50:dolg)%
+on_complete = %=inc_task_stage(simulation_task_40) =reward_stash(true) =complete_task_inc_goodwill(50:dolg) =reward_random_money(5200:5800) %
 on_fail = %=fail_task_dec_goodwill(25:dolg)%
 condlist_0 = {!task_giver_alive(simulation_task_40)} fail
-reward_random_money(5200:5800)
 
 ;--------------------------------------------------------------------------------------------------
 ; Íàéòè ÏÀÒĞÎÍÛ ÄËß ÊÎÌÀÍÄÈĞÀ ÊÂÀÄÀ

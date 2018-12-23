@@ -216,10 +216,9 @@ stage_complete = 1
 status_functor = actor_has_fetch_item
 target_functor = general_fetch_task
 task_complete_descr = bandit_barman_gar_hangr_mlr_task_1_fetch_finish
-on_complete = %+bandit_barman_gar_hangr_mlr_task_1_done =complete_task_inc_goodwill(50:bandit) =remove_fetch_item(bandit_barman_gar_hangr_mlr_task_1_fetch) =inc_task_stage(bandit_barman_gar_hangr_mlr_task_1)%
+on_complete = %+bandit_barman_gar_hangr_mlr_task_1_done =complete_task_inc_goodwill(50:bandit) =remove_fetch_item(bandit_barman_gar_hangr_mlr_task_1_fetch) =inc_task_stage(bandit_barman_gar_hangr_mlr_task_1) =reward_random_money(3500:4500)%
 precondition = {-bandit_barman_gar_hangr_mlr_task_1_done} true, false
 condlist_0 = {!task_giver_alive(bandit_barman_gar_hangr_mlr)} fail
-reward_money = 4000
 
 [main_monolith_mlr_task_5]
 icon = ui_icons_monolith_sign38
@@ -465,10 +464,9 @@ stage_complete = 1
 status_functor = actor_has_fetch_item
 target_functor = general_fetch_task
 task_complete_descr = mil_smart_terrain_7_7_freedom_leader_stalker_task_7_fetch_finish
-on_complete = %+mil_smart_terrain_7_7_freedom_leader_stalker_task_7_done =complete_task_inc_goodwill(50:freedom) =remove_fetch_item(mil_smart_terrain_7_7_freedom_leader_stalker_task_7_fetch) =inc_task_stage(mil_smart_terrain_7_7_freedom_leader_stalker_task_7)%
+on_complete = %+mil_smart_terrain_7_7_freedom_leader_stalker_task_7_done =complete_task_inc_goodwill(50:freedom) =remove_fetch_item(mil_smart_terrain_7_7_freedom_leader_stalker_task_7_fetch) =inc_task_stage(mil_smart_terrain_7_7_freedom_leader_stalker_task_7) =reward_money(20000)%
 precondition = {-mil_smart_terrain_7_7_freedom_leader_stalker_task_7_done} true, false
 condlist_0 = {!task_giver_alive(mil_smart_terrain_7_7_freedom_leader_stalker)} fail
-reward_money = 20000
 
 [mil_smart_terrain_7_7_freedom_leader_stalker_task_6]
 icon = ui_icons_base_attack24
@@ -537,11 +535,10 @@ status_functor = special_steps_for_mlr_tasks
 stage_complete = 1
 target_functor = task_targets_mlr_all
 on_init = %=create_squad(zombies_hunter_gar_trader_task_4:gar_smart_terrain_5_5)%
-on_complete = %=reward_stash(true) =inc_task_stage(hunter_gar_trader_task_4) =complete_task_inc_goodwill(50:stalker:dolg) +hunter_gar_trader_task_4_done%
+on_complete = %=reward_stash(true) =inc_task_stage(hunter_gar_trader_task_4) =complete_task_inc_goodwill(50:stalker:dolg) =reward_money(3000) +hunter_gar_trader_task_4_done%
 on_fail = %=fail_task_dec_goodwill(25:stalker:dolg)%
 on_cancel = %=fail_task_dec_goodwill(25:stalker:dolg)%
 precondition = {-hunter_gar_trader_task_4_done} true, false
-reward_money = 3000
 
 [hunter_gar_trader_task_3]
 icon = ui_icons_burer16
@@ -555,12 +552,11 @@ status_functor = special_steps_for_mlr_tasks
 stage_complete = 1
 target_functor = task_targets_mlr_all
 on_init = %=create_squad(burer_firelovers_task_squad:gar_smart_terrain_3_7) =setup_companion_task(hunter_gar_trader_task_3_stalkers:gar_smart_terrain_3_5)%
-on_complete = %=reward_stash(true) =inc_task_stage(hunter_gar_trader_task_3) =complete_task_inc_goodwill(100:stalker:dolg) =remove_special_task_squad(hunter_gar_trader_task_3_stalkers) +hunter_gar_trader_task_3_done%
+on_complete = %=reward_stash(true) =inc_task_stage(hunter_gar_trader_task_3) =complete_task_inc_goodwill(100:stalker:dolg) =reward_money(5000) =remove_special_task_squad(hunter_gar_trader_task_3_stalkers) +hunter_gar_trader_task_3_done%
 on_fail = %=remove_special_task_squad(hunter_gar_trader_task_3_stalkers) =fail_task_dec_goodwill(25:stalker:dolg)%
 on_cancel = %=remove_special_task_squad(hunter_gar_trader_task_3_stalkers) =fail_task_dec_goodwill(25:stalker:dolg)%
 precondition = {-hunter_gar_trader_task_3_done =is_night} true, false
 condlist_0 = {!is_night} fail
-reward_money = 5000
 
 [merc_pri_a16_trader_mlr_task_1]
 icon = ui_icons_find_item35
@@ -973,9 +969,8 @@ title = {=actor_has_item(wpn_toz34_sk2) =actor_has_item(ammo_12x70_buck)} toz34_
 descr = toz34_return_descr
 target = {=actor_has_item(wpn_toz34_sk2) =actor_has_item(ammo_12x70_buck)} devushka
 condlist_0 = {+devushka_1_done} complete
-on_complete = %=inc_faction_goodwill_to_actor(stalker:50)%
+on_complete = %=inc_faction_goodwill_to_actor(stalker:50) =reward_random_money(200:700)%
 reward_item = itm_repairkit_tier_2
-reward_money = 500
 
 [devushka_3_give]
 icon = ui_icons_cordon22
@@ -985,8 +980,7 @@ title = {=actor_has_item(af_vyvert) =actor_has_item(af_fireball) =actor_has_item
 descr = artefacts_to_sidor_return_descr
 target = {=actor_has_item(af_vyvert) =actor_has_item(af_fireball) =actor_has_item(af_electra_moonlight)} esc_2_12_stalker_trader
 condlist_0 = {+devushka_3_done} complete, {+devushka_death} fail
-on_complete = %=inc_faction_goodwill_to_actor(stalker:50)%
-reward_money = 20000
+on_complete = %=inc_faction_goodwill_to_actor(stalker:50) =reward_random_money(15000:22000)%
 
 [devushka_4_give]
 icon = ui_icons_cordon22
@@ -1026,9 +1020,8 @@ title = {=actor_has_item(bag_medkit_4) =actor_has_item(bag_medkit_4)} go_to_loki
 descr = go_to_loki_descr
 target = {=actor_has_item(bag_medkit_4) =actor_has_item(bag_medkit_4)} jup_a6_freedom_leader
 condlist_0 = {+devushka_help_done} complete, {+devushka_death} fail
-on_complete = %=inc_faction_goodwill_to_actor(freedom:25)%
+on_complete = %=inc_faction_goodwill_to_actor(freedom:25) =reward_random_money(3000:5000)%
 reward_item = detector_advanced
-reward_money = 4500
 
 
 [esc_2_12_stalker_fanat_task_1]
@@ -1198,10 +1191,9 @@ status_functor = special_steps_for_mlr_tasks
 stage_complete = 1
 target_functor = task_targets_mlr_all
 on_init = %=create_squad(pseudodog_esc_3_16_military_trader_task_3:esc_smart_terrain_4_11)%
-on_complete = %-pseudodog_esc_3_16_military_trader_task_3_death =reward_stash(true) =inc_task_stage(esc_3_16_military_trader_task_3) =complete_task_inc_goodwill(50:army)%
+on_complete = %-pseudodog_esc_3_16_military_trader_task_3_death =reward_stash(true) =inc_task_stage(esc_3_16_military_trader_task_3) =complete_task_inc_goodwill(50:army) =reward_money(4000) %
 on_fail = %=fail_task_dec_goodwill(25:army)%
 on_cancel = %=fail_task_dec_goodwill(25:army)%
-reward_money = 4000
 
 [esc_3_16_military_trader_task_2]
 icon = ui_icons_find_item35
@@ -1219,10 +1211,9 @@ stage_complete = 1
 status_functor = actor_has_fetch_item
 target_functor = general_fetch_task
 task_complete_descr = esc_3_16_military_trader_task_2_fetch_finish
-on_complete = %+esc_3_16_military_trader_task_2_done =complete_task_inc_goodwill(50:army) =remove_fetch_item(esc_3_16_military_trader_task_2_fetch) =inc_task_stage(esc_3_16_military_trader_task_2)%
+on_complete = %+esc_3_16_military_trader_task_2_done =complete_task_inc_goodwill(50:army) =reward_money(2000) =remove_fetch_item(esc_3_16_military_trader_task_2_fetch) =inc_task_stage(esc_3_16_military_trader_task_2)%
 precondition = {-esc_3_16_military_trader_task_2_done} true, false
 condlist_0 = {!task_giver_alive(esc_3_16_military_trader)} fail
-reward_money = 2000
 
 [esc_3_16_military_trader_task_1]
 icon = ui_icons_find_item35
@@ -1676,9 +1667,8 @@ stage_complete = 1
 status_functor = actor_has_fetch_item
 target_functor = general_fetch_task
 task_complete_descr = trucks_cemetery_bandit_mechanic_task_3_fetch_finish
-on_complete = %+trucks_cemetery_bandit_mechanic_upgrade_tier_3 =complete_task_inc_goodwill(50:bandit) =remove_fetch_item(trucks_cemetery_bandit_mechanic_task_3_fetch) =inc_task_stage(trucks_cemetery_bandit_mechanic_task_3)%
+on_complete = %+trucks_cemetery_bandit_mechanic_upgrade_tier_3 =complete_task_inc_goodwill(50:bandit) =reward_money(4000) =remove_fetch_item(trucks_cemetery_bandit_mechanic_task_3_fetch) =inc_task_stage(trucks_cemetery_bandit_mechanic_task_3)%
 precondition = {+trucks_cemetery_bandit_mechanic_upgrade_tier_2 -trucks_cemetery_bandit_mechanic_upgrade_tier_3} true, false
-reward_money = 4000
 
 [army_south_mechan_mlr_task_1]
 icon = ui_inGame2_Instrumenti
