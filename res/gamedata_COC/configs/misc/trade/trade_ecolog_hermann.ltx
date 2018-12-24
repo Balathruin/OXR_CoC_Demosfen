@@ -1,124 +1,114 @@
 #include "profiles\profiles.ltx"
 
 [trader]
-buy_condition                                      = buy_condition_scientist
-buy_item_condition_factor                          = 0.25
-buy_supplies                                       = {=actor_community(actor_ecolog) =heavy_pockets_functor} supplies_heavy_pockets, supplies_generic
-discounts                                          = {=actor_goodwill_ge(ecolog:2000)} discount_10, {=actor_goodwill_ge(ecolog:1800)} discount_9, {=actor_goodwill_ge(ecolog:1600)} discount_8, {=actor_goodwill_ge(ecolog:1400)} discount_7, {=actor_goodwill_ge(ecolog:1200)} discount_6, {=actor_goodwill_ge(ecolog:1000)} discount_5, {=actor_goodwill_ge(ecolog:800)} discount_4, {=actor_goodwill_ge(ecolog:600)} discount_3, {=actor_goodwill_ge(ecolog:400)} discount_2, {=actor_goodwill_ge(ecolog:200)} discount_1, discount_0
-sell_condition                                     = sell_condition_scientist
-
-[supplies_heavy_pockets]
-
-;DET_ADVA
-detector_advanced                        = 2,	1
-
-;DET_ELIT
-detector_elite                           = 1, 1
-
-;DET_SCIE
-detector_scientific						 =1, 1
-
-;II_FOOD
-antirad                                  = 2, 0.8
-bandage                                  = 3, 0.8
-drug_anabiotic                           = 3, 1
-drug_antidot                             = 1, 0.4
-drug_coagulant                           = 1, 0.4
-drug_radioprotector                      = 1, 0.4
-medkit                                   = 3, 0.8
-medkit_scientic                          = 5, 1
-
-;II_ANTIR
-
-equ_backpack          = 5, 0.8
-equ_small_pack        = 5, 0.8
-equ_military_pack     = 5, 0.8
-equ_tourist_pack      = 5, 0.8
-
-equ_dolg_pack         = 5, 0.8
-equ_free_pack         = 5, 0.8
-equ_csky_pack         = 5, 0.8
-equ_merc_pack         = 5, 0.8
-
-
-;EQU_STLK
-ecolog_guard_outfit                      = 1, 0.5
-ecolog_outfit_green                      = 1, 1
-ecolog_outfit_orange                     = 1, 0.7
-scientific_outfit                        = 1, 0.4
-
-;E_HLMET
-helm_respirator                          = 1, 0.4
-ecolog_outfit_blue=1, 1
-ecolog_outfit_white=1, 0.7
-scientific_heavy_outfit=1, 0.7
-isg_scientific_outfit=1, 0.2
-helm_protective=1, 1
-medkit_elite=1, 0.5
-psy_complex=3, 0.8
-bio_bandage=3, 0.8
-drug_engine=3, 0.8
-medo=3, 0.5
-mbk=3, 0.5
-bandage_israeli=5, 0.6
-amphetamines_4=5, 0.6
-amphetamines_3=5, 0.6
-amphetamines_2=5, 0.6
-amphetamines_1=5, 0.6
-diazepam=5, 0.6
-mineral_water=3,	0.55
+buy_condition										= buy_condition_scientist
+buy_item_condition_factor							= 0.25
+buy_supplies										= {=actor_goodwill_ge(ecolog:1800)} supplies_special, {=heavy_pockets_functor} supplies_special, {=actor_goodwill_ge(ecolog:1800)} supplies_friend, supplies_generic
+discounts											= {=actor_goodwill_ge(ecolog:2000)} discount_10, {=actor_goodwill_ge(ecolog:1800)} discount_9, {=actor_goodwill_ge(ecolog:1600)} discount_8, {=actor_goodwill_ge(ecolog:1400)} discount_7, {=actor_goodwill_ge(ecolog:1200)} discount_6, {=actor_goodwill_ge(ecolog:1000)} discount_5, {=actor_goodwill_ge(ecolog:800)} discount_4, {=actor_goodwill_ge(ecolog:600)} discount_3, {=actor_goodwill_ge(ecolog:400)} discount_2, {=actor_goodwill_ge(ecolog:200)} discount_1, discount_0
+sell_condition										= sell_condition_scientist
 
 [supplies_generic]
+;Medical
+antirad												= 2, 0.5
+bandage												= 4, 0.6
+drug_antidot										= 1, 0.4
+drug_coagulant										= 1, 0.4
+drug_radioprotector									= 1, 0.4
+medkit												= 3, 0.6
+medkit_scientic										= 1, 0.5
 
-;DET_ADVA
-detector_advanced                        = 2,	1
+;Devices
+detector_simple										= 1, 0.9
 
-;II_FOOD
-antirad                                  = 2, 0.8
-bandage                                  = 3, 0.8
-drug_antidot                             = 1, 0.4
-drug_coagulant                           = 1, 0.4
-drug_radioprotector                      = 1, 0.4
-medkit                                   = 3, 0.8
+;Outfits
+ecolog_guard_outfit									= 1, 0.4
+ecolog_outfit_orange								= 1, 0.1
+ecolog_outfit_white									= 1, 0.05
+nbc_outfit											= 1, 0.2
 
-;II_ANTIR
+;Helmets
+helm_respirator										= 1, 0.3
+helm_respirator_2									= 1, 0.5
+helm_respirator_half								= 1, 0.4
 
-equ_backpack          = 5, 0.8
-equ_small_pack        = 5, 0.8
-equ_military_pack     = 5, 0.8
-equ_tourist_pack      = 5, 0.8
+[supplies_friend]:supplies_generic
+;Medical
+antirad												= 3, 0.5
+bandage												= 6, 0.6
+drug_antidot										= 2, 0.4
+drug_coagulant										= 2, 0.4
+drug_radioprotector									= 2, 0.4
+medkit												= 4, 0.6
+medkit_scientic										= 2, 0.5
 
-equ_dolg_pack         = 5, 0.8
-equ_free_pack         = 5, 0.8
-equ_csky_pack         = 5, 0.8
-equ_merc_pack         = 5, 0.8
+;Devices
+detector_advanced									= 1, 0.5
 
+;Outfits
+ecolog_guard_outfit									= 1, 0.6
+ecolog_outfit_blue									= 1, 0.05
+ecolog_outfit_green									= 1, 0.1
+ecolog_outfit_orange								= 1, 0.3
+ecolog_outfit_white									= 1, 0.2
+isg_outfit											= 1, 0.1
+nbc_outfit											= 1, 0.4
+scientific_outfit									= 1, 0.25
 
-;EQU_STLK
-ecolog_guard_outfit                      = 1, 0.5
-ecolog_outfit_green                      = 1, 0.3
-ecolog_outfit_orange                     = 1, 0.7
-scientific_outfit                        = 1, 0.4
+;Helmets
+helm_protective										= 1, 0.15
+helm_respirator										= 1, 0.5
+helm_respirator_2									= 1, 0.7
+helm_respirator_half								= 1, 0.6
 
-;E_HLMET
-helm_respirator                          = 1, 0.4
-ecolog_outfit_blue=1, 0.3
-ecolog_outfit_white=1, 0.7
-scientific_heavy_outfit=1, 0.3
-isg_scientific_outfit=1, 0.1
-helm_protective=1, 0.4
-medkit_elite=1, 0.5
-psy_complex=3, 0.8
-bio_bandage=3, 0.8
-drug_engine=3, 0.8
-medo=3, 0.5
-mbk=3, 0.5
-bandage_israeli=5, 0.6
-amphetamines_4=5, 0.6
-amphetamines_3=5, 0.6
-amphetamines_2=5, 0.6
-amphetamines_1=5, 0.6
-diazepam=5, 0.6
-mineral_water=3,	0.5
-detector_elite=1, 0.6
-detector_scientific=1, 0.3
+[supplies_special]:supplies_friend
+;Medical
+antirad												= 3, 0.5
+bandage												= 6, 0.6
+drug_antidot										= 2, 0.4
+drug_coagulant										= 2, 0.4
+drug_radioprotector									= 2, 0.4
+drug_anabiotic										= 3, 0.6
+medkit												= 4, 0.6
+medkit_scientic										= 2, 0.5
+
+;Devices
+detector_advanced									= 1, 0.5
+
+;Outfits
+ecolog_guard_outfit									= 1, 0.8
+ecolog_outfit_blue									= 1, 0.1
+ecolog_outfit_green									= 1, 0.2
+ecolog_outfit_orange								= 1, 0.5
+ecolog_outfit_white									= 1, 0.4
+isg_scientific_outfit								= 1, 0.1
+nbc_outfit											= 1, 0.7
+scientific_outfit									= 1, 0.5
+
+scientific_heavy_outfit								= 1, 0.1
+
+equ_backpack										= 5, 0.8
+equ_small_pack										= 5, 0.8
+
+;Helmets
+helm_protective										= 1, 0.25
+
+;Devices
+detector_advanced									= 1, 0.9
+detector_elite										= 1, 0.5
+detector_scientific									= 1, 0.1
+
+medkit_elite										= 1, 0.3
+psy_complex											= 2, 0.3
+bio_bandage											= 2, 0.3
+drug_engine											= 2, 0.3
+medo												= 2, 0.5
+mbk													= 2, 0.5
+bandage_israeli										= 3, 0.2
+amphetamines_4										= 2, 0.4
+amphetamines_3										= 2, 0.4
+amphetamines_2										= 2, 0.4
+amphetamines_1										= 2, 0.4
+diazepam											= 2, 0.4
+mineral_water										= 3, 0.5
+detector_elite										= 1, 0.6
+detector_scientific									= 1, 0.3
