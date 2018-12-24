@@ -1,0 +1,115 @@
+
+;; ===========================< Loadout >=============================
+;; To add items in the item lists:
+;; -------------------------------
+;; add a new line: "item_section			= value_1,value_2,value3" under the correct section below
+;; "item_section": is the section name of the your item
+;; "value_1": (boolean  value, must be true or false) determines wether this item should be added to player's inventory list (false) or to the loadout pick list (true)
+;; "value_2": (number) the amount of the said item
+;; "value_3": (number) how many points it requires
+;; ========================================================
+;; put your custom items under "custom" section, they will always appear to pick from
+
+
+[points]
+total_points = 400
+
+
+[custom]	
+
+
+[shared]:custom
+device_flashlight		= false,1,0
+wpn_binoc				= false,1,0
+wpn_knife				= false,1,0
+device_torch 			= true,1,40
+meat_flesh				= true,1,30
+wpn_fort				= true,1,250
+grenade_f1				= true,1,100
+wpn_mine				= true,1,80
+detector_simple			= true,1,250
+medkit_scientic			= true,1,80
+antirad					= true,1,60
+drug_psy_blockade		= true,1,90
+itm_gunsmith_toolkit	= true,1,150
+eot						= true,1,100
+ac10632					= true,1,100
+medkit					= true,2,50
+medkit_army				= true,1,75
+bandage					= true,2,50
+antirad					= true,1,50
+drug_anabiotic			= true,1,100
+vodka					= true,2,60
+bread					= true,2,50
+kolbasa					= true,2,60
+energy_drink			= true,2,50
+
+[stalker_loadout]:shared
+novice_outfit 			= false,1,0
+wpn_toz34				= false,1,0
+
+[bandit_loadout]:shared
+bandit_novice_outfit 	= false,1,0
+wpn_toz34_obrez			= false,1,0
+
+[ecolog_loadout]:shared
+ecolog_guard_outfit 	= false,1,0
+wpn_p90					= false,1,0
+
+[dolg_loadout]:shared
+dolg_novice_outfit 		= false,1,0
+wpn_sks					= false,1,0
+
+[freedom_loadout]:shared
+svoboda_novice_outfit 	= false,1,0
+wpn_wincheaster1300		= false,1,0
+
+[killer_loadout]:shared
+merc_outfit 			= false,1,0
+wpn_mp5sd				= false,1,0
+
+[army_loadout]:shared
+army_outfit 			= false,1,0
+wpn_ak74u 				= false,1,0
+
+[monolith_loadout]:shared
+monolith_outfit 		= false,1,0
+wpn_lr300				= false,1,0
+
+[csky_loadout]:shared
+cs_novice_outfit 		= false,1,0
+wpn_bm16_full			= false,1,0
+
+[zombied_loadout]:shared,stalker_loadout
+wpn_hpsa				= false,1,0
+
+;; ===========================< Money >=============================
+[stalker_money]
+money					= 500
+
+[bandit_money]
+money					= 500
+
+[ecolog_money]
+money					= 800
+
+[dolg_money]
+money					= 700
+
+[freedom_money]
+money					= 700
+
+[killer_money]
+money					= 1000
+
+[army_money]
+money					= 600
+
+[monolith_money]
+money					= 800
+
+[csky_money]
+money					= 700
+
+[zombied_money]
+money					= 500
