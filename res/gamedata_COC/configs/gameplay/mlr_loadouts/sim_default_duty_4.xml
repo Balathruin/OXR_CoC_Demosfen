@@ -17,7 +17,7 @@ wpn_ak104_pso = 1 \n
 wpn_ak105_pso = 1, launcher \n
 wpn_akms = 1, launcher \n
 wpn_akm = 1, launcher \n
-wpn_vintorez = 1 \n
+wpn_vintorez_9x39scope = 1 \n
 wpn_remington870 = 1 \n
 [spawn_loadout2] \n
 wpn_aps = 1 \n

@@ -124,7 +124,7 @@
 		<supplies>
 
       [spawn] \n
-	  wpn_svd = 1, silencer \n
+	  wpn_svd_pso1m2 = 1, silencer \n
       ammo_7.62x54_7h1 = 1 \n
       wpn_walther \n
       ammo_9x19_pbp = 1 \n
@@ -159,7 +159,7 @@
 		<supplies>
 
       [spawn] \n
-      wpn_svd = 1, silencer \n
+      wpn_svd_pso1m2 = 1, silencer \n
       ammo_7.62x54_7h1 = 1 \n
       wpn_walther \n
       ammo_9x19_pbp = 1 \n
@@ -332,7 +332,7 @@
 		<supplies>
 
       [spawn] \n
-      wpn_svd \n
+      wpn_svd_pso1m2 \n
       ammo_7.62x54_7h1 = 1 \n
       wpn_sig220 \n
       ammo_11.43x23_fmj  = 1 \n
@@ -367,7 +367,7 @@
 		<supplies>
 
       [spawn] \n
-      wpn_svd \n
+      wpn_svd_pso1m2 \n
       ammo_7.62x54_7h1 = 1 \n
       wpn_sig220 \n
       ammo_11.43x23_fmj  = 1 \n
@@ -531,7 +531,7 @@
 		<visual>actors\stalker_monolith\stalker_monolith_1</visual>
 		<supplies>
       [spawn] \n      
-      wpn_svd \n
+      wpn_svd_pso1m2 \n
       ammo_7.62x54_7h1 = 1 \n
       wpn_usp = 1 \n
       ammo_11.43x23_fmj = 1 \n
@@ -562,7 +562,7 @@
 		<visual>actors\stalker_monolith\stalker_monolith_2</visual>
 		<supplies>
       [spawn] \n      
-      wpn_vintorez = 1 \n
+      wpn_vintorez_9x39scope = 1 \n
       ammo_9x39_ap = 1 \n
       wpn_sig220 = 1, silencer \n
       ammo_11.43x23_hydro = 1 \n
@@ -1153,7 +1153,7 @@
 		<visual>actors\stalker_soldier\stalker_soldier_2</visual>
 		<supplies>
       [spawn] \n      
-      wpn_svd = 1 \n
+      wpn_svd_pso1m2 = 1 \n
       ammo_7.62x54_7h1 = 1 \n
       wpn_fort = 1 \n
       ammo_9x18_fmj = 1 \n
@@ -1630,7 +1630,7 @@
 		<visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
 		<supplies>
       [spawn] \n      
-      wpn_vintorez \n
+      wpn_vintorez_9x39scope \n
       ammo_9x39_ap = 1 \n
 	  wpn_sig220 = 1 \n
 	  ammo_11.43x23_hydro = 1 \n
