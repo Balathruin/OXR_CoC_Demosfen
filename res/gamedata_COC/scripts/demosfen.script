@@ -47,7 +47,7 @@ function actor_on_item_use(item)
 			if actor_faction == "actor_zombied"
 			or actor_faction == "actor_monolith" then
 				actor:set_character_community("actor_stalker", 0, 0)	-- сменить группировку на сталкера
-				news_manager.send_tip(db.actor, "%c[0,255,64,0]Обратный процесс зомбирования прошел успешно", nil, nil, nil, nil)
+				news_manager.send_tip(db.actor, "%c[0,255,64,0]Обратный процесс зомбирования прошёл успешно", nil, nil, nil, nil)
 				xr_sound.set_sound_play(db.actor:id(), "pda_news")
 				game_relations.set_community_goodwill_for_faction("actor_stalker")
 			end
@@ -73,13 +73,13 @@ function actor_on_update()
 	
 	last_update = tg + 1000
 	
-	if(actor_faction == "actor_stalker" and actor_reputation <= -2500) or
-	   (actor_faction == "actor_ecolog" and actor_reputation <= -2500) or
-	   (actor_faction == "actor_dolg" and actor_reputation <= -2500) or
-	   (actor_faction == "actor_freedom" and actor_reputation <= -2500) or
-	   (actor_faction == "actor_csky" and actor_reputation <= -2500) or
-	   (actor_faction == "actor_killer" and actor_reputation <= -2500) or
-	   (actor_faction == "actor_ecolog" and actor_reputation <= -2500) then
+	if(actor_faction == "actor_stalker" and actor_reputation <= -3000) or
+	   (actor_faction == "actor_ecolog" and actor_reputation <= -3000) or
+	   (actor_faction == "actor_dolg" and actor_reputation <= -3000) or
+	   (actor_faction == "actor_freedom" and actor_reputation <= -3000) or
+	   (actor_faction == "actor_csky" and actor_reputation <= -3000) or
+	   (actor_faction == "actor_killer" and actor_reputation <= -3000) or
+	   (actor_faction == "actor_ecolog" and actor_reputation <= -3000) then
 		actor:set_character_community("actor_bandit", 0, 0)	-- сменить группировку на бандита
 		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из своей группировки!", nil, nil, nil, nil)
 		SetHudMsg(game.translate_string("Вы выгнаны из своей группировки!"),5)
