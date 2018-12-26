@@ -292,13 +292,13 @@ void CScriptEngine::LogVariable(lua_State* luaState, pcstr name, int level)
 
     case LUA_TTABLE:
     {
-        if (level <= 3)
-        {
-            Msg("%s Table: %s", tabBuffer, name);
-            LogTable(luaState, name, level + 1);
-            return;
-        }
-        xr_sprintf(value, "[...]");
+        //if (level <= 3)
+        //{
+        //    Msg("%s Table: %s", tabBuffer, name);
+        //    LogTable(luaState, name, level + 1);
+        //    return;
+        //}
+        xr_sprintf(value, "[...] @Debrovski: table output is need to be repaired!");
         break;
     }
 
