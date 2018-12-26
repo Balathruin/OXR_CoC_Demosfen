@@ -305,7 +305,17 @@ function generic_object_binder:death_callback(victim, who)
 	victim:set_callback(callback.patrol_path_in_point,nil)
 	victim:set_callback(callback.hit,nil)
 	victim:set_callback(callback.sound,nil)
-	
+
+	if (who) then
+		if (who:id() == db.actor:id()) then
+			if (victim:section() == "cat_friend") or (victim:section() == "cat_friend_dolg") or (victim:section() == "ov4arka_dolg") then
+				local se_obj = alife_object(id)
+				if (se_obj) then
+					dxr_statistics.increment_reputation(-750)
+				end
+			end
+		end
+	end
 	if (victim:clsid() == clsid.poltergeist_s) or (victim:section() == "komar") then
 		local se_obj = alife_object(id)
 		if (se_obj) then
