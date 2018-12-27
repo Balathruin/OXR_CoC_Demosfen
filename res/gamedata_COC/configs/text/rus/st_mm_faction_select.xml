@@ -235,9 +235,6 @@
 	</string>
 	
 	<!-- Options -->
-	<string id="st_cap_check_campfire">
-		<text>Сохранения у костров</text>
-	</string>
 	<string id="st_cap_check_conditions">
 		<text>«Агония»</text>
 	</string>

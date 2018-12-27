@@ -626,7 +626,7 @@
 	<string id="ui_mm_set_economy">
 		<text>Progression</text>
 	</string>
-	<string id="st_econ_1">
+<!-- 	<string id="st_econ_1">
 		<text>Fast</text>
 	</string>
 	<string id="st_econ_2">
@@ -637,7 +637,7 @@
 	</string>
 	<string id="st_econ_4">
 		<text>Sluggish</text>
-	</string>
+	</string> -->
 	<string id="ui_mm_detector_charge">
 		<text>Detector charge</text>
 	</string>

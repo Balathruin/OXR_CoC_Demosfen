@@ -223,9 +223,6 @@
 	</string>
 	
 	<!-- Options -->
-	<string id="st_cap_check_campfire">
-		<text>Campfire mode</text>
-	</string>
 	<string id="st_cap_check_conditions">
 		<text>Agony mode</text>
 	</string>
