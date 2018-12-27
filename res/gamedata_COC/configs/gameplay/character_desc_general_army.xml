@@ -6,8 +6,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5042</rank>
+    <reputation>2421</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_1</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -27,8 +27,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5804</rank>
+    <reputation>1929</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_1</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -48,8 +48,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5428</rank>
+    <reputation>2422</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1b</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -69,7 +69,7 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
+    <rank>5110</rank>
     <reputation>174</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1c</visual>
     <supplies>
@@ -90,8 +90,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5752</rank>
+    <reputation>1333</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1d</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -111,8 +111,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5190</rank>
+    <reputation>567</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1e</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -132,8 +132,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3678</rank>
+    <reputation>2370</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1f</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -153,8 +153,8 @@
     <class>sim_default_military_0</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>4176</rank>
+    <reputation>1355</reputation>
     <visual>actors\stalker_soldier\stalker_soldier1g</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -174,8 +174,8 @@
     <class>sim_default_military_1</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>7656</rank>
+    <reputation>1070</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -195,8 +195,8 @@
     <class>sim_default_military_1</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>7194</rank>
+    <reputation>1786</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -216,7 +216,7 @@
     <class>sim_default_military_2</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
+    <rank>6870</rank>
     <reputation>298</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -237,8 +237,8 @@
     <class>sim_default_military_2</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9430</rank>
+    <reputation>1499</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -258,8 +258,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10018</rank>
+    <reputation>1457</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -279,8 +279,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6790</rank>
+    <reputation>968</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -300,8 +300,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9502</rank>
+    <reputation>414</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3h_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -321,8 +321,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6514</rank>
+    <reputation>623</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3i_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -342,8 +342,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8872</rank>
+    <reputation>452</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3j_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -363,8 +363,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9206</rank>
+    <reputation>1953</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3k_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -384,8 +384,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8868</rank>
+    <reputation>2307</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_5_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -405,8 +405,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5504</rank>
+    <reputation>2284</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5a_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -426,7 +426,7 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
+    <rank>6788</rank>
     <reputation>351</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5b_beret</visual>
     <supplies>
@@ -447,8 +447,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>7644</rank>
+    <reputation>1314</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5c_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -468,8 +468,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8272</rank>
+    <reputation>2346</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5d_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -489,8 +489,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9442</rank>
+    <reputation>1151</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5d_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -510,7 +510,7 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
+    <rank>6818</rank>
     <reputation>245</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3a_beret</visual>
     <supplies>
@@ -531,8 +531,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6382</rank>
+    <reputation>2322</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5f_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -552,8 +552,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9408</rank>
+    <reputation>2135</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5g_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -573,8 +573,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8410</rank>
+    <reputation>1293</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5h_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -594,7 +594,7 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
+    <rank>7354</rank>
     <reputation>483</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5i_beret</visual>
     <supplies>
@@ -615,8 +615,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9700</rank>
+    <reputation>1534</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5j_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -636,8 +636,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9674</rank>
+    <reputation>1920</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5k_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -657,8 +657,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8768</rank>
+    <reputation>1570</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3b_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -678,8 +678,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>9410</rank>
+    <reputation>1990</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3c_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -699,8 +699,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6376</rank>
+    <reputation>1781</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3d_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -720,8 +720,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6592</rank>
+    <reputation>1734</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3e_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -741,7 +741,7 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
+    <rank>12588</rank>
     <reputation>153</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_3</visual>
     <supplies>
@@ -762,8 +762,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6368</rank>
+    <reputation>754</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3f_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -783,8 +783,8 @@
     <class>sim_default_military_3</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8446</rank>
+    <reputation>562</reputation>
     <visual>actors\stalker_soldier\stalker_soldier3g_beret</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -804,7 +804,7 @@
     <class>sim_default_military_3_sniper</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
-    <rank>0</rank>
+    <rank>9944</rank>
     <reputation>256</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
@@ -825,8 +825,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12370</rank>
+    <reputation>2346</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -846,7 +846,7 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
+    <rank>11638</rank>
     <reputation>94</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_4</visual>
     <supplies>
@@ -867,8 +867,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>15880</rank>
+    <reputation>2469</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5a</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -888,8 +888,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>21954</rank>
+    <reputation>2191</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -909,8 +909,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>26350</rank>
+    <reputation>2315</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -930,7 +930,7 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
+    <rank>17144</rank>
     <reputation>183</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_5</visual>
     <supplies>
@@ -951,8 +951,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>20350</rank>
+    <reputation>1226</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_5</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -972,8 +972,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>22242</rank>
+    <reputation>1301</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -993,8 +993,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12648</rank>
+    <reputation>1003</reputation>
     <visual>actors\stalker_soldier\stalker_soldier4a</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -1014,8 +1014,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>14424</rank>
+    <reputation>1801</reputation>
     <visual>actors\stalker_soldier\stalker_soldier4a</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -1035,8 +1035,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>24400</rank>
+    <reputation>1138</reputation>
     <visual>actors\stalker_soldier\stalker_military_exo</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"
@@ -1056,8 +1056,8 @@
     <class>sim_default_military_4</class>
     <community>army</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\military\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>17792</rank>
+    <reputation>1674</reputation>
     <visual>actors\stalker_soldier\stalker_soldier5a</visual>
     <supplies>
 #include "gameplay\loadouts\army_base.ltx"

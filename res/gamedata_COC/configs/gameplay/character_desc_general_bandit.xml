@@ -6,8 +6,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>970</rank>
+    <reputation>-681</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1</visual>
     <supplies>
@@ -28,8 +28,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>872</rank>
+    <reputation>685</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1a</visual>
     <supplies>
@@ -50,8 +50,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>596</rank>
+    <reputation>1327</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandita2</visual>
     <supplies>
@@ -72,7 +72,7 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>948</rank>
     <reputation>107</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandita3</visual>
@@ -94,8 +94,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2656</rank>
+    <reputation>-938</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1_gas</visual>
     <supplies>
@@ -116,8 +116,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1220</rank>
+    <reputation>830</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1a_gas</visual>
     <supplies>
@@ -138,8 +138,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1418</rank>
+    <reputation>-1484</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1b_gas</visual>
     <supplies>
@@ -160,8 +160,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1976</rank>
+    <reputation>-345</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c_gas</visual>
     <supplies>
@@ -182,8 +182,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>260</rank>
+    <reputation>1889</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1b</visual>
     <supplies>
@@ -204,8 +204,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>760</rank>
+    <reputation>-2060</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c</visual>
     <supplies>
@@ -226,8 +226,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>908</rank>
+    <reputation>1849</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1_mask</visual>
     <supplies>
@@ -248,8 +248,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>614</rank>
+    <reputation>1040</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1a_mask</visual>
     <supplies>
@@ -271,7 +271,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>12</rank>
-    <reputation>0</reputation>
+    <reputation>503</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1b_mask</visual>
     <supplies>
@@ -314,8 +314,8 @@
     <class>sim_default_bandit_0</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>652</rank>
+    <reputation>-829</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_a</visual>
     <supplies>
@@ -337,7 +337,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
     <rank>124</rank>
-    <reputation>0</reputation>
+    <reputation>-1505</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandita1</visual>
     <supplies>
@@ -358,8 +358,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>412</rank>
+    <reputation>1253</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1</visual>
     <supplies>
@@ -380,8 +380,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3650</rank>
+    <reputation>343</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_3</visual>
     <supplies>
@@ -402,8 +402,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>896</rank>
+    <reputation>2490</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1b_mask</visual>
     <supplies>
@@ -424,8 +424,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>258</rank>
+    <reputation>-1267</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c_mask</visual>
     <supplies>
@@ -446,8 +446,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3494</rank>
+    <reputation>479</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit3a</visual>
     <supplies>
@@ -468,8 +468,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5182</rank>
+    <reputation>1741</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit3b</visual>
     <supplies>
@@ -490,8 +490,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3228</rank>
+    <reputation>369</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit3c</visual>
     <supplies>
@@ -512,8 +512,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>348</rank>
+    <reputation>1213</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1a</visual>
     <supplies>
@@ -535,7 +535,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
     <rank>206</rank>
-    <reputation>0</reputation>
+    <reputation>1978</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1b</visual>
     <supplies>
@@ -556,8 +556,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>624</rank>
+    <reputation>-1022</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit1c</visual>
     <supplies>
@@ -578,8 +578,8 @@
     <class>sim_default_bandit_1</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>400</rank>
+    <reputation>1049</reputation>
     <money min="250" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_1_mask</visual>
     <supplies>
@@ -622,8 +622,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1354</rank>
+    <reputation>-508</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_4</visual>
     <supplies>
@@ -644,8 +644,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>5904</rank>
+    <reputation>1209</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2</visual>
     <supplies>
@@ -666,7 +666,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>2886</rank>
     <reputation>-25</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
@@ -688,8 +688,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2278</rank>
+    <reputation>-353</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -710,8 +710,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2032</rank>
+    <reputation>-524</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5a</visual>
     <supplies>
@@ -732,7 +732,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>2150</rank>
     <reputation>169</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5b</visual>
@@ -754,7 +754,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>1960</rank>
     <reputation>-357</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5c</visual>
@@ -776,8 +776,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1068</rank>
+    <reputation>2196</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5d</visual>
     <supplies>
@@ -798,8 +798,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12610</rank>
+    <reputation>646</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
     <supplies>
@@ -820,7 +820,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>11402</rank>
     <reputation>-213</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
@@ -842,8 +842,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>7900</rank>
+    <reputation>2191</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_gp5</visual>
     <supplies>
@@ -864,8 +864,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>11650</rank>
+    <reputation>1349</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6a</visual>
     <supplies>
@@ -886,8 +886,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>4178</rank>
+    <reputation>1893</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a</visual>
     <supplies>
@@ -908,8 +908,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>14756</rank>
+    <reputation>-2037</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6b</visual>
     <supplies>
@@ -930,7 +930,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>13058</rank>
     <reputation>203</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6c</visual>
@@ -952,8 +952,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>13612</rank>
+    <reputation>774</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6d</visual>
     <supplies>
@@ -974,8 +974,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>13154</rank>
+    <reputation>-1887</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6e</visual>
     <supplies>
@@ -996,8 +996,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10222</rank>
+    <reputation>1515</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6f</visual>
     <supplies>
@@ -1018,8 +1018,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12648</rank>
+    <reputation>-1710</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6g</visual>
     <supplies>
@@ -1040,8 +1040,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12592</rank>
+    <reputation>1879</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6h</visual>
     <supplies>
@@ -1062,8 +1062,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1678</rank>
+    <reputation>1655</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4a</visual>
     <supplies>
@@ -1084,7 +1084,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>13208</rank>
     <reputation>-2</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_band_2_mask</visual>
@@ -1106,8 +1106,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>13528</rank>
+    <reputation>1826</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_band2a_mask</visual>
     <supplies>
@@ -1128,8 +1128,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1780</rank>
+    <reputation>-835</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4b</visual>
     <supplies>
@@ -1150,8 +1150,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1722</rank>
+    <reputation>1707</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4c</visual>
     <supplies>
@@ -1172,7 +1172,7 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>5038</rank>
     <reputation>145</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2_mask</visual>
@@ -1194,8 +1194,8 @@
     <class>sim_default_bandit_2</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3994</rank>
+    <reputation>-2072</reputation>
     <money min="500" max="1750" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_mask</visual>
     <supplies>
@@ -1216,8 +1216,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2542</rank>
+    <reputation>2131</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4a</visual>
     <supplies>
@@ -1239,8 +1239,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1006</rank>
+    <reputation>2336</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4b</visual>
     <supplies>
@@ -1262,7 +1262,7 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>1294</rank>
     <reputation>277</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5a</visual>
@@ -1285,8 +1285,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2212</rank>
+    <reputation>1228</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5b</visual>
     <supplies>
@@ -1308,8 +1308,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1318</rank>
+    <reputation>-2481</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5c</visual>
     <supplies>
@@ -1331,8 +1331,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2328</rank>
+    <reputation>433</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit5d</visual>
     <supplies>
@@ -1354,8 +1354,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>11226</rank>
+    <reputation>-545</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
     <supplies>
@@ -1377,8 +1377,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>14942</rank>
+    <reputation>-2209</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
     <supplies>
@@ -1400,8 +1400,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>6814</rank>
+    <reputation>2448</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_gp5</visual>
     <supplies>
@@ -1423,7 +1423,7 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>14662</rank>
     <reputation>-300</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6a</visual>
@@ -1446,8 +1446,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10302</rank>
+    <reputation>-574</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6b</visual>
     <supplies>
@@ -1469,8 +1469,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12994</rank>
+    <reputation>1385</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6c</visual>
     <supplies>
@@ -1492,7 +1492,7 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>2526</rank>
     <reputation>-144</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_4</visual>
@@ -1515,8 +1515,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12740</rank>
+    <reputation>457</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6d</visual>
     <supplies>
@@ -1538,8 +1538,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>14974</rank>
+    <reputation>1334</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6e</visual>
     <supplies>
@@ -1561,8 +1561,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>13090</rank>
+    <reputation>938</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6f</visual>
     <supplies>
@@ -1584,8 +1584,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>14132</rank>
+    <reputation>931</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6g</visual>
     <supplies>
@@ -1607,8 +1607,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>11352</rank>
+    <reputation>1852</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6h</visual>
     <supplies>
@@ -1630,8 +1630,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>4864</rank>
+    <reputation>1457</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a</visual>
     <supplies>
@@ -1653,7 +1653,7 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>4952</rank>
     <reputation>324</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2</visual>
@@ -1676,8 +1676,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2104</rank>
+    <reputation>2189</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit4c</visual>
     <supplies>
@@ -1699,8 +1699,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3328</rank>
+    <reputation>1825</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_mask</visual>
     <supplies>
@@ -1722,8 +1722,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>3418</rank>
+    <reputation>1242</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2_mask</visual>
     <supplies>
@@ -1745,8 +1745,8 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>2414</rank>
+    <reputation>1916</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -1768,7 +1768,7 @@
     <class>sim_default_bandit_3</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>2088</rank>
     <reputation>-262</reputation>
     <money min="3000" max="4000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
@@ -1791,8 +1791,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>25890</rank>
+    <reputation>1597</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
     <supplies>
@@ -1814,7 +1814,7 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>23524</rank>
     <reputation>-48</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
@@ -1837,8 +1837,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>11338</rank>
+    <reputation>1682</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6a</visual>
     <supplies>
@@ -1860,8 +1860,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>12634</rank>
+    <reputation>1905</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6b</visual>
     <supplies>
@@ -1883,8 +1883,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10216</rank>
+    <reputation>-2155</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6c</visual>
     <supplies>
@@ -1906,7 +1906,7 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>10718</rank>
     <reputation>431</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit6d</visual>
@@ -1929,8 +1929,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>27438</rank>
+    <reputation>-2404</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
     <supplies>
@@ -1952,8 +1952,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>23958</rank>
+    <reputation>2260</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_exo</visual>
     <supplies>
@@ -1975,8 +1975,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10688</rank>
+    <reputation>917</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_band2a_mask</visual>
     <supplies>
@@ -1998,8 +1998,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10770</rank>
+    <reputation>-996</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_band_2_mask</visual>
     <supplies>
@@ -2021,8 +2021,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>1846</rank>
+    <reputation>-1306</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a</visual>
     <supplies>
@@ -2044,8 +2044,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>10920</rank>
+    <reputation>-1108</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit2a_old</visual>
     <supplies>
@@ -2067,7 +2067,7 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
+    <rank>10320</rank>
     <reputation>-12</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_merc</visual>
@@ -2090,8 +2090,8 @@
     <class>sim_default_bandit_4</class>
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\bandit\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>8244</rank>
+    <reputation>-875</reputation>
     <money min="4000" max="8000" infinitive="0"/>
     <visual>actors\stalker_bandit\stalker_bandit_2a_gp5</visual>
     <supplies>
@@ -2114,7 +2114,7 @@
     <community>bandit</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>196</rank>
-    <reputation>0</reputation>
+    <reputation>933</reputation>
     <visual>actors\stalker_bandit\stalker_bandit_1</visual>
     <supplies>
 #include "gameplay\loadouts\bandit_base.ltx"

@@ -6,9 +6,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11894</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1178</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -28,9 +28,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11384</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>752</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -50,9 +50,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>14294</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1927</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -72,9 +72,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11386</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1951</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -94,9 +94,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>10668</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1140</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -116,9 +116,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5366</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>839</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -138,7 +138,7 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5078</rank>
     <money min="250" max="1750" infinitive="0"/>
     <reputation>74</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
@@ -160,9 +160,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>3932</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1056</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -182,9 +182,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>4292</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1400</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -204,9 +204,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>1840</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>623</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -226,9 +226,9 @@
     <class>sim_default_killer_0</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>10390</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2462</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -248,9 +248,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12828</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1012</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -270,7 +270,7 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11322</rank>
     <money min="500" max="1750" infinitive="0"/>
     <reputation>67</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
@@ -292,9 +292,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>14416</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1785</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -314,9 +314,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12566</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1168</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -336,9 +336,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>14724</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1341</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -358,9 +358,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5516</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>568</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -380,9 +380,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5176</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2470</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -402,9 +402,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5738</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2294</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -424,9 +424,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>3296</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>974</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -446,9 +446,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>1508</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1594</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -468,9 +468,9 @@
     <class>sim_default_killer_1</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11270</rank>
     <money min="500" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2380</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -490,7 +490,7 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11550</rank>
     <money min="1500" max="2500" infinitive="0"/>
     <reputation>319</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
@@ -512,9 +512,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12234</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1215</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -534,9 +534,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11364</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2404</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -556,9 +556,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>10008</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2219</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -578,9 +578,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12884</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2139</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -600,9 +600,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5090</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>471</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -622,9 +622,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>4926</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1128</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -644,9 +644,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>5496</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1985</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -666,9 +666,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>3770</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1704</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -688,7 +688,7 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>2494</rank>
     <money min="1500" max="2500" infinitive="0"/>
     <reputation>21</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
@@ -710,9 +710,9 @@
     <class>sim_default_killer_2</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>11632</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>849</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -732,9 +732,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12266</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1108</reputation>
     <visual>actors\stalker_merc\stalker_mercenary3</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -756,7 +756,7 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>13506</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>163</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
@@ -780,9 +780,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12624</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1441</reputation>
     <visual>actors\stalker_merc\stalker_mercenary3</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -804,9 +804,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>12930</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>527</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -828,9 +828,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>24386</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1079</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -852,9 +852,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>21462</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>715</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -876,9 +876,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>17622</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>743</reputation>
     <visual>actors\stalker_merc\stalker_mercexo_4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -900,9 +900,9 @@
     <class>sim_default_killer_4</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>20874</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>635</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -924,9 +924,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>27712</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1438</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -948,9 +948,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>27564</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1276</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -972,9 +972,9 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>15410</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2071</reputation>
     <visual>actors\stalker_merc\stalker_mercexo_4</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -996,7 +996,7 @@
     <class>sim_default_killer_3</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\killer\</snd_config>
-    <rank>0</rank>
+    <rank>18248</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>147</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
@@ -1020,9 +1020,9 @@
     <class>test_killer</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13938</rank>
     <money min="1500" max="2500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>488</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
 #include "gameplay\loadouts\killer_base.ltx"
@@ -1040,8 +1040,8 @@
     <class>test_silencer_character</class>
     <community>killer</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
+    <rank>14794</rank>
+    <reputation>2407</reputation>
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
