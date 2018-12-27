@@ -31,7 +31,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>530</rank>
-    <reputation>1485</reputation>
+    <reputation>-1485</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1a</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -55,7 +55,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>760</rank>
-    <reputation>1631</reputation>
+    <reputation>-1631</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1j</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -79,7 +79,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>554</rank>
-    <reputation>1703</reputation>
+    <reputation>-1703</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_1_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -127,7 +127,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>330</rank>
-    <reputation>2191</reputation>
+    <reputation>-2191</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1b_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -199,7 +199,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>452</rank>
-    <reputation>2126</reputation>
+    <reputation>-2126</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1e_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -319,7 +319,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>238</rank>
-    <reputation>1934</reputation>
+    <reputation>-1934</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1i_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -439,7 +439,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>950</rank>
-    <reputation>315</reputation>
+    <reputation>-315</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1c_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -463,7 +463,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>136</rank>
-    <reputation>266</reputation>
+    <reputation>-266</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1d_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -535,7 +535,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>810</rank>
-    <reputation>1330</reputation>
+    <reputation>-1330</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1g_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -583,7 +583,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>914</rank>
-    <reputation>106</reputation>
+    <reputation>-106</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1h_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -607,7 +607,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>298</rank>
-    <reputation>286</reputation>
+    <reputation>-286</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1i_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -631,7 +631,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>914</rank>
-    <reputation>1189</reputation>
+    <reputation>-1189</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1j_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -679,7 +679,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>884</rank>
-    <reputation>1752</reputation>
+    <reputation>-1752</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1e</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -727,7 +727,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>934</rank>
-    <reputation>588</reputation>
+    <reputation>-588</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1g</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -775,7 +775,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>808</rank>
-    <reputation>1271</reputation>
+    <reputation>-1271</reputation>
     <visual>actors\stalker_zombied\stalker_zombied1i</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -823,7 +823,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>4446</rank>
-    <reputation>1235</reputation>
+    <reputation>-1235</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2a</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -847,7 +847,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3216</rank>
-    <reputation>1333</reputation>
+    <reputation>-1333</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2j</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -871,7 +871,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>4110</rank>
-    <reputation>837</reputation>
+    <reputation>-837</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_2_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -895,7 +895,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5096</rank>
-    <reputation>2328</reputation>
+    <reputation>-2328</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -943,7 +943,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>4314</rank>
-    <reputation>36</reputation>
+    <reputation>-36</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2c_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -967,7 +967,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3574</rank>
-    <reputation>2104</reputation>
+    <reputation>-2104</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2d_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1039,7 +1039,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5840</rank>
-    <reputation>2054</reputation>
+    <reputation>-2054</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2g_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1063,7 +1063,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>4084</rank>
-    <reputation>148</reputation>
+    <reputation>-148</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2h_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1135,7 +1135,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5704</rank>
-    <reputation>92</reputation>
+    <reputation>-92</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2j_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1159,7 +1159,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5772</rank>
-    <reputation>2369</reputation>
+    <reputation>-2369</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_2_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1231,7 +1231,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5212</rank>
-    <reputation>2131</reputation>
+    <reputation>-2131</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2c_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1255,7 +1255,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5466</rank>
-    <reputation>1861</reputation>
+    <reputation>-1861</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2d_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1279,7 +1279,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3916</rank>
-    <reputation>2072</reputation>
+    <reputation>-2072</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2e_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1375,7 +1375,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5966</rank>
-    <reputation>2084</reputation>
+    <reputation>-2084</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2h_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1423,7 +1423,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3386</rank>
-    <reputation>2121</reputation>
+    <reputation>-2121</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2j_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1447,7 +1447,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5272</rank>
-    <reputation>789</reputation>
+    <reputation>-789</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2k</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1471,7 +1471,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3776</rank>
-    <reputation>2055</reputation>
+    <reputation>-2055</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2k_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1519,7 +1519,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>5734</rank>
-    <reputation>960</reputation>
+    <reputation>-960</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2l</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1543,7 +1543,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3176</rank>
-    <reputation>832</reputation>
+    <reputation>-832</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2l_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1615,7 +1615,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3098</rank>
-    <reputation>199</reputation>
+    <reputation>-199</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2d</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1663,7 +1663,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6552</rank>
-    <reputation>459</reputation>
+    <reputation>-459</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary_2_face3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1687,7 +1687,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6852</rank>
-    <reputation>2015</reputation>
+    <reputation>-2015</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1711,7 +1711,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>8220</rank>
-    <reputation>356</reputation>
+    <reputation>-356</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2a_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1759,7 +1759,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>7130</rank>
-    <reputation>752</reputation>
+    <reputation>-752</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2b_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1783,7 +1783,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>7272</rank>
-    <reputation>376</reputation>
+    <reputation>-376</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2b_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1855,7 +1855,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6182</rank>
-    <reputation>521</reputation>
+    <reputation>-521</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_merecenary2c_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1927,7 +1927,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>8810</rank>
-    <reputation>1311</reputation>
+    <reputation>-1311</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_bandit_2_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -1951,7 +1951,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>6724</rank>
-    <reputation>1952</reputation>
+    <reputation>-1952</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_bandit_2_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2143,7 +2143,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>3328</rank>
-    <reputation>1547</reputation>
+    <reputation>-1547</reputation>
     <visual>actors\stalker_zombied\stalker_zombied2i</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2167,7 +2167,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13332</rank>
-    <reputation>521</reputation>
+    <reputation>-521</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2335,7 +2335,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>10278</rank>
-    <reputation>600</reputation>
+    <reputation>-600</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2359,7 +2359,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>14216</rank>
-    <reputation>266</reputation>
+    <reputation>-266</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2383,7 +2383,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>11640</rank>
-    <reputation>869</reputation>
+    <reputation>-869</reputation>
     <visual>actors\stalker_zombied\stalker_zombied3a</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2407,7 +2407,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>12782</rank>
-    <reputation>2492</reputation>
+    <reputation>-2492</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2479,7 +2479,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>13116</rank>
-    <reputation>1072</reputation>
+    <reputation>-1072</reputation>
     <visual>actors\stalker_zombied\stalker_zombied3a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2503,7 +2503,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>12984</rank>
-    <reputation>51</reputation>
+    <reputation>-51</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2527,7 +2527,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>14632</rank>
-    <reputation>1345</reputation>
+    <reputation>-1345</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_3_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2551,7 +2551,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>24998</rank>
-    <reputation>2070</reputation>
+    <reputation>-2070</reputation>
     <visual>actors\stalker_zombied\stalker_zombied_4</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2626,7 +2626,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>27670</rank>
-    <reputation>611</reputation>
+    <reputation>-611</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4c_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2701,7 +2701,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>24110</rank>
-    <reputation>1806</reputation>
+    <reputation>-1806</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4f_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2726,7 +2726,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>21318</rank>
-    <reputation>442</reputation>
+    <reputation>-442</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4g_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2851,7 +2851,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>22368</rank>
-    <reputation>2089</reputation>
+    <reputation>-2089</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4b</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2901,7 +2901,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>22012</rank>
-    <reputation>1931</reputation>
+    <reputation>-1931</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4e_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2926,7 +2926,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>26088</rank>
-    <reputation>1891</reputation>
+    <reputation>-1891</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4f_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -2951,7 +2951,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>21832</rank>
-    <reputation>226</reputation>
+    <reputation>-226</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4g_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3001,7 +3001,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>21714</rank>
-    <reputation>41</reputation>
+    <reputation>-41</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4h_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3026,7 +3026,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>27532</rank>
-    <reputation>1818</reputation>
+    <reputation>-1818</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4h_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3076,7 +3076,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>26038</rank>
-    <reputation>2329</reputation>
+    <reputation>-2329</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4i_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3101,7 +3101,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>23302</rank>
-    <reputation>85</reputation>
+    <reputation>-85</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4i_face2</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3151,7 +3151,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>27644</rank>
-    <reputation>2365</reputation>
+    <reputation>-2365</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4d</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3176,7 +3176,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>27312</rank>
-    <reputation>989</reputation>
+    <reputation>-989</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4e</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3201,7 +3201,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>21490</rank>
-    <reputation>2129</reputation>
+    <reputation>-2129</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4f</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3226,7 +3226,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>25116</rank>
-    <reputation>2045</reputation>
+    <reputation>-2045</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4g</visual>
     <crouch_type>0</crouch_type>
     <supplies>
@@ -3276,7 +3276,7 @@
     <community>zombied</community>
     <snd_config>characters_voice\human_01\zombied\</snd_config>
     <rank>25048</rank>
-    <reputation>595</reputation>
+    <reputation>-595</reputation>
     <visual>actors\stalker_zombied\stalker_zombied4a_face1</visual>
     <crouch_type>0</crouch_type>
     <supplies>

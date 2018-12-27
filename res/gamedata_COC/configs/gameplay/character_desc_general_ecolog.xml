@@ -31,7 +31,7 @@
     <class>sim_default_ecolog_0</class>
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>476</rank>
-    <reputation>400</reputation>
+    <reputation>-400</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
@@ -52,7 +52,7 @@
     <class>sim_default_ecolog_0</class>
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>8540</rank>
-    <reputation>370</reputation>
+    <reputation>-370</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_blue</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
@@ -73,7 +73,7 @@
     <class>sim_default_ecolog_0</class>
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>2816</rank>
-    <reputation>2202</reputation>
+    <reputation>-2202</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_brown</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
@@ -94,7 +94,7 @@
     <class>sim_default_ecolog_0</class>
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>4426</rank>
-    <reputation>2244</reputation>
+    <reputation>-2244</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
@@ -115,7 +115,7 @@
     <class>sim_default_ecolog_0</class>
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>15492</rank>
-    <reputation>1001</reputation>
+    <reputation>-1001</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_white</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
@@ -157,7 +157,7 @@
     <class>sim_default_ecolog_1</class>
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <rank>3072</rank>
-    <reputation>1655</reputation>
+    <reputation>-1655</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
@@ -201,7 +201,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>7052</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>542</reputation>
+    <reputation>-542</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
 #include "gameplay\loadouts\ecolog_base.ltx"
@@ -247,7 +247,7 @@
     <snd_config>characters_voice\human_03\killer\</snd_config>
     <rank>14494</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>795</reputation>
+    <reputation>-795</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
 #include "gameplay\loadouts\ecolog_base.ltx"
@@ -269,7 +269,7 @@
     <snd_config>characters_voice\human_03\stalker\</snd_config>
     <rank>8738</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>2018</reputation>
+    <reputation>-2018</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
 #include "gameplay\loadouts\ecolog_base.ltx"
@@ -291,7 +291,7 @@
     <community>ecolog</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <rank>8194</rank>
-    <reputation>811</reputation>
+    <reputation>-811</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
 #include "gameplay\loadouts\ecolog_base.ltx"
