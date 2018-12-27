@@ -8,10 +8,11 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>34</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2475</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -30,10 +31,11 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>80</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1525</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -50,12 +52,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>666</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-791</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -72,12 +75,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>846</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>135</reputation>
+    <reputation>-135</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -94,12 +98,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>608</rank>
     <money min="250" max="1750" infinitive="0"/>
     <reputation>130</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -116,12 +121,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>664</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1087</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -138,12 +144,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>432</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1913</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -160,12 +167,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>872</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1298</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -182,12 +190,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>598</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2242</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -206,10 +215,11 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>64</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1175</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -226,12 +236,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>782</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>884</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -250,10 +261,11 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>58</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>983</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -270,12 +282,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>820</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1347</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -292,12 +305,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>762</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>474</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala6</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -314,12 +328,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2612</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1372</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -336,12 +351,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2686</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1383</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -358,12 +374,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1726</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>18</reputation>
+    <reputation>-18</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -380,12 +397,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1662</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-853</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -402,12 +420,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2342</rank>
     <money min="250" max="1750" infinitive="0"/>
     <reputation>76</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -424,12 +443,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1056</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1500</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -446,12 +466,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1912</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2226</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -470,10 +491,11 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>198</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2156</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -490,12 +512,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>976</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1559</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -512,12 +535,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>436</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1295</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -534,12 +558,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>430</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1751</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -556,12 +581,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>928</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2310</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -578,12 +604,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>454</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2097</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -600,12 +627,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>772</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1258</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -627,7 +655,8 @@
     <reputation>111</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -644,12 +673,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>448</rank>
     <money min="250" max="1750" infinitive="0"/>
     <reputation>251</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -666,12 +696,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>918</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1687</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -688,12 +719,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>374</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2201</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -710,12 +742,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>650</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>502</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -732,12 +765,13 @@
     <class>sim_default_stalker_0</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>600</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2449</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -756,10 +790,11 @@
     <snd_config>characters_voice\human_01\stalker\</snd_config>
     <rank>260</rank>
     <money min="250" max="1750" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-421</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -776,12 +811,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5836</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1562</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -798,12 +834,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3940</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1775</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -820,12 +857,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4956</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2455</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -842,12 +880,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3780</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>388</reputation>
+    <reputation>-388</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -864,12 +903,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5866</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2498</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -886,12 +926,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5224</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1976</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -908,12 +949,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4910</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>529</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -930,12 +972,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4680</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1005</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -952,12 +995,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3636</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1165</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -974,12 +1018,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5404</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>800</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -996,12 +1041,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3818</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1105</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1018,12 +1064,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3994</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>374</reputation>
+    <reputation>-374</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1040,12 +1087,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3906</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>256</reputation>
+    <reputation>-256</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1062,12 +1110,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5514</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1755</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1084,12 +1133,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5358</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2036</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1106,12 +1156,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5442</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1497</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1128,12 +1179,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3298</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2014</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1150,12 +1202,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4592</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>214</reputation>
+    <reputation>-214</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1172,12 +1225,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3320</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>623</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1194,12 +1248,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3490</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-499</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1216,12 +1271,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2500</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2228</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1238,12 +1294,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1726</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1622</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1260,12 +1317,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5426</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2306</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1282,12 +1340,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5162</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1794</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1304,12 +1363,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3514</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>466</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1326,12 +1386,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5784</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1076</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1348,12 +1409,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4268</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2467</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1370,12 +1432,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5546</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2090</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1392,12 +1455,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5990</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1745</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1414,12 +1478,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10500</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2247</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1436,12 +1501,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11512</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2372</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1458,12 +1524,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11320</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>573</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1480,12 +1547,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10122</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2489</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1502,12 +1570,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12388</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>270</reputation>
+    <reputation>-270</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1524,12 +1593,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4580</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>998</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1546,12 +1616,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13804</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1876</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1568,12 +1639,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14320</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2445</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1590,12 +1662,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13428</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1019</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1612,12 +1685,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11698</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1828</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1634,12 +1708,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14024</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-719</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1656,12 +1731,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11232</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1469</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1678,12 +1754,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10616</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1571</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1700,12 +1777,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14896</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>419</reputation>
+    <reputation>-419</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1722,12 +1800,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10982</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1286</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1744,12 +1823,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>8494</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1529</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1766,12 +1846,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1298</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>419</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1788,12 +1869,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>9378</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2002</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1810,12 +1892,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>7838</rank>
     <money min="1000" max="2000" infinitive="0"/>
     <reputation>314</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1832,12 +1915,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>7840</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1002</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1854,12 +1938,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6602</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1029</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1876,12 +1961,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6128</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-801</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1898,12 +1984,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>8966</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1717</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1920,12 +2007,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1136</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2273</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1942,12 +2030,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4366</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>898</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1964,12 +2053,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>7862</rank>
     <money min="1000" max="2000" infinitive="0"/>
     <reputation>299</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1986,12 +2076,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14560</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1914</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2008,12 +2099,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2824</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>551</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2030,12 +2122,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12282</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>653</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2052,12 +2145,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4744</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1555</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2074,12 +2168,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4800</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2050</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2096,12 +2191,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5404</rank>
     <money min="1000" max="2000" infinitive="0"/>
     <reputation>74</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2118,12 +2214,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3144</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>958</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2140,12 +2237,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5836</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1461</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2162,12 +2260,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3666</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1514</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2184,12 +2283,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4640</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-726</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2206,12 +2306,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5332</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>128</reputation>
+    <reputation>-128</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2228,12 +2329,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3238</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1730</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2250,12 +2352,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1656</rank>
     <money min="1000" max="2000" infinitive="0"/>
     <reputation>244</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2272,12 +2375,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5962</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1556</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2294,12 +2398,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5526</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2290</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2316,12 +2421,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5244</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>957</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2338,12 +2444,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5260</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2389</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2360,12 +2467,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3490</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1995</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2382,12 +2490,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3018</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1037</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2404,12 +2513,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5514</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>163</reputation>
+    <reputation>-163</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2426,12 +2536,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3202</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1701</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2448,12 +2559,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5974</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>182</reputation>
+    <reputation>-182</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2470,12 +2582,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2126</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2460</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2492,12 +2605,13 @@
     <class>sim_default_stalker_1</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2800</rank>
     <money min="1000" max="2000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2332</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2514,12 +2628,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5900</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1230</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2536,12 +2651,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3082</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2268</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2558,12 +2674,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5036</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2144</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2580,12 +2697,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3996</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>179</reputation>
+    <reputation>-179</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2602,12 +2720,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4954</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1054</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2624,12 +2743,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4102</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>234</reputation>
+    <reputation>-234</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2646,12 +2766,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4456</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1478</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2668,12 +2789,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4526</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1359</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2690,12 +2812,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3624</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1461</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2712,12 +2835,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5066</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>691</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2734,12 +2858,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4268</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>210</reputation>
+    <reputation>-210</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2756,12 +2881,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3086</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>179</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2778,12 +2904,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4896</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1333</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2800,12 +2927,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4040</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>894</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2822,12 +2950,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4692</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-738</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2844,12 +2973,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3060</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2063</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2866,12 +2996,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4928</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>370</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2888,12 +3019,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3120</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2407</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2910,12 +3042,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5560</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>417</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2932,12 +3065,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1778</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1877</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2954,12 +3088,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3886</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1115</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2976,12 +3111,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1954</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1351</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2998,12 +3134,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5708</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-993</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3020,12 +3157,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4006</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>207</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3042,12 +3180,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4844</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1655</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3064,12 +3203,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3850</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1324</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3086,12 +3226,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5894</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-802</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3108,12 +3249,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3256</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2444</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3130,12 +3272,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5338</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1088</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3152,12 +3295,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13014</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1601</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3174,12 +3318,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12300</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1917</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3196,12 +3341,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11012</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2431</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3218,12 +3364,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13810</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-421</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3240,12 +3387,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10162</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>310</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3262,12 +3410,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4624</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>943</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3284,12 +3433,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14528</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1642</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3306,12 +3456,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13662</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1296</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3328,12 +3479,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10464</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-469</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3350,12 +3502,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10428</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>312</reputation>
+    <reputation>-312</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3372,12 +3525,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14208</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1003</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3394,12 +3548,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11758</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2101</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3416,12 +3571,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10624</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2109</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3438,12 +3594,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11852</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1575</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3460,12 +3617,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11028</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>530</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3482,12 +3640,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>9690</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1159</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3504,12 +3663,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2646</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1116</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3526,12 +3686,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6574</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2359</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3548,12 +3709,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6400</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1041</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3570,12 +3732,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>9652</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2131</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3592,12 +3755,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6344</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2339</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3614,12 +3778,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6096</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1894</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3636,12 +3801,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>8750</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>209</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3658,12 +3824,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4992</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2428</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3680,12 +3847,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2056</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1163</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3702,12 +3870,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>9754</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2007</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3724,12 +3893,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14782</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1340</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3746,12 +3916,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1914</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1694</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3768,12 +3939,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13332</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1110</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3790,12 +3962,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3906</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2353</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3812,12 +3985,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5858</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>954</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3834,12 +4008,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3568</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-427</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3856,12 +4031,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5922</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-571</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3878,12 +4054,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4640</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2343</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3900,12 +4077,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3476</rank>
     <money min="1500" max="3500" infinitive="0"/>
     <reputation>262</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3922,12 +4100,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5608</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-830</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3944,12 +4123,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5958</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>313</reputation>
+    <reputation>-313</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3966,12 +4146,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4180</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-509</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3988,12 +4169,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1176</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>893</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4010,12 +4192,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3592</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>948</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4032,12 +4215,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_02\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5776</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>107</reputation>
+    <reputation>-107</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4054,12 +4238,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2654</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1437</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4076,12 +4261,13 @@
     <class>sim_default_stalker_2</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1288</rank>
     <money min="1500" max="3500" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-630</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4098,12 +4284,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4364</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2029</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4122,12 +4309,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4166</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-566</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4146,12 +4334,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>4356</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1930</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4170,12 +4359,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5464</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2274</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4194,12 +4384,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1780</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2365</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4218,12 +4409,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2952</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-929</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4242,12 +4434,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10908</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>192</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4266,12 +4459,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14976</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1996</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4290,12 +4484,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14854</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>447</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4314,12 +4509,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12220</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1659</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4338,12 +4534,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14626</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>517</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4362,12 +4559,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12604</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1960</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4386,12 +4584,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3602</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1217</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4410,12 +4609,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12216</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2394</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4434,12 +4634,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13436</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-555</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4458,12 +4659,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12796</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1763</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4482,12 +4684,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12388</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-750</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4506,12 +4709,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10388</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1993</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4530,12 +4734,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13818</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2071</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4554,12 +4759,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13774</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>32</reputation>
+    <reputation>-32</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4578,12 +4784,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12654</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2200</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4602,12 +4809,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>8456</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2433</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4626,12 +4834,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6396</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>492</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4650,12 +4859,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14260</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1692</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4674,12 +4884,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>9400</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1838</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4698,12 +4909,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6064</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1380</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4722,12 +4934,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>9442</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>388</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4746,12 +4959,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>7828</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2493</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4770,12 +4984,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>8664</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1968</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4794,12 +5009,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>16206</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>497</reputation>
     <visual>actors\stalker_neutral\stalker_neutral3a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4818,12 +5034,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>19470</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2147</reputation>
     <visual>actors\stalker_neutral\stalker_neutral3b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4842,12 +5059,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1048</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>313</reputation>
+    <reputation>-313</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4866,12 +5084,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2940</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1123</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4890,12 +5109,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1176</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1305</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4914,12 +5134,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5876</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>620</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4938,12 +5159,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1164</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-402</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4962,12 +5184,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>1572</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1448</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4986,12 +5209,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>6472</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-505</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5010,12 +5234,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14338</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1184</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5034,12 +5259,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13622</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2020</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5058,12 +5284,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3246</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2486</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5082,12 +5309,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>3126</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1694</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5106,12 +5334,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14370</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-427</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5130,12 +5359,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10388</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>443</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5154,12 +5384,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10316</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-458</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5178,12 +5409,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>5088</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-478</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5202,12 +5434,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12446</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-641</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5226,12 +5459,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14592</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-989</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5250,12 +5484,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14078</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2024</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5274,12 +5509,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14192</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1215</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5298,12 +5534,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10668</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>2311</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5322,12 +5559,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>14004</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>849</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5346,12 +5584,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>2698</rank>
     <money min="2500" max="5000" infinitive="0"/>
     <reputation>90</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5370,12 +5609,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>17362</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>20</reputation>
+    <reputation>-20</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5394,12 +5634,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>13328</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>352</reputation>
+    <reputation>-352</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5418,12 +5659,13 @@
     <class>sim_default_stalker_3</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>15352</rank>
     <money min="2500" max="5000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>1580</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5442,12 +5684,13 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>23028</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>88</reputation>
+    <reputation>-88</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5466,12 +5709,13 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>27438</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-838</reputation>
     <visual>actors\stalker_neutral\stalker_neutral4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5490,12 +5734,13 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>26326</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>140</reputation>
+    <reputation>-140</reputation>
     <visual>actors\stalker_neutral\stalker_neutral4b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5514,12 +5759,13 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>10136</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2286</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5538,12 +5784,13 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12258</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-2399</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5562,12 +5809,13 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>12942</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>826</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5586,60 +5834,19 @@
     <class>sim_default_stalker_4</class>
     <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human_03\stalker\</snd_config>
-    <rank>0</rank>
+    <rank>11020</rank>
     <money min="5000" max="10000" infinitive="0"/>
-    <reputation>0</reputation>
+    <reputation>-1231</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
 #include "gameplay\character_drugs_sci.xml"
 
-    </supplies>
-#include "gameplay\character_criticals.xml"
-#include "gameplay\character_dialogs.xml"
-    </specific_character>
-<specific_character id="stalker_general_default" team_default = "1">
-    <name>GENERATE_NAME_stalker</name>
-    <icon>ui_inGame2_neutral_1</icon>
-    <map_icon x="1" y="0"></map_icon>
-    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
-    <class>Stalker_general</class>
-    <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
-    <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>84</rank>
-    <reputation>0</reputation>
-    <visual>actors\stalker_neutral\stalker_neutral_1</visual>
-    <supplies>
- 
-        [spawn] \n
-#include "gameplay\character_items.xml"
-#include "gameplay\character_food.xml"
-#include "gameplay\character_drugs.xml"
-    </supplies>
-#include "gameplay\character_criticals.xml"
-#include "gameplay\character_dialogs.xml"
-    </specific_character>
-<specific_character id="stalker_general_veteran_default" team_default = "1">
-    <name>GENERATE_NAME_stalker</name>
-    <icon>ui_inGame2_neutral_3</icon>
-    <map_icon x="1" y="0"></map_icon>
-    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
-    <class>Stalker_general_veteran</class>
-    <community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
-    <snd_config>characters_voice\human_01\stalker\</snd_config>
-    <rank>0</rank>
-    <reputation>0</reputation>
-    <visual>actors\stalker_neutral\stalker_neutral_3</visual>
-    <supplies>
- 
-        [spawn] \n
-#include "gameplay\character_items.xml"
-#include "gameplay\character_food.xml"
-#include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals.xml"
 #include "gameplay\character_dialogs.xml"

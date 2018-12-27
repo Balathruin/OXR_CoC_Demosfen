@@ -118,5 +118,6 @@
 	<texture id="ui_inGame2_PD_RagAndBone" x="415" y="141" width="83" height="47" />
 	<texture id="ui_inGame2_PD_WishfulThinking" x="415" y="188" width="83" height="47" />
 	<texture id="ui_inGame2_PD_DownToEarth" x="415" y="235" width="83" height="47" />
+	<texture id="ui_inGame2_PD_Jivoder" x="415" y="282" width="83" height="47" />
    </file>
 </w>

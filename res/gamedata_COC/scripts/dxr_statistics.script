@@ -24,6 +24,7 @@ actor_achievements = {
 	["well_dressed"]		=	{	unlocked = false,	rank = 25,	rept = 0	},
 	["wishful_thinking"]	=	{	unlocked = false,	rank = 25,	rept = 0	},
 	["cheater"]	            =	{	unlocked = false,	rank = 25,	rept = 0	},
+	["jivoder"]	        	=	{	unlocked = false,	rank = 25,	rept = 0	},
 }
 
 -- Artefacts found and detected.
@@ -58,6 +59,7 @@ actor_statistics = {
 	["helicopters_downed2"]	=	{	count = 0,		rank = 25,		rept = 0	},		-- Bonus points for using explosives.
 	["killed_companions"]	=	{	count = 0,		rank = 0,		rept = -75	},
 	["killed_monsters"]		=	{	count = 0,		rank = 5,		rept = 0	},
+	["killed_monsters_f"]	=	{	count = 0,		rank = -250,	rept = -750	},
 	["killed_prisoners"]	=	{	count = 0,		rank = 0,		rept = -25	},
 	["killed_stalkers"]		=	{	count = 0,		rank = 0,		rept = 0	},		-- Unused; see below and the "rank_kill_points" config section.
 	["killed_stalkers_e"]	=	{	count = 0,		rank = 0,		rept = 10	},			-- Enemy relations.

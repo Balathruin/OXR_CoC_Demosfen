@@ -12,7 +12,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral_1</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_army" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_neutral_1</icon>
@@ -26,7 +27,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral_1</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_bandit" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_bandit_a</icon>
@@ -40,7 +42,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_bandit\stalker_bandit_a</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_csky" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_csky_4</icon>
@@ -54,7 +57,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_nebo\stalker_nebo_r2</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_dolg" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_neutral_1</icon>
@@ -68,7 +72,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral_1</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_ecolog" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_neutral_1</icon>
@@ -82,7 +87,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral_1</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_freedom" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_neutral_1</icon>
@@ -96,7 +102,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral_1</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_killer" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_mercen_2_mask</icon>
@@ -110,7 +117,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_monolith" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_neutral_1w</icon>
@@ -124,7 +132,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral1b</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_stalker" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_neutral_0</icon>
@@ -138,7 +147,8 @@
         <reputation>0</reputation>
         <visual>actors\stalker_neutral\stalker_neutral_0</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+</specific_character>
+
 <specific_character id="actor_zombied" no_random = "1">
         <name>GENERATE_NAME_stalker</name>
         <icon>ui_inGame2_Zombied_1</icon>
@@ -152,4 +162,37 @@
         <reputation>0</reputation>
         <visual>actors\stalker_zombied\stalker_zombied_1</visual>
         <terrain_sect>stalker_terrain</terrain_sect>
-        </specific_character>
+ </specific_character>
+ 
+ 
+<specific_character id="stalker_general_default" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_neutral_1</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>Stalker_general</class>
+    <community>stalker</community>
+    <snd_config>characters_voice\human_01\stalker\</snd_config>
+    <rank>0</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_neutral\stalker_neutral_1</visual>
+    <supplies></supplies>
+	<terrain_sect>stalker_terrain</terrain_sect>
+</specific_character>
+
+<specific_character id="stalker_general_veteran_default" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_inGame2_neutral_3</icon>
+    <map_icon x="1" y="0"></map_icon>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+    <class>Stalker_general_veteran</class>
+    <community>stalker</community>
+    <snd_config>characters_voice\human_01\stalker\</snd_config>
+    <rank>0</rank>
+    <reputation>0</reputation>
+    <visual>actors\stalker_neutral\stalker_neutral_3</visual>
+    <supplies></supplies>
+	<terrain_sect>stalker_terrain</terrain_sect>
+</specific_character>
+
+ 

@@ -141,6 +141,8 @@ function get_stat(index) -- index= int        return string
 		return (dxr_statistics.get_actor_visited_levels_count() .. "/32")
 	elseif(index==18) then 
 		return (db.actor:money() .. " RU")
+	elseif(index==19) then 
+		return tostring(dxr_statistics.get_statistic_count("killed_monsters_f"))
 	end
 	return ""
 end
