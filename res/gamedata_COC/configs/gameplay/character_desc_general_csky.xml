@@ -10,6 +10,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -31,6 +33,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -52,6 +56,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -73,6 +79,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r_gas</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -94,6 +102,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -115,6 +125,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -136,6 +148,8 @@
     <reputation>272</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -158,6 +172,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_gp5</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -179,6 +195,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -200,6 +218,8 @@
     <reputation>381</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -220,6 +240,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_a</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -241,6 +263,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_neboa2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -263,6 +287,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -284,6 +310,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -305,6 +333,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_smask1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -326,6 +356,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -347,6 +379,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_old</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -368,6 +402,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_merc</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -388,6 +424,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -409,7 +447,11 @@
     <reputation>153</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_a</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
+        device_torch \n
+#include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -429,6 +471,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -450,6 +494,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_old</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -471,6 +517,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_merc</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -492,6 +540,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_gp5</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -513,6 +563,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -534,6 +586,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -554,6 +608,8 @@
     <reputation>108</reputation>
     <visual>actors\stalker_nebo\stalker_neboa2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -576,6 +632,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -598,6 +656,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2a</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -619,6 +679,8 @@
     <reputation>147</reputation>
     <visual>actors\stalker_nebo\stalker_nebob2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -640,6 +702,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2b</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -662,6 +726,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -683,6 +749,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_smask1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -703,6 +771,8 @@
     <reputation>291</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -724,6 +794,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -745,6 +817,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2a</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -766,6 +840,8 @@
     <reputation>383</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3a</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -787,6 +863,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2b</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -808,6 +886,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3b</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -829,6 +909,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -850,6 +932,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -871,6 +955,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -892,6 +978,8 @@
     <reputation>173</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_b</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -913,6 +1001,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -934,6 +1024,8 @@
     <reputation>333</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -955,6 +1047,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3a</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -976,6 +1070,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3b</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_2.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -997,6 +1093,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -1018,6 +1116,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -1039,6 +1139,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -1060,6 +1162,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_exo_1</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_4.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"
@@ -1081,6 +1185,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_b</visual>
     <supplies>
+#include "gameplay\loadouts\csky_base.ltx"
+#include "gameplay\loadouts\csky_tier_3.ltx"
         [spawn] \n
         device_torch \n
 #include "gameplay\character_items.xml"

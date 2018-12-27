@@ -11,7 +11,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -32,7 +33,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -53,7 +55,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -74,7 +77,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -95,7 +99,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -116,7 +121,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -137,7 +143,8 @@
     <reputation>74</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -158,7 +165,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -179,7 +187,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -200,7 +209,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -221,7 +231,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -242,7 +253,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -263,7 +275,8 @@
     <reputation>67</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -284,7 +297,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -305,7 +319,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -326,7 +341,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -347,7 +363,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -368,7 +385,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -389,7 +407,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -410,7 +429,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -431,7 +451,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -452,7 +473,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -473,7 +495,8 @@
     <reputation>319</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -494,7 +517,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -515,7 +539,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -536,7 +561,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -557,7 +583,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -578,7 +605,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -599,7 +627,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -620,7 +649,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -641,7 +671,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercen2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -662,7 +693,8 @@
     <reputation>21</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -683,7 +715,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_sun1_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -704,7 +737,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercenary3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -727,7 +761,8 @@
     <reputation>163</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -750,7 +785,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercenary3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -773,7 +809,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercenary4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -796,7 +833,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -819,7 +857,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -842,7 +881,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercexo_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -865,7 +905,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -888,7 +929,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -911,7 +953,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -934,7 +977,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_mercexo_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -957,7 +1001,8 @@
     <reputation>147</reputation>
     <visual>actors\stalker_merc\stalker_mercexo4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -980,7 +1025,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
     </supplies>
 #include "gameplay\character_criticals.xml"
@@ -999,7 +1045,8 @@
     <money min="1000" max="2000" infinitive="0"/>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\killer_base.ltx"
+#include "gameplay\loadouts\killer_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"

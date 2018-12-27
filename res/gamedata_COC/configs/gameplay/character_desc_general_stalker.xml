@@ -11,7 +11,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -33,7 +34,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -55,7 +57,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -77,7 +80,8 @@
     <reputation>135</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -99,7 +103,8 @@
     <reputation>130</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -121,7 +126,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -143,7 +149,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -165,7 +172,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -187,7 +195,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -209,7 +218,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -231,7 +241,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -253,7 +264,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -275,7 +287,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -297,7 +310,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutrala6</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -319,7 +333,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -341,7 +356,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -363,7 +379,8 @@
     <reputation>18</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -385,7 +402,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -407,7 +425,8 @@
     <reputation>76</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -429,7 +448,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -451,7 +471,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_gas</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -473,7 +494,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -495,7 +517,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -517,7 +540,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -539,7 +563,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -561,7 +586,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1c_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -583,7 +609,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -605,7 +632,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -627,7 +655,8 @@
     <reputation>111</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -649,7 +678,8 @@
     <reputation>251</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -671,7 +701,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -693,7 +724,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -715,7 +747,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -737,7 +770,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -759,7 +793,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral1b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -781,7 +816,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -803,7 +839,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -825,7 +862,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -847,7 +885,8 @@
     <reputation>388</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -869,7 +908,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -891,7 +931,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -913,7 +954,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -935,7 +977,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -957,7 +1000,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -979,7 +1023,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1001,7 +1046,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1023,7 +1069,8 @@
     <reputation>374</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1045,7 +1092,8 @@
     <reputation>256</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1067,7 +1115,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1089,7 +1138,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1111,7 +1161,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1133,7 +1184,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1155,7 +1207,8 @@
     <reputation>214</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1177,7 +1230,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1199,7 +1253,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1221,7 +1276,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1243,7 +1299,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1265,7 +1322,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1287,7 +1345,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1309,7 +1368,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1331,7 +1391,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1353,7 +1414,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1375,7 +1437,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1397,7 +1460,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1419,7 +1483,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1441,7 +1506,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1463,7 +1529,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1485,7 +1552,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1507,7 +1575,8 @@
     <reputation>270</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1529,7 +1598,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1551,7 +1621,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1573,7 +1644,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1595,7 +1667,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1617,7 +1690,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1639,7 +1713,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1661,7 +1736,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1683,7 +1759,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1705,7 +1782,8 @@
     <reputation>419</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1727,7 +1805,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1749,7 +1828,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1771,7 +1851,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1793,7 +1874,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1815,7 +1897,8 @@
     <reputation>314</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1837,7 +1920,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1859,7 +1943,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1881,7 +1966,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1903,7 +1989,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1925,7 +2012,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1947,7 +2035,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1969,7 +2058,8 @@
     <reputation>299</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1991,7 +2081,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2013,7 +2104,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2035,7 +2127,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2057,7 +2150,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2079,7 +2173,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2101,7 +2196,8 @@
     <reputation>74</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2123,7 +2219,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2145,7 +2242,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2167,7 +2265,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2189,7 +2288,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2211,7 +2311,8 @@
     <reputation>128</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2233,7 +2334,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2255,7 +2357,8 @@
     <reputation>244</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2277,7 +2380,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2299,7 +2403,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2321,7 +2426,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2343,7 +2449,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2365,7 +2472,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2387,7 +2495,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2409,7 +2518,8 @@
     <reputation>163</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2431,7 +2541,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2453,7 +2564,8 @@
     <reputation>182</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2475,7 +2587,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2497,7 +2610,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -2519,7 +2633,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2541,7 +2656,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2563,7 +2679,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2585,7 +2702,8 @@
     <reputation>179</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2607,7 +2725,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2629,7 +2748,8 @@
     <reputation>234</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2651,7 +2771,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2673,7 +2794,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2695,7 +2817,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2717,7 +2840,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2739,7 +2863,8 @@
     <reputation>210</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2761,7 +2886,8 @@
     <reputation>179</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2783,7 +2909,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2805,7 +2932,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2mask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2827,7 +2955,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2amask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2849,7 +2978,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2bmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2871,7 +3001,8 @@
     <reputation>370</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2cmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2893,7 +3024,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2dmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2915,7 +3047,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2937,7 +3070,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2959,7 +3093,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -2981,7 +3116,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3003,7 +3139,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3025,7 +3162,8 @@
     <reputation>207</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3047,7 +3185,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3069,7 +3208,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2emask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3091,7 +3231,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3113,7 +3254,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3135,7 +3277,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2fmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3157,7 +3300,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3179,7 +3323,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3201,7 +3346,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3223,7 +3369,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3245,7 +3392,8 @@
     <reputation>310</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3267,7 +3415,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3289,7 +3438,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3311,7 +3461,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3333,7 +3484,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3355,7 +3507,8 @@
     <reputation>312</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3377,7 +3530,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3399,7 +3553,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3421,7 +3576,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3443,7 +3599,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3465,7 +3622,8 @@
     <reputation>530</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3487,7 +3645,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3509,7 +3668,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3531,7 +3691,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3553,7 +3714,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3575,7 +3737,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3597,7 +3760,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3619,7 +3783,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3641,7 +3806,8 @@
     <reputation>209</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3663,7 +3829,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3685,7 +3852,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3707,7 +3875,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3729,7 +3898,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3751,7 +3921,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3773,7 +3944,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3795,7 +3967,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3817,7 +3990,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2gmask2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3839,7 +4013,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3861,7 +4036,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3883,7 +4059,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_mask</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3905,7 +4082,8 @@
     <reputation>262</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3927,7 +4105,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3949,7 +4128,8 @@
     <reputation>313</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3971,7 +4151,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -3993,7 +4174,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4015,7 +4197,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4037,7 +4220,8 @@
     <reputation>107</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_mas3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4059,7 +4243,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4081,7 +4266,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4103,7 +4289,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4127,7 +4314,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4151,7 +4339,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4175,7 +4364,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4199,7 +4389,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0e</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4223,7 +4414,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0f</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4247,7 +4439,8 @@
     <reputation>192</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4271,7 +4464,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4295,7 +4489,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4319,7 +4514,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4343,7 +4539,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4367,7 +4564,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4391,7 +4589,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4415,7 +4614,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4439,7 +4639,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4463,7 +4664,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4487,7 +4689,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4511,7 +4714,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4535,7 +4739,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4559,7 +4764,8 @@
     <reputation>32</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4583,7 +4789,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4607,7 +4814,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4631,7 +4839,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4655,7 +4864,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4679,7 +4889,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2b_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4703,7 +4914,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4727,7 +4939,8 @@
     <reputation>388</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4751,7 +4964,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2e_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4775,7 +4989,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2f_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4799,7 +5014,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral3a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4823,7 +5039,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral3b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4847,7 +5064,8 @@
     <reputation>313</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4871,7 +5089,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4895,7 +5114,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4919,7 +5139,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2c</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4943,7 +5164,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4967,7 +5189,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral0g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -4991,7 +5214,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5015,7 +5239,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_merc</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5039,7 +5264,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5063,7 +5289,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2g</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5087,7 +5314,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5111,7 +5339,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5135,7 +5364,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5159,7 +5389,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5183,7 +5414,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2d</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5207,7 +5439,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5231,7 +5464,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5255,7 +5489,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5279,7 +5514,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5303,7 +5539,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5327,7 +5564,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5351,7 +5589,8 @@
     <reputation>90</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_0</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5375,7 +5614,8 @@
     <reputation>20</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5399,7 +5639,8 @@
     <reputation>352</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5423,7 +5664,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
@@ -5447,7 +5689,8 @@
     <reputation>88</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5471,7 +5714,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5495,7 +5739,8 @@
     <reputation>140</reputation>
     <visual>actors\stalker_neutral\stalker_neutral4b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5519,7 +5764,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5543,7 +5789,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5567,7 +5814,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5591,7 +5839,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_nauchni4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items_3.xml"
 #include "gameplay\character_food.xml"
@@ -5614,7 +5863,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -5635,7 +5885,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\stalker_base.ltx"
+#include "gameplay\loadouts\stalker_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"

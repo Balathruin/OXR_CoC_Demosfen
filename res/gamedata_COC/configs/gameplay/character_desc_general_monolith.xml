@@ -10,7 +10,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -30,7 +31,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -50,7 +52,8 @@
     <reputation>346</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -70,7 +73,8 @@
     <reputation>210</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -90,7 +94,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -110,7 +115,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -130,7 +136,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -150,7 +157,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith0_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -170,7 +178,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -190,7 +199,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -210,7 +220,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -230,7 +241,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -250,7 +262,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -270,7 +283,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -290,7 +304,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -310,7 +325,8 @@
     <reputation>251</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -330,7 +346,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -350,7 +367,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith0_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -370,7 +388,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -390,7 +409,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -410,7 +430,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -430,7 +451,8 @@
     <reputation>144</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -450,7 +472,8 @@
     <reputation>242</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2a_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -470,7 +493,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2b_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -490,7 +514,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith0_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -510,7 +535,8 @@
     <reputation>80</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -530,7 +556,8 @@
     <reputation>367</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2_gp5</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_2.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -550,7 +577,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -570,7 +598,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -590,7 +619,8 @@
     <reputation>169</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -610,7 +640,8 @@
     <reputation>85</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -630,7 +661,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -650,7 +682,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -670,7 +703,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -690,7 +724,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -710,7 +745,8 @@
     <reputation>73</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -732,7 +768,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2_old</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -754,7 +791,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -776,7 +814,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -798,7 +837,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -820,7 +860,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
@@ -842,7 +883,8 @@
     <reputation>79</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -864,7 +906,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_4</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -886,7 +929,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith4a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -908,7 +952,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith4b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_4.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -930,7 +975,8 @@
     <reputation>140</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_3</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -952,7 +998,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3a</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -974,7 +1021,8 @@
     <reputation>0</reputation>
     <visual>actors\stalker_monolith\stalker_monolith3b</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_3.ltx"
         [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_4.xml"
@@ -998,7 +1046,8 @@
     <crouch_type>-1</crouch_type>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_sniper.ltx"
         [spawn] \n
     </supplies>
 #include "gameplay\character_criticals.xml"
@@ -1018,7 +1067,8 @@
     <panic_threshold>0.0</panic_threshold>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_sniper.ltx"
         [spawn] \n
     </supplies>
 #include "gameplay\character_criticals.xml"
@@ -1037,7 +1087,8 @@
     <crouch_type>-1</crouch_type>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
     </supplies>
 #include "gameplay\character_criticals.xml"
@@ -1055,7 +1106,8 @@
     <reputation>293</reputation>
     <visual>actors\stalker_monolith\stalker_monolith_2</visual>
     <supplies>
- 
+#include "gameplay\loadouts\monolith_base.ltx"
+#include "gameplay\loadouts\monolith_tier_1.ltx"
         [spawn] \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
