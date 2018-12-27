@@ -24,6 +24,9 @@
 	    <texture id="ui_inGame2_Ohotnik_na_mutantov" x="242" y="605" width="121" height="121"/>
 	    <texture id="ui_inGame2_Pervootkrivatel" x="242" y="727" width="121" height="121"/>
 		
+	    <texture id="ui_inGame2_Jivoder" x="363" y="605" width="121" height="121"/>
+	    <texture id="ui_inGame2_Jivoder2" x="363" y="726" width="121" height="121"/>
+		
 		<!-- Call of Chernobyl Achievements -->
 		<texture id="ui_inGame2_Ecologist" x="363" y="0" width="121" height="121"/>
 		<texture id="ui_inGame2_Tourist" x="363" y="120" width="121" height="121"/>

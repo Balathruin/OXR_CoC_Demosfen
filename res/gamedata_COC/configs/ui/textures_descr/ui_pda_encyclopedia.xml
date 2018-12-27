@@ -1,4 +1,10 @@
 <w>
+
+	<!-- mutants (MNP_TEAM) -->
+	<file name="ui\guide\encyclopedia_mutants_mnp">
+		<texture id="encyclopedia_achievements_jivoder_image" x="0" y="0" width="256" height="256"/>
+	</file>
+
 	<!-- No images -->
 	<file name="ui\ui_console">
 		<texture id="encyclopedia_achievements_bookworm_food_image" x="0" y="0" width="0" height="0"/>

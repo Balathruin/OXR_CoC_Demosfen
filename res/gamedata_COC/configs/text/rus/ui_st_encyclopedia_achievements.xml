@@ -188,4 +188,15 @@
 		</text>
 	</string>
 	
+	<string id="encyclopedia_achievements_jivoder">
+		<text>Живодёр</text>
+	</string>
+	<string id="encyclopedia_achievements_jivoder_text">
+		<text>
+			Чтобы получить достижение %c[ui_red]«Живодёр»%c[ui_yellow], нужно убить трёх дружелюбных животных.\n
+			\n%c[guide_green]Информация%c[ui_red]
+			\nПри этом достижении у вас очень сильно упадёт репутация, возможно что даже изгонят из вашей группировки. Никому не нравится плохое обращение с мирными животными, коих в зоне осталось очень мало.
+		</text>
+	</string>
+
 </string_table>

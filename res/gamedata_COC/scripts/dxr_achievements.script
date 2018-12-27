@@ -316,6 +316,23 @@ function well_dressed_functor()
 	end
 end
 
+-- Jivoder.
+function jivoder_functor()
+	-- Check if it can be unlocked.
+	if (not can_unlock()) then
+		return false
+	end
+	-- Check if it is already unlocked.
+	if (has_achievement("jivoder")) then
+		return true
+	end
+	-- Unlock the achievement.
+	if (jivoder_requirements()) then
+		jivoder_rewards()
+		return true
+	end
+end
+
 -- Wishful Thinking.
 function wishful_thinking_functor()
 	-- Check if it can be unlocked.
@@ -465,6 +482,14 @@ function tourist_requirements()
 		)
 end
 
+-- Jivoder.
+-- Requires player to kill 3 mutants.
+function jivoder_requirements()
+	return (
+				(dxr_statistics.get_statistic_count("killed_monsters_f") >= 3)
+			)
+end
+
 -- Well Dressed.
 -- Requires player to kill 500 mutants or field dress 250 mutant parts.
 function well_dressed_requirements()
@@ -491,7 +516,7 @@ end
 function cheater_rewards()
 	SendScriptCallback("on_achievement_earned","cheater","st_achievement_cheater_unlock")
 	dxr_statistics.increment_rank(-500)
-	dxr_statistics.increment_reputation(-1500)
+	dxr_statistics.increment_reputation(-1000)
 end
 
 -- Bookworm Food.
@@ -602,4 +627,11 @@ function wishful_thinking_rewards()
 	dxr_statistics.increment_rank(1000)
 	dxr_statistics.increment_reputation(500)
 	SendScriptCallback("on_achievement_earned","wishful_thinking","st_achievement_11_unlock")
+end
+
+-- Jivoder.
+function jivoder_rewards()
+	dxr_statistics.increment_rank(-5000)
+	dxr_statistics.increment_reputation(-10000)
+	SendScriptCallback("on_achievement_earned","jivoder","st_achievement_16_unlock")
 end

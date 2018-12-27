@@ -195,5 +195,18 @@
 	<string id="st_achievement_15_unlock">
 		<text>You have unlocked the "Bookworm Food" achievement.</text>
 	</string>
-	
+
+	<string id="st_achievement_16_name">
+		<text>Живодёр</text>
+	</string>
+	<string id="st_achievement_16_hint">
+		<text>Ваша карма упала, из-за плохого отношения к животным.</text>
+	</string>
+	<string id="st_achievement_16_descr">
+		<text>Вы слишком много обидели дружелюбных животных, их итак мало осталось в зоне, никому не нравится такое обращение с братьями меньшими...</text>
+	</string>
+	<string id="st_achievement_16_unlock">
+		<text>Получено достижение «Живодёр».</text>
+	</string>
+
 </string_table>

@@ -39,6 +39,7 @@ tips_icons = {
 	tourist					= "ui_inGame2_PD_Tourist",
 	well_dressed			= "ui_inGame2_PD_Ohotnik_na_mutantov",
 	wishful_thinking		= "ui_inGame2_PD_WishfulThinking",
+	jivoder     			= "ui_inGame2_PD_Jivoder",
 
 	got_artefact			= "ui_inGame2_D_gonets_pravosudiya",
 	got_ammo				= "ui_inGame2_D_Ohotnik_na_mutantov",
