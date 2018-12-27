@@ -2,32 +2,11 @@
 ;------- Mutant swarm ----------
 ;------------------------------
 
-[hit]
-on_info = {+bar_zastava_minigunner_dead}
-on_info1 = {+actor_enemy}
-
 
 ;************************************************************************************************
 [mob_walker@dog_friend_dolg_okay_def]
-gulag_point = true
-home_min_radius = 5
-home_mid_radius = 10
-home_max_radius = 20
 panic = 0
-actor_friendly = true
-npc_friendly = false
-aggressive = false
-
-;************************************************************************************************
-[mob_walker@dog_friend_dolg_no_okay_def]
-gulag_point = true
-home_min_radius = 5
-home_mid_radius = 10
-home_max_radius = 20
 aggressive = true
-panic = 0
-actor_friendly = false
-npc_friendly = false
 
 ;************************************************************************************************
 
@@ -71,7 +50,8 @@ prior = 300
 path_walk = walker_1_walk
 path_look = walker_1_look
 on_info =  {=actor_in_zone(actor_in_bar)} remark@zone1
-on_hit = hit
+on_hit = hit_friend@def
+on_death = death_friend@def
 
 
 ;************************************************************************************************bar_zastava_dogs_friend_dolg_lair_2_home_attackers
@@ -86,7 +66,8 @@ prior = 200
 path_walk = walker_2_walk
 path_look = walker_2_look
 on_info =  {=actor_in_zone(actor_in_bar)} remark@zone2
-on_hit = hit
+on_hit = hit_friend@def
+on_death = death_friend@def
 
 ;************************************************************************************************
 
@@ -100,7 +81,8 @@ prior = 300
 path_walk = walker_3_walk
 path_look = walker_3_look
 on_info =  {=actor_in_zone(actor_in_bar)} remark@zone3
-on_hit = hit
+on_hit = hit_friend@def
+on_death = death_friend@def
 
 ;************************************************************************************************
 
@@ -114,11 +96,13 @@ prior = 200
 path_walk = walker_4_walk
 path_look = walker_4_look
 on_info =  {=actor_in_zone(actor_in_bar)} remark@zone4
-on_hit = hit
+on_hit = hit_friend@def
+on_death = death_friend@def
 
-;************************************************************************************************
+;************************************************************************************************ 
+;	disable_info("anabiotic_in_process")
 
 
-;**path_home = home_attackers
+[hit_friend@def]
 
-
+[death_friend@def]
