@@ -44,7 +44,7 @@
     <rank>19180</rank>
     <reputation>1172</reputation>
     <money min="1000000" max="1000000" infinitive="1"/>
-    <visual>actors\stalker_soldier\stalker_soldier4a</visual>
+    <visual>actors\mnp_npc_remeik\semen_oven</visual>
     <snd_config>characters_voice\human_01\military\</snd_config>
     <supplies>
         [spawn] \n
@@ -78,7 +78,7 @@
     <mechanic_mode>1</mechanic_mode>
     <rank>11974</rank>
     <reputation>573</reputation>
-    <visual>actors\stalker_soldier\stalker_soldier_2</visual>
+    <visual>actors\mnp_npc_remeik\agro_mehan</visual>
     <snd_config>characters_voice\human_02\military\</snd_config>
     <supplies>
         [spawn] \n
