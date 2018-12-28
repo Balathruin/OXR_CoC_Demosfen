@@ -1581,7 +1581,7 @@ ammo_5.45x39_ap = 3 \n
 <money min="1000" max="3000" infinitive="0"/>
 <reputation>-600</reputation>
 
-<visual>actors\stalker_soldier\stalker_soldier_3</visual>
+<visual>actors\mnp_npc_remeik\serega</visual>
 <supplies>
 
 [spawn] \n
@@ -2134,7 +2134,7 @@ ammo_12x76_zhekan = 4 \n
 <money min="1000000" max="1000000" infinitive="1"/>
 <reputation>-1500</reputation>
 
-<visual>actors\stalker_soldier\stalker_soldier_3</visual>
+<visual>actors\mnp_npc_remeik\jurov</visual>
 <supplies>
 
 [spawn] \n

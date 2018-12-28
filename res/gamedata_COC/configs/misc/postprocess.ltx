@@ -155,6 +155,7 @@ cam_eff_cyclic	= 0
 cam_eff_cyclic		= 0
 cam_eff_name		= camera_effects\shell_shock.anm
 cam_eff_hud_affect	= true
+pp_eff_overlap 	= false
 
 [effector_fire_hit]
 pp_eff_name		= fire_hit.ppe
@@ -205,11 +206,13 @@ pp_eff_overlap = true
 [effector_controller_aura2]:effector_alcohol
 pp_eff_cyclic	= 0
 cam_eff_cyclic	= 0
+pp_eff_overlap 	= false
 
 [effector_monster_hit]
 ;pp_eff_name		= fire_hit.ppe ; no postprocess
 ;pp_eff_cyclic	= 0
 cam_eff_cyclic	= 0
+pp_eff_overlap 	= false
 
 [effector_monster_hit_0]:effector_monster_hit
 cam_eff_name	= camera_effects\hit_front.anm
@@ -319,8 +322,10 @@ pp_eff_overlap 	= false
 
 cam_eff_name	= camera_effects\radar_stop.anm
 cam_eff_cyclic	= 0
+pp_eff_overlap 	= false
 
 
 [effector_psy_health]	;Remove this section to disable this effector
 pp_eff_name		= snd_shock.ppe
 pp_eff_cyclic	= 0
+pp_eff_overlap 	= false
