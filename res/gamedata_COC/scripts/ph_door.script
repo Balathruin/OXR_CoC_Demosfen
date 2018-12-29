@@ -83,7 +83,7 @@ function action_door:fastcall()
 	if self.block and self:is_closed() then
 		self:close_action()
 		self.object:on_door_is_closed()
-		return true
+		return false
 	end
 	return false
 end
@@ -97,7 +97,7 @@ function action_door:open_fastcall()
 		local ph_obj = self.object:get_physics_object()
 		ph_obj:unset_door_ignore_dynamics() --'Игнорирование динамики на момент открытия/закрытия	
 		self.object:on_door_is_open()
-		return true
+		return false
 	end
 	return false
 end
