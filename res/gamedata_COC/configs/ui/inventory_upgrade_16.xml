@@ -514,6 +514,18 @@
 	            <cell x="160" y="126" point_x="135" point_y="180"/>
 	        </column>
 	    </template>
+	    <template name="upgrade_scheme_binoc">
+	        <column>
+	            <cell x="0" y="24" point_x="140" point_y="225"/>
+	            <cell x="0" y="100" point_x="150" point_y="195"/>
+	        </column>
+	        <column>
+	            <cell x="80" y="24" point_x="145" point_y="205"/>
+	        </column>
+	        <column>
+	            <cell x="160" y="24" point_x="150" point_y="185"/>
+	        </column>
+	    </template>
 	    <template name="upgrade_scheme_bm16">
 	        <column>
 	            <cell x="0" y="24" point_x="270" point_y="210"/>
@@ -652,6 +664,32 @@
 	            <cell x="0" y="228" point_x="70" point_y="180"/>
 	            <cell x="0" y="330" point_x="125" point_y="200"/>
 	            <cell x="0" y="409" point_x="80" point_y="230"/>
+	        </column>
+	        <column>
+	            <cell x="80" y="0" point_x="90" point_y="185"/>
+	            <cell x="80" y="49" point_x="90" point_y="185"/>
+	            <cell x="80" y="126" point_x="150" point_y="200"/>
+	            <cell x="80" y="204" point_x="55" point_y="175"/>
+	            <cell x="80" y="253" point_x="55" point_y="175"/>
+	            <cell x="80" y="330" point_x="125" point_y="225"/>
+	        </column>
+	        <column>
+	            <cell x="160" y="0" point_x="100" point_y="185"/>
+	            <cell x="160" y="49" point_x="100" point_y="185"/>
+	            <cell x="160" y="102" point_x="40" point_y="185"/>
+	            <cell x="160" y="151" point_x="60" point_y="190"/>
+	            <cell x="160" y="204" point_x="50" point_y="195"/>
+	            <cell x="160" y="253" point_x="95" point_y="190"/>
+	            <cell x="160" y="306" point_x="130" point_y="190"/>
+	            <cell x="160" y="355" point_x="130" point_y="190"/>
+	        </column>
+	    </template>
+	    <template name="upgrade_scheme_groza_">
+	        <column>
+	            <cell x="0" y="24" point_x="145" point_y="210"/>
+	            <cell x="0" y="126" point_x="120" point_y="185"/>
+	            <cell x="0" y="228" point_x="70" point_y="180"/>
+	            <cell x="0" y="330" point_x="125" point_y="200"/>
 	        </column>
 	        <column>
 	            <cell x="80" y="0" point_x="90" point_y="185"/>
@@ -932,6 +970,30 @@
 	            <cell x="160" y="355" point_x="103" point_y="183"/>
 	        </column>
 	    </template>
+	    <template name="upgrade_scheme_sig550_">
+	        <column>
+	            <cell x="0" y="24" point_x="85" point_y="201"/>
+	            <cell x="0" y="126" point_x="74" point_y="186"/>
+	            <cell x="0" y="228" point_x="172" point_y="194"/>
+	            <cell x="0" y="330" point_x="96" point_y="194"/>
+	        </column>
+	        <column>
+	            <cell x="80" y="0" point_x="121" point_y="184"/>
+	            <cell x="80" y="49" point_x="89" point_y="183"/>
+	            <cell x="80" y="126" point_x="114" point_y="194"/>
+	            <cell x="80" y="204" point_x="151" point_y="192"/>
+	            <cell x="80" y="253" point_x="191" point_y="196"/>
+	            <cell x="80" y="330" point_x="114" point_y="194"/>
+	        </column>
+	        <column>
+	            <cell x="160" y="24" point_x="102" point_y="183"/>
+	            <cell x="160" y="102" point_x="89" point_y="183"/>
+	            <cell x="160" y="151" point_x="103" point_y="183"/>
+	            <cell x="160" y="228" point_x="266" point_y="203"/>
+	            <cell x="160" y="306" point_x="75" point_y="214"/>
+	            <cell x="160" y="355" point_x="103" point_y="183"/>
+	        </column>
+	    </template>
 	    <template name="upgrade_scheme_spas12">
 	        <column>
 	            <cell x="0" y="24" point_x="245" point_y="210"/>
@@ -1079,6 +1141,7 @@
 	            <cell x="0" y="126" point_x="130" point_y="200"/>
 	            <cell x="0" y="228" point_x="85" point_y="210"/>
 	            <cell x="0" y="330" point_x="85" point_y="180"/>
+	            <cell x="0" y="409" point_x="137" point_y="324"/>
 	        </column>
 	        <column>
 	            <cell x="80" y="0" point_x="105" point_y="200"/>
@@ -1142,29 +1205,59 @@
 	            <cell x="160" y="253" point_x="70" point_y="200"/>
 	        </column>
 	    </template>
-		<template name="upgrade_scheme_binoc">
-			<column>
-				<cell x="0" y="0" point_x="150" point_y="175"/>
-			</column>
-			<column>
-				<cell x="80" y="0" point_x="100" point_y="205"/>
-			</column>
-		</template>
-		<template name="upgrade_scheme_binoc_1">
-			<column>
-				<cell x="0" y="0" point_x="150" point_y="175"/>
-			</column>
-			<column>
-				<cell x="80" y="0" point_x="100" point_y="205"/>
-			</column>
-			<column>
-				<cell x="160" y="0" point_x="150" point_y="235"/>				
-			</column>
-		</template>
+	    <template name="upgrade_scheme_aek971">
+	        <column>
+	            <cell x="0" y="24" point_x="158" point_y="194"/>
+	            <cell x="0" y="126" point_x="86" point_y="181"/>
+	            <cell x="0" y="228" point_x="104" point_y="188"/>
+	            <cell x="0" y="330" point_x="146" point_y="197"/>
+	            <cell x="0" y="409" point_x="203" point_y="227"/>
+	        </column>
+	        <column>
+	            <cell x="80" y="24" point_x="168" point_y="200"/>
+	            <cell x="80" y="102" point_x="123" point_y="183"/>
+	            <cell x="80" y="151" point_x="86" point_y="187"/>
+	            <cell x="80" y="204" point_x="184" point_y="198"/>
+	            <cell x="-1000" y="253" point_x="146" point_y="197"/>
+	            <cell x="80" y="330" point_x="105" point_y="188"/>
+	        </column>
+	        <column>
+	            <cell x="160" y="0" point_x="105" point_y="188"/>
+	            <cell x="-1000" y="49" point_x="141" point_y="186"/>
+	            <cell x="160" y="126" point_x="146" point_y="197"/>
+	            <cell x="160" y="228" point_x="94" point_y="188"/>
+	            <cell x="160" y="306" point_x="73" point_y="212"/>
+	            <cell x="160" y="355" point_x="98" point_y="181"/>
+	        </column>
+	    </template>
+	    <template name="upgrade_scheme_sig550sniper">
+	        <column>
+	            <cell x="0" y="24" point_x="85" point_y="201"/>
+	            <cell x="0" y="126" point_x="74" point_y="186"/>
+	            <cell x="0" y="228" point_x="172" point_y="194"/>
+	            <cell x="0" y="330" point_x="96" point_y="194"/>
+	            <cell x="0" y="409" point_x="115" point_y="223"/>
+	        </column>
+	        <column>
+	            <cell x="80" y="0" point_x="121" point_y="184"/>
+	            <cell x="80" y="49" point_x="89" point_y="183"/>
+	            <cell x="80" y="126" point_x="114" point_y="194"/>
+	            <cell x="80" y="204" point_x="151" point_y="192"/>
+	            <cell x="-1000" y="253" point_x="191" point_y="196"/>
+	            <cell x="80" y="330" point_x="114" point_y="194"/>
+	        </column>
+	        <column>
+	            <cell x="160" y="24" point_x="102" point_y="183"/>
+	            <cell x="160" y="102" point_x="89" point_y="183"/>
+	            <cell x="-1000" y="151" point_x="103" point_y="183"/>
+	            <cell x="160" y="228" point_x="266" point_y="203"/>
+	            <cell x="160" y="306" point_x="75" point_y="214"/>
+	            <cell x="-1000" y="355" point_x="103" point_y="183"/>
+	        </column>
+	    </template>
 
-		
 		<!-- Added by Tronex -->
- 		<template name="upgrade_scheme_binoc">
+		<template name="upgrade_scheme_binoc">
 	        <column>
 	            <cell x="0" y="24" point_x="176" point_y="225"/>
 	            <cell x="0" y="94" point_x="63" point_y="209"/>
@@ -1193,6 +1286,5 @@
 	        </column>
 	    </template>
 		<!-- Ends here -->
-		
 	</templates>
 </w>

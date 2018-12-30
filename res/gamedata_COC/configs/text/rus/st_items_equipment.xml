@@ -136,4 +136,10 @@
 	<string id="st_equ_mercpack_desc">
 		<text>Рюкзак, разработанный мастерами группировки «Наёмники» для применения в спецоперациях.</text>
 	</string>
+	<string id="st_equ_smilpack_name">
+		<text>Вещмешок</text>
+	</string>
+	<string id="st_equ_smilpack_desc">
+		<text>Холстяной мешок, используемый военными уже более ста лет.</text>
+	</string>
 </string_table>

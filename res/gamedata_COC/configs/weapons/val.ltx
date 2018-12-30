@@ -1,0 +1,308 @@
+; Автомат специальный АС "Вал" (6П30)
+;-(TrickSR)-----------------------------------------
+; калибр 				9x39 мм
+; длина ствола 				200 мм
+; магазин				20
+; вес с пустым магазином		2.50 кг
+; максимальная дальность стрельбы	800 м
+; эффективная дальность стрельбы	400 м 
+; прицельная дальность			420 м
+; дульная скорость пули			285-305 м/с
+; темп стрельбы				800 в/м
+;---------------------------------------------------
+[wpn_val]:default_weapon_params,wpn_val_sounds
+GroupControlSection			= spawn_group
+$spawn					= "weapons\val"
+$npc					= off
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_VAL
+description				= st_wpn_val_descr
+
+scopes 					= 1p29, 1p78, ekp, kobra, 9x39scope
+parent_section  			= wpn_val
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+inv_name				= st_wpn_val
+inv_name_short				= st_wpn_val
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 38
+inv_grid_y                                         = 30
+
+upgr_icon_x				= 600
+upgr_icon_y				= 800
+upgr_icon_width				= 300
+upgr_icon_height 			= 100
+
+kill_msg_x				= 0
+kill_msg_y				= 154
+kill_msg_width				= 78
+kill_msg_height				= 21
+
+cost 					= 9000
+weapon_class				= assault_rifle
+inv_weight				= 2.5
+hud					= wpn_val_hud
+visual					= dynamics\weapons\wpn_val\wpn_val.ogf
+
+upgrades                		= up_gr_firstab_val, up_gr_seconab_val, up_gr_thirdab_val, up_gr_fourtab_val, up_gr_fifthab_val
+installed_upgrades      		=
+upgrade_scheme          		= upgrade_scheme_val
+
+ph_mass					= 3
+
+ammo_class				= ammo_9x39_pab9, ammo_9x39_sp5, ammo_9x39_ap
+
+startup_ammo				= 90
+ammo_current				= 120
+ammo_elapsed				= 20
+ammo_limit				= 140
+ammo_mag_size				= 20
+
+fire_modes				= 1, -1
+
+launch_speed				= 0
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power				= 0.22
+;hit_impulse				= 10
+hit_type				= fire_wound
+fire_distance				= 800
+bullet_speed				= 295
+rpm					= 800
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 3.0
+
+misfire_probability			= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 		= 0.004
+misfire_end_prob	 		= 0.057
+condition_shot_dec			= 0.0008
+condition_queue_shot_dec		= 0.001
+
+zoom_dof				= 0.5, 1.0, 180
+reload_dof				= 0, 0.5, 5, 2
+
+fire_dispersion_base			= 0.22
+fire_dispersion_condition_factor	= 3
+control_inertion_factor			= 1.15f
+crosshair_inertion			= 5.65
+
+cam_return				= 0
+cam_relax_speed				= 4 
+cam_relax_speed_ai			= 360
+cam_dispersion				= 0.5
+cam_dispersion_inc			= 0.25
+cam_dispersion_frac			= 0.7
+cam_max_angle				= 50.0 
+cam_max_angle_horz			= 50.0
+cam_step_angle_horz			= 0.7
+
+zoom_cam_relax_speed			= 4
+zoom_cam_relax_speed_ai			= 120.75
+zoom_cam_dispersion			= 0.45
+zoom_cam_dispersion_inc			= 0.22
+zoom_cam_dispersion_frac		= 0.7
+zoom_cam_max_angle			= 50.0
+zoom_cam_max_angle_horz			= 50.0
+zoom_cam_step_angle_horz		= 0.5
+
+PDM_disp_base 				= 0.5
+PDM_disp_vel_factor 			= 1.5
+PDM_disp_accel_factor 			= 1.5
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 			= 1.0
+
+min_radius				= 30
+max_radius				= 50
+
+holder_range_modifier			= 1.0
+holder_fov_modifier			= 1.0
+
+slot					= 2
+animation_slot				= 2
+
+position        	    		= -0.026, -0.131, 0
+orientation            			 = 0, 0, 0
+
+fire_point              		= 0,0.174,0.562
+fire_point2             		= 0, 0.097, 0.722
+
+smoke_particles     			= amik\weapons\smoke_particles\smoke_particles_03
+grenade_flame_particles 		= amik\weapons\grenade_flame_particles\grenade_flame_particles_00
+
+shell_point				= -0.02,0.167,0.082
+shell_dir		 		= 0,1,0
+shell_particles         		= weapons\9x39
+
+strap_position          		= -0.26, -0.11, 0.25
+strap_orientation       		= -15, -9, 110
+
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= true
+light_color				= 0.6, 0.5, 0.3
+light_range				= 0.01
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time				= 0.2
+
+scope_status				= 0
+silencer_status				= 1
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.2
+scope_zoom_factor                        = 1.25
+
+scope_name 				= wpn_addon_scope
+scope_x                     		= 52
+scope_y                     		= 0
+
+grenade_launcher_name			= wpn_addon_grenade_launcher_m203
+grenade_launcher_x			= 109
+grenade_launcher_y			= 30
+
+silencer_name				= wpn_addon_silencer
+silencer_x				= 221
+silencer_y				= 16
+
+silencer_hit_power 			= 0.22
+silencer_hit_impulse	 		= 20
+silencer_fire_distance 			= 800
+silencer_bullet_speed	 		= 295
+
+smoke_particles				= amik\weapons\smoke_particles\smoke_particles_00
+
+silencer_light_color			= 0.6,0.5,0.3
+silencer_light_range			= 0.01
+silencer_light_var_color		= 0.05
+silencer_light_var_range		= 0.5
+silencer_light_time			= 0.2
+
+[wpn_val_hud]:hud_base
+zoom_hide_crosshair			= true
+
+attach_place_idx			= 0
+item_visual				= dynamics\weapons\wpn_val\wpn_val_hud.ogf
+
+hands_position				= -0.032,-0.15,0.15
+hands_orientation			= 2,2,0
+
+hands_position_16x9			= -0.032,-0.15,0.15
+hands_orientation_16x9			= 2,2,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos			= -0.12365,0.0768,-0.15
+aim_hud_offset_rot			= 0.0293,0.03405,-0.01
+
+aim_hud_offset_pos_16x9 		= -0.12365,0.0768,-0.15
+aim_hud_offset_rot_16x9 		= 0.0293,0.03405,-0.01
+
+shell_point				= 0,0,0
+shell_dir               		= 0,1,0
+shell_bone				= gilza
+
+fire_point				= 0,0,0
+fire_bone      	      			= muzzle
+fire_point2				= 0,0,0
+fire_bone2				= muzzle
+
+anm_show             			= vintorez_draw
+anm_hide             			= vintorez_holster
+anm_idle             			= vintorez_idle
+anm_idle_sprint        		 	= lancew_sr3m_sprint
+anm_idle_moving 			= vintorez_idle_moving
+anm_idle_moving_crouch			= vintorez_idle_crouch
+anm_shots               		= vintorez_shoot, shoot
+anm_reload              		= vintorez_reload_empty, reload_empty
+anm_idle_aim           			= vintorez_idle_aim
+anm_bore				= vintorez_idle_aim
+
+gl_hud_offset_pos			= 0,0,0
+gl_hud_offset_rot			= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+
+grenade_bone            		= grenade
+;-----------------------------------------------------------------------------
+; Аддоны
+;-----------------------------------------------------------------------------
+[wpn_val_ekp]:wpn_val
+$spawn             			= "weapons\wpn_val_ekp"
+hud					= wpn_val_ekp_hud
+visual					= dynamics\weapons\wpn_val\wpn_val_ekp.ogf
+
+scope_zoom_factor                        = 1.25
+scope_x					= 73
+scope_y					= 4
+
+[wpn_val_ekp_hud]:wpn_val_hud
+item_visual                		= dynamics\weapons\wpn_val\wpn_val_ekp_hud.ogf
+
+aim_hud_offset_pos			= -0.1234,0.0268,-0.17
+aim_hud_offset_rot	 		= 0.007,0.0323,-0.01
+
+aim_hud_offset_pos_16x9 		= -0.1234,0.0268,-0.17
+aim_hud_offset_rot_16x9 		= 0.007,0.0323,-0.01
+
+[wpn_val_kobra]:wpn_val
+$spawn             			= "weapons\wpn_val_kobra"
+hud					= wpn_val_kobra_hud
+visual					= dynamics\weapons\wpn_val\wpn_val_kobra.ogf
+
+scope_zoom_factor                        = 1.25
+scope_x					= 76
+scope_y					= 6
+
+[wpn_val_kobra_hud]:wpn_val_hud
+item_visual                		= dynamics\weapons\wpn_val\wpn_val_kobra_hud.ogf
+
+aim_hud_offset_pos			= -0.1227,0.03275,-0.1
+aim_hud_offset_rot			= 0.007,0.0323,-0.01
+
+aim_hud_offset_pos_16x9 		= -0.1227,0.03275,-0.1
+aim_hud_offset_rot_16x9 		= 0.007,0.0323,-0.01
+
+[wpn_val_1p29]:wpn_val
+$spawn             			= "weapons\wpn_val_1p29"
+hud					= wpn_val_1p29_hud
+visual					= dynamics\weapons\wpn_val\wpn_val_1p29.ogf
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_1p29
+scope_zoom_factor       = 4
+zoom_rotate_time			= 0.25
+scope_x					= 62
+scope_y					= 1
+
+[wpn_val_1p29_hud]:wpn_val_kobra_hud
+item_visual                		= dynamics\weapons\wpn_val\wpn_val_1p29_hud.ogf
+
+[wpn_val_9x39scope]:wpn_val
+$spawn             			= "weapons\wpn_val_9x39scope"
+hud					= wpn_val_9x39scope_hud
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_vss
+scope_zoom_factor       = 4
+zoom_rotate_time			= 0.25
+scope_x					= 56
+scope_y					= 1
+
+[wpn_val_9x39scope_hud]:wpn_val_hud
+aim_hud_offset_pos			= -0.1233,0.045,-0.1
+aim_hud_offset_pos_16x9 		= -0.1233,0.045,-0.1

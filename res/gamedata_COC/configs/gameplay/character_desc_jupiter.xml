@@ -44,7 +44,7 @@
 		<visual>actors\stalker_freedom\stalker_freedom_2_face_2</visual>
 		<supplies>
 			[spawn] \n
-			wpn_svd = 1 \n
+			wpn_svd_pso1m2 = 1 \n
 			ammo_7.62x54_7h1 = 5 \n
 			wpn_glock = 1 \n
 			ammo_9x19_pbp = 5 \n
@@ -262,7 +262,7 @@
     <visual>actors\stalker_neutral\stalker_neutral_2_mask</visual>
     <supplies>
         [spawn] \n
-        wpn_vintorez \n
+        wpn_vintorez_9x39scope \n
         ammo_9x39_ap = 1 \n
         wpn_colt1911 = 1, silencer \n
         ammo_11.43x23_fmj = 1 \n
@@ -501,7 +501,7 @@
     <supplies>
         [spawn] \n
         wpn_binoc \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n
@@ -529,7 +529,7 @@
     <supplies>
         [spawn] \n
         wpn_binoc \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n
@@ -562,7 +562,7 @@
     <supplies>
         [spawn] \n
         wpn_binoc \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n
@@ -597,7 +597,7 @@
     <supplies>
         [spawn] \n
         wpn_binoc \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n
@@ -630,7 +630,7 @@
     <supplies>
         [spawn] \n
         wpn_binoc \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n
@@ -2486,7 +2486,7 @@
     <visual>actors\stalker_neutral\stalker_neutral_nauchniy</visual>
     <supplies>
         [spawn] \n
-        wpn_vintorez \n
+        wpn_vintorez_9x39scope \n
         ammo_9x39_ap = 1 \n
         wpn_colt1911 = 1 \n
         ammo_11.43x23_hydro = 1 \n
@@ -2937,7 +2937,7 @@
     <visual>actors\stalker_monolith\stalker_monolith_1</visual>
     <supplies>
         [spawn] \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n

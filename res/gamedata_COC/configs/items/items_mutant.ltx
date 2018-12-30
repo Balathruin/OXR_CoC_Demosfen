@@ -367,17 +367,6 @@ inv_grid_x                               = 8
 inv_grid_y                               = 4
 cost                                     = 500
 
-[mutant_part_controller_glass]:mutant_part_general
-$spawn 				= "devices\monster_items\mutant_controller_glas"
-visual				= dynamics\equipments\poltergeist_glas.ogf
-inv_weight			= 3.095
-inv_name			= mutant_part_controller_brain_tissue
-inv_name_short		= mutant_part_controller_brain_tissue
-description			= mutant_part_controller_brain_tissue_description
-inv_grid_x         = 9
-inv_grid_y         = 4
-cost				= 4790
-
 [mutant_part_controller_brain]:mutant_part_general
 $spawn                                   = "devices\monster_items\mutant_controller_brain"
 visual                                   = dynamics\equipments\item_controller_brain.ogf
@@ -387,7 +376,7 @@ inv_name_short                           = mutant_controller_brain
 description                              = mutant_controller_brain_description
 inv_grid_x                               = 9
 inv_grid_y                               = 4
-cost                                     = 1500
+cost                                     = 4790
 
 [mutant_part_controller_hand]:mutant_part_general
 $spawn 				= "devices\monster_items\mutant_controller_glas"
@@ -775,7 +764,7 @@ repair_part_bonus	 	= 0.28
 
 [hide_chimera]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_chimera.ogf
 description				= st_hide_chimera_descr
 inv_name				= st_hide_chimera_name
@@ -804,7 +793,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -820,7 +809,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.08
 
 [hide_chimera_absorbation]
-burn_immunity 			= 0.00011				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00011				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= -0.0331
 wound_immunity 			= 0.0218
@@ -832,7 +821,7 @@ fire_wound_immunity  		= 0.0193 ; 7 sheets of kevlar
 
 [hide_pseudogiant]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_pseudogiant.ogf
 description				= st_hide_pseudogiant_descr
 inv_name				= st_hide_pseudogiant_name
@@ -861,7 +850,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -877,7 +866,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.09
 
 [hide_pseudogiant_absorbation]
-burn_immunity 			= 0.00048				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00048				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= 0.0046
 wound_immunity 			= 0.037
@@ -889,7 +878,7 @@ fire_wound_immunity  		= 0.0295 ; 10 sheets of kevlar
 
 [hide_psy_dog]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_psy_dog.ogf
 description				= st_hide_psy_dog_descr
 inv_name				= st_hide_psy_dog_name
@@ -918,7 +907,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -934,7 +923,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.07
 
 [hide_psy_dog_absorbation]
-burn_immunity 			= 0.00036				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00036				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= 0.0126
 wound_immunity 			= 0.012
@@ -946,7 +935,7 @@ fire_wound_immunity  		= 0.0186 ; 6 sheets of kevlar
 
 [hide_pseudodog]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_pseudodog.ogf
 description				= st_hide_pseudodog_descr
 inv_name				= st_hide_pseudodog_name
@@ -975,7 +964,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -991,7 +980,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.05
 
 [hide_pseudodog_absorbation]
-burn_immunity 			= 0.00028				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00028				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= 0.0096
 wound_immunity 			= 0.0085
@@ -1003,7 +992,7 @@ fire_wound_immunity  		= 0.0149 ; 7 sheets of kevlar
 
 [hide_burer]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_burer.ogf
 description				= st_hide_burer_descr
 inv_name				= st_hide_burer_name
@@ -1032,7 +1021,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -1048,7 +1037,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.03
 
 [hide_burer_absorbation]
-burn_immunity 			= 0.00034			;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00034			;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= -0.0223
 wound_immunity 			= 0.0065
@@ -1060,7 +1049,7 @@ fire_wound_immunity  		= 0.0097 ; 2.5 sheets of kevlar
 
 [hide_controller]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_controller.ogf
 description				= st_hide_controller_descr
 inv_name				= st_hide_controller_name
@@ -1089,7 +1078,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -1105,7 +1094,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.03
 
 [hide_controller_absorbation]
-burn_immunity 			= 0.00022			;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00022			;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= -0.0302
 wound_immunity 			= 0.0046
@@ -1117,7 +1106,7 @@ fire_wound_immunity  		= 0.0061 ; 2 sheets of kevlar
 
 [hide_bloodsucker]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_bloodsucker.ogf
 description				= st_hide_bloodsucker_descr
 inv_name				= st_hide_bloodsucker_name
@@ -1146,7 +1135,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -1162,7 +1151,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.06
 
 [hide_bloodsucker_absorbation]
-burn_immunity 			= -0.00026				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= -0.00026				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= 0.0126
 wound_immunity 			= 0.0221
@@ -1174,7 +1163,7 @@ fire_wound_immunity  		= 0.0155 ; 4 sheets of kevlar
 
 [hide_boar]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_boar.ogf
 description				= st_hide_boar_descr
 inv_name				= st_hide_boar_name
@@ -1203,7 +1192,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -1219,7 +1208,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.03
 
 [hide_boar_absorbation]
-burn_immunity 			= 0.00037				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00037				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= 0.0272
 wound_immunity 			= 0.008
@@ -1231,7 +1220,7 @@ fire_wound_immunity  		= 0.0068 ; 1.5 sheets of kevlar
 
 [hide_flesh]:af_base
 $spawn				= "artefacts\af_kevlar"
-class				= SCRPTART  	; Р±СѓРґРµС‚ РїРѕРґРїСЂС‹РіРёРІР°С‚СЊ
+class				= SCRPTART  	; будет подпрыгивать
 visual				= dynamics\repair\hide_flesh.ogf
 description				= st_hide_flesh_descr
 inv_name				= st_hide_flesh_name
@@ -1260,7 +1249,7 @@ attach_position_offset          = 0.15,0.002,0.25
 attach_bone_name		= bip01_r_hand
 auto_attach			= false
 
-;СЃРєРѕСЂРѕСЃС‚Рё СѓРІРµР»РёС‡РµРЅРёСЏ (СѓРјРµРЅСЊС€РµРЅРёСЏ)
+;скорости увеличения (уменьшения)
 health_restore_speed		= 0
 radiation_restore_speed		= 0
 satiety_restore_speed		= 0
@@ -1276,7 +1265,7 @@ artefact_activation_seq		= af_activation_bold
 repair_part_bonus	 	= 0.02
 
 [hide_flesh_absorbation]
-burn_immunity 			= 0.00032				;РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РёРјРјСѓРЅРёС‚РµС‚Р°
+burn_immunity 			= 0.00032				;коэффициенты иммунитета
 strike_immunity 		= 0
 shock_immunity 			= 0.0326
 wound_immunity 			= 0.0032

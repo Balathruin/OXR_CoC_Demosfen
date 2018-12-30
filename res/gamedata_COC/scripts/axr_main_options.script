@@ -200,7 +200,7 @@ function opt_menu_on_init(menu)
 	end
 	--	Consumable_Animations
 	if (item_animations and enhanced_animations) then
-		menu.gameplay_ui_options["consumable_animation"]={default="full",debug_only=false,typ="list",list={"none","simple","full"},
+		menu.gameplay_ui_options["consumable_animation"]={default="none",debug_only=false,typ="list",list={"none","simple","full"},
 			on_accept=function(handler,optMgr,ctrl)
 				local choice = axr_main.config:r_value("mm_options","consumable_animation",0,"none")
 				if choice == "full" then

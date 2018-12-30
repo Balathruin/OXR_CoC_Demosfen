@@ -100,7 +100,7 @@
         [spawn] \n
         device_torch \n
         wpn_binoc \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 \n
         wpn_colt1911 \n
         ammo_11.43x23_fmj \n
@@ -126,7 +126,7 @@
 #include "gameplay\loadouts\monolith_sniper.ltx"
         [spawn] \n
         device_torch \n
-        wpn_svd = 1 \n
+        wpn_svd_pso1m2 = 1 \n
         ammo_7.62x54_7h1 = 1 \n
         wpn_usp = 1 \n
         ammo_11.43x23_fmj = 1 \n
@@ -154,7 +154,7 @@
 #include "gameplay\loadouts\monolith_base.ltx"
 #include "gameplay\loadouts\monolith_sniper.ltx"
         [spawn] \n
-        wpn_svu \n
+        wpn_svu_pso1m2 \n
         ammo_7.62x54_7h1 = 1 \n
         wpn_sig220 = 1 \n
         ammo_11.43x23_fmj = 1 \n

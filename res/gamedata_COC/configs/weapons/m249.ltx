@@ -1,0 +1,328 @@
+; Пулемет M249
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 					5.56x45 мм
+; длина ствола 				465 мм
+; магазин				100, 200 на ленте
+; вес без магазина			7.50 кг
+; вес с пустым магазином на 100 патронов	7.68 кг
+; вес с пустым магазином на 200 патронов	7.78 кг
+; максимальная дальность стрельбы	3600 м
+; эффективная дальность стрельбы	600 м
+; прицельная дальность			600 м
+; дульная скорость пули			920 м/с
+; темп стрельбы				700-1150 в/м
+;---------------------------------------------------
+[wpn_m249]:default_weapon_params,wpn_m249_sounds
+GroupControlSection			= spawn_group
+$spawn					= "weapons\m249"
+$npc					= on
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_AK74
+
+description				= st_wpn_m249_descr
+
+scopes 					= ac10632, ac11090, acog, eot, c-more
+parent_section  			= wpn_m249
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 10
+
+sprint_allowed				= true
+
+inv_name				= st_wpn_m249
+inv_name_short				= st_wpn_m249
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 33
+inv_grid_y                                         = 28
+
+upgr_icon_x				= 1450
+upgr_icon_y				= 1850
+upgr_icon_width				= 300
+upgr_icon_height 			= 100
+
+kill_msg_x				= 80
+kill_msg_y				= 59
+kill_msg_width				= 87
+kill_msg_height				= 24
+
+cost					= 50000
+weapon_class				= heavy_weapon
+inv_weight				= 7.68
+hud					= wpn_m249_hud
+visual					= dynamics\weapons\wpn_m249\wpn_m249.ogf
+
+upgrades               		 		= up_gr_firstab_pkm, up_gr_seconab_pkm, up_gr_thirdab_pkm, up_gr_fourtab_pkm, up_gr_fifthab_pkm
+installed_upgrades      			=
+upgrade_scheme          			= upgrade_scheme_pkm
+
+ph_mass					= 8
+
+ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap	
+
+startup_ammo				= 100
+ammo_current				= 600
+ammo_elapsed				= 100
+ammo_limit				= 700
+ammo_mag_size				= 100
+
+fire_modes				= 15, -1
+
+grenade_class				= ammo_m209
+
+launch_speed				= 0
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power					= 0.35
+;hit_impulse				= 10
+hit_type					= fire_wound
+fire_distance				= 1000
+bullet_speed				= 920
+rpm					= 800
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 5.0
+
+misfire_probability				= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 			= 0.002
+misfire_end_prob	 			= 0.03
+condition_shot_dec				= 0.0001
+condition_queue_shot_dec			= 0.0001
+
+zoom_dof					= 0.5, 1, 180
+reload_dof				= 0, 0.5, 5, 1.7
+
+fire_dispersion_base				= 0.35
+fire_dispersion_condition_factor		= 2
+control_inertion_factor			= 1.85f
+crosshair_inertion				= 7.50
+
+cam_return				= 0
+cam_relax_speed				= 15
+cam_relax_speed_ai				= 360
+cam_dispersion				= 0.33
+cam_dispersion_inc				= 0.23
+cam_dispersion_frac				= 1.0
+cam_max_angle				= 10.0
+cam_max_angle_horz			= 50.0
+cam_step_angle_horz			= 0.25
+
+zoom_cam_relax_speed			= 15
+zoom_cam_relax_speed_ai			= 360
+zoom_cam_dispersion			= 0.23
+zoom_cam_dispersion_inc			= 0.18
+zoom_cam_dispersion_frac			= 0.7
+zoom_cam_max_angle			= 10.0
+zoom_cam_max_angle_horz			= 50.0
+zoom_cam_step_angle_horz			= 0.30
+
+PDM_disp_base				= 1.0
+PDM_disp_vel_factor			= 3.0
+PDM_disp_accel_factor			= 3.0
+PDM_disp_crouch				= 1.0
+PDM_disp_crouch_no_acc			= 1.0
+
+min_radius				= 30
+max_radius				= 90
+
+holder_range_modifier			= 1.0
+holder_fov_modifier				= 1.0
+
+hit_probability_gd_novice			= 0.45
+hit_probability_gd_stalker			= 0.55
+hit_probability_gd_veteran			= 0.65
+hit_probability_gd_master			= 0.75
+
+slot					= 2
+animation_slot				= 2
+
+position				= -0.027, -0.097, 0.042
+orientation				= 0, -2, 0
+
+fire_point				= 0, 0.208, 0.675
+fire_point2				= 0, 0.097, 0.722
+
+flame_particles				= weapons\generic_weapon05
+smoke_particles				= weapons\generic_shoot_00
+grenade_flame_particles			= weapons\generic_weapon01
+
+shell_point				= -0.02,0.167,0.082
+shell_dir					= 0, 0, 0.4
+shell_particles	 			= weapons\556x45
+
+strap_position				= -0.26, -0.11, 0.25
+strap_orientation				= -15, -9, 110
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= false
+light_color				= 0.6, 0.5, 0.3
+light_range				= 5
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time					= 0.2
+
+scope_status				= 0
+silencer_status				= 0
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time				= 0.3
+scope_zoom_factor                        = 1.25
+
+silencer_hit_power				= 0
+silencer_hit_impulse				= 1
+silencer_fire_distance			= 1
+silencer_bullet_speed			= 1
+
+silencer_smoke_particles 			= amik\weapons\smoke_particles\silencer_smoke_particles_02
+
+silencer_light_color				= 0.6,0.5,0.3
+silencer_light_range				= 0.01
+silencer_light_var_color			= 0.05
+silencer_light_var_range			= 0.5
+silencer_light_time				= 0.2
+
+[wpn_m249_hud]:hud_base
+zoom_hide_crosshair     			= true
+
+attach_place_idx        			= 0
+item_visual             				= dynamics\weapons\wpn_m249\wpn_m249_hud.ogf
+
+hands_position				= -0.054,-0.21,0.1355
+hands_orientation				= 0.55,2.4,0.15
+
+hands_position_16x9			= -0.054,-0.21,0.1355
+hands_orientation_16x9			= 0.55,2.4,0.15
+
+item_position				= 0,0,0
+item_orientation				= 0,0,0
+
+aim_hud_offset_pos 			= -0.09945,0.06275,-0.0697
+aim_hud_offset_rot 				= 0.03815,0.0091,0
+
+aim_hud_offset_pos_16x9 			= -0.09945,0.06275,-0.0697
+aim_hud_offset_rot_16x9 			= 0.03815,0.0091,0
+
+shell_point				= 0.028,0.078,0.113
+shell_dir           				= 0,1,0
+shell_bone          				= wpn_body
+
+fire_point					= 0,0.096359,0.587885
+fire_bone           				= wpn_body
+fire_point2				= 0,-0.009,0.601
+fire_bone2          				= wpn_body
+
+anm_show                				= lancew_m249_draw
+anm_hide                				= lancew_m249_holster
+anm_idle                				= lancew_m249_idle
+anm_idle_sprint         			= lancew_m249_sprint
+anm_idle_moving         			= lancew_m249_moving, moving
+anm_shots               				= lancew_m249_shoot, shoot
+anm_reload              				= lancew_m249_reload, reload
+anm_idle_aim            			= lancew_m249_idle_aim, idle_aim
+anm_bore                				= lancew_m249_no_reload
+
+gl_hud_offset_pos       		= 0,0,0
+gl_hud_offset_rot       		= 0,0,0
+
+gl_hud_offset_pos_16x9  		= 0,0,0
+gl_hud_offset_rot_16x9  		= 0,0,0
+
+lean_hud_offset_pos     		= 0,0,0
+lean_hud_offset_rot     		= 0,0,0
+;-----------------------------------------------------------------------------
+; јддоны
+;-----------------------------------------------------------------------------
+[wpn_m249_ac10632]:wpn_m249
+$spawn             			= "weapons\m249_ac10632"
+visual					= dynamics\weapons\wpn_m249\wpn_m249_ac10632.ogf
+hud					= wpn_m249_ac10632_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 83
+scope_y					= 2
+
+[wpn_m249_ac10632_hud]:wpn_m249_hud
+item_visual            	 		= dynamics\weapons\wpn_m249\wpn_m249_ac10632_hud.ogf
+
+anm_reload             	 		= lancew_m249_reload_eotech, reload
+
+aim_hud_offset_pos			= -0.09965,0.03235,-0.0697
+aim_hud_offset_rot			= 0.0366,0.011,0
+
+aim_hud_offset_pos_16x9 		= -0.09965,0.03235,-0.0697
+aim_hud_offset_rot_16x9 		= 0.0366,0.011,0
+
+[wpn_m249_ac11090]:wpn_m249
+$spawn             			= "weapons\m249_ac11090"
+visual					= dynamics\weapons\wpn_m249\wpn_m249_ac11090.ogf
+hud					= wpn_m249_ac11090_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 84
+scope_y					= 2
+
+[wpn_m249_ac11090_hud]:wpn_m249_hud
+item_visual            	 		= dynamics\weapons\wpn_m249\wpn_m249_ac11090_hud.ogf
+
+aim_hud_offset_pos			= -0.09965,0.03285,-0.0697
+aim_hud_offset_rot			= 0.0366,0.011,0
+
+aim_hud_offset_pos_16x9 		= -0.09965,0.03285,-0.0697
+aim_hud_offset_rot_16x9 		= 0.0366,0.011,0
+
+[wpn_m249_acog]:wpn_m249
+$spawn					= "weapons\m249_acog"
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_acog
+scope_zoom_factor       = 4
+zoom_rotate_time			= 0.3
+scope_x					= 83
+scope_y					= 2
+
+[wpn_m249_eot]:wpn_m249
+$spawn					= "weapons\m249_eot"
+visual					= dynamics\weapons\wpn_m249\wpn_m249_eot.ogf
+hud					= wpn_m249_eot_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 85
+scope_y					= 2
+
+[wpn_m249_eot_hud]:wpn_m249_hud
+item_visual				= dynamics\weapons\wpn_m249\wpn_m249_eot_hud.ogf
+
+anm_reload             	 		= lancew_m249_reload_eotech, reload
+
+aim_hud_offset_pos			= -0.098,0.0285,-0.08
+aim_hud_offset_rot			= 0.036,0.008,0
+
+aim_hud_offset_pos_16x9 		= -0.098,0.0285,-0.08
+aim_hud_offset_rot_16x9 		= 0.036,0.008,0
+
+[wpn_m249_c-more]:wpn_m249
+$spawn					= "weapons\m249_c-more"
+visual					= dynamics\weapons\wpn_m249\wpn_m249_c-more.ogf
+hud					= wpn_m249_c-more_hud
+
+scope_zoom_factor                        = 1.25
+scope_x					= 85
+scope_y					= 4
+
+[wpn_m249_c-more_hud]:wpn_m249_hud
+item_visual				= dynamics\weapons\wpn_m249\wpn_m249_c-more_hud.ogf
+
+aim_hud_offset_pos	 		= -0.09955,0.0353,-0.12
+aim_hud_offset_rot	 		= 0.0366,0.01055,0
+
+aim_hud_offset_pos_16x9 		= -0.09955,0.0353,-0.12
+aim_hud_offset_rot_16x9 		= 0.0366,0.01055,0

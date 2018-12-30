@@ -1,0 +1,372 @@
+; Штурмовой карабин (автомат) M4A1
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 				5.56x45 мм
+; длина ствола 				370 мм
+; магазин				30
+; вес с пустым магазином		2.89 кг
+; максимальная дальность стрельбы	3400 м
+; эффективная дальность стрельбы	500 м
+; прицельная дальность			600 м
+; дульная скорость пули			880 м/с
+; темп стрельбы				700-950 в/м
+;---------------------------------------------------
+[wpn_m4a1]:default_weapon_params,wpn_m4a1_sounds
+GroupControlSection			= spawn_group
+$spawn					= "weapons\m4a1"
+$npc 					= on
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_AK74
+description				= st_wpn_m4a1_descr
+
+scopes 					= ac10632, ac11090, acog, eot, c-more
+parent_section  			= wpn_m4a1
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 8
+
+inv_name 				= st_wpn_m4a1
+inv_name_short				= st_wpn_m4a1
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 33
+inv_grid_y                                         = 24
+
+upgr_icon_x				= 600
+upgr_icon_y				= 300
+upgr_icon_width				= 300
+upgr_icon_height 			= 100
+
+kill_msg_x				= 175
+kill_msg_y				= 0
+kill_msg_width				= 82
+kill_msg_height				= 28
+
+cost 					= 8000
+weapon_class				= assault_rifle
+inv_weight				= 2.89
+hud					= wpn_m4a1_hud
+visual					= dynamics\weapons\wpn_m4a1\wpn_m4a1.ogf
+
+upgrades                		= up_gr_firstab_lr300, up_gr_seconab_lr300, up_gr_thirdab_lr300, up_gr_fourtab_lr300, up_gr_fifthab_lr300
+installed_upgrades      		=
+upgrade_scheme          		= upgrade_scheme_lr300
+
+ph_mass					= 3
+
+ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap	
+
+startup_ammo				= 90
+ammo_current				= 180
+ammo_elapsed				= 30
+ammo_limit				= 210
+ammo_mag_size				= 30
+
+fire_modes				= 1, -1
+
+grenade_class				= ammo_m209
+
+grenade_vel 				= 76
+launch_speed				= 76
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power					= 0.27
+;hit_impulse				= 10
+hit_type					= fire_wound
+fire_distance				= 1000
+bullet_speed				= 880
+rpm					= 770				
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 2.0
+
+misfire_probability				= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 			= 0.006	
+misfire_end_prob	 			= 0.072	
+condition_shot_dec				= 0.000125
+condition_queue_shot_dec			= 0.0002
+
+zoom_dof					= 0.5, 1.0, 180
+reload_dof				= 0, 0.5, 5, 2
+
+fire_dispersion_base				= 0.24
+fire_dispersion_condition_factor		= 2
+control_inertion_factor			= 1.2f
+crosshair_inertion				= 5.25
+
+cam_return					= 0
+cam_relax_speed					= 5
+cam_relax_speed_ai				= 360
+cam_dispersion					= 0.3
+cam_dispersion_inc				= 0.15
+cam_dispersion_frac				= 0.7
+cam_max_angle					= 50.0
+cam_max_angle_horz				= 10.0
+cam_step_angle_horz				= 3.0
+
+zoom_cam_relax_speed				= 5
+zoom_cam_relax_speed_ai				= 360
+zoom_cam_dispersion				= 0.25
+zoom_cam_dispersion_inc				= 0.12
+zoom_cam_dispersion_frac			= 1.0
+zoom_cam_max_angle				= 50.0
+zoom_cam_max_angle_horz				= 10.0
+zoom_cam_step_angle_horz			= 2
+
+PDM_disp_base 					= 0.5
+PDM_disp_vel_factor 				= 2.0
+PDM_disp_accel_factor 				= 2.0
+PDM_disp_crouch	 				= 1.0
+PDM_disp_crouch_no_acc 				= 1.0
+
+min_radius					= 30
+max_radius					= 50
+
+holder_range_modifier				= 1.00
+holder_fov_modifier				= 1.00
+
+slot 			 			= 2
+animation_slot					= 2
+
+position                   			= -0.026, -0.130, 0
+orientation                			= 0, 0, 0
+
+fire_point              			= 0, 0.199, 0.575
+fire_point2             			= 0, 0.199, 0.575
+
+flame_particles					= amik\weapons\nato_shoot_00
+smoke_particles					= amik\weapons\nato_smoke_00
+grenade_flame_particles				= weapons\generic_weapon01
+
+shell_point             			= 0.12,0, 0.07
+shell_dir               			= 0, 0, 0.4
+shell_particles         			= weapons\556x45
+
+strap_position         				= -0.15, -0.37, 0.2
+strap_orientation      				= -10, -5, 10
+strap_bone0             			= bip01_spine2
+strap_bone1             			= bip01_spine1
+
+light_disabled					= false
+light_color					= 0.6, 0.5, 0.3
+light_range					= 5
+light_var_color					= 0.05
+light_var_range					= 0.1
+light_time					= 0.2
+
+scope_status					= 0
+silencer_status					= 2
+grenade_launcher_status				= 2
+
+zoom_enabled					= true
+zoom_rotate_time				= 0.2
+scope_zoom_factor                        = 1.25
+
+scope_name 					= wpn_addon_scope_susat
+scope_x                     			= 74
+scope_y                     			= -9
+
+grenade_launcher_name				= wpn_addon_grenade_launcher_m203
+grenade_launcher_x          			= 123
+grenade_launcher_y          			= 32
+
+silencer_name					= sil_nato
+silencer_x					= 200
+silencer_y					= 19
+
+silencer_hit_power 				= 0.27
+silencer_hit_impulse	 			= 20
+silencer_fire_distance 				= 1000
+silencer_bullet_speed	 			= 880
+
+silencer_smoke_particles 			= amik\weapons\smoke_particles\silencer_smoke_particles_00
+
+silencer_light_color				= 0.6, 0.5, 0.3
+silencer_light_range				= 0.01
+silencer_light_var_color			= 0.05
+silencer_light_var_range			= 0.5
+silencer_light_time				= 0.2
+
+[wpn_m4a1_hud]:hud_base	
+zoom_hide_crosshair				= true
+
+attach_place_idx				= 0
+item_visual					= dynamics\weapons\wpn_m4a1\wpn_m4a1_hud.ogf
+
+hands_position					= -0.024,-0.2,0.15
+hands_orientation				= 0.55,2.4,0.15
+
+hands_position_16x9				= -0.024,-0.2,0.15
+hands_orientation_16x9				= 0.55,2.4,0.15
+
+item_position					= 0,0,0
+item_orientation				= 0,0,0
+
+aim_hud_offset_pos		 		= -0.1295,0.0646,-0.1
+aim_hud_offset_rot		 		= 0.0446,0.00895,0
+
+aim_hud_offset_pos_16x9 			= -0.1295,0.0646,-0.1
+aim_hud_offset_rot_16x9 			= 0.0446,0.00895,0
+
+gl_hud_offset_pos				= -0.131,-0.126,0.01
+gl_hud_offset_rot				= -0.181,0.0105,0
+
+gl_hud_offset_pos_16x9 				= -0.131,-0.126,0.01
+gl_hud_offset_rot_16x9 				= -0.181,0.0105,0
+
+shell_point					= 0.028,0.078,0.113
+shell_dir               			= 0,1,0
+shell_bone					= wpn_body
+
+fire_point					= 0.0011,0.070272,0.617916
+fire_bone					= wpn_body
+fire_point2					= 0,-0.009,0.601
+fire_bone2					= wpn_body
+
+anm_show                			= lancew_m4a1_draw
+anm_hide                			= lancew_m4a1_holster
+anm_idle                			= lancew_m4a1_idle
+anm_idle_sprint         			= lancew_m4a1_sprint
+anm_idle_moving        		 		= lancew_m4a1_moving
+anm_shots              				= lancew_m4a1_shoot, shoot
+anm_reload             		 		= lancew_m4a1_reload, reload
+anm_idle_aim          		  		= lancew_m4a1_idle_aim, idle_aim
+anm_switch              			= lancew_m4a1_switch_off, switch_off
+anm_switch_g            			= lancew_m4a1_switch_on, switch_on 
+anm_bore               		 		= lancew_m4a1_no_reload
+anm_show_w_gl           			= lancew_m4a1_draw_w_gl
+anm_hide_w_gl           			= lancew_m4a1_holster_w_gl
+anm_idle_w_gl           			= lancew_m4a1_idle_w_gl
+anm_shots_w_gl          			= lancew_m4a1_shoot_w_gl, shoot
+anm_reload_w_gl         			= lancew_m4a1_reload_w_gl, reload
+anm_idle_w_gl_aim       			= lancew_m4a1_idle_aim_w_gl, idle_aim
+anm_idle_sprint_w_gl   		 		= lancew_m4a1_sprint_w_gl
+anm_idle_moving_w_gl    			= lancew_m4a1_moving_w_gl
+anm_bore_w_gl         			  	= lancew_m4a1_no_reload_w_gl
+anm_show_g              			= lancew_m4a1_draw_g, idle_g		
+anm_hide_g              			= lancew_m4a1_holster_g, idle_g		
+anm_idle_g              			= lancew_m4a1_idle_g, idle_g		
+anm_reload_g            			= lancew_m4a1_reload_g, reload_g
+anm_idle_g_aim          			= lancew_m4a1_idle_aim_g, idle_g		
+anm_shots_g             			= lancew_m4a1_shoot_g, shoot_g
+anm_idle_sprint_g       			= lancew_m4a1_sprint_g, idle_g		
+anm_idle_moving_g       			= lancew_m4a1_moving_g, idle_g		
+anm_bore_g              			= lancew_m4a1_no_reload_g, idle_g
+
+lean_hud_offset_pos				= 0,0,0
+lean_hud_offset_rot				= 0,0,0
+;-----------------------------------------------------------------------------
+; јддоны
+;-----------------------------------------------------------------------------
+[wpn_m4a1_ac10632]:wpn_m4a1
+$spawn             				= "weapons\m4a1_ac10632"
+visual						= dynamics\weapons\wpn_m4a1\wpn_m4a1_ac10632.ogf
+hud						= wpn_m4a1_ac10632_hud
+
+scope_zoom_factor                        = 1.25
+scope_x						= 83
+scope_y						= 4
+
+[wpn_m4a1_ac10632_hud]:wpn_m4a1_hud
+item_visual            	 			= dynamics\weapons\wpn_m4a1\wpn_m4a1_ac10632_hud.ogf
+
+aim_hud_offset_pos	 			= -0.12905,0.06205,-0.15
+aim_hud_offset_rot				= 0.044,0.0085,0
+
+aim_hud_offset_pos_16x9 			= -0.12905,0.06205,-0.15
+aim_hud_offset_rot_16x9 			= 0.044,0.0085,0
+
+anm_shots               			= lancew_m4a1_shoot_scope, shoot
+anm_idle_aim           				= lancew_m4a1_idle_aim, idle_aim
+anm_shots_w_gl          			= lancew_m4a1_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       			= lancew_m4a1_idle_aim_w_gl, idle_aim
+
+[wpn_m4a1_ac11090]:wpn_m4a1
+$spawn             				= "weapons\m4a1_ac11090"
+visual						= dynamics\weapons\wpn_m4a1\wpn_m4a1_ac11090.ogf
+hud						= wpn_m4a1_ac11090_hud
+
+scope_zoom_factor       = 1.25
+scope_x						= 82
+scope_y						= 2
+
+[wpn_m4a1_ac11090_hud]:wpn_m4a1_hud
+item_visual            	 			= dynamics\weapons\wpn_m4a1\wpn_m4a1_ac11090_hud.ogf
+
+aim_hud_offset_pos		 		= -0.1295,0.053,-0.1
+aim_hud_offset_rot		 		= 0.037,0.009,0
+
+aim_hud_offset_pos_16x9 			= -0.1295,0.053,-0.1
+aim_hud_offset_rot_16x9 			= 0.037,0.009,0
+
+anm_shots               			= lancew_m4a1_shoot_scope, shoot
+anm_idle_aim           				= lancew_m4a1_idle_aim, idle_aim
+anm_shots_w_gl          			= lancew_m4a1_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       			= lancew_m4a1_idle_aim_w_gl, idle_aim
+
+[wpn_m4a1_acog]:wpn_m4a1
+$spawn						= "weapons\m4a1_acog"
+visual						= dynamics\weapons\wpn_m4a1\wpn_m4a1_acog.ogf
+hud						= wpn_m4a1_acog_hud
+
+scope_status					= 1
+scope_texture					= wpn_crosshair_acog
+scope_zoom_factor       = 4
+zoom_rotate_time				= 0.25
+scope_x						= 78
+scope_y						= 2
+
+[wpn_m4a1_acog_hud]:wpn_m4a1_hud
+item_visual					= dynamics\weapons\wpn_m4a1\wpn_m4a1_acog_hud.ogf
+
+[wpn_m4a1_eot]:wpn_m4a1
+$spawn						= "weapons\m4a1_eot"
+visual						= dynamics\weapons\wpn_m4a1\wpn_m4a1_eot.ogf
+hud						= wpn_m4a1_eot_hud
+
+scope_zoom_factor                        = 1.25
+scope_x						= 82
+scope_y						= 2
+
+[wpn_m4a1_eot_hud]:wpn_m4a1_hud
+item_visual					= dynamics\weapons\wpn_m4a1\wpn_m4a1_eot_hud.ogf
+
+aim_hud_offset_pos		 		= -0.1298,0.0575,-0.08
+aim_hud_offset_rot		 		= 0.042,0.0085,0
+
+aim_hud_offset_pos_16x9 			= -0.1298,0.0575,-0.08
+aim_hud_offset_rot_16x9 			= 0.042,0.0085,0
+
+anm_shots               			= lancew_m4a1_shoot_scope, shoot
+anm_idle_aim           				= lancew_m4a1_idle_aim, idle_aim
+anm_shots_w_gl          			= lancew_m4a1_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       			= lancew_m4a1_idle_aim_w_gl, idle_aim
+
+[wpn_m4a1_c-more]:wpn_m4a1
+$spawn						= "weapons\m4a1_c-more"
+visual						= dynamics\weapons\wpn_m4a1\wpn_m4a1_c-more.ogf
+hud						= wpn_m4a1_c-more_hud
+
+scope_zoom_factor                        = 1.25
+scope_x						= 88
+scope_y						= 5
+
+[wpn_m4a1_c-more_hud]:wpn_m4a1_hud
+item_visual					= dynamics\weapons\wpn_m4a1\wpn_m4a1_c-more_hud.ogf
+
+aim_hud_offset_pos	 			= -0.12935,0.057,-0.15
+aim_hud_offset_rot				= 0.035,0.0088,0
+
+aim_hud_offset_pos_16x9 			= -0.12935,0.057,-0.15
+aim_hud_offset_rot_16x9 			= 0.035,0.0088,0
+
+anm_shots               			= lancew_m4a1_shoot_scope, shoot
+anm_idle_aim           				= lancew_m4a1_idle_aim, idle_aim
+anm_shots_w_gl          			= lancew_m4a1_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       			= lancew_m4a1_idle_aim_w_gl, idle_aim
