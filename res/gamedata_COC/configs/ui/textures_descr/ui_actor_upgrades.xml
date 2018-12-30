@@ -1,5 +1,5 @@
 <w>
-
+	<!-- Added by Tronex -->
 	<file name="ui\ui_actor_upgrades_trx">
 	<texture id="ui_inGame2_upgrade_binoc_1_1" x="0" y="0" width="90" height="44" />
 	<texture id="ui_inGame2_upgrade_binoc_1_2" x="90" y="0" width="90" height="44" />
@@ -18,10 +18,11 @@
 	<texture id="ui_am_prop_trx_zoom" x="180" y="176" width="19" height="19" />
 	<texture id="ui_am_prop_trx_nightvision" x="199" y="176" width="19" height="19" />
 	</file>
-
+	<!-- Ends here -->
+	
     <file name="ui\ui_actor_upgrades_1">
 
-        <texture id="ui_inGame2_upgrade_on_icon_lamp_green_upgraded" x="820" y="0" width="5" height="38" />
+    <texture id="ui_inGame2_upgrade_on_icon_lamp_green_upgraded" x="820" y="0" width="5" height="38" />
 	<texture id="ui_inGame2_upgrade_on_icon_lamp_red_disabled" x="825" y="0" width="5" height="38" />
 	<texture id="ui_inGame2_upgrade_on_icon_lamp_yellow_highlighted" x="830" y="0" width="5" height="38" />
 

@@ -1251,5 +1251,36 @@
 	            <cell x="-1000" y="355" point_x="103" point_y="183"/>
 	        </column>
 	    </template>
+		<!-- Added by Tronex -->
+		<template name="upgrade_scheme_binoc">
+	        <column>
+	            <cell x="0" y="24" point_x="176" point_y="225"/>
+	            <cell x="0" y="94" point_x="63" point_y="209"/>
+	            <cell x="0" y="164" point_x="165" point_y="168"/>
+	        </column>
+	        <column>
+	            <cell x="100" y="24" point_x="192" point_y="214"/>
+	            <cell x="100" y="94" point_x="74" point_y="185"/>
+	        </column>
+	        <column>
+	            <cell x="200" y="24" point_x="187" point_y="235"/>
+	            <cell x="200" y="94" point_x="95" point_y="167"/>
+	        </column>
+	    </template>
+		<template name="upgrade_scheme_bp">
+	        <column>
+	            <cell x="0" y="24" point_x="176" point_y="205"/>
+	        </column>
+	        <column>
+	            <cell x="100" y="0" point_x="69" point_y="189"/>
+	            <cell x="100" y="49" point_x="260" point_y="227"/>
+	        </column>
+	        <column>
+	            <cell x="200" y="0" point_x="161" point_y="226"/>
+	            <cell x="200" y="49" point_x="215" point_y="184"/>
+	        </column>
+	    </template>
+		<!-- Ends here -->
+		
 	</templates>
 </w>

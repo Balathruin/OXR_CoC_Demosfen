@@ -1,3 +1,5 @@
+#include "upgrades\w_binoc_up.ltx"
+
 [wpn_binoc]:identity_immunities,weapon_probability,default_weapon_params
 $npc                                     = on
 $prefetch                                = 8
@@ -110,8 +112,10 @@ upgr_icon_height = 200;   			= 100
 upgr_icon_width = 300;				= 200
 upgr_icon_x = 0;					= 300
 upgr_icon_y = 0;					= 1800
-upgrade_scheme          	= upgrade_scheme_binoc
-upgrades                	= up_gr_firstab_binoc, up_gr_firstba_binoc
+
+upgrade_scheme                           = upgrade_scheme_binoc
+upgrades                                 = up_gr_firstab_binoc, up_gr_seconab_binoc, up_gr_thirdab_binoc
+
 vis_frame_color				= 0.7, 0.7, 0.7, 1.0	; oaao ?aiee RGBA (A) Ia o?eouaaaony
 vis_frame_speed				= 0						; nei?inou, n eioi?ie iaaiaeony ?aiea ia oaeu
 vision_present                           = true

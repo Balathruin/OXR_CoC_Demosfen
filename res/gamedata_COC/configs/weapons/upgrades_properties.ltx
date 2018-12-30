@@ -54,9 +54,12 @@ prop_binoc_zoom
 prop_binoc_autolock
 prop_binoc_nightvision
 
-prop_trx_carry
+prop_trx_zoom				;; Zoom factor/distance
+prop_trx_nightvision		;; Nightvision tier
+prop_trx_power				;; power
+prop_trx_carry				;; Carry Weight 
+
 prop_trx_carrys
-prop_trx_power
 
 
 
@@ -399,3 +402,18 @@ name     = st_prop_scanner
 icon     = ui_am_prop_scanner
 functor  = inventory_upgrades.property_functor_b
 params   = fire_wound_immunity, cost
+
+;; Added
+[prop_trx_zoom]
+name     = st_prop_trx_zoom
+icon     = ui_am_prop_trx_zoom
+functor  = inventory_upgrades.property_functor_t
+params   = cost
+
+[prop_trx_nightvision]
+name     = st_prop_trx_nightvision
+icon     = ui_am_prop_trx_nightvision
+functor  = inventory_upgrades.property_functor_t
+params   = cost
+
+
