@@ -1,19 +1,21 @@
 <w>
    <file name="wpn\wpn_crosshair">
     <texture id="wpn_crosshair" x="0" y="0" width="1024" height="1024" />
-     <texture id="wpn_crosshair_add_l" x="0"	y="0" width="102" height="768" />
-     <texture id="wpn_crosshair_add_r" x="0"	y="0" width="102" height="768" />
+     <texture id="wpn_crosshair_add_l" x="0"	y="0" width="20" height="768" />
+     <texture id="wpn_crosshair_add_r" x="0"	y="0" width="22" height="768" />
    </file>
    <file name="wpn\wpn_crosshair_1p29">
     <texture id="wpn_crosshair_1p29" x="0" y="0" width="1024" height="1024" />
-     <texture id="wpn_crosshair_add_l" x="0"	y="0" width="102" height="768" />
-     <texture id="wpn_crosshair_add_r" x="0"	y="0" width="102" height="768" />
+     <texture id="wpn_crosshair_add_l" x="0"	y="0" width="20" height="768" />
+     <texture id="wpn_crosshair_add_r" x="0"	y="0" width="22" height="768" />
+   </file>
+   <file name="wpn\wpn_crosshair_1p59">
+    <texture id="wpn_crosshair_1p59" x="0" y="0" width="1024" height="1024" />
+     <texture id="wpn_crosshair_add_l" x="0"	y="0" width="20" height="768" />
+     <texture id="wpn_crosshair_add_r" x="0"	y="0" width="22" height="768" />
    </file>
    <file name="wpn\wpn_crosshair_4x34">
     <texture id="wpn_crosshair_4x34" x="0" y="0" width="1024" height="1024" />
-   </file>
-   <file name="wpn\wpn_crosshair_zf4">
-    <texture id="wpn_crosshair_zf4" x="0" y="0" width="1024" height="1024" />
    </file>
    <file name="wpn\wpn_crosshair_vss">
     <texture id="wpn_crosshair_vss" x="0" y="0" width="1024" height="1024" />
@@ -39,18 +41,6 @@
    <file name="wpn\wpn_crosshair_rpg">
     <texture id="wpn_crosshair_rpg" x="0" y="0" width="1024" height="1024" />
    </file>
-   <file name="wpn\wpn_crosshair_bino">
-    <texture id="wpn_crosshair_bino" x="0" y="0" width="1024" height="1024" />
-   </file>
-   <file name="wpn\wpn_crosshair_bino_1">
-    <texture id="wpn_crosshair_bino_1" x="0" y="0" width="1024" height="1024" />
-   </file>
-   <file name="wpn\wpn_crosshair_bino_2">
-    <texture id="wpn_crosshair_bino_2" x="0" y="0" width="1024" height="1024" />
-   </file>
-   <file name="wpn\wpn_crosshair_bino_3">
-    <texture id="wpn_crosshair_bino_3" x="0" y="0" width="1024" height="1024" />
-   </file>
    <file name="wpn\wpn_crosshair_nspu">
     <texture id="wpn_crosshair_nspu" x="0" y="0" width="1024" height="1024" />
    </file>
@@ -59,5 +49,8 @@
    </file>
    <file name="wpn\wpn_crosshair_red">
     <texture id="wpn_crosshair_red" x="0" y="0" width="1024" height="1024" />
+   </file>
+   <file name="wpn\wpn_crosshair_bino">
+    <texture id="wpn_crosshair_bino" x="0" y="0" width="1024" height="1024" />
    </file>
 </w>

@@ -1,0 +1,234 @@
+; Ручной противотанковый гранатомёт РПГ-7 (6Г1)
+;-(TrickSR)-----------------------------------------
+; калибр 						40 мм
+; длина 						950 мм
+; вес без гранаты					6.3 кг
+; максимальная дальность стрельбы			1400 м
+; дальность прямого выстрела 			500 м
+; прицельная дальность				200-700 м
+; начальная скорость гранаты			112 м/с (ПГ-7ВЛ «Луч»)
+; начальная скорость гранаты			145-152 м/с
+; темп стрельбы					---
+; ресурс живучести				250-300 выстрелов
+;---------------------------------------------------
+[wpn_rpg7]:default_weapon_params,wpn_rpg7_sounds
+GroupControlSection				= spawn_group
+discovery_dependency 				=
+$spawn						= "weapons\rpg-7"
+$prefetch 		 			= 8
+scheduled					= off
+cform						= skeleton
+class						= WP_RPG7
+description					= st_wpn_rpg7_descr
+
+scopes 						= pgo7
+parent_section  				= wpn_rpg7
+
+ef_main_weapon_type				= 4
+ef_weapon_type					= 12
+
+sprint_allowed					= true
+
+inv_name					= st_wpn_rpg7
+inv_name_short					= st_wpn_rpg7
+
+inv_grid_height                                    = 1
+inv_grid_width                                     = 5
+inv_grid_x                                         = 39
+inv_grid_y                                         = 40
+
+upgr_icon_x 					= 29
+upgr_icon_y 					= 811
+upgr_icon_width 					= 290
+upgr_icon_height 					= 124
+
+kill_msg_x					= 0
+kill_msg_y					= 85
+kill_msg_width					= 73
+kill_msg_height					= 19
+
+cost						= 26000
+weapon_class					= heavy_weapon
+inv_weight					= 6.3
+hud						= wpn_rpg7_hud
+visual 						= dynamics\weapons\wpn_rpg7\wpn_rpg7
+
+ph_mass			 			= 6
+
+ammo_class		 			= ammo_og-7b
+
+ammo_current		 			= 6
+ammo_elapsed		 			= 1
+ammo_limit		 			= 7
+ammo_mag_size					 = 1
+
+auto_spawn_ammo				= false
+
+rocket_class					= wpn_rpg7_missile
+launch_speed					= 5
+
+hand_dependence					 = 1
+single_handed					= 0
+
+hit_power 					= 0.80, 0.80, 0.80, 0.80
+;hit_impulse					= 10
+hit_type 						= explosion
+fire_distance					= 1000
+bullet_speed					= 150
+rpm						= 200
+
+misfire_probability					= 0.005
+misfire_start_condition					= 0.6
+misfire_end_condition					= 0.1
+misfire_start_prob	 				= 0.001
+misfire_end_prob	 				= 0.02
+condition_shot_dec					= 0.0033
+condition_queue_shot_dec				= 0.0040
+
+zoom_dof						= 0.5, 1.0, 180
+reload_dof						= 0.0, 0.5, 5, 1.7
+
+fire_dispersion_base					= 1.5
+fire_dispersion_condition_factor 			= 2
+control_inertion_factor			= 2.8f
+crosshair_inertion 					= 10
+
+cam_relax_speed					= 2.0
+cam_relax_speed_ai					= 360
+cam_dispersion					= 10.0
+cam_max_angle					= 15
+cam_max_angle_horz					= 15
+cam_step_angle_horz					= 0.5
+
+PDM_disp_base					= 1.0
+PDM_disp_vel_factor					= 1.1
+PDM_disp_accel_factor				= 1.1
+PDM_disp_crouch					= 1.0
+PDM_disp_crouch_no_acc				= 1.0
+
+min_radius 					= 20
+max_radius 					= 90
+
+holder_range_modifier 				= 2
+holder_fov_modifier					= 1
+
+slot 				 		= 2
+animation_slot		 			= 4
+
+position						= -0.027,-0.113,0
+orientation						= 0,0,0
+
+smoke_particles		 			= weapons\generic_weapon02
+
+shell_point						= 0.0, 0.0, 0.0
+fire_point						= 0.0, 0.162, 0.35
+
+strap_position 					= -0.28,-0.20,0.25
+strap_orientation					= -15,-189,110
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+light_color		 				= 0.95,0.95,0.3
+light_range		 			= 20.0
+light_var_color		 			= 0.05
+light_var_range		 			= 0.5
+light_time 		 				= 0.75
+
+scope_status					= 0
+silencer_status					= 0
+grenade_launcher_status				= 0
+
+zoom_enabled					= true
+scope_zoom_factor       = 1.25
+max_zoom_factor					= 26.2
+
+[wpn_rpg7_hud]:hud_base
+zoom_hide_crosshair        				= true
+attach_place_idx					= 0
+item_visual                 				= dynamics\weapons\wpn_rpg7\wpn_rpg7_hud
+
+fire_point					= -0.02,0.05,0.23
+fire_bone               					= muzzle
+
+hands_position					= -0.0105,-0.186,0.2095
+hands_orientation					= 3.65,1.05,-0.05
+
+hands_position_16x9				= -0.0105,-0.186,0.2095
+hands_orientation_16x9				= 3.65,1.05,-0.05
+
+item_position					= 0,0,0
+item_orientation					= 0,0,0
+
+aim_hud_offset_pos 				= -0.1529,-0.02385,-0.01
+aim_hud_offset_rot 				= -0.01605,0.06355,0
+
+aim_hud_offset_pos_16x9 				= -0.1529,-0.02385,-0.01
+aim_hud_offset_rot_16x9 				= -0.01605,0.06355,0
+
+gl_hud_offset_pos					= 0,0,0
+gl_hud_offset_rot					= 0,0,0
+
+lean_hud_offset_pos				= 0,0,0
+lean_hud_offset_rot				= 0,0,0
+
+anm_show					= rpg7_draw
+anm_hide					= rpg7_holster
+anm_reload					= rpg7_reload, reload
+anm_shots					= rpg7_shoot, shoot
+anm_idle						= rpg7_idle
+anm_idle_sprint					= rpg7_idle_sprint
+anm_idle_aim					= rpg7_idle_aim
+anm_idle_moving					= rpg7_idle_moving
+anm_bore					= rpg7_idle_aim
+
+[wpn_rpg7_missile]:identity_immunities,default_weapon_params,
+$prefetch                                = 32
+GroupControlSection                      = spawn_group
+blast                                    = 3
+blast_impulse                            = 200
+blast_impulse_factor                     = 1
+blast_r                                  = 9
+cform                                    = skeleton
+class                                    = G_RPG7
+cost                                     = 200
+discovery_dependency                     = 
+engine_impulse                           = 350
+engine_impulse_up                        = 133.906
+engine_particles                         = weapons\rpg_trail_00
+engine_present                           = true
+engine_work_time                         = 3000
+explode_duration                         = 5
+explode_particles                        = explosions\explosion_04
+force_explode_time                       = 6000
+frag_hit                                 = 0.5
+frag_hit_impulse                         = 75
+fragment_speed                           = 500
+frags                                    = 250
+frags_r                                  = 40
+hit_type_blast                           = explosion
+hit_type_frag                            = fire_wound
+inv_grid_width     = 3
+inv_grid_height    = 1
+inv_grid_x         = 10
+inv_grid_y         = 13
+inv_name                                 = ammo-og-7b
+inv_name_short                           = ammo-og-7b_s
+inv_weight                               = .2
+jump_height                              = 0
+kill_msg_height                          = 19
+kill_msg_width                           = 73
+kill_msg_x                               = 0
+kill_msg_y                               = 85
+light_color                              = 1.9,1.4,0.5
+light_range                              = 24.0
+light_time                               = 1.28
+lights_enabled                           = true
+ph_mass                                  = 5
+snd_explode                              = weapons\rpg7_explode
+snd_fly_sound                            = weapons\rocket_fly
+trail_light_color                        = 0.6,0.5,0.3
+trail_light_range                        = 15.0
+up_throw_factor                          = 0.25
+visual                                   = dynamics\weapons\wpn_rpg7\wpn_rpg7_grenade.ogf
+wallmark_section                         = explosion_marks
+wm_size                                  = 0.05

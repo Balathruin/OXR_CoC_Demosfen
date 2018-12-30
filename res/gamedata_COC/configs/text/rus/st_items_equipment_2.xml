@@ -132,6 +132,12 @@
 	<string id="st_device_torch_name">
 		<text>Налобный фонарик</text>
 	</string>
+	<string id="st_device_flashlight_desc">
+		<text>Ручной фонарь используется обычно новичками. При использовании даёт возможность стрелять только из пистолета.\n \n%c[0,140,140,140]ХАРАКТЕРИСТИКИ:\n%c[0,153,255,255] • %c[0,140,140,140] технологическое приспособление\n%c[0,153,255,255] • %c[0,140,140,140] умеренное потребление энергии</text>
+	</string>
+	<string id="st_device_flashlight_name">
+		<text>Ручной фонарик</text>
+	</string>
 	<string id="st_drug_anabiotic">
 		<text>Анабиотик</text>
 	</string>

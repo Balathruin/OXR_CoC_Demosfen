@@ -1,6 +1,6 @@
 [spawn_loadout] \n
 wpn_ak74 = 1, silencer \n
-wpn_svd = 1, silencer \n
+wpn_svd_pso1m2 = 1, silencer \n
 wpn_g36 = 1, silencer \n
 wpn_galil = 1, silencer \n
 wpn_bizon = 1, silencer \n

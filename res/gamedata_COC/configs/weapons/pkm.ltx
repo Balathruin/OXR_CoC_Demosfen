@@ -1,0 +1,280 @@
+; Пулемет Калашников модернизированый (6П6)
+;-(TrickSR)-----------------------------------------
+; калибр 				7.62x54 мм
+; длина ствола 				645 мм
+; магазин				100, 200, 250 на ленте
+; вес без магазина			7.5 кг
+; вес с пустым коробом на 100 патронов	8.1 кг
+; вес с пустым коробом на 200 патронов	9.94 кг
+; максимальная дальность стрельбы	3800 м
+; эффективная дальность стрельбы	800 м
+; прицельная дальность			1500 м
+; дульная скорость пули			825 м/с
+; темп стрельбы				650 в/м
+;---------------------------------------------------
+[wpn_pkm]:default_weapon_params,wpn_pkm_sounds
+GroupControlSection			= spawn_group
+$spawn					= "weapons\pkm"
+$npc					= on
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_AK74
+description				= st_wpn_pkm_descr
+
+scopes 					= none
+parent_section  			= wpn_pkm
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 10
+
+sprint_allowed				= true
+
+inv_name					= st_wpn_pkm
+inv_name_short				= st_wpn_pkm
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 6
+inv_grid_x                                         = 40
+inv_grid_y                                         = 4
+
+upgr_icon_x				= 1450
+upgr_icon_y				= 700
+upgr_icon_width				= 300
+upgr_icon_height 				= 100
+
+kill_msg_x					= 80
+kill_msg_y					= 59
+kill_msg_width				= 87
+kill_msg_height				= 24
+
+cost					= 70000
+weapon_class				= heavy_weapon
+inv_weight					= 8.1
+hud					= wpn_pkm_hud
+visual					= dynamics\weapons\wpn_pkm\wpn_pkm.ogf
+
+upgrades               		 		= up_gr_firstab_pkm, up_gr_seconab_pkm, up_gr_thirdab_pkm, up_gr_fourtab_pkm, up_gr_fifthab_pkm
+installed_upgrades      			=
+upgrade_scheme          			= upgrade_scheme_pkm
+
+ph_mass					= 8
+ammo_class				= ammo_pkm_100
+
+startup_ammo				= 100
+ammo_current				= 600
+ammo_elapsed				= 100
+ammo_limit				= 700
+ammo_mag_size				= 100
+
+fire_modes				= 15, -1
+
+grenade_class				= ammo_m209
+
+launch_speed				= 0
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power					= 0.55
+;hit_impulse				= 10
+hit_type					= fire_wound
+fire_distance				= 1000
+bullet_speed				= 825
+rpm					= 650
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 5.0
+
+misfire_probability				= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 			= 0.002
+misfire_end_prob	 			= 0.03
+condition_shot_dec				= 0.0001
+condition_queue_shot_dec			= 0.0001
+
+zoom_dof					= 0.5, 1.0, 180
+reload_dof				= 0, 0.5, 5, 1.7
+
+fire_dispersion_base				= 0.35
+fire_dispersion_condition_factor		= 2
+control_inertion_factor			= 2.0f
+crosshair_inertion				= 7.70
+
+cam_return				= 0
+cam_relax_speed				= 15
+cam_relax_speed_ai				= 360
+cam_dispersion				= 0.33
+cam_dispersion_inc				= 0.23
+cam_dispersion_frac				= 1.0
+cam_max_angle				= 10.0
+cam_max_angle_horz				= 50.0
+cam_step_angle_horz				= 0.25
+
+zoom_cam_relax_speed			= 15
+zoom_cam_relax_speed_ai			= 360
+zoom_cam_dispersion			= 0.23
+zoom_cam_dispersion_inc			= 0.18
+zoom_cam_dispersion_frac			= 0.7
+zoom_cam_max_angle			= 10.0
+zoom_cam_max_angle_horz			= 50.0
+zoom_cam_step_angle_horz			= 0.30
+
+PDM_disp_base				= 1.0
+PDM_disp_vel_factor				= 3.0
+PDM_disp_accel_factor			= 3.0
+PDM_disp_crouch				= 1.0
+PDM_disp_crouch_no_acc			= 1.0
+
+min_radius				= 30
+max_radius				= 90
+
+holder_range_modifier			= 1.0
+holder_fov_modifier				= 1.0
+
+hit_probability_gd_novice			= 0.45
+hit_probability_gd_stalker			= 0.55
+hit_probability_gd_veteran			= 0.65
+hit_probability_gd_master			= 0.75
+
+slot					= 2
+animation_slot				= 2
+
+position					= -0.027, -0.097, 0.042
+orientation				= 0, -2, 0
+
+fire_point					= 0, 0.158, 0.845
+fire_point2				= 0, 0.097, 0.722
+
+flame_particles				= weapons\generic_weapon05
+smoke_particles				= weapons\generic_shoot_00
+grenade_flame_particles			= weapons\generic_weapon01
+
+shell_point				= -0.02,0.167,0.082
+shell_dir					= 0, 0, 0.4
+shell_particles	 			= weapons\762x54l
+
+strap_position				= -0.26, -0.11, 0.25
+strap_orientation				= -15, -9, 110
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= false
+light_color				= 0.6, 0.5, 0.3
+light_range				= 5
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time					= 0.2
+
+scope_status				= 0
+silencer_status				= 0
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time				= 0.3
+scope_zoom_factor                        = 1.25
+
+silencer_hit_power				= 0
+silencer_hit_impulse				= 1
+silencer_fire_distance			= 1
+silencer_bullet_speed			= 1
+
+silencer_smoke_particles 			= amik\weapons\smoke_particles\silencer_smoke_particles_02
+
+silencer_light_color				= 0.6,0.5,0.3
+silencer_light_range				= 0.01
+silencer_light_var_color			= 0.05
+silencer_light_var_range			= 0.5
+silencer_light_time				= 0.2
+
+[wpn_pkm_hud]:hud_base
+zoom_hide_crosshair     		= true
+attach_place_idx        		= 0
+item_visual             		= dynamics\weapons\wpn_pkm\wpn_pkm_hud.ogf
+
+hands_position				= -0.044,-0.18,0.14
+hands_orientation			= 2,2,0
+
+hands_position_16x9			= -0.044,-0.18,0.14
+hands_orientation_16x9			= 2,2,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos 			= -0.1161,0.05345,-0.1
+aim_hud_offset_rot 			= 0.03895,0.0352,0.0
+
+aim_hud_offset_pos_16x9 		= -0.1161,0.05345,-0.1
+aim_hud_offset_rot_16x9 		= 0.03895,0.0352,0.0
+
+shell_point				= 0,0,0
+shell_dir       			= 0,1,0
+shell_bone				= gilza
+
+fire_point				= 0,0,0
+fire_bone      				= muzzle
+fire_point2				= 0,0,0
+fire_bone2				= wpn_body
+
+anm_show             			= pkm_draw
+anm_hide             			= pkm_holster
+anm_idle             			= pkm_idle
+anm_idle_sprint         		= pkm_idle_sprint
+anm_idle_moving 			= pkm_idle_moving
+anm_idle_moving_crouch			= pkm_idle_crouch
+anm_shots               		= pkm_shoot, shoot
+anm_reload              		= pkm_reload, reload
+anm_reload_empty        		= pkm_reload, reload
+anm_idle_aim           			= pkm_idle_aim
+anm_bore				= pkm_idle_aim
+
+gl_hud_offset_pos 			= 0,0,0
+gl_hud_offset_rot 			= 0,0,0
+
+gl_hud_offset_pos_16x9 			= 0,0,0
+gl_hud_offset_rot_16x9 			= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+;-----------------------------------------------------------------------------
+; Уникальные
+;-----------------------------------------------------------------------------
+[wpn_pkm_zulus]:wpn_pkm
+$spawn						= "weapons\pkm_zulus"
+
+description					= st_wpn_pkp_descr
+
+scopes 						= none
+parent_section  			= wpn_pkm_zulus
+
+inv_name					= st_wpn_pkp
+inv_name_short				= st_wpn_pkp
+
+inv_grid_width 				= 6
+inv_grid_height				= 2
+inv_grid_x     				= 40
+inv_grid_y     				= 6
+
+upgr_icon_x					= 1450
+upgr_icon_y					= 1750
+
+cost						= 90000
+weapon_class				= heavy_weapon
+inv_weight					= 8.8
+hud							= wpn_pkp_hud
+visual						= dynamics\weapons\wpn_pkm\wpn_pkp.ogf
+
+hit_power					= 0.69
+fire_distance				= 1000
+
+fire_dispersion_base		= 0.3
+
+[wpn_pkp_hud]:wpn_pkm_hud
+item_visual             		= dynamics\weapons\wpn_pkm\wpn_pkp_hud.ogf
+
+aim_hud_offset_pos			= -0.116,0.053,-0.1
+aim_hud_offset_rot			= 0.026,0.035,0
+
+aim_hud_offset_pos_16x9 		= -0.116,0.053,-0.1
+aim_hud_offset_rot_16x9 		= 0.026,0.035,0

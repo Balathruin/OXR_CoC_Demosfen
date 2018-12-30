@@ -21,7 +21,7 @@
 		<visual>actors\stalker_monolith\stalker_monolith_3</visual>
 		<supplies>
         [spawn] \n
-        wpn_vintorez = 1 \n
+        wpn_vintorez_9x39scope = 1 \n
         ammo_9x39_ap = 3 \n
         wpn_colt1911 = 1 \n
         ammo_11.43x23_hydro = 1 \n

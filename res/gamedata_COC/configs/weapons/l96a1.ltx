@@ -1,0 +1,231 @@
+; Снайперская винтовка Accuracy International L96 A1 / Arctic Warfare
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 					7.62x51 мм
+; длина ствола 				660 мм
+; магазин					10
+; вес с пустым магазином			6.8 кг
+; вес с пустым магазином и опт. прицелом		7.28 кг
+; максимальная дальность стрельбы		3725 м
+; эффективная дальность стрельбы		800 м
+; прицельная дальность			1000 м
+; дульная скорость пули			853 м/с
+; темп стрельбы				15-20 в/м
+;---------------------------------------------------
+[wpn_l96]:default_weapon_params,wpn_l96a1_sounds
+GroupControlSection			= spawn_group
+$spawn					= "weapons\l96a1"
+$npc					 = on
+$prefetch 		 		= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_SVD
+description				= st_wpn_l96a1_descr
+
+scopes 					= none
+parent_section  			= wpn_l96
+
+ef_main_weapon_type			= 3
+ef_weapon_type				= 11
+
+inv_name				= st_wpn_l96a1
+inv_name_short				= st_wpn_l96a1
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 6
+inv_grid_x                                         = 46
+inv_grid_y                                         = 2
+	
+upgr_icon_x				= 1750
+upgr_icon_y				= 100
+upgr_icon_width				= 300
+upgr_icon_height 				= 100
+
+kill_msg_x				= 0
+kill_msg_y				= 0
+kill_msg_width				= 98
+kill_msg_height				= 23
+
+cost					= 20000
+weapon_class				= sniper_rifle
+inv_weight				= 7.28
+hud					= wpn_l96_hud
+visual					= dynamics\weapons\wpn_l96\wpn_l96.ogf
+
+upgrades					= up_gr_firstab_svd, up_gr_seconab_svd, up_gr_thirdab_svd, up_gr_fourtab_svd, up_gr_fourtcd_svd, up_gr_fourtef_svd
+installed_upgrades				=
+upgrade_scheme				= upgrade_scheme_svd
+
+ph_mass			 		= 7
+
+ammo_class				= ammo_338_lapua
+
+startup_ammo				= 10
+ammo_current				= 10
+ammo_elapsed				= 0
+ammo_limit				= 10
+ammo_mag_size				= 10
+
+fire_modes				= 1
+
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power 				= 0.98
+;hit_impulse		 		= 10
+hit_type 					= fire_wound
+fire_distance				= 1000
+bullet_speed				= 853
+rpm					= 30
+rpm_empty_click				= 200
+
+use_aim_bullet				= true
+time_to_aim				= 1.0
+
+misfire_probability				= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 			= 0.0055
+misfire_end_prob	 			= 0.055
+condition_shot_dec				= 0.0055
+condition_queue_shot_dec			= 0.0055
+
+;zoom_dof					= 0.5, 1.0, 350
+reload_dof					= 0.0, 0.5, 5, 2.2
+
+fire_dispersion_base				= 0.1
+fire_dispersion_condition_factor		= 1
+control_inertion_factor				= 2.2f
+crosshair_inertion				= 9
+
+cam_return				= 1
+cam_relax_speed				= 4.5
+cam_relax_speed_ai				= 360
+cam_dispersion				= 2.5
+cam_dispersion_inc				= 2.5
+cam_dispersion_frac				= 1.0
+cam_max_angle				= 15.0
+cam_max_angle_horz				= 3.0
+cam_step_angle_horz				= 0.25
+
+zoom_cam_relax_speed			= 0.75
+zoom_cam_relax_speed_ai			= 120.75
+zoom_cam_dispersion			= 0.8
+zoom_cam_dispersion_inc			= 0.8
+zoom_cam_dispersion_frac			= 1.0
+zoom_cam_max_angle			= 10.0
+zoom_cam_max_angle_horz			= 5.0
+zoom_cam_step_angle_horz			= 0.25
+
+PDM_disp_base 				= 1.3
+PDM_disp_vel_factor 			= 1.5
+PDM_disp_accel_factor 			= 1.5
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 			= 1.0
+
+min_radius				= 50
+max_radius				= 90
+
+holder_range_modifier			= 2.00
+holder_fov_modifier				= 0.75
+
+hit_probability_gd_novice			= 0.55
+hit_probability_gd_stalker			= 0.65
+hit_probability_gd_veteran			= 0.75
+hit_probability_gd_master			= 0.85
+
+slot					= 2
+animation_slot				= 2
+
+position					= -0.026, -0.130, 0.00
+orientation					= 0, 0, 0
+
+fire_point					= 0.0, 0.195, 0.777
+fire_point2					= 0.0, 0.195, 0.777
+
+flame_particles				= weapons\generic_weapon06
+smoke_particles				= weapons\generic_shoot_00
+
+shell_point		 			= 0.0, 0.129, 0.192
+shell_dir		 			= 0.0, 0.0, 0.4
+
+strap_position				= -0.15,-0.15,0.45
+strap_orientation				= -25,-189,65
+strap_bone0				= bip01_spine2
+strap_bone1				= bip01_spine1
+
+light_disabled				= false
+light_color		 			= 0.6, 0.5, 0.3
+light_range		 		= 4.0
+light_var_color		 		= 0.05
+light_var_range				= 0.5
+light_time 		 			= 0.2
+
+scope_status				= 1
+silencer_status				= 0
+grenade_launcher_status			= 0
+
+zoom_enabled				= true
+zoom_rotate_time			= 0.25
+scope_zoom_factor       = 6
+scope_dynamic_zoom			= on
+
+scope_texture				= wpn_crosshair_mark4
+scope_name 				= wpn_addon_scope
+scope_x 				= 49
+scope_y 				= 7
+
+silencer_name				= wpn_addon_silencer
+silencer_x                  		= 281
+silencer_y                  		= 17
+
+silencer_smoke_particles 		= amik\weapons\smoke_particles\silencer_smoke_particles_00
+
+silencer_light_color			= 0.6, 0.5, 0.3
+silencer_light_range			= 0.01
+silencer_light_var_color		= 0.05
+silencer_light_var_range		= 0.5
+silencer_light_time 			= 0.2
+
+[wpn_l96_hud]:hud_base
+zoom_hide_crosshair			= true
+
+attach_place_idx			= 0
+item_visual				= dynamics\weapons\wpn_l96\wpn_l96_hud.ogf
+
+hands_position				= -0.04,-0.185,0.2
+hands_orientation			= 0,0,0
+
+hands_position_16x9			= -0.04,-0.185,0.2
+hands_orientation_16x9			= 0,0,0
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos	 		= -0.1118,0.057,-0.002
+aim_hud_offset_rot			= 0,0,0
+
+aim_hud_offset_pos_16x9 		= -0.1118,0.057,-0.002
+aim_hud_offset_rot_16x9 		= 0,0,0
+
+shell_point				= 0,0,0
+shell_dir               		= 0,1,0
+shell_bone				= gilza
+
+fire_point				= 0,0,0
+fire_bone               		= muzzle
+
+anm_show				= l96_draw
+anm_hide             			= l96_holster
+anm_shots				= l96_shoot, shoot
+anm_reload				= l96_reload, reload
+anm_bore					= l96_aim
+anm_idle             				= l96_idle
+anm_idle_aim				= l96_aim
+anm_idle_moving 				= l96_move
+anm_idle_sprint				= l96_sprint
+
+gl_hud_offset_pos				= 0,0,0
+gl_hud_offset_rot				= 0,0,0
+
+lean_hud_offset_pos				= 0,0,0
+lean_hud_offset_rot				= 0,0,0

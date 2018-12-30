@@ -121,10 +121,10 @@
 	<string id="mutant_tushkano_head">
 		<text>Голова тушкана</text>
 	</string>
-	<string id="mutant_part_controller_brain_tissue_description">
+	<string id="mutant_controller_brain_description">
 		<text>Контролёры обладают мощными умственными способностями и можно с уверенностью сказать, что эти силы зарождаются в их мозге. Что интересно, каждый мутант, обладающий такого рода способностями, связанными с пси-волнами, имеет подобную структуру мозга. Учёные щедро заплатят за образцы таких тканей. Мозг имеет запах прокисшей тыквы.\n \n%c[0,140,140,140]ХАРАКТЕРИСТИКИ:\n%c[0,153,255,255] • %c[0,140,140,140] мутировавшая часть тела\n%c[0,153,255,255] • %c[0,140,140,140] очень редкий научный экземпляр\n%c[0,153,255,255] • %c[0,140,140,140] очень высокая ценность</text>
 	</string>
-	<string id="mutant_part_controller_brain_tissue">
+	<string id="mutant_controller_brain">
 		<text>Мозг контролёра</text>
 	</string>
 	<string id="mutant_controller_hand_description">

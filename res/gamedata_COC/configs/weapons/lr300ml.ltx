@@ -1,0 +1,367 @@
+; Американский автомат LR-300ML
+;-(TrickSR, Gaz1k)-----------------------------------------
+; калибр 				5.56x45 мм
+; длина ствола 				292 мм
+; магазин				30
+; вес с пустым магазином		2.84 кг
+; максимальная дальность стрельбы	3200 м
+; эффективная дальность стрельбы	300 м
+; прицельная дальность			300 м
+; дульная скорость пули			830 м/с
+; темп стрельбы				850-950 в/м
+;---------------------------------------------------
+[wpn_lr300]:default_weapon_params,wpn_lr300_sounds
+GroupControlSection			= spawn_group
+$spawn					= "weapons\lr300"
+$npc 					= on
+$prefetch				= 8
+scheduled				= off
+cform					= skeleton
+class					= WP_AK74
+description				= st_wpn_lr300_descr
+
+scopes 					= ac10632, ac11090, acog, eot, c-more
+parent_section  			= wpn_lr300
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 8
+
+inv_name 				= st_wpn_lr300
+inv_name_short				= st_wpn_lr300
+
+inv_grid_height                                    = 2
+inv_grid_width                                     = 5
+inv_grid_x                                         = 33
+inv_grid_y                                         = 22
+
+upgr_icon_x				= 600
+upgr_icon_y				= 100
+upgr_icon_width				= 300
+upgr_icon_height 				= 100
+
+kill_msg_x					= 175
+kill_msg_y					= 0
+kill_msg_width				= 82
+kill_msg_height				= 28
+
+cost 					= 8000
+weapon_class				= assault_rifle
+inv_weight				= 2.84
+hud					= wpn_lr300_hud
+visual					= dynamics\weapons\wpn_lr300\wpn_lr300.ogf
+
+upgrades                		= up_gr_firstab_lr300, up_gr_seconab_lr300, up_gr_thirdab_lr300, up_gr_fourtab_lr300, up_gr_fifthab_lr300
+installed_upgrades      		=
+upgrade_scheme          		= upgrade_scheme_lr300
+
+ph_mass					= 3
+
+ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap	
+
+startup_ammo				= 90
+ammo_current				= 180
+ammo_elapsed				= 30
+ammo_limit				= 210
+ammo_mag_size				= 30
+
+fire_modes				= 1, -1
+
+grenade_class				= ammo_m209
+
+grenade_vel 				= 76
+launch_speed				= 76
+hand_dependence				= 1
+single_handed				= 0
+
+hit_power					= 0.25
+;hit_impulse				= 10
+hit_type					= fire_wound
+fire_distance				= 1000
+bullet_speed				= 830
+rpm					= 900				
+rpm_empty_click				= 200
+
+use_aim_bullet				= false
+time_to_aim				= 2.0
+
+misfire_probability				= 0.005
+misfire_start_condition			= 0.6
+misfire_end_condition			= 0.1
+misfire_start_prob	 			= 0.006	
+misfire_end_prob	 			= 0.072	
+condition_shot_dec				= 0.000125
+condition_queue_shot_dec			= 0.0002
+
+zoom_dof					= 0.5, 1.0, 180
+reload_dof					= 0.0, 0.5, 5, 2
+
+fire_dispersion_base				= 0.25
+fire_dispersion_condition_factor		= 2
+control_inertion_factor			= 1.15f
+crosshair_inertion				= 5.25
+
+cam_return				= 0
+cam_relax_speed				= 5
+cam_relax_speed_ai				= 360
+cam_dispersion				= 0.3
+cam_dispersion_inc				= 0.15
+cam_dispersion_frac				= 0.7
+cam_max_angle				= 50.0
+cam_max_angle_horz				= 10.0
+cam_step_angle_horz				= 3.0
+
+zoom_cam_relax_speed			= 5
+zoom_cam_relax_speed_ai			= 360
+zoom_cam_dispersion			= 0.25
+zoom_cam_dispersion_inc			= 0.12
+zoom_cam_dispersion_frac			= 1.0
+zoom_cam_max_angle			= 50.0
+zoom_cam_max_angle_horz			= 10.0
+zoom_cam_step_angle_horz			= 2
+
+PDM_disp_base 				= 0.5
+PDM_disp_vel_factor 			= 2.0
+PDM_disp_accel_factor 			= 2.0
+PDM_disp_crouch	 			= 1.0
+PDM_disp_crouch_no_acc 			= 1.0
+
+min_radius				= 30
+max_radius				= 50
+
+holder_range_modifier			= 1.00
+holder_fov_modifier				= 1.00
+
+slot 			 		= 2
+animation_slot				= 2
+
+position                   				= -0.026, -0.130, 0
+orientation                				= 0, 0, 0
+
+fire_point              				= 0, 0.199, 0.575
+fire_point2             				= 0, 0.199, 0.575
+
+flame_particles				= amik\weapons\nato_shoot_00
+smoke_particles				= amik\weapons\nato_smoke_00
+grenade_flame_particles			= weapons\generic_weapon01
+
+shell_point             				= 0.12,0,0.07
+shell_dir               				= 0, 0, 0.4
+shell_particles         				= weapons\556x45
+
+strap_position         				= -0.15, -0.37, 0.2
+strap_orientation      				= -10, -5, 10
+strap_bone0             				= bip01_spine2
+strap_bone1             				= bip01_spine1
+
+light_disabled				= false
+light_color					= 0.6, 0.5, 0.3
+light_range				= 5
+light_var_color				= 0.05
+light_var_range				= 0.1
+light_time					= 0.2
+
+scope_status				= 0
+silencer_status				= 2
+grenade_launcher_status			= 2
+
+zoom_enabled				= true
+zoom_rotate_time				= 0.2
+scope_zoom_factor                        = 1.25
+
+scopes_sect				= scope_susat_lr, scope_susat_x1.6_lr, scope_susat_custom_lr, scope_susat_dusk_lr, scope_susat_night_lr
+
+grenade_launcher_name			= wpn_addon_grenade_launcher_m203
+grenade_launcher_x          		= 135
+grenade_launcher_y          		= 29
+
+silencer_name				= sil_nato
+silencer_x				= 212
+silencer_y				= 14
+
+silencer_hit_power 			= 0.25
+silencer_hit_impulse	 		= 20
+silencer_fire_distance 			= 1000
+silencer_bullet_speed	 		= 830
+
+silencer_smoke_particles 		= amik\weapons\smoke_particles\silencer_smoke_particles_00
+
+silencer_light_color			= 0.6, 0.5, 0.3
+silencer_light_range			= 0.01
+silencer_light_var_color		= 0.05
+silencer_light_var_range		= 0.5
+silencer_light_time			= 0.2
+
+[wpn_lr300_hud]
+zoom_hide_crosshair        		= true
+attach_place_idx        		= 0
+item_visual                		= dynamics\weapons\wpn_lr300\wpn_lr300_hud.ogf
+
+hands_position				= -0.014,-0.21,0.13
+hands_orientation			= 0.55,2.4,0.15
+	
+hands_position_16x9			= -0.014,-0.21,0.13
+hands_orientation_16x9			= 0.55,2.4,0.15
+
+item_position				= 0,0,0
+item_orientation			= 0,0,0
+
+aim_hud_offset_pos	 		= -0.1388,0.0672,-0.15
+aim_hud_offset_rot			= 0.03985,0.0097,0
+
+aim_hud_offset_pos_16x9 		= -0.1388,0.0672,-0.15
+aim_hud_offset_rot_16x9 		= 0.03985,0.0097,0
+
+gl_hud_offset_pos			= 0,0,0
+gl_hud_offset_rot			= 0,0,0
+
+gl_hud_offset_pos_16x9			= 0,0,0
+gl_hud_offset_rot_16x9			= 0,0,0
+
+shell_point				= 0.028,0.078,0.113
+shell_dir				= 0,1,0
+shell_bone				= wpn_body
+
+fire_point				= 0,0.072761,0.524496
+fire_bone				= wpn_body
+fire_point2				= 0,-0.009,0.601
+fire_bone2				= wpn_body
+
+anm_show                		= lancew_lr300_draw
+anm_hide                		= lancew_lr300_holster
+anm_idle                		= lancew_lr300_idle
+anm_idle_sprint         		= lancew_lr300_sprint
+anm_idle_moving        	 		= lancew_lr300_moving
+anm_shots               		= lancew_lr300_shoot, shoot
+anm_reload              		= lancew_lr300_reload, reload
+anm_idle_aim            		= lancew_lr300_idle_aim, idle_aim
+anm_switch              		= lancew_lr300_switch_off
+anm_switch_g            		= lancew_lr300_switch_on
+anm_bore                		= lancew_lr300_no_reload
+anm_show_w_gl           		= lancew_lr300_draw_w_gl
+anm_hide_w_gl           		= lancew_lr300_holster_w_gl
+anm_idle_w_gl           		= lancew_lr300_idle_w_gl
+anm_shots_w_gl          		= lancew_lr300_shoot_w_gl, shoot
+anm_reload_w_gl         		= lancew_lr300_reload_w_gl, reload
+anm_idle_w_gl_aim       		= lancew_lr300_idle_aim_w_gl, idle_aim
+anm_idle_sprint_w_gl    		= lancew_lr300_sprint_w_gl
+anm_idle_moving_w_gl    		= lancew_lr300_moving_w_gl
+anm_bore_w_gl           		= lancew_lr300_no_reload_w_gl
+anm_show_g              		= lancew_lr300_draw_g
+anm_hide_g              		= lancew_lr300_holster_g		
+anm_idle_g              		= lancew_lr300_idle_g			
+anm_reload_g           	 		= lancew_lr300_reload_g, reload_g
+anm_idle_g_aim          		= lancew_lr300_idle_aim_g	
+anm_shots_g             		= lancew_lr300_shoot_g, shoot_g
+anm_idle_sprint_g       		= lancew_lr300_sprint_g
+anm_idle_moving_g       		= lancew_lr300_moving_g
+anm_bore_g              		= lancew_lr300_no_reload_g
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+;-----------------------------------------------------------------------------
+; Аддоны
+;-----------------------------------------------------------------------------
+[wpn_lr300_ac10632]:wpn_lr300
+$spawn             			= "weapons\lr300_ac10632"
+visual					= dynamics\weapons\wpn_lr300\wpn_lr300_ac10632.ogf
+hud					= wpn_lr300_ac10632_hud
+
+inv_weight				= 2.955
+scope_zoom_factor                        = 1.25
+scope_x					= 84
+scope_y					= -6
+
+[wpn_lr300_ac10632_hud]:wpn_lr300_hud
+item_visual            	 		= dynamics\weapons\wpn_lr300\wpn_lr300_ac10632_hud.ogf
+
+aim_hud_offset_pos 			= -0.139,0.0763,-0.15
+aim_hud_offset_pos_16x9 		= -0.139,0.0763,-0.15
+
+anm_shots               		= lancew_lr300_shoot_scope, shoot
+anm_idle_aim            		= lancew_lr300_idle_aim, idle_aim
+anm_shots_w_gl          		= lancew_lr300_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       		= lancew_lr300_idle_aim_w_gl, idle_aim
+
+[wpn_lr300_ac11090]:wpn_lr300
+$spawn             			= "weapons\lr300_ac11090"
+visual					= dynamics\weapons\wpn_lr300\wpn_lr300_ac11090.ogf
+hud					= wpn_lr300_ac11090_hud
+
+inv_weight				= 3.09
+scope_zoom_factor                        = 1.25
+scope_x					= 84
+scope_y					= -6
+
+[wpn_lr300_ac11090_hud]:wpn_lr300_hud
+item_visual            	 		= dynamics\weapons\wpn_lr300\wpn_lr300_ac11090_hud.ogf
+
+aim_hud_offset_pos	 		= -0.1387,0.0668,-0.12
+aim_hud_offset_rot			= 0.04,0.0097,0
+
+aim_hud_offset_pos_16x9 		= -0.1387,0.0668,-0.12
+aim_hud_offset_rot_16x9 		= 0.04,0.0097,0
+
+anm_shots               		= lancew_lr300_shoot_scope, shoot
+anm_idle_aim            		= lancew_lr300_idle_aim, idle_aim
+anm_shots_w_gl          		= lancew_lr300_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       		= lancew_lr300_idle_aim_w_gl, idle_aim
+
+[wpn_lr300_acog]:wpn_lr300
+$spawn					= "weapons\lr300_acog"
+
+inv_weight				= 3.24
+
+scope_status				= 1
+scope_texture				= wpn_crosshair_acog
+scope_zoom_factor       = 4
+scope_x					= 84
+scope_y					= -6
+
+[wpn_lr300_eot]:wpn_lr300
+$spawn					= "weapons\lr300_eot"
+visual					= dynamics\weapons\wpn_lr300\wpn_lr300_eot.ogf
+hud					= wpn_lr300_eot_hud
+
+inv_weight				= 3.15
+scope_zoom_factor                        = 1.25
+scope_x					= 84
+scope_y					= -6
+
+[wpn_lr300_eot_hud]:wpn_lr300_hud
+item_visual				= dynamics\weapons\wpn_lr300\wpn_lr300_eot_hud.ogf
+
+anm_shots               		= lancew_lr300_shoot_scope, shoot
+anm_idle_aim            		= lancew_lr300_idle_aim, idle_aim
+anm_shots_w_gl          		= lancew_lr300_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       		= lancew_lr300_idle_aim_w_gl, idle_aim
+
+aim_hud_offset_pos	 		=  -0.1367,0.0647,-0.06
+aim_hud_offset_rot			= 0.0405,0.0065,0
+
+aim_hud_offset_pos_16x9 		=  -0.1367,0.0647,-0.06
+aim_hud_offset_rot_16x9 		= 0.0405,0.0065,0
+
+[wpn_lr300_c-more]:wpn_lr300
+$spawn					= "weapons\lr300_c-more"
+visual					= dynamics\weapons\wpn_lr300\wpn_lr300_c-more.ogf
+hud					= wpn_lr300_c-more_hud
+
+inv_weight				= 3.024
+
+scope_zoom_factor                        = 1.25
+scope_x					= 84
+scope_y					= -6
+
+[wpn_lr300_c-more_hud]:wpn_lr300_hud
+item_visual				= dynamics\weapons\wpn_lr300\wpn_lr300_c-more_hud.ogf
+
+anm_shots               		= lancew_lr300_shoot_scope, shoot
+anm_idle_aim            		= lancew_lr300_idle_aim, idle_aim
+anm_shots_w_gl          		= lancew_lr300_shoot_scope_w_gl, shoot
+anm_idle_w_gl_aim       		= lancew_lr300_idle_aim_w_gl, idle_aim
+
+aim_hud_offset_pos	 		= -0.13815,0.0735,-0.12
+aim_hud_offset_rot			= 0.0325,0.0087,0
+
+aim_hud_offset_pos_16x9 		= -0.13815,0.0735,-0.12
+aim_hud_offset_rot_16x9 		= 0.0325,0.0087,0

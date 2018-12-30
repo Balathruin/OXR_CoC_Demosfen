@@ -866,7 +866,7 @@
     <snd_config>characters_voice\human_03\monolith\</snd_config>
     <supplies>
         [spawn] \n
-        wpn_vintorez \n
+        wpn_vintorez_9x39scope \n
         ammo_9x39_ap = 3 \n
     </supplies>
     <start_dialog>hello_dialog</start_dialog>

@@ -1,7 +1,7 @@
 [spawn_loadout] \n
 wpn_ak74_pso = 1 \n
 wpn_ak74u = 1, silencer \n
-wpn_svd, silencer = 1 \n
+wpn_svd_pso1m2, silencer = 1 \n
 wpn_mp133 = 1 \n
 wpn_saiga_kobra = 1 \n
 wpn_ak74m = 1, silencer \n
