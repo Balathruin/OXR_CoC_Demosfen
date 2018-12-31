@@ -111,47 +111,13 @@
 	<!-- Official theme by Noxx -->
 	<!-- https://www.youtube.com/watch?v=zP-SQJuSFos -->
 	<menu_sound random="0" >
-		<menu_music>music\menu\menu_0</menu_music>
-		<menu_music>music\menu\menu_1</menu_music>
-		<menu_music>music\menu\menu_2</menu_music>
-		<menu_music>music\menu\menu_3</menu_music>
-		<menu_music>music\menu\menu_4</menu_music>
-		<menu_music>music\menu\menu_5</menu_music>
-		<menu_music>music\menu\menu_6</menu_music>
-		<menu_music>music\menu\menu_7</menu_music>
-		<menu_music>music\menu\menu_8</menu_music>
-		<menu_music>music\menu\menu_9</menu_music>
-		<menu_music>music\menu\menu_10</menu_music>
-
-		<menu_music>music\menu\menu_11</menu_music>
-		<menu_music>music\menu\menu_12</menu_music>
-		<menu_music>music\menu\menu_13</menu_music>
-		<menu_music>music\menu\menu_14</menu_music>
-		<menu_music>music\menu\menu_15</menu_music>
-		<menu_music>music\menu\menu_16</menu_music>
-		<menu_music>music\menu\menu_17</menu_music>
-		<menu_music>music\menu\menu_18</menu_music>
-		<menu_music>music\menu\menu_19</menu_music>
-		<menu_music>music\menu\menu_20</menu_music>
-		
-		<menu_music>music\menu\menu_21</menu_music>
-		<menu_music>music\menu\menu_22</menu_music>
-		<menu_music>music\menu\menu_23</menu_music>
-		<menu_music>music\menu\menu_24</menu_music>
-		<menu_music>music\menu\menu_25</menu_music>
-		<menu_music>music\menu\menu_26</menu_music>
-		<menu_music>music\menu\menu_27</menu_music>
-		<menu_music>music\menu\menu_28</menu_music>
-		<menu_music>music\menu\menu_29</menu_music>
-		<menu_music>music\menu\menu_30</menu_music>
-		<menu_music>music\menu\menu_31</menu_music>
-		<menu_music>music\menu\menu_32</menu_music>
-		<menu_music>music\menu\menu_33</menu_music>
-		<menu_music>music\menu\menu_34</menu_music>
-		<menu_music>music\menu\menu_35</menu_music>
-		<menu_music>music\menu\menu_36</menu_music>
-		<menu_music>music\menu\menu_37</menu_music>
-		<menu_music>music\menu\menu_38</menu_music>
+		<menu_music>music\menu_2</menu_music>
+		<menu_music>music\menu_3</menu_music>
+		<menu_music>music\menu_7</menu_music>
+		<menu_music>music\credits</menu_music>
+		<menu_music>music\menu_8</menu_music>
+		<menu_music>music\menu_9</menu_music>
+		<menu_music>music\menu_10</menu_music>
     </menu_sound>
 
 	<static_version x="14" y="740">

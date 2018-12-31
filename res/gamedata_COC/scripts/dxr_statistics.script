@@ -110,6 +110,10 @@ actor_visited_levels = {
 	["labx8"]					= false,
 	["pripyat"]					= false,
 	["zaton"]					= false,
+	["y04_pole"]				= false,
+	["labx7_coll22_1"]			= false,
+	["rein"]			    	= false,
+	["tunnel_lab_1"]			= false,
 	["way_in_zone"]				= false,
 }
 

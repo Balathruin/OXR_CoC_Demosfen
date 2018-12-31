@@ -17,3 +17,4 @@ res/gamedata_COC/changelog_legend.txt
 *.bak
 *.script_old
 *.script_
+*.ltx_
