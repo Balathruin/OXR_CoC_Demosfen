@@ -514,7 +514,7 @@
 	            <cell x="160" y="126" point_x="135" point_y="180"/>
 	        </column>
 	    </template>
-	    <template name="upgrade_scheme_binoc">
+	    <template name="upgrade_scheme_binoc_r7">
 	        <column>
 	            <cell x="0" y="24" point_x="140" point_y="225"/>
 	            <cell x="0" y="100" point_x="150" point_y="195"/>
