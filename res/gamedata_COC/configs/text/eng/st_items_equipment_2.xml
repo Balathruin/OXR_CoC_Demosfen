@@ -134,6 +134,12 @@
 	<string id="st_device_flashlight_name">
 		<text>Ручной фонарик</text>
 	</string>
+	<string id="st_device_tactical_torch_desc">
+		<text>Тактический ручной фонарь. Светит дальше, но имеет все недостатки обычного ручного фонаря.\n \n%c[0,140,140,140]ХАРАКТЕРИСТИКИ:\n%c[0,153,255,255] • %c[0,140,140,140] технологическое приспособление\n%c[0,153,255,255] • %c[0,140,140,140] умеренное потребление энергии</text>
+	</string>
+	<string id="st_device_tactical_torch_name">
+		<text>Тактический ручной фонарик</text>
+	</string>
 	<string id="st_drug_anabiotic">
 		<text>Анабиотик</text>
 	</string>
