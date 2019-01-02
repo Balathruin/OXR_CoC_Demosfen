@@ -177,18 +177,14 @@ quest_item     							 = true
 ;                                †œ¿À¿“ ¿			                                       ;
 ;------------------------------------------------------------------------------------------;
 ;------------------------------------------------------------------------------------------;
-[camp_gear]:identity_immunities
+[item_tent]:identity_immunities
 GroupControlSection                      = spawn_group
 discovery_dependency                     =
 $spawn                                   = "equipments\camp"
 class                                    = II_ATTCH
 cform                                    = skeleton
-visual                                   = dynamics\equipments\item_psevdodog_tail.ogf
-inv_weight                               = 0
 can_trade                                = true
 quest_item                               = false
-
-[item_tent]:camp_gear
 visual                                   = dynamics\equipments\item_tent.ogf
 description                              = st_itm_tent_desc
 inv_weight                               = 2.2
@@ -199,7 +195,6 @@ inv_grid_height                          = 2
 inv_grid_x                               = 6
 inv_grid_y                               = 39
 cost                                     = 2000
-
 
 ;------------------------------------------------------------------------------------------;
 ;                                † ≈¬À¿–Œ¬€≈ œÀ¿—“»Õ€                                      ;
