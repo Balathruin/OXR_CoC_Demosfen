@@ -86,3 +86,6 @@ public:
     virtual void renderable_Render();
 	ref_sound 		m_switch_sound;
 };
+
+#undef script_type_list
+#define script_type_list save_type_list(CTorch)
