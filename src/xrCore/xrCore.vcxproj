@@ -234,6 +234,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+      <StripPrivateSymbols>$(OutDir)stripped\$(TargetName).pdb</StripPrivateSymbols>
     </Link>
     <PostBuildEvent>
       <Command>for /r "$(xrSdkDir)binaries\$(PlatformShortName)\" %%f in (*.dll *.pdb) do copy /y "%%f" "$(OutDir)"</Command>

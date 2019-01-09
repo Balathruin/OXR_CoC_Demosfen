@@ -15,14 +15,15 @@ function on_key_release(key)
 		end
 -------------------------------sinaps start
 		local backpacks = {
-		["equ_backpack"]      = "inv_backpack",
-		["equ_small_pack"]    = "inv_backpack_small",
-		["equ_military_pack"] = "inv_backpack_military",
-		["equ_tourist_pack"]  = "inv_backpack_tourist",
-		["equ_dolg_pack"]     = "inv_backpack_dolg",
-		["equ_free_pack"]     = "inv_backpack_free",
-		["equ_csky_pack"]     = "inv_backpack_csky",
-		["equ_merc_pack"]     = "inv_backpack_merc",
+		["equ_backpack"]            = "inv_backpack",
+		["equ_small_pack"]          = "inv_backpack_small",
+		["equ_military_pack"]       = "inv_backpack_military",
+		["equ_small_military_pack"] = "inv_backpack_small_military",
+		["equ_tourist_pack"]        = "inv_backpack_tourist",
+		["equ_dolg_pack"]           = "inv_backpack_dolg",
+		["equ_free_pack"]           = "inv_backpack_free",
+		["equ_csky_pack"]           = "inv_backpack_csky",
+		["equ_merc_pack"]           = "inv_backpack_merc",
 		}
 
 		local sec = backpacks[backpack:section()]
@@ -182,14 +183,15 @@ end
 function actor_backpack_ui:OnAccept()
 -------------------------------sinaps start
 		local backpacks = {
-		["equ_backpack"]      = "inv_backpack",
-		["equ_small_pack"]    = "inv_backpack_small",
-		["equ_military_pack"] = "inv_backpack_military",
-		["equ_tourist_pack"]  = "inv_backpack_tourist",
-		["equ_dolg_pack"]     = "inv_backpack_dolg",
-		["equ_free_pack"]     = "inv_backpack_free",
-		["equ_csky_pack"]     = "inv_backpack_csky",
-		["equ_merc_pack"]     = "inv_backpack_merc",
+		["equ_backpack"]            = "inv_backpack",
+		["equ_small_pack"]          = "inv_backpack_small",
+		["equ_military_pack"]       = "inv_backpack_military",
+		["equ_small_military_pack"] = "inv_backpack_small_military",
+		["equ_tourist_pack"]        = "inv_backpack_tourist",
+		["equ_dolg_pack"]           = "inv_backpack_dolg",
+		["equ_free_pack"]           = "inv_backpack_free",
+		["equ_csky_pack"]           = "inv_backpack_csky",
+		["equ_merc_pack"]           = "inv_backpack_merc",
 		}
 
 	local sec = backpacks[self.section]
