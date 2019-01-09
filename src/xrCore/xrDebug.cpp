@@ -383,13 +383,9 @@ void xrDebug::Fail(bool& ignoreAlways, const ErrorLocation& loc, const char* exp
 "| |  | | (_| | | | | (_| | (_| |  __/ (_| | || (_| | | |\r\n"
 "\\_|  |_/\\__,_|_| |_|\\__,_|\\__, |\\___|\\__,_\\_| \\__,_|_|_|\r\n"
 "                           __/ |                        \r\n"
-"                         |___/                         \r\n";
+"                          |___/                         \r\n";
     // clang-format on
     Log(managedFail);
-    if (OnCrash)
-    {
-        OnCrash();
-    }
     string4096 assertionInfo;
     GatherInfo(assertionInfo, loc, expr, desc, arg1, arg2);
 
