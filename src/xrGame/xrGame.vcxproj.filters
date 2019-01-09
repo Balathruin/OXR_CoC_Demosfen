@@ -5445,15 +5445,6 @@
     <ClInclude Include="CarWeapon2.h">
       <Filter>Core\Client\Objects\vehicles\Car\CarWeapon2</Filter>
     </ClInclude>
-    <ClInclude Include="CarWeapon3.h">
-      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon3</Filter>
-    </ClInclude>
-    <ClInclude Include="CarWeapon4.h">
-      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon4</Filter>
-    </ClInclude>
-    <ClInclude Include="CarWeapon5.h">
-      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon5</Filter>
-    </ClInclude>
     <ClInclude Include="car_memory.h">
       <Filter>Core\Client\Objects\vehicles\Car\car_memory</Filter>
     </ClInclude>
@@ -6690,6 +6681,9 @@
     <ClInclude Include="ui\UILoadingScreen.h">
       <Filter>UI\Common\LoadingScreen</Filter>
     </ClInclude>
+    <ClInclude Include="CarWeapon3.h" />
+    <ClInclude Include="CarWeapon4.h" />
+    <ClInclude Include="CarWeapon5.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ActorNightVision.cpp">
@@ -8843,15 +8837,6 @@
     <ClCompile Include="CarWeapon2.cpp">
       <Filter>Core\Client\Objects\vehicles\Car\CarWeapon2</Filter>
     </ClCompile>
-    <ClCompile Include="CarWeapon3.cpp">
-      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon3</Filter>
-    </ClCompile>
-    <ClCompile Include="CarWeapon4.cpp">
-      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon4</Filter>
-    </ClCompile>
-    <ClCompile Include="CarWeapon5.cpp">
-      <Filter>Core\Client\Objects\vehicles\Car\CarWeapon5</Filter>
-    </ClCompile>
     <ClCompile Include="car_memory.cpp">
       <Filter>Core\Client\Objects\vehicles\Car\car_memory</Filter>
     </ClCompile>
@@ -9746,6 +9731,9 @@
     <ClCompile Include="ui\UILoadingScreen.cpp">
       <Filter>UI\Common\LoadingScreen</Filter>
     </ClCompile>
+    <ClCompile Include="CarWeapon3.cpp" />
+    <ClCompile Include="CarWeapon4.cpp" />
+    <ClCompile Include="CarWeapon5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ai\monsters\chimera\chimera_attack_state.h">
