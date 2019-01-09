@@ -405,14 +405,15 @@ function actor_on_item_take_from_box(box,obj)
 	-- Backpack section
 -------------------------------sinaps start
 		local backpacks = {
-		["inv_backpack"] = "equ_backpack",
-		["inv_backpack_small"]    = "equ_small_pack",
-		["inv_backpack_military"] = "equ_military_pack",
-		["inv_backpack_tourist"]  = "equ_tourist_pack",
-		["inv_backpack_dolg"]     = "equ_dolg_pack",
-		["inv_backpack_free"]     = "equ_free_pack",
-		["inv_backpack_csky"]     = "equ_csky_pack",
-		["inv_backpack_merc"]     = "equ_merc_pack",
+		["inv_backpack"]                = "equ_backpack",
+		["inv_backpack_small"]          = "equ_small_pack",
+		["inv_backpack_military"]       = "equ_military_pack",
+		["inv_backpack_small_military"] = "equ_small_military_pack",
+		["inv_backpack_tourist"]        = "equ_tourist_pack",
+		["inv_backpack_dolg"]           = "equ_dolg_pack",
+		["inv_backpack_free"]           = "equ_free_pack",
+		["inv_backpack_csky"]           = "equ_csky_pack",
+		["inv_backpack_merc"]           = "equ_merc_pack",
 		}
 
 	local sec = backpacks[box:section()]

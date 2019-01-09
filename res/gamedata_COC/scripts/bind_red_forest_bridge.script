@@ -23,7 +23,7 @@ function bridge_binder:net_spawn(se_abstract)
 	if self.koleso ~= nil then
 		self.koleso:get_physics_object():stop_anim()
 	end
-	--db.add_bridge(self.bridge, self)
+	db.add_bridge(self.bridge, self)
 	self.idle_snd = sound_object("device\\bridge\\bridge_move")
 	self.down_snd = sound_object("device\\bridge\\bridge_down")
 	self.start_snd = sound_object("device\\bridge\\bridge_start")
@@ -81,7 +81,7 @@ function bridge_binder:update(delta)
 	object_binder.update(self, delta)
 	if self.se_koleso_id ~= nil and (self.koleso == nil) and (db.storage[self.se_koleso_id] ~= nil) and (db.storage[self.se_koleso_id].object ~= nil) then
 		self.koleso = db.storage[self.se_koleso_id].object
-		--printf("koleso est'")
+		printf("koleso est'")
 		self.koleso:get_physics_object():stop_anim()
 	end
     if self.anim_time then
@@ -114,7 +114,7 @@ function bridge_binder:animation_end_callback( is_end )
 			self.koleso:get_physics_object():stop_anim()
 		end
 	else
-		db.actor:give_info_portion("red_bridge_actor_out")
+		--db.actor:give_info_portion("red_bridge_actor_out")
 		self.down_snd:play_at_pos( self.object,  self.object:position(), 0, sound_object.s3d)
 		self.bridge_idle = false
 		if self.koleso ~= nil then
