@@ -95,7 +95,7 @@ bool  CFlashlight::CheckCompatibility(CHudItem* itm)
 
 void CFlashlight::HideDevice(bool bFastMode)
 {
-	if (GetState() == eIdle)
+    if (GetState() == eIdle || GetState() == EFlashlightStates::eIdleZoom)
 		ToggleDevice(bFastMode);
 }
 
@@ -130,8 +130,7 @@ void CFlashlight::ToggleDevice(bool bFastMode)
 			}
 		}
 	}
-	else
-        if (GetState() == eIdle)
+	else if (GetState() == eIdle || GetState() == EFlashlightStates::eIdleZoom)
         {
         if (m_switched_on && !m_bFastAnimMode)
             {
