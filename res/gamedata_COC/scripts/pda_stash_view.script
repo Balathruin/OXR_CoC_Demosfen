@@ -77,7 +77,7 @@ local function actor_menu_mode_changed(mode, last_mode)
 					end
 				end
 				coc_treasure_manager.caches[cid] = false
-				xr_statistic.inc_counter("stashes_found")
+				xr_effects.inc_counter("stashes_found")
 				news_manager.send_treasure(1)
 			end
 		end
