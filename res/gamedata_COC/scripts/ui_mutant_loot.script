@@ -92,6 +92,7 @@ function loot_ui:SetMutantImage()
 	poltergeist			= {file="ui\\ui_actor_monsters_pda",x="0",y="400",special="0"},
 	bloodsucker			= {file="ui\\ui_actor_monsters_pda",x="393",y="400",special="0"},
 	controller			= {file="ui\\ui_actor_monsters_pda",x="393",y="800",special="0"},
+	oasis   			= {file="ui\\ui_actor_monsters_pda",x="393",y="800",special="0"},
 	chimera				= {file="ui\\ui_actor_monsters_pda",x="0",y="600",special="0"},
 	tushkano			= {file="ui\\ui_actor_monsters_pda",x="0",y="0",special="0"},
 	rat					= {file="ui\\ui_actor_monsters_pda",x="0",y="0",special="0"},

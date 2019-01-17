@@ -179,6 +179,7 @@ function monster_on_actor_use(obj,who)
 		[clsid.burer_s]			= {"anm_harv1", "anm_harv4", "short"},
 		[clsid.gigant_s]		= {"anm_harv1", "anm_harv4", "short"},
 		[clsid.controller_s]	= {"anm_harv1", "anm_harv4", "long"},
+		[clsid.oasis_s]	        = {"anm_harv1", "anm_harv4", "long"},
 
 		[clsid.snork_s]			= {"anm_harv1", "anm_harv4", "long"},
 		[clsid.fracture_s]		= {"anm_harv1", "anm_harv4", "long"},

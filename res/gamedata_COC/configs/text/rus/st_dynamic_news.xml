@@ -176,6 +176,33 @@
 		<text>Химера</text>
 	</string>
 
+	<!-- Оазис(Леший) -->
+	<string id="st_dyn_news_oasis_1">
+		<text>Лешего</text>
+	</string>
+	<string id="st_dyn_news_oasis_2">
+		<text>На нас напала какая-то хрень деревянная</text>
+	</string>
+	<string id="st_dyn_news_oasis_3">
+		<text>Нарвались на дичь деревянную</text>
+	</string>
+	<string id="st_dyn_news_oasis_4">
+		<text>На нас напала толпа Леших</text>
+	</string>
+	<string id="st_dyn_news_oasis_5">
+		<text>Нарвались на Леших</text>
+	</string>
+	<string id="st_dyn_news_oasis_6">
+		<text>толпа Леших</text>
+	</string>
+	<string id="st_dyn_news_oasis_7">
+		<text>Леший</text>
+	</string>
+	<string id="st_dyn_news_oasis_8">
+		<text>Нарвались на Лешего</text>
+	</string>
+	<!-- Оазис(Леший) -->
+
 	<string id="st_dyn_news_controller_1">
 		<text>контролёра</text>
 	</string>

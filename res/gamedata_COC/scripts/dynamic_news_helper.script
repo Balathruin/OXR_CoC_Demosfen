@@ -368,6 +368,7 @@ function GetMonsterDescription(obj,index)
 		[clsid.cat_s] 					= "cat",
 		[clsid.chimera_s] 				= "chimera",
 		[clsid.controller_s] 			= "controller",
+		[clsid.oasis_s] 		    	= "oasis",
 		[clsid.dog_s] 					= "dog",
 		[clsid.flesh_s] 				= "flesh",
 		[clsid.fracture_s] 				= "fracture",

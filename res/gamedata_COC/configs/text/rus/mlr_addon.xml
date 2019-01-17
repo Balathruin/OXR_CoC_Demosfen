@@ -1664,7 +1664,7 @@
 	<string id="st_pri_special_trader_mlr_message">
 		<text>Тесак: \nСталкер, ты находишься на территории синдиката. Не бойся, атаковать мы тебя не станем, но ты должен вести себя адекватно. Подойди ко мне, если хочешь, у меня для тебя найдётся пара заданий.</text>
 	</string>	
-	
+
 <string id="st_dyn_y04_pole_blizko_1"> 
 	<text>в деревне</text> 
 </string> 
@@ -1694,7 +1694,11 @@
 <string id="st_dyn_news_y04_pole">
 	<text>на Поляне,</text>
 </string>	
-	
+
+<string id="st_dyn_news_way_in_zone">
+	<text>на Черте,</text>
+</string>	
+
 <string id="st_bar100rent_name">
     <text>Бар "100 рентген"</text>
 </string>

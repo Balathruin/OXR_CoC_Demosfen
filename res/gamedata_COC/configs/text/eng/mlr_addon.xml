@@ -4525,7 +4525,11 @@
 
 	<string id="st_dyn_news_y04_pole">
 		<text>in the Meadow,</text>
-	</string>
+	</string>	
+
+	<string id="st_dyn_news_way_in_zone">
+		<text>на Черте,</text>
+	</string>	
 
 	<string id="st_dyn_y04_pole_blizko_1">
 		<text>in the village</text>
