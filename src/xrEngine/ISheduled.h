@@ -26,6 +26,7 @@ public:
     // XXX nitrocaster: return (const char *) to reduce string pool spoiling
     virtual shared_str shedule_Name() const = 0;
     virtual bool shedule_Needed() = 0;
+    bool shedule_canBeDeferedToAvoidJams = false;
 };
 
 inline ISheduled::~ISheduled() {}
@@ -41,15 +42,8 @@ public:
     virtual SchedulerData& GetSchedulerData() override { return shedule; }
     virtual void shedule_Update(u32 dt) override;
     virtual shared_str shedule_Name() const override { return shared_str("unknown"); }
-
+    
 protected:
     virtual void shedule_register();
     virtual void shedule_unregister();
-};
-
-class ENGINE_API ScheduledBaseMT : public ScheduledBase
-{
-protected:
-    void shedule_register() override;
-    void shedule_unregister() override;
 };

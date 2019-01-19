@@ -642,7 +642,8 @@ extern int g_ErrorLineCount;
 extern int ps_rs_loading_stages;
 
 ENGINE_API int ps_always_active = 0;
-
+int sheduler_smoother_max_per_time      = 30;
+int sheduler_smoother_frame_size        = 33;
 ENGINE_API int ps_r__Supersample = 1;
 void CCC_Register()
 {
@@ -725,7 +726,7 @@ void CCC_Register()
     // Sound
     CMD2(CCC_Float, "snd_volume_eff", &psSoundVEffects);
     CMD2(CCC_Float, "snd_volume_music", &psSoundVMusic);
-
+ 
 	CMD4(CCC_Float,		"snd_speed_of_sound",	&psSpeedOfSound,0.2f,2.0f	);
 
     CMD1(CCC_SND_Restart, "snd_restart");
@@ -777,7 +778,10 @@ void CCC_Register()
 
     CMD1(CCC_ExclusiveMode, "input_exclusive_mode");
     CMD1(CCC_HideConsole, "hide");
+    //CMD4(CCC_Integer, "sheduler_smoother_max_per_time", &sheduler_smoother_max_per_time, 0, 100);
+    //CMD4(CCC_Integer, "sheduler_smoother_frame", &sheduler_smoother_frame_size, 0, 33);
 
+    
 #ifdef DEBUG
     extern BOOL debug_destroy;
     CMD4(CCC_Integer, "debug_destroy", &debug_destroy, FALSE, TRUE);

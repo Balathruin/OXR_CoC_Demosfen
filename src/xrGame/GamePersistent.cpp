@@ -700,9 +700,8 @@ void CGamePersistent::OnFrame()
     if (!Device.Paused())
     {
         Engine.Sheduler.Update();
-        Engine.Scheduler.ProcessStep();
     }
-
+     
     // update weathers ambient
     if (!Device.Paused())
         WeathersUpdate();
