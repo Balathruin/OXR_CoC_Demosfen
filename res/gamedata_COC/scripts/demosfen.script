@@ -57,29 +57,14 @@ end
 
 function on_game_start()
 	RegisterScriptCallback("actor_on_item_use",actor_on_item_use) 
-	RegisterScriptCallback("actor_on_update",actor_on_update)
 end
  
-function actor_on_update()	
+function update()	
 	local actor = db.actor
 	local actor_faction = character_community(actor)
 	local actor_reputation = actor:character_reputation()
-	local tg = time_global()
-	local last_update
-	
-	if not last_update then last_update = tg + 1000 end
-	
-	if last_update < tg then return end 
-	
-	last_update = tg + 1000
-	
-	if(actor_faction == "actor_stalker" and actor_reputation <= -3000) or
-	   (actor_faction == "actor_ecolog" and actor_reputation <= -3000) or
-	   (actor_faction == "actor_dolg" and actor_reputation <= -3000) or
-	   (actor_faction == "actor_freedom" and actor_reputation <= -3000) or
-	   (actor_faction == "actor_csky" and actor_reputation <= -3000) or
-	   (actor_faction == "actor_killer" and actor_reputation <= -3000) or
-	   (actor_faction == "actor_ecolog" and actor_reputation <= -3000) then
+
+	if actor_faction ~= 'monolith' and actor_faction ~= 'zombied' and actor_reputation <= -3000 then
 		actor:set_character_community("actor_bandit", 0, 0)	-- сменить группировку на бандита
 		news_manager.send_tip(db.actor, "%c[0,255,0,0]Вы выгнаны из своей группировки!", nil, nil, nil, nil)
 		SetHudMsg(game.translate_string("Вы выгнаны из своей группировки!"),5)
@@ -141,4 +126,5 @@ function actor_on_update()
 		return
 	end
 --**************************************************************************************************************]]
+	ResetTimeEvent('demosfen_script','update', 1)
 end

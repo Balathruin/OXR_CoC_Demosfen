@@ -186,22 +186,26 @@ end
 
 local time_news = 40000
 local time_pda_news = 0
-function actor_on_update()
-if not_news then return end
-    if (axr_main.config:r_value("mm_options","enable_fake_news_option",1,true) == true) then
-    local time = time_global()
-	if show_glonass==true and time_pda_news < time then
-               pda_status()
-               time_pda_news = time + 10000
-	end  	
-        if time_news < time then	    
-            if math.random(0,99) < percent_all then
-              random_news()
-	    end
-        time = time_global()
-        time_news = time + (time_random[math.random(#time_random)])*1000
-	end   
+
+function update()
+	if not_news then 
+		return 
+	end
+	if (axr_main.config:r_value("mm_options","enable_fake_news_option",1,true) == true) then
+		local time = time_global()
+		if show_glonass==true and time_pda_news < time then
+			pda_status()
+			time_pda_news = time + 10000
+		end  	
+		if time_news < time then	    
+			if math.random(0,99) < percent_all then
+				random_news()
+			end
+		end
+		time = time_global()
+		time_news = time + (time_random[math.random(#time_random)])*1000 
     end
+	ResetTimeEvent('zone_new_script','update', 5)
 end
 
 
@@ -216,7 +220,6 @@ function npc_on_death_callback(victim, who)  --Новости о смерти сталкеров
 end
 
 function on_game_start()
-RegisterScriptCallback("actor_on_update",actor_on_update)
 RegisterScriptCallback("npc_on_death_callback", npc_on_death_callback)
 RegisterScriptCallback("on_game_load",on_game_load)
 end

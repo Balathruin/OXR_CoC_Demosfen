@@ -7,9 +7,6 @@ local prev_sec = 0
 local diff_sec = 0
 valid_levels = {}
 bLevelUnderground = false
-
-local extra_pfx_enabled = (get_console():get_string("r2_soft_particles") == "on")
-
 function atmosfear_init()
 	if not (is_empty(valid_levels)) then 
 		return 
@@ -81,8 +78,6 @@ function WeatherManager:__init()
 	self.curr_weather=""
 	self.next_weather=""
 	self.far_distances={}
-	self.wind_velocity={}
-	self.ambient={}
 	self.dof_kernels={}
 	self.fx_started=nil
 	self.fx_ended=nil
@@ -154,7 +149,7 @@ function WeatherManager:__init()
 						}
 	self.thunders={}
 	self.thunder_index=1
-	self.distant_storm_prob = 1.0
+	self.distant_storm_prob = 0.5
 	
 	atmosfear_options.config = atmosfear_options.config or ini_file_ex("atmosfear_options.ltx",true)
 	atmosfear_init()
@@ -176,20 +171,16 @@ function WeatherManager:reset()
 		self.dof_kernels = alun_utils.parse_ini_section_to_array(self.graphs_ini,"dof_kernels")
 		for cycle,dof in pairs(self.dof_kernels) do
 			self.far_distances[cycle]={}
-			self.wind_velocity[cycle]={}
-			self.ambient[cycle]={}
 			local phase
 			if cycle=="clear" or cycle=="partly" then
 				phase="_0"
 			else
 				phase = ""
 			end
-			local cycle_ltx=ini_file(("environment\\weathers\\af3_slight_"..cycle..phase..".ltx"))
+			local cycle_ltx=ini_file(("environment\\weathers\\af3_dark_"..cycle..phase..".ltx"))
 			for h = 0, 23 do
 				local hour=self:get_hour_as_string(h)
-				self.far_distances[cycle][hour] = cycle_ltx:r_float_ex(hour, "fog_distance") or 0
-				self.wind_velocity[cycle][hour] = cycle_ltx:r_float_ex(hour, "wind_velocity") or 0
-				self.ambient[cycle][hour] = cycle_ltx:r_string_ex(hour, "ambient") or 0
+				self.far_distances[cycle][hour] = cycle_ltx:r_float_ex(hour, "fog_distance")
 			end
 		end
 	end
@@ -244,11 +235,6 @@ end
 function WeatherManager:change_period()
 	local current_hour=level.get_time_hours()
 
-	if not (surge_manager.SurgeManager) then 
-		printf("!SurgeManager is nil")
-		return 
-	end
-	
 	local g_time = game.get_game_time()
 	local diff_s = math.floor(surge_manager.SurgeManager._delta - g_time:diffSec(surge_manager.SurgeManager.last_surge_time))
 	local diff_p = psi_storm_manager and math.floor(psi_storm_manager.PsiStormManager._delta - g_time:diffSec(psi_storm_manager.PsiStormManager.last_psi_storm_time)) or 0
@@ -261,8 +247,7 @@ function WeatherManager:change_period()
 		end
 	end
 
-	--if current_hour==self.next_period_change_hour then
-	if current_hour==21 then
+	if current_hour==self.next_period_change_hour then
 		if self.period == "good" then
 			self.period = "bad"
 		else
@@ -311,16 +296,12 @@ function WeatherManager:apply_dof()
 				local fx_dof_kernel=self:round(current_dof_kernel-((current_dof_kernel-4)*(1-percentOfTransition)))
 				console:execute("r2_dof_far "..tostring(fx_dof_far))
 				console:execute("r2_dof_kernel "..tostring(fx_dof_kernel))
-				console():execute("r2_dof_pickable 0")
-				console():execute("r2_dof_time 0.1")
 				--atmosfear.debugMessages[13]:SetText("fx dof fade out")
 				--atmosfear.debugMessages[14]:SetText("fx_dof_far: "..tostring(fx_dof_far))
 				--atmosfear.debugMessages[15]:SetText("fx_dof_ker: "..tostring(fx_dof_kernel))
 			else
 				console:execute("r2_dof_far "..tostring(current_dof_far))
 				console:execute("r2_dof_kernel "..tostring(current_dof_kernel))
-				console():execute("r2_dof_pickable 0")
-				console():execute("r2_dof_time 0.1")
 				--atmosfear.debugMessages[13]:SetText("normal dof")
 				--atmosfear.debugMessages[14]:SetText("dof_far: "..tostring(current_dof_far))
 				--atmosfear.debugMessages[15]:SetText("dof_ker: "..tostring(current_dof_kernel))
@@ -340,8 +321,6 @@ function WeatherManager:apply_dof()
 				local fx_dof_kernel=self:round(current_dof_kernel-((current_dof_kernel-4)*percentOfTransition))
 				console:execute("r2_dof_far "..tostring(fx_dof_far))
 				console:execute("r2_dof_kernel "..tostring(fx_dof_kernel))
-				console():execute("r2_dof_pickable 0")
-				console():execute("r2_dof_time 0.1")
 				--atmosfear.debugMessages[13]:SetText("fx dof fade in")
 				--atmosfear.debugMessages[14]:SetText("fx_dof_far: "..tostring(fx_dof_far))
 				--atmosfear.debugMessages[15]:SetText("fx_dof_ker: "..tostring(fx_dof_kernel))
@@ -381,65 +360,9 @@ end
 
 -- end CC Functions
 
-local dof_slot = {
-	[2] = true,
-	[3] = true,
-	[5] = true,
-}
-
 -- Обновляем погоду раз в час.
 function WeatherManager:update()
 	--alun_utils.debug_write("WeatherManager:update start")
-	
-	--[[
-	
-	if (xr_actor.first_update_time) and (time_global() > xr_actor.first_update_time+1000) then
-	
-		local empty_dof = false
-		
-		local constant_dof = (axr_main.config:r_value("mm_options","enable_photomode",1,false) == true)
-		
-		local rain = utils.clamp(level.get_rain_volume(),0,1)
-		
-		if (constant_dof) then
-			get_console():execute("r2_dof_kernel 3")
-			get_console():execute("r2_dof_pickable 1")
-			get_console():execute("r2_dof_time 0.01")
-			get_console():execute("r2_dof_diff_far "..2+math.floor(rain*20))
-		else		
-			local wpn = dof_slot[db.actor:active_slot()] and db.actor:item_in_slot(db.actor:active_slot())
-			if (wpn and wpn:get_state() == 7) then
-				get_console():execute("r2_dof_kernel 6")
-				get_console():execute("r2_dof_pickable 0")
-				get_console():execute("r2_dof_time 0.01")
-				get_console():execute("r2_dof_far 1.5")
-			elseif (wpn and not axr_main.weapon_is_zoomed) then
-				get_console():execute("r2_dof_pickable 0")
-				self:apply_dof()
-			elseif (wpn) and (axr_main.weapon_is_zoomed) and (not wpn:weapon_is_scope()) then	
-				get_console():execute("r2_dof_kernel 3")
-				get_console():execute("r2_dof_pickable 1")
-				get_console():execute("r2_dof_time 0.15")
-			elseif (db.actor:has_info("inventory_wnd_open") or db.actor:has_info("ui_pda")) then
-				get_console():execute("r2_dof_kernel 8")
-				get_console():execute("r2_dof_pickable 0")
-				get_console():execute("r2_dof_time 0.1")
-				get_console():execute("r2_dof_far 1.5")
-			elseif (not wpn) and (empty_dof == true) then
-				get_console():execute("r2_dof_kernel 2")
-				get_console():execute("r2_dof_pickable 1")
-				get_console():execute("r2_dof_time 0.01")
-				get_console():execute("r2_dof_diff_far "..2+math.floor(rain*20))
-			else
-				get_console():execute("r2_dof_pickable 0")
-				self:apply_dof()
-			end
-		end
-	
-	end
-	
-	]]--
-	
 	if (self.___timer and time_global() < self.___timer) then 
 		return --alun_utils.debug_write("WeatherManager:update end 1")
 	end
@@ -451,22 +374,17 @@ function WeatherManager:update()
 		if self.next_hour>23 then
 			self.next_hour=self.next_hour-24
 		end
-		
-		if (level.get_time_hours() == 21) then
-		
-			for lvl,st in pairs(self.state) do
-				st.current_state=st.next_state
-				st.next_state=get_next_state(st.graph,st.current_state)
-			end
-		
-			self:change_period()
-			self:select_weather(true,true)
+		for lvl,st in pairs(self.state) do
+			st.current_state=st.next_state
+			st.next_state=get_next_state(st.graph,st.current_state)
 		end
+		self:change_period()
+		self:select_weather(false)
 	end
 
-	if not (axr_main.weapon_is_zoomed) then
-		self:apply_dof()
-	end
+	-- if not (axr_main.weapon_is_zoomed) then
+		-- self:apply_dof()
+	-- end
 	
 	diff_sec = math.ceil(game.get_game_time():diffSec(self.inited_time)/level.get_time_factor())
 	if (prev_sec~=diff_sec) then
@@ -506,7 +424,7 @@ function WeatherManager:get_moon_phase()
 	return tostring(phase)
 end
 
-function WeatherManager:select_weather(now,new)
+function WeatherManager:select_weather(now)
 	--
 	--alun_utils.debug_write("WeatherManager:select_weather")
 	
@@ -514,12 +432,6 @@ function WeatherManager:select_weather(now,new)
 	if not (weather) then 
 		return
 	end
-	
-	local forced_weather = {
-		["l06_rostok"] = true,
-		["l10_red_forest"] = true,
-		["fake_start"] = true,
-	}
 	
 	-- CC add period to name
 	if (weather=="atmosfear") then
@@ -536,7 +448,7 @@ function WeatherManager:select_weather(now,new)
 				printf("level_weathers: opt_%s_peroid_%s does not exist in atmosfear_current_parameters",level_name,self.period)
 				period = "clear"
 			end
-			weather = (not new and not forced_weather[level_name] and self.levelWeather ~= "atmosfear_veryfoggy" and self.levelWeather) or weather.."_"..period
+			weather = weather.."_"..period
 		end
 		--atmosfear.debugMessages[5]:SetText("weather= "..tostring(weather))
 	end
@@ -559,22 +471,16 @@ function WeatherManager:select_weather(now,new)
 			weather_section_name = weather_section_name.."_"..self:get_moon_phase()
 		end
 		--atmosfear.debugMessages[6]:SetText("weather_section_name= "..tostring(weather_section_name))
-		--if now then
+		if now then
 			self.curr_weather=st.current_state
 			self.next_weather=st.current_state
-		--else
-		--	self.curr_weather=self.next_weather
-		--	self.next_weather=st.current_state
-		--end
+		else
+			self.curr_weather=self.next_weather
+			self.next_weather=st.current_state
+		end
 	end
 
-	if (graph~=nil) then
-		--printf("!weather_section_name = %s",weather_section_name)
-		--printf("!self.levelWeather = %s",tostring(self.levelWeather))
-		--printf("!self.curr_weather = %s",tostring(self.curr_weather))
-		--printf("!self.next_weather = %s",tostring(self.next_weather))
-	end
-	
+	-- printf("weather_section_name = %s",weather_section_name)
 	if now then
 		self.last_hour=level.get_time_hours()
 		self.next_hour=self.last_hour+1
@@ -586,9 +492,8 @@ function WeatherManager:select_weather(now,new)
 		now = true
 		self.forced_weather_change_on_time_change = false
 	end
+	
 	if (self.weather_fx) then
-
-
 		level.start_weather_fx_from_time(self.weather_fx, self.wfx_time)
 		self.weather_fx = nil 
 		self.wfx_time = 0
@@ -769,7 +674,7 @@ end
 --##################################################################################################
 
 function WeatherManager:launch_meteorites()
-	if self.meteorites_particle~=nil then
+	if self.meteorites_particle ~=nil then
 		self.meteorites_particle:stop()
 	end
 	self.meteorites_particle=particles_object("crommcruac\\meteorites")
@@ -809,10 +714,8 @@ end
 
 function WeatherManager:distant_storm()
 	--atmosfear.debugMessages[1]:SetText("diff_sec ="..tostring(diff_sec))
-	local ambient = self:get_curr_ambient()
-	--printf("AMB: "..tostring(ambient))
-	
-	if self.distant_storm_on==nil and (ambient=="rain_day" and level.get_time_minutes()>=30) then
+
+	if self.distant_storm_on==nil and (self.next_weather=="cloudy"  and level.get_time_minutes()>=30) then
 		local rnd = (math.random(1,100)/100)
 		if rnd<=self.distant_storm_prob then
 			self.distant_storm_on = true
@@ -846,8 +749,7 @@ function WeatherManager:distant_storm()
 		end
 	end
 	
-	
-	if self.distant_storm_on==true and ((ambient=="rain_day" and level.get_time_minutes()<=30) or (self.next_weather=="cloudy"  and level.get_time_minutes()>=30)) and not level.is_wfx_playing() then
+	if self.distant_storm_on==true and ((self.curr_weather=="cloudy" and level.get_time_minutes()<=30) or (self.next_weather=="cloudy"  and level.get_time_minutes()>=30)) and not level.is_wfx_playing() then
 		--atmosfear.debugMessages[2]:SetText("storm on")
 		if self.next_thunder_at == nil then
 			self.next_thunder_at = diff_sec + math.random(5, 10)
@@ -859,7 +761,7 @@ function WeatherManager:distant_storm()
 		--atmosfear.debugMessages[5]:SetText("next thunder ("..tostring(self.thunder_index)..") at= "..tostring(self.next_thunder_at))
 	end
 
-	if self.distant_storm_on~=nil and (ambient~="rain_day" and level.get_time_minutes()>=30) then
+	if self.distant_storm_on~=nil and (self.next_weather~="cloudy" and level.get_time_minutes()>=30) then
 		self.distant_storm_on=nil
 		self.next_thunder_at=nil
 		--atmosfear.debugMessages[2]:SetText("storm ended")
@@ -882,37 +784,6 @@ function WeatherManager:inside_boundaries(x, y)
 		end
 	end
 	return inside
-end
-
-function WeatherManager:get_curr_weather()
-	return self.curr_weather
-end
-
-function WeatherManager:get_curr_ambient()
-
-	if (bLevelUnderground) then
-		get_console():execute("r2_sun_lumscale_hemi 0")
-		return ""
-	else
-		get_console():execute("r2_sun_lumscale_hemi 0.6")
-	end
-
-	local last_hour_str=self:get_hour_as_string(self.last_hour) or 0
-	return self.ambient[self.curr_weather][last_hour_str] or 0
-end
-
-
-function WeatherManager:get_wind_velocity()
-	if (bLevelUnderground) then return 0 end
-	
-	local last_hour_str=self:get_hour_as_string(self.last_hour) or 0
-	local next_hour_str=self:get_hour_as_string(self.last_hour+1) or 0
-	
-	
-	local k1 = level.get_time_minutes()*0.0166
-	local k2 = 1-k1
-	
-	return self.wind_velocity[self.curr_weather][last_hour_str]*k2+self.wind_velocity[self.curr_weather][next_hour_str]*k1
 end
 
 
@@ -1025,235 +896,4 @@ function WeatherManager:finalize()
 			thunder.effect:stop()
 		end
 	end
-end
-
-function actor_on_update()
-	update_wind()
-	
-	update_pfx()
-	update_fog()
-end
-
-
-function update_wind()
-
-	local volume = math.floor(level.get_rain_volume()*100)
-	--printf(tostring(volume))
-	local wind_velocity = level_weathers.get_weather_manager():get_wind_velocity()
-	local wind_k = wind_velocity/1000
-		
-	local sound1="wind_storm1"
-	local sound2="wind_storm2"
-	local sound3="wind_storm3"
-	
-	local volume1 = 0
-	local volume2 = 0
-	local volume3 = 0
-	
-	if (volume < 35) then
-		volume1 = 60+volume
-	end
-	
-	if (volume > 25) and (volume < 60) then
-		volume1 = 70-volume
-		volume2 = 35+volume
-	end
-	
-	if (volume > 50) then
-		volume1 = 0
-		volume2 = 70-volume
-		volume3 = volume
-	end
-	
-	volume1 = volume1*wind_k
-	volume2 = volume2*wind_k
-	volume3 = volume3*wind_k
-	
-	volume1 = utils.clamp(volume1,0,100)
-	volume2 = utils.clamp(volume2,0,100)
-	volume3 = utils.clamp(volume3,0,100)
-	
-	
-	--printf(volume1.." "..volume2.." "..volume3)
-	
-	---[[
-	xr_sound.play_sound_looped(db.actor:id(), sound1)
-	xr_sound.play_sound_looped(db.actor:id(), sound2)
-	xr_sound.play_sound_looped(db.actor:id(), sound3)
-	
-	xr_sound.set_volume_sound_looped(db.actor:id(), sound1, volume1*0.01)
-	xr_sound.set_volume_sound_looped(db.actor:id(), sound2, volume2*0.01)
-	xr_sound.set_volume_sound_looped(db.actor:id(), sound3, volume3*0.01)
-end
-
-local fog_particles
-local fog_time = 150000
-local fog_update = time_global()
-
-function update_fog()
-
-	if not extra_pfx_enabled then return end
-
-	local weather = level_weathers.get_weather_manager():get_curr_weather()
-	local rain_factor = level.get_rain_volume()
-	
-	if ((weather == "clear") or (weather == "foggy") or (weather == "veryfoggy"))
-	and (level.get_time_hours() >= 4) and (level.get_time_hours() < 20)  and (rain_factor > 0.05)
-	then
-		if not fog_particles then
-			fog_particles = particles_object("a_ufp_particles\\fog_move")
-		end
-		
-		local pos = db.actor:position()
-		local apos = pos.y
-		pos:add(device().cam_dir:mul(200))
-		pos.y = utils.clamp(apos,pos.y,6)+1
-		
-		if (time_global() > fog_update) then
-			fog_update = time_global()+fog_time
-			fog_particles:play_at_pos(pos)
-			--printf("fog_play")
-		end
-	elseif (fog_particles and fog_particles:playing()) then
-		fog_particles:stop()
-	end
-end
-
-local pfx
-local pfx_time = 100
-local pfx_update = time_global()
-
-
-function update_pfx()
-	
-	--if (true) then return end
-	
---[[
-	local vibrance = -0.1+level.get_rain_volume()*0.5
-	vibrance = utils.clamp(vibrance,0,0.4)
-	get_console():execute("r2_vibrance_val "..0.6-vibrance)
-	get_console():execute("r2_aberration_val "..0.7-vibrance)
---]]
-	if not extra_pfx_enabled then return end
-
-	local weather = level_weathers.get_weather_manager():get_curr_weather()
-	local rain_factor = level.get_rain_volume()
-	local ambient = level_weathers.get_weather_manager():get_curr_ambient()
-	
-	if (bLevelUnderground) then
-	
-		if not pfx then
-			pfx = particles_object("lanforse\\dust_particles")
-		end
-		
-		local pos = db.actor:position()
-		local apos = pos
-		pos:add(device().cam_dir:mul(3))
-		pos.y = apos.y+1
-		
-		if (not pfx:playing())then
-			pfx:play_at_pos(pos)
-			--printf("mist_play")
-		end
-	
-	elseif (weather == "veryfoggy") 
-	and ((level.get_time_hours() >= 5) and (level.get_time_hours() < 20))
-	then
-	
-		if (not pfx) then
-			if (level.name() == "l06_rostok") then
-				pfx = particles_object("lanforse\\fog_green_dx10")
-			else
-				pfx = particles_object("lanforse\\fog_heavy_dx10")
-			end
-		end
-		
-		local pos = db.actor:position()
-		pos.x = pos.x + 0
-		pos.y = utils.clamp(pos.y,pos.y,1)+1
-		pos.z = pos.z + 0
-		
-		if (rain_factor > 0.05) then
-			if (time_global() > pfx_update) then
-				pfx_update = time_global()+100
-				pfx:play_at_pos(pos)
-			end
-		end
-	elseif (weather == "foggy") or
-	((weather == "veryfoggy") and ((level.get_time_hours() < 5) or (level.get_time_hours() >= 20)))
-	then
-	
-		if not pfx then
-			pfx = particles_object("lanforse\\fog_light")
-		end
-		
-		local pos = db.actor:position()
-		pos.x = pos.x + 0
-		pos.y = utils.clamp(pos.y,pos.y,1)+0.5
-		pos.z = pos.z + 0
-		
-		if (rain_factor > 0.05) then
-			if (time_global() > pfx_update) then
-				pfx_update = time_global()+100
-				pfx:play_at_pos(pos)
-			end
-		end
-	
-	elseif (weather == "clear")  and (rain_factor > 0.05)
-	and (level.get_time_hours() >= 4) and (level.get_time_hours() < 20) 
-	then
-	---[[	
-		if not pfx then
-			pfx = particles_object("lanforse\\fog_mist")
-		end
-		
-		local pos = db.actor:position()
-		local apos = pos.y
-		pos:add(device().cam_dir:mul(80))
-		pos.y = utils.clamp(apos,pos.y,6)+1
-		
-		if (not pfx:playing())then
-			pfx:play_at_pos(pos)
-			--printf("mist_play")
-		end
-	--]]
-	elseif (weather == "storm") and (rain_factor > 0.5) 
-	then	
-		if (not pfx) then
-			pfx = particles_object("lanforse\\storm_heavy")
-		end
-		
-		local pos = db.actor:position()
-		pos.x = pos.x + math.random(-10,10)
-		pos.y = utils.clamp(pos.y,pos.y,20)
-		pos.z = pos.z - 20
-		
-		if (time_global() > pfx_update) then
-			pfx_update = time_global()+100
-			pfx:play_at_pos(pos)
-			--printf("storm_play: "..rain_factor)
-		end
-	
-	elseif (weather == "cloudy") and (rain_factor > 0.5) and (ambient == "tuman")
-	then	
-		if (not pfx) then
-			pfx = particles_object("lanforse\\snow_light")
-		end
-		
-		local pos = db.actor:position()
-		pos.y = pos.y+0
-		pos:add(device().cam_dir:mul(5))
-		
-		if (time_global() > pfx_update) then
-			pfx_update = time_global()+100
-			pfx:play_at_pos(pos)
-			--printf("snow_play: "..rain_factor)
-		end	
-		
-		
-		
-	elseif (pfx and pfx:playing()) then
-		pfx:stop()
-	end
-
 end
