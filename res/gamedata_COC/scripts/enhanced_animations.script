@@ -10,8 +10,8 @@ function activate()
 	end
 	feature_is_active = true
 	item_tbl = {bread = {snd = "interface\\inv_nosound", anm = "anm_bread",tm = 2300},
-				-- conserva = {snd = "interface\\inv_nosound", anm = "anm_conserva",tm = 5000},
-				conserva = {snd = "interface\\inv_nosound", anm = "anm_tushka",tm = 7000},
+				conserva = {snd = "interface\\inv_nosound", anm = "anm_conserva",tm = 5000},
+				-- conserva = {snd = "interface\\inv_nosound", anm = "anm_tushka",tm = 7000},
 				kolbasa = {snd = "interface\\inv_nosound", anm = "anm_kolbasa",tm = 3000},
 				energy_drink = {snd = "interface\\inv_nosound", anm = "anm_energy_drink",tm = 3500},
 				vodka = {snd = "interface\\inv_nosound", anm = "anm_vodka",tm = 4000},
