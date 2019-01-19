@@ -1,19 +1,6 @@
 
 --  Таймеры  --
 
-local chk
-
-function actor_on_update()
-	local tg = time_global()
-	if (chk == nil or tg > chk) then
-		check_timers()
-		chk = tg + 1000
-	end
-end
-
-function on_game_start()
-	RegisterScriptCallback("actor_on_update",actor_on_update)
-end
 
 -- cтарт таймера в реальном времени(секунды)
 function start_timer(name,delay,name_script,name_func,param)
@@ -114,6 +101,7 @@ function check_timers()
 			end
 		end
 	end
+	ResetTimeEvent('jg_timers_script','update', 1)
 end
 
 function __do_timer_action(select_str,action)

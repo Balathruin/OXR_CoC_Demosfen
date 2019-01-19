@@ -1,0 +1,11 @@
+-- Тайм эвенты
+-- CreateTimeEvent('СЕКЦИЯ','ИМЯ',ВРЕМЯ ОБНОВЛЕНИЯ(сек),ФУНКЦИЯ) - Создает TimeEvent
+-- ResetTimeEvent('СЕКЦИЯ','ИМЯ', ВРЕМЯ ОБНОВЛЕНИЯ(сек))  - Обновляет TimeEvent
+function on_game_start()
+	CreateTimeEvent('m_mines_script',		'update',	5, 	m_mines.update)
+	CreateTimeEvent('dialogs_orders_script','update',	5, 	dialogs_orders.update)
+	CreateTimeEvent('demosfen_script',		'update',	6, 	demosfen.update)
+	CreateTimeEvent('zone_new_script',		'update',	6, 	zone_new.update)
+	CreateTimeEvent('pda_fonswong_script',	'update',	7, 	pda_fonswong.music_player_update)
+	CreateTimeEvent('jg_timers_script',		'update',	8, 	jg_timers.check_timers)
+end

@@ -29,15 +29,9 @@ local function on_game_load()
 		error(msg, 2)
 	end
 end
--- Постоянное обновление для музыки
-local function actor_on_update()
-	music_player_update()
-end
 
 function on_game_start()
 	RegisterScriptCallback("actor_on_item_use",actor_on_item_use)
-	--RegisterScriptCallback("on_game_load",on_game_load)
-	RegisterScriptCallback("actor_on_update",actor_on_update)
 end
 
 --######################################################################################################################
@@ -514,6 +508,7 @@ elseif mp3_mode=="queue" then
 		mp3_plays=nil
 		mp3_length_position,mp3_last_position=0,0
 	end
+	ResetTimeEvent('pda_fonswong_script','update', 5)
 end
 
 class "music_player_snd" (CUIListBoxItem)

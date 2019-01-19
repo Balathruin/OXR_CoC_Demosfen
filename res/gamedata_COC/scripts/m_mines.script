@@ -152,7 +152,7 @@ local function npc_on_update(npc,st)
 	end
 end
 
-local function actor_on_update()
+function update()
 	if not (db.actor:alive()) then
 		return
 	end
@@ -170,6 +170,7 @@ local function actor_on_update()
 			m_mine_table.recently_placed = false
 		end
 	end
+	ResetTimeEvent('m_mines_script','update', 2)
 end
 
 local function actor_on_item_use(itm)
@@ -196,7 +197,6 @@ end
 
 function on_game_start()
 	RegisterScriptCallback("npc_on_update",npc_on_update)
-	RegisterScriptCallback("actor_on_update",actor_on_update)
 	RegisterScriptCallback("monster_on_update",monster_on_update)
 	RegisterScriptCallback("actor_on_item_use",actor_on_item_use)
 	RegisterScriptCallback("save_state",save_state)
