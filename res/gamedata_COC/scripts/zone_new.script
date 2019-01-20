@@ -73,52 +73,52 @@ local sunset_news= 		10	--новости о закатах и восходах от Скели
 
 
 -- проверяем наличие файлов новостей и заносим их в таблицу
-local news_tbl_a = {}
+	local news_tbl_a = {}
+	if zone_surge_news then
+		table.insert(news_tbl_a,{f_n = zone_surge_news.psi_storm_news,part = psi_storm_news})
+		table.insert(news_tbl_a,{f_n = zone_surge_news.surge_news,part = surge_news})
+	end
+	if zone_news_main then
+		table.insert(news_tbl_a,{f_n = zone_news_main.news_main,part = news_main})
+		table.insert(news_tbl_a,{f_n = zone_news_main.sunset_news,part = sunset_news})
+	end
+	if zone_news then
+		table.insert(news_tbl_a,{f_n = zone_news.news_ant,part = news_misery})
+	end
+	if zone_news_vs then
+		table.insert(news_tbl_a,{f_n = zone_news_vs.show_news,part = show_news})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.news_of_qwest,part = news_of_qwest})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.news_of_surge,part = news_of_surge})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.spam_news,part = spam_news,arg = anti_spam})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.weather_news,part = weather_news})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.semeckiy_deth_news,part = semeckiy_deth_news})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.fake_vubros_msg,part = fake_vubros_msg})
+		table.insert(news_tbl_a,{f_n = zone_news_vs.show_news_trade,part = show_news_trade})
+	end
+	if zone_news_dead ~= nil  then
+		news_dead = percent_dead
+	else 
+		percent_dead = 0
+	end
 
-   if zone_surge_news then
-	table.insert(news_tbl_a,{f_n = zone_surge_news.psi_storm_news,part = psi_storm_news})
-	table.insert(news_tbl_a,{f_n = zone_surge_news.surge_news,part = surge_news})
-   end
-   if zone_news_main then
-	table.insert(news_tbl_a,{f_n = zone_news_main.news_main,part = news_main})
-	table.insert(news_tbl_a,{f_n = zone_news_main.sunset_news,part = sunset_news})
-   end
-   if zone_news then
-	table.insert(news_tbl_a,{f_n = zone_news.news_ant,part = news_misery})
-   end
-   if zone_news_vs then
-	table.insert(news_tbl_a,{f_n = zone_news_vs.show_news,part = show_news})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.news_of_qwest,part = news_of_qwest})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.news_of_surge,part = news_of_surge})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.spam_news,part = spam_news,arg = anti_spam})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.weather_news,part = weather_news})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.semeckiy_deth_news,part = semeckiy_deth_news})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.fake_vubros_msg,part = fake_vubros_msg})
-	table.insert(news_tbl_a,{f_n = zone_news_vs.show_news_trade,part = show_news_trade})
-   end
-   if zone_news_dead ~= nil  then
-	news_dead = percent_dead
-   else  percent_dead = 0
-   end
-
-local summa = 0
-   for k,v in pairs(news_tbl_a) do
-	summa = summa + v.part
-   end
-
-   if summa > 0 then
-   local cent = 0
-   not_news = false
+	local summa = 0
 	for k,v in pairs(news_tbl_a) do
-	cent = cent + (v.part/summa)*1000
-	news_tbl_b[k] = {news = v.f_n,part = math.floor(cent),arg = v.arg}
+		summa = summa + v.part
 	end
---Отключаем сигналы в подземках
-   local levels = level.name()
-	if level_weathers.valid_levels[level.name()] then
-	undegraund = false
+
+	if summa > 0 then
+		local cent = 0
+		not_news = false
+		for k,v in pairs(news_tbl_a) do
+			cent = cent + (v.part/summa)*1000
+			news_tbl_b[k] = {news = v.f_n,part = math.floor(cent),arg = v.arg}
+		end
+	--Отключаем сигналы в подземках
+		local levels = level.name()
+		if level_weathers.valid_levels[level.name()] then
+			undegraund = false
+		end
 	end
-   end
 end
 
 
@@ -129,57 +129,56 @@ local news_on = true
 
 function pda_status()
    if surge_manager.is_started() or psi_storm_manager.is_started() or undegraund==true then  -- Во время выброса - связь не пашет.
-         if pda_off == true then return end
-	 news_on = false
-         pda_off = true
-         pda_on = false
-           if hide_dead == true then
-              news_dead = 0
-           end
-         send_tip("Связь потеряна.")
+		if pda_off == true then return end
+		news_on = false
+        pda_off = true
+        pda_on = false
+		if hide_dead == true then
+			news_dead = 0
+		end
+        send_tip("Связь потеряна.")
     elseif pda_on == false then
-         send_tip("Связь установлена.")
-         news_dead = percent_dead
-         pda_on = true
-         pda_off = false
-	 news_on = true
-
+        send_tip("Связь установлена.")
+		news_dead = percent_dead
+		pda_on = true
+		pda_off = false
+		news_on = true
     end
 end
 
 function send_tip(news_text)
-   db.actor:give_game_news("Единая Сталкерская Сеть:", "%c[default]" .. news_text, "ui_icon_vs_news_all", 0, 7000)
-   xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+	db.actor:give_game_news("Единая Сталкерская Сеть:", "%c[default]" .. news_text, "ui_icon_vs_news_all", 0, 7000)
+	xr_sound.set_sound_play(db.actor:id(), "pda_tips")
 end
 
 
 
 function random_news() -- рандомно выбираем файл новостей
-if news_on ~= true then return end
+	if news_on ~= true then return end
     if has_alife_info("start_info_news") then
-      local rnd_value = math.random(0,1000)
-      local get_news = nil
-      local get_arg = nil
-      local min_value = 0
-	for k,v in pairs(news_tbl_b) do
-	local max_value = v.part
-	    if min_value<rnd_value and rnd_value<=max_value then
-		get_news = v.news
-		get_arg = v.arg
-	     break
-	    end
-	min_value = max_value
-	end
+		local rnd_value = math.random(0,1000)
+		local get_news = nil
+		local get_arg = nil
+		local min_value = 0
+		for k,v in pairs(news_tbl_b) do
+			local max_value = v.part
+			if min_value<rnd_value and rnd_value<=max_value then
+				get_news = v.news
+				get_arg = v.arg
+				break
+			end
+			min_value = max_value
+		end
 
-	if get_news~=nil then
-	get_news(get_arg)
-	end
+		if get_news~=nil then
+			get_news(get_arg)
+		end
     else
-	local alife = alife()
-	local se_actor = alife:actor()
-	db.actor:give_game_news("Сообщение:", "%c[255,160,160,160]Идёт подключение, подождите... \\n%c[255,255,160,0]" .. se_actor:character_name() .. "%c[255,160,160,160], добро пожаловать в «Единую Сталкерскую Сеть»", "ui_icon_vs_news_all", 0, 30000)
-	xr_sound.set_sound_play(db.actor:id(), "pda_tips")
-	db.actor:give_info_portion("start_info_news")
+		local alife = alife()
+		local se_actor = alife:actor()
+		db.actor:give_game_news("Сообщение:", "%c[255,160,160,160]Идёт подключение, подождите... \\n%c[255,255,160,0]" .. se_actor:character_name() .. "%c[255,160,160,160], добро пожаловать в «Единую Сталкерскую Сеть»", "ui_icon_vs_news_all", 0, 30000)
+		xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+		db.actor:give_info_portion("start_info_news")
     end
 end
 
@@ -202,9 +201,9 @@ function update()
 			if math.random(0,99) < percent_all then
 				random_news()
 			end
+			time = time_global()
+			time_news = time + (time_random[math.random(#time_random)])*1000 
 		end
-		time = time_global()
-		time_news = time + (time_random[math.random(#time_random)])*1000 
     end
 	ResetTimeEvent('zone_new_script','update', 5)
 end
@@ -221,6 +220,6 @@ function npc_on_death_callback(victim, who)  --Новости о смерти сталкеров
 end
 
 function on_game_start()
-RegisterScriptCallback("npc_on_death_callback", npc_on_death_callback)
-RegisterScriptCallback("on_game_load",on_game_load)
+	RegisterScriptCallback("npc_on_death_callback", npc_on_death_callback)
+	RegisterScriptCallback("on_game_load",on_game_load)
 end
