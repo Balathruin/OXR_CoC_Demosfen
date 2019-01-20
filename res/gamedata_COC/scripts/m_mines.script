@@ -154,6 +154,7 @@ end
 
 function update()
 	if not (db.actor:alive()) then
+		ResetTimeEvent('m_mines_script','update', 2)
 		return
 	end
 

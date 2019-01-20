@@ -189,6 +189,7 @@ local time_pda_news = 0
 
 function update()
 	if not_news then 
+		ResetTimeEvent('zone_new_script','update', 5)
 		return 
 	end
 	if (axr_main.config:r_value("mm_options","enable_fake_news_option",1,true) == true) then
