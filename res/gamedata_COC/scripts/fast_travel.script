@@ -15,7 +15,11 @@ local function map_spot_menu_add_property(property_ui,id,level_name)
 	end
 	
 	if (DEV_DEBUG_DEV) or (enabled and se_obj:clsid() == clsid.smart_terrain and quick_travel_smarts[se_obj:name()]) then 
+-- Проверка на наличие арта
+		--local art = db.actor:object("af_gimlet")
+                --if art ~= nil then 
 		property_ui:AddItem(game.translate_string("st_pda_fast_travel"))
+                --end
 	end
 end 
 
@@ -23,6 +27,14 @@ local function map_spot_menu_property_clicked(property_ui,id,level_name,prop)
 	if (prop == game.translate_string("st_pda_fast_travel")) then 
 		local se_obj = alife_object(id)
 		if not (se_obj) then 
+			return 
+		end
+
+-- Проверка на наличие арта
+		local art = db.actor:object("af_gimlet")
+                if art == nil then
+			get_hud():HidePdaMenu()
+			SetHudMsg(game.translate_string("st_artefact_needed"),4) 
 			return 
 		end
 		

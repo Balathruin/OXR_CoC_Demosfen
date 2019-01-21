@@ -17,6 +17,7 @@
     <crouch_type>-1</crouch_type>
     <supplies></supplies>
 	<start_dialog>bar_visitors_barman_stalker_trader_start_dialog</start_dialog>
+		<actor_dialog>barkeep_100rads</actor_dialog>
     <!---------- mlr ----------->
         <actor_dialog>dm_ordered_task_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
@@ -89,7 +90,15 @@
 #include "gameplay\character_dialogs.xml"
     </specific_character>
     
-    <!---------------------------VORONIN---------------------->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- General Voronin  (Duty Honcho) Character Description
+	<!--
+	<!--	Modified by SarisKhan
+	<!--	for Lost to the Zone
+	<!--	02 October 2017
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
     <specific_character id="bar_dolg_leader" team_default = "1">
     <name>bar_voronin_name</name>
     <icon>ui_inGame2_voronin</icon>
@@ -114,6 +123,10 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>hello_dialog</start_dialog>
+	<actor_dialog>voronin_duty</actor_dialog>
+	<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
 	<actor_dialog>dm_broker_dialog</actor_dialog>
     <actor_dialog>minigames_petrenko</actor_dialog>	
     <actor_dialog>actor_break_dialog</actor_dialog>
@@ -240,9 +253,16 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     
-
-
-    <!------------ bar_visitors_stalker_mechanic ---------------------------->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Mangun (Duty Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 10, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+	
     <specific_character id="bar_visitors_stalker_mechanic" team_default = "1">
     <name>bar_visitors_stalker_mechanic_name</name>
     <icon>ui_inGame2_dolg_tech</icon>
@@ -260,9 +280,6 @@
     <supplies></supplies>
 #include "gameplay\character_criticals.xml"
         <start_dialog>bar_visitors_stalker_mechanic_start</start_dialog>
-	<!-- mlr -->
-        <actor_dialog>story_dolg_m</actor_dialog>	
-	<!-- mlr -->	
         <actor_dialog>dm_ordered_task_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
@@ -270,6 +287,7 @@
         <actor_dialog>bar_visitors_stalker_mechanic_drink_1</actor_dialog>
         <actor_dialog>bar_visitors_stalker_mechanic_drink_2</actor_dialog>
         <actor_dialog>bar_visitors_stalker_mechanic_drink_3</actor_dialog>
+		<actor_dialog>story_dolg_m</actor_dialog>
         <actor_dialog>actor_break_dialog</actor_dialog>
         </specific_character>
         
@@ -864,17 +882,17 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
 
+    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>esc_2_12_stalker_nimble_about_quest</actor_dialog>
     <actor_dialog>esc_2_12_stalker_nimble_get_order</actor_dialog>
     <actor_dialog>esc_2_12_stalker_nimble_about</actor_dialog>
     <actor_dialog>esc_2_12_stalker_nimble_about_quest</actor_dialog>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>esc_2_12_stalker_nimble_place_order</actor_dialog>
     <actor_dialog>esc_2_12_stalker_nimble_about</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
     <actor_dialog>minigames_anna</actor_dialog>
+    <actor_dialog>actor_break_dialog</actor_dialog>
 
     </specific_character>
     <!------------------ Anya ----------------->

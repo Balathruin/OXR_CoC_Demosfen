@@ -51,3 +51,25 @@ invulnerable = {!actor_enemy} true, false
 gather_items_enabled = false
 help_wounded_enabled = false
 corpse_detection_enabled = false
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[logic@monolith_eidolon]
+suitable = {=check_npc_name(monolith_eidolon)} true
+prior = 300
+active = animpoint@base2
+can_select_weapon = true
+level_spot = quest_npc
+dont_keep_items = true
+   
+[animpoint@base2]
+cover_name = monolith_eidolon_cover
+avail_animations = animpoint_sit_high
+use_camp = false
+meet = meet
+combat_ignore_cond = {=is_enemy_actor_or_companion} false, true
+combat_ignore_keep_when_attacked = true
+invulnerable = {!actor_enemy} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false

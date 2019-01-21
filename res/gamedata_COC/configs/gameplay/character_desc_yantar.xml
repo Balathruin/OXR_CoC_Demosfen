@@ -28,14 +28,15 @@
 
 
 
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
 
     <actor_dialog>yan_stalker_sakharov_about_brain_scorcher</actor_dialog>
     <actor_dialog>yan_stalker_sakharov_bad_psi_helmet</actor_dialog>
     <actor_dialog>yan_stalker_sakharov_good_psi_helmet</actor_dialog>
     <actor_dialog>yan_stalker_sakharov_upgrade_psi_helmet</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
+	<actor_dialog>yan_stalker_sakharov_new_artefacts</actor_dialog>
 
     <actor_dialog>saxarov_minigame</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>

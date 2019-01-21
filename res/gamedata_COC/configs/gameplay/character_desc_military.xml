@@ -17,9 +17,9 @@
     <supplies></supplies>
 #include "gameplay\character_criticals_5.xml"
 
-        <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
         <actor_dialog>dm_broker_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_dialog</actor_dialog>
+        <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
         <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <!--------------------- mlr ------------------------>
     <actor_dialog>mil_skraga_minigame_21_point_dialog</actor_dialog>
@@ -138,6 +138,7 @@
 #include "gameplay\character_food.xml"
     </supplies>
 #include "gameplay\character_criticals_5.xml"
+	<actor_dialog>lukash_freedom</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>

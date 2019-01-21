@@ -517,6 +517,271 @@ function setup_supplies_fetch_task_mlr(actor,npc,p)
 	end
 end 
 --mlr
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+
+--Lost to the Zone
+function setup_supplies_fetch_task_lostzone_stalker(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"bandit_patch",
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end
+
+function setup_supplies_fetch_task_lostzone_csky(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"bandit_patch",
+					"army_patch",
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end
+
+function setup_supplies_fetch_task_lostzone_dolg(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"freedom_patch",
+					"bandit_patch",
+					"monolith_patch"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end
+
+function setup_supplies_fetch_task_lostzone_freedom(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"duty_patch",
+					"army_patch",
+					"monolith_patch"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end
+
+function setup_supplies_fetch_task_lostzone_killer(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"freedom_patch",
+					"bandit_patch",
+					"duty_patch",
+					"army_patch",
+					"monolith_patch"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end 
+
+function setup_supplies_fetch_task_lostzone_army(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"freedom_patch",
+					"bandit_patch",
+					"stalker_patch",
+					"csky_patch",
+					"monolith_patch"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end 
+
+function setup_supplies_fetch_task_lostzone_bandit(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"stalker_patch",
+					"csky_patch",
+					"duty_patch",
+					"army_patch",
+					"ecolog_patch"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end 
+
+function setup_supplies_fetch_task_lostzone_monolith(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"stalker_patch",
+					"csky_patch",
+					"freedom_patch",
+					"bandit_patch",
+					"duty_patch",
+					"army_patch",
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end
+
+function setup_supplies_fetch_task_lostzone_medic(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"medkit_scientic",
+					"bandage",
+					"drug_radioprotector",			
+					"drug_coagulant",							
+					"drug_antidot"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end 
+
+function setup_supplies_fetch_task_lostzone_pda(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"itm_pda_common",
+					"itm_pda_uncommon",
+					"itm_pda_rare"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end 
+
+function setup_supplies_fetch_task_lostzone_backpack(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"wood_stove",
+					"itm_sleepbag"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end 
+
+function setup_supplies_fetch_task_lostzone_gear(actor,npc,p)
+	local itm = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (itm and system_ini():section_exist(itm)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+	else
+		local itms = {
+					"itm_gunsmith_toolkit",
+					"itm_outfit_toolkit"
+					}
+		itm = itms[math.random(#itms)]
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(itm,"inv_name") or "")
+		utils.save_var(db.actor,p[1],itm)
+		utils.save_var(db.actor,p[1].."_count",math.random(p[2] and tonumber(p[2]) or 1,p[3] and tonumber(p[3]) or 1))
+	end
+end
+
+function spawn_random_esc_2_12_stalker_fanat_task_3(first_speaker, second_speaker)
+	if math.random(100) <= 20 then
+		mlr_utils.aditional_spawn('spawn_wpn_pm_esc_2_12_stalker_fanat_task_3_1')
+	elseif math.random(100) >= 20 then
+		mlr_utils.aditional_spawn('spawn_wpn_pm_esc_2_12_stalker_fanat_task_3_2')	
+	elseif math.random(100) >= 40 then
+		mlr_utils.aditional_spawn('spawn_wpn_pm_esc_2_12_stalker_fanat_task_3_3')		
+	elseif math.random(100) >= 60 then
+		mlr_utils.aditional_spawn('spawn_wpn_pm_esc_2_12_stalker_fanat_task_3_4')	
+	elseif math.random(100) >= 80 then
+		mlr_utils.aditional_spawn('spawn_wpn_pm_esc_2_12_stalker_fanat_task_3_5')			
+	end
+end
+
+function setup_artefact_fetch_task_lostzone(actor,npc,p)
+	local artefact = DIALOG_LAST_ID and DIALOG_LAST_ID == inventory_upgrades.victim_id and utils.load_var(db.actor,p[1])
+	DIALOG_LAST_ID = inventory_upgrades.victim_id
+	if (artefact and system_ini():section_exist(artefact)) then 
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(artefact,"inv_name") or "")
+	else
+		local arts = {
+		"af_fonar",
+		"af_cocoon",
+		"af_mincer_izumrud",
+		"af_fountain",
+		"af_generator",
+		"af_tapeworm",
+		"af_elektron",
+		"af_cell",
+		"af_spaika",
+		"af_gauss"
+		}
+	
+		artefact = arts[math.random(#arts)]
+		utils.save_var(db.actor,p[1],artefact)
+		dialogs._FETCH_TEXT = game.translate_string(system_ini():r_string_ex(artefact,"inv_name") or "")
+	end
+end
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 -- ----------------------------------------------------------------------------------------------------
 -- Общие функции
@@ -876,7 +1141,7 @@ function reward_stash(actor,npc,p)
 		end
 
 		if ((math.random(1,100)/100) <= 0.25) then
-			local t = {"itm_repairkit_tier_1","itm_repairkit_tier_1","itm_repairkit_tier_2","itm_repairkit_tier_2","itm_repairkit_tier_3"}
+			local t = {"itm_repairkit_tier_1","itm_repairkit_tier_1","itm_repairkit_tier_2","itm_repairkit_tier_2","itm_repairkit_tier_3","itm_repairkit_tier_3"}
 			table.insert(bonus,t[math.random(#t)])
 		end
 

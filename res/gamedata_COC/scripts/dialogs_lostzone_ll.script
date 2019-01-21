@@ -1,0 +1,56 @@
+-- Faction checks --
+function check_monolith(first_speaker, second_speaker)
+	return mlr_utils.check_comm('actor_monolith')
+end
+function check_no_monolith()
+	return not mlr_utils.check_comm('actor_monolith')
+end
+function check_dolg()
+	return mlr_utils.check_comm('actor_dolg')
+end
+function check_no_dolg()
+	return not mlr_utils.check_comm('actor_dolg')
+end
+function check_neutral()
+	return mlr_utils.check_comm('actor_stalker')
+end
+function check_no_neutral()
+	return not mlr_utils.check_comm('actor_stalker')
+end
+function check_freedom()
+	return mlr_utils.check_comm('actor_freedom')
+end
+function check_no_freedom()
+	return not mlr_utils.check_comm('actor_freedom')
+end
+function check_csky()
+	return mlr_utils.check_comm('actor_csky')
+end
+function check_no_csky()
+	return not mlr_utils.check_comm('actor_csky')
+end
+function check_ecolog()
+	return mlr_utils.check_comm('actor_ecolog')
+end
+function check_no_ecolog()
+	return not mlr_utils.check_comm('actor_ecolog')
+end
+function check_army()
+	return mlr_utils.check_comm('actor_army')
+end
+function check_no_army()
+	return not mlr_utils.check_comm('actor_army')
+end
+function check_bandit()
+	return mlr_utils.check_comm('actor_bandit')
+end
+function check_no_bandit()
+	return not mlr_utils.check_comm('actor_bandit')
+end
+function check_killer()
+	return mlr_utils.check_comm('actor_killer')
+end
+function check_no_killer()
+	return not mlr_utils.check_comm('actor_killer')
+end
+;-- Faction checks --

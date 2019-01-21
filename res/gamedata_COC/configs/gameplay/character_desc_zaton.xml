@@ -547,6 +547,7 @@
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>zat_b7_bandit_boss_sultan_about</actor_dialog>
+	<actor_dialog>bandit_leader_st</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     
@@ -742,6 +743,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     <actor_dialog>zat_a2_stalker_barmen_actor_info</actor_dialog>
+	<actor_dialog>beard_new_artefacts</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>

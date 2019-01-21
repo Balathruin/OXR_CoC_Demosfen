@@ -1,0 +1,500 @@
+;==============================================================
+;
+; TASKS PROVIDED FOR LOST TO THE ZONE
+;	CoC 1.5r6 - Lost to the Zone
+;
+;	Made by: SarisKhan
+;	Last revised: 18 November 2017
+;
+;==============================================================
+
+;=================Clear Sky Quests===========================
+
+;------------------------------------------------
+; Professor Kalancha (Clear Sky Scientist) Collect Tissue Sample Lost to the Zone Task 1-
+[mar_smart_terrain_base_doctor_task_1]
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = mar_smart_terrain_base_doctor_task_1_name
+title_functor = general_fetch_task
+descr = mar_smart_terrain_base_doctor_task_1_text
+descr_functor = general_fetch_task
+job_descr = mar_smart_terrain_base_doctor_task_1_about
+fetch_descr = mar_smart_terrain_base_doctor_task_1_fetch_about
+task_complete_descr = mar_smart_terrain_base_doctor_task_1_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+fetch_func = %=setup_rare_mutant_fetch_task(mar_smart_terrain_base_doctor_task_1_fetch:1:2)%
+
+on_complete = %=reward_random_item(af_vyvert:af_fuzz_kolobok:af_gravi:af_fonar:af_skull_miser) =complete_task_inc_goodwill(50:csky) =remove_fetch_item(mar_smart_terrain_base_doctor_task_1_fetch) =inc_task_stage(mar_smart_terrain_base_doctor_task_1) =pstor_reset(mar_smart_terrain_base_doctor_task_1_fetch)%
+on_fail = %=fail_task_dec_goodwill(25:csky) =pstor_reset(mar_smart_terrain_base_doctor_task_1_fetch)%
+on_cancel = %=pstor_reset(mar_smart_terrain_base_doctor_task_1_fetch)%
+
+; Professor Kalancha (Clear Sky Scientist) Find New Artefact Lost to the Zone Task 2-
+[mar_smart_terrain_base_doctor_task_2]
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 40
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = mar_smart_terrain_base_doctor_task_2_name
+title_functor = general_fetch_task
+descr = mar_smart_terrain_base_doctor_task_2_text
+descr_functor = general_fetch_task
+job_descr = mar_smart_terrain_base_doctor_task_2_about
+fetch_descr = mar_smart_terrain_base_doctor_task_2_fetch_about
+task_complete_descr = mar_smart_terrain_base_doctor_task_2_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+fetch_func = %=setup_artefact_fetch_task_lostzone(mar_smart_terrain_base_doctor_task_2_fetch:1:1)%
+
+on_complete = %=reward_item_cost_mult_and_remove(mar_smart_terrain_base_doctor_task_2_fetch:0.8) =complete_task_inc_goodwill(50:csky) =remove_fetch_item(mar_smart_terrain_base_doctor_task_2_fetch) =inc_task_stage(mar_smart_terrain_base_doctor_task_2) =pstor_reset(mar_smart_terrain_base_doctor_task_2_fetch)%
+on_fail = %=fail_task_dec_goodwill(25:csky) =pstor_reset(mar_smart_terrain_base_doctor_task_2_fetch)%
+on_cancel = %=pstor_reset(mar_smart_terrain_base_doctor_task_2_fetch)%
+
+; Professor Kalancha (Clear Sky Scientist) Scarce Supplies Lost to the Zone Task 3-
+[mar_smart_terrain_base_doctor_task_3]
+icon = ui_icons_find_item35
+storyline = false
+prior = 50
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = mar_smart_terrain_base_doctor_task_3_name
+title_functor = general_fetch_task
+descr = mar_smart_terrain_base_doctor_task_3_text
+descr_functor = general_fetch_task
+job_descr = mar_smart_terrain_base_doctor_task_3_about
+fetch_descr = mar_smart_terrain_base_doctor_task_3_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_medic(mar_smart_terrain_base_doctor_task_3_fetch:4:8)%
+task_complete_descr = mar_smart_terrain_base_doctor_task_3_fetch_finish
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+
+on_complete = %=complete_task_inc_goodwill(50:csky) =reward_random_money(2500:5000) =inc_task_stage(mar_smart_terrain_base_doctor_task_3) =remove_fetch_item(mar_smart_terrain_base_doctor_task_3_fetch) =pstor_reset(mar_smart_terrain_base_doctor_task_3_fetch)%
+on_fail = %=pstor_reset(mar_smart_terrain_base_doctor_task_3_fetch)%
+
+;=================Loner Quests===========================
+
+;------------------------------------------------
+
+; Fanatic (Experienced Loner) Retrieve Family Makarov Lost to the Zone Task 3-
+[esc_2_12_stalker_fanat_task_3]
+icon = ui_icons_find_item35
+prior = 20
+storyline = false
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = esc_2_12_stalker_fanat_task_3_name
+title_functor = general_fetch_task
+descr = esc_2_12_stalker_fanat_task_3_text
+descr_functor = general_fetch_task
+job_descr = esc_2_12_stalker_fanat_task_3_about
+fetch_descr = esc_2_12_stalker_fanat_task_3_fetch_about
+on_init = %=spawn_random_esc_2_12_stalker_fanat_task_3%
+fetch_func = %=setup_generic_fetch_task(esc_2_12_stalker_fanat_task_3_fetch:1:wpn_pm_esc_2_12_stalker_fanat_task_3)%
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = task_targets_lostzone_all
+task_complete_descr = esc_2_12_stalker_fanat_task_3_fetch_finish
+
+on_complete = %=reward_random_money(3000:4000) =reward_stash(true) =complete_task_inc_goodwill(75:stalker) =remove_fetch_item(esc_2_12_stalker_fanat_task_3_fetch) =inc_task_stage(esc_2_12_stalker_fanat_task_3) =pstor_reset(esc_2_12_stalker_fanat_task_3_fetch)%
+on_fail = %=fail_task_dec_goodwill(25:stalker) =pstor_reset(esc_2_12_stalker_fanat_task_3_fetch)%
+on_cancel = %=pstor_reset(esc_2_12_stalker_fanat_task_3_fetch)%
+
+;------------------------------------------------
+
+;=================Mercenary Quests===========================
+; Blackjack (Mercenary Barman) Monster Hunter Lost to the Zone Task 1-
+[cit_killer_barman_task_1]
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 50
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = cit_killer_barman_task_1_name
+title_functor = general_fetch_task
+descr = cit_killer_barman_task_1_text
+descr_functor = general_fetch_task
+job_descr = cit_killer_barman_task_1_about
+fetch_descr = cit_killer_barman_task_1_fetch_about
+fetch_func = %=setup_rare_mutant_fetch_task(cit_killer_barman_task_1_fetch:1:2)%
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = cit_killer_barman_task_1_fetch_finish
+
+on_complete = %=reward_stash(true) =reward_item_cost_mult_and_remove(cit_killer_barman_task_1_fetch:4.5) =complete_task_inc_goodwill(50:killer) =remove_fetch_item(cit_killer_barman_task_1_fetch) =inc_task_stage(cit_killer_barman_task_1) =pstor_reset(cit_killer_barman_task_1_fetch)%
+on_fail = %=pstor_reset(cit_killer_barman_task_1_fetch)%
+
+; Blackjack (Mercenary Barman) Professional Hitman Lost to the Zone Task 2-
+[cit_killer_barman_task_2]
+icon = ui_icons_kill_stalker6
+storyline = false
+prior = 60
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = cit_killer_barman_task_2_name
+title_functor = general_fetch_task
+descr = cit_killer_barman_task_2_text
+descr_functor = general_fetch_task
+job_descr = cit_killer_barman_task_2_about
+fetch_descr = cit_killer_barman_task_2_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_killer(cit_killer_barman_task_2_fetch:15:30)%
+task_complete_descr = cit_killer_barman_task_2_fetch_finish
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+
+on_complete = %=complete_task_inc_goodwill(50:killer) =reward_stash(true) =reward_stash(true) =reward_random_money(8000:16000) =remove_fetch_item(cit_killer_barman_task_2_fetch) =inc_task_stage(cit_killer_barman_task_2) =pstor_reset(cit_killer_barman_task_2_fetch)%
+on_fail = %=pstor_reset(cit_killer_barman_task_2_fetch)%
+
+; Blackjack (Mercenary Barman) Night Terror Lost to the Zone Task 3-
+[cit_killer_barman_task_3]
+icon = ui_icons_black_chimera17
+storyline = false
+prior = 80
+repeat_timeout = 172800
+precondition = {=is_night} true, false
+
+title = cit_killer_barman_task_3_name
+descr = cit_killer_barman_task_3_text
+job_descr = cit_killer_barman_task_3_about
+task_complete_descr = cit_killer_barman_task_3_finish
+status_functor = special_steps_for_lostzone_tasks
+stage_complete = 1
+target_functor = task_targets_lostzone_all
+
+on_init = %=create_squad(special_chimera_task2_squad:red_smart_terrain_6_6)%
+on_complete = %=reward_random_money(8000:12000) =inc_task_stage(cit_killer_barman_task_3) =complete_task_inc_goodwill(125:killer) =pstor_reset(cit_killer_barman_task_3_id) =pstor_reset(cit_killer_barman_task_3_target_id)%
+on_fail = %=fail_task_dec_goodwill(50:killer) =pstor_reset(cit_killer_barman_task_3_id) =pstor_reset(cit_killer_barman_task_3_target_id)%
+on_cancel = %=fail_task_dec_goodwill(25:killer) =pstor_reset(cit_killer_barman_task_3_id) =pstor_reset(cit_killer_barman_task_3_target_id)%
+
+;------------------------------------------------
+; Mender (Mercenary Medic) Scarce Supplies Lost to the Zone Task 1-
+[cit_killer_medic_task_1]
+icon = ui_icons_find_item35
+storyline = false
+prior = 55
+repeat_timeout = 86400
+precondition = true
+
+title = cit_killer_medic_task_1_name
+title_functor = general_fetch_task
+descr = cit_killer_medic_task_1_text
+descr_functor = general_fetch_task
+job_descr = cit_killer_medic_task_1_about
+fetch_descr = cit_killer_medic_task_1_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_medic(cit_killer_medic_task_1_fetch:5:10)%
+task_complete_descr = cit_killer_medic_task_1_fetch_finish
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+
+on_complete = %=complete_task_inc_goodwill(50:killer) =reward_random_money(3000:6000) =inc_task_stage(cit_killer_medic_task_1) =remove_fetch_item(cit_killer_medic_task_1_fetch) =pstor_reset(cit_killer_medic_task_1_fetch)%
+on_fail = %=pstor_reset(cit_killer_medic_task_1_fetch)%
+
+;=================Freedom Quests===========================
+; Lukash (Freedom Honcho) Trigger Happy Lost to the Zone Task 1-
+
+;------------------------------------------------
+; Skinflint (Freedom Trader) Night Terror Lost to the Zone Task 1-
+[mil_smart_terrain_7_10_freedom_trader_stalker_task_2]
+icon = ui_icons_bloodsucker15
+storyline = false
+prior = 60
+repeat_timeout = 172800
+precondition = {=is_night} true, false
+
+title = mil_smart_terrain_7_10_freedom_trader_stalker_task_2_name
+descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_2_text
+job_descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_2_about
+task_complete_descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_2_finish
+status_functor = special_steps_for_lostzone_tasks
+stage_complete = 1
+target_functor = task_targets_lostzone_all
+
+on_init = %=create_squad(special_bloodsucker_task_squad:mil_smart_terrain_4_2)%
+on_complete = %=reward_random_money(4000:8000) =reward_stash(true) =inc_task_stage(mil_smart_terrain_7_10_freedom_trader_stalker_task_2) =complete_task_inc_goodwill(75:freedom) =pstor_reset(cit_killer_barman_task_3_id) =pstor_reset(cit_killer_barman_task_3_target_id)%
+on_fail = %=fail_task_dec_goodwill(25:freedom) =pstor_reset(mil_smart_terrain_7_10_freedom_trader_stalker_task_2_id) =pstor_reset(mil_smart_terrain_7_10_freedom_trader_stalker_task_2_target_id)%
+on_cancel = %=fail_task_dec_goodwill(25:freedom) =pstor_reset(mil_smart_terrain_7_10_freedom_trader_stalker_task_2_id) =pstor_reset(mil_smart_terrain_7_10_freedom_trader_stalker_task_2_target_id)%
+
+;------------------------------------------------
+; Skinflint (Freedom Trader) Scarce Supplies Lost to the Zone Task 2-
+[mil_smart_terrain_7_10_freedom_trader_stalker_task_3]
+icon = ui_icons_find_item35
+storyline = false
+prior = 50
+repeat_timeout = 86400
+precondition = true
+
+title = mil_smart_terrain_7_10_freedom_trader_stalker_task_3_name
+title_functor = general_fetch_task
+descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_3_text
+descr_functor = general_fetch_task
+job_descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_3_about
+fetch_descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_3_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_medic(mil_smart_terrain_7_10_freedom_trader_stalker_task_3_fetch:5:10)%
+task_complete_descr = mil_smart_terrain_7_10_freedom_trader_stalker_task_3_fetch_finish
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+
+on_complete = %=complete_task_inc_goodwill(75:freedom) =reward_random_money(2500:5500) =reward_stash(true) =remove_fetch_item(mil_smart_terrain_7_10_freedom_trader_stalker_task_3_fetch) =inc_task_stage(mil_smart_terrain_7_10_freedom_trader_stalker_task_3) =pstor_reset(mil_smart_terrain_7_10_freedom_trader_stalker_task_3_fetch)%
+on_fail = %=pstor_reset(mil_smart_terrain_7_10_freedom_trader_stalker_task_3_fetch)%
+
+;=================Duty Quests===========================
+; Voronin (Duty Honcho) New Zone Order Lost to the Zone Task 1-
+[bar_dolg_leader_task_1]
+icon = ui_icons_kill_stalker6
+storyline = false
+prior = 60
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = bar_dolg_leader_task_1_name
+title_functor = general_fetch_task
+descr = bar_dolg_leader_task_1_text
+descr_functor = general_fetch_task
+job_descr = bar_dolg_leader_task_1_about
+fetch_descr = bar_dolg_leader_task_1_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_dolg(bar_dolg_leader_task_1_fetch:15:25)%
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = bar_dolg_leader_task_1_fetch_finish
+on_complete = %=complete_task_inc_goodwill(50:dolg) =reward_stash(true) =reward_random_money(7000:14000) =remove_fetch_item(bar_dolg_leader_task_1_fetch) =inc_task_stage(bar_dolg_leader_task_1) =pstor_reset(bar_dolg_leader_task_1_fetch)%
+on_fail = %=pstor_reset(bar_dolg_leader_task_1_fetch)%
+
+; Voronin (Duty Honcho) Mutant Hunt Lost to the Zone Task 2-
+[bar_dolg_leader_task_2]
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 90
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = bar_dolg_leader_task_2_name
+title_functor = general_fetch_task
+descr = bar_dolg_leader_task_2_text
+descr_functor = general_fetch_task
+job_descr = bar_dolg_leader_task_2_about
+fetch_descr = bar_dolg_leader_task_2_fetch_about
+fetch_func = %=setup_rare_mutant_fetch_task(bar_dolg_leader_task_2_fetch:1:2)%
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = bar_dolg_leader_task_2_fetch_finish
+
+on_complete = %=reward_stash(true) =reward_item_cost_mult_and_remove(bar_dolg_leader_task_2_fetch:4.0) =complete_task_inc_goodwill(50:dolg) =remove_fetch_item(bar_dolg_leader_task_2_fetch) =inc_task_stage(bar_dolg_leader_task_2) =pstor_reset(bar_dolg_leader_task_2_fetch)%
+on_fail = %=pstor_reset(bar_dolg_leader_task_2_fetch)%
+
+; Voronin (Duty Honcho) Night Terror Lost to the Zone Task 3-
+[bar_dolg_leader_task_3]
+icon = ui_icons_bloodsucker15
+storyline = false
+prior = 65
+repeat_timeout = 172800
+precondition = {=is_night} true, false
+
+title = bar_dolg_leader_task_3_name
+descr = bar_dolg_leader_task_3_text
+job_descr = bar_dolg_leader_task_3_about
+task_complete_descr = bar_dolg_leader_task_3_finish
+status_functor = special_steps_for_lostzone_tasks
+stage_complete = 1
+target_functor = task_targets_lostzone_all
+
+on_init = %=create_squad(special_bloodsucker_task2_squad:trc_sim_9)%
+on_complete = %=reward_random_money(5000:10000) =inc_task_stage(bar_dolg_leader_task_3) =complete_task_inc_goodwill(100:dolg) =pstor_reset(bar_dolg_leader_task_3_id) =pstor_reset(bar_dolg_leader_task_3_target_id)%
+on_fail = %=fail_task_dec_goodwill(50:dolg) =pstor_reset(bar_dolg_leader_task_3_id) =pstor_reset(bar_dolg_leader_task_3_target_id)%
+on_cancel = %=fail_task_dec_goodwill(25:dolg) =pstor_reset(bar_dolg_leader_task_3_id) =pstor_reset(bar_dolg_leader_task_3_target_id)%
+
+;=================Ecologist Quests===========================
+; Professor Sakharov (Ecologist Trader) Collect New Artefact Lost to the Zone Task 1-
+[yan_stalker_sakharov_task_2]
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 40
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = yan_stalker_sakharov_task_2_name
+title_functor = general_fetch_task
+descr = yan_stalker_sakharov_task_2_text
+descr_functor = general_fetch_task
+job_descr = yan_stalker_sakharov_task_2_about
+fetch_descr = yan_stalker_sakharov_task_2_fetch_about
+task_complete_descr = yan_stalker_sakharov_task_2_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+
+fetch_func = %=setup_artefact_fetch_task_lostzone(yan_stalker_sakharov_task_2_fetch:1:1)%
+on_complete = %=reward_item_cost_mult_and_remove(yan_stalker_sakharov_task_2_fetch:0.8) =complete_task_inc_goodwill(50:ecolog) =remove_fetch_item(yan_stalker_sakharov_task_2_fetch) =inc_task_stage(yan_stalker_sakharov_task_2) =pstor_reset(yan_stalker_sakharov_task_2_fetch)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =pstor_reset(yan_stalker_sakharov_task_2_fetch)%
+
+;------------------------------------------------
+; Professor Hermann (Ecologist Trader) Collect New Artefact Lost to the Zone Task 1-
+[jup_b6_scientist_nuclear_physicist_task_1]
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 40
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = jup_b6_scientist_nuclear_physicist_task_1_name
+title_functor = general_fetch_task
+descr = jup_b6_scientist_nuclear_physicist_task_1_text
+descr_functor = general_fetch_task
+job_descr = jup_b6_scientist_nuclear_physicist_task_1_about
+fetch_descr = jup_b6_scientist_nuclear_physicist_task_1_fetch_about
+task_complete_descr = jup_b6_scientist_nuclear_physicist_task_1_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+
+fetch_func = %=setup_artefact_fetch_task_lostzone(jup_b6_scientist_nuclear_physicist_task_1_fetch:1:1)%
+on_complete = %=reward_item_cost_mult_and_remove(jup_b6_scientist_nuclear_physicist_task_1_fetch:0.8) =complete_task_inc_goodwill(50:ecolog) =remove_fetch_item(jup_b6_scientist_nuclear_physicist_task_1_fetch) =inc_task_stage(jup_b6_scientist_nuclear_physicist_task_1) =pstor_reset(jup_b6_scientist_nuclear_physicist_task_1_fetch)%
+on_fail = %=fail_task_dec_goodwill(25:ecolog) =pstor_reset(jup_b6_scientist_nuclear_physicist_task_1_fetch)%
+
+;=================Military Quests===========================
+; Kuznetsov (Military Commander) Tight Security Lost to the Zone Task 1-
+[agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1]
+icon = ui_icons_kill_stalker6
+storyline = false
+prior = 75
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_name
+title_functor = general_fetch_task
+descr = agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_text
+descr_functor = general_fetch_task
+job_descr = agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_about
+fetch_descr = agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_army(agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_fetch:15:30)%
+task_complete_descr = agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_fetch_finish
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+
+on_complete = %=complete_task_inc_goodwill(50:army) =reward_random_money(6000:16000) =remove_fetch_item(agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_fetch) =inc_task_stage(agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1) =pstor_reset(agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_fetch)%
+on_fail = %=pstor_reset(agr_smart_terrain_1_6_near_2_military_colonel_kovalski_task_1_fetch)%
+
+;------------------------------------------------
+; Rogovets (Military Medic) Scarce Supplies Lost to the Zone Task 1-
+[agr_army_medic_task_1]
+icon = ui_icons_find_item35
+storyline = false
+prior = 55
+repeat_timeout = 86400
+precondition = true
+
+title = agr_army_medic_task_1_name
+title_functor = general_fetch_task
+descr = agr_army_medic_task_1_text
+descr_functor = general_fetch_task
+job_descr = agr_army_medic_task_1_about
+fetch_descr = agr_army_medic_task_1_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_medic(agr_army_medic_task_1_fetch:5:10)%
+task_complete_descr = agr_army_medic_task_1_fetch_finish
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+
+on_complete = %=complete_task_inc_goodwill(50:army) =reward_random_money(2500:5000) =inc_task_stage(agr_army_medic_task_1) =remove_fetch_item(agr_army_medic_task_1_fetch) =pstor_reset(agr_army_medic_task_1_fetch)%
+on_fail = %=pstor_reset(agr_army_medic_task_1_fetch)%
+
+;=================Monolith Quests===========================
+; Eidolon (Monolith Elite Soldier) Purge the Infidels Lost to the Zone Task 1-
+[monolith_eidolon_task_1]
+icon = ui_icons_kill_stalker6
+storyline = false
+prior = 90
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = monolith_eidolon_task_1_name
+title_functor = general_fetch_task
+descr = monolith_eidolon_task_1_text
+descr_functor = general_fetch_task
+job_descr = monolith_eidolon_task_1_about
+fetch_descr = monolith_eidolon_task_1_fetch_about
+fetch_func = %=setup_supplies_fetch_task_lostzone_monolith(monolith_eidolon_task_1_fetch:15:30)%
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = monolith_eidolon_task_1_fetch_finish
+on_complete = %=complete_task_inc_goodwill(75:monolith) =reward_random_money(6000:12000) =reward_stash(true) =remove_fetch_item(monolith_eidolon_task_1_fetch) =inc_task_stage(monolith_eidolon_task_1) =pstor_reset(monolith_eidolon_task_1_fetch)%
+on_fail = %=pstor_reset(monolith_eidolon_task_1_fetch)%
+
+; Eidolon (Monolith Elite Soldier) Mutant Hunt Lost to the Zone Task 2-
+[monolith_eidolon_task_2]
+icon = ui_icons_find_item35
+storyline = false
+prior = 70
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = monolith_eidolon_task_2_name
+title_functor = general_fetch_task
+descr = monolith_eidolon_task_2_text
+descr_functor = general_fetch_task
+job_descr = monolith_eidolon_task_2_about
+fetch_descr = monolith_eidolon_task_2_fetch_about
+fetch_func = %=setup_rare_mutant_fetch_task(monolith_eidolon_task_2_fetch:1:2)%
+
+stage_complete = 1
+status_functor = actor_has_fetch_item
+target_functor = general_fetch_task
+task_complete_descr = monolith_eidolon_task_2_fetch_finish
+on_complete = %=reward_stash(true) =reward_item_cost_mult_and_remove(monolith_eidolon_task_2_fetch:5.0) =complete_task_inc_goodwill(50:monolith) =remove_fetch_item(monolith_eidolon_task_2_fetch) =inc_task_stage(monolith_eidolon_task_2) =pstor_reset(monolith_eidolon_task_2_fetch)%
+on_fail = %=pstor_reset(monolith_eidolon_task_2_fetch)%
+
+; Eidolon (Monolith Elite Soldier) Harvest the Fruit Lost to the Zone Task 3-
+[monolith_eidolon_task_3]
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 40
+repeat_timeout = 86400
+precondition = {=random_chance(100)} true, false
+
+title = monolith_eidolon_task_3_name
+title_functor = general_fetch_task
+descr = monolith_eidolon_task_3_text
+descr_functor = general_fetch_task
+job_descr = monolith_eidolon_task_3_about
+fetch_descr = monolith_eidolon_task_3_fetch_about
+task_complete_descr = monolith_eidolon_task_3_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+
+fetch_func = %=setup_artefact_fetch_task_lostzone(monolith_eidolon_task_3_fetch:1:1)%
+on_complete = %=reward_item_cost_mult_and_remove(monolith_eidolon_task_3_fetch:0.8) =complete_task_inc_goodwill(50:monolith) =remove_fetch_item(monolith_eidolon_task_3_fetch) =inc_task_stage(monolith_eidolon_task_3) =pstor_reset(monolith_eidolon_task_3_fetch)%
+on_fail = %=fail_task_dec_goodwill(25:monolith) =pstor_reset(monolith_eidolon_task_3_fetch)%

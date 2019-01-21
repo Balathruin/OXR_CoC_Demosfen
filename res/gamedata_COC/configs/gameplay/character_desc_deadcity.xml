@@ -1,10 +1,19 @@
 <?xml version='1.0' encoding="windows-1251"?>
 <xml>
-    <!-------------------------- MERC TRADER ------------------------>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Dushman (Mercenary Trader) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+	
     <specific_character id="cit_killers_merc_trader_stalker" team_default="1">
     <name>cit_killers_merc_trader_stalker_name</name>
     <icon>ui_inGame2_merc_trade</icon>
-    <bio>СњРїС‹С‚РЅС‹Р№ СЃС‚Р°Р»РєРµСЂ. Ж’РµС‚Р°Р»СЊРЅР°В¤ РёРЅС„РѕСЂРјР°С†РёВ¤ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚.</bio>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
     <class>cit_killers_merc_trader_stalker</class>
     <community>trader</community>
     <map_icon x="1" y="0"/>
@@ -23,6 +32,8 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals.xml"
+	<actor_dialog>cit_killers_merc_trader_commotion</actor_dialog>
+	<actor_dialog>cit_killers_merc_trader_stalker_newart</actor_dialog>
     <actor_dialog>dm_broker_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
@@ -39,7 +50,7 @@
     <specific_character id="cit_killers_merc_mechanic_stalker" team_default="1">
     <name>cit_killers_merc_mechanic_stalker_name</name>
     <icon>ui_inGame2_merc_tech</icon>
-    <bio>СњРїС‹С‚РЅС‹Р№ СЃС‚Р°Р»РєРµСЂ. Ж’РµС‚Р°Р»СЊРЅР°В¤ РёРЅС„РѕСЂРјР°С†РёВ¤ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚.</bio>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
     <class>cit_killers_merc_mechanic_stalker</class>
     <community>trader</community>
     <map_icon x="1" y="0"/>

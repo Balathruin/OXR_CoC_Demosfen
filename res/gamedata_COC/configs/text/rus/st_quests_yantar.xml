@@ -55,6 +55,7 @@
 		<text>Спасибо сталкер! Пожалуйста, примите это как компенсацию.</text>
 	</string>
 
+	<!-- FIND ARTEFACT FOR SAKHAROV TASK -->
 	<!-- ----------------------------------------------------------------------------------------- -->
 	<!-- Sakharov (Ecologist) Find Artefact Sample Storyline Task -->
 
@@ -62,7 +63,7 @@
 		<text>Артефакт %s для Сахарова</text>
 	</string>
 	<string id="drx_sl_yan_stalker_sakharov_task_2_text">
-		<text>Найти артефакт %s для Сахарова.</text>
+		<text>Сахаров просил найти и принести ему артефакт %s.</text>
 	</string>
 	<string id="drx_sl_yan_stalker_sakharov_task_2_about">
 		<text>Ах, да, хорошо! Я ждал Вас. Мне нужен опытный охотник за артефактами, чтобы найти конкретный образец.</text>
@@ -162,10 +163,6 @@
 	</string>
 	<string id="yan_stalker_sakharov_task_1_fetch_finish">
 		<text>Благодарю Вас, молодой человек. Я немедленно приступаю к исследованиям.</text>
-	</string>
-	<!-- FIND ARTEFACT FOR SAKHAROV TASK -->
-	<string id="yan_stalker_sakharov_task_2_text">
-		<text>Сахаров просил найти и принести ему артефакт %s.</text>
 	</string>
 	<!-- WAIT FOR PSI HELMET CALIBRATION TASK -->
 	<string id="yan_stalker_sakharov_psi_helmet_upgrade_name">

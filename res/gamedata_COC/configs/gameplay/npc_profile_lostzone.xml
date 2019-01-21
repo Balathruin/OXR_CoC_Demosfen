@@ -1,0 +1,19 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+
+<xml>
+	<character id="cit_killer_medic">
+		<class>cit_killer_medic</class>
+	</character>
+	<character id="cit_killer_barman">
+		<class>cit_killer_barman</class>
+	</character>
+	<character id="mar_csky_guide">
+		<class>mar_csky_guide</class>
+	</character>
+	<character id="agr_army_medic">
+		<class>agr_army_medic</class>
+	</character>
+	<character id="monolith_eidolon">
+		<class>monolith_eidolon</class>
+	</character>
+</xml>

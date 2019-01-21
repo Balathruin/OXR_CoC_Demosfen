@@ -226,25 +226,6 @@
 		<text>Спасибо, чувак, ну выручил! Вот, держи, чем богат.</text>
 	</string>
 
-	<!-- ----------------------------------------------------------------------------------------- -->
-	<!-- Skinflint (Freedom Mechanic) Deliver Equipment Dynamic Task -->
-
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_name">
-		<text>Поставка оборудования для Скряги</text>
-	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_text">
-		<text>Доставить оборудование для Скряги.</text>
-	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_about">
-		<text>Нужно забрать и доставить мне одну посылку.</text>
-	</string>
-	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_finish">
-		<text>Спасибо, сталкер!</text>
-	</string>
-
-	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
 	<!--
 	<!-- MECHANIC TASK TEXT  STRINGS

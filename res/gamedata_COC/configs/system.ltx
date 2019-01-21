@@ -75,11 +75,11 @@ files                                    = ui_npc_unique, ui_npc_unique_2, ui_np
 files                                    = info_portions, info_upgrades, info_alife_switch, info_yantar, info_katacomb, info_escape, info_zaton, info_jupiter, info_pripyat
 
 [dialogs]
-files                                    = dialogs, dialogs_yantar, dialogs_marsh, dialogs_redforest, dialogs_katacomb, dialogs_escape, dialogs_bar, dialogs_zaton, dialogs_jupiter, dialogs_pripyat, dialogs_darkvalley, dialogs_warlab, dialogs_mlr, dialogs_mlr_arena, dialogs_minigames, jg_dialogs, dialogs_faction
+files                                    = dialogs, dialogs_yantar, dialogs_marsh, dialogs_redforest, dialogs_katacomb, dialogs_escape, dialogs_bar, dialogs_zaton, dialogs_jupiter, dialogs_pripyat, dialogs_darkvalley, dialogs_warlab, dialogs_mlr, dialogs_mlr_arena, dialogs_minigames, jg_dialogs, dialogs_faction, dialogs_lostzone
 
 [profiles]
-files                                    = npc_profile, npc_profile_mlr
-specific_characters_files                = character_desc_general, character_desc_marsh, character_desc_agroprom, character_desc_darkvalley, character_desc_bar, character_desc_escape, character_desc_red_forest, character_desc_yantar, character_desc_military, character_desc_deadcity, character_desc_katacomb, character_desc_zaton, character_desc_pripyat, character_desc_jupiter, character_desc_underpass, character_desc_sarcofag, character_desc_warlab, character_desc_mlr, character_desc_labx7_coll22_1, character_desc_rein
+files                                    = npc_profile, npc_profile_mlr, npc_profile_lostzone
+specific_characters_files                = character_desc_general, character_desc_marsh, character_desc_agroprom, character_desc_darkvalley, character_desc_bar, character_desc_escape, character_desc_red_forest, character_desc_yantar, character_desc_military, character_desc_deadcity, character_desc_katacomb, character_desc_zaton, character_desc_pripyat, character_desc_jupiter, character_desc_underpass, character_desc_sarcofag, character_desc_warlab, character_desc_mlr, character_desc_labx7_coll22_1, character_desc_rein, character_desc_lostzone
 
 
 ;New in CoC: You can have as many slots as you want, simply create slot_active_* and slot_persistent_* for it in sequential order
@@ -162,37 +162,37 @@ max_count                                = 5
 
 [bloody_marks]
 wallmarks                                = wm\wm_blood_1,wm\wm_blood_2,wm\wm_blood_3,wm\wm_blood_4,wm\wm_blood_5,wm\wm_blood_6,wm\wm_blood_7,wm\wm_blood_8,wm\wm_blood_9,wm\wm_blood_10,wm\wm_blood_11,wm\wm_blood_1_1,wm\wm_blood_1_2,wm\wm_blood_1_3,wm\wm_blood_1_4,wm\wm_blood_1_5
-dist                                     = 6.0	                                       ;2.4  ;(м) max расстољние отлета крови
-max_size                                 = 0.3	                                       ;0.3  ;(м)радиус пљтна при хите силой nominal hit по большому объекту (по маленькому *0.5)
-min_size                                 = 0.05	                                       ;(м)минимальнvй радиус пљтна
-nominal_hit                              = 0.25	                                       ;величина номинального хита, при котором разлетаетсљ максимум крови (max_size)
+dist                                     = 6.0	                                       ;2.4  ;(Рј) max СЂР°СЃСЃС‚РѕС™РЅРёРµ РѕС‚Р»РµС‚Р° РєСЂРѕРІРё
+max_size                                 = 0.3	                                       ;0.3  ;(Рј)СЂР°РґРёСѓСЃ РїС™С‚РЅР° РїСЂРё С…РёС‚Рµ СЃРёР»РѕР№ nominal hit РїРѕ Р±РѕР»СЊС€РѕРјСѓ РѕР±СЉРµРєС‚Сѓ (РїРѕ РјР°Р»РµРЅСЊРєРѕРјСѓ *0.5)
+min_size                                 = 0.05	                                       ;(Рј)РјРёРЅРёРјР°Р»СЊРЅvР№ СЂР°РґРёСѓСЃ РїС™С‚РЅР°
+nominal_hit                              = 0.25	                                       ;РІРµР»РёС‡РёРЅР° РЅРѕРјРёРЅР°Р»СЊРЅРѕРіРѕ С…РёС‚Р°, РїСЂРё РєРѕС‚РѕСЂРѕРј СЂР°Р·Р»РµС‚Р°РµС‚СЃС™ РјР°РєСЃРёРјСѓРј РєСЂРѕРІРё (max_size)
 
-;капли крови
+;РєР°РїР»Рё РєСЂРѕРІРё
 
 blood_drops                              = wm\wm_blood_drop_1,wm\wm_blood_drop_2,wm\wm_blood_drop_3,wm\wm_blood_drop_4
-start_blood_size                         = 0.4	                                       ;размер ранv чтоб начала капать кровь
-stop_blood_size                          = 0.025	                                       ;размер ранv чтоб кровь остановилась (должно бvть меньше start_blood_size)
+start_blood_size                         = 0.4	                                       ;СЂР°Р·РјРµСЂ СЂР°РЅv С‡С‚РѕР± РЅР°С‡Р°Р»Р° РєР°РїР°С‚СЊ РєСЂРѕРІСЊ
+stop_blood_size                          = 0.025	                                       ;СЂР°Р·РјРµСЂ СЂР°РЅv С‡С‚РѕР± РєСЂРѕРІСЊ РѕСЃС‚Р°РЅРѕРІРёР»Р°СЃСЊ (РґРѕР»Р¶РЅРѕ Р±vС‚СЊ РјРµРЅСЊС€Рµ start_blood_size)
 
 blood_drop_time                          = 0.1	                                       ;OBSOLETE
 blood_drop_time_min                      = 0.3	                                       ;
 blood_drop_time_max                      = 2.0	                                       ;
-blood_drop_size                          = 0.1	                                       ;размер капли (м) крови, котораљ упала
+blood_drop_size                          = 0.1	                                       ;СЂР°Р·РјРµСЂ РєР°РїР»Рё (Рј) РєСЂРѕРІРё, РєРѕС‚РѕСЂР°С™ СѓРїР°Р»Р°
 
 
 [entity_fire_particles]
 fire_particles                           = damage_fx\burn_creatures
-start_burn_size                          = 0.0003	                                       ;размер ожега после которого начать играть партиклv огнљ
-stop_burn_size                           = 0.0001	                                       ;размер ожега после которого остановить партиклv
-min_burn_time                            = 10000	                                       ;минимальное времљ отvгрvша партиклов (даже если рана уже зажила)
+start_burn_size                          = 0.0003	                                       ;СЂР°Р·РјРµСЂ РѕР¶РµРіР° РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕРіРѕ РЅР°С‡Р°С‚СЊ РёРіСЂР°С‚СЊ РїР°СЂС‚РёРєР»v РѕРіРЅС™
+stop_burn_size                           = 0.0001	                                       ;СЂР°Р·РјРµСЂ РѕР¶РµРіР° РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕРіРѕ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂС‚РёРєР»v
+min_burn_time                            = 10000	                                       ;РјРёРЅРёРјР°Р»СЊРЅРѕРµ РІСЂРµРјС™ РѕС‚vРіСЂvС€Р° РїР°СЂС‚РёРєР»РѕРІ (РґР°Р¶Рµ РµСЃР»Рё СЂР°РЅР° СѓР¶Рµ Р·Р°Р¶РёР»Р°)
 
 [hud_cursor]
-;все размерv в процентах от длинv экрана
-cross_length                             = 0.015	                                       ;длина "палочки" прицела
-min_radius                               = 0.0	                                       ;минимальнvй радиус прицела (при нулевой дисперсии)
-max_radius                               = 1.0	                                       ;максимальнvй радиус
-radius_lerp_speed                        = 0.08	                                       ;скорость интерполљции положений прицела
-cross_color                              = 0.7,0.7,0.7,0.5	                                       ;цвет прицела
-disp_scale                               = 0.08	                                       ;масштаб прицела (относительно радиан)
+;РІСЃРµ СЂР°Р·РјРµСЂv РІ РїСЂРѕС†РµРЅС‚Р°С… РѕС‚ РґР»РёРЅv СЌРєСЂР°РЅР°
+cross_length                             = 0.015	                                       ;РґР»РёРЅР° "РїР°Р»РѕС‡РєРё" РїСЂРёС†РµР»Р°
+min_radius                               = 0.0	                                       ;РјРёРЅРёРјР°Р»СЊРЅvР№ СЂР°РґРёСѓСЃ РїСЂРёС†РµР»Р° (РїСЂРё РЅСѓР»РµРІРѕР№ РґРёСЃРїРµСЂСЃРёРё)
+max_radius                               = 1.0	                                       ;РјР°РєСЃРёРјР°Р»СЊРЅvР№ СЂР°РґРёСѓСЃ
+radius_lerp_speed                        = 0.08	                                       ;СЃРєРѕСЂРѕСЃС‚СЊ РёРЅС‚РµСЂРїРѕР»С™С†РёРё РїРѕР»РѕР¶РµРЅРёР№ РїСЂРёС†РµР»Р°
+cross_color                              = 0.7,0.7,0.7,0.5	                                       ;С†РІРµС‚ РїСЂРёС†РµР»Р°
+disp_scale                               = 0.08	                                       ;РјР°СЃС€С‚Р°Р± РїСЂРёС†РµР»Р° (РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЂР°РґРёР°РЅ)
 
 [hud_hitmark]
 hit_mark_texture                         = ui\ui_hud_hit_mark	                                       ; ui\ui_empty
@@ -358,12 +358,12 @@ $spawn                                   = "ai\graph point"
 ; Trade
 ;-----------------------------------------------------------------
 [trade]
-;коэффициентv изменениљ ценv при торговле в зависимости от отношениљ к персонажу
-;линейно апроксимируітсљ между значениљ
-buy_price_factor_hostile                 = 0.50	                                       ;коэффициент покупки при goodwill = -100
-buy_price_factor_friendly                = 0.50                                       ;коэффициент покупки при goodwill = 100
-sell_price_factor_hostile                = 1.50                                       ;коэффициент покупки при goodwill = -100
-sell_price_factor_friendly               = 1.50                                       ;коэффициент покупки при goodwill = 100
+;РєРѕСЌС„С„РёС†РёРµРЅС‚v РёР·РјРµРЅРµРЅРёС™ С†РµРЅv РїСЂРё С‚РѕСЂРіРѕРІР»Рµ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РѕС‚РЅРѕС€РµРЅРёС™ Рє РїРµСЂСЃРѕРЅР°Р¶Сѓ
+;Р»РёРЅРµР№РЅРѕ Р°РїСЂРѕРєСЃРёРјРёСЂСѓС–С‚СЃС™ РјРµР¶РґСѓ Р·РЅР°С‡РµРЅРёС™
+buy_price_factor_hostile                 = 0.50	                                       ;РєРѕСЌС„С„РёС†РёРµРЅС‚ РїРѕРєСѓРїРєРё РїСЂРё goodwill = -100
+buy_price_factor_friendly                = 0.50                                       ;РєРѕСЌС„С„РёС†РёРµРЅС‚ РїРѕРєСѓРїРєРё РїСЂРё goodwill = 100
+sell_price_factor_hostile                = 1.50                                       ;РєРѕСЌС„С„РёС†РёРµРЅС‚ РїРѕРєСѓРїРєРё РїСЂРё goodwill = -100
+sell_price_factor_friendly               = 1.50                                       ;РєРѕСЌС„С„РёС†РёРµРЅС‚ РїРѕРєСѓРїРєРё РїСЂРё goodwill = 100
 
 
 
@@ -400,7 +400,7 @@ script_binding                           = xr_zones.bind
 object_damage_factor                     = 1.2f
 
 ;*****************************************
-; ++=+іLT+і- Lі+=
+; ++=+С–LT+С–- LС–+=
 ;*****************************************
 [stalker_names_stalker]
 name_cnt                                 = 123 ; 104
@@ -506,12 +506,12 @@ inv_grid_width                           = 2
 inv_grid_height                          = 1
 inv_grid_x                               = 14
 inv_grid_y                               = 7
-attach_angle_offset                      = -1.5708,0.1919,3.1416	                                       ;устанавливаетсљ в радианах Angle*PI/180
+attach_angle_offset                      = -1.5708,0.1919,3.1416	                                       ;СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃС™ РІ СЂР°РґРёР°РЅР°С… Angle*PI/180
 attach_position_offset                   = 0.075, 0.066, 0.023
 attach_bone_name                         = bip01_l_hand
 auto_attach                              = false
 
-; рация для правой руки
+; СЂР°С†РёСЏ РґР»СЏ РїСЂР°РІРѕР№ СЂСѓРєРё
 [hand_radio_r]:identity_immunities
 GroupControlSection                      = spawn_group
 discovery_dependency                     =
@@ -527,7 +527,7 @@ inv_grid_width                           = 2
 inv_grid_height                          = 1
 inv_grid_x                               = 14
 inv_grid_y                               = 7
-attach_angle_offset                      = 1.571,0.75,0.0	                                       ;устанавливаетсљ в радианах Angle*PI/180
+attach_angle_offset                      = 1.571,0.75,0.0	                                       ;СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃС™ РІ СЂР°РґРёР°РЅР°С… Angle*PI/180
 attach_position_offset                   = 0.015, -0.084, 0.023
 attach_bone_name                         = bip01_r_hand
 auto_attach                              = false
@@ -552,7 +552,7 @@ inv_grid_width                           = 2
 inv_grid_height                          = 1
 inv_grid_x                               = 14
 inv_grid_y                               = 9
-attach_angle_offset                      = 3.080506,-1.493053,-1.202040	                                       ;устанавливаетсЯ в радианах Angle*PI/180
+attach_angle_offset                      = 3.080506,-1.493053,-1.202040	                                       ;СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃРЇ РІ СЂР°РґРёР°РЅР°С… Angle*PI/180
 attach_position_offset                   = 0.080000,0.021273,0.100000
 attach_bone_name                         = bip01_r_hand
 auto_attach                              = false
@@ -679,14 +679,14 @@ shape_edge_color                         = 32, 32, 32, 255
 bonce_damage_factor_for_objects          = 1.
 
 [pkm_visual_memory]
-min_view_distance                        = 1	                                       ;0.4        ; коэффициент, которvй множитсљ на eye_range, в зависимости от угла
-max_view_distance                        = 1	                                       ;0.8        ; коэффициент, которvй множитсљ на eye_range, в зависимости от угла
-visibility_threshold                     = 50	                                       ;150.0       ; значение, при достижении суммой которого объект считаетсљ видимvм
+min_view_distance                        = 1	                                       ;0.4        ; РєРѕСЌС„С„РёС†РёРµРЅС‚, РєРѕС‚РѕСЂvР№ РјРЅРѕР¶РёС‚СЃС™ РЅР° eye_range, РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СѓРіР»Р°
+max_view_distance                        = 1	                                       ;0.8        ; РєРѕСЌС„С„РёС†РёРµРЅС‚, РєРѕС‚РѕСЂvР№ РјРЅРѕР¶РёС‚СЃС™ РЅР° eye_range, РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СѓРіР»Р°
+visibility_threshold                     = 50	                                       ;150.0       ; Р·РЅР°С‡РµРЅРёРµ, РїСЂРё РґРѕСЃС‚РёР¶РµРЅРёРё СЃСѓРјРјРѕР№ РєРѕС‚РѕСЂРѕРіРѕ РѕР±СЉРµРєС‚ СЃС‡РёС‚Р°РµС‚СЃС™ РІРёРґРёРјvРј
 always_visible_distance                  = 1	                                       ;0.1
 time_quant                               = 0.00001
-decrease_value                           = 0.1	                                       ; значение, на которое уменьшаетсљ вес, если объект попал в фрустум, но отсЈксљ по каким-то причинам
+decrease_value                           = 0.1	                                       ; Р·РЅР°С‡РµРЅРёРµ, РЅР° РєРѕС‚РѕСЂРѕРµ СѓРјРµРЅСЊС€Р°РµС‚СЃС™ РІРµСЃ, РµСЃР»Рё РѕР±СЉРµРєС‚ РїРѕРїР°Р» РІ С„СЂСѓСЃС‚СѓРј, РЅРѕ РѕС‚СЃР€РєСЃС™ РїРѕ РєР°РєРёРј-С‚Рѕ РїСЂРёС‡РёРЅР°Рј
 velocity_factor                          = 0.5
-luminocity_factor                        = 0.5	                                       ; фактор освеениљ (только длљ LктЈра)
+luminocity_factor                        = 0.5	                                       ; С„Р°РєС‚РѕСЂ РѕСЃРІРµРµРЅРёС™ (С‚РѕР»СЊРєРѕ РґР»С™ LРєС‚Р€СЂР°)
 transparency_threshold                   = 0.4	                                       ;
 view_fov_deg                             = 90
 view_aspect                              = 1
@@ -803,7 +803,7 @@ cform                                    = skeleton
 visual                                   = dynamics\vehicles\veh_baggi\veh_baggi_u_01.ogf
 
 [ph_capture_visuals]
-;Список объектов которvе можно таскать.
+;РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂС‹Рµ РјРѕР¶РЅРѕ С‚Р°СЃРєР°С‚СЊ.
 
 ;NPC
 actors\barman\barman

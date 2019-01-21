@@ -4528,7 +4528,7 @@
 	</string>	
 
 	<string id="st_dyn_news_way_in_zone">
-		<text>на Черте,</text>
+		<text>на Черте</text>
 	</string>	
 
 	<string id="st_dyn_y04_pole_blizko_1">
@@ -5629,23 +5629,6 @@
 		<text>Volt anomaly</text>
 	</string>
 
-
-
-	<string id="yan_stalker_sakharov_task_2_name">
-		<text>Find the %s artifact</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_text">
-		<text>Professor Sakharov has asked you to find a %s.</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_about">
-		<text>Would you like to assist me with some research? I will pay you for your efforts.</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_fetch_about">
-		<text>Would you like to assist me with some research? I offer a reward for a %s.</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_fetch_finish">
-		<text>On behalf of the scientific community, I thank you. Here is the reward, as promised.</text>
-	</string>
 
 	<string id="yan_stalker_sakharov_task_3_name">
 		<text>Find two controller brain tissues</text>

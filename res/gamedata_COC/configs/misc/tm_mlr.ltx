@@ -896,27 +896,6 @@ on_complete = %=reward_stash(true) =complete_task_inc_goodwill(50:stalker:dolg) 
 on_fail = %=pstor_reset(hunter_gar_trader_task_2_fetch)%
 condlist_0 = {!task_giver_alive(hunter_gar_trader_task_2)} fail
 
-[jup_b6_scientist_nuclear_physicist_task_1]
-icon = ui_iconsTotal_artefact
-prior = 45
-storyline = false
-title = jup_b6_scientist_nuclear_physicist_task_1_name
-title_functor = general_fetch_task
-descr = jup_b6_scientist_nuclear_physicist_task_1_text
-descr_functor = general_fetch_task
-job_descr = jup_b6_scientist_nuclear_physicist_task_1_about
-fetch_descr = jup_b6_scientist_nuclear_physicist_task_1_fetch_about
-fetch_func = %=setup_artefact_fetch_task_mlr_nuclear(jup_b6_scientist_nuclear_physicist_task_1_fetch)%
-stage_complete = 1
-status_functor = actor_has_fetch_item
-target_functor = general_fetch_task
-task_complete_descr = jup_b6_scientist_nuclear_physicist_task_1_fetch_finish
-precondition = true
-repeat_timeout = 0
-on_complete = %=pstor_reset(jup_b6_scientist_nuclear_physicist_task_1) =complete_task_inc_goodwill(50:ecolog) =reward_random_money(7000:11000) =remove_fetch_item(jup_b6_scientist_nuclear_physicist_task_1_fetch) =inc_task_stage(jup_b6_scientist_nuclear_physicist_task_1)%
-on_fail = %=fail_task_dec_goodwill(25:ecolog) =pstor_reset(jup_b6_scientist_nuclear_physicist_task_1_fetch)%
-condlist_0 = {!task_giver_alive(jup_b6_scientist_nuclear_physicist_task_1)} fail
-
 [jup_b6_scientist_nuclear_physicist_task_2]
 icon = ui_icons_red_forest_trees_31
 prior = 25
@@ -1045,21 +1024,23 @@ on_cancel = %=pstor_reset(esc_2_12_stalker_fanat_task_1_id) =pstor_reset(esc_2_1
 
 [esc_2_12_stalker_fanat_task_2]
 icon = ui_iconsTotal_artefact
-prior = 10
+prior = 20
 storyline = false
+precondition = {-esc_2_12_stalker_fanat_task_2_done} true, false
+
 title = esc_2_12_stalker_fanat_task_2_name
 title_functor = general_fetch_task
 descr = esc_2_12_stalker_fanat_task_2_text
 descr_functor = general_fetch_task
 job_descr = esc_2_12_stalker_fanat_task_2_about
 fetch_descr = esc_2_12_stalker_fanat_task_2_fetch_about
-fetch_func = %=setup_generic_fetch_task(esc_2_12_stalker_fanat_task_2_fetch:1:af_dummy_pellicle)%
+fetch_func = %=setup_generic_fetch_task(esc_2_12_stalker_fanat_task_2_fetch:1:amk_yoyo)%
 stage_complete = 1
 status_functor = actor_has_fetch_item
 target_functor = general_fetch_task
 task_complete_descr = esc_2_12_stalker_fanat_task_2_fetch_finish
+
 on_complete = %+esc_2_12_stalker_fanat_task_2_done =reward_random_money(4000:4500) =reward_stash(true)  =complete_task_inc_goodwill(50:stalker) =remove_fetch_item(esc_2_12_stalker_fanat_task_2_fetch) =inc_task_stage(esc_2_12_stalker_fanat_task_2)%
-precondition = {-esc_2_12_stalker_fanat_task_2_done} true, false
 
 [merc_pri_a16_tesak_mlr_task_3]
 icon = ui_icons_kill_monster34
@@ -1257,27 +1238,6 @@ on_complete = %=pstor_reset(baraholka_trader_night_task_1_fetch) =complete_task_
 on_fail = %=pstor_reset(baraholka_trader_night_task_1_fetch) =fail_task_dec_goodwill(25:ecolog)%
 condlist_0 = {!task_giver_alive(baraholka_trader_night_task_1)} fail
 
-[yan_stalker_sakharov_task_2]
-icon = ui_iconsTotal_artefact
-prior = 45
-storyline = false
-title = yan_stalker_sakharov_task_2_name
-title_functor = general_fetch_task
-descr = yan_stalker_sakharov_task_2_text
-descr_functor = general_fetch_task
-job_descr = yan_stalker_sakharov_task_2_about
-fetch_descr = yan_stalker_sakharov_task_2_fetch_about
-fetch_func = %=setup_artefact_fetch_task_mlr(yan_stalker_sakharov_task_2_fetch)%
-stage_complete = 1
-status_functor = actor_has_fetch_item
-target_functor = general_fetch_task
-task_complete_descr = yan_stalker_sakharov_task_2_fetch_finish
-precondition = true
-repeat_timeout = 0
-on_complete = %=remove_fetch_item(yan_stalker_sakharov_task_2_fetch) =pstor_reset(yan_stalker_sakharov_task_2_fetch) =complete_task_inc_goodwill(50:ecolog) =reward_random_money(10500:19000) =reward_stash(true) =inc_task_stage(yan_stalker_sakharov_task_2)%
-on_fail = %=pstor_reset(yan_stalker_sakharov_task_2_fetch) =fail_task_dec_goodwill(25:ecolog)%
-condlist_0 = {!task_giver_alive(yan_stalker_sakharov_task_2)} fail
-
 [bar_dolg_general_petrenko_stalker_task_4]
 icon = ui_icons_find_item35
 prior = 90
@@ -1343,24 +1303,28 @@ condlist_0 = {!task_giver_alive(killer_bridge_trader_mlr_task_2)} fail
 
 [bar_visitors_barman_stalker_trader_task_1]
 icon = ui_iconsTotal_artefact
-prior = 65
 storyline = false
+prior = 65
+precondition = true
+
 title = bar_visitors_barman_stalker_trader_task_1_name
 title_functor = general_fetch_task
 descr = bar_visitors_barman_stalker_trader_task_1_text
 descr_functor = general_fetch_task
 job_descr = bar_visitors_barman_stalker_trader_task_1_about
 fetch_descr = bar_visitors_barman_stalker_trader_task_1_fetch_about
-fetch_func = %=setup_artefact_fetch_task(bar_visitors_barman_stalker_trader_task_1_fetch)%
-stage_complete = 1
-status_functor = actor_has_fetch_item
-target_functor = general_fetch_task
 task_complete_descr = bar_visitors_barman_stalker_trader_task_1_fetch_finish
-precondition = true
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+
+fetch_func = %=setup_artefact_fetch_task(bar_visitors_barman_stalker_trader_task_1_fetch)%
 repeat_timeout = 0
 on_complete = %=remove_fetch_item(bar_visitors_barman_stalker_trader_task_1_fetch) =complete_task_inc_goodwill(50:stalker) =reward_random_money(2500:12000) =reward_stash(true) =inc_task_stage(bar_visitors_barman_stalker_trader_task_1) =pstor_reset(bar_visitors_barman_stalker_trader_task_1_fetch)%
 on_fail = %=pstor_reset(bar_visitors_barman_stalker_trader_task_1_fetch) =fail_task_dec_goodwill(25:stalker)%
 condlist_0 = {!task_giver_alive(bar_visitors_barman_stalker_trader_task_1)} fail
+on_cancel = %=pstor_reset(bar_visitors_barman_stalker_trader_task_1_fetch)%
 
 [bar_visitors_barman_stalker_trader_task_2]
 icon = ui_inGame2_Odin_vistrel

@@ -134,7 +134,7 @@ function special_steps_for_mlr_tasks(tsk,task_id)
 		elseif (money <= 49999) then 
 			tsk.stage = 0			
 		end
-	end 	
+	end
 	if (task_id == "pri_monolith_teacher_mlr_task_3") then 
 		if not has_alife_info("pri_smart_neutral_stalker1_attackers_squad_dead") then 
 			tsk.stage = 0
@@ -152,13 +152,50 @@ function special_steps_for_mlr_tasks(tsk,task_id)
 end
 --mlr
 
-
 ------------------------------------
 -- HELPERS
 ------------------------------------
 ----------------------------------------------------------------------------------------------
 -- Status Functors
 ----------------------------------------------------------------------------------------------
+
+--lostzone
+function special_steps_for_lostzone_tasks(tsk,task_id)
+	if not (db.actor) then 
+		return 
+	end
+
+	if (task_id == "cit_killer_barman_task_3") then 
+		if not has_alife_info("special_chimera_task2_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("special_chimera_task2_squad_dead") then
+			tsk.stage = 1
+		end
+	end
+	if (task_id == "mil_smart_terrain_7_10_freedom_trader_stalker_task_3") then 
+		if not has_alife_info("special_bloodsucker_task_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("special_bloodsucker_task_squad_dead") then
+			tsk.stage = 1
+		end
+	end
+	if (task_id == "bar_dolg_leader_task_3") then 
+		if not has_alife_info("special_bloodsucker_task2_squad_dead") then 
+			tsk.stage = 0
+		elseif has_alife_info("special_bloodsucker_task2_squad_dead") then
+			tsk.stage = 1
+		end
+	end
+	if (task_id == "zat_b7_bandit_boss_sultan_task_3") then 
+		if not has_alife_info("boss_sultan_task_5_stalkers_death") then 
+			tsk.stage = 0
+		elseif has_alife_info("boss_sultan_task_5_stalkers_death") then
+			tsk.stage = 1
+		end
+	end	
+end
+--lostzone
+
 function check_level_under_faction_control(tsk,task_id)
 	if not (db.actor) then 
 		return 

@@ -19,6 +19,8 @@
 #include "gameplay\character_criticals_4.xml"
 
     <start_dialog>esc_2_12_stalker_trader_start_dialog</start_dialog>
+	<actor_dialog>sidorovich_bunker</actor_dialog>
+	<actor_dialog>esc_2_12_stalker_trader_newart</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
 

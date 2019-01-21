@@ -1478,35 +1478,6 @@
 		<text>Большой человеческое спасибо тебе и награда.</text>
 	</string>	
 	
-	<string id="yan_stalker_sakharov_task_2_name">
-		<text>Найти артефакт %s</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_about">
-		<text>Поможете мне с исследованиями, молодой человек? Плачу хорошо.</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_fetch_about">
-		<text>Поможете мне с исследованиями, молодой человек? Плачу хорошо, мне нужен артефакт %s</text>
-	</string>
-	<string id="yan_stalker_sakharov_task_2_fetch_finish">
-		<text>Научное сообщество благодарит тебя!</text>
-	</string>
-
-	<string id="jup_b6_scientist_nuclear_physicist_task_1_name">
-		<text>Найти артефакт %s</text>
-	</string>
-	<string id="jup_b6_scientist_nuclear_physicist_task_1_text">
-		<text>Герману нужен артефакт %s.</text>
-	</string>
-	<string id="jup_b6_scientist_nuclear_physicist_task_1_about">
-		<text>Здравствуйте! Нам бы очень пригодились образцы некоторых артефактов для исследований, поможете?</text>
-	</string>
-	<string id="jup_b6_scientist_nuclear_physicist_task_1_fetch_about">
-		<text>Здравствуйте! Нам бы очень пригодились образцы некоторых артефактов для исследований, поможете с %s?</text>
-	</string>
-	<string id="jup_b6_scientist_nuclear_physicist_task_1_fetch_finish">
-		<text>Спасибо вам большое.</text>
-	</string>	
-	
 
 	<string id="killer_bridge_trader_mlr_task_1_name">
 		<text>Найти %s</text>
@@ -1696,7 +1667,7 @@
 </string>	
 
 <string id="st_dyn_news_way_in_zone">
-	<text>на Черте,</text>
+	<text>на Черте</text>
 </string>	
 
 <string id="st_bar100rent_name">
@@ -2892,19 +2863,19 @@
 	</string>
 
 	<string id="simulation_task_20_name">
-		<text>Собрать [%s]</text>
+		<text>Собрать: %s</text>
 	</string>
 	<string id="simulation_task_20_text">
-		<text>Долговец попросил собрать [%s]</text>
+		<text>Бандит попросил меня принести ему: %s.</text>
 	</string>
 	<string id="simulation_task_20_about">
-		<text>Приветствую, бродяга. Не прибьёшь ли парочку анархистов, а то не продохнуть от этих уродов в последнее время. А в качестве доказательства принеси мне их нашивки, ну как?</text>
+		<text>Опа. Слухай, брателло. Чё-то много мутных тут развелось, надо, это... как его, сокращать поголовье скота, гы. Притаранишь нашивки скотовские - я тебе арт подкину.</text>
 	</string>
 	<string id="simulation_task_20_fetch_about">
-		<text>Приветствую, бродяга. Не прибьёшь ли парочку анархистов, а то не продохнуть от этих уродов в последнее время. А в качестве доказательства принеси мне их нашивки, ну как?</text>
+		<text>Опа. Слухай, брателло. Чё-то много мутных тут развелось, надо, это... как его, сокращать поголовье скота, гы. Притаранишь %s - я тебе арт подкину.</text>
 	</string>
 	<string id="simulation_task_20_fetch_finish">
-		<text>Спасибо, мужик. Вот, возьми артефакт, пока не видит никто.</text>
+		<text>А-а, маладца, вот это подгонище! Держи ништяк свой.</text>
 	</string>
 
 	<string id="simulation_task_19_name">

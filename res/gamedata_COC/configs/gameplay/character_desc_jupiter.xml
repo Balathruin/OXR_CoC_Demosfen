@@ -1203,11 +1203,10 @@
         [spawn] \n
     </supplies>
     <start_dialog>jup_b6_scientist_nuclear_physicist_start</start_dialog>
-	<!-- mlr -->
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>	
-	<!-- mlr -->
+	<actor_dialog>jup_b6_scientist_nuclear_physicist_new_artefacts</actor_dialog>
+	<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals.xml"
     </specific_character>
@@ -1307,7 +1306,10 @@
 #include "gameplay\character_items_2.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
-    </supplies>	
+    </supplies>
+    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>dm_tech_repair</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals.xml"
@@ -1339,10 +1341,13 @@
 #include "gameplay\character_drugs_4.xml"
     </supplies>
 #include "gameplay\character_criticals.xml"
+	<actor_dialog>jup_trapper_about_himself</actor_dialog>
+	<actor_dialog>jup_trapper_about_retire</actor_dialog>
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>jup_b220_trapper_about_mutants</actor_dialog>
+    <actor_dialog>jup_trapper_about_mutants</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     
@@ -2606,6 +2611,7 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>jup_a6_freedom_leader_start_dialog</start_dialog>	
+	<actor_dialog>loki_st</actor_dialog>
     <actor_dialog>jup_a6_freedom_leader_duty_founder_pda</actor_dialog>
     <actor_dialog>jup_a6_freedom_leader_duty_sell_founder_pda</actor_dialog>
     <actor_dialog>jup_a6_freedom_leader_pripyat_group</actor_dialog>

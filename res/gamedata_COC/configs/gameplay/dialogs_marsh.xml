@@ -146,10 +146,27 @@
 				<next>100</next>
 			</phrase>
 
+			<phrase id="3">
+				<text>marsh_csky_history_goal1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4">
+				<text>marsh_csky_history_goal2</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="5">
+				<text>marsh_csky_history_goal3</text>
+				<next>6</next>
+			</phrase>
+			<phrase id="6">
+				<text>marsh_csky_history_goal4</text>
+				<next>100</next>
+			</phrase>
+
 			<phrase id="99">
 				<text>dm_universal_actor_exit</text>
 			</phrase>
-			
+
 			<phrase id="100">
 				<text></text>
 				<next>101</next>
@@ -157,6 +174,7 @@
 			<phrase id="101">
 				<text></text>
 				<next>2</next>
+				<next>3</next>
 				<next>99</next>
 			</phrase>
 		</phrase_list>

@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding="windows-1251"?>
 <xml>
-    <!-------------------------- DOCTOR ------------------------>
+
     <specific_character id="mar_smart_terrain_base_doctor" team_default = "1">
     <name>cit_doctor_name</name>
     <icon>ui_inGame2_trodnik</icon>
@@ -20,16 +20,20 @@
         wpn_ak74u = 1 \n
         ammo_5.45x39_fmj = 1 \n
     </supplies>
-	<!-- mlr -->
     <start_dialog>mar_smart_terrain_base_doctor_start</start_dialog>
     <actor_dialog>mar_smart_terrain_base_doctor_need_health_care</actor_dialog>
+	<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_doctor_heal</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_doctor_background</actor_dialog>
+    <actor_dialog>mar_csky_guide_background</actor_dialog>
+	<actor_dialog>mar_csky_guide_dog</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals.xml"
     </specific_character>
     
-    <!-------------------------- THE REAL DOC ------------------------>
+    <!-- THE REAL DOC -->
     <specific_character id="mar_smart_terrain_doc_doctor" team_default = "1">
     <name>marsh_doctor_name</name>
     <icon>ui_inGame2_doc</icon>
@@ -55,13 +59,13 @@
 #include "gameplay\character_criticals.xml"
     </specific_character>
     
-    <!-------------------------- CSKY BARMAN ------------------------>
+    <!-- CSKY BARMAN -->
     <specific_character id="mar_base_stalker_barmen" team_default="1">
     <name>mar_base_stalker_barmen_name</name>
     <icon>ui_inGame2_librarian</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>Îïûòíûé ñòàëêåð. Äåòàëüíàÿ èíôîðìàöèÿ îòñóòñòâóåò.</bio>
+    <bio>Iiuoiue noaeea?. Aaoaeuiay eioi?iaoey ionoonoaoao.</bio>
     <class>mar_base_stalker_barmen</class>
     <community>csky</community>
     <terrain_sect>stalker_terrain</terrain_sect>
@@ -91,16 +95,19 @@
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_barman_background</actor_dialog>
+	<actor_dialog>mar_story_b_cs</actor_dialog>
+	<actor_dialog>mar_story_dog</actor_dialog>
+	<actor_dialog>mar_story_dog_part2</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
     
-    <!-------------------------- CSKY TRADER ------------------------>
+    <!-- CSKY TRADER -->
     <specific_character id="mar_base_owl_stalker_trader" team_default="1">
     <name>mar_base_owl_stalker_trader_name</name>
     <icon>ui_inGame2_csky_trade</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>Îïûòíûé ñòàëêåð. Äåòàëüíàÿ èíôîðìàöèÿ îòñóòñòâóåò.</bio>
+    <bio>Iiuoiue noaeea?. Aaoaeuiay eioi?iaoey ionoonoaoao.</bio>
     <class>mar_base_owl_stalker_trader</class>
     <community>trader</community>
     <terrain_sect>stalker_terrain</terrain_sect>
@@ -117,21 +124,22 @@
         <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
         <actor_dialog>dm_broker_dialog</actor_dialog>
         <actor_dialog>mar_smart_terrain_base_trader_background</actor_dialog>
+		<actor_dialog>marsh_stalker_trader_new_artefacts</actor_dialog>
 		<actor_dialog>dm_broker_dialog</actor_dialog>
-    <!--------------------- mlr ------------------------>
+    <!-- mlr -->
 		<actor_dialog>request_to_no_trade_dialog</actor_dialog>
         <actor_dialog>low_level_of_buy_equpments</actor_dialog>
-    <!--------------------- mlr ------------------------>
+    <!-- mlr -->
         <actor_dialog>actor_break_dialog</actor_dialog>
         </specific_character>
         
-        <!-------------------------- CSKY MECHANIC ------------------------>
+        <!-- CSKY MECHANIC -->
         <specific_character id="mar_base_stalker_tech" team_default = "1">
         <name>mar_base_stalker_tech_name</name>
         <icon>ui_inGame2_Novikov</icon>
         <map_icon x="1" y="0">
         </map_icon>
-        <bio>Îïûòíûé ñòàëêåð. Òåõíèê Àçîò.</bio>
+        <bio>Iiuoiue noaeea?. Oaoiee Acio.</bio>
         <class>mar_base_stalker_tech</class>
         <community>trader</community>
         <mechanic_mode>1</mechanic_mode>
@@ -155,17 +163,18 @@
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_tech_background</actor_dialog>
+	<actor_dialog>marsh_stalker_tech_pragmatic_research</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals.xml"
     </specific_character>
     
-    <!-------------------------- LIDER_MARCH ------------------------>
+    <!-- LIDER_MARCH -->
     <specific_character id="mar_smart_terrain_base_stalker_leader_marsh" team_default = "1">
     <name>mar_smart_terrain_base_stalker_leader_marsh_name</name>
     <icon>ui_inGame2_cold</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
+    <bio>������� �������. ?������� ��������� �����������.</bio>
     <class>mar_smart_terrain_base_stalker_leader_marsh</class>
     <community>csky</community>
     <terrain_sect>stalker_terrain</terrain_sect>
@@ -185,12 +194,12 @@
     </supplies>
 #include "gameplay\character_criticals.xml"
     <start_dialog>hello_dialog</start_dialog>
-    <!--------------------- mlr ------------------------>	
+    <!-- mlr -->	
     <actor_dialog>dm_ordered_task_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
     <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>	
     <actor_dialog>find_blackbox_mlr_reward_csky</actor_dialog>
-    <!--------------------- mlr ------------------------>	
+    <!-- mlr -->
     <actor_dialog>mar_smart_terrain_base_leader_background</actor_dialog>
     <actor_dialog>mar_smart_terrain_base_leader_csky_history</actor_dialog>
 	<actor_dialog>xolod_minigame</actor_dialog>

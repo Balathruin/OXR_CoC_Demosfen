@@ -1324,6 +1324,10 @@ ammo_9x18_fmj = 3 \n
 #include "gameplay\character_criticals.xml"
 <start_dialog>agr_1_6_medic_army_mlr_hello</start_dialog>
 <actor_dialog>agr_1_6_medic_army_mlr_heal</actor_dialog>
+<actor_dialog>agr_army_medic_about_himself</actor_dialog>
+<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
 <actor_dialog>actor_break_dialog</actor_dialog>
 </specific_character>
 
@@ -2049,6 +2053,12 @@ ammo_12x76_zhekan = 4 \n
     </supplies>
 
 #include "gameplay\character_criticals_5.xml"
+	<start_dialog>cit_killer_barman_start</start_dialog>
+	<actor_dialog>cit_killer_barman_st</actor_dialog>
+	<actor_dialog>cit_killer_barman_st_about_job</actor_dialog>
+	<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+	<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
 	<actor_dialog>actor_break_dialog</actor_dialog>
   </specific_character>
 

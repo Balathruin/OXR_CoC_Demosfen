@@ -362,7 +362,7 @@ function pick_section_from_condlist(obj, npc, condlist)
 	npc_id = npc_id == 0 and nil or npc_id -- we want only npc not actor
 	local actor = db.actor 
 
-	local sim = alife()	
+	local sim = alife()
 	for i=1,#condlist do
 		local cond = condlist[i]
 		local infop_conditions_met = true
@@ -379,7 +379,7 @@ function pick_section_from_condlist(obj, npc, condlist)
 							end
 						end
 					else
-						if (actor) then 
+						if (actor) then
 							if not (actor:has_info(infop[1])) then 
 								infop_conditions_met = false
 								break
@@ -400,7 +400,7 @@ function pick_section_from_condlist(obj, npc, condlist)
 							end
 						end
 					else
-						if (actor) then 
+						if (actor) then
 							if (actor:has_info(infop[1])) then 
 								infop_conditions_met = false
 								break
