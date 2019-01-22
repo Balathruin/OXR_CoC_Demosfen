@@ -75,7 +75,13 @@ void CSoundRender_CoreA::_initialize()
 
     if (0 == pDeviceList->GetNumDevices())
     {
-        CHECK_OR_EXIT(0, "OpenAL: Can't create sound device.");
+        CHECK_OR_EXIT(0, 
+            "OpenAL: Can't create sound device.\n"
+            "Ты установил OpenAL?\n"
+            "Установщик находится в /soft/oalinst.exe\n"
+            "Have you got OpenAL installed?\n"
+            "The installer is located in /soft/oalinst.exe"
+        );
         xr_delete(pDeviceList);
     }
     pDeviceList->SelectBestDevice();
