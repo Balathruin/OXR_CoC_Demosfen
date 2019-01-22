@@ -72,7 +72,7 @@ function opt_menu_on_init(menu)
 			end
 	end}
 	-- got_true/false
-	menu.gameplay_options["god_show"]		= {default=true, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
+	menu.gameplay_options["god_show"]		= {default=false, 	debug_only=false, 	typ="check", on_accept=function(handler,optMgr,ctrl)
 			local god = get_console()
 			if (ctrl:GetCheck()) then
 				god:execute("g_god on")
