@@ -1,0 +1,36 @@
+;abbreviation			= recurs|	notif|	root|				add|						ext|            description
+$app_data_root$			= true|		false|	appdata\
+$arch_dir$				= false|	false|	$fs_root$|			database\
+$arch_dir_configs$		= false|	false|	$arch_dir$|			configs\
+$arch_dir_maps$			= false|	false|	$arch_dir$|			maps\
+$arch_dir_resources$	= false|	false|	$arch_dir$|			resources\
+$arch_dir_sounds$		= false|	false|	$arch_dir$|			sounds\
+$arch_dir_patches$		= false|	true|	$arch_dir$|			patches\
+$arch_dir_addons$		= false|	true|	$arch_dir$|			addons\
+$game_data$				= true|		true|	$fs_root$|			gamedata\
+$game_ai$				= true|		false|	$game_data$|		ai\
+$game_spawn$			= true|		false|	$game_data$|		spawns\
+$game_levels$			= true|		false|	$game_data$|		levels\
+$game_meshes$			= true|		true|	$game_data$|		meshes\|					*.ogf;*.omf|   Game Object files
+$game_anims$			= true|		true|	$game_data$|		anims\|						*.anm;*.anms|  Animation files
+$game_dm$				= true|		true|	$game_data$|		meshes\|					*.dm|          Detail Model files
+$game_shaders$			= true|		true|	$game_data$|		shaders\
+$game_sounds$			= true|		true|	$game_data$|		sounds\
+$game_textures$			= true|		true|	$game_data$|		textures\
+$game_config$			= true|		false|	$game_data$|		configs\
+$game_weathers$			= true|		false|	$game_config$|		environment\weathers
+$game_weather_effects$	= true|		false|	$game_config$|		environment\weather_effects
+$textures$				= true|		true|	$game_data$|		textures\
+$level$					= false|	false|	$game_levels$
+$game_scripts$			= true|		false|	$game_data$|		scripts\|					*.script|      Game script files
+$logs$					= true|		false|	$app_data_root$|	logs\
+$screenshots$			= true|		false|	$app_data_root$|	screenshots\
+$game_saves$            = true|		false|	$app_data_root$|	savedgames\|				*.scop;*.scoc
+$downloads$				= false|	false|	$app_data_root$
+$game_text$				= true|		false|	$game_config$|		text\
+$textures_ui$ 			= true|		true|	$textures$|			ui\
+$warfare_presets$		= true|		false|	$game_config$|		warfare_presets\|			*.ltx
+$textures_ui_masks$		= true|		true|	$textures_ui$|		masks\
+; FonSwong
+$radio$	            	= true|     false|  $game_sounds$ |		  radio\
+; FonSwong
