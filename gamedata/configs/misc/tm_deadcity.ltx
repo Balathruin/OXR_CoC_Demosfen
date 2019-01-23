@@ -32,7 +32,7 @@ task_complete_descr = cit_killers_merc_trader_stalker_task_2_finish
 repeat_timeout = 259200
 target_functor = general_under_faction_control
 status_functor = check_smart_under_faction_control_staged_enemy
-status_functor_params = killer,stalker,bandit,dolg,army
+status_functor_params = killer
 stage_complete = 1
 on_init = %=find_smart_under_faction_control_enemy(cit_killers_merc_trader_stalker_task_2_id:killer:stalker:bandit:dolg:army)%
 precondition = {=all_avail_smart_stayed_squad_count_ge_by_faction_enemy(1:nil:false:killer:stalker:bandit:dolg:army)} true, false
