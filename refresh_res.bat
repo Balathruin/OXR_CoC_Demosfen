@@ -13,5 +13,5 @@ rem ______________________________________________________________________
 rem ______________________________________________________________________
 rem ______________________________________________________________________
 rem robocopy опасная утилита. Если что-то нужно поменять, то нужно быть осторожным
-robocopy "%PathToRepo%\res\gamedata_COC" "%PathToGame%\gamedata" /MIR /Z /NJH /NJS
+robocopy "%PathToRepo%\gamedata" "%PathToGame%\gamedata" /MIR /Z /NJH /NJS
 Pause
