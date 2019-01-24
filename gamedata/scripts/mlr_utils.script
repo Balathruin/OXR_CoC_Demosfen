@@ -61,7 +61,7 @@ local aditional_spawn_table = {
 	spawn_pole_factory_doc_2 = {['pole_factory_doc_2'] = {19.376644134521,0.9993684887886,182.79850769043, 222001, 5336}},	
 	spawn_pole_factory_doc_3 = {['pole_factory_doc_3'] = {70.341110229492,9.7001504898071,168.43479919434, 248870, 5309}},	
 	spawn_pole_factory_doc_4 = {['pole_factory_doc_4'] = {152.83483886719,3.5750250816345,34.594482421875, 276278, 5344}},		
-	spawn_wpn_saiga_rookie_pole = {['wpn_saiga_rookie_pole'] = {-164.93, 0.16, 77.97, 80940, 5146}},		
+	spawn_wpn_saiga_rookie_pole = {['wpn_saiga_rookie_pole'] = {-162.58, 0.08, 90.85, 82950, 5347}},		
 	wpn_svd_bandit_depo_task_1_1 = {['wpn_svd_bandit_depo_task_1'] = {-219.37, 1.37, 209.31, 1777, 971}},	
 	wpn_svd_bandit_depo_task_1_2 = {['wpn_svd_bandit_depo_task_1'] = {-240.83, 3.53, 217.42, 203, 935}},	
 	wpn_svd_bandit_depo_task_1_3 = {['wpn_svd_bandit_depo_task_1'] = {-213.45, 3.63, 269.33, 2672, 977}},		
