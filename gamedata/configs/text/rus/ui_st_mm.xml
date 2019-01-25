@@ -56,22 +56,22 @@
 		<text>КАРТА</text>
 	</string>
 	<string id="renderer_r1">
-		<text>Статичное освещение DX9(1 рендер)</text>
+		<text>Dx9 R1</text>
 	</string>
 	<string id="renderer_r2a">
-		<text>Динам. освещение DX9(2 рендер(a))</text>
+		<text>Dx9 R2a</text>
 	</string>
 	<string id="renderer_r2">
-		<text>Полное динамич. освещение DX9(2 рендер)</text>
+		<text>Dx9 R2</text>
 	</string>
 	<string id="renderer_r2.5">
-		<text>Улучш. полное освещение DX9(2.5 рендер)</text>
+		<text>Dx9 R2.5</text>
 	</string>
 	<string id="renderer_r3">
-		<text>Стабильный DX10(3 рендер)</text>
+		<text>Dx10 R3</text>
 	</string>
 	<string id="renderer_r4">
-		<text>Ул. полное освещение DX11(4 рендер)</text>
+		<text>DX11 R4</text>
 	</string>
 	<string id="st_opt_high">
 		<text>Высоко</text>
@@ -98,7 +98,7 @@
 		<text>Альтернатива</text>
 	</string>
 	<string id="ui_mm_anisotropic">
-		<text>Фильтрация текстур</text>
+		<text>Анизотропная фильтрация</text>
 	</string>
 	<string id="ui_mm_apply">
 		<text>Применить</text>
@@ -125,10 +125,10 @@
 		<text>Управление</text>
 	</string>
 	<string id="ui_mm_credits">
-		<text>Создатели</text>
+		<text>Титры</text>
 	</string>
 	<string id="ui_mm_default">
-		<text>По умолчанию</text>
+		<text>Восстановить</text>
 	</string>
 	<string id="ui_mm_delete">
 		<text>Удалить</text>
@@ -328,6 +328,18 @@
 	<string id="ui_mm_resolution">
 		<text>Разрешение</text>
 	</string>
+	<string id="ui_mm_color_correction">
+		<text>Цветокоррекция</text>
+	</string>
+	<string id="ui_mm_color_r">
+		<text>Красный</text>
+	</string>
+	<string id="ui_mm_color_g">
+		<text>Зелёный</text>
+	</string>
+	<string id="ui_mm_color_b">
+		<text>Синий</text>
+	</string>
 	<string id="ui_mm_vibrance">
 		<text>Насыщенность</text>
 	</string>
@@ -432,6 +444,24 @@
 	</string>
 	<string id="ui_mm_hbao">
 		<text>HBAO</text>
+	</string>
+	<string id="ui_mm_technicolor">
+		<text>Техниколор</text>
+	</string>
+	<string id="ui_mm_abberation">
+		<text>Хроматические аберрации</text>
+	</string>
+	<string id="ui_mm_vignette">
+		<text>Зернистость</text>
+	</string>
+	<string id="ui_mm_lensdirt">
+		<text>Блики на стекле</text>
+	</string>
+	<string id="ui_mm_lenswater">
+		<text>Капли и отражения на стекле</text>
+	</string>
+	<string id="ui_mm_reflections">
+		<text>Отражения на воде</text>
 	</string>
 	<string id="ui_st_disable_hud">
 		<text>Показывать интерфейс</text>
