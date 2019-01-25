@@ -131,6 +131,7 @@
 	    <texture id="ui_inGame2_pda_secondary_tasks_list_bckgnd_b"      x="176" y="51" width="66" height="12" />
 	    <texture id="ui_inGame2_pda_secondary_tasks_list_bckgnd_rb"     x="242" y="51" width="19" height="12" />
 
+	    <texture id="ui_inGame2_pda_map_scrollbar_vertical_bckgrnd"         x="0" y="246" width="17" height="2" />
 	    <texture id="ui_inGame2_pda_map_scrollbar_vertical_bckgrnd_b"       x="0" y="215" width="17" height="2" />
 	    <texture id="ui_inGame2_pda_map_scrollbar_vertical_bckgrnd_back"    x="0" y="217" width="17" height="2" />
 	    <texture id="ui_inGame2_pda_map_scrollbar_vertical_bckgrnd_e"       x="0" y="247" width="17" height="2" />
