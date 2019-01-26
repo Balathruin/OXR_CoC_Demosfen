@@ -124,7 +124,7 @@ on_signal = cameff_end | %=enable_ui% sr_idle@nil
 ; - Brain Scorcher switch turning off by Monolith:
 
 [sr_idle@passive3]
-on_signal = cameff_end | %=enable_ui =drx_sl_change_factions(stalker)% sr_idle@nil
+on_signal = cameff_end | %=enable_ui% sr_idle@nil
 
 ; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -162,6 +162,6 @@ on_info = {-drx_sl_brain_scorcher_switch_off} sr_idle@passive2 %=run_cam_effecto
 ; - Brain Scorcher switch turning on:
 
 [sr_idle@passive2]
-on_signal = cameff_end | %=enable_ui =drx_sl_change_factions(monolith)% sr_idle@wait
+on_signal = cameff_end | %=enable_ui% sr_idle@wait
 
 ; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

@@ -783,6 +783,68 @@ end
 -- ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_change_factions function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Changes an actor to the specified faction
+--
+--	Usage:
+--		drx_sl_change_factions( faction )
+--
+--	Parameters:
+--		faction (type: string)
+--			- Faction for the actor to join (stalker, dolg, freedom, csky, ecolog, killer, army, bandit, or monolith)
+--
+--	Return value (type: none):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Modified by DoctorX, av661194
+--	for DoctorX Questlines 1.25
+--	Last modified April 27, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Change actor faction:
+function drx_sl_change_factions( actor, npc, p )
+
+	if ( p and p[1] ~= nil and p[1] ~= ("actor_" .. character_community( db.actor )) ) then
+
+		-- Set actor faction:
+		db.actor:set_character_community( ("actor_" .. p[1]), 0, 0 )
+		local communities = alun_utils.get_communities_list( )
+		for i, community in pairs( communities ) do
+			relation_registry.set_community_goodwill( community, db.actor:id( ), 0 )
+		end
+		printf( ("DRX SL: Actor faction changed to " .. p[1]) )
+
+		-- Set companion faction:
+		for id, squad in pairs( axr_companions.companion_squads ) do
+			if ( squad and squad.commander_id ) then
+				for k in squad:squad_members( ) do
+					local member = db.storage[k.id] and db.storage[k.id].object
+					if ( member and member:alive( ) ) then
+						member:set_character_community( p[1], 0, 0 )
+						for i, community in pairs( communities ) do
+							member:set_community_goodwill( community, 0 )
+						end
+						printf( ("DRX SL: Companion faction changed to " .. p[1]) )
+					end
+				end
+			end
+		end
+
+		-- Send dynamic news alert:
+		news_manager.send_tip( db.actor, (game.translate_string("st_drx_questlines_joined") .. " " .. game.translate_string( p[1] ) .. "" .. game.translate_string("st_drx_questlines_faction")), nil, "completionist", nil, nil )
+
+	end
+
+end
+
+
 -- ----------------------------------------------------------------------------------------------------
 -- Общие функции
 -- ----------------------------------------------------------------------------------------------------
