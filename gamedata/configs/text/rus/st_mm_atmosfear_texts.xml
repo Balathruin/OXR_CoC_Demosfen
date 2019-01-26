@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
 	<string id="st_cap_af_weather_options">
-		<text>Прогноз Погоды</text>
+		<text>Погода</text>
 	</string>
 	<string id="st_cap_af_event_options">
 		<text>Явления Зоны</text>
@@ -260,5 +260,39 @@
 	</string>
 	<string id="st_msg_load_default_settings_done">
 		<text>Стандартные настройки событий, погоды и луны восстановлены.</text>
+	</string>
+	
+	<string id="st_cap_weather_occurrence">
+		<text>Частота появления</text>
+	</string>
+	<string id="st_cap_weather_period">
+		<text>Длительность</text>
+	</string>
+	<string id="st_occurrence_rare">
+		<text>Редко</text>
+	</string>
+	<string id="st_occurrence_zero">
+		<text>Никогда</text>
+	</string>
+	<string id="st_occurrence_regular">
+		<text>Часто</text>
+	</string>
+	<string id="st_wthr_clear">
+		<text>Ясно</text>
+	</string>
+	<string id="st_wthr_partly">
+		<text>Облачно</text>
+	</string>
+	<string id="st_wthr_cloudy">
+		<text>Пасмурно</text>
+	</string>
+	<string id="st_wthr_rain">
+		<text>Дождь</text>
+	</string>
+	<string id="st_wthr_storm">
+		<text>Гроза</text>
+	</string>
+	<string id="st_wthr_foggy">
+		<text>Туман</text>
 	</string>
 </string_table>

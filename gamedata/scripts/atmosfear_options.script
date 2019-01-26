@@ -6,15 +6,21 @@
 -- Modified by Alundaio
 	-- added INI support to remove dependency on savegame
 	-- removed fallout manager
---------------------------------------------------------------------------------
+--===============================================================================
+-- Modified by Tronex
+-- Last Edit: 17.04.2018
+-- Added necessary UI elements for the global weather
+--===============================================================================
 
-config = nil
+
+config = nil -- contains current atmosfear parameters
+weather_tbl = {"clear","partly","cloudy","rain","storm","foggy"}
 
 class "af_options_dialog" (CUIScriptWnd)
 function af_options_dialog:__init() super()
 
 	config = config or ini_file_ex("atmosfear_options.ltx",true)
-	level_weathers.atmosfear_init()
+	level_weathers.atmosfear_init() -- fill "atmosfear_options" with current atmosfear parameters
 	
 	local function file_exists(name)
 	   local f=io.open(name,"r")
@@ -27,23 +33,16 @@ function af_options_dialog:__init() super()
 	local need_save
 
 	if (not self.default_settings:section_exist("atmosfear_default_parameters")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_default_parameters","opt_"..level.."_period_good",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-			self.default_settings:w_value("atmosfear_default_parameters","opt_"..level.."_period_bad",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-			self.default_settings:w_value("atmosfear_default_parameters","opt_"..level.."_period_good_length",random_choice(4,6,8))
-			self.default_settings:w_value("atmosfear_default_parameters","opt_"..level.."_period_bad_length",random_choice(4,6,8))
+		for	i=1,#weather_tbl do
+			self.default_settings:w_value("atmosfear_default_parameters","opt_weather_"..weather_tbl[i].."_period",random_choice(4,6,8))
+			self.default_settings:w_value("atmosfear_default_parameters","opt_weather_"..weather_tbl[i].."_occur",math.random(2,3))
 		end
-
+		
 		self.default_settings:w_value("atmosfear_default_parameters","opt_enable_blowout",1)
 		self.default_settings:w_value("atmosfear_default_parameters","opt_blowout_freq",48)
 		self.default_settings:w_value("atmosfear_default_parameters","opt_blowout_fate","turntozombie")
 		self.default_settings:w_value("atmosfear_default_parameters","opt_blowout_warning","radio_siren")
 		self.default_settings:w_value("atmosfear_default_parameters","opt_blowout_task","give")
-		--self.default_settings:w_value("atmosfear_default_parameters","opt_enable_fallout",0)
-		--self.default_settings:w_value("atmosfear_default_parameters","opt_fallout_freq",12)
-		--self.default_settings:w_value("atmosfear_default_parameters","opt_fallout_fate","poison")
-		--self.default_settings:w_value("atmosfear_default_parameters","opt_fallout_warning","siren")
-		--self.default_settings:w_value("atmosfear_default_parameters","opt_fallout_task","give")
 		self.default_settings:w_value("atmosfear_default_parameters","opt_enable_psi_storm",1)
 		self.default_settings:w_value("atmosfear_default_parameters","opt_psi_storm_freq",24)
 		self.default_settings:w_value("atmosfear_default_parameters","opt_psi_storm_fate","kill")
@@ -53,9 +52,6 @@ function af_options_dialog:__init() super()
 		self.default_settings:w_value("atmosfear_default_parameters","opt_moon_phase","8days")
 		self.default_settings:w_value("atmosfear_default_parameters","opt_night_brightness","slight")
 
-		self.default_settings:w_value("atmosfear_default_parameters","opt_weather_balance_presets","balance_default")
-		self.default_settings:w_value("atmosfear_default_parameters","opt_weather_length_presets","length_default")
-
 		self.default_settings:w_value("atmosfear_default_parameters","opt_god_mode","false")
 		need_save = true
 	end
@@ -64,13 +60,11 @@ function af_options_dialog:__init() super()
 		self.default_settings:w_value("atmosfear_option_names","kill","st_list_fate_kill")
 		self.default_settings:w_value("atmosfear_option_names","explode","st_list_fate_explode")
 		self.default_settings:w_value("atmosfear_option_names","nowarning","st_list_warning_none")
-		self.default_settings:w_value("atmosfear_option_names","clear_foggy","st_list_periods_clear_foggy")
 		self.default_settings:w_value("atmosfear_option_names","siren","st_list_warning_siren")
-		self.default_settings:w_value("atmosfear_option_names","foggy_rainy","st_list_periods_foggy_rainy")
+		self.default_settings:w_value("atmosfear_option_names","slight","st_list_night_brightness_slight")
 		self.default_settings:w_value("atmosfear_option_names","turntozombie","st_list_fate_turntozombie")
 		self.default_settings:w_value("atmosfear_option_names","balance_bad","st_list_weather_balance_preset_bad")
 		self.default_settings:w_value("atmosfear_option_names","dontgive","st_list_task_none")
-		self.default_settings:w_value("atmosfear_option_names","slight","st_list_night_brightness_slight")
 		self.default_settings:w_value("atmosfear_option_names","balance_good","st_list_weather_balance_preset_good")
 		self.default_settings:w_value("atmosfear_option_names","96","st_list_freq_96")
 		self.default_settings:w_value("atmosfear_option_names","48","st_list_freq_48")
@@ -83,20 +77,23 @@ function af_options_dialog:__init() super()
 		self.default_settings:w_value("atmosfear_option_names","medium","st_list_night_brightness_medium")
 		self.default_settings:w_value("atmosfear_option_names","balance_custom","st_list_weather_balance_preset_custom")
 		self.default_settings:w_value("atmosfear_option_names","length_default","st_list_weather_length_preset_default")
-		self.default_settings:w_value("atmosfear_option_names","clear","st_list_periods_clear")
 		self.default_settings:w_value("atmosfear_option_names","killatend","st_list_fate_killatend")
 		self.default_settings:w_value("atmosfear_option_names","radio","st_list_warning_radio")
 		self.default_settings:w_value("atmosfear_option_names","killorturn","st_list_fate_killorturn")
 		self.default_settings:w_value("atmosfear_option_names","dark","st_list_night_brightness_dark")
 		self.default_settings:w_value("atmosfear_option_names","balance_default","st_list_weather_balance_preset_default")
 		self.default_settings:w_value("atmosfear_option_names","bright","st_list_night_brightness_bright")
-		self.default_settings:w_value("atmosfear_option_names","stormy","st_list_periods_stormy")
 		self.default_settings:w_value("atmosfear_option_names","length_long","st_list_weather_length_preset_long")
-		self.default_settings:w_value("atmosfear_option_names","rainy","st_list_periods_rainy")
-		self.default_settings:w_value("atmosfear_option_names","foggy","st_list_periods_foggy")
 		self.default_settings:w_value("atmosfear_option_names","length_short","st_list_weather_length_preset_short")
 		self.default_settings:w_value("atmosfear_option_names","radio_siren","st_list_warning_radio_siren")
 		self.default_settings:w_value("atmosfear_option_names","give","st_list_task_give")
+		
+		self.default_settings:w_value("atmosfear_option_names","rain","st_list_periods_rain")
+		self.default_settings:w_value("atmosfear_option_names","foggy","st_list_periods_foggy")
+		self.default_settings:w_value("atmosfear_option_names","storm","st_list_periods_storm")
+		self.default_settings:w_value("atmosfear_option_names","clear","st_list_periods_clear")
+		self.default_settings:w_value("atmosfear_option_names","cloudy","st_list_periods_cloudy")
+		self.default_settings:w_value("atmosfear_option_names","partly","st_list_periods_partly")
 		need_save = true
 	end
 
@@ -107,14 +104,6 @@ function af_options_dialog:__init() super()
 		self.default_settings:w_value("list_blowout_fate","list_fate_turntozombie",2)
 		need_save = true
 	end
-
-	--[[
-	if not (self.default_settings:section_exist("list_fallout_fate")) then
-		self.default_settings:w_value("list_fallout_fate","list_fate_poison",0)
-		self.default_settings:w_value("list_fallout_fate","list_fate_none",1)
-		need_save = true
-	end
-	--]]
 
 	if (not self.default_settings:section_exist("list_psi_storm_fate")) then
 		self.default_settings:w_value("list_psi_storm_fate","list_fate_kill",0)
@@ -129,91 +118,9 @@ function af_options_dialog:__init() super()
 		need_save = true
 	end
 
-	--[[
-	if not (self.default_settings:section_exist("list_fallout_task")) then
-		self.default_settings:w_value("list_fallout_task","list_task_give",0)
-		self.default_settings:w_value("list_fallout_task","list_task_none",1)
-		need_save = true
-	end
-	--]]
-
 	if (not self.default_settings:section_exist("list_psi_storm_task")) then
 		self.default_settings:w_value("list_psi_storm_task","list_task_give",0)
 		self.default_settings:w_value("list_psi_storm_task","list_task_none",1)
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("atmosfear_preset_length_short")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_preset_length_short",level.."_period_good_length",3)
-			self.default_settings:w_value("atmosfear_preset_length_short",level.."_period_bad_length",3)
-		end
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("atmosfear_preset_length_long")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_preset_length_long",level.."_period_good_length",3)
-			self.default_settings:w_value("atmosfear_preset_length_long",level.."_period_bad_length",3)
-		end
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("atmosfear_preset_length_default")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_preset_length_default",level.."_period_good_length",random_choice(4,6,8))
-			self.default_settings:w_value("atmosfear_preset_length_default",level.."_period_bad_length",random_choice(4,6,8))
-		end
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("list_weather_length_presets")) then
-		self.default_settings:w_value("list_weather_length_presets","list_weather_length_preset_short",1)
-		self.default_settings:w_value("list_weather_length_presets","list_weather_length_preset_default",0)
-		self.default_settings:w_value("list_weather_length_presets","list_weather_length_preset_custom",3)
-		self.default_settings:w_value("list_weather_length_presets","list_weather_length_preset_long",2)
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("atmosfear_preset_balance_bad")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_preset_balance_bad",level.."_period_bad",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-			self.default_settings:w_value("atmosfear_preset_balance_bad",level.."_period_good",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-		end
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("atmosfear_preset_balance_good")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_preset_balance_good",level.."_period_bad",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-			self.default_settings:w_value("atmosfear_preset_balance_good",level.."_period_good",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-		end
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("atmosfear_preset_balance_default")) then
-		for level,v in pairs(level_weathers.valid_levels) do
-			self.default_settings:w_value("atmosfear_preset_balance_default",level.."_period_bad",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-			self.default_settings:w_value("atmosfear_preset_balance_default",level.."_period_good",random_choice("clear","clear_foggy","foggy","foggy_rainy","rainy","stormy"))
-		end
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("list_periods")) then
-		self.default_settings:w_value("list_periods","list_periods_stormy",5)
-		self.default_settings:w_value("list_periods","list_periods_clear",0)
-		self.default_settings:w_value("list_periods","list_periods_rainy",4)
-		self.default_settings:w_value("list_periods","list_periods_foggy_rainy",3)
-		self.default_settings:w_value("list_periods","list_periods_clear_foggy",1)
-		self.default_settings:w_value("list_periods","list_periods_foggy",2)
-		need_save = true
-	end
-
-	if (not self.default_settings:section_exist("list_weather_balance_presets")) then
-		self.default_settings:w_value("list_weather_balance_presets","list_weather_balance_preset_default",0)
-		self.default_settings:w_value("list_weather_balance_presets","list_weather_balance_preset_custom",3)
-		self.default_settings:w_value("list_weather_balance_presets","list_weather_balance_preset_good",1)
-		self.default_settings:w_value("list_weather_balance_presets","list_weather_balance_preset_bad",2)
 		need_save = true
 	end
 
@@ -224,16 +131,6 @@ function af_options_dialog:__init() super()
 		self.default_settings:w_value("list_blowout_freq","list_freq_96",3)
 		need_save = true
 	end
-
-	--[[
-	if not (self.default_settings:section_exist("list_fallout_freq")) then
-		self.default_settings:w_value("list_fallout_freq","list_freq_48",2)
-		self.default_settings:w_value("list_fallout_freq","list_freq_24",1)
-		self.default_settings:w_value("list_fallout_freq","list_freq_12",0)
-		self.default_settings:w_value("list_fallout_freq","list_freq_96",3)
-		need_save = true
-	end
-	--]]
 	
 	if (not self.default_settings:section_exist("list_psi_storm_freq")) then
 		self.default_settings:w_value("list_psi_storm_freq","list_freq_48",2)
@@ -242,14 +139,6 @@ function af_options_dialog:__init() super()
 		self.default_settings:w_value("list_psi_storm_freq","list_freq_96",3)
 		need_save = true
 	end
-
-	--[[
-	if not (self.default_settings:section_exist("list_fallout_warning")) then
-		self.default_settings:w_value("list_fallout_warning","list_warning_siren",0)
-		self.default_settings:w_value("list_fallout_warning","list_warning_none",1)
-		need_save = true
-	end
-	--]]
 
 	if (not self.default_settings:section_exist("list_psi_storm_warning")) then
 		self.default_settings:w_value("list_psi_storm_warning","list_warning_siren",0)
@@ -308,8 +197,8 @@ function af_options_dialog:InitControls()
 	self:Register				(btn, "btn_event_options")
 	btn = xml:Init3tButton		("main_dialog:btn_moon_options", self.dialog)
 	self:Register				(btn, "btn_moon_options")
-	-- btn = xml:Init3tButton		("main_dialog:btn_default_options", self.dialog)
-	-- self:Register				(btn, "btn_default_options")
+	btn = xml:Init3tButton		("main_dialog:btn_default_options", self.dialog)
+	self:Register				(btn, "btn_default_options")
 
 	self.dlg_event				= af_opt_event()
 	self.dlg_event:InitControls	(0,0, xml, self)
@@ -329,11 +218,11 @@ function af_options_dialog:InitControls()
 	self.dialog:AttachChild		(self.dlg_moon)
 	xml:InitWindow				("tab_size", 0, self.dlg_moon)
 
-	-- self.dlg_default			= af_opt_default()
-	-- self.dlg_default:InitControls	(0,0, xml, self)
-	-- self.dlg_default:Show			(false)
-	-- self.dialog:AttachChild		(self.dlg_default)
-	-- xml:InitWindow				("tab_size", 0, self.dlg_default)
+	self.dlg_default			= af_opt_default()
+	self.dlg_default:InitControls	(0,0, xml, self)
+	self.dlg_default:Show			(false)
+	self.dialog:AttachChild		(self.dlg_default)
+	xml:InitWindow				("tab_size", 0, self.dlg_default)
 
 	self.message_box_save					= CUIMessageBoxEx()
 	self:Register							(self.message_box_save, "message_box_save")
@@ -405,8 +294,8 @@ function af_options_dialog:RegisterTrack(xml, dialog, name, dialogObj)
 	return combo
 end
 
-function af_options_dialog:RegisterLengthRadio(xml, name, dialogObj, x, y)
-	self["radio_"..name] = xml:InitTab("weather_dialog:radio_period_length", dialogObj)
+function af_options_dialog:RegisterLengthRadio(xml, element, name, dialogObj, x, y)
+	self["radio_"..name] = xml:InitTab(element, dialogObj)
 	self["radio_"..name]:SetWndPos(vector2():set(x,y))
 	self:Register(self["radio_"..name], "radio_"..name)
 end
@@ -503,13 +392,10 @@ end
 --#								SETTING VALUES
 --######################################################################################################################
 
-function af_options_dialog:SetCurrentValues()
-
-	for level,v in pairs(level_weathers.valid_levels) do
-		self:SetComboValue(level.."_period_good", config:r_value("atmosfear_current_parameters","opt_"..level.."_period_good",0,"clear_foggy"))
-		self:SetComboValue(level.."_period_bad", config:r_value("atmosfear_current_parameters","opt_"..level.."_period_bad",0,"rainy"))
-		self:SetRadioValue(level.."_period_good_length", config:r_value("atmosfear_current_parameters","opt_"..level.."_period_good_length",0,"6"))
-		self:SetRadioValue(level.."_period_bad_length",	config:r_value("atmosfear_current_parameters","opt_"..level.."_period_bad_length",0,"6"))
+function af_options_dialog:SetCurrentValues() -- read values from "atmosfear_current_parameters", show it on UI
+	for	i=1,#weather_tbl do --?
+		self:SetRadioValue("weather_"..weather_tbl[i].."_period", config:r_value("atmosfear_current_parameters","opt_weather_"..weather_tbl[i].."_period",0,"6"))
+		self:SetRadioValue("weather_"..weather_tbl[i].."_occur", config:r_value("atmosfear_current_parameters","opt_weather_"..weather_tbl[i].."_occur",0,"3"))
 	end
 
 	self:SetCheckValue("enable_blowout",			config:r_value("atmosfear_current_parameters","opt_enable_blowout",0,"1"))
@@ -517,11 +403,6 @@ function af_options_dialog:SetCurrentValues()
 	self:SetComboValue("blowout_fate",				config:r_value("atmosfear_current_parameters","opt_blowout_fate",0,"turntozombie"))
 	self:SetComboValue("blowout_warning",			config:r_value("atmosfear_current_parameters","opt_blowout_warning",0,"radio_siren"))
 	self:SetComboValue("blowout_task",				config:r_value("atmosfear_current_parameters","opt_blowout_task",0,"give"))
-	--self:SetCheckValue("enable_fallout",			config:r_value("atmosfear_current_parameters","opt_enable_fallout",0,"0"))
-	--self:SetComboValue("fallout_freq",				config:r_value("atmosfear_current_parameters","opt_fallout_freq",0,"12"))
-	--self:SetComboValue("fallout_fate",				config:r_value("atmosfear_current_parameters","opt_fallout_fate",0,"poison"))
-	--self:SetComboValue("fallout_warning",			config:r_value("atmosfear_current_parameters","opt_fallout_warning",0,"siren"))
-	--self:SetComboValue("fallout_task",				config:r_value("atmosfear_current_parameters","opt_fallout_task",0,"give"))
 	self:SetCheckValue("enable_psi_storm",			config:r_value("atmosfear_current_parameters","opt_enable_psi_storm",0,"1"))
 	self:SetComboValue("psi_storm_freq",			config:r_value("atmosfear_current_parameters","opt_psi_storm_freq",0,"24"))
 	self:SetComboValue("psi_storm_fate",			config:r_value("atmosfear_current_parameters","opt_psi_storm_fate",0,"kill"))
@@ -531,19 +412,14 @@ function af_options_dialog:SetCurrentValues()
 	self:SetRadioValue("moon_phase",				config:r_value("atmosfear_current_parameters","opt_moon_phase",0,"8days"))
 	self:SetComboValue("night_brightness",			config:r_value("atmosfear_current_parameters","opt_night_brightness",0,"slight"))
 
-	self:SetComboValue("weather_balance_presets",	config:r_value("atmosfear_current_parameters","opt_weather_balance_presets",0,"balance_default"))
-	self:SetComboValue("weather_length_presets",	config:r_value("atmosfear_current_parameters","opt_weather_length_presets",0,"length_default"))
-
 	self.dlg_weather:Show		(true)
 end
 
-function af_options_dialog:SetDefaultValues()
+function af_options_dialog:SetDefaultValues() -- read values from "atmosfear_default_parameters", show it on UI
 
-	for level,v in pairs(level_weathers.valid_levels) do
-		self:SetComboValue(level.."_period_good", self.default_settings:r_value("atmosfear_default_parameters","opt_"..level.."_period_good",0,"clear_foggy"))
-		self:SetComboValue(level.."_period_bad", self.default_settings:r_value("atmosfear_default_parameters","opt_"..level.."_period_bad",0,"rainy"))
-		self:SetRadioValue(level.."_period_good_length", self.default_settings:r_value("atmosfear_default_parameters","opt_"..level.."_period_good_length",0,"6"))
-		self:SetRadioValue(level.."_period_bad_length",	self.default_settings:r_value("atmosfear_default_parameters","opt_"..level.."_period_bad_length",0,"6"))
+	for	i=1,#weather_tbl do --?
+		self:SetRadioValue("weather_"..weather_tbl[i].."_period", self.default_settings:r_value("atmosfear_default_parameters","opt_weather_"..weather_tbl[i].."_period",0,"6"))
+		self:SetRadioValue("weather_"..weather_tbl[i].."_occur", self.default_settings:r_value("atmosfear_default_parameters","opt_weather_"..weather_tbl[i].."_occur",0,"3"))
 	end
 
 	self:SetCheckValue("enable_blowout",			self.default_settings:r_value("atmosfear_default_parameters","opt_enable_blowout",0,"1"))
@@ -551,11 +427,6 @@ function af_options_dialog:SetDefaultValues()
 	self:SetComboValue("blowout_fate",				self.default_settings:r_value("atmosfear_default_parameters","opt_blowout_fate",0,"turntozombie"))
 	self:SetComboValue("blowout_warning",			self.default_settings:r_value("atmosfear_default_parameters","opt_blowout_warning",0,"radio_siren"))
 	self:SetComboValue("blowout_task",				self.default_settings:r_value("atmosfear_default_parameters","opt_blowout_task",0,"give"))
-	--self:SetCheckValue("enable_fallout",			self.default_settings:r_value("atmosfear_default_parameters","opt_enable_fallout",0,"0"))
-	--self:SetComboValue("fallout_freq",				self.default_settings:r_value("atmosfear_default_parameters","opt_fallout_freq",0,"12"))
-	--self:SetComboValue("fallout_fate",				self.default_settings:r_value("atmosfear_default_parameters","opt_fallout_fate",0,"poison"))
-	--self:SetComboValue("fallout_warning",			self.default_settings:r_value("atmosfear_default_parameters","opt_fallout_warning",0,"siren"))
-	--self:SetComboValue("fallout_task",				self.default_settings:r_value("atmosfear_default_parameters","opt_fallout_task",0,"give"))
 	self:SetCheckValue("enable_psi_storm",			self.default_settings:r_value("atmosfear_default_parameters","opt_enable_psi_storm",0,"1"))
 	self:SetComboValue("psi_storm_freq",			self.default_settings:r_value("atmosfear_default_parameters","opt_psi_storm_freq",0,"24"))
 	self:SetComboValue("psi_storm_fate",			self.default_settings:r_value("atmosfear_default_parameters","opt_psi_storm_fate",0,"kill"))
@@ -564,9 +435,10 @@ function af_options_dialog:SetDefaultValues()
 
 	self:SetRadioValue("moon_phase",				self.default_settings:r_value("atmosfear_default_parameters","opt_moon_phase",0,"8days"))
 	self:SetComboValue("night_brightness",			self.default_settings:r_value("atmosfear_default_parameters","opt_night_brightness",0,"slight"))
-
+--[[
 	self:SetComboValue("weather_balance_presets",	self.default_settings:r_value("atmosfear_default_parameters","opt_weather_balance_presets",0,"balance_default"))
 	self:SetComboValue("weather_length_presets",	self.default_settings:r_value("atmosfear_default_parameters","opt_weather_length_presets",0,"length_default"))
+--]]
 end
 
 function af_options_dialog:InitCallBacks()
@@ -576,24 +448,10 @@ function af_options_dialog:InitCallBacks()
 	self:AddCallback("btn_event_options",					ui_events.BUTTON_CLICKED,	self.OnBtnEventOptions,		self)
 	self:AddCallback("btn_moon_options",					ui_events.BUTTON_CLICKED,	self.OnBtnMoonOptions,		self)
 	self:AddCallback("btn_default_options",					ui_events.BUTTON_CLICKED,	self.OnBtnDefaultOptions,		self)
-	self:AddCallback("list_weather_balance_presets",		ui_events.LIST_ITEM_SELECT,	self.OnWeatherBalancePresets,		self)
-	self:AddCallback("list_weather_length_presets",			ui_events.LIST_ITEM_SELECT,	self.OnWeatherLengthPresets,		self)
-	self:AddCallback("list_zaton_period_good",				ui_events.LIST_ITEM_SELECT,	self.SetBalancePresetToCustom,		self)
-	self:AddCallback("list_zaton_period_bad",				ui_events.LIST_ITEM_SELECT,	self.SetBalancePresetToCustom,		self)
-	self:AddCallback("list_jupiter_period_good",			ui_events.LIST_ITEM_SELECT,	self.SetBalancePresetToCustom,		self)
-	self:AddCallback("list_jupiter_period_bad",				ui_events.LIST_ITEM_SELECT,	self.SetBalancePresetToCustom,		self)
-	self:AddCallback("list_pripyat_period_good",			ui_events.LIST_ITEM_SELECT,	self.SetBalancePresetToCustom,		self)
-	self:AddCallback("list_pripyat_period_bad",				ui_events.LIST_ITEM_SELECT,	self.SetBalancePresetToCustom,		self)
-	self:AddCallback("radio_zaton_period_good_length",		ui_events.TAB_CHANGED,		self.SetLengthPresetToCustom,		self)
-	self:AddCallback("radio_zaton_period_bad_length",		ui_events.TAB_CHANGED,		self.SetLengthPresetToCustom,		self)
-	self:AddCallback("radio_jupiter_period_good_length",	ui_events.TAB_CHANGED,		self.SetLengthPresetToCustom,		self)
-	self:AddCallback("radio_jupiter_period_bad_length",		ui_events.TAB_CHANGED,		self.SetLengthPresetToCustom,		self)
-	self:AddCallback("radio_pripyat_period_good_length",	ui_events.TAB_CHANGED,		self.SetLengthPresetToCustom,		self)
-	self:AddCallback("radio_pripyat_period_bad_length",		ui_events.TAB_CHANGED,		self.SetLengthPresetToCustom,		self)
-	--self:AddCallback("btn_load_color_balance",				ui_events.BUTTON_CLICKED,	self.OnBtnLoadColorBalance,		self)
-	--self:AddCallback("btn_load_default_settings",			ui_events.BUTTON_CLICKED,	self.OnBtnLoadDefaultSettings,		self)
-	self:AddCallback("message_box_user",     				ui_events.MESSAGE_BOX_YES_CLICKED,		self.OnMsgUserYes,						self)
-	self:AddCallback("message_box_load_default",     		ui_events.MESSAGE_BOX_YES_CLICKED,		self.OnMsgLoadDefaultYes,						self)
+	self:AddCallback("btn_load_color_balance",				ui_events.BUTTON_CLICKED,	self.OnBtnLoadColorBalance,		self)
+	self:AddCallback("btn_load_default_settings",			ui_events.BUTTON_CLICKED,	self.OnBtnLoadDefaultSettings,		self)
+	self:AddCallback("message_box_user",     				ui_events.MESSAGE_BOX_YES_CLICKED,		self.OnMsgUserYes,	self)
+	self:AddCallback("message_box_load_default",     		ui_events.MESSAGE_BOX_YES_CLICKED,		self.OnMsgLoadDefaultYes,	self)
 end
 
 --######################################################################################################################
@@ -604,28 +462,28 @@ function af_options_dialog:OnBtnWeatherOptions()
 	self.dlg_weather:Show		(true)
 	self.dlg_event:Show			(false)
 	self.dlg_moon:Show			(false)
-	--self.dlg_default:Show		(false)
+	self.dlg_default:Show		(false)
 end
 
 function af_options_dialog:OnBtnEventOptions()
 	self.dlg_weather:Show		(false)
 	self.dlg_event:Show			(true)
 	self.dlg_moon:Show			(false)
-	--self.dlg_default:Show		(false)
+	self.dlg_default:Show		(false)
 end
 
 function af_options_dialog:OnBtnMoonOptions()
 	self.dlg_weather:Show		(false)
 	self.dlg_event:Show			(false)
 	self.dlg_moon:Show			(true)
-	--self.dlg_default:Show		(false)
+	self.dlg_default:Show		(false)
 end
 
 function af_options_dialog:OnBtnDefaultOptions()
 	self.dlg_weather:Show		(false)
 	self.dlg_event:Show			(false)
 	self.dlg_moon:Show			(false)
-	--self.dlg_default:Show		(true)
+	self.dlg_default:Show		(true)
 end
 
 function af_options_dialog:OnBtnLoadColorBalance()
@@ -649,53 +507,22 @@ end
 
 function af_options_dialog:OnMsgLoadDefaultYes()
 	self:SetDefaultValues()
-	--self.dlg_default:Show(false)
+	self.dlg_default:Show(false)
 	self.dlg_weather:Show(true)
 	self.message_box_load_default_done:InitMessageBox("message_box_ok")
 	self.message_box_load_default_done:SetText("st_msg_load_default_settings_done")
 	self.message_box_load_default_done:ShowDialog(true)
 end
 
-function af_options_dialog:OnWeatherBalancePresets()
-	local selected = self:GetComboValue("weather_balance_presets")
-	local parameters = self.default_settings:collect_section("atmosfear_preset_"..selected)
-	if parameters~=nil then
-		for option, name in pairs(parameters) do
-			self:SetComboValue(option,name)
-		end
-	end
-end
-
-function af_options_dialog:OnWeatherLengthPresets()
-	local selected = self:GetComboValue("weather_length_presets")
-	local parameters = self.default_settings:collect_section("atmosfear_preset_"..selected)
-	if parameters~=nil then
-		for option, name in pairs(parameters) do
-			self:SetRadioValue(option,name)
-		end
-	end
-	self:SetComboValue("weather_length_presets",selected)
-end
-
-function af_options_dialog:SetBalancePresetToCustom()
-	self:SetComboValue("weather_balance_presets","balance_custom")
-end
-
-function af_options_dialog:SetLengthPresetToCustom()
-	self:SetComboValue("weather_length_presets","length_custom")
-end
-
-function af_options_dialog:OnBtnAccept()
+function af_options_dialog:OnBtnAccept() -- update the values in "atmosfear_current_parameters" basic on UI checks
 
 	local update_period
-	for level,v in pairs(level_weathers.valid_levels) do
-		self:SetComboOption(level.."_period_good",false)
-		self:SetComboOption(level.."_period_bad",false)
+	
+	for	i=1,#weather_tbl do
+		self:SetRadioOption("weather_"..weather_tbl[i].."_period", false)
+		self:SetRadioOption("weather_"..weather_tbl[i].."_occur", false)
 		
-		self:SetRadioOption(level.."_period_good_length",false)
-		self:SetRadioOption(level.."_period_bad_length",false)
-		
-		if (not update_period) and (config:r_value("atmosfear_current_parameters",level.."_period_good_length") ~= self:GetRadioValue(level.."_period_good_length") or config:r_value("atmosfear_current_parameters",level.."_period_bad_length") ~= self:GetRadioValue(level.."_period_bad_length")) then
+		if (not update_period) and (config:r_value("atmosfear_current_parameters","weather_"..weather_tbl[i].."_period") ~= self:GetRadioValue("weather_"..weather_tbl[i].."_period") or config:r_value("weather_"..weather_tbl[i].."_occur") ~= self:GetRadioValue("weather_"..weather_tbl[i].."_occur")) then
 			update_period = true
 		end
 	end
@@ -718,16 +545,11 @@ function af_options_dialog:OnBtnAccept()
 		end
 	end
 
-	--self:SetComboOption("fallout_freq",true)
 	self:SetCheckOption("enable_blowout",true)
-	--self:SetCheckOption("enable_fallout",false)
 	self:SetCheckOption("enable_psi_storm",true)
 	self:SetComboOption("blowout_fate",false)
 	self:SetComboOption("blowout_warning",false)
 	self:SetComboOption("blowout_task",false)
-	--self:SetComboOption("fallout_fate",false)
-	--self:SetComboOption("fallout_warning",false)
-	--self:SetComboOption("fallout_task",false)
 	self:SetComboOption("psi_storm_fate",false)
 	self:SetComboOption("psi_storm_warning",false)
 	self:SetComboOption("psi_storm_task",false)
@@ -746,19 +568,13 @@ function af_options_dialog:OnBtnAccept()
 		end
 	end
 
-	self:SetComboOption("weather_balance_presets",false)
-	self:SetComboOption("weather_length_presets",false)
-
 	self.dlg_weather:Show		(false)
 	self.dlg_event:Show			(false)
 	self.dlg_moon:Show			(false)
-	--self.dlg_default:Show		(false)
+	self.dlg_default:Show		(false)
 	self.owner:ShowDialog(true)
 	self:HideDialog()
 	self.owner:Show(true)
-	--self.message_box_save:InitMessageBox("message_box_ok")
-	--self.message_box_save:SetText("st_msg_after_save")
-	--self.message_box_save:ShowDialog(true)
 
 	config:save()
 end
@@ -767,7 +583,7 @@ function af_options_dialog:OnBtnCancel()
 	self.dlg_weather:Show		(false)
 	self.dlg_event:Show			(false)
 	self.dlg_moon:Show			(false)
-	--self.dlg_default:Show		(false)
+	self.dlg_default:Show		(false)
 	self.owner:ShowDialog(true)
 	self:HideDialog()
 	self.owner:Show(true)
@@ -785,7 +601,7 @@ function af_options_dialog:OnKeyboard(dik, keyboard_action)
 				self.dlg_weather:Show		(false)
 				self.dlg_event:Show			(false)
 				self.dlg_moon:Show			(false)
-				--self.dlg_default:Show		(false)
+				self.dlg_default:Show		(false)
 				self.owner:ShowDialog(true)
 				self:HideDialog()
 				self.owner:Show(true)
@@ -856,38 +672,27 @@ function af_opt_event:InitControls(x, y, xml, handler)
 	xml:InitStatic				("event_dialog:div_1", self)
 	xml:InitStatic				("event_dialog:div_2", self)
 	xml:InitStatic				("event_dialog:cap_af_blowout", self)
-	--xml:InitStatic				("event_dialog:cap_af_fallout", self)
 	xml:InitStatic				("event_dialog:cap_af_psi_storm", self)
 	xml:InitStatic				("event_dialog:cap_check_enable_blowout", self)
-	--xml:InitStatic				("event_dialog:cap_check_enable_fallout", self)
 	xml:InitStatic				("event_dialog:cap_check_enable_psi_storm", self)
 	xml:InitStatic				("event_dialog:cap_blowout_freq", self)
 	xml:InitStatic				("event_dialog:cap_blowout_fate", self)
 	xml:InitStatic				("event_dialog:cap_blowout_warning", self)
 	xml:InitStatic				("event_dialog:cap_blowout_task", self)
-	--xml:InitStatic				("event_dialog:cap_fallout_freq", self)
-	--xml:InitStatic				("event_dialog:cap_fallout_fate", self)
-	--xml:InitStatic				("event_dialog:cap_fallout_warning", self)
-	--xml:InitStatic				("event_dialog:cap_fallout_task", self)
 	xml:InitStatic				("event_dialog:cap_psi_storm_freq", self)
 	xml:InitStatic				("event_dialog:cap_psi_storm_fate", self)
 	xml:InitStatic				("event_dialog:cap_psi_storm_warning", self)
 	xml:InitStatic				("event_dialog:cap_psi_storm_task", self)
 
 	handler:RegisterCheck(xml, "event_dialog", "enable_blowout", self)
-	--handler:RegisterCheck(xml, "event_dialog", "enable_fallout", self)
 	handler:RegisterCheck(xml, "event_dialog", "enable_psi_storm", self)
 
 	handler:RegisterCombo(xml, "event_dialog", "blowout_freq", nil, self)
-	--handler:RegisterCombo(xml, "event_dialog", "fallout_freq", nil, self)
 	handler:RegisterCombo(xml, "event_dialog", "psi_storm_freq", nil, self)
 
 	handler:RegisterCombo(xml, "event_dialog", "blowout_fate", nil, self)
 	handler:RegisterCombo(xml, "event_dialog", "blowout_warning", nil, self)
 	handler:RegisterCombo(xml, "event_dialog", "blowout_task", nil, self)
-	--handler:RegisterCombo(xml, "event_dialog", "fallout_fate", nil, self)
-	--handler:RegisterCombo(xml, "event_dialog", "fallout_warning", nil, self)
-	--handler:RegisterCombo(xml, "event_dialog", "fallout_task", nil, self)
 	handler:RegisterCombo(xml, "event_dialog", "psi_storm_fate", nil, self)
 	handler:RegisterCombo(xml, "event_dialog", "psi_storm_warning", nil, self)
 	handler:RegisterCombo(xml, "event_dialog", "psi_storm_task", nil, self)
@@ -916,31 +721,32 @@ function af_opt_weather:InitControls(x, y, xml, handler)
 	self:SetAutoDelete(true)
 
 	self.scroll_v = xml:InitScrollView("weather_dialog:scroll_v", self)
-
-	xml:InitStatic				("weather_dialog:cap_weather_presets", self)
-	xml:InitStatic				("weather_dialog:cap_weather_balance_presets", self)
-	xml:InitStatic				("weather_dialog:cap_weather_length_presets", self)
-	handler:RegisterCombo		(xml, "weather_dialog", "weather_balance_presets", nil, self)
-	handler:RegisterCombo		(xml, "weather_dialog", "weather_length_presets", nil, self)
-
+	
 	local aspectRatio = 1
+	local lil = 0
 	if(device().width/device().height>(1024/768+0.01)) then
 		aspectRatio = 0.8
+		lil = 10
 	end
 	
-	for level_name,v in pairs(level_weathers.valid_levels) do
+	for	i=1,#weather_tbl do
 		_st = xml:InitStatic("weather_dialog:templ_item", nil)
-		_el=xml:InitStatic("weather_dialog:div_1", _st)
+		_el = xml:InitStatic("weather_dialog:div_1", _st)
 		_el:SetWndPos(vector2():set(0,0))
-		_el:TextControl():SetTextST(level_name)
-
-		handler:RegisterPeriodCombo(xml, "weather_dialog", level_name.."_period_good", "periods", _st)
-		handler["list_"..level_name.."_period_good"]:SetWndPos(vector2():set(121*aspectRatio,21))
-		handler:RegisterPeriodCombo(xml, "weather_dialog", level_name.."_period_bad", "periods", _st)
-		handler["list_"..level_name.."_period_bad"]:SetWndPos(vector2():set(330*aspectRatio,21))
-		handler:RegisterLengthRadio	(xml, level_name.."_period_good_length", _st, 121*aspectRatio, 48)
-		handler:RegisterLengthRadio	(xml, level_name.."_period_bad_length", _st, 330*aspectRatio, 48)
-
+		_el = xml:InitStatic("weather_dialog:text_item", _st)
+		_el:SetWndPos(vector2():set(0,10))
+		local _txt = game.translate_string("st_wthr_" .. weather_tbl[i])
+		_el:TextControl():SetTextST(_txt)
+		
+		_el = xml:InitStatic("weather_dialog:cap_weather_period", _st)
+		_el:SetWndPos(vector2():set(131*aspectRatio,20))
+		_el = xml:InitStatic("weather_dialog:cap_weather_occurrence", _st)
+		_el:SetWndPos(vector2():set(390*aspectRatio,20))
+		_el = xml:InitStatic("weather_dialog:icon_weather_" .. weather_tbl[i], _st)
+		_el:SetWndPos(vector2():set(30*aspectRatio - lil,15))
+		handler:RegisterLengthRadio(xml, "weather_dialog:radio_period_length", "weather_"..weather_tbl[i].."_period", _st, 131*aspectRatio, 48)
+		handler:RegisterLengthRadio(xml, "weather_dialog:radio_occurrence", "weather_"..weather_tbl[i].."_occur", _st, 360*aspectRatio, 48)
+		
 		self.scroll_v:AddWindow(_st, true)
 	end
 
@@ -972,7 +778,6 @@ function af_opt_moon:InitControls(x, y, xml, handler)
 	handler:Register(handler.radio_moon_phase , "radio_moon_phase")
 	handler:RegisterCombo		(xml, "moon_dialog", "night_brightness", nil, self)
 end
-
 --######################################################################################################################
 --#													af_opt_default														#
 --######################################################################################################################

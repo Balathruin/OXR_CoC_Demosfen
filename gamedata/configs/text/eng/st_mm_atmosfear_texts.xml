@@ -261,4 +261,38 @@
 	<string id="st_msg_load_default_settings_done">
 		<text>Default weather, event and moon settings have been restored</text>
 	</string>
+	
+	<string id="st_cap_weather_occurrence">
+		<text>Occurrence</text>
+	</string>
+	<string id="st_cap_weather_period">
+		<text>Period</text>
+	</string>
+	<string id="st_occurrence_rare">
+		<text>Rare</text>
+	</string>
+	<string id="st_occurrence_zero">
+		<text>None</text>
+	</string>
+	<string id="st_occurrence_regular">
+		<text>Regular</text>
+	</string>
+	<string id="st_wthr_clear">
+		<text>Sunny</text>
+	</string>
+	<string id="st_wthr_partly">
+		<text>Partly</text>
+	</string>
+	<string id="st_wthr_cloudy">
+		<text>Cloudy</text>
+	</string>
+	<string id="st_wthr_rain">
+		<text>Rainy</text>
+	</string>
+	<string id="st_wthr_storm">
+		<text>Stormy</text>
+	</string>
+	<string id="st_wthr_foggy">
+		<text>Foggy</text>
+	</string>
 </string_table>

@@ -1,13 +1,11 @@
 <w>
 	<background width="1024" height="768">
-
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new_1</texture>
+			<texture x="0" y="0" width="1920" height="1080">ui\ui_background_new</texture>
 	    </auto_static>
-  </background>
+	</background>
 
-  <main_dialog>
-
+	<main_dialog>
         <dialog x="280" y="200" width="498" height="411" stretch="1">
 	        <texture>ui_inGame2_screen_4</texture>
 		</dialog>
@@ -276,64 +274,34 @@
 	            <d r="70" g="70" b="70"/>
             </text_color>
         </list_psi_storm_task>
-
 	</event_dialog>
 	
 	<weather_dialog>
-        <scroll_v x="32" y="110" width="443" height="261" right_ident="0" left_ident="0" top_indent="0" bottom_indent="0" vert_interval="0" always_show_scroll="1"/>
-
-	<templ_item x="0" y="0" width="417" height="77"/>
-
-        <cap_weather_presets x="32" y="85" width="108" height="20" stretch="1">
-            <text r="170" g="170" b="170" font="letterica16" align="l" vert_align="c">st_cap_weather_presets</text>
-        </cap_weather_presets>
-
-	<cap_weather_balance_presets x="90" y="85" width="40" height="20" stretch="1">
-            <!--text r="170" g="170" b="170" font="letterica16" align="l" vert_align="c">st_cap_weather_balance_presets</text-->
-        </cap_weather_balance_presets>
- 
-	<list_weather_balance_presets x="129" y="85" width="154" height="20" stretch="1">
-            <options_item entry="opt_weather_balance_presets" group="mm_opt_atmosfear"/>
-            <list_font r="170" g="170" b="170" font="letterica16"/>
-            <text_color>
-	            <e r="170" g="170" b="170"/>
-	            <d r="70" g="70" b="70"/>
-            </text_color>
-        </list_weather_balance_presets>
+    	<scroll_v x="32" y="82" width="443" height="289" right_ident="0" left_ident="0" top_indent="0" bottom_indent="0" vert_interval="0" always_show_scroll="1"/>
 	
-        <cap_weather_length_presets x="294" y="85" width="40" height="20" stretch="1">
-            <!--text r="170" g="170" b="170" font="letterica16" align="l" vert_align="c">st_cap_weather_length_presets</text-->
-        </cap_weather_length_presets>
-        <list_weather_length_presets x="296" y="85" width="154" height="20" stretch="1">
-            <options_item entry="opt_weather_balance_presets" group="mm_opt_atmosfear"/>
-            <list_font r="170" g="170" b="170" font="letterica16"/>
-            <text_color>
-	            <e r="170" g="170" b="170"/>
-	            <d r="70" g="70" b="70"/>
-            </text_color>
-        </list_weather_length_presets>
+		<templ_item x="0" y="0" width="417" height="77"/>
+		
+		<text_item x="0" y="0" width="100" height="30"/>
 
         <div_1 x="32" y="110" width="417" height="16" stretch="1">
 	        <texture>ui_inGame2_opt_slider_bar_back</texture>
         </div_1>
 
-        <list_period x="90" y="131" width="154" height="20" stretch="1">
-            <options_item entry="opt_period" group="mm_opt_atmosfear"/>
-            <list_font r="170" g="170" b="170" font="letterica16"/>
-            <text_color>
-	            <e r="170" g="170" b="170"/>
-	            <d r="70" g="70" b="70"/>
-            </text_color>
-        </list_period>
+		<cap_weather_period x="90" y="131" width="154" height="20">
+			<text r="170" g="170" b="170" font="letterica18" align="l" vert_align="c">st_cap_weather_period</text>
+		</cap_weather_period>
+		
+		<cap_weather_occurrence x="265" y="131" width="154" height="20">
+			<text r="170" g="170" b="170" font="letterica18" align="l" vert_align="c">st_cap_weather_occurrence</text>
+		</cap_weather_occurrence>
 
-		<radio_period_length x="90" y="158" width="154" height="26" radio="1" stretch="1">
+		<radio_period_length x="90" y="158" width="154" height="26" radio="1">
 			<options_item entry="opt_zaton_period_good_length" group="mm_opt_atmosfear"/>
 			<button x="-3" y="0" width="16" height="12" id="3" stretch="1">
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_3h</text>
 	            <text_color>
 	                <e r="170" g="170" b="170"/>
 	                <d r="70" g="70" b="70"/>
-
 	            </text_color>
 			</button>
 			<button x="13" y="0" width="16" height="12" id="4" stretch="1">
@@ -342,7 +310,6 @@
 	                <e r="170" g="170" b="170"/>
 	                <d r="70" g="70" b="70"/>
 	            </text_color>
-
 			</button>
 			<button x="29" y="0" width="16" height="12" id="5" stretch="1">
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_5h</text>
@@ -351,7 +318,6 @@
 	                <d r="70" g="70" b="70"/>
 	            </text_color>
 			</button>
-
 			<button x="45" y="0" width="16" height="12" id="6" stretch="1">
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_6h</text>
 	            <text_color>
@@ -360,7 +326,6 @@
 	            </text_color>
 			</button>
 			<button x="61" y="0" width="16" height="12" id="7" stretch="1">
-
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_7h</text>
 	            <text_color>
 	                <e r="170" g="170" b="170"/>
@@ -369,7 +334,6 @@
 			</button>
 			<button x="77" y="0" width="16" height="12" id="8" stretch="1">
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_8h</text>
-
 	            <text_color>
 	                <e r="170" g="170" b="170"/>
 	                <d r="70" g="70" b="70"/>
@@ -378,7 +342,6 @@
 			<button x="93" y="0" width="16" height="12" id="9" stretch="1">
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_9h</text>
 	            <text_color>
-
 	                <e r="170" g="170" b="170"/>
 	                <d r="70" g="70" b="70"/>
 	            </text_color>
@@ -387,7 +350,6 @@
 				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="16" height="20" >st_period_length_10h</text>
 	            <text_color>
 	                <e r="170" g="170" b="170"/>
-
 	                <d r="70" g="70" b="70"/>
 	            </text_color>
 			</button>
@@ -396,7 +358,6 @@
 	            <text_color>
 	                <e r="170" g="170" b="170"/>
 	                <d r="70" g="70" b="70"/>
-
 	            </text_color>
 			</button>
 			<button x="141" y="0" width="16" height="12" id="12" stretch="1">
@@ -405,11 +366,54 @@
 	                <e r="170" g="170" b="170"/>
 	                <d r="70" g="70" b="70"/>
 	            </text_color>
-
 			</button>
 		</radio_period_length>		
-		
 
+		<radio_occurrence x="266" y="158" width="128" height="26" radio="1">
+			<options_item entry="opt_zaton_period_good_length" group="mm_opt_atmosfear"/>
+			<button x="0" y="0" width="16" height="12" id="1" stretch="1">
+				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="40" height="20" >st_occurrence_zero</text>
+	            <text_color>
+	                <e r="170" g="170" b="170"/>
+	                <d r="70" g="70" b="70"/>
+	            </text_color>
+			</button>
+			
+			<button x="48" y="0" width="16" height="12" id="2" stretch="1">
+				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="40" height="20" >st_occurrence_rare</text>
+	            <text_color>
+	                <e r="170" g="170" b="170"/>
+	                <d r="70" g="70" b="70"/>
+	            </text_color>
+			</button>
+			
+			<button x="96" y="0" width="16" height="12" id="3" stretch="1">
+				<text font="arial_14" vert_align="c" x="0" y="10" align="c" width="40" height="20" >st_occurrence_regular</text>
+	            <text_color>
+	                <e r="170" g="170" b="170"/>
+	                <d r="70" g="70" b="70"/>
+	            </text_color>
+			</button>
+		</radio_occurrence>	
+		
+		<icon_weather_clear x="16" y="126" width="93" height="63">
+	        <texture>ui_inGame2_atmosfear_clear</texture>
+		</icon_weather_clear>
+		<icon_weather_partly x="16" y="126" width="93" height="63">
+	        <texture>ui_inGame2_atmosfear_partly</texture>
+		</icon_weather_partly>
+		<icon_weather_cloudy x="16" y="126" width="93" height="63">
+	        <texture>ui_inGame2_atmosfear_cloudy</texture>
+		</icon_weather_cloudy>
+		<icon_weather_rain x="16" y="126" width="93" height="63">
+	        <texture>ui_inGame2_atmosfear_rain</texture>
+		</icon_weather_rain>
+		<icon_weather_storm x="16" y="126" width="93" height="63">
+	        <texture>ui_inGame2_atmosfear_storm</texture>
+		</icon_weather_storm>
+		<icon_weather_foggy x="16" y="126" width="93" height="63">
+	        <texture>ui_inGame2_atmosfear_foggy</texture>
+		</icon_weather_foggy>
 	</weather_dialog>
 	
 	<moon_dialog>
@@ -537,5 +541,4 @@
 
 		</btn_load_default_settings>
 	</defaults_dialog>
-
 </w>
