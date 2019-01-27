@@ -85,17 +85,38 @@ on_init = %+yan_stalker_sakharov_psi_helmet_upgrade%
 on_complete = %=erase_pstor_ctime(yan_stalker_sakharov_psi_helmet_upgrade) -yan_stalker_sakharov_psi_helmet_upgrade%
 
 
-;--------------------------------------------------------------------------------------------------
-; TURN OFF MIRACLE MACHINE TASK-
+;------------------------------------------------
+; Turn Off Miracle Machine Task-
 
 [turn_off_brain_machine]
+
 icon = ui_iconsTotal_yan_kill_brain_task
-prior = 104
-storyline = true
+storyline = false
+prior = 197
+
 title = brain_machine_deactivate_name
 descr = brain_machine_deactivate_text
+
 target = yan_space_restrictor_to_x16
 condlist_0 = {+yan_labx16_switcher_primary_off} complete
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+;------------------------------------------------
+; Turn Off Miracle Machine Task-
+
+[turn_on_brain_machine]
+
+icon = ui_iconsTotal_yan_kill_brain_task
+storyline = false
+prior = 197
+
+title = brain_machine_dialog_name
+descr = brain_machine_dialog_text
+
+target = yan_stalker_sakharov
+;condlist_0 = {+yan_labx16_switcher_primary_off} complete
+
+; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 ;--------------------------------------------------------------------------------------------------
 ; FIND LEVEL 1 TOOLKIT FOR KRUGLOV TASK-

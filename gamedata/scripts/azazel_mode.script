@@ -93,15 +93,15 @@ function actor_on_before_death(whoID,flags)
 		["wpn_knife_spetsnaz"] = true,
 		["wpn_knife_survival"] = true,
 		["wpn_knife_tanto"] = true,
---		["good_psy_helmet"] = true,
---		["bad_psy_helmet"] = true,
---		["main_story_1_quest_case"] = true,
---		["main_story_2_lab_x18_documents"] = true,
---		["main_story_3_lab_x16_documents"] = true,
---		["main_story_4_lab_x10_documents"] = true,
---		["main_story_5_lab_x8_documents"] = true,
---		["main_story_6_jup_ug_documents"] = true,
---		["main_story_7_mon_con_documents"] = true
+		["good_psy_helmet"] = true,
+		["bad_psy_helmet"] = true,
+		["main_story_1_quest_case"] = true,
+		["main_story_2_lab_x18_documents"] = true,
+		["main_story_3_lab_x16_documents"] = true,
+		["main_story_4_lab_x10_documents"] = true,
+		["main_story_5_lab_x8_documents"] = true,
+		["main_story_6_jup_ug_documents"] = true,
+		["main_story_7_mon_con_documents"] = true
 	}
 	
 	axr_companions.remove_all_from_actor_squad()

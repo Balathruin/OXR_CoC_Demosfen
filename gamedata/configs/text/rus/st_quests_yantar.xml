@@ -178,6 +178,14 @@
 	<string id="brain_machine_deactivate_text">
 		<text>Пси-установка своим излучением закрывает проход между Янтарём и Мёртвым Городом. Для её отключения требуются передовые устройства пси-защиты.</text>
 	</string>
+	
+	<string id="brain_machine_dialog_name">
+		<text>Поговорить с Сахаровым по поводу Пси-установки.</text>
+	</string>
+	<string id="brain_machine_dialog_text">
+		<text>Пси-установка своим излучением закрывает проход между Янтарём и Мёртвым Городом. Нужно узнать у учённых, как можно её отключить.</text>
+	</string>
+	
 	<!-- FIND LEVEL 1 TOOLKIT FOR KRUGLOV -->
 	<string id="yan_ecolog_kruglov_task_1_name">
 		<text>Найти Круглову %s</text>

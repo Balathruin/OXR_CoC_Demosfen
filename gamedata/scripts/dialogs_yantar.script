@@ -38,8 +38,7 @@ function give_player_good_psi_helmet(a,b)
 	if (task_info and task_info["yan_stalker_sakharov_psi_helmet_upgrade"]) then
 		task_manager.get_task_manager():set_task_completed("yan_stalker_sakharov_psi_helmet_upgrade")
 	end
-	task_manager.get_task_manager( ):give_task( "turn_off_brain_machine" )
-
+	task_manager.get_task_manager():give_task("turn_off_brain_machine")
 end
 
 function actor_has_psi_helmet(a,b)
@@ -76,4 +75,8 @@ end
 
 function actor_dont_has_good_psi_helmet_task_completed(a,b)
 	return not actor_has_good_psi_helmet_task_completed(a,b)
+end
+
+function turn_on_brain_machine_task_completed(a,b)
+	task_manager.get_task_manager():set_task_completed("turn_on_brain_machine")
 end

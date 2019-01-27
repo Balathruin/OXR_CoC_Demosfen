@@ -28,6 +28,7 @@
             <phrase id="10">
                 <text>yan_stalker_sakharov_npc_query_brain_scorcher</text>
 				<give_info>yan_stalker_sakharov_actor_asked_brain_scorcher</give_info>
+				<action>dialogs_yantar.turn_on_brain_machine_task_completed</action>
             </phrase>
 		</phrase_list>
     </dialog>

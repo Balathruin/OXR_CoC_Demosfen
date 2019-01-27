@@ -158,7 +158,7 @@ local function on_game_load(binder)
 		if (config:r_value("character_creation","new_game_story_mode",1) == true and story_factions[faction] and not has_alife_info("story_mode_disabled")) then
 			task_manager.get_task_manager():give_task("mar_find_doctor_task") -- main quest
 			task_manager.get_task_manager():give_task("turn_off_brain_scorcher") -- brain scorcher quest
-			task_manager.get_task_manager():give_task("turn_off_brain_machine") -- miracle machine quest
+			task_manager.get_task_manager():give_task("turn_on_brain_machine") -- miracle machine quest
 		
 		-- If Azazel mode is choosen, disable story, Drx Questlines and all psi-generators
 		elseif (alife_storage_manager.get_state().enable_azazel_mode) then
@@ -267,6 +267,9 @@ local function on_game_load(binder)
 		--for community,_ in pairs( communities ) do
 		--	relation_registry.set_community_goodwill( community, 0, 0 )
 		--end
+		--хз, верну из оригинала:
+		-- set default goodwill for all factions vs. actor's new faction
+		game_relations.set_community_goodwill_for_faction("actor_"..faction)
 		
 		-- Money
 		local money = config:r_value("character_creation","new_game_money",2)
@@ -299,6 +302,11 @@ local function on_game_load(binder)
 					end
 					sim:create(t[i],db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),0)
 				end
+			end
+			if (axr_main.config:r_value("mm_options","enable_only_campfire",1,false) == true) then
+				sim:create("matches",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),0)
+				sim:create("matches",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),0)
+				sim:create("matches",db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),0)
 			end
 		end
 		for i = 1, #ammo_table do
@@ -1522,11 +1530,11 @@ function faction_ui:UpdateDescr()
 		if not (t[i] == faction) then
 			local v = relation_registry.community_relation("actor_" .. faction, t[i])
 			if (v >= 1000) then
-				str_stats = str_stats .. "%c[0,150,150,150]� %c[0,50,175,50]" .. gs("st_faction_" .. t[i]) .. "\\n"
+				str_stats = str_stats .. "%c[0,150,150,150]• %c[0,50,175,50]" .. gs("st_faction_" .. t[i]) .. "\\n"
 			elseif (v <= -1000) then
-				str_stats = str_stats .. "%c[0,150,150,150]� %c[0,175,50,50]" .. gs("st_faction_" .. t[i]) .. "\\n"
+				str_stats = str_stats .. "%c[0,150,150,150]• %c[0,175,50,50]" .. gs("st_faction_" .. t[i]) .. "\\n"
 			else
-				str_stats = str_stats .. "%c[0,150,150,150]� %c[0,175,175,50]" .. gs("st_faction_" .. t[i]) .. "\\n"
+				str_stats = str_stats .. "%c[0,150,150,150]• %c[0,175,175,50]" .. gs("st_faction_" .. t[i]) .. "\\n"
 			end
 		end
 	end
@@ -1551,10 +1559,10 @@ function faction_ui:UpdateItem (item)
 	self.text_item_descr:SetAutoDelete(false)
 	
 	-- name
-	self.text_item_name:SetText( "%c[0,150,150,50]� %c[0,150,150,150]" .. gs(ini:r_string_ex(item.name,"inv_name") or "") )
-	self.text_item_points:SetText( "%c[0,100,50,200]� %c[0,150,150,150]" .. gs("st_mm_new_game_points") .. ": " .. tostring(item.points) )
+	self.text_item_name:SetText( "%c[0,150,150,50]• %c[0,150,150,150]" .. gs(ini:r_string_ex(item.name,"inv_name") or "") )
+	self.text_item_points:SetText( "%c[0,100,50,200]• %c[0,150,150,150]" .. gs("st_mm_new_game_points") .. ": " .. tostring(item.points) )
 	if (not item.allow) then
-		self.text_item_points:SetText( "%c[0,100,50,200]� %c[0,150,150,150]" .. gs("st_mm_new_game_essential") )
+		self.text_item_points:SetText( "%c[0,100,50,200]• %c[0,150,150,150]" .. gs("st_mm_new_game_essential") )
 	end
 	
 	-- Icon

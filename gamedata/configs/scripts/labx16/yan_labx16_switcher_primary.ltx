@@ -2,9 +2,9 @@
 active = ph_button@init
 
 [ph_button@init]
-anim = lab_primary_switcher_idle
 on_info = {+yan_labx16_switcher_primary_off} ph_idle@nil
-on_info2 = {-yan_labx16_switcher_primary_off} ph_button@active %=turn_off(yan_labx16switcher_primary_1_green) =turn_off(yan_labx16switcher_primary_2_green) =turn_off(yan_labx16switcher_primary_3_green)%
+anim = lab_primary_switcher_idle
+on_timer = 1 | ph_button@active %=turn_off(yan_labx16switcher_primary_1_green) =turn_off(yan_labx16switcher_primary_2_green) =turn_off(yan_labx16switcher_primary_3_green)%
 
 [ph_button@active]
 on_info = {+yan_labx16_switcher_primary_off} ph_idle@nil
@@ -14,6 +14,6 @@ on_press = {+yan_labx16_switcher_1_off +yan_labx16_switcher_2_off +yan_labx16_sw
 
 [ph_button@deactivate]
 anim = lab_primary_switcher_off
-on_info = {-yan_labx16_switcher_primary_off} ph_idle@nil %+yan_labx16_switcher_primary_off +yantar_attack_start =turn_off(yan_labx16switcher_primary_1_green) =turn_off(yan_labx16switcher_primary_2_green) =turn_off(yan_labx16switcher_primary_3_green) =play_sound(switch_2) =play_sound(x16_brain_death) =spawn_object(labx16_zombie_16:x16_zombied_7_walk:0) =spawn_object(labx16_zombie_17:x16_zombied_7_walk:0)%
+on_timer = 500 | ph_idle@nil %+yan_labx16_switcher_primary_off +yantar_attack_start =turn_off(yan_labx16switcher_primary_1_green) =turn_off(yan_labx16switcher_primary_2_green) =turn_off(yan_labx16switcher_primary_3_green) =play_sound(switch_2) =play_sound(x16_brain_death) =spawn_object(labx16_zombie_16:x16_zombied_7_walk:0) =spawn_object(labx16_zombie_17:x16_zombied_7_walk:0)%
 
 [ph_idle@nil]
