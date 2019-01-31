@@ -1,23 +1,10 @@
-X-Ray Engine 1.6 expansion [![Build status](https://ci.appveyor.com/api/projects/status/vxccu3mfu33sp04i?svg=true)](https://ci.appveyor.com/project/Xottab-DUTY/xray-16)
-==========================
+# S.T.A.L.K.E.R. - Call of Chernobyl [Demosfen]
+![Logo](https://pp.userapi.com/c852032/v852032520/955c9/JmaVQNUfNq4.jpg)
 
-This repository contains X-Ray Engine sources based on version 1.6.02.
-The original engine is used in S.T.A.L.K.E.R. Call of Pripyat game released by GSC Game World.
+## Description
+  This repository is OpenXRay[x64] engine fork adapted for CoC 1.5 with some unique features for Demosfen's Mod developed by MNP Team. 
 
-It is a place to share ideas on what to implement, gather people that want to work on the engine,
-and work on the source code.
-
-Changelist is available in [wiki](https://github.com/OpenXRay/xray-16/wiki/Changes).
-
-Build instructions: [doc/howto/build.txt](doc/howto/build.txt)
-
-If you find a bug or have an enhancement request, file an [Issue](https://github.com/openxray/xray-16/issues).
-
-Pull requests appreciated! However, the following things should be taken into consideration:
-* We want to keep the game as close as possible to the vanilla game, so instead of introducing new gameplay features,
-  consider adding non-gameplay features, fixing bugs, improving performance and code quality
-* Major changes should be discussed before implementation
-* Follow the [procedures](doc/procedure)
-
-Be advised that this project is not sanctioned by GSC Game World in any way – and they remain the copyright holders
-of all the original source code.
+Our mod targets russian-speaking players, who tired of hardcore and seeking for light and casual gameplay in 'rush B' style.    
+We are here -> https://vk.com/mnp_team
+## Comrades, who helped us
+(everyone will be listed here later)
