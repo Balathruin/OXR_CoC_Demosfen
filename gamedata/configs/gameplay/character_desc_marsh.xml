@@ -1,4 +1,4 @@
-п»ї<?xml version='1.0' encoding="windows-1251"?>
+<?xml version='1.0' encoding="windows-1251"?>
 <xml>
 
     <specific_character id="mar_smart_terrain_base_doctor" team_default = "1">
@@ -174,7 +174,7 @@
     <icon>ui_inGame2_cold</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>ќпытный сталкер. ?етальна¤ информаци¤ отсутствует.</bio>
+    <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
     <class>mar_smart_terrain_base_stalker_leader_marsh</class>
     <community>csky</community>
     <terrain_sect>stalker_terrain</terrain_sect>
