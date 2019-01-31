@@ -97,6 +97,31 @@ void CUIActorMenu::InitPartnerInventoryContents()
     m_trade_partner_inventory_state = m_pPartnerInvOwner->inventory().ModifyFrame();
 }
 
+void CUIActorMenu::RefreshDeadBodyInventoryContents() //Debrovski
+{
+    m_pDeadBodyBagList->ClearAll(true);
+
+    TIItemContainer items_list;
+    if (m_pPartnerInvOwner)
+    {
+        m_pPartnerInvOwner->inventory().AddAvailableItems(items_list, false, m_pPartnerInvOwner->is_alive()); // true
+        UpdatePartnerBag();
+    }
+    else
+    {
+        VERIFY(m_pInvBox);
+        m_pInvBox->set_in_use(true);
+        m_pInvBox->AddAvailableItems(items_list);
+    }
+
+    std::sort(items_list.begin(), items_list.end(), InventoryUtilities::GreaterRoomInRuck);
+    for (const auto& item:items_list)
+    {
+        CUICellItem* itm = create_cell_item(item);
+        m_pDeadBodyBagList->SetItem(itm);
+    }
+}
+
 void CUIActorMenu::ColorizeItem(CUICellItem* itm, bool colorize)
 {
     if (colorize)

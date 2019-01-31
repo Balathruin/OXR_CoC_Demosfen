@@ -315,6 +315,7 @@ protected:
 
     // trade
     void InitPartnerInventoryContents();
+    void RefreshDeadBodyInventoryContents(); //Debrovski
     void ColorizeItem(CUICellItem* itm, bool colorize);
     float CalcItemsWeight(CUIDragDropListEx* pList);
     u32 CalcItemsPrice(CUIDragDropListEx* pList, CTrade* pTrade, bool bBuying);

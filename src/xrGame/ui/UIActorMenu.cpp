@@ -211,6 +211,10 @@ void CUIActorMenu::Update()
     }
     case mmDeadBodySearch:
     {
+        //Debrovski: dead bodies can be looted by others, when we loot them by ourselfs.
+        //...so we should show changes in inventory
+        if (m_pPartnerInvOwner->inventory().ModifyFrame() != m_trade_partner_inventory_state)
+            RefreshDeadBodyInventoryContents();
         // Alundaio: remove distance check when opening inventory boxes
         //CheckDistance(); 
         break;
