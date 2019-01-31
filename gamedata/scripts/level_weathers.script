@@ -385,7 +385,7 @@ function WeatherManager:get_next_weather_cycle(curr_weather)
 	for i=1,#weather_tbl do
 		if (weather_tbl[i] ~= curr_weather) then
 			local val = atmosfear_options.config:r_value("atmosfear_current_parameters","opt_weather_" .. weather_tbl[i] .. "_occur",2,3)
-			if (tonumber(val) > 2.5) and (weather_table_num[weather_tbl[i]] < 2) then
+			if (tonumber(val) > 2.5) and (weather_table_num[weather_tbl[i]] < 4) then
 				avail_weather[#avail_weather + 1] = weather_tbl[i]
 			elseif (tonumber(val) > 1.5) and (weather_table_num[weather_tbl[i]] < 1) then
 				avail_weather[#avail_weather + 1] = weather_tbl[i]
