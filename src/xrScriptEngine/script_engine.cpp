@@ -72,29 +72,29 @@ static void* __cdecl luabind_allocator(void* context, const void* pointer, size_
 
 namespace
 {
-void LuaJITLogError(lua_State* ls, const char* msg)
-{
-    const char* info = nullptr;
-    if (!lua_isnil(ls, -1))
+    void LuaJITLogError(lua_State* ls, const char* msg)
     {
-        info = lua_tostring(ls, -1);
-        lua_pop(ls, 1);
+        const char* info = nullptr;
+        if (!lua_isnil(ls, -1))
+        {
+            info = lua_tostring(ls, -1);
+            lua_pop(ls, 1);
+        }
+        Msg("! LuaJIT: %s (%s)", msg, info ? info : "no info");
     }
-    Msg("! LuaJIT: %s (%s)", msg, info ? info : "no info");
-}
-// tries to execute 'jit'+command
-bool RunJITCommand(lua_State* ls, const char* command)
-{
-    string128 buf;
-    xr_strcpy(buf, "jit.");
-    xr_strcat(buf, command);
-    if (luaL_dostring(ls, buf))
+    // tries to execute 'jit'+command
+    bool RunJITCommand(lua_State* ls, const char* command)
     {
-        LuaJITLogError(ls, "Unrecognized command");
-        return false;
+        string128 buf;
+        xr_strcpy(buf, "jit.");
+        xr_strcat(buf, command);
+        if (luaL_dostring(ls, buf))
+        {
+            LuaJITLogError(ls, "Unrecognized command");
+            return false;
+        }
+        return true;
     }
-    return true;
-}
 }
 
 const char* const CScriptEngine::GlobalNamespace = SCRIPT_GLOBAL_NAMESPACE;
@@ -194,7 +194,7 @@ void CScriptEngine::print_stack(lua_State* L)
 
     if (L == nullptr)
         L = lua();
-    
+
 
     Log("\nLua Stack");
     lua_Debug l_tDebugInfo;
@@ -245,10 +245,11 @@ void CScriptEngine::LogTable(lua_State* luaState, pcstr S, int level)
     {
         char sname[256];
         char sFullName[256];
-        xr_sprintf(sname, "%s", lua_tostring(luaState, -2));
-        xr_sprintf(sFullName, "%s.%s", S, sname);
+        lua_pushvalue(luaState, -2); //Debrovski: we should push clone of the key on top of stack
+        xr_sprintf(sname, "%s", lua_tostring(luaState, -1)); //...and execute lua_tostring on this clone, not original key
+        xr_sprintf(sFullName, "%s.%s", S, sname);            //..coz executing lua_tostring on original key(if not string) confuses lua_next
+        lua_pop(luaState, 1);
         LogVariable(luaState, sFullName, level + 1);
-
         lua_pop(luaState, 1); /* removes `value'; keeps `key' for next iteration */
     }
 }
@@ -259,7 +260,7 @@ void CScriptEngine::LogVariable(lua_State* luaState, pcstr name, int level)
     const int ntype = lua_type(luaState, -1);
     const pcstr type = lua_typename(luaState, ntype);
 
-    char tabBuffer[32] = {0};
+    char tabBuffer[32] = { 0 };
     memset(tabBuffer, '\t', level);
 
     char value[128];
@@ -292,13 +293,12 @@ void CScriptEngine::LogVariable(lua_State* luaState, pcstr name, int level)
 
     case LUA_TTABLE:
     {
-        //if (level <= 3)
-        //{
-        //    Msg("%s Table: %s", tabBuffer, name);
-        //    LogTable(luaState, name, level + 1);
-        //    return;
-        //}
-        xr_sprintf(value, "[...] @Debrovski: table output is need to be repaired!");
+        if (level <= 3)
+        {
+            Msg("%s Table: %s", tabBuffer, name);
+            LogTable(luaState, name, level + 1);
+            return;
+        }
         break;
     }
 
@@ -382,7 +382,7 @@ bool CScriptEngine::parse_namespace(LPCSTR caNamespaceName, LPSTR b, u32 b_size,
 }
 
 bool CScriptEngine::load_buffer(
-lua_State* L, LPCSTR caBuffer, size_t tSize, LPCSTR caScriptName, LPCSTR caNameSpaceName)
+    lua_State* L, LPCSTR caBuffer, size_t tSize, LPCSTR caScriptName, LPCSTR caNameSpaceName)
 {
     int l_iErrorCode;
     if (caNameSpaceName && xr_strcmp(GlobalNamespace, caNameSpaceName))
@@ -748,11 +748,11 @@ void CScriptEngine::initialize_lua_studio(lua_State* state, cs::lua_studio::worl
         return;
     }
 
-    s_create_world = 
+    s_create_world =
         (create_world_function_type)s_script_debugger_module->GetProcAddress("_cs_lua_studio_backend_create_world@12");
     R_ASSERT2(s_create_world, "can't find function \"cs_lua_studio_backend_create_world\"");
 
-    s_destroy_world = 
+    s_destroy_world =
         (destroy_world_function_type)s_script_debugger_module->GetProcAddress("_cs_lua_studio_backend_destroy_world@4");
     R_ASSERT2(s_destroy_world, "can't find function \"cs_lua_studio_backend_destroy_world\" in the library");
 
@@ -1232,7 +1232,7 @@ bool CScriptEngine::RegisterState(lua_State* state, CScriptEngine* scriptEngine)
     auto it = stateMap.find(state);
     if (it == stateMap.end())
     {
-        stateMap.insert({state, scriptEngine});
+        stateMap.insert({ state, scriptEngine });
         result = true;
     }
     stateMapLock.Leave();
