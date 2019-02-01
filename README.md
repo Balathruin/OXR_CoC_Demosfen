@@ -11,5 +11,6 @@ We are here -> https://vk.com/mnp_team
  1. git clone https://github.com/Roman-n/OXR_CoC_Demosfen.git
  2. git submodule init
  3. git submodule update
+ 4. create "build\lib\Win64\Release_COC\stripped" folder
 ## Comrades, who helped us
 (everyone will be listed here later)
