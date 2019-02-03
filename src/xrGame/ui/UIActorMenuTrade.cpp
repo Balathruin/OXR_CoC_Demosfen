@@ -120,6 +120,7 @@ void CUIActorMenu::RefreshDeadBodyInventoryContents() //Debrovski
         CUICellItem* itm = create_cell_item(item);
         m_pDeadBodyBagList->SetItem(itm);
     }
+    m_trade_partner_inventory_state = m_pPartnerInvOwner->inventory().ModifyFrame();
 }
 
 void CUIActorMenu::ColorizeItem(CUICellItem* itm, bool colorize)
