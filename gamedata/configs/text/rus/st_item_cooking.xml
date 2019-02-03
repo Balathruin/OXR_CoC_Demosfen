@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="windows-1251" ?>
-<string_table>
-	<string id="st_try_to_cook">
-		<text>готовить</text>
-	</string>
-	<string id="st_add_cooking_fuel">
-		<text>добавить топливо</text>
-	</string>
-</string_table>
