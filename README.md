@@ -1,16 +1,13 @@
-# S.T.A.L.K.E.R. - Call of Chernobyl [Demosfen]
-![Logo](https://pp.userapi.com/c852032/v852032520/955c9/JmaVQNUfNq4.jpg)
+# S.T.A.L.K.E.R. - Call of Chernobyl
 
 ## Description
-  This repository is OpenXRay[x64] engine fork adapted for CoC 1.5 with some unique features for Demosfen's Mod developed by MNP Team. 
-  
-Our mod targets russian-speaking players, who tired of hardcore and seeking for light and casual gameplay in 'rush B' style.    
-We are here -> https://vk.com/mnp_team
+  This repository is OpenXRay[x64] engine fork adapted for CoC 1.5.
 
-## How to set up?
- 1. git clone https://github.com/Roman-n/OXR_CoC_Demosfen.git
+## Build Instructions
+See [build.txt](https://github.com/Balathruin/OXR_CoC_Demosfen/blob/master/doc/howto/build.txt) first.
+
+ 1. git clone https://github.com/Balathruin/OXR_CoC_Demosfen.git
  2. git submodule init
  3. git submodule update
- 4. create "build\bin\Win64\Release_COC\stripped" folder
-## Comrades, who helped us
-(everyone will be listed here later)
+ 4. Change configuration to Release_COC.
+ 5. Create "\_build\bin\Win64\Release_COC\stripped" folder before building.
