@@ -233,7 +233,6 @@ public:
     u8 m_bZoom;
     u32 m_ef_main_weapon_type;
     u32 m_ef_weapon_type;
-    shared_str m_cur_scope;
 
     CSE_ALifeItemWeapon(LPCSTR caSection);
     virtual ~CSE_ALifeItemWeapon();

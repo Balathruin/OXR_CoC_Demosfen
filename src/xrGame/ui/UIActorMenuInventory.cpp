@@ -1045,11 +1045,6 @@ void CUIActorMenu::PropertiesBoxForWeapon(CUICellItem* cell_item, PIItem item, b
         else
         {
         }
-	}
-    else if(pWeapon->GetCurrentScope() != "none")
-    {
-        m_UIPropertiesBox->AddItem("st_detach_scope", NULL, INVENTORY_DETACH_SCOPE_ADDON);
-        b_show = true;
     }
     if (pWeapon->SilencerAttachable())
     {
@@ -1294,7 +1289,7 @@ void CUIActorMenu::ProcessPropertiesBoxClicked(CUIWindow* w, void* d)
         return;
     }
     CWeapon* weapon = smart_cast<CWeapon*>(item);
-    CScope* scope = smart_cast<CScope*>(item);
+
     switch (m_UIPropertiesBox->GetClickedItem()->GetTAG())
     {
     case INVENTORY_TO_SLOT_ACTION: ToSlot(cell_item, true, item->BaseSlot()); break;
@@ -1378,12 +1373,6 @@ void CUIActorMenu::ProcessPropertiesBoxClicked(CUIWindow* w, void* d)
     case INVENTORY_ATTACH_ADDON:
     {
         PIItem item = CurrentIItem(); // temporary storing because of AttachAddon is setting curiitem to NULL
-        if (scope)
-        {
-            CWeapon* weapon_ = smart_cast<CWeapon*>((PIItem)(m_UIPropertiesBox->GetClickedItem()->GetData()));
-            if (weapon_ && weapon_->GetCurrentScope() != "none")
-                DetachAddon(weapon_->GetCurrentScope().c_str());
-        }
         AttachAddon((PIItem)(m_UIPropertiesBox->GetClickedItem()->GetData()));
         if (m_currMenuMode == mmDeadBodySearch)
             RemoveItemFromList(m_pDeadBodyBagList, item);
@@ -1391,21 +1380,7 @@ void CUIActorMenu::ProcessPropertiesBoxClicked(CUIWindow* w, void* d)
         break;
     }
     case INVENTORY_DETACH_SCOPE_ADDON:
-        if (weapon && weapon->GetCurrentScope() != "none")
-        {
-           DetachAddon(weapon->GetCurrentScope().c_str());
-           for (u32 i = 0; i < cell_item->ChildsCount(); ++i)
-            {
-                CUICellItem* child_itm = cell_item->Child(i);
-                PIItem child_iitm = (PIItem)(child_itm->m_pData);
-                CWeapon* wpn = smart_cast<CWeapon*>(child_iitm);
-                if (child_iitm && wpn)
-                {
-                    DetachAddon(weapon->GetCurrentScope().c_str(), child_iitm);
-                }
-            }
-        }
-        else
+        if (weapon)
         {
             DetachAddon(weapon->GetScopeName().c_str());
             for (u32 i = 0; i < cell_item->ChildsCount(); ++i)

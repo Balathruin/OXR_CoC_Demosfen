@@ -175,7 +175,7 @@ void HUD_SOUND_COLLECTION::StopAllSounds()
 
 void HUD_SOUND_COLLECTION::LoadSound(LPCSTR section, LPCSTR line, LPCSTR alias, bool exclusive, int type)
 {
-    R_ASSERT3(NULL == FindSoundItem(alias, false), "This sound is already loaded!", alias);
+    R_ASSERT(NULL == FindSoundItem(alias, false));
     m_sound_items.resize(m_sound_items.size() + 1);
     HUD_SOUND_ITEM& snd_item = m_sound_items.back();
     HUD_SOUND_ITEM::LoadSound(section, line, snd_item, type);

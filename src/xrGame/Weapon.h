@@ -41,18 +41,6 @@ public:
     virtual void net_Export(NET_Packet& P);
     virtual void net_Import(NET_Packet& P);
 
-    // Mortan: поля предназначены для альтернативной схемы прицелов.
-    //При использовании старая схема больше не будет работать!!!
-    shared_str CurrentScope;
-    // TODO: убрать поле из общедоступных в приват
-    shared_str GetCurrentScope() { return CurrentScope; }
-    void SetCurrentScope(shared_str value);
-    xr_vector<shared_str> m_scopesTypes;
-    shared_str m_parentSection;
-    void AddScopePerm(shared_str section);
-    bool InstallScope(LPCSTR section);
-    //Всё для фронта, всё для Дороги!)
-
     virtual CWeapon* cast_weapon() { return this; }
     virtual CWeaponMagazined* cast_weapon_magazined() { return 0; }
     // serialization
@@ -169,9 +157,6 @@ public:
     virtual void InitAddons();
 
     //для отоброажения иконок апгрейдов в интерфейсе
-    int GetScope_X() { return m_iScopeX; }
-    int GetScope_Y() { return m_iScopeY; }
-
     int GetScopeX() { return pSettings->r_s32(m_scopes[m_cur_addon.scope], "scope_x"); }
     int GetScopeY() { return pSettings->r_s32(m_scopes[m_cur_addon.scope], "scope_y"); }
     int GetSilencerX() { return pSettings->r_s32(m_silencers[m_cur_addon.silencer], "silencer_x"); }
@@ -211,8 +196,6 @@ protected:
             };
         };
     };
-    //смещение иконов апгрейдов в инвентаре
-    int m_iScopeX, m_iScopeY;
 
 public:
     current_addon_t m_cur_addon;
