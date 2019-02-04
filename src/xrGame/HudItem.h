@@ -80,7 +80,7 @@ protected:
     };
 
 public:
-    virtual void Load(LPCSTR section, bool updateSndBoreAlso=true);
+    virtual void Load(LPCSTR section);
     virtual BOOL net_Spawn(CSE_Abstract* DC) { return TRUE; };
     virtual void net_Destroy(){};
     virtual void OnEvent(NET_Packet& P, u16 type);

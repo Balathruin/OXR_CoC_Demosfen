@@ -58,16 +58,12 @@ IFactoryObject* CHudItem::_construct()
 }
 
 CHudItem::~CHudItem() {}
-void CHudItem::Load(LPCSTR section, bool updateSndBoreAlso)
+void CHudItem::Load(LPCSTR section)
 {
     hud_sect = pSettings->r_string(section, "hud");
     m_animation_slot = pSettings->r_u32(section, "animation_slot");
 
-    if (updateSndBoreAlso)
-    {
-        m_sounds.LoadSound(section, "snd_bore", "sndBore", true);
-    }
-   
+    m_sounds.LoadSound(section, "snd_bore", "sndBore", true);
 
 	m_inertion_params.m_pitch_offset_r = READ_IF_EXISTS(pSettings, r_float, section, "pitch_offset_right", PITCH_OFFSET_R);
 	m_inertion_params.m_pitch_offset_n = READ_IF_EXISTS(pSettings, r_float, section, "pitch_offset_up", PITCH_OFFSET_N);
