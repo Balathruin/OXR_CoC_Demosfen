@@ -89,7 +89,7 @@ const xr_token qminmax_sm_token[] = {
     {nullptr, 0}
 };
 
-u32 ps_r2_smap_size = 1536; // 1536 - default
+u32 ps_r2_smap_size = 2048; // 1536 - default
 const xr_token qsmap_size_token[] = {
     { "512x512", 512 },
     { "1024x1024", 1024 },
@@ -755,10 +755,10 @@ void xrRender_initconsole()
 
     Fvector tw_min, tw_max;
 
-    CMD4(CCC_Float, "r__geometry_lod", &ps_r__LOD, 0.1f, 3.f); //AVO: extended from 1.2f to 3.f
+    CMD4(CCC_Float, "r__geometry_lod", &ps_r__LOD, 0.1f, 3.f); // AVO: extended from 1.2f to 3.f
     //CMD4(CCC_Float, "r__geometry_lod_pow", &ps_r__LOD_Power, 0, 2);
 
-    CMD4(CCC_Float, "r__detail_density", &ps_current_detail_density, 0.3f, 1.0f); //AVO: extended from 0.2f to 0.04f and replaced variable
+    CMD4(CCC_Float, "r__detail_density", &ps_current_detail_density, 0.15f, 1.0f);
     CMD4(CCC_Float, "r__detail_scale", &ps_current_detail_scale, 0.2f, 3.0f);
 
 #ifdef DEBUG
@@ -949,7 +949,7 @@ void xrRender_initconsole()
 
     CMD4(CCC_Integer, "r__clear_models_on_unload", &ps_clear_models_on_unload, 0, 1); //Alundaio
     CMD4(CCC_Integer, "r__use_precompiled_shaders", &ps_use_precompiled_shaders, 0, 1); //Alundaio
-    CMD4(CCC_Integer, "r__enable_grass_shadow", &ps_grass_shadow, 0, 1); //Alundaio
+    //CMD4(CCC_Integer, "r__enable_grass_shadow", &ps_grass_shadow, 0, 1); //Alundaio
     CMD4(CCC_Integer, "r__no_scale_on_fade", &ps_no_scale_on_fade, 0, 1); //Alundaio
 
 //  Allow real-time fog config reload

@@ -104,7 +104,7 @@ ENGINE_API extern float g_console_sensitive;
 //Alundaio
 extern BOOL g_ai_die_in_anomaly;
 extern BOOL g_invert_zoom;
-int g_inv_highlight_equipped = 0;
+int g_inv_highlight_equipped = 1;
 //-Alundaio
 
 #ifdef COC_EDITION
@@ -176,7 +176,7 @@ static void full_memory_stats()
         memCounters.PagefileUsage / (1024 * 1024), memCounters.PeakPagefileUsage / (1024 * 1024));
 
     Log("--------------------------------------------------------------------------------");
-	Log("# <<OXR CoC 1.5 R7 Engine x64>> from MNP_TEAM, for assembly Demosfen");
+	Log("# <<OXR CoC 1.5 R7 Engine x64>> from MNP_TEAM");
     Log("--------------------------------------------------------------------------------");
 }
 

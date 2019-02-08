@@ -688,13 +688,17 @@ BOOL CAI_Stalker::net_Spawn(CSE_Abstract* DC)
     static float novice_rank_dispersion = pSettings->r_float("ranks_properties", "dispersion_novice_k");
     static float expirienced_rank_dispersion = pSettings->r_float("ranks_properties", "dispersion_experienced_k");
 
-    CHARACTER_RANK_VALUE rank = Rank();
+    static float rank_factor = pSettings->r_float("ranks_properties", "rank_k");
+
+    CHARACTER_RANK_VALUE rank = Rank() * rank_factor;
     clamp(rank, 0, 100);
     float rank_k = float(rank) / 100.f;
-    m_fRankImmunity = novice_rank_immunity + (expirienced_rank_immunity - novice_rank_immunity) * rank_k;
-    m_fRankVisibility = novice_rank_visibility + (expirienced_rank_visibility - novice_rank_visibility) * rank_k;
+    m_fRankImmunity =
+        1; // novice_rank_immunity + (expirienced_rank_immunity - novice_rank_immunity) * (1.01f - rank_k);
+    m_fRankVisibility =
+        1; // novice_rank_visibility + (expirienced_rank_visibility - novice_rank_visibility) * (1.01f - rank_k);
     m_fRankDisperison =
-        expirienced_rank_dispersion + (novice_rank_dispersion - expirienced_rank_dispersion) * (1 - rank_k);
+        expirienced_rank_dispersion + (novice_rank_dispersion - expirienced_rank_dispersion) * (1.01f - rank_k);
 
     if (!fis_zero(SpecificCharacter().panic_threshold()))
         m_panic_threshold = SpecificCharacter().panic_threshold();
