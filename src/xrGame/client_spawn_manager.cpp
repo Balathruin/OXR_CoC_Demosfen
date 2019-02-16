@@ -75,9 +75,12 @@ void CClientSpawnManager::remove(
     REQUESTED_REGISTRY::iterator I = registry.find(requested_id);
     if (I == registry.end())
     {
-        const auto& requestedName  = g_ai_space->alife().objects().object(requested_id )->name_replace();
+        const auto* requestedObject  = g_ai_space->alife().objects().object(requested_id);
 
-        Msg("! There is no spawn callback on object id [%d] from object [%s]", requesting_id, requestedName);
+        Msg("! There is no spawn callback on object id [%d] from object [%d][%s]", 
+            requesting_id,
+            requested_id,
+            requestedObject ? requestedObject->name_replace() : "none");
         return;
     }
 
@@ -90,9 +93,11 @@ void CClientSpawnManager::remove(ALife::_OBJECT_ID requesting_id, ALife::_OBJECT
     if (I == m_registry.end())
     {
 
-        const auto& requestedName = g_ai_space->alife().objects().object(requested_id)->name_replace();
-
-        Msg("! There is no spawn callback on object id [%d] from object [%s]", requesting_id, requestedName);
+        const auto* requestedObject = g_ai_space->alife().objects().object(requested_id);
+        Msg("! There is no spawn callback on object id [%d] from object [%d][%s]",
+            requesting_id,
+            requested_id,
+            requestedObject ? requestedObject->name_replace() : "none");
         return;
     }
 
