@@ -9734,6 +9734,7 @@
     <ClCompile Include="CarWeapon3.cpp" />
     <ClCompile Include="CarWeapon4.cpp" />
     <ClCompile Include="CarWeapon5.cpp" />
+    <ClCompile Include="DumpLuaBindUserdata.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ai\monsters\chimera\chimera_attack_state.h">

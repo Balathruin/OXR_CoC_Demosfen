@@ -180,6 +180,7 @@ class CScriptGameObject
     CScriptGameObject(CScriptGameObject const& game_object);
 
 public:
+    constexpr static char* luabindNAME="game_object";
     CScriptGameObject(CGameObject* tpGameObject);
     virtual ~CScriptGameObject();
     operator IGameObject*();

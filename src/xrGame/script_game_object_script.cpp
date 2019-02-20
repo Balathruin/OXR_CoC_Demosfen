@@ -24,7 +24,7 @@ SCRIPT_EXPORT(CScriptGameObject, (), {
     class EnumCallbackType
     {
     };
-    class_<CScriptGameObject> instance("game_object");
+    class_<CScriptGameObject> instance(CScriptGameObject::luabindNAME);
 
     module(
         luaState)[class_<CSightParams>("CSightParams")

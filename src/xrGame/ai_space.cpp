@@ -129,6 +129,11 @@ void CAI_Space::SetupScriptEngine()
     RegisterScriptClasses();
     object_factory().register_script();
     LoadCommonScripts();
+  
+    //////Debrovski: defined in DumpLuaBindUserdata.cpp/////
+    extern shared_str DumpLuaBindUserdata(const luabind::detail::object_rep* object);
+    ////////////////////////////////////////////////////////
+    GEnv.ScriptEngine->SetUserdataObjectLoggerFunc(DumpLuaBindUserdata);
 }
 
 void CAI_Space::load(LPCSTR level_name)

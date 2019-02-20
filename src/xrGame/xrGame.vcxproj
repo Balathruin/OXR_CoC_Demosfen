@@ -2457,6 +2457,7 @@
     </ClCompile>
     <ClCompile Include="doors_manager.cpp" />
     <ClCompile Include="DummyArtifact.cpp" />
+    <ClCompile Include="DumpLuaBindUserdata.cpp" />
     <ClCompile Include="DynamicHeightMap.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>

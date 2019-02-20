@@ -263,7 +263,7 @@ void CScriptEngine::LogVariable(lua_State* luaState, pcstr name, int level)
     char tabBuffer[32] = { 0 };
     memset(tabBuffer, '\t', level);
 
-    char value[128];
+    string512 value;
 
     switch (ntype)
     {
@@ -320,9 +320,14 @@ void CScriptEngine::LogVariable(lua_State* luaState, pcstr name, int level)
             break;
         }
 
+
+
         pcstr className = rep->name();
         if (className)
-            xr_sprintf(value, "'%s'", className);
+        {
+            xr_sprintf(value, "'%s' -> %s", className, m_userdataObjectLoggerFunc(object).c_str());
+        }
+
 
         break;
     }
@@ -1325,4 +1330,10 @@ void CScriptEngine::DestroyScriptThread(const CScriptThread* thread)
 bool CScriptEngine::is_editor()
 {
     return m_is_editor;
+}
+
+
+void CScriptEngine::SetUserdataObjectLoggerFunc(decltype(m_userdataObjectLoggerFunc) in_func)
+{
+    m_userdataObjectLoggerFunc = in_func;
 }
