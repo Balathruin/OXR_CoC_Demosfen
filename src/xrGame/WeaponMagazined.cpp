@@ -766,15 +766,7 @@ void CWeaponMagazined::switch2_Fire()
 void CWeaponMagazined::switch2_Empty()
 {
     OnZoomOut();
-
-    if (!TryReload())
-    {
-        OnEmptyClick();
-    }
-    else
-    {
-        inherited::FireEnd();
-    }
+    OnEmptyClick();
 }
 void CWeaponMagazined::PlayReloadSound()
 {
