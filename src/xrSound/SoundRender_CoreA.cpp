@@ -6,10 +6,11 @@
 
 CSoundRender_CoreA* SoundRenderA = nullptr;
 
-CSoundRender_CoreA::CSoundRender_CoreA() : CSoundRender_Core()
+CSoundRender_CoreA::CSoundRender_CoreA(ALDeviceList* deviceList) : CSoundRender_Core()
 {
+    pDeviceList = deviceList;
+
     pDevice = nullptr;
-    pDeviceList = nullptr;
     pContext = nullptr;
     eaxSet = nullptr;
     eaxGet = nullptr;
@@ -71,18 +72,15 @@ bool CSoundRender_CoreA::EAXTestSupport(bool isDeferred)
 void CSoundRender_CoreA::_restart() { inherited::_restart(); }
 void CSoundRender_CoreA::_initialize()
 {
-    pDeviceList = new ALDeviceList();
-
     if (0 == pDeviceList->GetNumDevices())
     {
         CHECK_OR_EXIT(0, 
             "OpenAL: Can't create sound device.\n"
-            "Òû óñòàíîâèë OpenAL?\n"
-            "Óñòàíîâùèê íàõîäèòñÿ â /soft/oalinst.exe\n"
+            "Ã’Ã» Ã³Ã±Ã²Ã Ã­Ã®Ã¢Ã¨Ã« OpenAL?\n"
+            "Ã“Ã±Ã²Ã Ã­Ã®Ã¢Ã¹Ã¨Ãª Ã­Ã ÃµÃ®Ã¤Ã¨Ã²Ã±Ã¿ Ã¢ /soft/oalinst.exe\n"
             "Have you got OpenAL installed?\n"
             "The installer is located in /soft/oalinst.exe"
         );
-        xr_delete(pDeviceList);
     }
     pDeviceList->SelectBestDevice();
     R_ASSERT(snd_device_id >= 0 && snd_device_id < pDeviceList->GetNumDevices());
@@ -193,7 +191,6 @@ void CSoundRender_CoreA::_clear()
     pContext = nullptr;
     alcCloseDevice(pDevice);
     pDevice = nullptr;
-    xr_delete(pDeviceList);
 }
 
 void CSoundRender_CoreA::i_eax_set(const GUID* guid, u32 prop, void* val, u32 sz) { eaxSet(guid, prop, 0, val, sz); }
