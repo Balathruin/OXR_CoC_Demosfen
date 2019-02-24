@@ -454,11 +454,23 @@ public:
     bool SwitchAmmoType(u32 flags);
 
     virtual float Get_PDM_Base() const { return m_pdm.m_fPDM_disp_base; };
+    virtual float Get_Silencer_PDM_Base() const { return cur_silencer_koef.pdm_base; };
+    virtual float Get_Scope_PDM_Base() const { return cur_scope_koef.pdm_base; };
+    virtual float Get_Launcher_PDM_Base() const { return cur_launcher_koef.pdm_base; };
     virtual float Get_PDM_Vel_F() const { return m_pdm.m_fPDM_disp_vel_factor; };
+    virtual float Get_Silencer_PDM_Vel() const { return cur_silencer_koef.pdm_vel; };
+    virtual float Get_Scope_PDM_Vel() const { return cur_scope_koef.pdm_vel; };
+    virtual float Get_Launcher_PDM_Vel() const { return cur_launcher_koef.pdm_vel; };
     virtual float Get_PDM_Accel_F() const { return m_pdm.m_fPDM_disp_accel_factor; };
+    virtual float Get_Silencer_PDM_Accel() const { return cur_silencer_koef.pdm_accel; };
+    virtual float Get_Scope_PDM_Accel() const { return cur_scope_koef.pdm_accel; };
+    virtual float Get_Launcher_PDM_Accel() const { return cur_launcher_koef.pdm_accel; };
     virtual float Get_PDM_Crouch() const { return m_pdm.m_fPDM_disp_crouch; };
     virtual float Get_PDM_Crouch_NA() const { return m_pdm.m_fPDM_disp_crouch_no_acc; };
     virtual float GetCrosshairInertion() const { return m_crosshair_inertion; };
+    virtual float Get_Silencer_CrosshairInertion() const { return cur_silencer_koef.crosshair_inertion; };
+    virtual float Get_Scope_CrosshairInertion() const { return cur_scope_koef.crosshair_inertion; };
+    virtual float Get_Launcher_CrosshairInertion() const { return cur_launcher_koef.crosshair_inertion; };
     float GetFirstBulletDisp() const { return m_first_bullet_controller.get_fire_dispertion(); };
 protected:
 

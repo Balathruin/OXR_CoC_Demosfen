@@ -31,22 +31,26 @@ float CActor::GetWeaponAccuracy() const
     {
         return m_fDispAim;
     }
-    float dispersion = m_fDispBase * GetWeaponParam(W, Get_PDM_Base(), 1.0f);
+    float dispersion = m_fDispBase * GetWeaponParam(W, Get_PDM_Base(), 1.0f) *
+        GetWeaponParam(W, Get_Silencer_PDM_Base(), 1.0f) * GetWeaponParam(W, Get_Scope_PDM_Base(), 1.0f) * GetWeaponParam(W, Get_Launcher_PDM_Base(), 1.0f);
 
     CEntity::SEntityState state;
     if (g_State(state))
     {
         // fAVelocity = angle velocity
         dispersion *=
-            (1.0f + (state.fAVelocity / VEL_A_MAX) * m_fDispVelFactor * GetWeaponParam(W, Get_PDM_Vel_F(), 1.0f));
+            (1.0f + (state.fAVelocity / VEL_A_MAX) * m_fDispVelFactor * GetWeaponParam(W, Get_PDM_Vel_F(), 1.0f) *
+            GetWeaponParam(W, Get_Silencer_PDM_Vel(), 1.0f) * GetWeaponParam(W, Get_Scope_PDM_Vel(), 1.0f) * GetWeaponParam(W, Get_Launcher_PDM_Vel(), 1.0f));
         // fVelocity = linear velocity
         dispersion *=
-            (1.0f + (state.fVelocity / VEL_MAX) * m_fDispVelFactor * GetWeaponParam(W, Get_PDM_Vel_F(), 1.0f));
+            (1.0f + (state.fVelocity / VEL_MAX) * m_fDispVelFactor * GetWeaponParam(W, Get_PDM_Vel_F(), 1.0f) *
+            GetWeaponParam(W, Get_Silencer_PDM_Vel(), 1.0f) * GetWeaponParam(W, Get_Scope_PDM_Vel(), 1.0f) * GetWeaponParam(W, Get_Launcher_PDM_Vel(), 1.0f));
 
         bool bAccelerated = isActorAccelerated(mstate_real, IsZoomAimingMode());
         if (bAccelerated || !state.bCrouch)
         {
-            dispersion *= (1.0f + m_fDispAccelFactor * GetWeaponParam(W, Get_PDM_Accel_F(), 1.0f));
+            dispersion *= (1.0f + m_fDispAccelFactor * GetWeaponParam(W, Get_PDM_Accel_F(), 1.0f) *
+                GetWeaponParam(W, Get_Silencer_PDM_Accel(), 1.0f) * GetWeaponParam(W, Get_Scope_PDM_Accel(), 1.0f) * GetWeaponParam(W, Get_Launcher_PDM_Accel(), 1.0f));
         }
 
         if (state.bCrouch)

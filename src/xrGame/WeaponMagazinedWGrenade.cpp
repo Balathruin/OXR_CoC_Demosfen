@@ -52,6 +52,7 @@ void CWeaponMagazinedWGrenade::Load(LPCSTR section)
     {
         CRocketLauncher::m_fLaunchSpeed = pSettings->r_float(section, "grenade_vel");
     }
+    LoadLauncherKoeffs();
 }
 
 void CWeaponMagazinedWGrenade::net_Destroy() { inherited::net_Destroy(); }
@@ -542,6 +543,7 @@ bool CWeaponMagazinedWGrenade::Detach(pcstr item_section_name, bool b_spawn_item
         if (GetState() == eIdle)
             PlayAnimIdle();
 
+        InitAddons();
 		SyncronizeWeaponToServer();
         return CInventoryItemObject::Detach(item_section_name, b_spawn_item);
     }
@@ -568,8 +570,39 @@ void CWeaponMagazinedWGrenade::InitAddons()
                 m_ammoTypes2.push_back(_ammoItem);
             }
         }
+        ApplyLauncherKoeffs();
+    }
+    else
+    {
+        ResetLauncherKoeffs();
     }
 }
+
+void CWeaponMagazinedWGrenade::LoadLauncherKoeffs()
+{
+    if (m_eGrenadeLauncherStatus == ALife::eAddonAttachable)
+    {
+        LPCSTR sect = GetGrenadeLauncherName().c_str();
+        m_launcher_koef.cam_dispersion = READ_IF_EXISTS(pSettings, r_float, sect, "cam_dispersion_k", 1.0f);
+        m_launcher_koef.cam_disper_inc = READ_IF_EXISTS(pSettings, r_float, sect, "cam_dispersion_inc_k", 1.0f);
+        m_launcher_koef.pdm_base = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_base_k", 1.0f);
+        m_launcher_koef.pdm_accel = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_accel_k", 1.0f);
+        m_launcher_koef.pdm_vel = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_vel_k", 1.0f);
+        m_launcher_koef.crosshair_inertion = READ_IF_EXISTS(pSettings, r_float, sect, "crosshair_inertion_k", 1.0f);
+        m_launcher_koef.zoom_rotate_time = READ_IF_EXISTS(pSettings, r_float, sect, "zoom_rotate_time_k", 1.0f);
+    }
+
+    clamp(m_launcher_koef.cam_dispersion, 0.01f, 2.0f);
+    clamp(m_launcher_koef.cam_disper_inc, 0.01f, 2.0f);
+    clamp(m_launcher_koef.pdm_base, 0.01f, 2.0f);
+    clamp(m_launcher_koef.pdm_accel, 0.01f, 2.0f);
+    clamp(m_launcher_koef.pdm_vel, 0.01f, 2.0f);
+    clamp(m_launcher_koef.crosshair_inertion, 0.01f, 2.0f);
+    clamp(m_launcher_koef.zoom_rotate_time, 0.01f, 2.0f);
+}
+
+void CWeaponMagazinedWGrenade::ApplyLauncherKoeffs() { cur_launcher_koef = m_launcher_koef; }
+void CWeaponMagazinedWGrenade::ResetLauncherKoeffs() { cur_launcher_koef.Reset(); }
 
 bool CWeaponMagazinedWGrenade::UseScopeTexture()
 {

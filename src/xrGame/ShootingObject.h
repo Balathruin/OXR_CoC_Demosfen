@@ -85,6 +85,12 @@ protected:
         float fire_dispersion;
         float cam_dispersion;
         float cam_disper_inc;
+        float pdm_base;
+        float pdm_accel;
+        float pdm_vel;
+        float crosshair_inertion;
+        float zoom_rotate_time;
+        float condition_shot_dec;
 
         SilencerKoeffs() { Reset(); }
         IC void Reset()
@@ -95,12 +101,72 @@ protected:
             fire_dispersion = 1.0f;
             cam_dispersion = 1.0f;
             cam_disper_inc = 1.0f;
+            pdm_base = 1.0f;
+            pdm_accel = 1.0f;
+            pdm_vel = 1.0f;
+            crosshair_inertion = 1.0f;
+            zoom_rotate_time = 1.0f;
+            condition_shot_dec = 1.0f;
         }
     }; // SilencerKoeffs
     SilencerKoeffs m_silencer_koef;
 
 public:
     SilencerKoeffs cur_silencer_koef;
+
+    struct ScopeKoeffs
+    {
+        float cam_dispersion;
+        float cam_disper_inc;
+        float pdm_base;
+        float pdm_accel;
+        float pdm_vel;
+        float crosshair_inertion;
+        float zoom_rotate_time;
+
+        ScopeKoeffs() { Reset(); }
+        IC void Reset()
+        {
+            cam_dispersion = 1.0f;
+            cam_disper_inc = 1.0f;
+            pdm_base = 1.0f;
+            pdm_accel = 1.0f;
+            pdm_vel = 1.0f;
+            crosshair_inertion = 1.0f;
+            zoom_rotate_time = 1.0f;
+        }
+    };
+    ScopeKoeffs m_scope_koef;
+
+public:
+    ScopeKoeffs cur_scope_koef;
+
+    struct LauncherKoeffs
+    {
+        float cam_dispersion;
+        float cam_disper_inc;
+        float pdm_base;
+        float pdm_accel;
+        float pdm_vel;
+        float crosshair_inertion;
+        float zoom_rotate_time;
+
+        LauncherKoeffs() { Reset(); }
+        IC void Reset()
+        {
+            cam_dispersion = 1.0f;
+            cam_disper_inc = 1.0f;
+            pdm_base = 1.0f;
+            pdm_accel = 1.0f;
+            pdm_vel = 1.0f;
+            crosshair_inertion = 1.0f;
+            zoom_rotate_time = 1.0f;
+        }
+    };
+    LauncherKoeffs m_launcher_koef;
+
+public:
+    LauncherKoeffs cur_launcher_koef;
 
 protected:
     //для сталкеров, чтоб они знали эффективные границы использования

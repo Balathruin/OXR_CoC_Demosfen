@@ -1749,9 +1749,12 @@ void CWeapon::UpdateHudAdditonal(Fmatrix& trans)
         trans.mulB_43(hud_rotation);
 
         if (pActor->IsZoomAimingMode())
-            m_zoom_params.m_fZoomRotationFactor += Device.fTimeDelta / m_zoom_params.m_fZoomRotateTime;
-        else
-            m_zoom_params.m_fZoomRotationFactor -= Device.fTimeDelta / m_zoom_params.m_fZoomRotateTime;
+            m_zoom_params.m_fZoomRotationFactor += Device.fTimeDelta /
+                (m_zoom_params.m_fZoomRotateTime * cur_silencer_koef.zoom_rotate_time * cur_scope_koef.zoom_rotate_time * cur_launcher_koef.zoom_rotate_time);
+        
+        else m_zoom_params.m_fZoomRotationFactor -= Device.fTimeDelta /
+            (m_zoom_params.m_fZoomRotateTime * cur_silencer_koef.zoom_rotate_time * cur_scope_koef.zoom_rotate_time * cur_launcher_koef.zoom_rotate_time);
+        
 
         clamp(m_zoom_params.m_fZoomRotationFactor, 0.f, 1.f);
     }

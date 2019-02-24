@@ -13,6 +13,7 @@ public:
     virtual ~CWeaponMagazinedWGrenade();
 
     virtual void Load(LPCSTR section);
+    void LoadLauncherKoeffs();
 
     virtual BOOL net_Spawn(CSE_Abstract* DC);
     virtual void net_Destroy();
@@ -81,4 +82,8 @@ public:
     CCartridge m_DefaultCartridge2;
 
     virtual void UpdateGrenadeVisibility(bool visibility);
+
+protected:
+    void ApplyLauncherKoeffs();
+    void ResetLauncherKoeffs();
 };

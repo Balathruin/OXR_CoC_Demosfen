@@ -52,8 +52,8 @@ void CWeaponShotEffector::Shot(CWeapon* weapon)
 
     CCartridge* ammo = !weapon->m_magazine.empty() ? &weapon->m_magazine.back() : (0);
     float k_cam_disp = ammo ? ammo->param_s.k_cam_dispersion : 1.0f;
-    float angle = m_cam_recoil.Dispersion * weapon->cur_silencer_koef.cam_dispersion * k_cam_disp;
-    angle += m_cam_recoil.DispersionInc * weapon->cur_silencer_koef.cam_disper_inc * (float)m_shot_numer;
+    float angle = m_cam_recoil.Dispersion * weapon->cur_silencer_koef.cam_dispersion * weapon->cur_scope_koef.cam_dispersion * weapon->cur_launcher_koef.cam_dispersion * k_cam_disp;
+    angle += m_cam_recoil.DispersionInc * weapon->cur_silencer_koef.cam_disper_inc * weapon->cur_scope_koef.cam_disper_inc * weapon->cur_launcher_koef.cam_disper_inc * (float)m_shot_numer;
     
     m_angle_vert += angle * m_cam_recoil.DispersionFrac;
 
@@ -70,6 +70,8 @@ void CWeaponShotEffector::Shot(CWeapon* weapon)
         static float fAlt = 1.0f;
 
         float val = (vert * 4 / m_cam_recoil.MaxAngleVert) * m_cam_recoil.StepAngleHorz;
+        if (m_Random.randF(0.f, 1.f) < 0.25f)
+            val *= -1;
         clamp(val, -m_cam_recoil.StepAngleHorz, m_cam_recoil.StepAngleHorz);
         m_angle_horz -= fAlt * val;
 

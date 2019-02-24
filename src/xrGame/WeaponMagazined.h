@@ -63,7 +63,9 @@ protected:
 protected:
     virtual void ReloadMagazine();
     void ApplySilencerKoeffs();
+    void ApplyScopeKoeffs();
     void ResetSilencerKoeffs();
+    void ResetScopeKoeffs();
 
     virtual void state_Fire(float dt);
     virtual void state_MagEmpty(float dt);
@@ -75,6 +77,7 @@ public:
 
     virtual void Load(LPCSTR section);
     void LoadSilencerKoeffs();
+    void LoadScopeKoeffs();
     virtual CWeaponMagazined* cast_weapon_magazined() { return this; }
     virtual void SetDefaults();
     virtual void FireStart();

@@ -69,7 +69,7 @@ void CWeapon::FireTrace(const Fvector& P, const Fvector& D)
     //повысить изношенность оружия с учетом влияния конкретного патрона
     //	float Deterioration = GetWeaponDeterioration();
     //	Msg("Deterioration = %f", Deterioration);
-    ChangeCondition(-GetWeaponDeterioration() * l_cartridge.param_s.impair);
+    ChangeCondition(-GetWeaponDeterioration() * l_cartridge.param_s.impair * cur_silencer_koef.condition_shot_dec);
 
     float fire_disp = 0.f;
     CActor* tmp_actor = NULL;

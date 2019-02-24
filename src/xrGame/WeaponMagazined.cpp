@@ -158,6 +158,7 @@ void CWeaponMagazined::Load(LPCSTR section)
         m_bHasDifferentFireModes = false;
     }
     LoadSilencerKoeffs();
+    LoadScopeKoeffs();
 }
 
 void CWeaponMagazined::FireStart()
@@ -1167,6 +1168,7 @@ void CWeaponMagazined::InitAddons()
                 CUIXmlInit::InitWindow(*pWpnScopeXml, scope_tex_name.c_str(), 0, m_UIScope);
             }
         }
+        ApplyScopeKoeffs();
     }
     else
     {
@@ -1179,6 +1181,7 @@ void CWeaponMagazined::InitAddons()
         {
             m_zoom_params.m_fIronSightZoomFactor = pSettings->r_float(cNameSect(), "scope_zoom_factor");
         }
+        ResetScopeKoeffs();
     }
 
     if (IsSilencerAttached() /* && SilencerAttachable() */)
@@ -1217,18 +1220,55 @@ void CWeaponMagazined::LoadSilencerKoeffs()
         m_silencer_koef.fire_dispersion = READ_IF_EXISTS(pSettings, r_float, sect, "fire_dispersion_base_k", 1.0f);
         m_silencer_koef.cam_dispersion = READ_IF_EXISTS(pSettings, r_float, sect, "cam_dispersion_k", 1.0f);
         m_silencer_koef.cam_disper_inc = READ_IF_EXISTS(pSettings, r_float, sect, "cam_dispersion_inc_k", 1.0f);
+        m_silencer_koef.pdm_base = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_base_k", 1.0f);
+        m_silencer_koef.pdm_accel = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_accel_k", 1.0f);
+        m_silencer_koef.pdm_vel = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_vel_k", 1.0f);
+        m_silencer_koef.crosshair_inertion = READ_IF_EXISTS(pSettings, r_float, sect, "crosshair_inertion_k", 1.0f);
+        m_silencer_koef.zoom_rotate_time = READ_IF_EXISTS(pSettings, r_float, sect, "zoom_rotate_time_k", 1.0f);
+        m_silencer_koef.condition_shot_dec = READ_IF_EXISTS(pSettings, r_float, sect, "condition_shot_dec_k", 1.0f);
     }
 
-    clamp(m_silencer_koef.hit_power, 0.0f, 1.0f);
-    clamp(m_silencer_koef.hit_impulse, 0.0f, 1.0f);
-    clamp(m_silencer_koef.bullet_speed, 0.0f, 1.0f);
-    clamp(m_silencer_koef.fire_dispersion, 0.0f, 3.0f);
-    clamp(m_silencer_koef.cam_dispersion, 0.0f, 1.0f);
-    clamp(m_silencer_koef.cam_disper_inc, 0.0f, 1.0f);
+    clamp(m_silencer_koef.hit_power, 0.01f, 2.0f);
+    clamp(m_silencer_koef.hit_impulse, 0.01f, 2.0f);
+    clamp(m_silencer_koef.bullet_speed, 0.01f, 2.0f);
+    clamp(m_silencer_koef.fire_dispersion, 0.01f, 2.0f);
+    clamp(m_silencer_koef.cam_dispersion, 0.01f, 2.0f);
+    clamp(m_silencer_koef.cam_disper_inc, 0.01f, 2.0f);
+    clamp(m_silencer_koef.pdm_base, 0.01f, 2.0f);
+    clamp(m_silencer_koef.pdm_accel, 0.01f, 2.0f);
+    clamp(m_silencer_koef.pdm_vel, 0.01f, 2.0f);
+    clamp(m_silencer_koef.crosshair_inertion, 0.01f, 2.0f);
+    clamp(m_silencer_koef.zoom_rotate_time, 0.01f, 2.0f);
+    clamp(m_silencer_koef.condition_shot_dec, 0.01f, 2.0f);
+}
+
+void CWeaponMagazined::LoadScopeKoeffs()
+{
+    if (m_eScopeStatus == ALife::eAddonAttachable)
+    {
+        LPCSTR sect = GetScopeName().c_str();
+        m_scope_koef.cam_dispersion = READ_IF_EXISTS(pSettings, r_float, sect, "cam_dispersion_k", 1.0f);
+        m_scope_koef.cam_disper_inc = READ_IF_EXISTS(pSettings, r_float, sect, "cam_dispersion_inc_k", 1.0f);
+        m_scope_koef.pdm_base = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_base_k", 1.0f);
+        m_scope_koef.pdm_accel = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_accel_k", 1.0f);
+        m_scope_koef.pdm_vel = READ_IF_EXISTS(pSettings, r_float, sect, "PDM_disp_vel_k", 1.0f);
+        m_scope_koef.crosshair_inertion = READ_IF_EXISTS(pSettings, r_float, sect, "crosshair_inertion_k", 1.0f);
+        m_scope_koef.zoom_rotate_time = READ_IF_EXISTS(pSettings, r_float, sect, "zoom_rotate_time_k", 1.0f);
+    }
+
+    clamp(m_scope_koef.cam_dispersion, 0.01f, 2.0f);
+    clamp(m_scope_koef.cam_disper_inc, 0.01f, 2.0f);
+    clamp(m_scope_koef.pdm_base, 0.01f, 2.0f);
+    clamp(m_scope_koef.pdm_accel, 0.01f, 2.0f);
+    clamp(m_scope_koef.pdm_vel, 0.01f, 2.0f);
+    clamp(m_scope_koef.crosshair_inertion, 0.01f, 2.0f);
+    clamp(m_scope_koef.zoom_rotate_time, 0.01f, 2.0f);
 }
 
 void CWeaponMagazined::ApplySilencerKoeffs() { cur_silencer_koef = m_silencer_koef; }
+void CWeaponMagazined::ApplyScopeKoeffs() { cur_scope_koef = m_scope_koef; }
 void CWeaponMagazined::ResetSilencerKoeffs() { cur_silencer_koef.Reset(); }
+void CWeaponMagazined::ResetScopeKoeffs() { cur_scope_koef.Reset(); }
 void CWeaponMagazined::PlayAnimShow()
 {
     VERIFY(GetState() == eShowing);
