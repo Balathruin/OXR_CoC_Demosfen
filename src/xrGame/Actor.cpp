@@ -1051,7 +1051,17 @@ void CActor::UpdateCL()
 #ifdef DEBUG
             HUD().SetFirstBulletCrosshairDisp(pWeapon->GetFirstBulletDisp());
 #endif
-            HUD().ShowCrosshair(pWeapon->use_crosshair());
+            HUD().ShowCrosshair(true);
+            if (cam_active == eacLookAt || cam_active == eacFreeLook)
+            {
+                psHUD_Flags.set(HUD_CROSSHAIR_CASTED, true);
+                HUD().DefineCrosshairCastingPoint(pWeapon->get_LastFP(), pWeapon->get_LastFD());
+
+            }
+            else
+            {
+                psHUD_Flags.set(HUD_CROSSHAIR_CASTED, false);
+            }
 
             BOOL B = !((mstate_real & mcLookout) && !IsGameTypeSingle());
 

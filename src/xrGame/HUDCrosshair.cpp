@@ -100,14 +100,13 @@ void CHUDCrosshair::OnRenderFirstBulletDispertion()
 #endif
 
 extern ENGINE_API BOOL g_bRendering;
-void CHUDCrosshair::OnRender()
+void CHUDCrosshair::OnRender(const float& x, const float& y)
 {
     VERIFY(g_bRendering);
     Fvector2 center;
     Fvector2 scr_size;
     scr_size.set(float(GEnv.Render->getTarget()->get_width()), float(GEnv.Render->getTarget()->get_height()));
-    center.set(scr_size.x / 2.0f, scr_size.y / 2.0f);
-
+    center.set((scr_size.x / 2.0f)*(1.f+x),(scr_size.y / 2.0f)*(1.f + y));
     GEnv.UIRender->StartPrimitive(10, IUIRender::ptLineList, UI().m_currentPointType);
 
     float cross_length = cross_length_perc * scr_size.x;

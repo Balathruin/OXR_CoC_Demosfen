@@ -21,6 +21,11 @@ private:
     SPickParam PP;
 
     bool m_bShowCrosshair;
+
+
+    Fvector m_crosshairCastedFromPos;
+    Fvector m_crosshairCastedToDir;
+
     CHUDCrosshair HUDCrosshair;
 
 private:
@@ -36,5 +41,6 @@ public:
     float GetRQVis() { return PP.power; };
     CHUDCrosshair& GetHUDCrosshair() { return HUDCrosshair; }
     void ShowCrosshair(bool b);
+    void DefineCrosshairCastingPoint(const Fvector& point, const Fvector& direction);
     void net_Relcase(IGameObject* O);
 };

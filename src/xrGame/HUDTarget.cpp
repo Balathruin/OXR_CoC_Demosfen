@@ -53,6 +53,11 @@ CHUDTarget::CHUDTarget()
 CHUDTarget::~CHUDTarget() {}
 void CHUDTarget::Load() { HUDCrosshair.Load(); }
 void CHUDTarget::ShowCrosshair(bool b) { m_bShowCrosshair = b; }
+void CHUDTarget::DefineCrosshairCastingPoint(const Fvector & point, const Fvector & direction)
+{
+    m_crosshairCastedFromPos = point;
+    m_crosshairCastedToDir = direction;
+}
 //. fVisTransparencyFactor
 float fCurrentPickPower;
 ICF static BOOL pick_trace_callback(collide::rq_result& result, LPVOID params)
@@ -87,9 +92,18 @@ ICF static BOOL pick_trace_callback(collide::rq_result& result, LPVOID params)
 void CHUDTarget::CursorOnFrame()
 {
     Fvector p1, dir;
+    
+    if (psHUD_Flags.test(HUD_CROSSHAIR_CASTED))
+    {
+        p1  = m_crosshairCastedFromPos;
+        dir = m_crosshairCastedToDir;
+    }
+    else
+    {
+        p1  = Device.vCameraPosition;
+        dir = Device.vCameraDirection;
+    }
 
-    p1 = Device.vCameraPosition;
-    dir = Device.vCameraDirection;
 
     // Render cursor
     if (Level().CurrentEntity())
@@ -127,14 +141,19 @@ void CHUDTarget::Render()
     if (0 == E)
         return;
 
-    Fvector p1 = Device.vCameraPosition;
-    Fvector dir = Device.vCameraDirection;
-
     // Render cursor
     u32 C = C_DEFAULT;
 
     Fvector p2;
-    p2.mad(p1, dir, PP.RQ.range);
+    if(psHUD_Flags.test(HUD_CROSSHAIR_CASTED))
+    {
+        p2.mad(m_crosshairCastedFromPos, m_crosshairCastedToDir, PP.RQ.range);
+    }
+    else
+    {
+        p2.mad(Device.vCameraPosition, Device.vCameraDirection, PP.RQ.range);
+    }
+    
     Fvector4 pt;
     Device.mFullTransform.transform(pt, p2);
     pt.y = -pt.y;
@@ -295,7 +314,7 @@ void CHUDTarget::Render()
     {
         //отрендерить прицел
         HUDCrosshair.cross_color = C;
-        HUDCrosshair.OnRender();
+        HUDCrosshair.OnRender(pt.x,pt.y);
     }
 }
 

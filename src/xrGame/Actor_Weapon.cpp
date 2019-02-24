@@ -69,13 +69,9 @@ void CActor::g_fireParams(const CHudItem* pHudItem, Fvector& fire_pos, Fvector& 
         if (eacFirstEye == cam_active)
 		{
             fire_pos = Cameras().Position();
+            fire_dir = Cameras().Direction();
 		}
-		if(eacLookAt == cam_active)
-		{
-            fire_pos = weapon->get_LastFP();
-			fire_dir = Cameras().Direction();
-			fire_dir.y = 15;
-		}
+
 	}
 	else
     {
@@ -87,8 +83,9 @@ void CActor::g_fireParams(const CHudItem* pHudItem, Fvector& fire_pos, Fvector& 
             fire_pos = act_and_cam_pos;
             fire_pos.y += 0.14f;
         }
+        fire_dir = Cameras().Direction();
 	}
-	fire_dir		= Cameras().Direction();
+	
 }
 
 void CActor::g_WeaponBones(int& L, int& R1, int& R2)

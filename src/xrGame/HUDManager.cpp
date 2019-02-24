@@ -305,6 +305,11 @@ void CHUDManager::SetFirstBulletCrosshairDisp(float fbdispf)
 #endif
 
 void CHUDManager::ShowCrosshair(bool show) { m_pHUDTarget->ShowCrosshair(show); }
+
+void CHUDManager::DefineCrosshairCastingPoint(const Fvector & point, const Fvector & direction)
+{
+    m_pHUDTarget->DefineCrosshairCastingPoint(point, direction);
+}
 void CHUDManager::HitMarked(int idx, float power, const Fvector& dir)
 {
     HitMarker.Hit(dir);
