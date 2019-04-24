@@ -6684,6 +6684,7 @@
     <ClInclude Include="CarWeapon3.h" />
     <ClInclude Include="CarWeapon4.h" />
     <ClInclude Include="CarWeapon5.h" />
+    <ClInclude Include="WeaponFlamer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ActorNightVision.cpp">
@@ -9735,6 +9736,7 @@
     <ClCompile Include="CarWeapon4.cpp" />
     <ClCompile Include="CarWeapon5.cpp" />
     <ClCompile Include="DumpLuaBindUserdata.cpp" />
+    <ClCompile Include="WeaponFlamer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ai\monsters\chimera\chimera_attack_state.h">

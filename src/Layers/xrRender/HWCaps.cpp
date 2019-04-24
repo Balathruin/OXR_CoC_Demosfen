@@ -5,7 +5,7 @@
 #include "hw.h"
 
 #if !defined(_EDITOR) && !defined(USE_OGL)
-#include <nvapi.h>
+#include "nvapi/nvapi.h"
 #include <ags_lib/inc/amd_ags.h>
 #endif
 

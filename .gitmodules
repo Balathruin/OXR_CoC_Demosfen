@@ -1,6 +1,4 @@
-[submodule "Externals/LuaJIT"]
-	path = Externals/LuaJIT
-	url = https://github.com/Roman-n/LuaJIT.git
+
 [submodule "Externals/luabind"]
 	path = Externals/luabind
 	url = https://github.com/qweasdd136963/luabind-deboostified.git
@@ -31,9 +29,6 @@
 [submodule "Externals/BugTrap"]
 	path = Externals/BugTrap
 	url = https://github.com/Xottab-DUTY/BugTrap.git
-[submodule "Externals/FreeImage"]
-	path = Externals/FreeImage
-	url = https://github.com/OpenXRay/ext-win-freeimage.git
 [submodule "Externals/cryptopp"]
 	path = Externals/cryptopp
 	url = https://github.com/weidai11/cryptopp.git
@@ -43,12 +38,14 @@
 [submodule "Externals/FreeMagic"]
 	path = Externals/FreeMagic
 	url = https://github.com/OpenXRay/FreeMagic.git
-[submodule "Externals/nvapi"]
-	path = Externals/nvapi
-	url = https://github.com/OpenXRay/nvapi.git
+
 [submodule "Externals/pugixml"]
 	path = Externals/pugixml
 	url = https://github.com/zeux/pugixml.git
 [submodule "Externals/gli"]
 	path = Externals/gli
 	url = https://github.com/g-truc/gli.git
+
+[submodule "Externals/LuaJIT"]
+	path = Externals/LuaJIT
+	url = https://github.com/Roman-n/LuaJIT

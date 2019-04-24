@@ -1,5 +1,4 @@
 # exclude all dot files except .git files
-.*
 !.git*
 
 # exclude binaries and temporary files
@@ -38,3 +37,11 @@ JSGME.ini
 JSGME.exe
 gamedata/configs/axr_options.ltx
 gamedata/configs/atmosfear_options.ltx
+BaK.xr/
+*.ide-shm
+*.ide
+*.db-wal
+*.db-shm
+*.lock
+*.ide-wal
+/src/LuaJIT/x64
