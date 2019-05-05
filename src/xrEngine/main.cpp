@@ -161,6 +161,7 @@ void CheckPrivilegySlowdown()
 
 ENGINE_API void Startup()
 {
+    ISoundManager::enumerate_devices();
     execUserScript();
     InitSound();
 
@@ -216,7 +217,6 @@ ENGINE_API int RunApplication()
             MessageBox(nullptr, "The game has already been launched!", nullptr, MB_ICONERROR | MB_OK);
             return 2;
         }
-        
     }
 #endif
     *g_sLaunchOnExit_app = 0;

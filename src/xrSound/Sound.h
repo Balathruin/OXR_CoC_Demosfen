@@ -165,6 +165,8 @@ public:
     static void _create();
     static void _destroy();
 
+    static void enumerate_devices();
+
     virtual void _restart() = 0;
     virtual bool i_locked() = 0;
 
